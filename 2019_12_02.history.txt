@@ -1,0 +1,5243 @@
+    1  ll
+    2  cd ..
+    3  cd agentquoter-store
+    4  ll
+    5  scp public/js/app.js root@app.agentquote.com:/var/www/html/js/app.js
+    6  ssh root@app.agentquote.com
+    7  scp app/Http/Controllers/SuperUserAdController.php root@app.agentquote.com:/var/www/app/app/Http/Controllers/SuperUserAdController.php
+    8  vi vendor/dzineer/laravel-adminlte/resources/views/page.blade.php
+    9  cd resources/views/super/
+   10  cd ..
+   11  pwd
+   12  code
+   13  cd agentquoter-store
+   14  scp resources/views/ads/super/super-ad.blade.php root@app.agentquote.com:/var/www/app/resources/views/ads/super/super-ad.blade.php
+   15  pwd
+   16  ssh root@app.agentquote.com
+   17  scp resources/views/ads/super/super-ad.blade.php root@app.agentquote.com:/var/www/app/resources/views/ads/super/super-ad.blade.php
+   18  scp app/Models/SuperAd.php root@app.agentquote.com:/var/www/app/app/Models/SuperAd.php
+   19  scp app/Composers/SuperAdComposer.php root@app.agentquote.com:/var/www/app/app/Composers/SuperAdComposer.php
+   20  ssh root@app.agentquote.com
+   21  scp public/css/app.css root@app.agentquote.com:/var/www/html//css/app.css
+   22  scp public/css/app.css root@app.agentquote.com:/var/www/html/css/app.css
+   23  ssh root@app.agentquote.com
+   24  scp public/css/app.css root@app.agentquote.com:/var/www/html/css/app.css
+   25  ssh root@app.agentquote.com
+   26  scp app/Console/Commands/DzineerCleanReportCommand.php root@app.agentquote.com:/var/www/app/app/Console/Commands/
+   27  ssh root@app.agentquote.com
+   28  ssh root@agentquote.com
+   29  ssh root@app.agentquote.com
+   30  ping google.com
+   31  shutdown -r now
+   32  sudo shutdown -r now
+   33  \tping mail.agentquote.com
+   34  ping google.com
+   35  history
+   36  history | grep HUP
+   37  sudo killall -HUP mDNSResponder
+   38  ping google.com
+   39  sudo ifconfig en0 up
+   40  sudo ifconfig -u en0
+   41  sudo ifconfig en0 down
+   42  sudo ifconfig en0 up
+   43  sudo ifconfig -u en0
+   44  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//'
+   45  sudo vi ~/.bashrc
+   46  source ~/.bashrc
+   47  sudo vi ~/.bashrc
+   48  source ~/.bashrc
+   49  newmac
+   50  ifconfig en0 | grep ether
+   51  sudo vi ~/.bashrc
+   52  source ~/.bashrc
+   53  getmac
+   54  newmac
+   55  sudo vi ~/.bashrc
+   56  source ~/.bashrc
+   57  getmac
+   58  ls ~/
+   59  sudo vi ~/.bashrc
+   60  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo > ~/original_mac.txt
+   61  ~/original_mac.txt
+   62  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo
+   63  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' >> ~/original_mac_address.txt
+   64  cat ~/original_mac_address.txt
+   65  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' >> ~/new_mac_address.txt
+   66  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' > ~/new_mac_address.txt
+   67  cat ~/new_mac_address.txt
+   68  sudo vi ~/.bashrc
+   69  ifconfig en0 | grep ether > | xargs $1 > ~/original_mac_address.txt
+   70  ifconfig en0 | grep ether | xargs $1 > ~/original_mac_address.txt
+   71  cat ~/original_mac_address.txt
+   72  ifconfig en0 | grep ether | awk $1 > ~/original_mac_address.txt
+   73  ifconfig en0 | grep ether | awk 'print {$1}'
+   74  ifconfig en0 | grep ether | awk 'print $1'
+   75  ifconfig en0 | grep ether | awk '{print $1}'
+   76  ifconfig en0 | grep ether | awk '{print $2}'
+   77  ifconfig en0 | grep ether | awk '{print $2}' > ~/original_mac_address.txt
+   78  cat ~/original_mac_address.txt
+   79  sudo vi ~/.bashrc
+   80  getmac
+   81  source ~/.bashrc
+   82  getmac
+   83  sudo vi ~/.bashrc
+   84  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo > ~/original_mac.txt && echo ~/original_mac.txt
+   85  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo > ~/original_mac_address.txt && echo ~/original_mac.txt
+   86  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo > ~/original_mac_address.txt & echo ~/original_mac_address.txt
+   87  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo > ~/original_mac_address.txt ; echo ~/original_mac_address.txt
+   88  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo > ~/original_mac_address.txt && echo ~/original_mac_address.txt
+   89  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo > ~/original_mac_address.txt && cat ~/original_mac_address.txt
+   90  cat ~/original_mac_address.txt
+   91  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo > ~/new_mac_address.txt && cat ~/new_mac_address.txt
+   92  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' | echo > ~/new_mac_address.txt && echo ~/new_mac_address.txt
+   93  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//'
+   94  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' > ~/new_mac_address.txt
+   95  cat ~/new_mac_address.txt
+   96  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' > ~/new_mac_address.txt && echo ~/new_mac_address.txt
+   97  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' > ~/new_mac_address.txt && cat ~/new_mac_address.txt
+   98  sudo vi ~/.bashrc
+   99  source ~/.bashrc
+  100  getmac
+  101  sudo vi ~/.bashrc
+  102  ifconfig en0 | grep ether | awk '{print $2}' > ~/original_mac_address.txt && cat ~/original_mac_address.txt
+  103  source ~/.bashrc
+  104  getmac
+  105  sudo vi ~/.bashrc
+  106  source ~/.bashrc
+  107  getmac
+  108  alias
+  109  newmac
+  110  cat ~/new_mac_address.txt
+  111  cat ~/original_mac_address.txt
+  112  sudo ifconfig en0 ether 4e:4b:40:57:cc:9d
+  113  getmac
+  114  ping google.com
+  115  ssh root@app.agentquote.com
+  116  cat ~/.ssh/id_rsa.pub
+  117  ssh root@app.agentquote.com
+  118  ping google.com
+  119  ssh root@app.agentquote.com
+  120  gitmac
+  121  getmac
+  122  aliases
+  123  alias
+  124  getnet
+  125  sudo vi ~/.bashrc
+  126  getmac
+  127  sudo vi ~/.bashrc
+  128  alias newmac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' > ~/new_mac_address.txt && cat ~/new_mac_address.txt"\nalias getmac="ifconfig en0 | grep ether | awk '{print $2}' | cat > ~/original_mac_address.txt && cat ~/original_mac_address.txt"
+  129  getmac
+  130  ping google.com
+  131  newmac
+  132  cat ~/new_mac_address.txt
+  133  ~/original_mac_address.txt
+  134  cat ~/original_mac_address.txt
+  135  history grep ether
+  136  history | grep ether
+  137  sudo ifconfig en0 ether fe:7d:98:f1:85:d7
+  138  getmac
+  139  ping google.com
+  140  shutdown -r now
+  141  sudo shutdown -r now
+  142  ping google.com
+  143  exit
+  144  ssh root@dzineer.com
+  145  pwd
+  146  code
+  147  cd tests
+  148  ll
+  149  cd anotherwebpush
+  150  ll
+  151  scp .env root@dzineer.com:/var/www/data/.env
+  152  scp .env root@dzineer.com:/var/www/app/.env
+  153  d 
+  154  ssh root@dzineer.com
+  155  ping google.com
+  156  ssh root@dzineer.com
+  157  sudo vi ~/.aliases
+  158  sudo source ~/.aliases
+  159  source ~/.aliases
+  160  artisan
+  161  bower install redis-server
+  162  whereis bower
+  163  brew install redis
+  164  redis-server /usr/local/etc/redis.conf
+  165  redis-server /usr/local/etc/redis.conf &
+  166  redis-cli ping
+  167  redis-benchmark -q -n 1000 -c 10 -P 5
+  168  pwd
+  169  cd ..//
+  170  cd ..
+  171  cd agentquoter-store
+  172  laravel-echo-server start\n
+  173  yarn watch
+  174  artisan serve
+  175  yarn watch
+  176  artisan serve
+  177  artisan view:clear
+  178  artisan serve
+  179  laravel-echo-server client:add APP_ID
+  180  laravel-echo-server client
+  181  artisan make:event ExampleEvent
+  182  artisan queue:listen --tries=1
+  183  laravel-echo-server start\n
+  184  artisan dzineer:notify AgentSignup "New Signup" "New Agent Signup" 
+  185  pwd
+  186  cd code
+  187  cd agentquoter-store
+  188  artisan dzineer:notify AgentSignup "New Signup" "New Agent Signup" 
+  189  source ~/.aliases
+  190  artisan dzineer:notify AgentSignup "New Signup" "New Agent Signup" 
+  191  artisan dzineer:notify AgentSignup "New Signup" "New Agent Signup"
+  192  artisan dzineer:notify NewQuoteGenerated "New Quote" "New Quote Generated"
+  193  artisan serve
+  194  artisan dzineer:notify NewQuoteGenerated "New Quote" "New Quote Generated"
+  195  artisan make:model Models/NotificationsUser
+  196  artisan dzineer:notify NewQuoteGenerated "New Quote" "New Quote Generated"
+  197  \tping mail.agentquote.com
+  198  artisan dzineer:notify NewQuoteGenerated "New Quote" "New Quote Generated"
+  199  \tping mail.agentquote.com
+  200  artisan dzineer:notify NewQuoteGenerated "New Quote" "New Quote Generated"
+  201  composer require joggapp/laravel-mail-viewer
+  202  composer remove joggapp/laravel-mail-viewer
+  203  artisan make:mail NewQuoteReceiledMail
+  204  artisan dzineer:notify NewQuoteGenerated "New Quote" "New Quote Generated"
+  205  artisan make
+  206  artisan make:web-notification NewMessage
+  207  artisan dzineer:notify NewMessage "New Message" "You have received a new message."
+  208  artisan make:web-notification NewPatrickMessage
+  209  artisan dzineer:notify NewPatrickMessage "New Patrick Message" "You have received a new patrick message."
+  210  gaa
+  211  git commit -m "Added Messaging and TinyMCE"
+  212  git push -u origin master
+  213  gaa
+  214  git commit -m "Added Messaging Acknowledgements"
+  215  git push -u origin master
+  216  ping google.com
+  217  artisan make
+  218  artisan make:web-notification MessageAcknowledged
+  219  artisan dzineer:notify MessageAcknowleged "Message Acknowledgement" "Frank acknowledged Message"
+  220  artisan dzineer:notify MessageAcknowledged "Message Acknowledgement" "Frank acknowledged Message"
+  221  artisan route list
+  222  artisan route:list
+  223  artisan view:clear
+  224  artisan view:cache
+  225  gaa
+  226  git commit -m "Added Affiliate && Administrators && Managers Messsaging. Remove Agent ability to send messages. Added acknowledegementwith nofitications."
+  227  git push -u origin master
+  228  gaa
+  229  git commit -m "Added All Ads to use TinyMCE"
+  230  git push -u origin master
+  231  composer require unisharp/laravel-filemanager:~1.8
+  232  php artisan vendor:publish --tag=lfm_config
+  233  php artisan vendor:publish --tag=lfm_public
+  234  php artisan route:clear
+  235  php artisan config:clear
+  236  php artisan storage:link
+  237  php artisan vendor:publish --tag=lfm_view
+  238  php artisan route:clear
+  239  php artisan view:clear
+  240  yarn watch
+  241  artisan route:clear
+  242  php artisan view:clear
+  243  ssh root@45.32.193.155
+  244  cat ~/.ssh/id_rsa.pub
+  245  ssh root@45.32.193.155
+  246  ssh-copy-id root@45.32.193.155
+  247  ssh root@45.32.193.155
+  248  artisan serve
+  249  artisan dzineer:notify MessageAcknowledged "Message Acknowledgement" "Frank acknowledged Message"
+  250  laravel-echo-server start\n
+  251  artisan queue:listen --tries=1
+  252  artisan dzineer:notify MessageAcknowledged "Message Acknowledgement" "Frank acknowledged Message"
+  253  artisan dzineer:notify NewMessage "New Message" "You have received a new message."
+  254  artisan view:clear
+  255  histry | grep filemanager
+  256  history | grep filemanager
+  257  composer
+  258  composercomposer remove unisharp/laravel-filemanager:~1.8
+  259  composer remove unisharp/laravel-filemanager:~1.8
+  260  gaa
+  261  git commit -m "Added upload file manager; Fixed push notifications."
+  262  git push -u origin master
+  263  code
+  264  cd agentquoter-store
+  265  ll
+  266  artisan queue:listen --tries=1
+  267  laravel-echo-server start\n
+  268  redis-server /usr/local/etc/redis.conf &
+  269  artisan
+  270  artisan serve
+  271  history | grep brew
+  272  brew services start mariadb
+  273  brew services start mysql
+  274  brew services restart mariadb
+  275  mysql
+  276  brew services stop mariadb
+  277  brew services restart mysqld
+  278  brew services
+  279  brew services list
+  280  history | grep mysql
+  281  brew services start mysql
+  282  sudo brew services start mysql
+  283  sudo brew services start mariadb
+  284  sudo brew services stop mariadb
+  285  sudo brew install mysql
+  286  brew install mysql
+  287  brew unlink mariadb
+  288  brew install mysql
+  289  brew cleanup
+  290  brew services start mysql
+  291  mysql -uroot
+  292  cat /usr/local/etc/my.cnf.d
+  293  brew services start mysql
+  294  brew services restart mysql
+  295  MySQL -u root -h localhost
+  296  mysqld_safe --skip-grant-tables &
+  297  brew doctor
+  298  mkdir /usr/local/etc/my.cnf.d 
+  299  brew services restart mysql
+  300  mysql -u root -P
+  301  mysql -u root -p
+  302  mysqld
+  303  brew services start mysql
+  304  brew services restart mysql
+  305  mysql -u root -p
+  306  sudo chown -R _mysql:mysql /usr/local/var/mysql
+  307  sudo mysql.server start
+  308  brew services stop mysql
+  309  sudo mysql.server start
+  310  brew info mysql
+  311  mysql -uroot
+  312  brew info mysql
+  313  mysql.server start
+  314  sudo chown -R _mysql:mysql /usr/local/Cellar/mysql/
+  315  mysql.server start
+  316  ps -ax | grep mysql
+  317  sudo kill -9 40176
+  318  ps -ax | grep mysql
+  319  brew remove mariadb
+  320  sudo rm -rf /usr/local/Cellar/mariadb/10.3.13_1
+  321  brew remove mariadb
+  322  brew cleanup
+  323  sudo rm ~/Library/LaunchAgents/homebrew. mxcl. mysql
+  324  brew doctor
+  325  xcode-select --install
+  326  brew doctor
+  327  brew update
+  328  brew install mysql
+  329  brew reinstall mysql
+  330  sudo chown -R $(whoami) /usr/local/Cellar/mysql/8.0.16
+  331  brew reinstall mysql
+  332  sudo chown -R $(whoami) /usr/local/Cellar/mysql/8.0.16
+  333  brew install mysql
+  334  \tbrew link mysql
+  335  mysql.server start
+  336  mkdir /usr/local/etc/my.cnf.d
+  337  mysql.server start
+  338  chown -r mysql /usr/local/var/mysql/
+  339  chown -R mysql /usr/local/var/mysql/
+  340  sudo chown -R mysql /usr/local/var/mysql/
+  341  mysql.server start
+  342  brew services start mysql
+  343  mysql -uroot
+  344  mysql -uroot -p
+  345  ps
+  346  ps auxw
+  347  ps auxw | grep mysql
+  348  brew services start mysql
+  349  mysql -uroot
+  350  mysql -uroot -p
+  351  sudo chown -R mysql:mysql /usr/local/var/mysql && sudo brew services restart mysql@5.6
+  352  brew services top mysql
+  353  brew services stop mysql
+  354  brew install mysql@5.6
+  355  brew services start mysql@5.6
+  356  myql@5.6 -uroot
+  357  mysql -uroot
+  358  sudo rm -rf /tmp/mysql.sock
+  359  mysql -uroot
+  360  sudo chown -R niran /usr/local/var/mysql && sudo brew services restart mysql@5.6
+  361  ps ax | grep mysql
+  362  service mysql@5.6 status
+  363  brew services status mysql@5.6
+  364  brew services mysql@5.6 -all
+  365  brew services stop mysql@5.6
+  366  brew services list
+  367  mysql_config
+  368  mycli
+  369  /usr/local/bin/mysql_secure_installation
+  370  mysqld &
+  371  ps aux | grep mysql
+  372  mysql -uroot
+  373  mysql -uroot -p
+  374  shutdown -r now
+  375  sudo shutdown -r now
+  376  ps aux | grep mysql
+  377  mysql -uroot
+  378  mysql -uroot -p
+  379  ps aux
+  380  ps aux | grep mysql
+  381  brew services start mysql@5.6
+  382  ps aux | grep mysql
+  383  brew services list
+  384  mysql -uroot
+  385  mysql -uroot -p -H localhost
+  386  ps aux | grep mysql
+  387  brew services stop mysql@5.6
+  388  brew services list
+  389  brew services stop mysql@5.6
+  390  sudo brew services stop mysql@5.6
+  391  brew services list
+  392  brew services mysql mysql
+  393  brew services start mysql
+  394  brew services list
+  395  ps aux | grep mysql
+  396  mysql -uroot
+  397  mysql -uroot -p
+  398  sudo mysql -uroot -p
+  399  ll /var/mysql/mysql.sock.
+  400  ll /tmp/mysql.sock
+  401  pushd .
+  402  cd /usr/local
+  403  ll
+  404  cd homebrew
+  405  ll
+  406  cd ..
+  407  ll
+  408  cd etc
+  409  ll
+  410  cat my.cnf.default
+  411  ll my.cnf.d/
+  412  ll
+  413  pwd
+  414  cat my.cnf
+  415  pwd
+  416  sudo brew services stop mysql@5.6
+  417  sudo brew services stop mysql
+  418  brew services stop mysql
+  419  mysql.server start
+  420  ll /usr/local/var/mysql/Franklins-MacBook-Pro.local.pid
+  421  ll /usr/local/var/mysql/
+  422  cat /usr/local/var/mysql/Franklins-MacBook-Pro.local.err
+  423  tail -f /usr/local/var/mysql/Franklins-MacBook-Pro.local.err &
+  424  mysql.server restart
+  425  rm -rf /usr/local/var/mysql/Franklins-MacBook-Pro.local.pid
+  426  mysql.server restart
+  427  mysql.server start
+  428  mysql.server restart
+  429  ps aux | grep mysql
+  430  killall mysql
+  431  sudo killall mysql
+  432  kill -9 7522
+  433  ps aux | grep mysql
+  434  mysql.server start
+  435  ll
+  436  /usr/local/var/mysql/Franklins-MacBook-Pro.local.err
+  437  cat /usr/local/var/mysql/Franklins-MacBook-Pro.local.err
+  438  mysql_install_db
+  439  whereis mysql_install_db
+  440  mysqld --initialize
+  441  brew initialization mysql
+  442  rm -rf /usr/local/var/mysql/
+  443  /usr/local/Cellar/mysql/8.0.16/bin/mysqld  --datadir=/usr/local/var/mysql --tmpdir=/tmp
+  444  mkdir /usr/local/var/mysql/
+  445  /usr/local/Cellar/mysql/8.0.16/bin/mysqld  --datadir=/usr/local/var/mysql --tmpdir=/tmp
+  446  sudo rm -rf /usr/local/var/mysql\nsudo rm /etc/my.cnf
+  447  brew postinstall mysql -v
+  448  mysql -uroot
+  449  ping google.com
+  450  getmac
+  451  alias
+  452  cat ~/.aliases
+  453  history | grep mac
+  454  alias newmac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' > ~/new_mac_address.txt && cat ~/new_mac_address
+  455  alias newmac="openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//' > ~/new_mac_address.txt && cat ~/new_mac_address"
+  456  alias
+  457  openssl rand -hex 6 | sed '\''s/\(..\)/\1:/g;s/.$//'\''
+  458  history | grep mac
+  459  ifconfig en0 | grep ether | awk '{print $2}'
+  460  openssl rand -hex 6
+  461  openssl rand -hex 6 | sed 's/\(..\)/\1:/g;s/.$//'
+  462  history | grep ether
+  463  sudo ifconfig en0 ether 52:f9:82:3a:77:aa
+  464  shutdown -r now
+  465  sudo shutdown -r now
+  466  ping google.com
+  467  ps aux | grep mysql
+  468  ps aux | grep apache
+  469  ps aux | grep httpd
+  470  ps aux | grep nginx
+  471  services
+  472  service nginx stop
+  473  sudo nginx -s stop 
+  474  ps aux | grep nginx
+  475  cd /Applications
+  476  ll
+  477  cd XAMPP
+  478  ll
+  479  cd xamppfiles
+  480  ll
+  481  cd var
+  482  ll
+  483  cd mysql
+  484  l
+  485  ll
+  486  cp ~/Desktop/aaaaa/mysql/migrations_agentquoter_store/*.frm migrations_agentquoter_store
+  487  pushd .
+  488  cd ~/Desktop/aaaaa/mysql
+  489  ll
+  490  mkdir working
+  491  cp -R migrations_agentquoter_store working
+  492  cd working
+  493  ll
+  494  cd migrations_agentquoter_store
+  495  ll
+  496  chown _mysql:_mysql *
+  497  pwd
+  498  popd
+  499  pwd
+  500  popd
+  501  pwd
+  502  popd
+  503  pwd
+  504  ll
+  505  cd migrations_agentquoter_store
+  506  su 
+  507  sudo cp ~/Desktop/aaaaa/mysql/migrations_agentquoter_store/*.frm migrations_agentquoter_store/
+  508  sudoll migrations_agentquoter_store
+  509  sudo ll migrations_agentquoter_store
+  510  sudo ls -almiq
+  511  sudo ls -al migrations_agentquoter_store
+  512  sudo chown _mysql:_mysql -R migrations_agentquoter_store
+  513  sudo chown _mysql:_mysql -r migrations_agentquoter_storea
+  514  sudo chown _mysql:_mysql -r migrations_agentquoter_store/
+  515  sudo chown -R _mysql:_mysql migrations_agentquoter_store/
+  516  sudo ls -al migrations_agentquoter_store
+  517  sudo cp ~/Desktop/aaaaa/mysql/migrations_agentquoter_store/* migrations_agentquoter_store/
+  518  sudo chown -R _mysql:_mysql migrations_agentquoter_store/
+  519  sudo ls -al migrations_agentquoter_store
+  520  pwd
+  521  ll
+  522  sudo chown -R _mysql:_mysql .
+  523  ll
+  524  sudo ls -al migrations_agentquoter_store
+  525  ll
+  526  sudo rm -rf .
+  527  ll
+  528  sudo rm -rf ./
+  529  sudo rm -rf *
+  530  ll
+  531  ll -al
+  532  ls -al
+  533  sudo chown -R _mysql:_mysql .
+  534  ll
+  535  pwd
+  536  ll
+  537  cat multi-master.info
+  538  sudo cat multi-master.info
+  539  ll
+  540  pwd
+  541  cd  ..
+  542  ll
+  543  cd ..
+  544  ll
+  545  cd ..
+  546  ll
+  547  cd ..
+  548  ll
+  549  cd XAMPP
+  550  ll
+  551  cd xamppfiles
+  552  ll
+  553  cd var
+  554  ll
+  555  cd mysql
+  556  l
+  557  sudo cat mysql_upgrade_info
+  558  sudo cp ~/Desktop/aaaaa/mysql/migrations_agentquoter_store/* migrations_agentquoter_store/
+  559  sudo cp -R ~/Desktop/aaaaa/mysql/migrations_agentquoter_store/* migrations_agentquoter_store/
+  560  sudo cp -R ~/Desktop/aaaaa/mysql/migrations_agentquoter_store migrations_agentquoter_store
+  561  sudo ls -al migrations_agentquoter_store
+  562  ls -al
+  563  sudo chown -R _mysql:_mysql migrations_agentquoter_store
+  564  ll
+  565  myisamchk
+  566  pwd
+  567  ll
+  568  sudo chown -R _mysql:_mysql ibdata1
+  569  ll
+  570  mysqlfrm
+  571  sudo chown -R niran.niran migrations_agentquoter_store/
+  572  sudo chown -R niran:niran migrations_agentquoter_store/
+  573  sudo chown -R niran migrations_agentquoter_store/
+  574  cd migrations_agentquoter_store
+  575  ll
+  576  mysqlfrm --diagnostic push_subscriptions.frm
+  577  python --version
+  578  mysqlfrm --diagnostic push_subscriptions.frm
+  579  ll
+  580  mysqlfrm --diagnostic push_subscriptions.frm
+  581  cat push_subscriptions.frm
+  582  ll push_subscriptions.*
+  583  cat push_subscriptions.ibd
+  584  mysqlfrm --diagnostic –server=root@127.0.0.1 –port 3307 push_subscriptions.frm
+  585  mysqlfrm –server=root@127.0.0.1 –port 3307 push_subscriptions.frm
+  586  pwd
+  587  cd /usr/local
+  588  ll
+  589  cd homebrew
+  590  ll
+  591  cd ..
+  592  ll
+  593  cd var
+  594  ll
+  595  cd homebrew
+  596  ll
+  597  cd ..
+  598  ll
+  599  cd mysql
+  600  ll
+  601  cd mysql
+  602  ll
+  603  cd ..
+  604  ll
+  605  cd ..
+  606  ll
+  607  cd db
+  608  ll
+  609  cd ..
+  610  ll
+  611  cd ..
+  612  ll
+  613  cd Cellar
+  614  ll
+  615  cd mysql
+  616  ll
+  617  cd 8.0.16
+  618  ll
+  619  cd share
+  620  ll
+  621  cd mysql
+  622  ll
+  623  cd english
+  624  ll
+  625  cd ..
+  626  c d..
+  627  ll
+  628  cd ..
+  629  ls
+  630  cd ..
+  631  ls
+  632  cd ..
+  633  pwd
+  634  cd ..
+  635  ls
+  636  cd var
+  637  ll
+  638  cd mysql
+  639  ll
+  640  cd ..
+  641  ll
+  642  cd db
+  643  ll
+  644  cd ..
+  645  ll
+  646  cd homebrew
+  647  ll
+  648  cd ..
+  649  ll
+  650  cd www
+  651  ll
+  652  cd ..
+  653  ll
+  654  cd apache2
+  655  cd ..
+  656  cd cache
+  657  ll
+  658  cd ..
+  659  ls
+  660  cd homebrew
+  661  ll
+  662  cd ..
+  663  pwd
+  664  cd ..
+  665  ll
+  666  cd homebrew
+  667  ll
+  668  cd ..
+  669  ll
+  670  cd var
+  671  ll
+  672  cd db
+  673  ll
+  674  cd ~/Desktop
+  675  cd aaaaa
+  676  ll
+  677  cd mysql
+  678  ll
+  679  cat ibdata1
+  680  cat ibdata1 | more
+  681  mysql
+  682  mysql --help
+  683  mysqld --help
+  684  pwd
+  685  mysqld_safe --help
+  686  mysql_config
+  687  code
+  688  ll
+  689  cd agentquoter-store
+  690  ll
+  691  artisan serve
+  692  artisan queue:listen --tries=1
+  693  redis-server /usr/local/etc/redis.conf &
+  694  laravel-echo-server start
+  695  ll
+  696  cd ..
+  697  ll
+  698  ssh root@app.agentquote.com
+  699  scp agentquoter-store\ 3.zip root@app.agentquote.com:/tmp/
+  700  cd agentquoter-store
+  701  gaa
+  702  git commit -m "Added DB Schema backup for migrations_agentquoter_store"
+  703  git push -u origin master
+  704  ssh root@app.agentquote.com
+  705  history | grep notify
+  706  scp resources/views/affiliate/affiliates-table.blade.php root@app.agentquote.com:/var/www/app/views/affiliate/affiliates-table.blade.php
+  707  ssh root@app.agentquote.com
+  708  scp resources/views/affiliate/affiliates-table.blade.php root@app.agentquote.com:/var/www/app/resources/views/affiliate/affiliates-table.blade.php
+  709  ssh root@app.agentquote.com
+  710  gaa
+  711  git commit -m "Fixed agentquote.conf menu and fixed adding Affiliate with component"
+  712  git push -u origin master
+  713  npm install popper.js@1.11.0 --save
+  714  yarn production
+  715  artisan serve
+  716  rsync --version
+  717  ssh root@app.agentquote.com
+  718  inotify-tools
+  719  inotify
+  720  fswatch
+  721  brew install fswatch
+  722  brew cleanup
+  723  vi sync.sh
+  724  whereis bash
+  725  vi sync.sh
+  726  fswatch -o . | xargs -n1 -I{} ./sync.sh
+  727  chmod u+xrw sync.sh
+  728  ll
+  729  pwd
+  730  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync.sh
+  731  ll
+  732  cat sync.sh
+  733  pwd
+  734  vi sync.sh
+  735  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync.sh
+  736  ll
+  737  ssh root@144.202.0.184 
+  738  vi sync.sh
+  739  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync.sh
+  740  vi sync.sh
+  741  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync.sh
+  742  fswatch -o /Users/niran/code/agentquoter-store/public/ | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_public.sh
+  743  ssh root@app.agentquote.com
+  744  ssh root@144.202.0.184
+  745  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync-app.sh
+  746  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app.sh
+  747  ssh root@144.202.0.184
+  748  rsync --version
+  749  brew install rsync
+  750  brew install rsync@3.1.0
+  751  brew update rsync
+  752  brew upgrade rsync
+  753  brew install rsync
+  754  rsync --version
+  755  source ~/.bashrc
+  756  rsync --version
+  757  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app.sh
+  758  l
+  759  ssh root@144.202.0.184
+  760  ssh root@app.agentquote.com
+  761  ping google.com
+  762  pwd
+  763  code
+  764  cd agentquoter-store
+  765  ll
+  766  clear
+  767  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app.sh
+  768  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_public.sh
+  769  fswatch -o /Users/niran/code/agentquoter-store/public | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_public.sh
+  770  ssh root@app.agentquote.com
+  771  ssh root@mymobilelifequoter.com
+  772  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app.sh
+  773  fswatch -o /Users/niran/code/agentquoter-store/public | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_public.sh
+  774  pwd
+  775  app
+  776  code
+  777  cd agentquoter-store
+  778  ll
+  779  gaa
+  780  git commit -m "Added Affiliate User Edit/Fixed checkbox issues"
+  781  git push -u origin master
+  782  ping breslinshulman.com
+  783  ping affordableinsuranceplans.net
+  784  ping annuitymanagers.com
+  785  ping breslinshulman.com
+  786  ssh root@app.agentquote.com
+  787  ssh-copy-id root@agentquoter.com
+  788  ssh root@agentquoter.com
+  789  cd ..
+  790  scp root@agentquoter.com:/var/www/vhosts/agentquoter.tar.gz .
+  791  cp agentquoter.tar.gz agentquoter_com
+  792  ll
+  793  cd agentquoter_com
+  794  ll
+  795  mkdir install
+  796  cp index.php MAMP-PRO-Logo.png install
+  797  ll
+  798  rm -rf index.php MAMP-PRO-Logo.png
+  799  ll
+  800  tar xvf agentquoter.tar.gz .
+  801  gunzip agentquoter.tar.gz
+  802  ll
+  803  tar xvf agentquoter.tar .
+  804  tar xvf agentquoter.tar
+  805  ll
+  806  rm -rf agentquoter.tar
+  807  mv agentquoter.com/* .
+  808  ll
+  809  cd agentquoter.com
+  810  ll
+  811  cd ..
+  812  rm -rf
+  813  ll
+  814  cd agentquoter.com
+  815  ll
+  816  cd ..
+  817  ll
+  818  mv install ..
+  819  rm -rf *
+  820  ll
+  821  cp ../agentquoter.tar.gz .
+  822  ll
+  823  gunzip agentquoter.tar.gz
+  824  ll
+  825  tar xvf agentquoter.tar
+  826  ll
+  827  mv agentquoter.com aaa
+  828  rm -rf agentquoter.tar
+  829  ll
+  830  cd aaa
+  831  mv * ..
+  832  ll
+  833  cd ..
+  834  rm -rf aaa
+  835  ll
+  836  pwd
+  837  ll
+  838  cd ..
+  839  mv agentquoter_com agentquoter.test
+  840  cd agentquoter.test
+  841  ll
+  842  cd httpdocs
+  843  ll
+  844  dzserve .
+  845  dzserve
+  846  dzserve link
+  847  dzserve park .
+  848  pwd
+  849  cd ..
+  850  ll
+  851  cd httpdocs
+  852  pwd
+  853  ll
+  854  cp -R eden eden.test
+  855  cd eden.test
+  856  ll
+  857  dzserve park .
+  858  dzserve link
+  859  ll
+  860  cat index.php
+  861  ll
+  862  dzserve list
+  863  dzserve link .
+  864  dzserve park
+  865  dzserve forget
+  866  dzserve unlink .
+  867  dzserve paths
+  868  dzserve which
+  869  dzserve open
+  870  dzserve secure
+  871  pwd
+  872  cd ..
+  873  pwd
+  874  ll
+  875  pwd
+  876  cd agentquoter
+  877  l
+  878  cp -R httpdocs agentquoter
+  879  cd agentquoter
+  880  ll
+  881  dzserve park .
+  882  dzserve link
+  883  dzserve
+  884  dzserve paths
+  885  dzserve park
+  886  dzserve link
+  887  dzserve paths
+  888  dzserve open
+  889  dzserve secure
+  890  php -v
+  891  cat /etc/php.ini
+  892  php info
+  893  php -i "phpinfo();"
+  894  php -i "phpinfo();" | grep ini
+  895  vi /usr/local/etc/php/7.3/php.ini
+  896  sudo vi /usr/local/etc/php/7.3/php.ini
+  897  php -i "phpinfo();" | grep ini
+  898  php -i "phpinfo();" | grep "ion"
+  899  php -v
+  900  php -i "phpinfo();" | grep "extension"
+  901  pwd
+  902  cd ..
+  903  sudo cp ioncube_loader_dar_7.3.so /usr/local/lib/php/pecl/20180731/
+  904  php -i "phpinfo();" | grep "extension"
+  905  sudo vi /usr/local/etc/php/7.3/php.ini
+  906  ll /usr/local/lib/php/pecl/20180731
+  907  ll /usr/local/lib/php/pecl/
+  908  ll /usr/local/lib/php/
+  909  mkdir /usr/local/lib/php/pecl
+  910  mkdir /usr/local/lib/php/pecl/20180731
+  911  sudo cp ioncube_loader_dar_7.3.so /usr/local/lib/php/pecl/20180731/
+  912  php -v
+  913  sudo vi /usr/local/etc/php/7.3/php.ini
+  914  ll /usr/local/lib/php/pecl/20180731/ioncube_loader_dar_7.3.so
+  915  ll
+  916  dzserve
+  917  dzserve restart
+  918  chmod 777 /var/www/vhosts/agentquoter.com/whmcsdata/templates_c/
+  919  ll
+  920  cd whmcsdata
+  921  pwd
+  922  history | grep ssh
+  923  ssh root@mymobilelifequoter.com
+  924  ssh-copy-id root@mymobilelifequoter.com
+  925  ssh root@mymobilelifequoter.com
+  926  pwd
+  927  code
+  928  cd agentquoter-store
+  929  ll
+  930  artisan serve
+  931  gaa
+  932  git commit -m "Fixed big bug with ::find(id)->first() ... should not use find and first together :) "
+  933  git push -u origin master
+  934  pwd
+  935  code
+  936  cd agentquoter-store
+  937  artisan config:clear
+  938  artisan serve
+  939  artisan config:clear
+  940  artisan serve
+  941  artisan config:clear
+  942  artisan serve
+  943  artisan config:clear
+  944  artisan serve
+  945  redis-server /usr/local/etc/redis.conf &
+  946  artisan config:clear
+  947  artisan serve
+  948  artisan config:clear
+  949  artisan serve
+  950  ssh app.agentquote.com
+  951  ssh root@app.agentquote.com
+  952  gaa
+  953  vi ~/.aliases
+  954  gc "Fixed bug where user can be logged on more than once in different devices"
+  955  cat ~/.aliases
+  956  gp
+  957  cd ..
+  958  mkdir dzineer
+  959  cd dzineer
+  960  ll
+  961  laravel new dzpages
+  962  cat .env
+  963  ll
+  964  cd dzpages
+  965  cat .env
+  966  artisan serve
+  967  cd ..
+  968  ll
+  969  pwd
+  970  cd wordpress_plugins
+  971  ll
+  972  ping google.com
+  973  ping 192.168.1.1
+  974  code
+  975  cd agentquoter-store
+  976  ll
+  977  history | grep rsync
+  978  inotify-tools
+  979  ll
+  980  cat sync_app.sh
+  981  history | grep inot
+  982  cat notifiable.txt
+  983  ./sync_app.sh
+  984  ./sync_public.sh
+  985  ./sync_app.sh
+  986  ./sync_public.sh
+  987  gaa
+  988  gc "Fixed fd3-reponsive class bug"
+  989  gp
+  990  ./sync_public.sh
+  991  gaa
+  992  gc "Removed Created On for Manager Users List"
+  993  gp
+  994  ./sync_public.sh
+  995  ./sync_app.sh
+  996  \tbrew link mysql
+  997  ./sync_app.sh
+  998  ssh root@agentquoter.com
+  999  exit
+ 1000  sudo spctl --master-disable
+ 1001  telnet agentquote.com 443
+ 1002  telnet
+ 1003  ping agentquote.com
+ 1004  php --version
+ 1005  php -i "phpinfo()"
+ 1006  php -i "phpinfo()" | grep curl
+ 1007  sudo vi /etc/hosts
+ 1008  pwd
+ 1009  code
+ 1010  history
+ 1011  history > latest-history.txt
+ 1012  cd agentquoter-store
+ 1013  ./sync_app.sh
+ 1014  ssh root@mymobilelifequoter.com
+ 1015  ssh root@agentquoter.com
+ 1016  ./sync_app.sh
+ 1017  ping google.com
+ 1018  code
+ 1019  ll
+ 1020  cd dzpages_plugins
+ 1021  ll
+ 1022  cd wp
+ 1023  ll
+ 1024  cd dzpages
+ 1025  ll
+ 1026  dzserve open
+ 1027  ssh app.agentquote.com
+ 1028  ssh root@app.agentquote.com
+ 1029  pwd
+ 1030  cd ..
+ 1031  cd agentquoter-store
+ 1032  grep history | grep fswatch
+ 1033  history | grep fswatch
+ 1034  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync-app.sh
+ 1035  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app.sh
+ 1036  ssh root@app.agentquote.com
+ 1037  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_public.sh
+ 1038  sudo shutdown -r now
+ 1039  pushd .
+ 1040  cd /Applications/MAMP\ PRO.app
+ 1041  ll
+ 1042  cd Contents
+ 1043  ll
+ 1044  cd MacOS
+ 1045  ll
+ 1046  cd MAMP\ PRO\\nll
+ 1047  ll
+ 1048  pwd
+ 1049  ll
+ 1050  ls -alF
+ 1051  cd ..
+ 1052  ll
+ 1053  cd Resources
+ 1054  ll
+ 1055  cd ..
+ 1056  ll
+ 1057  cd ..
+ 1058  cd MAMP
+ 1059  ll
+ 1060  cd MAMP.app
+ 1061  ll
+ 1062  cd Contents
+ 1063  ll
+ 1064  cd MacOS
+ 1065  ll
+ 1066  cd ..
+ 1067  xs ..
+ 1068  ll
+ 1069  cd ..
+ 1070  ll
+ 1071  cd ..
+ 1072  l
+ 1073  cd Library
+ 1074  l
+ 1075  cd modules
+ 1076  l
+ 1077  cd ..
+ 1078  ll
+ 1079  cd bin
+ 1080  ll
+ 1081  /Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot
+ 1082  popd
+ 1083  cd ..
+ 1084  cd dzpages_plugins
+ 1085  ll
+ 1086  cd wp
+ 1087  ll
+ 1088  cd dzpages
+ 1089  ll
+ 1090  cd wp-content/plugins/dzdevelopment
+ 1091  ll
+ 1092  sh -c '/Applications/MAMP/Library/bin/mysqld_safe --defaults-file=/Applications/MAMP/tmp/mysql/my.cnf --port=3306 --socket=/Applications/MAMP/tmp/mysql/mysql.sock --user=alex --pid-file=/Applications/MAMP/tmp/mysql/mysql.pid --log-error=/Applications/MAMP/logs/mysql_error_log.err --tmpdir=/Applications/MAMP/tmp/mysql/tmpdir --datadir=/Library/Application\ Support/appsolute/MAMP\ PRO/db/mysql &'
+ 1093  /usr/bin/clear; ssh -i '/Users/niran/.bitnami/stackman/machines/wordpress/ssh/id_rsa' -o StrictHostKeyChecking=no 'root@192.168.64.3'
+ 1094  cd "/Users/niran/.bitnami/stackman/machines/wordpress/volumes/root/apps/wordpress/htdocs/wp-content/plugins/recipe/includes"
+ 1095  pwd
+ 1096  cd ..
+ 1097  ll
+ 1098  cd blocks
+ 1099  npm run dev
+ 1100  cd ..
+ 1101  cd code
+ 1102  code
+ 1103  cd agentquoter-store
+ 1104  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync-public.sh
+ 1105  ll
+ 1106  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_public.sh
+ 1107  ssh root@app.agentquote.com
+ 1108  ssh root@store.agentquoter.com
+ 1109  ssh root@app.agentquote.com
+ 1110  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_public.sh
+ 1111  yarn production
+ 1112  ssh root@app.agentquote.com
+ 1113  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app.sh
+ 1114  ssh root@app.agentquote.com
+ 1115  exit
+ 1116  ssh root@app.agentquote.com
+ 1117  code
+ 1118  cd agentquoter-store
+ 1119  ssh root@app.agentquote.com
+ 1120  scp public/js/app.js root@app.agentquote.com:/var/www/html/js/app.js
+ 1121  ping store.agentquote.com
+ 1122  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app.sh
+ 1123  ssh root@app.agentquote.com
+ 1124  /usr/bin/clear; ssh -i '/Users/niran/.bitnami/stackman/machines/wordpress/ssh/id_rsa' -o StrictHostKeyChecking=no 'root@192.168.64.3'
+ 1125  whoami
+ 1126  exit
+ 1127  /usr/bin/clear; ssh -i '/Users/niran/.bitnami/stackman/machines/wordpress/ssh/id_rsa' -o StrictHostKeyChecking=no 'root@192.168.64.3'
+ 1128  ls -al sync*
+ 1129  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app_js.sh
+ 1130  ssh root@agentquoter.com
+ 1131  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app.sh
+ 1132  ssh-copy-id fdecker@aqmeeting.com
+ 1133  ssh root@mymobilelifequoter.com
+ 1134  ssh root@app.agentquote.com
+ 1135  history | grep scp | grep png > history.scp.pngs
+ 1136  history | grep scp > history.scp.txt
+ 1137  history | grep scp
+ 1138  ssh root@mymobilelifequoter.com
+ 1139  ssh root@app.agentquote.com
+ 1140  sudo killall coreaudiod
+ 1141  sudo kextunload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport
+ 1142  sudo kextload -b com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport
+ 1143  /usr/bin/clear; ssh -i '/Users/niran/.bitnami/stackman/machines/wordpress/ssh/id_rsa' -o StrictHostKeyChecking=no 'root@192.168.64.3'
+ 1144  exit
+ 1145  pwd
+ 1146  ps aux | grep mysql
+ 1147  brew start mysql
+ 1148  brew
+ 1149  brew install mysql
+ 1150  whoami
+ 1151  brew install nginx
+ 1152  new cleanup
+ 1153  brew cleanup
+ 1154  brew upate
+ 1155  brew update
+ 1156  brew
+ 1157  brew info nginx
+ 1158  cd /usr/local/var/www
+ 1159  brew services start nginx
+ 1160  service nginx status
+ 1161  service
+ 1162  brew services status nginx
+ 1163  brew services list
+ 1164  netstat -tulpn | grep :80
+ 1165  netstat -tulpn
+ 1166  netstat -tulp
+ 1167  netstat 
+ 1168  netstat -apv TCP
+ 1169  netstat -a
+ 1170  netstat -a | grep -i "listen"
+ 1171  sudo netstat -a | grep -i "listen"
+ 1172  vi /usr/local/etc/nginx/nginx.conf
+ 1173  cd /usr/local/etc/nginx/
+ 1174  ll
+ 1175  vi dzserve/dzserve.conf 
+ 1176  dzserve
+ 1177  dzserve links
+ 1178  dzserve unlink agentquoter dist dzpages nodejs nodejs
+ 1179  dzserve unlink agentquoter
+ 1180  dzserve unlink dist
+ 1181  dzserve unlink nodejs
+ 1182  dzserve links
+ 1183  dzserve unlink dzpages
+ 1184  dzserve unlink html
+ 1185  dzserve unlink live_app.agentquote.com
+ 1186  dzserve links
+ 1187  dzserve paths
+ 1188  dzserve 
+ 1189  dzserve tld
+ 1190  dzserve paths
+ 1191  dzserve unlink /Users/niran/.config/dzserve/Sites
+ 1192  dzserve forget live_app.agentquote.com
+ 1193  dzserve forget /Users/niran/code
+ 1194  dzserve forget /Users/niran/code/dtrack
+ 1195  dzserve forget /Users/niran/code/html/store
+ 1196  dzserve forget 
+ 1197  dzserve forget /Users/niran/code/vue_101/dzineer/dist
+ 1198  dzserve forget /Users/niran/code/live_app.agentquote.com
+ 1199  dzserve forget /Users/niran/code/agentquoter/agentquoter
+ 1200  dzserve forget /Users/niran/code/dzpages_plugins/wp/dzpages
+ 1201  dzserve forget /Users/niran/code/dzpages_plugins/wp/dzpages/wp-content/plugins/dzdevelopment/nodejs
+ 1202  dzserve paths
+ 1203  pw
+ 1204  ll
+ 1205  cd
+ 1206  cd code
+ 1207  ll
+ 1208  mkdir wordpress_servers
+ 1209  cd wordpress_servers
+ 1210  ll
+ 1211  cd ..
+ 1212  mv wordpress_sites
+ 1213  mv wordpress_servers wordpress_sites/
+ 1214  dc wordpress_sites
+ 1215  ll
+ 1216  cd wordpress_sites
+ 1217  ll
+ 1218  mkidr plugin_dev
+ 1219  mkdir plugin-dev
+ 1220  cd plugin-dev
+ 1221  ll
+ 1222  echo "<html><html lang='en'><head><title>test</title></head><body><h1>test</h1></body></html>" > index.html
+ 1223  cat index.html
+ 1224  dzserve .
+ 1225  dzserve link
+ 1226  dzserve path
+ 1227  dzserve path .
+ 1228  dzserve
+ 1229  dzserve park
+ 1230  dzserve open
+ 1231  dzserve paths
+ 1232  dzserve
+ 1233  brew
+ 1234  brew list
+ 1235  brew services stop nginx
+ 1236  dzserve
+ 1237  dzserve restart
+ 1238  dzserve open
+ 1239  dzserve list
+ 1240  dzserve paths
+ 1241  dzserve links
+ 1242  dzserve which
+ 1243  vi index.html
+ 1244  ll
+ 1245  php index.php
+ 1246  cd ..
+ 1247  cp plugin-dev plugin_dev -R
+ 1248  cp -R plugin-dev plugin_dev
+ 1249  cd plugin_dev
+ 1250  ll
+ 1251  dzserve link
+ 1252  dzserve path
+ 1253  dzserve park
+ 1254  dzserve open
+ 1255  pwd
+ 1256  ps aux | grep nginx
+ 1257  dzserve park .
+ 1258  dzserve
+ 1259  dzserve which
+ 1260  ll
+ 1261  rm -rf
+ 1262  dzserve park
+ 1263  dzserve link
+ 1264  ls -al
+ 1265  dzserve open
+ 1266  cd ..
+ 1267  cd agentquoter-store
+ 1268  dzserve open
+ 1269  ll
+ 1270  dzserve stop
+ 1271  ps aux | grep nginx
+ 1272  whereis dzservce
+ 1273  whereis dzserve
+ 1274  cd /Users/niran/.config/dzserve/Sites
+ 1275  ll
+ 1276  ls -al
+ 1277  rm -rf plug*
+ 1278  ls -al
+ 1279  cd ..
+ 1280  ll
+ 1281  vi dnsmasq.conf
+ 1282  cd Nginx
+ 1283  ll
+ 1284  vi agentquoter.test
+ 1285  mkdir junk
+ 1286  mv * junk
+ 1287  ll
+ 1288  cd ..
+ 1289  ll
+ 1290  vi config.json
+ 1291  cd Log
+ 1292  ll
+ 1293  tail -f nginx-error.log
+ 1294  rotatelogs nginx-error.log
+ 1295  rotatelogs -t nginx-error.log
+ 1296  rotatelogs -t `pwd`/nginx-error.log
+ 1297  pwd
+ 1298  rotatelogs /Users/niran/.config/dzserve/Log/nginx-error.log
+ 1299  ll
+ 1300  vi nginx-error.log
+ 1301  cat nginx-error.log
+ 1302  ls -al
+ 1303  rm -rf nginx-error.log 
+ 1304  rm -rf nginx-error.log\~ 
+ 1305  ls -al
+ 1306  deserve start
+ 1307  dzserve start
+ 1308  ll
+ 1309  ls -al
+ 1310  cd ..
+ 1311  ll
+ 1312  code
+ 1313  ll
+ 1314  cd agentquoter-store
+ 1315  dzserve
+ 1316  dzserve trust
+ 1317  dzserve park
+ 1318  dzserve open
+ 1319  cd /root
+ 1320  ll
+ 1321  cd /
+ 1322  pwd
+ 1323  ll
+ 1324  cd
+ 1325  l
+ 1326  ll
+ 1327  cd  
+ 1328  ll
+ 1329  cd /usr/local/lib/node_modules
+ 1330  ll
+ 1331  composer config --list --global
+ 1332  cd /Users/niran/.composer
+ 1333  ll
+ 1334  cd vendor
+ 1335  ll
+ 1336  cd dzineer
+ 1337  ll
+ 1338  cd dzserve
+ 1339  ll
+ 1340  vi dzserve
+ 1341  echo "${BASH_SOURCE[0]}"
+ 1342  echo ${BASH_SOURCE[0]}
+ 1343  echo ${BASH_SOURCE[0]} a
+ 1344  echo ${BASH_SOURCE[0]} a b
+ 1345  echo a b
+ 1346  ll
+ 1347  cp dz-test
+ 1348  cp dzserve dztest
+ 1349  vi dztest
+ 1350  ./dztest
+ 1351  vi dztest
+ 1352  ./dztest
+ 1353  vi dztest
+ 1354  bash -L
+ 1355  vi dztest
+ 1356  php -r "echo dirname(realpath('./dztest'));"
+ 1357  vi dztest
+ 1358  ./dztest
+ 1359  dzserve stop
+ 1360  code
+ 1361  pwd
+ 1362  cd agentquoter-store
+ 1363  ll
+ 1364  tail -f storage/logs/laravel.log
+ 1365  ps aux | grep apache
+ 1366  ps aux | grep nginx
+ 1367  pwd
+ 1368  ll
+ 1369  code
+ 1370  cd agentquoter-store
+ 1371  php artisan serve
+ 1372  /Volumes/Vagrant/uninstall.tool ; exit;
+ 1373  pa aux | grep vagrant
+ 1374  ps aux | grep vagrant
+ 1375  vagrant halt
+ 1376  vagrant destroy
+ 1377  vagrant plugin uninstall vagrant-triggers
+ 1378  vagrant plugin expunge --reinstall
+ 1379  brew
+ 1380  brew uninstall vagrant
+ 1381  vagrant --help
+ 1382  sudo rm -rf /opt/vagrant
+ 1383  sudo rm -f /usr/local/bin/vagrant
+ 1384  sudo pkgutil --forget com.vagrant.vagrant
+ 1385  sudo rm -rf ~/.vagrant.d
+ 1386  vagrant halt
+ 1387  sudo shutdown -r now
+ 1388  cd
+ 1389  vagrant plugin install vagrant-hostsupdater
+ 1390  vagrant plugin install vagrant-triggers
+ 1391  vagrant plugin install vagrant-vbguest
+ 1392  git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git
+ 1393  ll
+ 1394  cd VVV
+ 1395  ll
+ 1396  cd ..
+ 1397  git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local
+ 1398  cd ~VVV
+ 1399  cd VVV
+ 1400  ll
+ 1401  cd ..
+ 1402  ll
+ 1403  cd VVV
+ 1404  ll
+ 1405  vagrant up
+ 1406  vagrant ssh
+ 1407  vagrant down
+ 1408  vagrant plugin remove vagrant-triggers
+ 1409  vagrant plugin uninstall vagrant-triggers
+ 1410  vagrant up
+ 1411  cd ..
+ 1412  ll
+ 1413  rm -rf VVV
+ 1414  git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git
+ 1415  git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local
+ 1416  ll
+ 1417  rm -rf vagrant-local
+ 1418  git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local
+ 1419  cd vagrant-local
+ 1420  ll
+ 1421  vagrant up
+ 1422  vagrant down
+ 1423  cd ..
+ 1424  rm -rm vagrant-local
+ 1425  rm -rf vagrant-local
+ 1426  rm -rf VVV
+ 1427  git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/vagrant-local
+ 1428  ping google.com
+ 1429  ll
+ 1430  cd VVV
+ 1431  git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/VVV
+ 1432  cd VVV
+ 1433  ll
+ 1434  vagrant up
+ 1435  vagrant
+ 1436  cd ..
+ 1437  ll
+ 1438  vagrant box
+ 1439  vagrant box list
+ 1440  rm -rf varying-vagrant-vagrants/ubuntu-18.04 (virtualbox, 1557101534)
+ 1441  vagrant remove varying-vagrant-vagrants/ubuntu-18.04 (virtualbox, 1557101534)
+ 1442  vagrant remove varying-vagrant-vagrants/ubuntu-18.04
+ 1443  vagrant box list
+ 1444  vagrant box remove 1557101534
+ 1445  vagrant box list
+ 1446  vagrant box remove varying-vagrant-vagrants/ubuntu-18.04
+ 1447  git clone https://github.com/Varying-Vagrant-Vagrants/VVV.git wordpress-vvv\n
+ 1448  cd wordpress-vvv
+ 1449  vagrant up
+ 1450  ping 8.8.8.8
+ 1451  vagrant ssh
+ 1452  cd ..
+ 1453  cd wordpress-vvv
+ 1454  vagrant down
+ 1455  cd ..
+ 1456  rm -rf wordpress-vvv
+ 1457  vagrant plugin install vagrant-hostsupdater --local
+ 1458  ll
+ 1459  git clone https://github.com/Varying-Vagrant-Vagrants/VVV.git\n
+ 1460  rm -rf VVV
+ 1461  git clone https://github.com/Varying-Vagrant-Vagrants/VVV.git\n
+ 1462  git clone https://github.com/Varying-Vagrant-Vagrants/VVV.git vvv-wordpress\n
+ 1463  vagrant plugin install vagrant-hostsupdater vvv-wordpress
+ 1464  vagrant plugin install vagrant-hostsupdater
+ 1465  vagrant up --provision
+ 1466  cd vvv-wordpress
+ 1467  vagrant up --provision
+ 1468  vagrant ssh
+ 1469  vagrant down
+ 1470  cd ..
+ 1471  vagrant halt
+ 1472  cd VVV
+ 1473  vagrant halt
+ 1474  vagrant destroy
+ 1475  git pull
+ 1476  vagrant up --provision
+ 1477  vargrant box remove VVV_bbe96d06518
+ 1478  vagrant box remove VVV_bbe96d06518
+ 1479  vagrant remove VVV_bbe96d06518
+ 1480  vagrant destroy
+ 1481  git pull
+ 1482  vagrant up --provision
+ 1483  vagrant --version
+ 1484  sudo shutdown -r now
+ 1485  vagrant up --provision
+ 1486  cd ..
+ 1487  rm -rf VVV
+ 1488  git clone https://github.com/Varying-Vagrant-Vagrants/VVV-developers.git vvv-wordpress\n
+ 1489  git clone -b develop git://github.com/Varying-Vagrant-Vagrants/VVV.git
+ 1490  git clone -b develop git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local
+ 1491  rm -rf vagrant-local
+ 1492  git clone -b develop git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local
+ 1493  cd vagrant-local
+ 1494  vargrant up --provision
+ 1495  vagrant up
+ 1496  vagrant box update
+ 1497  vagrant up
+ 1498  ll
+ 1499  cd ..
+ 1500  cd vagrant-local
+ 1501  vagrant down
+ 1502  cd ..
+ 1503  rm -rf vagrant-local
+ 1504  cd VVV
+ 1505  vagrant up
+ 1506  cd ..
+ 1507  cd VVV
+ 1508  vagrant halt
+ 1509  vagrant destroy
+ 1510  git pull
+ 1511  vagrant plugin update vagrant-vbguest
+ 1512  vagrant destroy
+ 1513  vagrant checkout develop && git pull
+ 1514  checkout develop
+ 1515  git checkout develop
+ 1516  git pull
+ 1517  pwd
+ 1518  rm -rf ~/.vagrant.d
+ 1519  vagrant --version
+ 1520  cd ..
+ 1521  mkdir sandbox
+ 1522  pwd
+ 1523  cd sandbox
+ 1524  wget https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_x86_64.deb\n
+ 1525  l
+ 1526  vagrant box add generic/ubuntu1804
+ 1527  ll
+ 1528  mkdir ubuntu-18.04
+ 1529  cd ubuntu-18.04
+ 1530  ll
+ 1531  vi Vagrantfile
+ 1532  vagrant up
+ 1533  vagrant ssh
+ 1534  vagrant down
+ 1535  ll
+ 1536  vi Vagrantfile
+ 1537  vagrant up
+ 1538  vagrant ssh
+ 1539  vagrant
+ 1540  vagrant halt
+ 1541  vi Vagrantfile
+ 1542  cd ..
+ 1543  ll
+ 1544  code
+ 1545  cd agentquoter-store
+ 1546  ll
+ 1547  cd vbox
+ 1548  ll
+ 1549  vagrant up
+ 1550  cd
+ 1551  ll
+ 1552  cd sandbox
+ 1553  ll
+ 1554  cd ubuntu-18.04
+ 1555  ll
+ 1556  cat Vagrantfile
+ 1557  cd ..
+ 1558  ll
+ 1559  code
+ 1560  cd agentquoter-store
+ 1561  cd vbox
+ 1562  ll
+ 1563  vagrant halt
+ 1564  cp Vagrant install.sh ~/sandbox/
+ 1565  cd ~/sandbox
+ 1566  ll
+ 1567  mkdir laravel-dev
+ 1568  cp ~/code/agentquoter-store/vbox/Vagrant .
+ 1569  cp ~/code/agentquoter-store/vbox/Vagrantfile .
+ 1570  ll
+ 1571  vp Vagrantfile install.sh laravel-dev
+ 1572  cp Vagrantfile install.sh laravel-dev
+ 1573  cd laravel-dev
+ 1574  ll
+ 1575  cat install.sh
+ 1576  cat Vagrantfile
+ 1577  cd ..
+ 1578  ll
+ 1579  vi ubuntu-18.04/Vagrantfile
+ 1580  cd laravel-dev
+ 1581  ll
+ 1582  vi Vagrantfile
+ 1583  vagrant up
+ 1584  composer --version
+ 1585  cat Vagrantfile
+ 1586  vi Vagrantfile
+ 1587  vagrant halt
+ 1588  vagrant up
+ 1589  sudo wget -c http://download.virtualbox.org/virtualbox/6.0.06/VBoxGuestAdditions_6.0.0.iso \ -O VBoxGuestAdditions_6.0.0.iso
+ 1590  sudo wget -c http://download.virtualbox.org/virtualbox/6.0.06/VBoxGuestAdditions_6.0.0.iso -O VBoxGuestAdditions_6.0.0.iso
+ 1591  sudo wget -c http://download.virtualbox.org/virtualbox/6.0.0/VBoxGuestAdditions_6.0.0.iso -O VBoxGuestAdditions_6.0.0.iso
+ 1592  vagrant up
+ 1593  vagrant halt
+ 1594  vagrant up
+ 1595  vagrant halt
+ 1596  vi Vagrantfile
+ 1597  vi ../ubuntu-18.04/Vagrantfile
+ 1598  vi Vagrantfile
+ 1599  vagrant up
+ 1600  cat Vagrantfile
+ 1601  vagrant halt
+ 1602  vi Vagrantfile
+ 1603  vi install.sh
+ 1604  cat Vagrantfile
+ 1605  vagrant up
+ 1606  vagrant halt
+ 1607  vagrant destroy
+ 1608  vagrant up
+ 1609  vagrant halt
+ 1610  cd ..
+ 1611  cd ubuntu-18.04
+ 1612  vagrant up
+ 1613  vagrant halt
+ 1614  vagrant up
+ 1615  ll
+ 1616  cat Vagrantfile
+ 1617  vi Vagrantfile
+ 1618  vagrant up
+ 1619  cat Vagrantfile
+ 1620  sudo wget -c http://download.virtualbox.org/virtualbox/6.0.06/VBoxGuestAdditions_6.0.0.iso -O VBoxGuestAdditions_6.0.0.iso
+ 1621  vagrant halt
+ 1622  vi Vagrantfile
+ 1623  vagrant up
+ 1624  vi Vagrantfile
+ 1625  vagrant up
+ 1626  vi Vagrantfile
+ 1627  vagrant up
+ 1628  vi Vagrantfile
+ 1629  vagrant plugin install vagrant-vbguest
+ 1630  vi Vagrantfile
+ 1631  vagrant up
+ 1632  vi Vagrantfile
+ 1633  vagrant up
+ 1634  ping google.com
+ 1635  vagrant ssh
+ 1636  cat Vagrantfile
+ 1637  vagrant halt
+ 1638  vagrant package
+ 1639  ll
+ 1640  ls -al
+ 1641  mv package.box ubunto-1804-working
+ 1642  ll
+ 1643  mysql
+ 1644  whereis mysql
+ 1645  vagrant up
+ 1646  vi Vagrantfile
+ 1647  cd ..
+ 1648  ll
+ 1649  cd ubuntu-18.04
+ 1650  ls -al
+ 1651  cd .vagrant
+ 1652  ll
+ 1653  cd machines
+ 1654  ll
+ 1655  cd ubuntu-01
+ 1656  ll
+ 1657  cd virtualbox
+ 1658  ll
+ 1659  cd ..
+ 1660  c ..
+ 1661  ll
+ 1662  cd ..
+ 1663  ll
+ 1664  ls
+ 1665  cd ..
+ 1666  ll
+ 1667  cd ..
+ 1668  ll
+ 1669  mv ubunto-1804-working ubuntu-1804-working
+ 1670  ll
+ 1671  ls -al
+ 1672  pwd
+ 1673  mv ubuntu-1804-working ..
+ 1674  ll
+ 1675  vagrant ssh
+ 1676  vagrant halt
+ 1677  vi Vagrantfile
+ 1678  vagrant up
+ 1679  cd /vagrant
+ 1680  ll
+ 1681  ls -al
+ 1682  vagrant ssh
+ 1683  clearr
+ 1684  ll
+ 1685  mkdir website
+ 1686  ll
+ 1687  vagrant ssh
+ 1688  pwd
+ 1689  ll
+ 1690  cd website
+ 1691  ll
+ 1692  cd plugins
+ 1693  ll
+ 1694  cd recipe
+ 1695  ll
+ 1696  cd ..
+ 1697  ll
+ 1698  ll -al
+ 1699  ls -al
+ 1700  cd recipe
+ 1701  ls -al
+ 1702  cd assets
+ 1703  ll
+ 1704  cd ..
+ 1705  ll
+ 1706  ls -al
+ 1707  du .
+ 1708  du . -H
+ 1709  du . -h
+ 1710  du --help
+ 1711  du -H
+ 1712  du -H .
+ 1713  cd ..
+ 1714  du -H .
+ 1715  ll
+ 1716  cd website
+ 1717  ll
+ 1718  git clone https://github.com/dzineer/wp-plugins-backups.git
+ 1719  ll
+ 1720  cd wp-plugins-backups
+ 1721  ll
+ 1722  cp -R recipe ../plugins
+ 1723  cd ..
+ 1724  ll
+ 1725  cd plugins
+ 1726  ll
+ 1727  rm -rf *
+ 1728  ll
+ 1729  cd ..
+ 1730  ll
+ 1731  cd wp-plugins-backups
+ 1732  cp * -R ../plugins
+ 1733  cd ..
+ 1734  cd plugins
+ 1735  ll
+ 1736  rm -rf *
+ 1737  ll
+ 1738  cd ..
+ 1739  cd wp-plugins-backups
+ 1740  mv * ../plugins
+ 1741  cd ../plugins
+ 1742  ll
+ 1743  cd ..
+ 1744  ll
+ 1745  cd ..
+ 1746  ll
+ 1747  vagrant ssh
+ 1748  ll
+ 1749  cd website
+ 1750  ll
+ 1751  cd plugins
+ 1752  ll
+ 1753  cd recipe
+ 1754  ll
+ 1755  cd blocks
+ 1756  ll
+ 1757  rm -rf node_modules
+ 1758  cat package.json
+ 1759  vi package.json
+ 1760  npm install
+ 1761  ll
+ 1762  npm run dev
+ 1763  pwd
+ 1764  whoami
+ 1765  cd ..
+ 1766  vagrant ssh
+ 1767  vagrant halt
+ 1768  vagrant up
+ 1769  ssh whoami
+ 1770  whoami
+ 1771  ssh root@app.agentquote.com
+ 1772  code
+ 1773  cd agentquoter-store
+ 1774  scp root@app.agentquote.com:/var/www/app/app/Libraries/MobileQuoterBuilder.php app/Libraries/MobileQuoterBuilder.php
+ 1775  ssh root@app.agentquote.com
+ 1776  scp root@app.agentquote.com:/var/www/app/app/app/Http/Controllers/OtpController.php app/Http/Controllers/OtpController.php
+ 1777  scp root@app.agentquote.com:/var/www/app/app/Http/Controllers/OtpController.php app/Http/Controllers/OtpController.php
+ 1778  ssh root@app.agentquote.com
+ 1779  scp root@app.agentquote.com:/var/www/app/app/Libraries/MobileQuoterBuilder.php app/Libraries/MobileQuoterBuilder.php
+ 1780  ssh root@app.agentquote.com
+ 1781  scp root@app.agentquote.com:/var/www/app/app/Http/Controllers/OtpController.php app/Http/Controllers/OtpController.php
+ 1782  ssh root@app.agentquote.com
+ 1783  scp app/Http/Controllers/UserQuoteController.php root@app.agentquote.com:/var/www/app/app/Http/Controllers/UserQuoteController.php
+ 1784  ssh root@app.agentquote.com
+ 1785  scp app/Http/Controllers/UserQuoteController.php root@app.agentquote.com:/var/www/app/app/Http/Controllers/UserQuoteController.php
+ 1786  ssh root@app.agentquote.com
+ 1787  scp app/Http/Controllers/UserQuoteController.php root@app.agentquote.com:/var/www/app/app/Http/Controllers/UserQuoteController.php
+ 1788  ssh root@app.agentquote.com
+ 1789  scp app/Listeners/LogQuoteCreated.php root@app.agentquote.com:/var/www/app/app/Listeners/LogQuoteCreated.php
+ 1790  ssh root@app.agentquote.com
+ 1791  gaa && gc "Fixed Bugs" && gp
+ 1792  gaa && gc "Fixed Bugs" && gp --force
+ 1793  gaa
+ 1794  git push
+ 1795  git push --force
+ 1796  vagrant halt
+ 1797  cd ..
+ 1798  ll
+ 1799  cd ubuntu-18.04
+ 1800  ll
+ 1801  vagrant up
+ 1802  ssh root@app.agentquote.com
+ 1803  pwd
+ 1804  cd ..
+ 1805  ll
+ 1806  cd ..
+ 1807  ll
+ 1808  vagrant up
+ 1809  ll
+ 1810  cd website
+ 1811  ll
+ 1812  cd ..
+ 1813  ll
+ 1814  vagrant ssh
+ 1815  ll
+ 1816  cd website
+ 1817  ll
+ 1818  ls -al
+ 1819  cd plugins
+ 1820  ll
+ 1821  cd ..
+ 1822  chmod 777 plugins
+ 1823  ll -al
+ 1824  chmod 777 plugins -R
+ 1825  chmod 777 plugins -r
+ 1826  cd ..
+ 1827  vagrant ssh
+ 1828  ll
+ 1829  cd website
+ 1830  ll
+ 1831  cd plugins
+ 1832  ll
+ 1833  cd recipe
+ 1834  ll
+ 1835  cd blocks
+ 1836  ll
+ 1837  cat package.json
+ 1838  npm start dev
+ 1839  npm run dev
+ 1840  whoami
+ 1841  ssh root@agentquoter.com
+ 1842  pwd
+ 1843  cd ..
+ 1844  vagrant ssh
+ 1845  fswatch -o /Users/niran/code/agentquoter-store | xargs -n1 -I{} /Users/niran/code/agentquoter-store/sync_app.sh
+ 1846  ssh root@app.agentquote.com
+ 1847  cd ..
+ 1848  ll
+ 1849  cd ubuntu-18.04
+ 1850  ll
+ 1851  vargrant halt
+ 1852  vagrant halt
+ 1853  pwd
+ 1854  ..
+ 1855  ll
+ 1856  cp ubuntu-18.04 ubuntu-18.04-pposearch -R
+ 1857  cp ubuntu-18.04 ubuntu-18.04-pposearch -r
+ 1858  cp -r ubuntu-18.04/ ubuntu-18.04-pposearch/
+ 1859  ll
+ 1860  cd ubuntu-18.04-pposearch
+ 1861  ll
+ 1862  vi Vagrantfile
+ 1863  vagrant up
+ 1864  ll
+ 1865  vagrant halt
+ 1866  cd ..
+ 1867  ll
+ 1868  cd ubuntu-18.04-pposearch
+ 1869  ll
+ 1870  rm -rf *
+ 1871  ll
+ 1872  cp ../ubuntu-18.04/Vagrantfile .
+ 1873  vi Vagrantfile
+ 1874  vagrant up
+ 1875  vagrant ssh
+ 1876  cat Vagrantfile
+ 1877  ll
+ 1878  ls -al
+ 1879  cat Vagrantfile
+ 1880  cd /vagrant
+ 1881  ll
+ 1882  vagrant ssh
+ 1883  cp -r ~/code/PPOSearch public/ppo_search
+ 1884  ll
+ 1885  cd public
+ 1886  ll
+ 1887  cd ppo_search
+ 1888  ll
+ 1889  cd ..
+ 1890  vargrant ssh
+ 1891  vagrant ssh
+ 1892  cd ..
+ 1893  cd ubuntu-18.04
+ 1894  vagrant up
+ 1895  ll
+ 1896  cd /var/www/html
+ 1897  ll
+ 1898  vagrant ssh
+ 1899  vagrant halt
+ 1900  ll
+ 1901  cp -r phpmyadmin ../ubuntu-18.04-pposearch
+ 1902  cd ../ubuntu-18.04-pposearch
+ 1903  ll
+ 1904  vagrant ssh
+ 1905  vagrant halt
+ 1906  cd ..
+ 1907  ll
+ 1908  rm -rf ubuntu-18.04-pposearch
+ 1909  ll
+ 1910  cat install.sh
+ 1911  ll
+ 1912  cd ubuntu-18.04
+ 1913  ll
+ 1914  vagrant package
+ 1915  ll
+ 1916  pwd
+ 1917  mkdir ../saved_boxes
+ 1918  mv package.box ../saved_boxes
+ 1919  cd ../saved_boxes
+ 1920  l
+ 1921  ll
+ 1922  cd ..
+ 1923  ll
+ 1924  mkdir pposearch
+ 1925  cd pposearch
+ 1926  ll
+ 1927  cp ../ubuntu-18.04/Vagrantfile .
+ 1928  ll
+ 1929  vi Vagrantfile
+ 1930  pwd
+ 1931  cd ..
+ 1932  cd saved_boxes
+ 1933  pwd
+ 1934  ll
+ 1935  cd ..
+ 1936  ll
+ 1937  cd pposearch
+ 1938  ll
+ 1939  vi Vagrantfile
+ 1940  pwd
+ 1941  vagrant up
+ 1942  cat Vagrantfile
+ 1943  ll
+ 1944  pwd
+ 1945  mkdir code
+ 1946  cp ~/code/PPOSearch code -R
+ 1947  cp ~/code/PPOSearch code -r
+ 1948  cp -r ~/code/PPOSearch code
+ 1949  ll
+ 1950  cd code
+ 1951  ll
+ 1952  mv PPOSearch pposearch
+ 1953  cd pposearch
+ 1954  ll
+ 1955  pwd
+ 1956  cd ..
+ 1957  vagrant ssh
+ 1958  vagrant halt
+ 1959  ll
+ 1960  cat Vagrantfile
+ 1961  ssh root@app.agentquote.com
+ 1962  ssh root@agentquoter.com
+ 1963  cd code
+ 1964  scp -R PPOSearch root@agentquoter.com:/var/www/vhosts/healthone80.com/pposearh
+ 1965  scp -R PPOSearch/ root@agentquoter.com:/var/www/vhosts/healthone80.com/pposearh
+ 1966  scp -r PPOSearch/ root@agentquoter.com:/var/www/vhosts/healthone80.com/pposearh
+ 1967  ssh root@agentquoter.com
+ 1968  ll
+ 1969  cd PPOSearch
+ 1970  git remote add origin https://github.com/dzineer/PPOSearch.git
+ 1971  git init
+ 1972  git remote add origin https://github.com/dzineer/PPOSearch.git
+ 1973  echo ".git" > .gitignore
+ 1974  ll
+ 1975  pwd
+ 1976  ls -al
+ 1977  echo ".idea" >> .gitignore
+ 1978  git add -A
+ 1979  gc "Health One - PPO Search" && gp
+ 1980  cd ..
+ 1981  ll
+ 1982  cd 
+ 1983  ll
+ 1984  cd sandbox
+ 1985  ll
+ 1986  cd ubuntu-18.04
+ 1987  ll
+ 1988  sudo ~/.aliases
+ 1989  sudo vi ~/.aliases
+ 1990  sudo source ~/.aliases
+ 1991  source
+ 1992  source ~/.aliases
+ 1993  vup
+ 1994  sudo source ~/.aliases
+ 1995  sudo vi ~/.aliases
+ 1996  source ~/.aliases
+ 1997  vssh
+ 1998  vhalt
+ 1999  ifconfig -a
+ 2000  ping google.com
+ 2001  php -v
+ 2002  pwd
+ 2003  cd code
+ 2004  code
+ 2005  mkdir webcrawler
+ 2006  ll
+ 2007  cd webcrawler
+ 2008  ll
+ 2009  pstorm .
+ 2010  ssh root@agentquoter.com
+ 2011  cd design
+ 2012  cd landing_pages
+ 2013  ll
+ 2014  dzserve path .
+ 2015  dzserve path park
+ 2016  dzserve park
+ 2017  dzserve open
+ 2018  ps aux | grep apache
+ 2019  ps aux | grep nginx
+ 2020  dzserve 
+ 2021  dzserve link .
+ 2022  dzserve start
+ 2023  top
+ 2024  dzserve restart
+ 2025  dzserve install
+ 2026  dzserve paths
+ 2027  dzserve links
+ 2028  dzserve park
+ 2029  dzserve which
+ 2030  dzserve list
+ 2031  ll
+ 2032  cp index.html index.php
+ 2033  ll
+ 2034  dzserve fetch-share-url
+ 2035  dzserve share
+ 2036  ps aux | grep 80
+ 2037  ps aux | grep Apache
+ 2038  ps aux | grep nginx
+ 2039  dzserve restart
+ 2040  dzserve 
+ 2041  dzserve share
+ 2042  dzserve restart
+ 2043  dzserve share
+ 2044  ps
+ 2045  ps aux
+ 2046  sudo lsof -i :80
+ 2047  pwd
+ 2048  ll
+ 2049  pstorm .
+ 2050  sudo shutdown -r now
+ 2051  dzserve open
+ 2052  cd bootstrap-4.3.1
+ 2053  ll
+ 2054  npm i
+ 2055  ll
+ 2056  gem install bundler
+ 2057  sudo gem install bundler
+ 2058  sudo bundle install
+ 2059  sudo gem install bundler
+ 2060  bundle install
+ 2061  sudo bundle install
+ 2062  sudo `gem install eventmachine -v '1.2.7' --source 'https://rubygems.org/'`
+ 2063  sudo gem install eventmachine -v '1.2.7' --source 'https://rubygems.org/'
+ 2064  cd 
+ 2065  ll
+ 2066  cd sandbox
+ 2067  ll
+ 2068  cd ubuntu-18.04
+ 2069  ll
+ 2070  vup
+ 2071  vssh
+ 2072  vi Vagrantfile
+ 2073  vssh
+ 2074  vi Vagrantfile
+ 2075  vssh
+ 2076  ~/.vagrant.d/ubuntu-VAGRANTSLASH-xenial64/20161221.0.0/virtualbox/Vagrantfil
+ 2077  ~/.vagrant.d/boxes/generic-VAGRANTSLASH-ubuntu1804/1.9.16/virtualbox/Vagrantfile
+ 2078  sudo cat ~/.vagrant.d/boxes/generic-VAGRANTSLASH-ubuntu1804/1.9.16/virtualbox/Vagrantfile
+ 2079  sudo cat ~/.vagrant.d/boxes/generic-VAGRANTSLASH-ubuntu1804/1.9.16/virtualbox/Vagrantfile | grep password
+ 2080  sudo cat ~/.vagrant.d/setup_version
+ 2081  sudo cat ~/.vagrant.d/insecure_private_key
+ 2082  sudo cat ~/.vagrant.d/boxes/generic-VAGRANTSLASH-ubuntu1804/1.9.16/virtualbox/info.json
+ 2083  sudo cat ~/.vagrant.d/boxes/generic-VAGRANTSLASH-ubuntu1804/1.9.16/virtualbox/metadata.json
+ 2084  sudo cat ~/.vagrant.d/boxes/generic-VAGRANTSLASH-ubuntu1804/1.9.16/virtualbox/Vagrantfile
+ 2085  vagrant ssh --help
+ 2086  vssh
+ 2087  ll
+ 2088  cp bootstrap.css bootstrap.min.css ~/design/landing_pages/bootstrap-4.3.1/dist/css
+ 2089  vssh
+ 2090  cp bootstrap.css bootstrap.min.css ~/design/landing_pages/bootstrap-4.3.1/dist/css
+ 2091  exit
+ 2092  ping google.com
+ 2093  tracert google.com
+ 2094  traceroute google.com
+ 2095  traceroute my.vultr.com
+ 2096  ssh root@149.28.224.163
+ 2097  ssh root@45.77.144.91
+ 2098  ssh root@149.28.224.163
+ 2099  ssh root@agentquoter.com
+ 2100  ssh root@149.28.224.163
+ 2101  ssh root@agentquoter.com
+ 2102  scp root@149.28.224.163:/var/www/vhosts/agentquoter_com.tar.gz .
+ 2103  scp agentquoter_com.tar.gz root@100.68.25.155:/tmp/
+ 2104  ssh root@100.68.25.155
+ 2105  ssh root@2001:19f0:5:2ebc:5400:02ff:fe29:6116
+ 2106  ssh root@108.61.75.174
+ 2107  scp agentquoter_com.tar.gz root@108.61.75.174:/tmp/
+ 2108  ssh root@108.61.75.174
+ 2109  ssh root@app.agentquote.com
+ 2110  pwd
+ 2111  ll
+ 2112  vi /etc/php-fpm.d/www.conf.default
+ 2113  pwd
+ 2114  ssh root@108.61.75.174
+ 2115  sudo shutdown -r now
+ 2116  defaults read com.google.Keystone.Agent.plist
+ 2117  defaults write com.google.Keystone.Agent checkInterval 604800
+ 2118  ping google.com
+ 2119  \tbrew link mysql
+ 2120  ping google.com
+ 2121  shutdown -r now
+ 2122  sudo shutdown -r now
+ 2123  ssh root@agentquote.com
+ 2124  ssh root@appagentquote.com
+ 2125  ssh root@app.agentquote.com
+ 2126  ping google.com
+ 2127  ssh root@app.agentquote.com
+ 2128  pw
+ 2129  pwd
+ 2130  ping google.com
+ 2131  ifconfig -a
+ 2132  yarn production
+ 2133  yarn
+ 2134  yarn install
+ 2135  yarn production
+ 2136  npm install
+ 2137  npm run production
+ 2138  npm install
+ 2139  npm audit fix
+ 2140  npm i axios@^0.15.0 --save
+ 2141  npm i ajv@^6.9.1 --save
+ 2142  npm i imagemin@^5.0.0 --save
+ 2143  npm install
+ 2144  npm run production
+ 2145  yarn install
+ 2146  yarn production
+ 2147  ll
+ 2148  touch .gitignore
+ 2149  ll
+ 2150  ls -al
+ 2151  cd ..
+ 2152  cd react-build
+ 2153  ll
+ 2154  echo "# react-build-skeleton" >> README.md\ngit init
+ 2155  git remote add origin https://github.com/dzineer/react-build-skeleton.git
+ 2156  gaa && gc "New React JS Skeleton Build" && gp
+ 2157  cd ..
+ 2158  ll
+ 2159  yarn install
+ 2160  ll
+ 2161  yarn productoin
+ 2162  yarn production
+ 2163  yarn dev
+ 2164  ssh root@agentquoter.com
+ 2165  ping agentquoter.com
+ 2166  cd ..
+ 2167  ll
+ 2168  cd ..
+ 2169  cd code
+ 2170  cd
+ 2171  cd code
+ 2172  mkdir aws
+ 2173  cd aws
+ 2174  npm - aws-cli
+ 2175  npm i aws-cli
+ 2176  aws-cli
+ 2177  npm i aws-cli --save
+ 2178  ll
+ 2179  cat package-lock.json
+ 2180  echo -n "AKIAVJNDVFRK4UAV53TJ" | openssl enc -base64
+ 2181  echo -n "BONFGo6XCMbbcAVHwItb95HkYlevYGzLENLrJXuf6F6P" | openssl enc -base64
+ 2182  openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-west-2.amazonaws.com:587
+ 2183  vi test.txt
+ 2184  openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-west-2.amazonaws.com:587 < input.txt
+ 2185  openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-west-2.amazonaws.com:587 < test.txt
+ 2186  vi test.txt
+ 2187  openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-west-2.amazonaws.com:587 < test.txt
+ 2188  vi test.txt
+ 2189  openssl s_client -crlf -quiet -starttls smtp -connect email-smtp.us-west-2.amazonaws.com:587 < test.txt
+ 2190  .
+ 2191  vi test.txt
+ 2192  openssl s_client -crlf -quiet -starttls smtp -connect \t\nemail-smtp.us-west-2.amazonaws.com:587 < test.txt
+ 2193  openssl s_client -quiet -starttls smtp -connect email-smtp.us-west-2.amazonaws.com:587 < test.txt
+ 2194  EHLO agentquoter.com
+ 2195  AUTH LOGIN
+ 2196  openssl s_client -quiet -starttls smtp -connect email-smtp.us-west-2.amazonaws.com:587 < test.txt -crlf -crlf
+ 2197  aws ses create-configuration-set --configuration-set Name=ConfigSet
+ 2198  $ curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"\n
+ 2199  curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"\n
+ 2200  unzip awscli-bundle.zip
+ 2201  sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+ 2202  aws --version
+ 2203  vi message.json
+ 2204  vi destination.jso
+ 2205  vi destination.json
+ 2206  aws ses send-email --from noreply@agentquoter.com --destination file://destination.json --message file://message.json
+ 2207  aws configure
+ 2208  aws ses send-email --from noreply@agentquoter.com --destination file://destination.json --message file://message.json
+ 2209  aws configure
+ 2210  aws ses send-email --from noreply@agentquoter.com --destination file://destination.json --message file://message.json
+ 2211  vi destination.json
+ 2212  aws ses send-email --from noreply@agentquoter.com --destination file://destination.json --message file://message.json
+ 2213  pwd
+ 2214  ll
+ 2215  ssh root@agentquoter.com
+ 2216  code
+ 2217  design
+ 2218  cd 
+ 2219  cd design
+ 2220  ll
+ 2221  cd landing_pages
+ 2222  ll
+ 2223  cd v2
+ 2224  ll
+ 2225  live-server
+ 2226  cd public
+ 2227  live-server
+ 2228  ping agentquote.com
+ 2229  ping http://www.iiabnj.agentquote.com/\n\nthis link is active and i will neet to point it to a new page for this endorsed product....\n\ni am assuming it is controlled in iIS or similar on the server, don't see it in the dns.\n\n\n
+ 2230  ping www.iiabnj.agentquote.com
+ 2231  sudo vi /etc/hosts
+ 2232  cd ..
+ 2233  ll
+ 2234  code
+ 2235  cd agentquoter-store
+ 2236  ll
+ 2237  artisan serve
+ 2238  history | grep rsync
+ 2239  history | grep redis
+ 2240  redis-server /usr/local/etc/redis.conf &
+ 2241  cd storage
+ 2242  ll
+ 2243  cd ..
+ 2244  ssh root@app.agentquote.com
+ 2245  scp root@app.agentquote.co:/tmp/accounts.tar.gz .
+ 2246  scp root@app.agentquote.com:/tmp/accounts.tar.gz .
+ 2247  ll
+ 2248  tar xvf accounts.tar.gz
+ 2249  mv accounts/ public
+ 2250  cd public
+ 2251  ll
+ 2252  mv storage bla
+ 2253  mkdir storage
+ 2254  mv accounts storage
+ 2255  ssh root@agentquoter.com
+ 2256  artisan route:list
+ 2257  artisan route:list | grep Api
+ 2258  artisan route:list | grep "/user/quote/generate"
+ 2259  artisan serve
+ 2260  redis-server /usr/local/etc/redis.conf &
+ 2261  tail -f storage/logs/laravel.log
+ 2262  clear; printf '\e[3J' && log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 24h | grep -F 'eMac' | grep -Fv 'etat' | awk -F']' '{print substr($0,1,19), $NF}'   
+ 2263  iconfig -a
+ 2264  ifconfig -a
+ 2265  let
+ 2266  telnet
+ 2267  wget
+ 2268  https://www.rohwoohyeon.com/index.html
+ 2269  wget https://www.rohwoohyeon.com/index.html
+ 2270  ll
+ 2271  pwd
+ 2272  lynx index.html
+ 2273  cat index.html
+ 2274  sudo tmutil listlocalsnapshots /
+ 2275  sudo tmutil thinlocalsnapshots / 9999999999 1
+ 2276  sudo tmutil listlocalsnapshots /
+ 2277  sudo tmutil listlocalsnapshots --help
+ 2278  sudo tmutil
+ 2279  tmutil listlocalsnapshots /System/Volumes/Data
+ 2280  tmutil deletelocalsnapshots *
+ 2281  tmutil deletelocalsnapshots 2019-07-22-145604
+ 2282  tmutil deletelocalsnapshots 2019-07-22-155950
+ 2283  tmutil deletelocalsnapshots 2019-07-22-165557
+ 2284  tmutil deletelocalsnapshots 2019-07-22-180204
+ 2285  tmutil listlocalsnapshots /System/Volumes/Data
+ 2286  exit
+ 2287  ping google.com
+ 2288  sudo shutdown -r now
+ 2289  ping google.com
+ 2290  ping agentquote.com
+ 2291  sudo ipconfig set en0 DHCP
+ 2292  ipconfig getpacket en0
+ 2293  cat new_mac_address.txt
+ 2294  ll
+ 2295  openssl rand -hex 6 | sed ‘s/\(..\)/\1:/g; s/.$//’
+ 2296  openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'
+ 2297  sudo ifconfig en0 ether f5:ad:65:47:17:a1
+ 2298  ipconfig getpacket en0
+ 2299  pwd
+ 2300  cd code
+ 2301  mkdir dentalplus
+ 2302  cd dentalplus
+ 2303  l
+ 2304  ll
+ 2305  wget -r https://livedemo00.template-help.com/wt_prod-19221/index.html
+ 2306  ll
+ 2307  cd livedemo00.template-help.com
+ 2308  ll
+ 2309  cd wt_prod-19221
+ 2310  ll
+ 2311  cd images
+ 2312  ll
+ 2313  cd ..
+ 2314  ll
+ 2315  cd js
+ 2316  ll
+ 2317  vi core.min.js
+ 2318  cd ll
+ 2319  ll
+ 2320  cd ll
+ 2321  ll
+ 2322  cd ..
+ 2323  ll
+ 2324  cd ..
+ 2325  tar cvfz 19221.tar.gz wt_prod-19221
+ 2326  ll
+ 2327  cd wt_prod-19221
+ 2328  laravel
+ 2329  laravel new site
+ 2330  ssh root@app.agentquote.com
+ 2331  ping yournamehost.com
+ 2332  sudo dscacheutil -flushcache
+ 2333  sudo killall -HUP mDNSResponder
+ 2334  ping yournamehost.com
+ 2335  sudo killall -HUP mDNSResponder
+ 2336  ping yournamehost.com
+ 2337  nslookup yournamehost.com
+ 2338  ping www.yournamehost.com
+ 2339  ping yournamehost.com
+ 2340  ssh root@104.156.225.77
+ 2341  ping yournamehost.com
+ 2342  ssh root@104.156.225.77
+ 2343  pwd
+ 2344  ll
+ 2345  cd site
+ 2346  ll
+ 2347  cd ..
+ 2348  ll
+ 2349  sudo shutdown -r now
+ 2350  pwd
+ 2351  vmrun getGuestIPAddress "$(vmrun list | grep vmx)"
+ 2352  pwd
+ 2353  /Applications/WhatsApp.app/Contents/MacOS/WhatsApp ; exit;
+ 2354  sudo shutdown -r now
+ 2355  vmrun getGuestIPAddress "$(vmrun list | grep vmx)"
+ 2356  ssh niran@192.168.155.130
+ 2357  cd ~/Desktop
+ 2358  cd Desktop
+ 2359  ll
+ 2360  cd new_whmcs
+ 2361  ll
+ 2362  scp ./html.tar.gz niran@192.168.155.130:/tmp
+ 2363  ssh niran@192.168.155.130
+ 2364  scp ~/Downloads/00-ioncube.ini niran@192.168.155.130:/tmp
+ 2365  ssh niran@192.168.155.130
+ 2366  code
+ 2367  cd agentquoter-store
+ 2368  ll
+ 2369  artisan serve --port 8080
+ 2370  vmrun getGuestIPAddress "$(vmrun list | grep vmx)"
+ 2371  touch ~/Desktop/get_vm_ip.sh
+ 2372  vi ~/Desktop/get_vm_ip.sh `
+ 2373  vi ~/Desktop/get_vm_ip.sh
+ 2374  chmod u+x ~/Desktop/get_vm_ip.sh
+ 2375  ~/Desktop/get_vm_ip.sh
+ 2376  history > history.all.txt
+ 2377  vi history.all.txt
+ 2378  pm2
+ 2379  pm2 -h
+ 2380  sudo pm2 -h
+ 2381  sudo pm2 starup
+ 2382  sudo pm2 list
+ 2383  sudo pm2
+ 2384  sudo pm2 startup
+ 2385  sudo pm2
+ 2386  sudo pm2 list
+ 2387  mysql -u root -p
+ 2388  sudo mysql -u root -p
+ 2389  ll
+ 2390  vi .env
+ 2391  artisan serve --port 8080
+ 2392  ll
+ 2393  cd routes
+ 2394  cat web.php
+ 2395  ll
+ 2396  ping www.crump.agentquote.com
+ 2397  artisan serve --port 8080
+ 2398  cd ..
+ 2399  ga && gc "Added Microsite Template" && gp
+ 2400  gaa
+ 2401  gaa && gc "Added Microsite Template" && gp
+ 2402  ssh root@agentquoter.com
+ 2403  ssh niran@149.28.45.185
+ 2404  ssh root@dzineer.com
+ 2405  ping pbx9411.dzineer.com
+ 2406  ssh root
+ 2407  ssh root@dzineer.com
+ 2408  ssh root@208.167.249.203
+ 2409  cd 
+ 2410  cd Desktop/
+ 2411  ll
+ 2412  cd One\ Folder
+ 2413  cd companies
+ 2414  ll
+ 2415  cd TranceHosting
+ 2416  ll
+ 2417  cd certs
+ 2418  vi pbx9411.pem
+ 2419  touch pbx9411.key
+ 2420  vi pbx9411.key
+ 2421  ssh root@208.167.249.203
+ 2422  pwd
+ 2423  ssh root@208.167.249.203
+ 2424  d ..
+ 2425  ssh root@208.167.249.203
+ 2426  curl -i http://yournamehost.com
+ 2427  ssh root@208.167.249.203
+ 2428  curl -i http://yournamehost.com
+ 2429  ssh root@208.167.249.203
+ 2430  ping yournamehost.com
+ 2431  curl -i http://yournamehost.com
+ 2432  ssh root@208.167.249.203
+ 2433  curl -i http://yournamehost.com/readme.html
+ 2434  ssh root@208.167.249.203
+ 2435  ping google.com
+ 2436  sudo shutdown -r now
+ 2437  ssh root@trancehosting.com
+ 2438  ssh root@104.156.225.77
+ 2439  ssh root@trancehosting.com
+ 2440  ping trancehosting.com
+ 2441  ssh root@trancehosting.com
+ 2442  ssh root@app.agentquote.com
+ 2443  code
+ 2444  cd agentquoter-store
+ 2445  ll
+ 2446  git add -A
+ 2447  gc "Added fix where affiliate complete sign up code did not exists" && gp
+ 2448  ssh root@trancehosting.com
+ 2449  ssh root@agentquote.com
+ 2450  ssh root@app.agentquote.com
+ 2451  ping google.com
+ 2452  ping cross-ways.com
+ 2453  ping trancehosting.com
+ 2454  ssh root@trancehosting.com
+ 2455  ping truedigitalnomad.com
+ 2456  pwd
+ 2457  ssh root@trancehosting.com
+ 2458  ping app.trancehosting.com
+ 2459  cd ~/Desktop/One\ Folder/companies/TranceHosting/graphics
+ 2460  ll
+ 2461  cp trancehostinglogo_light.png logo.png
+ 2462  scp root@trancehosting.com:/var/www/vhosts/app.trancehosting.com/httpdocs/assets/img/logo.png
+ 2463  scp logo.png root@trancehosting.com:/var/www/vhosts/app.trancehosting.com/httpdocs/assets/img/logo.png
+ 2464  scp trancehostinglogo_whmc.gif root@trancehosting.com:/var/www/vhosts/app.trancehosting.com/httpdocs//admin_9411_0589/templates/blend/images/logo.gif
+ 2465  scp logo.png root@trancehosting.com:/var/www/vhosts/app.trancehosting.com/httpdocs/assets/img/whmcs.png
+ 2466  scp trancehostinglogo_whmcs_login.png root@trancehosting.com:/var/www/vhosts/app.trancehosting.com/httpdocs/assets/img/whmcs.png
+ 2467  pwd
+ 2468  cd Desktop
+ 2469  cd One\ Folder/`
+ 2470  cd One\ Folder/
+ 2471  ll
+ 2472  cd companies
+ 2473  ll
+ 2474  cd TranceHosting
+ 2475  ll
+ 2476  cd graphics
+ 2477  scp trancehostinglogo_whmcs_login.png root@trancehosting.com:/var/www/vhosts/app.trancehosting.com/httpdocs/assets/img/whmcs.png
+ 2478  history | grep whmcs
+ 2479  scp trancehostinglogo_whmc.gif root@trancehosting.com:/var/www/vhosts/app.trancehosting.com/httpdocs/admin_9411_0589/templates/blend/images/logo.gif
+ 2480  sudo shutdown -r now
+ 2481  ping pop.trancehosting.com.
+ 2482  ping pop.trancehosting.com
+ 2483  ping smtp.trancehosting.com
+ 2484  ssh root@app.trancehosting.com
+ 2485  ping google.com
+ 2486  ping trancehosting.com
+ 2487  ssh root@app.trancehosting.com
+ 2488  ssh root@agentquoter.com
+ 2489  ssh root@app.trancehosting.com
+ 2490  ssh root@149.28.45.178
+ 2491  ping agentquoter.com
+ 2492  code
+ 2493  cd agentquoter-store
+ 2494  ll
+ 2495  artisan servce --port 8080
+ 2496  artisan serve --port 8080
+ 2497  sudo pm2 startup
+ 2498  sudo pm2 list
+ 2499  sudo shutdown -r now
+ 2500  ping google.com
+ 2501  sudo shutdown -r now
+ 2502  ping google.com
+ 2503  traceroute apple.com
+ 2504  ifconfig -a
+ 2505  exit
+ 2506  ping google.com
+ 2507  ps aux | grep mysql
+ 2508  ll /Applications/MAMP/tmp/mysql/mysql.pid
+ 2509  ll /Applications/MAMP/tmp/mysql/
+ 2510  rm -rf /Applications/MAMP/tmp/mysql/mysql.sock
+ 2511  rm -rf /Applications/MAMP/tmp/mysql/mysql.sock.lock
+ 2512  ssh root@agentquoter.com
+ 2513  exit
+ 2514  ping app.trancehosting.com
+ 2515  cd /Users/niran/Desktop/One Folder/Desktop Stuff/Projects/Companies/TranceHosting/ResellerClubMods/downloads/resellerclubmods_core_1.6.0_PHP_5.6_7.3/modules/addons
+ 2516  cd "/Users/niran/Desktop/One Folder/Desktop Stuff/Projects/Companies/TranceHosting/ResellerClubMods/downloads/resellerclubmods_core_1.6.0_PHP_5.6_7.3/modules/addons"
+ 2517  pwd
+ 2518  ll
+ 2519  scp -R resellerclubmods_core/ root@app.trancehosting.com:/var/www/vhosts/app.tranechosting.com/httpdocs/modules/resellerclubmods_clore/
+ 2520  scp -R ./resellerclubmods_core/ root@app.trancehosting.com:/var/www/vhosts/app.tranechosting.com/httpdocs/modules/resellerclubmods_clore/
+ 2521  scp -r ./resellerclubmods_core/ root@app.trancehosting.com:/var/www/vhosts/app.tranechosting.com/httpdocs/modules/resellerclubmods_clore/
+ 2522  scp -r ./resellerclubmods_core/ root@app.trancehosting.com:/var/www/vhosts/app.tranechosting.com/httpdocs/modules/
+ 2523  ssh root@app.trancehosting.com
+ 2524  ssh root@app.trancehosting.com:/var/www/vhosts/app.trancehosting.com/httpdocs/modules
+ 2525  ssh root@app.trancehosting.com
+ 2526  scp -r ./resellerclubmods_core/ root@app.trancehosting.com:/var/www/vhosts/app.tranechosting.com/httpdocs/modules/addons/resellerclubmods_core/
+ 2527  ssh root@app.trancehosting.com
+ 2528  scp -r ./resellerclubmods_core/ root@app.trancehosting.com:/var/www/vhosts/app.trancehosting.com/httpdocs/modules/addons/resellerclubmods_core/
+ 2529  ssh root@app.trancehosting.com
+ 2530  ssh root@agentquoter.com
+ 2531  scp root@agentquoter.com:/tmp/rcmcoreconsole.tar .
+ 2532  ll
+ 2533  scp rcmcoreconsole.tar root@app.trancehosting.com:/tmp/rcmcoreconsole.tar
+ 2534  ssh root@app.trancehosting.com
+ 2535  ping google.com
+ 2536  sudo shutdown -r now
+ 2537  ping google.com
+ 2538  ping www.ais.co.th
+ 2539  sudo shutdown -r now
+ 2540  ssh root@agentquoter.com
+ 2541  lynx https://www.agentquoter.com/billing/704_Hauser/ssl-test.php
+ 2542  lynx
+ 2543  ssh root@agentquoter.com
+ 2544  ssh root@trancehosting.com
+ 2545  ssh root@agentquoter.com
+ 2546  ssh root@app.trancehosting.com
+ 2547  ssh root@agentquoter.com
+ 2548  ssh root@app.trancehosting.com
+ 2549  ssh root@trancehosting.com
+ 2550  vi $HOME/.ssh/config
+ 2551  ssh root@trancehosting.com
+ 2552  ssh root@agentquoter.com
+ 2553  sudo shutdown -r now
+ 2554  ssh root@trancehosting.com
+ 2555  sudo shutdown -r now
+ 2556  ssh root@trancehosting.com
+ 2557  sudo launchctl list
+ 2558  sudo launchctl list | grep sidecar
+ 2559  sudo launchctl list | grep side
+ 2560  sudo shutdown -r now
+ 2561  ssh root@trancehosting.com
+ 2562  ping google.com
+ 2563  ssh root@trancehosting.com
+ 2564  ssh root@agentquoter.com
+ 2565  ssh root@app.agentquoter.com
+ 2566  ps
+ 2567  sudo kill -9 1081
+ 2568  pwd
+ 2569  code
+ 2570  cd agentquoter-store
+ 2571  artisan config:clear
+ 2572  artisan cache:clear
+ 2573  php artisan serve --port 8080
+ 2574  ps aux | grep 8080
+ 2575  killall php
+ 2576  ps aux | grep 8080
+ 2577  php artisan serve --port 8080
+ 2578  code
+ 2579  cd agentquoter-store
+ 2580  tail -f storage/logs/laravel.log
+ 2581  php artisan serve --port 8080
+ 2582  gaa && gc "Added Verify Email for Quote with Displaying Quote After Verification" && gp
+ 2583  php artisan serve --port 8080
+ 2584  gaa && gc "Added Consumer Quote Results as responsive and via ReactJS Widget" && gp
+ 2585  php artisan serve --port 8080
+ 2586  gaa && gc "Added Consumer Quote Results as responsive and via ReactJS Widget - Part 2" && gp
+ 2587  php artisan serve --port 8080
+ 2588  gaa && gc "Form Value Validating ReactJS - Part 3" && gp
+ 2589  php artisan serve --port 8080
+ 2590  gaa && gc "Added Landing Page Profile Page - Part 4" && gp
+ 2591  php artisan serve --port 8080
+ 2592  code
+ 2593  cd agentquoter-store
+ 2594  php artisan serve --port 8080
+ 2595  code
+ 2596  cd agentquoter-store
+ 2597  ll
+ 2598  cat history.all.txt
+ 2599  history | grep redis
+ 2600  history | grep pm2
+ 2601  sudo pm2 starup
+ 2602  sudo pm2 list
+ 2603  pm2 start
+ 2604  pm2 startup
+ 2605  sudo pm2 list
+ 2606  sudo pm2 help
+ 2607  sudo pm2 -h
+ 2608  sudo pm2 status
+ 2609  sudo pm2 start
+ 2610  sudo pm2 startup
+ 2611  sudo pm2 list
+ 2612  ping google.com
+ 2613  sudo vi /etc/hosts
+ 2614  ping expatlivesupport.com
+ 2615  sudo vi /etc/hosts
+ 2616  ping expatlivesupport.com
+ 2617  ping www.expatlivesupport.com
+ 2618  ping financialbrokerage.agentquote.com
+ 2619  history | grep -i "cache"
+ 2620  sudo dscacheutil -flushcache
+ 2621  ping financialbrokerage.agentquote.com
+ 2622  sudo dscacheutil -flushcache
+ 2623  ping financialbrokerage.agentquote.com
+ 2624  sudo dscacheutil -flushcache
+ 2625  ping financialbrokerage.agentquote.com
+ 2626  sudo dscacheutil -flushcache
+ 2627  ping financialbrokerage.agentquote.com
+ 2628  sudo killall -HUP mDNSResponder
+ 2629  ping financialbrokerage.agentquote.com
+ 2630  sudo dscacheutil -flushcache
+ 2631  ping financialbrokerage.agentquote.com
+ 2632  ll
+ 2633  cd ..
+ 2634  mkdir LaravelPackages
+ 2635  cd LaravelPackages
+ 2636  ll
+ 2637  mkdir Press
+ 2638  cd Press
+ 2639  composer init
+ 2640  composer require --dev orchestra/testbench
+ 2641  git status
+ 2642  git init
+ 2643  git status
+ 2644  git add .
+ 2645  git status
+ 2646  mkdir src
+ 2647  mkdir resources
+ 2648  mkdir config
+ 2649  mkdir bootstrap
+ 2650  mkdir public
+ 2651  mkidr routes
+ 2652  mkdir routes
+ 2653  mkdir tests
+ 2654  mkdir tests/Feature
+ 2655  mkdir tests/Unit
+ 2656  ll
+ 2657  pwd
+ 2658  git remote add origin git@github.com:dzineer/press.git
+ 2659  gp
+ 2660  pwd
+ 2661  ping app.trancehosting.com
+ 2662  cd..
+ 2663  cd ..
+ 2664  pwd
+ 2665  ll
+ 2666  mkdir Modules
+ 2667  cd Modules
+ 2668  cd ..
+ 2669  mv Modules CustomModules
+ 2670  cd CustomModules
+ 2671  ll
+ 2672  ls ../../LaravelPackages
+ 2673  ls ../../LaravelPackages/Press
+ 2674  clear
+ 2675  composer init
+ 2676  composer require orchesta/testbench
+ 2677  clear
+ 2678  composer require orchestra/testbench
+ 2679  cd ..
+ 2680  ll
+ 2681  cd ..
+ 2682  ll
+ 2683  cd BasicLaravelRaw
+ 2684  ll
+ 2685  laravel --help
+ 2686  laravel new test-app
+ 2687  cd test-app
+ 2688  ll
+ 2689  composer install
+ 2690  composer update
+ 2691  php artian serve
+ 2692  php artisan serve
+ 2693  composer dump-autoload
+ 2694  php artisan serve
+ 2695  composer dump-autoload
+ 2696  composer update
+ 2697  composer update -vvv
+ 2698  composer remove "dzineer/custom-modules"
+ 2699  composer require "dzineer/custom-modules"
+ 2700  composer install
+ 2701  cd ..
+ 2702  ll
+ 2703  cd press-blog
+ 2704  composer install
+ 2705  composer dump-autoload
+ 2706  cd ..
+ 2707  ll
+ 2708  cd test-app
+ 2709  composer dump-autoload
+ 2710  composer remove "dzineer/custom-modules"
+ 2711  composer require "dzineer/custom-modules"
+ 2712  composer remove "dzineer/custom-modules"
+ 2713  composer require "dzineer/custom-modules"
+ 2714  composer remove "dzineer/custom-modules"
+ 2715  composer require "dzineer/custom-modules"
+ 2716  composer dump-autoload
+ 2717  composer update
+ 2718  php artisan serve
+ 2719  dig -t txt _acme-challenge.expatlivesupport.com +short
+ 2720  dig -t txt _acme-challenge.expatlivesupport +short
+ 2721  dig -t txt _acme-challenge.expatlivesupport.com +short
+ 2722  ping expatlivesupport.com
+ 2723  ping ns1.trancehosting.com
+ 2724  sudo killall -HUP mDNSResponder
+ 2725  ping ns1.trancehosting.com
+ 2726  sudo killall -HUP DNSResponder
+ 2727  ping ns1.trancehosting.com
+ 2728  ping ns1.vultr.com
+ 2729  ssh agentquoter.com
+ 2730  ssh root@agentquoter.com
+ 2731  ping agentquoter.com
+ 2732  ssh root@agentquoter.com
+ 2733  ssh root@app.trancehosting.com
+ 2734  cd /Users/niran/Desktop/One\ Folder/Desktop\ Stuff/Projects/Companies/Agentquote/Agentquoter/backups/backup_agentquoter.com_1908201041/backup_user-data_1908201041/httpdocs/billing/
+ 2735  ll
+ 2736  scp root@agentquoter.com:/var/www/vhosts/agentquoter.com/httpdocs/billing/index.php
+ 2737  scp index.php root@agentquoter.com:/var/www/vhosts/agentquoter.com/httpdocs/billing/index.php
+ 2738  scp configuration.php root@agentquoter.com:/var/www/vhosts/agentquoter.com/httpdocs/billing/configuration.php
+ 2739  cd ~/Downloads
+ 2740  ll
+ 2741  ll *.png
+ 2742  scp banner-life-insurance.png root@app.agentquote.com:/var/www/html/images/logos
+ 2743  ping 207.246.82.176
+ 2744  ssh root@207.246.82.176
+ 2745  ssh root@agentquoter.com
+ 2746  ssh root@45.77.145.187
+ 2747  ssh root@149.28.233.160
+ 2748  ping google.com
+ 2749  ssh root@149.28.233.160
+ 2750  ping 149.28.233.160
+ 2751  ssh root@149.28.233.160
+ 2752  ssh root@104.238.147.31
+ 2753  ssh root@155.138.242.23
+ 2754  sudo vi /Users/niran/.ssh/known_hosts
+ 2755  ssh root@155.138.242.23
+ 2756  ssh root@agentquoter.com
+ 2757  ssh root@149.28.45.178
+ 2758  ssh root@agentquoter.com
+ 2759  ssh root@149.28.248.132
+ 2760  ssh root@app.agentquoter.com
+ 2761  ssh root@149.28.248.132
+ 2762  ll
+ 2763  ssh root@app.agentquoter.com
+ 2764  ssh root@149.28.248.132
+ 2765  ssh root@155.138.242.23
+ 2766  ssh root@149.28.248.132
+ 2767  ssh root@app.trancehosting.com
+ 2768  cd ..
+ 2769  pwd
+ 2770  cd Desktop
+ 2771  cd One\ Folder
+ 2772  cd companies
+ 2773  ll
+ 2774  cd TranceHosting
+ 2775  ll
+ 2776  cd Coming\ Sooon\ Templates
+ 2777  ll
+ 2778  wget https://colorlib.com/download/348/ &&\nwget https://colorlib.com/download/350/ &&\nwget https://colorlib.com/download/352/ &&\nwget https://colorlib.com/download/354/ &&\nwget https://colorlib.com/download/356/ &&\nwget https://colorlib.com/download/358/ &&\nwget https://colorlib.com/download/360/ &&\nwget https://colorlib.com/download/362/ &&\nwget https://colorlib.com/download/364/ &&\nwget https://colorlib.com/download/366/ &&\nwget https://colorlib.com/download/368/ &&\nwget https://colorlib.com/download/370/ &&\nwget https://colorlib.com/download/372/ &&\nwget https://colorlib.com/download/374/ &&\nwget https://colorlib.com/download/376/ &&\nwget https://colorlib.com/download/378/
+ 2779  ll
+ 2780  rm -rf *.html*
+ 2781  ll
+ 2782  wget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=348 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=350 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=352 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=354 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=356 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=358 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=360 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=362 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=364 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=366 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=368 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=370 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=372 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=374 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=376 &&\nwget https://colorlib.com/thank-you-for-downloading/\?dlm-dp-dl\=378/\n\n
+ 2783  ll
+ 2784  rm -rf *.html*
+ 2785  ll
+ 2786  ssh root@trancehosting.com
+ 2787  cd ~/Downloads
+ 2788  scp banner-life-insurance.png root@app.agentquote.com:/var/www/html/images/logos
+ 2789  scp banner-life-insurance.jpg root@app.agentquote.com:/var/www/html/images/logos/
+ 2790  ping google.com
+ 2791  sudo shutdown -r now
+ 2792  ping google.com
+ 2793  pwd
+ 2794  cd code
+ 2795  code
+ 2796  mkdir blacklist_project
+ 2797  cd blacklist_project
+ 2798  rsync -arpogvt rsync://ftp.ut-capitole.fr/blacklist .
+ 2799  ll
+ 2800  cd dest
+ 2801  ll
+ 2802  cd adult
+ 2803  ll
+ 2804  tail urls
+ 2805  ssh root@agentquoter.com
+ 2806  code
+ 2807  ll
+ 2808  ssh root@agentquoter.com
+ 2809  ping agentquoter.com
+ 2810  ssh root@app.agentquoter.com
+ 2811  ssh root@dzineer.com
+ 2812  cd ..
+ 2813  cd code
+ 2814  ll
+ 2815  cd BasicLaravelRaw
+ 2816  ll
+ 2817  laravel --help
+ 2818  laravel
+ 2819  laravel new laravel_auth
+ 2820  cd laravel_auth
+ 2821  ll
+ 2822  artisan make:auth
+ 2823  artisan make --help
+ 2824  artisan
+ 2825  artisan make:auth
+ 2826  composer install
+ 2827  artisan make:auth
+ 2828  cat package.json
+ 2829  ll
+ 2830  cat composer.json
+ 2831  vi composer.json
+ 2832  composer update
+ 2833  artisan make:auth
+ 2834  vi .env
+ 2835  artisan migrate:install — env=local
+ 2836  artisan migrate:install —env=local
+ 2837  artisan migrate
+ 2838  touch database/app.sqlite
+ 2839  vi .env
+ 2840  artisan migrate
+ 2841  artisan serve
+ 2842  pwd
+ 2843  vi .env
+ 2844  artisan serve
+ 2845  ping google.com
+ 2846  cd ..
+ 2847  cd agentquoter-store
+ 2848  gaa && gc "Added Link Monitoring and Custom Modules Integration" && gc
+ 2849  gaa && gc -m "Added Link Monitoring and Custom Modules Integration" && gc
+ 2850  gaa
+ 2851  git commit -m "Added Link Monitoring and Custom Modules Integration"
+ 2852  git push -u origin master
+ 2853  cd ..
+ 2854  ll
+ 2855  cd BasicLaravelRaw
+ 2856  ll
+ 2857  laravel 
+ 2858  laravel new generic-app
+ 2859  ll
+ 2860  cd generic-app
+ 2861  ll
+ 2862  artisan perset react
+ 2863  artisan preset react
+ 2864  npm install && npm run dev
+ 2865  ssh root@agentquoter.com
+ 2866  /Users/niran/Desktop/One\ Folder/Desktop\ Stuff/Projects/Companies/Agentquote/backupos/whmcs/
+ 2867  ll
+ 2868  scp agentquot_whmcs_backup_20190908_090433.zip root@agentquoter.com:/var/www/vhosts/agentquoter.com/
+ 2869  pwd
+ 2870  pkill "Touch Bar agent"
+ 2871  sudo shutdown -r now
+ 2872  cd /Users/niran/code/new_build/agentquoter-store/
+ 2873  npm install
+ 2874  ll
+ 2875  composer install
+ 2876  pwd
+ 2877  cd ..
+ 2878  cd code
+ 2879  cd new_build
+ 2880  ll
+ 2881  cd agentquoter-store
+ 2882  ll
+ 2883  composer install
+ 2884  composer dump-autoload
+ 2885  composer install
+ 2886  yarn watch
+ 2887  watch production
+ 2888  yarn production
+ 2889  artisan serve
+ 2890  artisan clean:all
+ 2891  artisan cache:clear
+ 2892  whoami
+ 2893  ll
+ 2894  sudo chown -R niran.staff .
+ 2895  sudo chown -R niran .
+ 2896  ll
+ 2897  artisan cache:clear
+ 2898  cd storage
+ 2899  l
+ 2900  ll
+ 2901  pwd
+ 2902  ll
+ 2903  cd ..
+ 2904  artisan cache:clear
+ 2905  php artisan config:clear
+ 2906  artisan cache:clear
+ 2907  artisan serve
+ 2908  ll
+ 2909  tail -f storage/logs/laravel-2019-09-09.log
+ 2910  php artisan clear:view
+ 2911  php artisan view:clear
+ 2912  tail -f storage/logs/laravel-2019-09-09.log
+ 2913  npm install laravel-notification-channels/webpush
+ 2914  yarn require laravel-notification-channels/webpush
+ 2915  yarn add laravel-notification-channels/webpush
+ 2916  composer install laravel-notification-channels/webpush
+ 2917  composer require laravel-notification-channels/webpush
+ 2918  artisan serve
+ 2919  tail -f storage/logs/laravel-2019-09-09.log
+ 2920  ll
+ 2921  artisan serve
+ 2922  tail -f storage/logs/laravel-2019-09-09.log
+ 2923  pwd
+ 2924  cd ..
+ 2925  cd agentquoter-store
+ 2926  artisan serve
+ 2927  pwd
+ 2928  cd ..
+ 2929  cd agentquoter-store
+ 2930  artisan serve
+ 2931  tail -f storage/logs/laravel-2019-09-09.log
+ 2932  pwd
+ 2933  tail -f storage/logs/laravel.log
+ 2934  pwd
+ 2935  gaa && gc -m "Added Admin / User Custom Modules Configuration" && gc
+ 2936  gaa && gc "Added Admin / User Custom Modules Configuration" && gc
+ 2937  gaa
+ 2938  git commit -m "Added Admin / User Custom Modules Configuration"
+ 2939  git push -u origin master
+ 2940  pws
+ 2941  pwd
+ 2942  clear
+ 2943  tail -f storage/logs/laravel.log
+ 2944  artisan view:clear
+ 2945  artisan serve
+ 2946  artisan view:clear
+ 2947  composer dump-autoload
+ 2948  artisan view:clear
+ 2949  artisan serve
+ 2950  chmod a+xrw storage/app/public
+ 2951  chmod -r a+xrw storage/app
+ 2952  chmod -R a+xrw storage/app
+ 2953  tail -f storage/logs/laravel.log
+ 2954  sudo chmod -R -a+rw storage/app/public
+ 2955  sudo chmod -a+rw -R storage/app/public
+ 2956  sudo chmod -a+rw -r storage/app/public
+ 2957  sudo chmod -a+rw storage/app/public
+ 2958  sudo chmod a+rw storage/app/public
+ 2959  sudo chmod a+rw -R storage/app/public
+ 2960  sudo chmod a+rw -r storage/app/public
+ 2961  sudo chmod -R a+rw storage/app/public
+ 2962  sudo chmod -R a+rw storage/
+ 2963  tail -f storage/logs/laravel.log
+ 2964  ll /Users/niran/code/agentquoter-store/public/modules/deploy/DzineerModule.zip
+ 2965  ll /Users/niran/code/agentquoter-store/public/modules/deploy/
+ 2966  ll /Users/niran/code/agentquoter-store/public/modules/deploy/private
+ 2967  ll
+ 2968  ll /Users/niran/code/agentquoter-store/public/modules/deploy/private/var/folders/59/ybtwlwnj45sc7jghfpy7z3bc0000gn/T
+ 2969  tail -f storage/logs/laravel.log
+ 2970  ssh root@104.156.249.77
+ 2971  ssh root@149.28.45.178
+ 2972  artisan serve
+ 2973  yarn watch
+ 2974  artisan serve
+ 2975  composer dump-autoload
+ 2976  artisan serve
+ 2977  sudo shutdown -r now
+ 2978  ping google.com
+ 2979  ping google.com -t
+ 2980  ping google.com
+ 2981  sudo launchctl list
+ 2982  sudo launchctl list | grep side
+ 2983  sudo launchctl list | grep car
+ 2984  sudo launchctl list | grep display
+ 2985  sudo /usr/libexec/SidecarDisplayAgent
+ 2986  ps aux | grep SidecarDisplayAgent
+ 2987  sudo kill -9 1214
+ 2988  ps aux | grep SidecarDisplayAgent
+ 2989  sudo kill -9 1412
+ 2990  ps aux | grep SidecarDisplayAgent
+ 2991  sudo kill -HUP 1417
+ 2992  sudo shutdown -r now
+ 2993  sudo killall -HUP mDNSResponder
+ 2994  code
+ 2995  pwd
+ 2996  cd agentquoter-store
+ 2997  ll
+ 2998  artisan serve
+ 2999  code
+ 3000  cd agentquoter-store
+ 3001  artisan serve
+ 3002  artisan config:clear
+ 3003  artisan serve
+ 3004  tail -f storage/logs/laravel.log
+ 3005  pushd .
+ 3006  cd /Users/niran/design/rocket_icon/
+ 3007  ll
+ 3008  touch style.css index.html
+ 3009  ll
+ 3010  popd
+ 3011  tail -f storage/logs/laravel.log
+ 3012  brew install dnsmasq
+ 3013  echo $(brew —- prefix)/etc/
+ 3014  sudo brew services start dnsmasq 
+ 3015  mkdir -p /usr/local/etc/dnsmasq.d
+ 3016  mkdir --help
+ 3017  man mkdir
+ 3018  touch /usr/local/etc/dnsmasq.d/development.conf
+ 3019  vi /usr/local/etc/dnsmasq.d/development.conf
+ 3020  sudo brew services restart dnsmasq 
+ 3021  dig foobar.test
+ 3022  dig foobar.test @127.0.0.1
+ 3023  sudo vi /etc/resolver/test
+ 3024  scutil --dns
+ 3025  ping -c 1 google.com
+ 3026  ping -c 1 foobar.test
+ 3027  ping -c 1 foobarrrrr.test
+ 3028  ping -c 1 again.foobarrrrr.test
+ 3029  ping -c 1 again.foobarrrrr.ttest
+ 3030  artisan serve --port 80
+ 3031  sudo lsof -i :80
+ 3032  code
+ 3033  ll
+ 3034  cd LaravelPackages
+ 3035  ll
+ 3036  cd CustomModules
+ 3037  ll
+ 3038  cat composer.json
+ 3039  cd ..
+ 3040  mkdir LandingPages
+ 3041  cd LandingPages
+ 3042  touch composer.json
+ 3043  vi composer.json
+ 3044  mdkir src
+ 3045  mkdir src
+ 3046  cd src
+ 3047  ll
+ 3048  touch LandingPagesServiceProvider.php
+ 3049  ll
+ 3050  cd ..
+ 3051  ll
+ 3052  mkdir config
+ 3053  ll ../CustomModules
+ 3054  mkdir bootstrap database resources routes tests
+ 3055  ll
+ 3056  cat ../CustomModules/src/CustomModulesServiceProvider.php
+ 3057  cat ../CustomModules/src/CustomModulesServiceProvider.php > src/LandingPagesServiceProvider.php
+ 3058  vi src/LandingPagesServiceProvider.php
+ 3059  vim src/LandingPagesServiceProvider.php
+ 3060  sudo vi ~/.vimrc
+ 3061  vim src/LandingPagesServiceProvider.php
+ 3062  ll
+ 3063  mkdir src/Http
+ 3064  mkdir src/Http/Controllers
+ 3065  mkdir src/Http/Middleware
+ 3066  vim src/LandingPagesServiceProvider.php
+ 3067  touch src/Http/Middleware/LandingPagesMiddleware.php
+ 3068  vi src/Http/Middleware/LandingPagesMiddleware.php
+ 3069  mkdir src/Models
+ 3070  touh src/Models/UserDomain.php
+ 3071  touch src/Models/UserDomain.php
+ 3072  vi src/Models/UserDomain.php
+ 3073  ll
+ 3074  pstorm .
+ 3075  ll
+ 3076  composer install
+ 3077  composer dump-autoload
+ 3078  composer install
+ 3079  composer dump-autoload
+ 3080  composer dump-autoload --vvv
+ 3081  composer dump-autoload -vvv
+ 3082  artisan package:discover
+ 3083  composer require dzineer/landing-pages
+ 3084  touch routes/web.php
+ 3085  touch routes/api.php
+ 3086  artisan package:discover
+ 3087  composer dump-autoload
+ 3088  artian route:clear
+ 3089  artian routes:clear
+ 3090  artian route:view
+ 3091  artisan route:view
+ 3092  artisan route:list
+ 3093  tail -f storage/logs/laravel.log
+ 3094  sudo vi /etc/resolver/test
+ 3095  vi /usr/local/etc/dnsmasq.d/development.conf
+ 3096  yarn watch
+ 3097  code
+ 3098  cd agentquoter-store
+ 3099  tail -f storage/logs/laravel.log
+ 3100  cd /Users/niran/code/fontawesome-free-5.8.0-web
+ 3101  ll
+ 3102  sass scss/fontawesome.scss
+ 3103  code
+ 3104  cd agentquoter-store
+ 3105  tail -f storage/logs/laravel.log
+ 3106  cd /Users/niran/code/vue-abcjs-editor-demo-master
+ 3107  ll
+ 3108  npm install
+ 3109  npm run dev
+ 3110  ll
+ 3111  cd src
+ 3112  ll
+ 3113  cd components
+ 3114  ll
+ 3115  cat HelloWorld.vue
+ 3116  cd ..
+ 3117  ll
+ 3118  cd ..
+ 3119  ll
+ 3120  cat index.html
+ 3121  vi index2.html
+ 3122  npm run dev
+ 3123  cd ..
+ 3124  mkdir abcjs_projects
+ 3125  mv vue-abcjs-editor-demo-master abcjs_projects
+ 3126  cd abcjs_projects
+ 3127  ll
+ 3128  git clone https://github.com/paulrosen/vue-abcjs-midi-demo.git
+ 3129  ll
+ 3130  cd vue-abcjs-midi-demo
+ 3131  ll
+ 3132  npm install
+ 3133  npm run dev
+ 3134  pwd
+ 3135  cd ..
+ 3136  ll
+ 3137  cd agentquoter-store
+ 3138  tail -f storage/logs/laravel.log
+ 3139  ping google.com
+ 3140  ping sabaihosting.com
+ 3141  vi /usr/local/etc/dnsmasq.d/development.conf 
+ 3142  sudo vi /etc/hosts
+ 3143  tail -f storage/logs/laravel.log
+ 3144  ssh root@140.82.47.226
+ 3145  ssh root@trancehosting.com
+ 3146  ping googe.com
+ 3147  ssh root@trancehosting.com
+ 3148  artisan whmcs:paymentmethods "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa"
+ 3149  artisan whmcs:products "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa"
+ 3150  artisan whmcs:clientproducts "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa"
+ 3151  artisan whmcs:clientproducts "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa" 4
+ 3152  artisan whmcs:clientproducts "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa" matt
+ 3153  artisan whmcs:clientproducts "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa" mattthomasshalom2019@gmail.com
+ 3154  artisan whmcs:clientproducts "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa" gmail.com
+ 3155  artisan whmcs:clientproducts "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa" 4
+ 3156  artisan whmcs:clients "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa"
+ 3157  composer require dekor/php-array-table
+ 3158  artisan whmcs:clients "y49AtiMsb8GBLBZqpYwq6WWceJ6Q7GTH" "Hp8zA22zJWM17IHonz1yW2VKK5tkr5Qa"
+ 3159  ping google.com
+ 3160  ping agentquoter.com
+ 3161  ping trancehosting.com
+ 3162  ssh root@trancehosting.com
+ 3163  yarn watch
+ 3164  exit
+ 3165  yarn watch
+ 3166  cd ..
+ 3167  ll
+ 3168  cd abcjs_projects
+ 3169  ll
+ 3170  cd project-7-vue-js-piano-project
+ 3171  ll
+ 3172  cd src
+ 3173  ll
+ 3174  cd ..
+ 3175  ll
+ 3176  npm run
+ 3177  cd dist
+ 3178  ll
+ 3179  cd ..
+ 3180  ll
+ 3181  cd ..
+ 3182  ll
+ 3183  cd vue-abcjs-midi-demo
+ 3184  ll
+ 3185  npm run
+ 3186  npm run dev
+ 3187  sudo shutdown -h now
+ 3188  tail -f storage/logs/laravel.log
+ 3189  sudo shutdown -h now
+ 3190  curl -X POST \\n  'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyDmf_YmVWWEbip6GtqodLjIykYxDCmjruk' \\n  -H 'cache-control: no-cache' \\n  -H 'content-type: application/json' \\n  -d '  {\n    "client": {\n      "clientId":      "yourcompanyname",\n      "clientVersion": "1.5.2"\n    },\n    "threatInfo": {\n      "threatTypes":      ["MALWARE", "SOCIAL_ENGINEERING"],\n      "platformTypes":    ["WINDOWS"],\n      "threatEntryTypes": ["URL"],\n      "threatEntries": [\n        {"url": "http://stackoverflow.com/"}\n      ]\n    }\n  }'\n
+ 3191  curl -X POST \ \n  'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyDmf_YmVWWEbip6GtqodLjIykYxDCmjruk' \\n  -H 'cache-control: no-cache' \\n  -H 'content-type: application/json' \\n  -d '  {\n    "client": {\n      "clientId":      "yourcompanyname",\n      "clientVersion": "1.5.2"\n    },\n    "threatInfo": {\n      "threatTypes":      ["MALWARE", "SOCIAL_ENGINEERING"],\n      "platformTypes":    ["WINDOWS"],\n      "threatEntryTypes": ["URL"],\n      "threatEntries": [\n        {"url": "http://stackoverflow.com/"}\n      ]\n    }\n  }' -vvv\n
+ 3192  curl -X POST\n  'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyDmf_YmVWWEbip6GtqodLjIykYxDCmjruk' \\n  -H 'cache-control: no-cache' \\n  -H 'content-type: application/json' \\n  -d '  {\n    "client": {\n      "clientId":      "yourcompanyname",\n      "clientVersion": "1.5.2"\n    },\n    "threatInfo": {\n      "threatTypes":      ["MALWARE", "SOCIAL_ENGINEERING"],\n      "platformTypes":    ["WINDOWS"],\n      "threatEntryTypes": ["URL"],\n      "threatEntries": [\n        {"url": "http://stackoverflow.com/"}\n      ]\n    }\n  }'\n
+ 3193  curl -X POST \\n  'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyDmf_YmVWWEbip6GtqodLjIykYxDCmjruk' \\n  -H 'cache-control: no-cache' \\n  -H 'content-type: application/json' \\n  -d '  {\n    "client": {\n      "clientId":      "yourcompanyname",\n      "clientVersion": "1.5.2"\n    },\n    "threatInfo": {\n      "threatTypes":      ["MALWARE", "SOCIAL_ENGINEERING"],\n      "platformTypes":    ["WINDOWS"],\n      "threatEntryTypes": ["URL"],\n      "threatEntries": [\n        {"url": "https://accounts-wallets.redirectme.net/webapps/57a39/websrc"},\n        {"url": "http://stackoverflow.com/"}\n      ]\n    }\n  }'\n
+ 3194  curl -X POST \\n  'https://safebrowsing.googleapis.com/v4/threatMatches:find?key=AIzaSyDmf_YmVWWEbip6GtqodLjIykYxDCmjruk' \\n  -H 'cache-control: no-cache' \\n  -H 'content-type: application/json' \\n  -d '  {\n    "client": {\n      "clientId":      "yourcompanyname",\n      "clientVersion": "1.5.2"\n    },\n    "threatInfo": {\n      "threatTypes":      ["MALWARE", "SOCIAL_ENGINEERING"],\n      "threatEntryTypes": ["URL"],\n      "threatEntries": [\n        {"url": "https://accounts-wallets.redirectme.net/webapps/57a39/websrc"},\n        {"url": "http://stackoverflow.com/"}\n      ]\n    }\n  }'\n
+ 3195  sudo killall pboard
+ 3196  sudo update_dyld_shared_cache
+ 3197  tail -f storage/logs/laravel.log
+ 3198  composer dump-autoload
+ 3199  tail -f storage/logs/laravel.log
+ 3200  composer dump-autoload
+ 3201  tail -f storage/logs/laravel.log
+ 3202  cd /Users/niran/code/LaravelPackages/LandingPages
+ 3203  ll
+ 3204  cd /Users/niran/code/LaravelPackages/CustomModules 
+ 3205  ll
+ 3206  ls -al
+ 3207  ll
+ 3208  cd src
+ 3209  ll
+ 3210  cd ..
+ 3211  ll
+ 3212  pwd
+ 3213  ll
+ 3214  ls -al
+ 3215  copy ~/code/agentquoter-app-v2/.gitignore .
+ 3216  cp ~/code/agentquoter-app-v2/.gitignore .
+ 3217  ll
+ 3218  git init
+ 3219  git add -A\n: 1569447832:0;git add -A
+ 3220  ll
+ 3221  git commit -m "first commit"
+ 3222  git remote add origin git@github.com:dzineer/custom_modules_v2.git
+ 3223  git push -u origin master
+ 3224  cp .gitignore ../LandingPages
+ 3225  cd ../LandingPages
+ 3226  git init
+ 3227  git add -A
+ 3228  git commit -m "first commit"
+ 3229  git remote add origin git@github.com:dzineer/landing_pages_v2.git
+ 3230  git push -u origin master
+ 3231  cd ..
+ 3232  cd agentquoter-app-v2
+ 3233  ll
+ 3234  tail -f storage/logs/laravel.log
+ 3235  sudo shutdown -r now
+ 3236  tail -f storage/logs/laravel.log
+ 3237  gaa && gc "Updated Google Analytics Module / Added GA to Landing Pages" && gp 
+ 3238  ll
+ 3239  cd vendor
+ 3240  l
+ 3241  cd dzineer
+ 3242  ll
+ 3243  cd custom-modules
+ 3244  ll
+ 3245  la -l
+ 3246  gaa && gc "Updated Google Analytics Module / Added GA to Landing Pages" && gp 
+ 3247  cd ..
+ 3248  cd landing-pages
+ 3249  ll
+ 3250  gaa && gc "Updated Google Analytics Module / Added GA to Landing Pages" && gp 
+ 3251  ll
+ 3252  ls -al
+ 3253  tail
+ 3254  pwd
+ 3255  cd ..
+ 3256  ll
+ 3257  cd ..
+ 3258  tail -f storage/logs/laravel.log
+ 3259  clear
+ 3260  tail -f storage/logs/laravel.log
+ 3261  exit
+ 3262  pwd
+ 3263  code
+ 3264  cd agentquoter-app-v2
+ 3265  ll
+ 3266  tail -f storage/logs/laravel.log
+ 3267  cd ocde
+ 3268  cd code
+ 3269  cd agentquoter-app-v2
+ 3270  ll
+ 3271  tail -f storage/logs/laravel.log
+ 3272  gaa && gc "Updated Phone Verification Module / Added Last change to update phone number" && gp 
+ 3273  tail -f storage/logs/laravel.log
+ 3274  mkdir flowroute
+ 3275  git clone https://github.com/flowroute/flowroute-sdk-v3-php.git
+ 3276  pwd
+ 3277  composer require "flowroute-sdk-v3-php"
+ 3278  composer require "flowroute-sdk-v3"
+ 3279  ll
+ 3280  cd flowroute
+ 3281  ll
+ 3282  git clone https://github.com/flowroute/flowroute-sdk-v3-php.git .
+ 3283  ll
+ 3284  cat composer.json
+ 3285  cd ..
+ 3286  composer require "apimatic/flowroutenumbersandmessaging"
+ 3287  composer require "deftx/flowroute-laravel-notification-channels"
+ 3288  pwd
+ 3289  composer require deftx/flowroute-laravel-notification-channels
+ 3290  mkdir deftx
+ 3291  cd deftx
+ 3292  git clone deftx/flowroute-laravel-notification-channels.git
+ 3293  git clone https://github.com/dzineer/flowroute-laravel-notification-channels.git
+ 3294  ll
+ 3295  cd flowroute-laravel-notification-channels
+ 3296  ll
+ 3297  cat composer.json
+ 3298  cd ..
+ 3299  ll
+ 3300  mv flowroute-laravel-notification-channels ../../LaravelPackages/
+ 3301  cd ..
+ 3302  tail -f storage/logs/laravel.log
+ 3303  ssh root@agentquoter.com
+ 3304  curl https://api.flowroute.com/v2.1/messages \\n-H "Content-Type: application/vnd.api+json" -X POST -d \\n'{"to": “12487896067, "from": "13073635500", "body": "87612”}’ \\n-u 51314992:d0b1f7f6da117116f908fce5390f50ef 
+ 3305  curl https://api.flowroute.com/v2.1/messages \\n-H "Content-Type: application/vnd.api+json" -X POST -d \\n'{"to": "12487896067", "from": "13073635500", "body": "84612"}' \\n-u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3306  curl https://api.flowroute.com/v2.1/messages \\n-H "Content-Type: application/vnd.api+json" -X POST -d \\n'{"to": "12487896067", "from": "13073635500", "body": "84612", "dlr_callback: "https://example.com/message_to_slack"}' \\n-u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3307  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "12487896067", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3308  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "12487052916", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3309  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "66931947335", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3310  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "166931947335", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3311  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "01166931947335", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3312  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "+66931947335", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3313  ssh root@agentquoter.com
+ 3314  clear
+ 3315  tail -f storage/logs/laravel.log
+ 3316  php artisan cache:clear
+ 3317  php artisan queue:restart
+ 3318  tail -f storage/logs/laravel.log
+ 3319  mkdir repos
+ 3320  cd repos
+ 3321  git clone https://github.com/flowroute/flowroute-sdk-v3-php.git
+ 3322  ll
+ 3323  cd flowroute-sdk-v3-php
+ 3324  ll
+ 3325  cd src
+ 3326  ll
+ 3327  cd ..
+ 3328  ll
+ 3329  cd test
+ 3330  ll
+ 3331  cd ..
+ 3332  ll
+ 3333  cat composer.json
+ 3334  pwd
+ 3335  cd ..
+ 3336  ll
+ 3337  cd ..
+ 3338  ll
+ 3339  composer require simplesoftwareio/simple-sms
+ 3340  tail -f storage/logs/laravel.log
+ 3341  gaa && gc "Updated Phone Verification Module / Added flowroute api call" && gp 
+ 3342  tail -f storage/logs/laravel.log
+ 3343  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "+66931947335", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3344  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "12487896067", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3345  curl https://api.flowroute.com/v2.1/messages/mdr2-c4c87c0ceb8611e9be1016277800dbf0 -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "12487896067", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3346  curl https://api.flowroute.com/v2.1/messages/mdr2-c4c87c0ceb8611e9be1016277800dbf0 -H "Content-Type: application/vnd.api+json" -X GET -d '{"to": "12487896067", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3347  curl https://api.flowroute.com/v2.1/messages/mdr2-c4c87c0ceb8611e9be1016277800dbf0 -H "Content-Type: application/vnd.api+json" -X GET -d '{"to": "12487896067", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef -vvv
+ 3348  curl https://api.flowroute.com/v2.1/messages/mdr2-c4c87c0ceb8611e9be1016277800dbf0 -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "4692064441", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3349  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "4692064441", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3350  curl https://api.flowroute.com/v2.1/messages/mdr2-d0d6d18eeb8a11e9b8204eb1d7e120ec -H "Content-Type: application/vnd.api+json" -X GET -d '{"to": "4692064441", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3351  curl https://api.flowroute.com/v2.1/messages/mdr2-c4c87c0ceb8611e9be1016277800dbf0 -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "12487896067", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3352  curl https://api.flowroute.com/v2.1/messages -H "Content-Type: application/vnd.api+json" -X POST -d '{"to": "12487896067", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3353  curl https://api.flowroute.com/v2.1/messages/mdr2-397e5540eb8b11e9804ca206724fc9b7 -H "Content-Type: application/vnd.api+json" -X GET -d '{"to": "12487896067", "from": "13073635500", "body": "84612"}' -u 51314992:d0b1f7f6da117116f908fce5390f50ef
+ 3354  gaa && gc "Updated Phone Verification Module / Added flowroute api call for sending message and error detection; if message failed, we force user to get OTP code in email." && gp 
+ 3355  cd ..
+ 3356  mkdir db-builder
+ 3357  cd db-builder
+ 3358  laravel --help
+ 3359  laravel db-utils
+ 3360  laravel new db-utils
+ 3361  composer require reliese/laravel
+ 3362  php artisan code:models
+ 3363  ll
+ 3364  cd db-utils
+ 3365  php artisan code:models
+ 3366  php artisan vendor:publish --tag=reliese-models
+ 3367  php artisan config:clear
+ 3368  php artisan code:models
+ 3369  php artisan config:clear
+ 3370  composer dump-autoload
+ 3371  composer require reliese/laravel --dev
+ 3372  php artisan config:clear
+ 3373  composer require reliese/laravel --dev
+ 3374  composer install
+ 3375  composer dump-autoload
+ 3376  composer require reliese/laravel --dev
+ 3377  composer install
+ 3378  composer require reliese/laravel --dev
+ 3379  mv vendor vendor.old
+ 3380  composer install
+ 3381  composer dump-autoload
+ 3382  composer install
+ 3383  php artisan package:discover --ansi
+ 3384  php artisan config:clear
+ 3385  composer require reliese/laravel^^0.0.13
+ 3386  composer require reliese/laravel^0.0.13
+ 3387  composer require reliese/laravel@0.0.13
+ 3388  composer require reliese/laravel:0.0.13
+ 3389  composer require reliese/laravel:^0.0.13
+ 3390  clear
+ 3391  composer update
+ 3392  composer dump-autoload
+ 3393  php artisan code:models
+ 3394  composer require --dev "xethron/migrations-generator"
+ 3395  php artisan migrate:generate
+ 3396  echo "# prepare-db-migrations-for-deployment" >> README.md
+ 3397  cd ..
+ 3398  echo "# prepare-db-migrations-for-deployment" >> README.md
+ 3399  git init
+ 3400  gaa && gc "Prepared Environment"
+ 3401  git remote add origin https://github.com/dzineer/prepare-db-migrations-for-deployment.git
+ 3402  gp
+ 3403  cd db-utils
+ 3404  cd scripts
+ 3405  cd db
+ 3406  ll
+ 3407  ./backup-db-tables.sh
+ 3408  mkdir backups
+ 3409  ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backup/
+ 3410  whereis my.cnf.d
+ 3411  ll
+ 3412  cp backup-db-tables.sh /applications/MAMP/library/bin/
+ 3413  pushd .
+ 3414  cd /Applications/MAMP/Library/bin
+ 3415  ./backup-db-tables.sh
+ 3416  mkdir backups
+ 3417  ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups 
+ 3418  sudo ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups 
+ 3419  mkdir /usr/local/etc/my.cnf.d
+ 3420  popd
+ 3421  pwd
+ 3422  sudo ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups 
+ 3423  sudo ./backup-db-tables.sh 127.0.0.1 app migrations_agentquoter_store ./backups 
+ 3424  mysql -NBA -h 127.0.0.1 -u app -P -D migrations_agentquoter_store -e 'show tables'
+ 3425  mysql -NBA -h 127.0.0.1 -u app -p -D migrations_agentquoter_store -e 'show tables'
+ 3426  mysqldump -h 127.0.0.1 -u app -p -D migrations_agentquoter_store users > ./backups/migrations_agentquoter_store.users.sql
+ 3427  mysqldump -h 127.0.0.1 -u app -p migrations_agentquoter_store users > ./backups/migrations_agentquoter_store.users.sql
+ 3428  mysqldump --column-statistics=0  -h 127.0.0.1 -u app -p migrations_agentquoter_store users > ./backups/migrations_agentquoter_store.users.sql
+ 3429  ./backup-db-tables.sh 127.0.0.1 app migrations_agentquoter_store ./backups 
+ 3430  ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backup/
+ 3431  ll
+ 3432  ./db-to-migrations-tables.sh
+ 3433  ./backup-db-tables.sh
+ 3434  ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backup/
+ 3435  sudo ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backup/
+ 3436  sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /tmp/mysql.sock
+ 3437  ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backup/
+ 3438  ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups/
+ 3439  cd ..
+ 3440  gaa && gc "Added Backup Database data and schema script for every table and db to migrations script" && gp 
+ 3441  tail -f storage/logs/laravel.log
+ 3442  tail -200f storage/logs/laravel.log
+ 3443  ssh root@agentquoter.com
+ 3444  tail -200f storage/logs/laravel.log
+ 3445  gaa && gc "Refactored SMS Requests and removed Telescope support for now" && gp 
+ 3446  tail -200f storage/logs/laravel.log
+ 3447  exite
+ 3448  exit
+ 3449  sudo shutdown -r now
+ 3450  code
+ 3451  cd agentquoter-app-v2
+ 3452  ll
+ 3453  tail -200f storage/logs/laravel.log
+ 3454  gaa && gc "Cleaneup up VerificationCode Component." && gp 
+ 3455  tail -200f storage/logs/laravel.log
+ 3456  gaa && gc "Added check for 2 or more insurance modules to display choice page, otherwise show the only module's page." && gp 
+ 3457  tail -200f storage/logs/laravel.log
+ 3458  tail -200f storage/logs/agentquote.log
+ 3459  tail -200f storage/logs/agentquote-network-response.log
+ 3460  gaa && gc "Added support for ModulesLanding page to pass in a module name in m variable. Added filter of insurance modules that the client supports via the PageChoice Module" && gp 
+ 3461  gaa && gc "Added support for ModulesLanding page to pass in a module name in m variable. Added filter of insurance modules that the client supports via the PageChoice Module - and added Custom Logging" && gp 
+ 3462  tail -200f storage/logs/agentquote-network.log
+ 3463  dig +short myip.opendns.com @resolver1.opendns.com
+ 3464  ssh root@agentquoter.com
+ 3465  curl -X POST \\n  http://https//app.trancehosting.com/fdecker_9411_0589/includes/api.php \\n  -H 'cache-control: no-cache' \\n  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \\n  -H 'postman-token: 6a63e447-75d7-8d6d-b943-e6d390a5d526' \\n  -F username=LS8hWrG9508tBQviAocBCGDQkYGPq1vp \\n  -F password=VhykL3O5sCfNSZVUMI7SoY0yZkdvcKHB \\n  -F action=GetClients \\n  -F search= \\n  -F responsetype=json
+ 3466  curl -X POST \\n  https//app.trancehosting.com/fdecker_9411_0589/includes/api.php \\n  -H 'cache-control: no-cache' \\n  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \\n  -H 'postman-token: 6a63e447-75d7-8d6d-b943-e6d390a5d526' \\n  -F username=LS8hWrG9508tBQviAocBCGDQkYGPq1vp \\n  -F password=VhykL3O5sCfNSZVUMI7SoY0yZkdvcKHB \\n  -F action=GetClients \\n  -F search= \\n  -F responsetype=json
+ 3467  curl -X POST \\n  app.trancehosting.com/fdecker_9411_0589/includes/api.php \\n  -H 'cache-control: no-cache' \\n  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \\n  -H 'postman-token: 6a63e447-75d7-8d6d-b943-e6d390a5d526' \\n  -F username=LS8hWrG9508tBQviAocBCGDQkYGPq1vp \\n  -F password=VhykL3O5sCfNSZVUMI7SoY0yZkdvcKHB \\n  -F action=GetClients \\n  -F search= \\n  -F responsetype=json
+ 3468  curl -X POST \\n  app.trancehosting.com/includes/api.php \\n  -H 'cache-control: no-cache' \\n  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \\n  -H 'postman-token: 6a63e447-75d7-8d6d-b943-e6d390a5d526' \\n  -F username=LS8hWrG9508tBQviAocBCGDQkYGPq1vp \\n  -F password=VhykL3O5sCfNSZVUMI7SoY0yZkdvcKHB \\n  -F action=GetClients \\n  -F search= \\n  -F responsetype=json
+ 3469  dig +short myip.opendns.com @resolver1.opendns.com
+ 3470  rm -rf storage/logs/agentquote-network.log
+ 3471  tail -200f storage/logs/agentquote-network.log
+ 3472  touch storage/logs/agentquote-network.log
+ 3473  tail -200f storage/logs/agentquote-network.log
+ 3474  rm -rf storage/logs/agentquote-network.log
+ 3475  touch storage/logs/agentquote-network.log
+ 3476  tail -200f storage/logs/agentquote-network.log
+ 3477  tail -200f storage/logs/agentquote.log
+ 3478  vim storage/logs/agentquote-network.log
+ 3479  rm -rf storage/logs/agentquote-network.log
+ 3480  touch storage/logs/agentquote-network.log
+ 3481  tail -200f storage/logs/agentquote.log
+ 3482  tail -200f storage/logs/agentquote-network.log
+ 3483  gaa && gc "Added WHMCS API Cients & Products" && gp 
+ 3484  ssh root@140.82.61.9
+ 3485  sudo vi /Users/niran/.ssh/known_hosts
+ 3486  ssh root@140.82.61.9
+ 3487  cd ..
+ 3488  tar cvfz agentquoter-app-v2.tar.gz agentquoter-app-v2
+ 3489  cd agentquoter-app-v2
+ 3490  ll
+ 3491  rm -rf public_what
+ 3492  ll
+ 3493  rm -rf repos
+ 3494  cd research
+ 3495  ll
+ 3496  cd ..
+ 3497  ll
+ 3498  cd ..
+ 3499  tar cvfz agentquoter-app-v2.tar.gz agentquoter-app-v2/
+ 3500  ll
+ 3501  scp agentquoter-app-v2.tar.gz root@140.82.61.9/tmp/
+ 3502  scp agentquoter-app-v2.tar.gz root@140.82.61.9:/tmp/
+ 3503  cd ..
+ 3504  cd db-builder
+ 3505  ll
+ 3506  cd db-utils
+ 3507  ll
+ 3508  cd scripts
+ 3509  ll
+ 3510  cd db
+ 3511  ll
+ 3512  ./backup-db-tables.sh
+ 3513  history | grep backup
+ 3514  cd ..
+ 3515  ll
+ 3516  cd ..
+ 3517  l
+ 3518  cd scripts
+ 3519  ll
+ 3520  cd db
+ 3521  ll
+ 3522  cd backups
+ 3523  ll
+ 3524  mkdir 2019_10_15_21_migrations_agentquoter_store
+ 3525  cp mi* migrations_agentquoter_store 2019_10_15_21_migrations_agentquoter_store
+ 3526  ll
+ 3527  mv * 2019_10_15_21_migrations_agentquoter_store
+ 3528  ll
+ 3529  cd 2019_10_15_21_migrations_agentquoter_store
+ 3530  l
+ 3531  cd ..
+ 3532  mkdir 2019_10_15_20_migrations_agentquoter_store
+ 3533  cd ..
+ 3534  ll
+ 3535  mkdir backups/2019_10_18_15_20_migrations_agentquoter_store
+ 3536  ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups/2019_10_18_15_20_migrations_agentquoter_store
+ 3537  ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups/2019_10_18_15_20_migrations_agentquoter_store/
+ 3538  sudo ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups/2019_10_18_15_20_migrations_agentquoter_store/
+ 3539  cat backup-db-tables.sh
+ 3540  ll
+ 3541  sudo ln -s /tmp/mysql.sock /Applications/MAMP/tmp/mysql/mysql.sock
+ 3542  sudo rm -rf /Applications/MAMP/tmp/mysql/mysql.sock
+ 3543  sudo ln -s /tmp/mysql.sock /Applications/MAMP/tmp/mysql/mysql.sock
+ 3544  sudo ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups/2019_10_18_15_20_migrations_agentquoter_store/
+ 3545  pushd .
+ 3546  cd /tmp
+ 3547  sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock ./mysql.sock
+ 3548  popd
+ 3549  sudo ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups/2019_10_18_15_20_migrations_agentquoter_store/
+ 3550  ll
+ 3551  ll ../../database/migrations/
+ 3552  ll backups/2019_10_18_15_20_migrations_agentquoter_store
+ 3553  ll
+ 3554  cd backups
+ 3555  ll
+ 3556  scp -r 2019_10_18_15_20_migrations_agentquoter_store/* root@140.82.61.9:/tmp/
+ 3557  cd ..
+ 3558  ll
+ 3559  sudo ./db-to-migrations-tables.sh
+ 3560  cd ../../database/migrations
+ 3561  ll
+ 3562  mkdir 2019_10_18_15_20_migrations
+ 3563  mv 2019_10_18_* 2019_10_18_15_20_migrations
+ 3564  ll
+ 3565  cd 2019_10_18_15_20_migrations
+ 3566  ll
+ 3567  cd ,.
+ 3568  cd ..
+ 3569  pwd
+ 3570  ll
+ 3571  scp -r 2019_10_18_15_20_migrations/ root@140.82.61.9:/tmp/
+ 3572  ssh root@140.82.61.9
+ 3573  pwd
+ 3574  cd ..
+ 3575  ll
+ 3576  cd ..
+ 3577  ll
+ 3578  cd ..
+ 3579  cd agentquoter-app-v2/vendor
+ 3580  cd dzineer
+ 3581  ll
+ 3582  cd custom-modules
+ 3583  ll
+ 3584  cd ..
+ 3585  pwd
+ 3586  ll
+ 3587  mkdir /tmp/custom-modules
+ 3588  cp custom-modules/* -R /tmp/custom-modules
+ 3589  cp custom-modules/ -R /tmp/custom-modules
+ 3590  cp -r custom-modules/ /tmp/custom-modules
+ 3591  cp -r landing-pages/ /tmp/landing-pages
+ 3592  cd /tmp
+ 3593  ll
+ 3594  cd custom-modules
+ 3595  l
+ 3596  cd ..
+ 3597  tar cvfz custom-modules.tar.dz custom-modules
+ 3598  tar cvfz landing-pages.tar.gz landing-pages
+ 3599  ll
+ 3600  mv custom-modules.tar.dz custom-modules.tar.gz
+ 3601  scp custom-modules.tar.gz landing-pages.tar.gz root@140.82.61.9:/tmp/
+ 3602  ssh root@140.82.61.9
+ 3603  ssh root@149.28.231.194
+ 3604  cd /tmp
+ 3605  ll
+ 3606  scp custom-modules.tar.gz landing-pages.tar.gz root@49.28.231.194:/var/www/deployment/ 
+ 3607  scp custom-modules.tar.gz landing-pages.tar.gz root@49.28.231.194:/tmp/
+ 3608  scp ./custom-modules.tar.gz root@49.28.231.194:/tmp/
+ 3609  scp custom-modules.tar.gz landing-pages.tar.gz root@149.28.231.194:/var/www/deployment/ 
+ 3610  scp custom-modules.tar.gz landing-pages.tar.gz root@149.28.231.194:/tmp/
+ 3611  popd
+ 3612  ll
+ 3613  code
+ 3614  ll
+ 3615  scp agentquoter-app-v2.tar.gz root@149.28.231.194:/tmp/
+ 3616  history | grep vi
+ 3617  sudo vi /Users/niran/.ssh/known_hosts
+ 3618  ssh root@149.28.231.194
+ 3619  ssh root@app.agentquote.com
+ 3620  ll
+ 3621  ssh root@app.agentquote.com
+ 3622  cd db-builder
+ 3623  cd db-utils
+ 3624  cd /tmp
+ 3625  ll
+ 3626  cd code
+ 3627  code
+ 3628  cd db-builder/db-utils
+ 3629  cd database/migrations
+ 3630  ll
+ 3631  cd 2019_10_18_15_20_migrations
+ 3632  ll
+ 3633  cd ..
+ 3634  scp -R ./2019_10_18_15_20_migrations/ root@149.28.231.194:/tmp/
+ 3635  scp -r ./2019_10_18_15_20_migrations/ root@149.28.231.194:/tmp/
+ 3636  cd db-builder/db-utils
+ 3637  ll
+ 3638  cd database
+ 3639  ll
+ 3640  cd .
+ 3641  cd ..
+ 3642  cd scripts
+ 3643  cd db
+ 3644  ll
+ 3645  cd backups
+ 3646  ll
+ 3647  cd 2019_10_18_15_20_migrations_agentquoter_store
+ 3648  ll
+ 3649  scp -r ../2019_10_18_15_20_migrations_agentquoter_store root@149.28.231.194:/tmp/
+ 3650  ssh root@app.agentquote.com
+ 3651  ssh root@149.28.231.194
+ 3652  pwd
+ 3653  ssh root@149.28.231.194
+ 3654  pwd
+ 3655  ssh root@149.28.231.194
+ 3656  man sert
+ 3657  man set
+ 3658  readlink
+ 3659  man readlink
+ 3660  pwd
+ 3661  ssh root@149.28.231.194
+ 3662  code
+ 3663  cd agentquoter-app-v2
+ 3664  ll
+ 3665  cd public
+ 3666  ll
+ 3667  templates
+ 3668  ll
+ 3669  cd landing-pages
+ 3670  ll
+ 3671  cd v2
+ 3672  ll
+ 3673  cd css
+ 3674  ll
+ 3675  date
+ 3676  pwd
+ 3677  cd ..
+ 3678  cd v1
+ 3679  ll
+ 3680  cd css
+ 3681  ll
+ 3682  pwd
+ 3683  cp ../../v2/css/app.css .
+ 3684  ll
+ 3685  scp app.css root@149.28.231.194:/var/www/html/templates/landing-pages/v1/css/style.css
+ 3686  pwd
+ 3687  ssh root@149.28.45.178
+ 3688  ssh root@149.28.231.194
+ 3689  pwd
+ 3690  code
+ 3691  ll
+ 3692  cd public
+ 3693  ll
+ 3694  cd templates
+ 3695  ll
+ 3696  cd landing-pages
+ 3697  ll
+ 3698  pwd
+ 3699  ll
+ 3700  cd v1
+ 3701  ll
+ 3702  cd css
+ 3703  ll
+ 3704  scp ../v2/css/app.css root@149.28.231.194:/var/www/html/templates/landing-pages/v1/css/style.css
+ 3705  scp ../../v2/css/app.css root@149.28.231.194:/var/www/html/templates/landing-pages/v1/css/style.css
+ 3706  pwd
+ 3707  scp public/templates/landing-pages/v1/css/app.css root@149.28.231.194:/var/www/html/templates/landing-pages/v1/css/app.css
+ 3708  scp public/templates/landing-pages/v1/css/style.css root@149.28.231.194:/var/www/html/templates/landing-pages/v1/css/style.css
+ 3709  curl -4 icanhazip.com
+ 3710  ssh root@149.28.231.194
+ 3711  ssh root@app.agentquote.com
+ 3712  ssh root@149.28.231.194
+ 3713  sudo php artisan serve --port 80
+ 3714  yarn watch &
+ 3715  tail -200f storage/logs/laravel.log
+ 3716  cdoe
+ 3717  code
+ 3718  cd agentquoter-app-v2
+ 3719  ll
+ 3720  tail -200f storage/logs/laravel.log
+ 3721  tail -200f storage/logs/agentquote.log
+ 3722  yarn watch
+ 3723  tail -200f storage/logs/laravel.log
+ 3724  gaa && gc "Added new page section editing and repositioning - include new module and updated views" && gp 
+ 3725  gaa && gc "Updated templates change section bg color and added new section" && gp 
+ 3726  cd ..
+ 3727  mkdir regex
+ 3728  cd regex
+ 3729  git clone https://github.com/dzineer/regexper-static.git
+ 3730  yarn install
+ 3731  yarn start
+ 3732  ll
+ 3733  cd regexper-static
+ 3734  ll
+ 3735  yarn install
+ 3736  yarn start
+ 3737  tail -f storage/logs/laravel.log
+ 3738  gaa && gc "Updated templates change section bg color selection removed section tag from section and create it on the fly" && gp 
+ 3739  ping google.com
+ 3740  tail -f storage/logs/laravel.log
+ 3741  gaa && gc "Updated templates section - added enable or disable section, if disabled won't show on menu too." && gp 
+ 3742  gaa && gc "Added back to page sections, if disabled won't show on menu too." && gp 
+ 3743  exit
+ 3744  code
+ 3745  cd agentquoter-app-v2
+ 3746  cd bin
+ 3747  chomd u+xrw *
+ 3748  ll
+ 3749  chmod u+xrw *
+ 3750  ll
+ 3751  ./webserver.sh
+ 3752  cd bin
+ 3753  ./log.sh
+ 3754  ll
+ 3755  ./dev-watch.sh
+ 3756  pwd
+ 3757  cd ..
+ 3758  gaa && gc "Fixed TermlifeForm.js this.ages is now a function. function was called." && gp 
+ 3759  ./log.sh
+ 3760  ..
+ 3761  composer dump-autoload
+ 3762  cd bin
+ 3763  ./webserver.sh
+ 3764  composer dump-autoload
+ 3765  cd ..
+ 3766  composer dump-autoload
+ 3767  cd bin
+ 3768  ./webserver.sh
+ 3769  gaa && gc "Added custom user sections for page_id=2 or home page and quote results page." && gp 
+ 3770  ping google.com
+ 3771  traceroute google.com
+ 3772  ping google.com
+ 3773  ping create-react-app.dev
+ 3774  cdoe
+ 3775  code
+ 3776  cd agentquoter-app-v2
+ 3777  ll
+ 3778  cd bin
+ 3779  ll
+ 3780  cd ..
+ 3781  ./bin/webserver.sh
+ 3782  cd bin
+ 3783  ll
+ 3784  ./webserver.sh
+ 3785  cd bin
+ 3786  ll
+ 3787  ./dev-watch.sh
+ 3788  cd bin
+ 3789  ll
+ 3790  ./log.sh
+ 3791  ping google.com
+ 3792  cd ..
+ 3793  gaa && gc "Added PageSection and SectionRow components." && gp 
+ 3794  ./webserver.sh
+ 3795  ./dev-watch.sh
+ 3796  gaa && gc "Added Module Icons." && gp 
+ 3797  cd ..
+ 3798  mkdir snippets
+ 3799  cd snippets
+ 3800  laravel new snippets
+ 3801  ll
+ 3802  cd ..
+ 3803  cd snippets
+ 3804  ll
+ 3805  cd ..
+ 3806  ll
+ 3807  mkdir working_on
+ 3808  cd snippets
+ 3809  mv snippets/ ../working_on
+ 3810  cd ../working_on
+ 3811  ll
+ 3812  ls -al
+ 3813  cd snippets
+ 3814  ll
+ 3815  dserve link
+ 3816  dzserve link
+ 3817  php artisan serve
+ 3818  sudo php artisan serve --port 80
+ 3819  cd ..
+ 3820  ll
+ 3821  cd working_on
+ 3822  ll
+ 3823  cd snippets
+ 3824  ll
+ 3825  echo "# laravel_snippets_with_syntax_highlighting_and_forking" >> README.md\ngit init\ngit add -A\ngit commit -m "first commit"\ngit remote add origin https://github.com/dzineer/laravel_snippets_with_syntax_highlighting_and_forking.git\ngit push -u origin master
+ 3826  ./webserver.sh
+ 3827  ./dev-watch.sh
+ 3828  ./log.sh
+ 3829  cd ..
+ 3830  gaa && gc "Fixed Google Analytics Module Install." && gp 
+ 3831  gaa && gc "Fixed Responsive Quoter Forms Term Life, SI Term, FE/SIWL" && gp 
+ 3832  vi ./dev-watch.sh
+ 3833  ll
+ 3834  rm yarn-production.sh
+ 3835  cp -p dev-watch.sh production.sh
+ 3836  vi production.sh
+ 3837  ./production.sh
+ 3838  cd ..
+ 3839  ll
+ 3840  cd public
+ 3841  ll
+ 3842  mkdir deploy
+ 3843  copy -r images deploy
+ 3844  cp -r images deploy
+ 3845  ll deploy
+ 3846  cp -r css deploy
+ 3847  cp -r js delploy
+ 3848  ll
+ 3849  cd deploy
+ 3850  ll
+ 3851  cp -r ../../resources/views .
+ 3852  ll
+ 3853  cp -r ../../app .
+ 3854  ll
+ 3855  ll app
+ 3856  pushd .
+ 3857  cd ..
+ 3858  ll
+ 3859  cd ..
+ 3860  ll
+ 3861  cd ..
+ 3862  ll
+ 3863  cd builder-apps
+ 3864  ll
+ 3865  cd 2019-10-21-builder-app-101
+ 3866  ll
+ 3867  cd src
+ 3868  ll
+ 3869  cd ..
+ 3870  ll
+ 3871  cd ..
+ 3872  ll
+ 3873  cd ..
+ 3874  ll
+ 3875  cd db-builder
+ 3876  ll
+ 3877  cd db-utils
+ 3878  ll
+ 3879  cd scripts
+ 3880  ll
+ 3881  cd db
+ 3882  ll
+ 3883  cd backups
+ 3884  ll
+ 3885  cd ..
+ 3886  ll
+ 3887  pwd
+ 3888  ll
+ 3889  cd ..
+ 3890  ll
+ 3891  cd ..
+ 3892  ll
+ 3893  cd database
+ 3894  ll
+ 3895  cd migrations
+ 3896  ll
+ 3897  rm -rf 2019_10_18_15_20_migrations
+ 3898  ll
+ 3899  cd ..
+ 3900  ll
+ 3901  cd ..
+ 3902  ll
+ 3903  cd scripts
+ 3904  ll
+ 3905  cd db
+ 3906  ll
+ 3907  cat backup-db-tables.sh
+ 3908  ./backup-db-tables.sh
+ 3909  ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backup/
+ 3910  sudo ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backup/
+ 3911  ll
+ 3912  rm -rf backup
+ 3913  rm -rf backups
+ 3914  ll
+ 3915  rm -rf backups
+ 3916  l
+ 3917  sudo rm -rf backups
+ 3918  ll
+ 3919  sudo ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups/
+ 3920  ll
+ 3921  cd backups
+ 3922  ll
+ 3923  cd ..
+ 3924  ll
+ 3925  sudo rm -rf backups
+ 3926  sudo ./backup-db-tables.sh localhost app migrations_agentquoter_store ./backups/
+ 3927  sudo ./backup-db-tables.sh 127.0.0.1 app migrations_agentquoter_store ./backups/
+ 3928  ..
+ 3929  pwd
+ 3930  ll
+ 3931  cd scripts
+ 3932  ll
+ 3933  cd db
+ 3934  ll
+ 3935  ./db-to-migrations-tables.sh
+ 3936  ll
+ 3937  cd backups
+ 3938  ll
+ 3939  history | grep cat
+ 3940  history | grep migrations_
+ 3941  ll
+ 3942  cat migrations_agentquoter_store.* install.sql
+ 3943  cat migrations_agentquoter_store.* > install.sql
+ 3944  sudo cat migrations_agentquoter_store.* > install.sql
+ 3945  ll
+ 3946  sudo cat "migrations_agentquoter_store.*" > install.sql
+ 3947  cat "migrations_agentquoter_store.*" > install.sql
+ 3948  cat "migrations_agentquoter_store.*" > installa.sql
+ 3949  cat "migrations_agentquoter_store.*" >> aa
+ 3950  sudo cat "migrations_agentquoter_store.*" >> aa
+ 3951  pwd
+ 3952  whoami
+ 3953  sudo bash
+ 3954  ll
+ 3955  popd
+ 3956  ll
+ 3957  cd ..
+ 3958  cd agentquoter-app-v2
+ 3959  ll
+ 3960  cd public
+ 3961  ll
+ 3962  cd deploy
+ 3963  ll
+ 3964  cd ..
+ 3965  tar cvfz deploy.tar.gz deploy
+ 3966  ll
+ 3967  scp deploy.tar.gz root@149.28.231.194:/var/www/deploy.tar.gz
+ 3968  ssh root@149.28.231.194
+ 3969  scp js/app.js js/app-landing-page.js root@149.28.231.194:/var/www/js/
+ 3970  scp js/app.js js/app-landing-page.js root@149.28.231.194:/var/www/html/js/
+ 3971  cd ..
+ 3972  scp config/agentquote.php root@149.28.231.194:/var/www/app/app/config/agentquote.php
+ 3973  ssh root@149.28.231.194
+ 3974  scp config/agentquote.php root@149.28.231.194:/var/www/app/config/agentquote.php
+ 3975  scp config/custom_modules.php root@149.28.231.194:/var/www/app/config/custom_modules.php
+ 3976  cd vendor
+ 3977  ll
+ 3978  cd dzineer
+ 3979  ll
+ 3980  cd custom-modules
+ 3981  ll
+ 3982  cd ..
+ 3983  tar cvfz ../custom_modules.tar.gz ../custom_modules
+ 3984  tar cvfz custom_modules.tar.gz ./custom_modules
+ 3985  ll
+ 3986  rm -rf custom-modules.zip
+ 3987  ll
+ 3988  rm -rf custom_modules.tar.gz
+ 3989  ll
+ 3990  cd custom-modules
+ 3991  ll
+ 3992  pwd
+ 3993  cd ..
+ 3994  cd ../../../LaravelPackages/CustomModulesa
+ 3995  cd ../../LaravelPackages/CustomModulesa
+ 3996  cd ../../../../LaravelPackages/CustomModulesa
+ 3997  code
+ 3998  cd LaravelPackages
+ 3999  ll
+ 4000  cd CustomModules
+ 4001  ll
+ 4002  cd resources
+ 4003  ll
+ 4004  cd views
+ 4005  ll
+ 4006  cd ..
+ 4007  cd .
+ 4008  cd ..
+ 4009  ll
+ 4010  cd ..
+ 4011  tar cvfz CustomModules.tar.gz ./CustomModules
+ 4012  scp CustomModules.tar.gz root@149.28.231.194:/var/www/app/
+ 4013  code
+ 4014  cd agentquoter-app-v2
+ 4015  ll
+ 4016  cd resources
+ 4017  ll
+ 4018  cd views
+ 4019  ll
+ 4020  cd custom_modules
+ 4021  ll
+ 4022  cd pages_module
+ 4023  ll
+ 4024  scp -r * root@149.28.231.194:/var/www/app/resources/views/custom_modules/pages_module/
+ 4025  scp -r ../pages_module root@149.28.231.194:/var/www/app/resources/views/custom_modules/
+ 4026  cd ..
+ 4027  pwd
+ 4028  cd ..
+ 4029  cd public
+ 4030  ll
+ 4031  cd js
+ 4032  ll
+ 4033  scp app.js app-landing-page.js root@149.28.231.194:/var/www/html/js/
+ 4034  cd ..
+ 4035  cd routes
+ 4036  scp web.php api.php root@149.28.231.194:/var/www/app/routes/
+ 4037  cd ..
+ 4038  cd resources/views/custom_modules
+ 4039  ll
+ 4040  scp -r user_pages_module root@149.28.231.194:/var/www/app/resources/views/custom_modules/
+ 4041  cd ..
+ 4042  cp -r bin ../snippets
+ 4043  cd ../snippets/bin
+ 4044  ll
+ 4045  ./webserver.sh
+ 4046  cat webserver.sh
+ 4047  pwd
+ 4048  cd ..
+ 4049  ll
+ 4050  pwd
+ 4051  mv bin ../working_on/snippets/
+ 4052  cd ../working_on/snippets/
+ 4053  ll
+ 4054  cd bin
+ 4055  ./webserver.sh
+ 4056  gaa && gc "Added File Types and Type filtering" && gp 
+ 4057  gaa && gc "Added Project and Snippet can associate with project" && gp 
+ 4058  cd ..
+ 4059  ll
+ 4060  cd agentquoter-app-v2
+ 4061  cd bin
+ 4062  ll
+ 4063  pwd
+ 4064  code
+ 4065  cd agentquoter-app-v2/bin
+ 4066  ./webserver.sh
+ 4067  pwd
+ 4068  cd ../../..
+ 4069  cd bin
+ 4070  pwd
+ 4071  ./dev-watch.sh
+ 4072  ./log.sh
+ 4073  ./webserver.sh
+ 4074  ping google.com
+ 4075  node
+ 4076  ll
+ 4077  pwd
+ 4078  ./log.sh
+ 4079  cd ..
+ 4080  php artisan view:clear
+ 4081  php artisan cache:clear
+ 4082  vi /Users/niran/code/agentquoter-app-v2/storage/framework/views/efb72d9cd4b58bed8aca190c200cb06c9d79e9aa.php
+ 4083  ./dev-watch.sh
+ 4084  yarn add autosize
+ 4085  gaa && gc "Added support to redirect to requested page after successful login." && gp 
+ 4086  cd ..
+ 4087  artisan config:clear
+ 4088  cd bin
+ 4089  ./dev-watch.sh
+ 4090  cd ..
+ 4091  composer remove laravel/telescope
+ 4092  cd bin
+ 4093  ./log.sh
+ 4094  gaa && gc "Added User Domain - domain module." && gp 
+ 4095  gaa && gc "Added top margin to module type display in /modules" && gp 
+ 4096  ssh root@agentquoter.com
+ 4097  gaa && gc "Fixing Missing Affiliate Insurance Category Ad (Preferred Carrier)" && gp 
+ 4098  gaa && gc "Menu Re-organizing" && gp 
+ 4099  ./dev-watch.sh
+ 4100  gaa && gc "Added New Floating Support Window - front and backend" && gp 
+ 4101  gaa && gc "Made preferred carrier result more prominent" && gp 
+ 4102  ping google.com
+ 4103  gaa && gc "Added opened and closed state to help icon" && gp
+ 4104  gaa && gc "Added elderly woman icon for Final Expense" && gp
+ 4105  gaa && gc "Added DomainActionDispatch class to handle Domain Actions" && gp
+ 4106  gaa && gc "Added DomainActionDispatch class to handle Domain Actions - minor refacoring" && gp
+ 4107  gaa && gc "Added DomainActionDispatch class to handle Domain Actions - minor refactoring" && gp
+ 4108  exit
+ 4109  pwd
+ 4110  code
+ 4111  cd agentquoter-app-v2
+ 4112  cd bin
+ 4113  ./webserver.sh
+ 4114  ll
+ 4115  ./dev-watch.sh
+ 4116  ./log.sh
+ 4117  cd ..
+ 4118  gaa && gc "Added dzineer:custom-module console command." && gp
+ 4119  gaa && gc "Added dzineer:custom-module console command - fixed error in stub." && gp
+ 4120  gaa && gc "Added Service Provider for Custom Module Generator Command dzineer:custom-module console " && gp
+ 4121  pwd
+ 4122  cd ..
+ 4123  mkdir Laracasts
+ 4124  cd Laracasts
+ 4125  ll
+ 4126  dzserve
+ 4127  dzserve stop
+ 4128  composer global require laravel/valet
+ 4129  valet install
+ 4130  laravel new birdboard
+ 4131  cd birdboard
+ 4132  valet start
+ 4133  valet ping *.test
+ 4134  ping birdboard.test
+ 4135  valet
+ 4136  valet parked
+ 4137  valet link
+ 4138  valet parked
+ 4139  valet park
+ 4140  valet parked
+ 4141  valet unpark
+ 4142  valet unlink
+ 4143  valet parked
+ 4144  valet unlink app
+ 4145  valet unlink bootstrap
+ 4146  valet unlink database
+ 4147  valet unlink public
+ 4148  valet unlink resources
+ 4149  valet unlink routes
+ 4150  valet unlink storage
+ 4151  valet unlink tests
+ 4152  valet unlink vender
+ 4153  valet park
+ 4154  cd public
+ 4155  valet park
+ 4156  valet links
+ 4157  valet link
+ 4158  valet park
+ 4159  valet
+ 4160  valet parked
+ 4161  valet forget app
+ 4162  valet parked
+ 4163  cd app
+ 4164  cd ..
+ 4165  valet forget app
+ 4166  valet parked
+ 4167  cd app
+ 4168  valet forget
+ 4169  valet parked
+ 4170  valet paths
+ 4171  pwd
+ 4172  cd ..
+ 4173  valet forget .
+ 4174  valet parked
+ 4175  valet forget
+ 4176  valet parked
+ 4177  cd pu
+ 4178  cd public
+ 4179  pwd
+ 4180  valet park
+ 4181  valet parked
+ 4182  valet link
+ 4183  valet parked
+ 4184  valet path
+ 4185  valet parked
+ 4186  valet
+ 4187  valet link
+ 4188  valet parked
+ 4189  pwd
+ 4190  cd ..
+ 4191  ll
+ 4192  cd ..
+ 4193  ll
+ 4194  valet park
+ 4195  cd birdboard
+ 4196  ll
+ 4197  git init
+ 4198  ll
+ 4199  ls -al
+ 4200  git add -A
+ 4201  gc "Install Framework"
+ 4202  git remote add origin https://github.com/dzineer/laracasts-birdboard.git
+ 4203  gp
+ 4204  artisan make:test ProjectsTest
+ 4205  vendor/bin/phpunit tests/Feature/ProjectsTest
+ 4206  artisan make:migration create_projects_table
+ 4207  vendor/bin/phpunit tests/Feature/ProjectsTest
+ 4208  artisan make:model Project
+ 4209  vendor/bin/phpunit tests/Feature/ProjectsTest
+ 4210  artisan make:model Model
+ 4211  vendor/bin/phpunit tests/Feature/ProjectsTest
+ 4212  artisan make:controller ProjectsController
+ 4213  vendor/bin/phpunit tests/Feature/ProjectsTest
+ 4214  vendor/bin/phpunit tests/Feature/ProjectsTest --filter a_project_requires_a_title
+ 4215  alias fp="vender/bin/phpunit --filter"
+ 4216  alias pf="vender/bin/phpunit --filter"
+ 4217  pf a_project_requires_a_title
+ 4218  alias pf="vendor/bin/phpunit --filter"
+ 4219  pf a_project_requires_a_title
+ 4220  pf a_project_requires_a_description
+ 4221  pf ProjectsTest
+ 4222  pf ProjectsTest --help
+ 4223  pf ProjectsTest --list-tests
+ 4224  pf ProjectsTest --list
+ 4225  pf ProjectsTest
+ 4226  artisan make:factory ProjectFactory --model="App\Project"
+ 4227  artisan tinker
+ 4228  pf a_project_requires_a_title
+ 4229  pf a_project_requires_a_description
+ 4230  pf ProjectsTest
+ 4231  pf a_user_can_view_a_project
+ 4232  artisan make:test ProjectTest --unit
+ 4233  pf it_has_a_path
+ 4234  artisan migrate
+ 4235  artian tinker
+ 4236  artisan tinker
+ 4237  pf a_project_requires_an_owner
+ 4238  aritsan migrate:refresh
+ 4239  artisan migrate:refresh
+ 4240  artisan migrate:rollback
+ 4241  artisan migrate
+ 4242  artisan migrate:rollback
+ 4243  artisan migrate:refresh
+ 4244  artisan migrate
+ 4245  pf a_project_requires_an_owner
+ 4246  pf ProjectsTest
+ 4247  gaa && gc "Added Initial Tests" && gp
+ 4248  pf a_project_requires_an_owner
+ 4249  artisan make:auth
+ 4250  artisan
+ 4251  composer require laravel/ui
+ 4252  artisan
+ 4253  artisan ui:auth
+ 4254  pf a_project_requires_an_owner
+ 4255  gaa && gc "requires authenticated user to create a project" && gp
+ 4256  pf a_project_requires_an_owner
+ 4257  pf only_authenticated_users_can_a_project
+ 4258  history >> history.txt
+ 4259  gaa && gc "added command history" && gp
+ 4260  pf ProjectsTest
+ 4261  pf a_project_requires_a_title
+ 4262  pf ProjectsTest
+ 4263  pf a_user_can_create_a_project
+ 4264  artisan make:test UserTest --unit
+ 4265  pf a_user_has_projects
+ 4266  pf a_user_can_create_a_project
+ 4267  cat history.txt
+ 4268  history > history.txt
+ 4269  cat history.txt | grep global
+ 4270  composer global update phpunit
+ 4271  phpunit --self-update
+ 4272  phpunit --help
+ 4273  pf a_user_can_create_a_project
+ 4274  set
+ 4275  alias
+ 4276  vendor/bin/phpunit --version
+ 4277  vendor/bin/phpunit --check-version
+ 4278  pf a_user_can_create_a_project
+ 4279  pf a_user_has_projects
+ 4280  pf a_user_can_create_a_project
+ 4281  gaa && gc "Changed ProjectsController" && gp
+ 4282  pf a_user_can_create_a_project
+ 4283  gaa && gc "updated test: a_user_can_create_a_project" && gp
+ 4284  pf a_user_can_create_a_project
+ 4285  gaa && gc "refactored ProjectsController::store" && gp
+ 4286  gaa && gc "de-refactored ProjectsController::store" && gp
+ 4287  pf a_user_can_create_a_project
+ 4288  artisan tinker
+ 4289  artisan ui react
+ 4290  npm install && npm run dev
+ 4291  artisan tinker
+ 4292  pf only_authenticated_users_can_view_projects
+ 4293  gaa && gc "added test: only_authenticated_users_can_view_projects" && gp
+ 4294  gaa && gc "added test: only_authenticated_users_can_view_projects: updated" && gp
+ 4295  pf only_authenticated_users_can_view_projects
+ 4296  pf guests_cannot_view_a_project
+ 4297  gaa && gc "updated web routes" && gp
+ 4298  pf guests_cannot_view_a_project
+ 4299  pf guests_cannot_view_a_single_project
+ 4300  pf ProjectsTest
+ 4301  gaa && gc "test: a_user_can_view_their_project added previous one removed" && gp
+ 4302  pf a_user_can_view_their_project
+ 4303  pf ProjectsTest
+ 4304  gaa && gc "moved products routes to auth middleware group" && gp
+ 4305  pf ProjectsTest
+ 4306  gaa && gc "moved HomeController@index route to auth middleware group" && gp
+ 4307  pf a_authenticated_user_cannot_view_the_projects_of_others
+ 4308  pf ProjectsTest
+ 4309  pf a_project_belongs_to_an_owner
+ 4310  pf ProjectsTest
+ 4311  ssh root@agentquote.com
+ 4312  ssh root@app.agentquote.com
+ 4313  pf Projects/ManageTest
+ 4314  pf Projects\ManageTest
+ 4315  pf ProjectManageTest
+ 4316  ./webserver.sh
+ 4317  pf ProjectManageTest
+ 4318  pf guests_cannot_manage_projects
+ 4319  history | grep composer
+ 4320  composer require ui vue
+ 4321  history | grep composer | grep ui
+ 4322  history | grep artisan | grep ui
+ 4323  artisan ui vue
+ 4324  npm install && npm run dev
+ 4325  pwd
+ 4326  ll
+ 4327  cd ..
+ 4328  mv birdboard birdboard.old
+ 4329  laravel new birdboard
+ 4330  cd birdboard
+ 4331  ll
+ 4332  history | grep composer
+ 4333  composer require ui
+ 4334  composer require laravel/ui
+ 4335  history | grep auth
+ 4336  artisan ui:auth
+ 4337  cat history | grep react
+ 4338  history | grep react
+ 4339  artisan ui vue
+ 4340  npm install && npm run dev
+ 4341  pf guests_cannot_manage_projects
+ 4342  php artisan migrate
+ 4343  php artisan migrate:refrsh
+ 4344  php artisan migrate:refresh
+ 4345  php artisan migrate
+ 4346  pwd
+ 4347  php artisan migrate
+ 4348  gaa && gc "converted project to support vue" && gp
+ 4349  npm run development
+ 4350  yarn
+ 4351  yarn add tailwindcss
+ 4352  npx tailwind init
+ 4353  yarn dev
+ 4354  yarn add laravel-mix-tailwind
+ 4355  yarn dev
+ 4356  yarn watch
+ 4357  pwd
+ 4358  yarn watch
+ 4359  pwd
+ 4360  cd ..
+ 4361  cd Laracasts
+ 4362  ll
+ 4363  cd birdboard
+ 4364  ll
+ 4365  yarn watch
+ 4366  cd ..
+ 4367  cd Laracasts
+ 4368  cd birdboard
+ 4369  ll
+ 4370  artisan make:test ProjectTasksTest
+ 4371  fp
+ 4372  pf
+ 4373  alias pf="vendor/bin/phpunit --filter"
+ 4374  ll
+ 4375  pf
+ 4376  pf ProjectManageTest
+ 4377  pf a_user_can_create_a_project
+ 4378  pf ProjectManageTest
+ 4379  pf a_user_can_view_their_project
+ 4380  pf a_project_requires_a_title
+ 4381  pf a_user_can_view_their_project
+ 4382  pf ProjectManageTest
+ 4383  pf a_project_can_have_tasks
+ 4384  artian make:controller ProjectTasksController
+ 4385  artisan make:controller ProjectTasksController
+ 4386  pf a_project_can_have_tasks
+ 4387  pf it_can_add_a_task
+ 4388  artisan make:model Task -m 
+ 4389  pf it_can_add_a_task
+ 4390  artisan make:model Model
+ 4391  pf it_can_add_a_task
+ 4392  pf a_project_can_have_tasks
+ 4393  pf a_task_requires_a_body
+ 4394  artisan make:factory TaskFactory
+ 4395  pf a_task_requires_a_body
+ 4396  fp only_the_owner_of_a_project_may_add_tasks
+ 4397  pf only_the_owner_of_a_project_may_add_tasks
+ 4398  pf guests_cannot_add_tasks_to_projects
+ 4399  vendor/phpunit/phpunit/phpunit
+ 4400  pf a_user_can_view_their_project
+ 4401  vendor/phpunit/phpunit/phpunit
+ 4402  pf a_user_can_view_their_project
+ 4403  vendor/phpunit/phpunit/phpunit
+ 4404  artisan migrate
+ 4405  pf a_task_can_be_updated
+ 4406  pwd
+ 4407  pf a_task_can_be_updated
+ 4408  artisan migrate:rollback
+ 4409  artisan migrate
+ 4410  pf a_task_can_be_updated
+ 4411  pf only_the_owner_of_a_project_may_update_a_task
+ 4412  artisan make:test --unit TaskTest
+ 4413  pf it_has_a_path
+ 4414  pf it_belongs_to_a_project
+ 4415  pf it_has_a_path
+ 4416  pf ProjectTasksTest
+ 4417  vendor/bin/phpunit
+ 4418  pf a_user_can_create_a_project
+ 4419  vendor/bin/phpunit
+ 4420  gaa && gc "big update. added tasks and project and task tests with unit testing and features testing with additional styling css utilities" && gp
+ 4421  gaa && gc "Touches was added to tasks to make sure when a task is updated the related project will get updated as well" && gp
+ 4422  gaa && gc "Added sorting to projects displayed" && gp
+ 4423  gaa && gc "Added sorting the project's task displayed in descending order" && gp
+ 4424  alias
+ 4425  p='vendor/bin/phpunit'
+ 4426  p
+ 4427  alis p='vendor/bin/phpunit'
+ 4428  alias p='vendor/bin/phpunit'
+ 4429  p
+ 4430  pf a_user_can_update_a_project
+ 4431  artisan make:migration add_notes_projects_table
+ 4432  artisan migrate
+ 4433  pf a_user_can_update_a_project
+ 4434  gaa && gc "Added project notes and projects notes test update" && gp
+ 4435  p
+ 4436  tail -f storage/logs/laravel.log
+ 4437  ll
+ 4438  cd storage
+ 4439  ll
+ 4440  cd logs
+ 4441  ll
+ 4442  cd ..
+ 4443  tail -f storage/logs/laravel-2019-11-18.log
+ 4444  p
+ 4445  pf a_authenticated_user_cannot_update_the_projects_of_others
+ 4446  artisan make:policy ProjectsPolicy
+ 4447  pf a_authenticated_user_cannot_update_the_projects_of_others
+ 4448  p
+ 4449  artisan make:policy ProjectTaskPolicy
+ 4450  p
+ 4451  pf a_task_can_be_updated
+ 4452  pf only_the_owner_of_a_project_may_update_a_task
+ 4453  pf a_project_can_have_tasks
+ 4454  pf a_task_requires_a_body
+ 4455  pf a_user_can_update_a_project
+ 4456  pf a_project_belongs_to_an_owner
+ 4457  pf a_user_can_view_their_project
+ 4458  pf a_authenticated_user_cannot_update_the_projects_of_others
+ 4459  gaa && gc "refactored tests and created a dedicated factory arrangment class with Laravel's special Facade trick" && gp
+ 4460  ping google.com
+ 4461  cd ..
+ 4462  cd laracasts-downloader-master
+ 4463  ll
+ 4464  cat README.md
+ 4465  php start.php --series-name "Build A Laravel App With TDD" --series-name "build-a-laravel-app-with-tdd"
+ 4466  cat README.md
+ 4467  php start.php --series-name "Build A Laravel App With TDD" --series-name "build-a-laravel-app-with-tdd"
+ 4468  ll
+ 4469  composer install
+ 4470  cd Downloads
+ 4471  ll
+ 4472  cd series
+ 4473  ll
+ 4474  cd build-a-laravel-app-with-tdd
+ 4475  ll
+ 4476  cd ..
+ 4477  ll
+ 4478  cd ..
+ 4479  ll
+ 4480  cd ..
+ 4481  sudo php start.php --series-name "Build A Laravel App With TDD" --series-name "build-a-laravel-app-with-tdd"
+ 4482  php start
+ 4483  php start.php
+ 4484  pf a_user_can_update_a_project
+ 4485  history | grep alias
+ 4486  alias pf="vendor/bin/phpunit --filter"
+ 4487  p='vendor/bin/phpunit'
+ 4488  pf a_user_can_update_a_project
+ 4489  pf guests_cannot_manage_projects
+ 4490  pf a_user_can_update_a_project
+ 4491  p
+ 4492  pf a_user_can_update_a_project
+ 4493  alias
+ 4494  p='vendor/bin/phpunit'
+ 4495  p
+ 4496  alias p='vendor/bin/phpunit'
+ 4497  p
+ 4498  gaa && gc "Refactored forms and added form component and validation with errors" && gp
+ 4499  p
+ 4500  gaa && gc "Added sometimes validation and extracted common validation to a method" && gp
+ 4501  artisan make:request UpdateProjectRequest
+ 4502  p
+ 4503  pf a_user_can_create_a_project
+ 4504  p
+ 4505  pf a_project_requires_a_description
+ 4506  p
+ 4507  pf an_authenticated_user_cannot_update_the_projects_of_others
+ 4508  p
+ 4509  gaa && gc "Fixed authorization errors and changed checks from codes to sessionErrors" && gp
+ 4510  artisan make:test ActivityFeedTest
+ 4511  pf creating_a_project_generates_activity
+ 4512  artisan make:model ActivityFeed -m
+ 4513  pf creating_a_project_generates_activity
+ 4514  artisan make:model Activity -m
+ 4515  pf creating_a_project_generates_activity
+ 4516  artisan migrate
+ 4517  pf creating_a_project_generates_activity
+ 4518  artisan migrate
+ 4519  artisan migrate:rollback
+ 4520  artisan migrate
+ 4521  pf creating_a_project_generates_activity
+ 4522  pf updating_a_project_generates_activity
+ 4523  gaa && gc "Added basic activity feed for creating and updating projects and project tasks" && gp
+ 4524  artian make:observer ProjectObserver
+ 4525  artisan make:observer ProjectObserver, TasksObserver
+ 4526  artisan make:observer ProjectObserver
+ 4527  artisan make:observer TaskObserver
+ 4528  pf updating_a_project_generates_activity
+ 4529  p
+ 4530  gaa && gc "Added basic activity feed by creating Project and Task Observers for creating and updating projects and project tasks" && gp
+ 4531  pf updating_a_task_records_activity
+ 4532  pf creating_a_task_records_project_activity
+ 4533  pf updating_a_task_records_project_activity
+ 4534  pf completing_a_task_records_project_activity
+ 4535  gaa && gc "Added test for tesing if task being created or updated if the activity has been recorded" && gp
+ 4536  p
+ 4537  pf it_can_be_completed
+ 4538  p
+ 4539  gaa && gc "Added if task can be completed" && gp
+ 4540  p
+ 4541  gaa && gc "Update task complete" && gp
+ 4542  pf a_task_can_be_completed
+ 4543  pf a_task_can_be_marked_as_incomplete
+ 4544  pf it_can_be_marked_as_incomplete
+ 4545  pf incompleting_a_task
+ 4546  artisan tinker
+ 4547  pf incompleting_a_task
+ 4548  artisan tinker
+ 4549  artisan migrate:fresh
+ 4550  artisan tinker
+ 4551  artisan migrate:fresh
+ 4552  artisan tinker
+ 4553  artisan migrate:fresh
+ 4554  artisan tinker
+ 4555  p
+ 4556  gaa && gc "Updated the way activities are recorded" && gp
+ 4557  p
+ 4558  artisan migrate:rollback
+ 4559  artisan migrate
+ 4560  cd ..
+ 4561  ll
+ 4562  cd ..
+ 4563  ll
+ 4564  cd agentquoter-app-v2
+ 4565  ll
+ 4566  scp -r app root@149.28.231.194:/tmp/app/
+ 4567  scp -r app root@149.28.231.194:/tmp/public
+ 4568  scp -r public root@149.28.231.194:/tmp/public
+ 4569  ll
+ 4570  cd public
+ 4571  ll
+ 4572  rm -rf wordpress-5.2.3.zip
+ 4573  rm -rf deploy
+ 4574  ssh root@149.28.231.194:/tmp
+ 4575  ssh root@149.28.231.194
+ 4576  cd ..
+ 4577  cd public
+ 4578  ll
+ 4579  rm -rf bla
+ 4580  rm -rf phpMyAdmin
+ 4581  rm -rf storage
+ 4582  pwd
+ 4583  ll
+ 4584  cd ..
+ 4585  ll
+ 4586  scp -r public root@149.28.231.194:/tmp/public
+ 4587  gaa && gc "New activity changes includeing changes in model if the project was updated" && gp
+ 4588  gaa && gc "Updated activity changes by checking if the model was changed" && gp
+ 4589  gaa && gc "Added back the activity monitoring to RecordsActivityTrait for Project and Task" && gp
+ 4590  gaa && gc "Renamed RecordsActivityTrait to RecordsActivity and refactored it" && gp
+ 4591  gaa && gc "RecordsActivity refactoring" && gp
+ 4592  gaa && gc "Adding Missing PHPDOC Blocks" && gp
+ 4593  gaa && gc "Fixed bug with $this->getActivityDescription to $model->getActivityDescription" && gp
+ 4594  alias
+ 4595  ssh-keygen -t rsa -b 4096
+ 4596  cat /Users/niran/.ssh/id_rsa_forge.pub
+ 4597  ssh root@45.63.21.178
+ 4598  vi ~/.ssh/known_hosts
+ 4599  ssh root@45.63.21.178
+ 4600  cat ~/.ssh/id_rsa.pub
+ 4601  ssh root@45.63.21.178
+ 4602  ssh forge@45.76.11.130
+ 4603  cd ..
+ 4604  gaa && gc "Removed Unwanted files from github" && gp
+ 4605  cd vendor
+ 4606  cd dzineer
+ 4607  ll
+ 4608  cd custom-modules
+ 4609  ll
+ 4610  gaa && gc "update if need be" && gp
+ 4611  gaa && gc "update if need be" && gp --force
+ 4612  git push
+ 4613  git pull
+ 4614  ll
+ 4615  cd src
+ 4616  ll
+ 4617  vi CustomModules.php
+ 4618  vi CustomModule.php
+ 4619  vi CustomModules.php
+ 4620  cd ..
+ 4621  cd resources
+ 4622  ll
+ 4623  cd views
+ 4624  ll
+ 4625  cd custom_modules
+ 4626  ll
+ 4627  cd admin
+ 4628  ll
+ 4629  vi settings.blade.php
+ 4630  git push origin master -f
+ 4631  cd ..
+ 4632  pwd
+ 4633  git push origin master -f
+ 4634  ll
+ 4635  rm -rf .git
+ 4636  git init
+ 4637  git add -A
+ 4638  git remote add origin https://github.com/dzineer/custom-modules.git
+ 4639  git push -u origin master
+ 4640  git push
+ 4641  ll
+ 4642  rm -rf .git
+ 4643  ll
+ 4644  git init
+ 4645  git add -A
+ 4646  git status
+ 4647  git commit -m "first commit"
+ 4648  git remote add origin https://github.com/dzineer/custom-modules.git
+ 4649  git push -u origin master
+ 4650  ssh root@149.28.231.194
+ 4651  ssh forge@45.76.11.130
+ 4652  ping google.com
+ 4653  ssh forge@45.76.11.130
+ 4654  ssh root@app.agentquote.com
+ 4655  ssh root@149.28.231.194
+ 4656  cat ~/.ssh/id_rsa.pub
+ 4657  ssh root@149.28.231.194
+ 4658  ssh forge@45.76.11.130
+ 4659  scp ~/Downloads/life-support-icon.svg forge@45.76.11.130:/home/forge/aapp.staging.agentquote.com/public/images
+ 4660  scp ~/Downloads/life-support-icon.svg forge@45.76.11.130:/home/forge/app.staging.agentquote.com/public/images/
+ 4661  ssh forge@45.76.11.130
+ 4662  scp root@149.28.231.194:/var/www/hosts.tar.gz ../../agentquoter-app-v2
+ 4663  scp root@149.28.231.194
+ 4664  ssh root@149.28.231.194
+ 4665  ssh forge@45.76.11.130
+ 4666  cd ..
+ 4667  cd agentquoter-app-v2
+ 4668  pwd
+ 4669  scp /Users/niran/Downloads/life-support-icon.svg forge@45.76.11.130:/home/forge/app.staging.agentquote.com/public/images/
+ 4670  scp /Users/niran/code/agentquoter-app-v2/public/images/AQ_Logo forge@45.76.11.130:/home/forge/app.staging.agentquote.com/public/images/
+ 4671  scp /Users/niran/code/agentquoter-app-v2/public/images/AQ_Logo.png forge@45.76.11.130:/home/forge/app.staging.agentquote.com/public/images/
+ 4672  ssh forge@45.76.11.130
+ 4673  cd 
+ 4674  cd code
+ 4675  ll
+ 4676  cd sequel_pro
+ 4677  pod 'QueryKit'
+ 4678  pod try QueryKit
+ 4679  ll
+ 4680  cd sequelpro
+ 4681  ll
+ 4682  pod 'QueryKit'
+ 4683  brew install cocoapods --build-from-source
+ 4684  xcode-select --install
+ 4685  brew install cocoapods --build-from-source
+ 4686  ps aux
+ 4687  ps aux | grep homebrew
+ 4688  sudo kill -9 56498
+ 4689  ps aux | grep homebrew
+ 4690  brew install cocoapods --build-from-source
+ 4691  brew link --overwrite cocoapod
+ 4692  brew cleanup
+ 4693  rm '/usr/local/bin/pod'
+ 4694  brew link --overwrite cocoapods
+ 4695  brew install cocoapods --build-from-source
+ 4696  brew reinstall cocoapods
+ 4697  pod 'QueryKit'
+ 4698  pod QueryKit
+ 4699  pod install QueryKit
+ 4700  pod install
+ 4701  pod 'QueryKit'
+ 4702  pod search 'QueryKit'
+ 4703  pod 'QueryKit'
+ 4704  pod install 'QueryKit'
+ 4705  sudo gem install cocoapods
+ 4706  pod update
+ 4707  touch querykit.pod
+ 4708  vi querykit.pod
+ 4709  cp querykit.pod querykit.podfile
+ 4710  pod install
+ 4711  cp querykit.pod Podfile
+ 4712  pod install
+ 4713  sudo shutdown -r now
+ 4714  sudo gem update cocoapods
+ 4715  ssh forge@45.76.11.130
+ 4716  cd ~/Downloads
+ 4717  cd ..
+ 4718  cd Desktop
+ 4719  exit
+ 4720  ssh forge@45.76.11.130
+ 4721  history | grep alias
+ 4722  valet stop
+ 4723  pwd
+ 4724  code
+ 4725  cd agentquoter-app-v2
+ 4726  sudo php artisan serve --port 80
+ 4727  tail -f storage/logs/laravel.log
+ 4728  artisan route:clear
+ 4729  artisan config:clear
+ 4730  tail -f storage/logs/laravel.log
+ 4731  artisan config:clear
+ 4732  artisan route:clear
+ 4733  composer dump-autoload
+ 4734  tail -f storage/logs/laravel.log
+ 4735  yarn watch
+ 4736  tail -f storage/logs/laravel.log
+ 4737  ssh root@149.28.231.194
+ 4738  artisan tinker
+ 4739  tail -f storage/logs/laravel.log
+ 4740  cd ..
+ 4741  cd LaravelPackages
+ 4742  ll
+ 4743  mkdir examples
+ 4744  laravel new kaung
+ 4745  ll
+ 4746  cd kaung
+ 4747  ll
+ 4748  php artisan serve --port 80
+ 4749  sudo php artisan serve --port 80
+ 4750  git remote add origin git@github.com:dzineer/kuang-tutorial.git
+ 4751  gp
+ 4752  ssh forge@45.76.11.130
+ 4753  ssh forge@45.76.157.250
+ 4754  cat ~/.ssh/id_rsa.pub
+ 4755  ssh forge@45.76.157.250
+ 4756  cd ..
+ 4757  ssh forge@45.76.157.250
+ 4758  top
+ 4759  ps aux | grep dns
+ 4760  sudo vi /etc/hosts
+ 4761  vi /usr/local/etc/dnsmasq.conf
+ 4762  sudo Users/niran/.config/valet/dnsmasq.conf
+ 4763  sudo vi Users/niran/.config/valet/dnsmasq.conf
+ 4764  sudo vi /Users/niran/.config/valet/dnsmasq.conf
+ 4765  sudo brew services restart dnsmasq
+ 4766  dig joe.dev @127.0.0.1
+ 4767  ping app.staging.agentquoter.dev
+ 4768  sudo vi /Users/niran/.config/valet/dnsmasq.conf
+ 4769  valet stop
+ 4770  dzserv stop
+ 4771  valet --help
+ 4772  valet
+ 4773  tail -f /Applications/MAMP/logs/apache_error.log 
+ 4774  cd /Applications/MAMP/logs/
+ 4775  ll
+ 4776  tail -f apache_error.log
+ 4777  scutil --dns
+ 4778  cd /etc/resolver
+ 4779  ll
+ 4780  cat dev
+ 4781  scutil --dns
+ 4782  ping -c 1 app.staging.agentqute.dev
+ 4783  sudo vi /Applications/MAMP/conf/apache/httpd.conf
+ 4784  sudo vi /Applications/MAMP/htdocs/setdocroot.php
+ 4785  cd /Applications/MAMP/Library/OpenSSL/
+ 4786  ll
+ 4787  cp certs -r cert.pem /Users/niran/code/security/
+ 4788  cp certs -R cert.pem /Users/niran/code/security/
+ 4789  cp certs -r /Users/niran/code/security/
+ 4790  cp -r certs /Users/niran/code/security/
+ 4791  cp cert.pem /Users/niran/code/security/
+ 4792  cd /Users/niran/code/security
+ 4793  ll
+ 4794  sudo vi /Applications/MAMP/conf/apache/httpd.conf
+ 4795  which openssl
+ 4796  openssl genrsa -des3 -passout pass:x -out server.pass.key 2048
+ 4797  ll
+ 4798  openssl rsa -passin pass:x -in server.pass.key -out server.key
+ 4799  ll
+ 4800  openssl req -new -key app.staging.agentquote.dev_private.key -out app.staging.agentquote.dev.csr
+ 4801  openssl req -new -key server.key -out app.staging.agentquote.dev.csr
+ 4802  ll
+ 4803  openssl req -new -key server.key -out server.csr
+ 4804  ll
+ 4805  cd certs
+ 4806  mkdir certs
+ 4807  cd certs
+ 4808  ll
+ 4809  openssl rsa -passin pass:x -in app.staging.agentquote.dev.pass.key -out app.staging.agentquote.dev.key
+ 4810  openssl genrsa -des3 -passout pass:x -out app.staging.agentquote.de.pass.key 2048
+ 4811  openssl rsa -passin pass:x -in app.staging.agentquote.dev.pass.key -out app.staging.agentquote.dev.key
+ 4812  ll
+ 4813  rm * -rf
+ 4814  ll
+ 4815  openssl genrsa -des3 -passout pass:x -out app.staging.agentquote.dev.pass.key 2048
+ 4816  rm *.rf
+ 4817  rm -rf *
+ 4818  ll
+ 4819  mkdir app.staging.agentquote.dev
+ 4820  cd app.staging.agentquote.dev
+ 4821  ll
+ 4822  openssl genrsa -des3 -passout pass:x -out app.staging.agentquote.dev.pass.key 2048
+ 4823  openssl rsa -passin pass:x -in app.staging.agentquote.dev.pass.key -out app.staging.agentquote.dev_private.key
+ 4824  ll
+ 4825  openssl req -new -key app.staging.agentquote.dev_private.key -out app.staging.agentquote.dev.csr
+ 4826  ll
+ 4827  openssl x509 -req -sha256 -days 1024 -in app.staging.agentquote.dev.csr -signkey app.staging.agentquote.dev_private.key -out app.staging.agentquote.dev.crt
+ 4828  ll
+ 4829  history | grep openssl > make_self_sign_cert.txt
+ 4830  vi make_self_sign_cert.txt
+ 4831  ll
+ 4832  cp make_self_sign_cert.txt ..
+ 4833  cd ..
+ 4834  ll
+ 4835  chmod uao-w make_self_sign_cert.txt
+ 4836  ll
+ 4837  rm -rf make_self_sign_cert.txt
+ 4838  ll
+ 4839  cp app.staging.agentquote.dev/make_self_sign_cert.txt .
+ 4840  ll
+ 4841  cat make_self_sign_cert.txt
+ 4842  sudo vi /Applications/MAMP/conf/apache/httpd.conf
+ 4843  mkdir /Users/niran/code/agentquoter-app-v2/public/logs
+ 4844  sudo vi /Applications/MAMP/conf/apache/httpd.conf
+ 4845  cd ..
+ 4846  ll
+ 4847  cd ..
+ 4848  cd agentquoter-app-v2/public
+ 4849  ll
+ 4850  cd logs
+ 4851  ll
+ 4852  sudo vi /Applications/MAMP/conf/apache/httpd.conf
+ 4853  ps auxl
+ 4854  ps auxl | grep apache
+ 4855  ps auxl | less
+ 4856  ps auxc | less
+ 4857  ps auxc | grep apache
+ 4858  ps auxc | grep http
+ 4859  ps auxclw | grep http
+ 4860  ps auxclw | grep http > http.text
+ 4861  vi http.text
+ 4862  ps w | grep http
+ 4863  ps wa | grep http
+ 4864  ps wau | grep http
+ 4865  ps waux | grep http
+ 4866  ps waux | grep http > http.text
+ 4867  vi http.text
+ 4868  touch /Users/niran/code/Security/certs/all.conf
+ 4869  mkdir /Users/niran/code/hosts
+ 4870  touh /Users/niran/code/hosts/all.conf
+ 4871  touch /Users/niran/code/hosts/all.conf
+ 4872  ci /Users/niran/code/hosts/all.conf
+ 4873  vi /Users/niran/code/hosts/all.conf
+ 4874  vi /Users/niran/code/Hosts/app.staging.agentquote.dev-ssl.conf
+ 4875  ll
+ 4876  cd /Users/niran/code/hosts
+ 4877  ll
+ 4878  cat all.conf
+ 4879  vi all
+ 4880  vi all.conf
+ 4881  code
+ 4882  cd app-agentquote-store
+ 4883  ll
+ 4884  cd public
+ 4885  ll
+ 4886  pwd
+ 4887  cd ..
+ 4888  cd agentquoter-app-v2
+ 4889  cd public
+ 4890  ll
+ 4891  cd logs
+ 4892  ll
+ 4893  cat http.text
+ 4894  /Applications/MAMP/Library/bin/httpd -f /Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf -t
+ 4895  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t
+ 4896  /Applications/MAMP/Library/bin/httpd -t -D DUMP_VHOSTS
+ 4897  /Applications/MAMP/Library/bin/httpd -D DUMP_VHOSTS
+ 4898  vi /Applications/MAMP/conf/apache/httpd.conf
+ 4899  /Applications/MAMP/Library/bin/httpd -D DUMP_VHOSTS
+ 4900  vi /Applications/MAMP/conf/apache/httpd.conf
+ 4901  /Applications/MAMP/Library/bin/httpd -D DUMP_VHOSTS
+ 4902  vi /Applications/MAMP/conf/apache/httpd.conf
+ 4903  /Applications/MAMP/Library/bin/httpd -D DUMP_VHOSTS
+ 4904  vi /Applications/MAMP/conf/apache/httpd.conf
+ 4905  /Applications/MAMP/Library/bin/httpd -D DUMP_VHOSTS
+ 4906  vi /Applications/MAMP/conf/apache/httpd.conf
+ 4907  /Applications/MAMP/Library/bin/httpd -D DUMP_VHOSTS
+ 4908  /Applications/MAMP/Library/bin/httpd --help
+ 4909  /Applications/MAMP/Library/bin/httpd -D DUMP_VHOSTS
+ 4910  /Applications/MAMP/Library/bin/httpd -D DUMP_VHOSTS -yy
+ 4911  /Applications/MAMP/Library/bin/httpd -t -D DUMP_VHOSTS
+ 4912  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t -D DUMP_VHOSTS
+ 4913  /Applications/MAMP/Library/bin/httpd -S
+ 4914  vi /Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf
+ 4915  vi /Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf"
+ 4916  vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf"
+ 4917  vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf"
+ 4918  sudo "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf"
+ 4919  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf"
+ 4920  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t
+ 4921  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf" -t
+ 4922  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf"
+ 4923  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf" -t
+ 4924  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf"
+ 4925  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf" -t
+ 4926  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf"
+ 4927  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf" -t
+ 4928  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf"
+ 4929  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf" -t
+ 4930  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf"
+ 4931  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf" -t
+ 4932  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t
+ 4933  sudo vi /Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf
+ 4934  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf"
+ 4935  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t
+ 4936  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf"
+ 4937  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t
+ 4938  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf"
+ 4939  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t
+ 4940  ll /Users/niran/certs/app.staging.agentquote.dev
+ 4941  ll /Users/niran/security/certs/app.staging.agentquote.dev
+ 4942  ll /Users/niran/code/security/certs/app.staging.agentquote.dev
+ 4943  vi /Users/niran/code/hosts/app.staging.agentquote.dev-ssl.conf
+ 4944  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t
+ 4945  vi /Users/niran/code/hosts/app.staging.agentquote.dev-ssl.conf
+ 4946  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t
+ 4947  cat "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf"
+ 4948  cat "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" > /Users/niran/code/hosts/mamp-httpd.conf
+ 4949  cat "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf"
+ 4950  sudo vi "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf"
+ 4951  /Applications/MAMP/Library/bin/httpd -f "/Library/Application Support/appsolute/MAMP PRO/conf/httpd.conf" -t
+ 4952  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -t
+ 4953  ps waux | grep http
+ 4954  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf"  -k start
+ 4955  ps waux | grep http
+ 4956  sudo shutdown -r now
+ 4957  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf"  -k start
+ 4958  ps waux | grep http
+ 4959  ll  /Users/niran/code/security/app.staging.agentquote.dev/*
+ 4960  sudo vi /etc/ssl/openssl.cnf
+ 4961  code
+ 4962  cd security
+ 4963  ll
+ 4964  cd certs
+ 4965  ll
+ 4966  cd app.staging.agentquote.dev
+ 4967  ll
+ 4968  rm -rf *
+ 4969  ll
+ 4970  openssl genrsa -des3 -passout pass:x -out app.staging.agentquote.dev.pass.key 2048\n
+ 4971  openssl rsa -passin pass:x -in app.staging.agentquote.dev.pass.key -out app.staging.agentquote.dev_private.key\n
+ 4972  openssl req -new -key app.staging.agentquote.dev_private.key -out app.staging.agentquote.dev.csr\n
+ 4973  ll
+ 4974  openssl x509 -req -sha256 -days 1024 -in app.staging.agentquote.dev.csr -signkey app.staging.agentquote.dev_private.key -out app.staging.agentquote.dev.crt\n
+ 4975  ll
+ 4976  /Applications/MAMP/Library/bin/httpd -oo
+ 4977  sudo killall httpd
+ 4978  ps auxw
+ 4979  ps auxw | grep http
+ 4980  ps auxw | grep httpd
+ 4981  ps auxc | grep httpd
+ 4982  ps auxc | grep http
+ 4983  ps auxl | grep http
+ 4984  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -k start
+ 4985  sudo killall chrome
+ 4986  openssl
+ 4987  openssl --help
+ 4988  openssl -config
+ 4989  openssl -c
+ 4990  ll
+ 4991  rm -rf *.crt
+ 4992  ll
+ 4993  openssl x509 -req -sha256 -days 1024 -in app.staging.agentquote.dev.csr -signkey app.staging.agentquote.dev_private.key -out app.staging.agentquote.dev.crt -config /etc/ssl/openssl.cnf\n
+ 4994  openssl x509 -req -sha256 -days 1024 -in app.staging.agentquote.dev.csr -signkey app.staging.agentquote.dev_private.key -out app.staging.agentquote.dev.crt --config /etc/ssl/openssl.cnf\n
+ 4995  openssl -config /etc/ssl/openssl.cnf x509 -req -sha256 -days 1024 -in app.staging.agentquote.dev.csr -signkey app.staging.agentquote.dev_private.key -out app.staging.agentquote.dev.crt
+ 4996  ll
+ 4997  rm -rf *.csr
+ 4998  ll
+ 4999  openssl req -new -key app.staging.agentquote.dev_private.key -config /etc/ssl/openssl.cnf -out app.staging.agentquote.dev.csr\n
+ 5000  openssl x509 -req -sha256 -days 1024 -in app.staging.agentquote.dev.csr -signkey app.staging.agentquote.dev_private.key -out app.staging.agentquote.dev.crt\n
+ 5001  openssl req \\n    -newkey rsa:2048 \\n    -x509 \\n    -nodes \\n    -keyout app.staging.agentquote.dev_private.key \\n    -new \\n    -out app.staging.agentquote.dev.crt \\n    -subj /CN=app.staging.agentquote.div \\n    -reqexts SAN \\n    -extensions SAN \\n    -config <(cat /etc/ssl/openssl.cnf \\n        <(printf '[SAN]\nsubjectAltName=DNS:app.staging.agentquote.dev')) \\n    -sha256 \\n    -days 3650
+ 5002  ll
+ 5003  mkdir hold
+ 5004  mv * hold
+ 5005  ll
+ 5006  openssl req \\n    -newkey rsa:2048 \\n    -x509 \\n    -nodes \\n    -keyout app.staging.agentquote.dev_private.key \\n    -new \\n    -out app.staging.agentquote.dev.crt \\n    -subj /CN=app.staging.agentquote.div \\n    -reqexts SAN \\n    -extensions SAN \\n    -config <(cat /etc/ssl/openssl.cnf \\n        <(printf '[SAN]\nsubjectAltName=DNS:app.staging.agentquote.dev')) \\n    -sha256 \\n    -days 3650
+ 5007  ll
+ 5008  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -k start
+ 5009  ll
+ 5010  rm * -rf
+ 5011  ll
+ 5012  rm -rf hold
+ 5013  ll
+ 5014  openssl req \\n    -newkey rsa:2048 \\n    -x509 \\n    -nodes \\n    -keyout app.staging.agentquote.dev_private.key \\n    -new \\n    -out app.staging.agentquote.dev.crt \\n    -subj /CN=app.staging.agentquote.dev \\n    -reqexts SAN \\n    -extensions SAN \\n    -config <(cat /etc/ssl/openssl.cnf \\n        <(printf '[SAN]\nsubjectAltName=DNS:app.staging.agentquote.dev')) \\n    -sha256 \\n    -days 3650
+ 5015  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -k start
+ 5016  code 
+ 5017  cd hosts
+ 5018  ll
+ 5019  cat app.staging.agentquote.dev-ssl.conf
+ 5020  tail -f /Users/niran/code/agentquoter-app-v2/public/logs/apache_ssl_error.log
+ 5021  cd /Users/niran/code/agentquoter-app-v2/public/logs/
+ 5022  ll
+ 5023  tail 0f apache_ssl_access.log
+ 5024  tail -f apache_ssl_access.log
+ 5025  cd ..
+ 5026  ll
+ 5027  cd ..
+ 5028  ll
+ 5029  cd ..
+ 5030  cd hosts
+ 5031  ll
+ 5032  cat app.staging.agentquote.dev-ssl.conf
+ 5033  ll /Users/niran/code/agentquoter-app-v2/public
+ 5034  ll
+ 5035  vi app.staging.agentquote.dev-ssl.conf
+ 5036  vi mamp-httpd.conf
+ 5037  cp /Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf .
+ 5038  cp "/Library/Application Support/appsolute/MAMP PRO/conf/httpd-ssl.conf" .
+ 5039  ll
+ 5040  vi mamp-httpd.conf
+ 5041  pwd
+ 5042  vi mamp-httpd.conf
+ 5043  vi httpd-ssl.conf
+ 5044  sudo killall httpd
+ 5045  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -k start
+ 5046  httpd -S
+ 5047  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/httpd-ssl.conf" -t start
+ 5048  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/httpd-ssl.conf" -t
+ 5049  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -t
+ 5050  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -t -D DUMP_VHOSTS
+ 5051  ll
+ 5052  cp app.staging.agentquote.dev-ssl.conf app.staging.agentquote.dev.conf
+ 5053  ll
+ 5054  vi app.staging.agentquote.dev.conf
+ 5055  vi all.conf
+ 5056  sudo killall httpd
+ 5057  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -k start
+ 5058  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -t -D DUMP_VHOSTS
+ 5059  vi app.staging.agentquote.dev.conf
+ 5060  vi app.staging.agentquote.dev-ssl.conf
+ 5061  sudo killall httpd
+ 5062  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -k start
+ 5063  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -t -D DUMP_VHOSTS
+ 5064  vi app.staging.agentquote.dev-ssl.conf
+ 5065  ll /Users/niran/code/agentquoter-app-v2/public
+ 5066  vi app.staging.agentquote.dev-ssl.conf
+ 5067  vi app.staging.agentquote.dev.conf
+ 5068  vi app.staging.agentquote.dev-ssl.conf
+ 5069  sudo killall httpd
+ 5070  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -t -D DUMP_VHOSTS
+ 5071  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -k start
+ 5072  lynx https://app.staging.agentquote.dev
+ 5073  lyunx
+ 5074  curl <IfModule mod_rewrite.c>\n    RewriteEngine on\n\n    RewriteRule ^(.*)$ index.php [QSA,L]\n</IfModule>curl https://app.staging.agentquote.dev
+ 5075  curl https://app.staging.agentquote.dev
+ 5076  curl -v -s -o - -X OPTIONS https://app.staging.agentquote.dev
+ 5077  ll
+ 5078  vi app.staging.agentquote.dev-ssl.conf
+ 5079  vi app.staging.agentquote.dev.conf
+ 5080  vi app.staging.agentquote.dev-ssl.conf
+ 5081  sudo killall httpd
+ 5082  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -k start
+ 5083  vi /Users/niran/code/hosts/app.staging.agentquote.dev.conf
+ 5084  vi /Users/niran/code/hosts/app.staging.agentquote.dev-ssl.conf
+ 5085  /Applications/MAMP/Library/bin/httpd -f "/Users/niran/code/hosts/mamp-httpd.conf" -k start
+ 5086  curl -v -s -o - -X OPTIONS https://app.staging.agentquote.dev
+ 5087  sudo killall httpd
+ 5088  code
+ 5089  cd agentquoter-app-v2/
+ 5090  art
+ 5091  source ~/.bashrc
+ 5092  sudo art serve --port 80
+ 5093  sudo php art serve --port 80
+ 5094  sudo php artisan serve --port 80
+ 5095  pwd
+ 5096  sudo php artisan serve --port 80
+ 5097  tail -f apache_error.log
+ 5098  tail -f storage/logs/laravel
+ 5099  tail -f storage/logs/laravel.log
+ 5100  ssh forge@45.76.11.130
+ 5101  gaa && gc "added back removed profile_title" && gp --force
+ 5102  gaa && gc "removed config/* from repo" && gp --force
+ 5103  myip
+ 5104  source ~/.bashrc
+ 5105  myip
+ 5106  ssh root@74.208.243.93
+ 5107  gaa && gc "Added Branding Header" && gp
+ 5108  gaa && gc "Update user profile to support logo and portrait" && gp
+ 5109  gaa && gc "Fixed Company/Logo/Portrait Branding" && gp
+ 5110  gaa && gc "Fixed resolve URL with sass files" && gp
+ 5111  gaa && gc "Fixed landing page footer branding" && gp
+ 5112  ssh root@74.208.243.93
+ 5113  cd ..
+ 5114  cd dzbug
+ 5115  rm -rf .git
+ 5116  git init
+ 5117  gaa && gc "DZ Bug Initialization"
+ 5118  git remote add origin git@github.com:dzineer/dzbug.git
+ 5119  gp
+ 5120  l
+ 5121  tail -f storage/logs/laravel.log
+ 5122  ll
+ 5123  pwd
+ 5124  ssh forge@45.76.11.130
+ 5125  ssh forge@45.76.157.250
+ 5126  code
+ 5127  cd dzbug
+ 5128  gaa && gc "DZ Bug Project Routes and Views cleaned up"
+ 5129  gp
+ 5130  sudo php artisan serve --port 8080
+ 5131  ssh forge@45.76.157.250
+ 5132  yarn require tailwindcss --help
+ 5133  yarn 
+ 5134  yarn help
+ 5135  yarn add tailwindcss -D
+ 5136  tailwind init
+ 5137  ./node_modules/.bin/tailwind init
+ 5138  ./node_modules/.bin/tailwind init -f
+ 5139  mv tailwind.config.js tailwind.config.js.bak
+ 5140  ./node_modules/.bin/tailwind init -f
+ 5141  sudo shutdown -r now
+ 5142* cd ..
+ 5143* cd app-agentquote
+ 5144* ll
+ 5145* cd public
+ 5146* ll
+ 5147* ln -s /Users/niran/code/app-agentquote/storage/app/public storage
+ 5148* pwd
+ 5149* rm -rf storage
+ 5150* ln -s /Users/niran/code/app-agentquote/storage/app/public storage
+ 5151* ll
+ 5152* pwd
+ 5153* cd ..
+ 5154* tail -f storage/logs/laravel.log
+ 5155  to
+ 5156  top
+ 5157  ll
+ 5158  cd ..
+ 5159  cd app-agentquote
+ 5160  ll
+ 5161  cd logs
+ 5162  ll
+ 5163  sudo chown https larave.log
+ 5164  ll
+ 5165  sudo chown httpd larave.log
+ 5166  top
+ 5167  ps aux | grep http
+ 5168  ll
+ 5169  cd ..
+ 5170  sudo chown root storage
+ 5171  ll
+ 5172  cd storage
+ 5173  ll
+ 5174  sudo chown root storage/logs
+ 5175  sudo chown root logs
+ 5176  sudo chown root logs/*
+ 5177  ll
+ 5178  cd logs
+ 5179  ll
+ 5180  cd ..
+ 5181  tail -f logs/laravel.log
+ 5182  ll
+ 5183  cd logs
+ 5184  ll
+ 5185  cd ..
+ 5186  chmod a+xrw *
+ 5187  cd logs
+ 5188  chmod a+xrw *
+ 5189  sudo chmod a+xrw *
+ 5190  ll
+ 5191  tail -f logs/laravel.log
+ 5192  tail -f laravel.log
+ 5193  cd ..
+ 5194  sudo chmod -R 755 storage
+ 5195  tail -f storage/logs/laravel.log
+ 5196  ll
+ 5197  cd storage
+ 5198  logs
+ 5199  ll
+ 5200  rm *
+ 5201  ll
+ 5202  sudo rm -rf
+ 5203  y
+ 5204  ll
+ 5205  rm -rf *
+ 5206  ll
+ 5207  rm *
+ 5208  ll
+ 5209  whoami
+ 5210  sudo chown root *
+ 5211  ll
+ 5212  sudo rm -rf *
+ 5213  ll
+ 5214  ls -al
+ 5215  cd ..
+ 5216  ll
+ 5217  cd ..
+ 5218  sudo chmod -R 755 storage
+ 5219  ll
+ 5220  cd resources
+ 5221  cd ..
+ 5222  cd storage
+ 5223  ll
+ 5224  cd logs
+ 5225  ll
+ 5226  cd ..
+ 5227  ll
+ 5228  sudo chown niran.staff logs -R
+ 5229  sudo chown niran logs -R
+ 5230  sudo chown niran logs
+ 5231  ll
+ 5232  cd logs
+ 5233  ll
+ 5234  tail -f laravel.log
+ 5235  cd ..
+ 5236  sudo chown niran framework
+ 5237  sudo chown niran framework -r
+ 5238  sudo chown -R niran framework
+ 5239  cd ..
+ 5240  tail -f storage/logs/laravel.log
+ 5241  cat history.
+ 5242  cat history.all.txt
+ 5243  history

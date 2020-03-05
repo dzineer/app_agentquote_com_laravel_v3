@@ -1,0 +1,33 @@
+//
+// Progress bars
+// --------------------------------------------------
+
+// Outer container
+.progress {
+  overflow: hidden;
+  height: 22px;
+  margin-bottom: $line-height-computed;
+  background-color: $progress-bg;
+  border-radius: $progress-border-radius;
+  box-shadow: none;
+  border-radius: 3px;
+  line-height: 20px;
+
+  span{
+    font-size: 20px;
+  }
+}
+
+// Bar of progress
+.progress-bar {
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: $font-size-small;
+  line-height: 21px;
+  color: $progress-bar-color;
+  text-align: center;
+  background-color: $progress-bar-bg;
+  @include box-shadow(inset 0 -1px 0 rgba(0, 0, 0, .15));
+  @include transition(width .6s ease);
+}

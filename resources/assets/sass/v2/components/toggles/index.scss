@@ -1,0 +1,350 @@
+.fd3-cb-toggle div {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.fd3-cb-toggle > div {
+    margin: 1em 0;
+}
+
+.fd3-cb-toggle > div:first-of-type {
+    margin-top: 1em;
+}
+
+.toggles > div:last-of-type {
+    margin-bottom: 1em;
+}
+
+.fd3-cb-toggle {
+    border: 0.1em solid rgba(0, 0, 0, 0.15);
+    display: inline-block;
+}
+
+.fd3-cb-toggle [disabled] + label,
+.fd3-cb-toggle [disabled]:hover + label {
+    color: #999;
+}
+
+.fd3-cb-toggle [type="checkbox"] {
+    position: absolute;
+    top: auto;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+}
+
+.fd3-cb-toggle [type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding: 0.5em;
+    padding-left: 4em;
+    max-width: calc(100% - 2em);
+}
+/*
+
+.fd3-cb-toggle [type="checkbox"]:focus + label,
+.fd3-cb-toggle [type="checkbox"]:hover + label {
+    color: #00f;
+}
+*/
+
+/*
+.toggles [type="checkbox"]:focus + label::before,
+.toggles [type="checkbox"]:hover + label::before {
+    -webkit-box-shadow: 0 0 0.5em #333;
+    box-shadow: 0 0 0.5em #333;
+}
+*/
+
+/*.fd3-cb-toggle [type="checkbox"]:focus + label::after,
+.fd3-cb-toggle [type="checkbox"]:hover + label::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='50' fill='rgba(0,0,0,.25)'/%3E%3C/svg%3E");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}*/
+
+.fd3-cb-toggle [type="checkbox"] + label::before,
+.fd3-cb-toggle [type="checkbox"] + label::after {
+    content: "";
+    position: absolute;
+    height: 2.5em;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.55s ease;
+}
+
+.fd3-cb-toggle [type="checkbox"] + label::before {
+    left: 0;
+    top: 0.3em;
+    width: 4.5em;
+    border: 0.2em solid #767676;
+    background: #767676;
+    border-radius: 1.2em;
+}
+
+.fd3-cb-toggle [type="checkbox"] + label::after {
+    left: 0;
+    top: 0.25em;
+    background-color: #fff;
+    background-position: center center;
+    border-radius: 50%;
+    width: 2.5em;
+    border: 0.15em solid #767676;
+}
+
+.fd3-cb-toggle [type="checkbox"]:checked + label::after {
+    left: 2.0em;
+    top: 0.30em;
+    border-color: #3c8dbc;
+    color: #3c8dbc;
+}
+
+.fd3-cb-toggle [type="checkbox"]:indeterminate + label::after {
+    left: 0.8em;
+}
+
+.fd3-cb-toggle [type="checkbox"]:indeterminate + label::before {
+    background-color: #ddd;
+}
+
+.fd3-cb-toggle [type="checkbox"]:checked + label::before {
+    background-color: #3c8dbc;
+    border-color: #3c8dbc;
+}
+
+.fd3-cb-toggle [type="checkbox"][disabled] + label::before {
+    background-color: transparent;
+    border-color: #ddd;
+}
+
+.fd3-cb-toggle [type="checkbox"][disabled] + label::after {
+    border-color: #ddd;
+}
+
+/*
+.fd3-cb-toggle [disabled]:hover + label {
+    color: #999;
+    !* case for CSS custom property if not supporting IE/Edge *!
+}
+*/
+
+.fd3-cb-toggle [type="checkbox"][disabled]:hover + label::before {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.fd3-cb-toggle [type="checkbox"][disabled]:hover + label::after {
+    background-image: none;
+}
+
+/* Put toggles on the right like the iOS the kids like */
+
+.fd3-cb-toggle.flip [type="checkbox"] + label::before,
+.fd3-cb-toggle.flip [type="checkbox"] + label::after {
+    left: auto;
+    right: 0;
+}
+
+.fd3-cb-toggle.flip [type="checkbox"] + label::after {
+    left: auto;
+    right: 1.6em;
+}
+
+.fd3-cb-toggle.flip [type="checkbox"]:checked + label::after {
+    right: 0;
+}
+
+.fd3-cb-toggle.flip [type="checkbox"]:indeterminate + label::after {
+    right: 0.8em;
+}
+
+.fd3-cb-toggle.flip [type="checkbox"] + label {
+    padding-left: 0;
+    padding-right: 4em;
+}
+
+/* Windows High Contrast Mode Support */
+
+@media screen and (-ms-high-contrast: active) {
+    .fd3-cb-toggle [type="checkbox"]:focus + label::before
+    /*.fd3-cb-toggle [type="checkbox"]:hover + label::before*/ {
+        outline: 1px dotted windowText;
+        outline-offset: 0.25em;
+    }
+
+    .fd3-cb-toggle [type="checkbox"] + label::after {
+        background-color: windowText;
+    }
+
+    .fd3-cb-toggle [type="checkbox"][disabled] + label::after {
+        background-color: transparent;
+    }
+}
+
+/* Reduced motion */
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .fd3-cb-toggle [type="checkbox"] + label::before,
+    .fd3-cb-toggle [type="checkbox"] + label::after {
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+
+/* Dark mode */
+
+@media screen and (prefers-color-scheme: dark) {
+    .fd3-cb-toggle {
+        color: #fff;
+    }
+
+    .fd3-cb-toggle {
+        border: 0.1em solid rgba(255, 255, 255, 0.15);
+    }
+
+    .fd3-cb-toggle [type="checkbox"]:focus + label,
+    .fd3-cb-toggle [type="checkbox"]:hover + label {
+        color: #383838;
+    }
+
+    .fd3-cb-toggle [type="checkbox"] + label::before {
+        border-color: #808080;
+        background: #808080;
+    }
+
+    .fd3-cb-toggle [type="checkbox"] + label::after {
+        background-color: #ffffff;
+    }
+
+    .fd3-cb-toggle [type="checkbox"]:not([disabled]):indeterminate + label::before {
+        background-color: #444;
+    }
+
+    .fd3-cb-toggle [type="checkbox"]:focus + label::after,
+    .fd3-cb-toggle [type="checkbox"]:hover + label::after {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='50' fill='rgba(255,255,255,.25)'/%3E%3C/svg%3E");
+    }
+
+    .fd3-cb-toggle [type="checkbox"][disabled] + label::before,
+    .fd3-cb-toggle [type="checkbox"][disabled] + label::after {
+        border-color: #555;
+    }
+}
+
+/* RTL */
+
+/* https://twitter.com/dror3go/status/1102946375396982784 */
+
+*[dir="rtl"] .fd3-cb-toggle [type="checkbox"] + label {
+    padding-left: 0;
+    padding-right: 4em;
+}
+
+*[dir="rtl"] .fd3-cb-toggle [type="checkbox"] + label::before,
+*[dir="rtl"] .fd3-cb-toggle [type="checkbox"] + label::after {
+    left: auto;
+    right: 0;
+}
+
+*[dir="rtl"] .fd3-cb-toggle [type="checkbox"] + label::after {
+    right: 0;
+}
+
+*[dir="rtl"] .toggles [type="checkbox"]:checked + label::after {
+    right: 1.6em;
+}
+
+*[dir="rtl"] .fd3-cb-toggle [type="checkbox"]:indeterminate + label::after {
+    right: 0.8em;
+}
+
+/* Put toggles on the right like the iOS the kids like */
+
+*[dir="rtl"] .fd3-cb-toggle.flip [type="checkbox"] + label::before,
+*[dir="rtl"] .fd3-cb-toggle.flip [type="checkbox"] + label::after {
+    left: 0;
+    right: auto;
+}
+
+*[dir="rtl"] .fd3-cb-toggle.flip [type="checkbox"] + label::after {
+    right: auto;
+    left: 1.6em;
+}
+
+*[dir="rtl"] .fd3-cb-toggle.flip [type="checkbox"]:checked + label::after {
+    left: 0;
+}
+
+*[dir="rtl"] .fd3-cb-toggle.flip [type="checkbox"]:indeterminate + label::after {
+    left: 0.8em;
+}
+
+*[dir="rtl"] .toggles.flip [type="checkbox"] + label {
+    padding-right: 0;
+    padding-left: 4em;
+}
+
+/* Print styles */
+
+@media print {
+    .fd3-cb-toggle [type="checkbox"] + label::before,
+    .fd3-cb-toggle [type="checkbox"] + label::after,
+    .fd3-cb-toggle [type="checkbox"][disabled] + label {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}
+
+.fd3-cb-toggle [type="checkbox"] + label::after {
+    background-color: #fff;
+}
+
+.switch-field {
+    display: flex;
+    margin-bottom: 36px;
+    overflow: hidden;
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-field label {
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 16px;
+    margin-right: -1px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+    cursor: pointer;
+}
+
+.switch-field input:checked + label {
+    background-color: #a5dc86;
+    box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+

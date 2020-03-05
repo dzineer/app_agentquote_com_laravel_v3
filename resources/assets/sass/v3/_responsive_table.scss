@@ -1,0 +1,108 @@
+.no_fd3-table-responsive table tbody tr td.line-checkbox {
+  text-align: center;
+}
+
+@media all and (max-width: 1024px)
+{
+
+  .no_fd3-table-responsive table,
+  .no_fd3-table-responsive table thead,
+  .no_fd3-table-responsive table thead tr,
+  .no_fd3-table-responsive table thead tr th,
+  .no_fd3-table-responsive table,
+  .no_fd3-table-responsive table tbody,
+  .no_fd3-table-responsive table tbody tr,
+  .no_fd3-table-responsive table tbody tr td
+  {
+    display: block !important;
+  }
+
+  .no_fd3-table-responsive table > tbody > tr > td,.no_fd3-table-responsive table > tfoot > tr > td {
+    border: none;
+  }
+
+  .no_fd3-table-responsive table thead tr
+  {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+  .no_fd3-table-responsive table tbody tr td {
+    position: relative !important;
+    padding-left: 50% !important;
+    border-bottom: none;
+  }
+
+  .no_fd3-table-responsive table tbody tr td.line-checkbox {
+    text-align: left !important;
+  }
+
+  .no_fd3-table-responsive table tbody tr td:before {
+    position: absolute;
+    text-align: left !important;
+/*    background-color: #3c8dbc !important;
+    color: #ffffff !important;*/
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    white-space: nowrap;
+    padding: 10px 10px;
+  }
+
+  /*
+Label the data
+*/
+/*  .no_fd3-table-responsive table tbody tr td:nth-of-type(1):before { content: "Select User"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(2):before { content: "First Name"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(3):before { content: "Last Name"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(4):before { content: "Username"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(5):before { content: "Affiliate"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(6):before { content: "Last Login"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(7):before { content: "Status"; }*/
+
+  // affiliates
+/*  .no_fd3-table-responsive table tbody tr td:nth-of-type(1):before { content: "Select Affiliate"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(2):before { content: "Name"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(3):before { content: "Username"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(4):before { content: "Coupon Code"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(5):before { content: "Last Login"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(6):before { content: "Status"; }*/
+
+  // Quotes
+/*
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(1):before { content: "Select Quote"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(2):before { content: "State"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(3):before { content: "Date"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(4):before { content: "Birthdate"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(5):before { content: "Gender"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(6):before { content: "Term"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(7):before { content: "Benefit"; }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(8):before { content: "Category"; }*/
+
+/*  .no_fd3-table-responsive table tbody tr td:nth-of-type(1):before { font-weight: bold }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(2):before { font-weight: bold }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(3):before { font-weight: bold }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(4):before { font-weight: bold }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(5):before { font-weight: bold }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(6):before { font-weight: bold }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(7):before { font-weight: bold }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(8):before { font-weight: bold }
+  .no_fd3-table-responsive table tbody tr td:nth-of-type(9):before { font-weight: bold }*/
+
+  /*
+    .user-checkbox {
+      visibility: hidden;
+  }
+
+  /*  .line-checkbox {
+      border-top: 4px solid #3c8dbc !important;
+      height: 0px;
+      padding: 0px !important;
+      margin: 0 !important;
+    }
+
+    .users-table .dropdown {
+      display: none !important;
+    }*/
+}

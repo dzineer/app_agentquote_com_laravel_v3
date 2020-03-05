@@ -1,0 +1,56 @@
+@import "../variables";
+
+$min_height: 470px;
+$margin_top: 20px;
+
+.form {
+
+  flex-grow: 1;
+  min-height: $min_height;
+  padding-left: $form_padding_left;
+  border: 1px solid $form_border_color;
+  border-top: 6px solid var(--our-blue);
+  padding-right: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+
+  .header {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  h3.age-or-dob {
+    font-size: 1.06rem;
+    color: var(--our-blue);
+
+  }
+
+  h3.enter-or-choose-faceamount {
+    font-size: 1.06rem;
+    color: var(--our-blue);
+    margin-top: 0;
+  }
+
+  .checkbox-term-container {
+    font-size: 0.9rem;
+  }
+
+  h3.term-type-header {
+    font-size: 1.40rem;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+
+  #email-group-btn {
+    text-transform: uppercase;
+  }
+
+  .disclaimer-container {margin-bottom: 0.4rem;margin-top: -10px;}
+
+  .disclaimer {
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+  }
+
+}

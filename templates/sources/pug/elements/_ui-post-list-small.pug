@@ -1,0 +1,49 @@
+mixin post-list-small(postInfoObj, postMetaObj, imageObj, needMoreBtn)
+  .post.post-variant-1.post-list.post-list-2
+    if(postInfoObj.title)
+      h4.text-bold
+        a.post-title(href=postInfoObj.href)= postInfoObj.title
+
+    ul.list-inline.list-inline-dashed.text-italic
+      li.text-gray-lighter
+        ='by '
+        span.text-bold.text-gray-light= postMetaObj.author
+      li
+        time(datetime="2018-04-30").post-meta-time.text-gray-lighter= postMetaObj.date
+      li
+        a(href= postMetaObj.categories.link )=postMetaObj.categories.name
+
+    - if(imageObj.src) {
+      .unit.unit-xl-horizontal.unit-lg-horizontal.unit-md-horizontal.unit-sm-vertical.unit-xs-vertical.unit-spacing-md.offset-top-25
+        .unit-left
+          .post-media-wrap
+            if(imageObj.src)
+              a(href=postInfoObj.href)
+                if(imageObj.width)
+                  img(src= imageObj.src, width= imageObj.width, height= imageObj.height, alt="")
+                else
+                  +img-set-dimensions(imageObj.src, 'img-responsive post-image')
+            if(imageObj.imgLink)
+              a(href=imageObj.imgLink.link).post-media-link
+                span= imageObj.imgLink.title
+
+            block
+        .unit-body
+          if(postInfoObj.description)
+            p= postInfoObj.description
+    - } else {
+      if(postInfoObj.description)
+        .offset-top-25
+          p= postInfoObj.description
+    - }
+    if needMoreBtn
+      .post-bottom.reveal-xs-flex.range-xs-justify.range-xs-middle.range-xs-reverse
+        .post-meta
+          a(href=postMetaObj.commentLink).post-meta-comment.text-italic= postMetaObj.comment + ' comments'
+        a(href=postInfoObj.href).btn.btn-primary.post-link.offset-xs-top-0 Read more
+    else
+      .post-bottom.text-sm-right
+        .post-meta
+          a(href=postMetaObj.commentLink).post-meta-comment.text-italic= postMetaObj.comment + ' comments'
+
+    hr.divider

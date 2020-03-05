@@ -1,0 +1,59 @@
+/*
+* Static Layout
+*/
+
+.rd-navbar-static {
+  display: block;
+
+  &.rd-navbar-default {
+    .rd-search-form-submit {
+      margin-left: 2px;
+    }
+  }
+
+  // RD Navbar brand
+  .rd-navbar-brand {
+
+  }
+
+  @media (min-width: $screen-lg-min) {
+    &.rd-navbar-variant-1 {
+      .rd-search.active {
+        width: 95%;
+      }
+    }
+  }
+
+  @media (min-width: 1300px) {
+    &.rd-navbar-variant-1 {
+      .rd-search.active {
+        width: 97%;
+      }
+    }
+  }
+
+
+  // RD Navbar nav wrap
+  .rd-navbar-nav-wrap {
+    width: auto;
+    flex: none;
+    text-align: center;
+  }
+
+  .rd-navbar-nav {
+    > li {
+      display: inline-block;
+
+      & + li {
+        margin-left: $navbar-static-nav-indent;
+      }
+    }
+  }
+
+  @media (min-width: 1600px) {
+    &.rd-navbar-default .rd-search.active .rd-navbar-search-form-input {
+      width: 97%;
+    }
+  }
+}
+

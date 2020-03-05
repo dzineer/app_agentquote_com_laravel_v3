@@ -1,0 +1,37 @@
+form {
+
+    .control {
+
+        margin-top: 1rem;
+
+        .input.is-minimal {
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            box-shadow: none;
+            border-radius: 0;
+            border-bottom: 0.03rem solid #dbdbdb;
+            padding-left: 0;
+
+            &::placeholder{
+                color: #a0aec0;
+            }
+        }
+
+        .textarea.is-minimal {
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            box-shadow: none;
+            border-radius: 0;
+            border-bottom: 0.03rem solid #dbdbdb;
+            padding-left: 0;
+
+            &::placeholder{
+                color: #a0aec0;
+            }
+        }
+    }
+    
+
+}

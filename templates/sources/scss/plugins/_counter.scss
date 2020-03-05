@@ -1,0 +1,157 @@
+.counter {
+  margin-bottom: 0;
+  &:after {
+    content: '%';
+
+  }
+}
+
+.countdown-section {
+  display: inline-block;
+  position: relative;
+}
+
+.countdown-section + .countdown-section {
+  position: relative;
+  padding-left: 20px;
+
+  @media (min-width: $screen-md-min) {
+    padding-left: 62px;
+
+    &:before {
+      content: ":";
+      display: inline-block;
+      position: absolute;
+      color: $brand-primary;
+      font-weight: 800;
+      top: 0;
+      font-size: 50px;
+      left: 28px;
+    }
+  }
+
+}
+
+.countdown-period,
+.countdown-amount {
+  display: block;
+}
+
+.countdown-amount {
+  font-size: 30px;
+  color: $brand-primary;
+  font-weight: 800;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 50px;
+  }
+}
+
+.countdown-period {
+  color: $gray-light;
+  font-style: italic;
+  margin-top: 5px;
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 13px;
+  }
+
+  &:after {
+    content: '(s)';
+  }
+}
+
+//.coundowd-small
+//
+.coundowd-small {
+  .countdown-section + .countdown-section {
+    @media (min-width: $screen-md-min) {
+      padding-left: 25px;
+      &:before {
+        left: 7px;
+      }
+    }
+  }
+}
+
+//coundowd-round
+//
+.coundowd-round {
+
+  .countdown-amount {
+    text-align: center;
+    color: $white;
+    height: 50px;
+    width: 50px;
+    line-height: 48px;
+    border-radius: 50%;
+    background: $brand-primary;
+  }
+
+  .countdown-period {
+    text-align: center;
+  }
+
+  .countdown-section + .countdown-section {
+    &:before {
+      color: $brand-primary;
+      height: 50px;
+      line-height: 48px;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .countdown-amount {
+      height: 70px;
+      width: 70px;
+      line-height: 68px;
+    }
+
+    .countdown-section + .countdown-section {
+      &:before {
+        height: 70px;
+        line-height: 68px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .countdown-amount {
+      height: 137px;
+      width: 137px;
+      line-height: 96px;
+    }
+
+    .countdown-section + .countdown-section {
+      padding-left: 0;
+      margin-left: 20px;
+
+      &:before {
+        line-height: 135px;
+        left: -15px;
+      }
+    }
+
+    .countdown-period {
+      position: absolute;
+      top: 75px;
+      left: 50%;
+      @include transform (translateX(-50%));
+      color: $white;
+    }
+  }
+
+  @media (min-width: $screen-lg-min) {
+    .countdown-section + .countdown-section {
+      margin-left: 48px;
+
+      &:before {
+        left: -30px;
+      }
+    }
+  }
+}
+
+h3 + .countdown {
+  margin-top: 7px;
+}

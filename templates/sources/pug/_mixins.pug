@@ -1,0 +1,53 @@
+//- Img-set-dimensions
+
+//- imgPath - path to image
+//- imgClass - class for image
+
+mixin img-set-dimensions(imgPath, imgClass)
+	-
+		var pos = 0,
+		imgWidth,
+		imgHeight,
+		defPos,
+		xPos,
+		dotPos;
+		
+		while(true) {
+			var tpmPos = imgPath.indexOf("-", pos);
+			if(tpmPos == -1) break;
+			defPos = tpmPos;
+			pos = defPos + 1;
+		}
+		
+		xPos = imgPath.indexOf('x');
+		dotPos = imgPath.indexOf('.');
+		
+		imgWidth = imgPath.substring(defPos + 1, xPos);
+		imgHeight = imgPath.substring(xPos + 1, dotPos);
+	
+	img(src= imgPath, width= imgWidth, height= imgHeight, alt="", class= imgClass)
+
+//- Image
+	@param {string} name
+mixin img( name )
+	- var size = getImageSize( name );
+	img( src= setImagePath(setImageExtension(name)), alt='', width= size[0], height= size[1] )&attributes( attributes )
+
+
+//- Jpg image
+	@param {string} name
+mixin jpg( name )
+	- var size = getImageSize( name );
+	img( src= setImagePath(name + '.jpg'), alt='', width= size[0], height= size[1] )&attributes( attributes )
+
+
+//- Png image
+	@param {string} name
+mixin png( name )
+	- var size = getImageSize( name );
+	img( src= setImagePath(name + '.png'), alt='', width= size[0], height= size[1] )&attributes( attributes )
+
+//- Logo
+mixin logo
+	a(href='./').brand
+		+png( logo.default ).brand-logo

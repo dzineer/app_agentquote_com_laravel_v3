@@ -1,0 +1,17 @@
+//- List-social
+
+//- ulClass - additional class for ul
+//- liClass - additional class for li
+//- iconClass additional class for icons
+mixin list-social(ulClass, liClass, iconClass)
+  ul.list-inline(class=ulClass)
+    li(class=liClass)
+      a.icon.fa-facebook(href='#', class=iconClass)
+    li(class=liClass)
+      a.icon.fa-twitter(href='#', class=iconClass)
+    li(class=liClass)
+      a.icon.fa-google-plus(href='#', class=iconClass)
+    li(class=liClass)
+      a.icon.fa-youtube(href='#', class=iconClass)
+    li(class=liClass)
+      a.icon.fa-rss(href='#', class=iconClass)

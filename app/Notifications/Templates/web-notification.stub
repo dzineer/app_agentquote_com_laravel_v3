@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Notifications;
+
+/**
+ * Class {{CLASS}}
+ *
+ * @package App\Notifications
+ */
+class {{CLASS}} extends WebPushNotification
+{
+}

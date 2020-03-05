@@ -1,0 +1,10 @@
+//- testimonials-variant-1
+
+mixin testimonial-varian-1(imgObject, quoteText, authorName, date)
+  blockquote.quote.quote-variant-1
+    img.img-responsive.img-circle(src=imgObject.path, width=imgObject.width, height=imgObject.height, alt="")
+    p
+      q= quoteText
+    div
+      cite.text-extra-bold.text-gray-light= authorName
+      time(datetime="2018-04-30").text-gray-lighter.text-italic=' – ' + date

@@ -1,0 +1,310 @@
+/* Variables
+================================== */
+
+/* tables
+================================== */
+
+.responsive-table {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 3em 0;
+    padding: 0;
+}
+
+.responsive-table-cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style: none;
+    border: solid 3px white;
+    background: rgba(112, 128, 144, 0.2);
+    > {
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+    }
+}
+
+/* table column sizing
+================================== */
+
+.responsive-table--2cols > .responsive-table-cell {
+    width: 50%;
+}
+
+.responsive-table--3cols > .responsive-table-cell {
+    width: 33.33%;
+}
+
+.responsive-table--4cols > .responsive-table-cell {
+    width: 25%;
+}
+
+.responsive-table--5cols > .responsive-table-cell {
+    width: 20%;
+}
+
+.responsive-table--6cols > .responsive-table-cell {
+    width: 16.6%;
+}
+
+/* Page styling
+================================== */
+
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Josefin Sans Regular"), local("JosefinSans-Regular"), url(https://fonts.gstatic.com/s/josefinsans/v13/Qw3aZQNVED7rKGKxtqIqX5EUDXx9.ttf) format("truetype");
+}
+
+
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Josefin Sans Bold"), local("JosefinSans-Bold"), url(https://fonts.gstatic.com/s/josefinsans/v13/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format("truetype");
+}
+
+html {
+    height: 100%;
+    background-color: #EEE;
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 800px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+    background-color: white;
+    border: double 3px #DDD;
+    border-top: none;
+    border-bottom: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+strong {
+    color: #434d57;
+}
+
+/* Apply styles
+================================== */
+
+.responsive-table- {
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+
+.responsive-table-cell {
+    margin: -3px 0 0 -3px;
+    background-color: white;
+    border-color: #e2e6e9;
+}
+
+/* Cell styles
+================================== */
+
+.responsive-table-cell--dark {
+    background-color: slategrey;
+    border-color: #5a6673;
+    color: white;
+    > {
+        h1, h2, h3, h4, h5, h6 {
+            color: white;
+        }
+    }
+}
+
+.responsive-table-cell--medium {
+    background-color: #b8c0c8;
+    border-color: #a9b3bc;
+}
+
+.responsive-table-cell--light {
+    background-color: white;
+    border-color: #e2e6e9;
+}
+
+.responsive-table-cell--highlight {
+    background-color: lightgreen;
+    border-color: #64e764;
+}
+
+.responsive-table-cell--alert {
+    background-color: darkorange;
+    border-color: #cc7000;
+    color: white;
+    > {
+        h1, h2, h3, h4, h5, h6 {
+            color: white;
+        }
+    }
+}
+
+.responsive-table-cell--head {
+    background-color: slategrey;
+    border-color: #5a6673;
+    color: white;
+    > {
+        h1, h2, h3, h4, h5, h6 {
+            color: white;
+        }
+    }
+}
+
+.responsive-table-cell--foot {
+    background-color: #b8c0c8;
+    border-color: #a9b3bc;
+}
+
+/* Responsive
+==================================== */
+
+@media all and (max-width: 500px) {
+    .responsive-table--collapse {
+        display: block;
+        > {
+            .responsive-table-cell {
+                width: 100% !important;
+            }
+            .responsive-table-cell--foot {
+                margin-bottom: 1em;
+            }
+        }
+    }
+}
+
+.no-flexbox .responsive-table- {
+    display: block;
+    > {
+        .responsive-table-cell {
+            width: 100%;
+        }
+        .responsive-table-cell--foot {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+@media all and (max-width: 500px) {
+    .hiddenSmall {
+        display: none;
+    }
+}
+
+/* tab Styling
+==================================== */
+
+.tab-list {
+    display: flex;
+    flex-direction: row;
+    margin-left: -3px;
+}
+
+@media all and (min-width: 500px) {
+    .tablist {
+        display: none;
+    }
+}
+
+.tab {
+    padding: 0.6em 1em;
+    margin: 0 3px 3px 0;
+    text-align: center;
+    background-color: darkcyan;
+    border: solid 3px darkcyan;
+    border-bottom-width: 0;
+    border-radius: 0.5em 0.5em 0 0;
+    font-weight: bold;
+    color: #002525;
+    text-decoration: none;
+    transition: background-color 0.1s;
+    cursor: pointer;
+    &:hover, &:focus {
+        background-color: #199797;
+        border-color: #199797;
+        outline: none;
+    }
+    &[aria-selected="false"]:active {
+        margin-top: 0.2em;
+        padding-bottom: 0.4em;
+    }
+    &[aria-selected="true"] {
+        background: #e6f3f3;
+        cursor: default;
+    }
+}
+
+/* accordion Styling
+==================================== */
+
+.accordion {
+    position: relative;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    margin: 0 0 0.5em 0;
+    padding: 0.6em 0.6em 0.6em 2em;
+    border-radius: 0.5em;
+    text-align: left;
+    border: solid 3px #007676;
+    background-color: darkcyan;
+    font-weight: bold;
+    color: #002525;
+    text-decoration: none;
+    transition: background-color 0.1s;
+    cursor: pointer;
+    &:hover, &:focus {
+        outline: none;
+        -webkit-filter: contrast(150%);
+        filter: contrast(150%);
+    }
+    &[aria-selected="true"] {
+        margin-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-width: 0;
+        background: #b3dcdc;
+    }
+    &:before {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        left: 0.3em;
+        margin-top: -1.14285714em;
+        font-weight: normal;
+        font-size: 2em;
+        line-height: 2em;
+        background-size: 2em 2em;
+    }
+    &[aria-selected="true"]:before {
+        content: "-";
+    }
+}
+
+@media all and (min-width: 500px) {
+    .accordion {
+        display: none;
+    }
+}
+
+.js-responsive-table-tabs, .js-responsive-table-accordions {
+    min-width: 240px;
+}

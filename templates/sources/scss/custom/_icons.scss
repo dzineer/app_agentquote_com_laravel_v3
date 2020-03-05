@@ -1,0 +1,154 @@
+//
+// Icons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.icon {
+  display: inline-block;
+
+  &:hover{
+    transition: .18s ease-in;
+  }
+
+  &:before {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+// Alternate icons
+// --------------------------------------------------
+
+.icon-default {
+  color: #74b9ed;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.icon-primary {
+  color: $brand-primary;
+  border-color: $brand-primary;
+
+  &:hover {
+    color: $gray-light;
+  }
+}
+
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  line-height: 35px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  text-align: center;
+  //transition: background .2s ease-in, color .2s ease-in, border-color .1s ease-in;
+
+  &:hover {
+    background: $brand-primary;
+    border-color: $brand-primary;
+    color: $white;
+  }
+
+  &.fa-clock-o:before {
+    position: relative;
+  }
+
+  &.fa-map-marker:before,
+  &.fa-envelope:before {
+    position: relative;
+    left: 1px;
+  }
+
+
+  &.text-white {
+    &:hover{
+      background: $white;
+      color: $brand-primary;
+    }
+  }
+
+  &.icon-lg {
+    width: 65px;
+    height: 65px;
+    line-height: 64px;
+    border-width: 2px;
+    font-size: 33px;
+
+    &.fa-phone:before{
+      font-size: 38px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      width: 84px;
+      height: 84px;
+      line-height: 82px;
+      font-size: 40px;
+
+      &.fa-phone:before{
+        font-size: 50px;
+      }
+    }
+  }
+
+  &.icon-xl {
+    width: 100px;
+    height: 100px;
+    line-height: 98px;
+    border-width: 2px;
+    font-size: 45px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    &.icon-xl {
+      width: 137px;
+      height: 137px;
+      line-height: 135px;
+      font-size: 50px;
+    }
+  }
+}
+
+// Icon Sizes
+// --------------------------------------------------
+
+.icon-xs {
+
+}
+
+.icon-sm {
+
+}
+
+.icon-lg {
+
+}
+
+// static Icon
+// --------------------------------------------------
+
+.post-meta-comment {
+  &:before {
+    content: '\f075';
+    font-family:'FontAwesome';
+    font-style: normal;
+    padding-right: 7px;
+    position: relative;
+    top: 1px;
+  }
+}
+
+.icon-reply{
+
+
+}

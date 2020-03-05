@@ -1,0 +1,10 @@
+mixin post-author(image, imageWidth, imageHeight, authorName, authorDescription)
+  .section-30-all.text-sm-left
+    .unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.unit-xl-horizontal.unit-middle.unit-spacing-md
+      .unit-left
+        img.img-responsive.img-circle.max-width-none(src=image, width=imageWidth, height=imageHeight, alt="")
+      .unit-body
+        h6.text-white
+          ='Written by '
+          = authorName
+        p= authorDescription

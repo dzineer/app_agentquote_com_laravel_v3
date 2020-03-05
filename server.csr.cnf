@@ -1,0 +1,1 @@
+[req]default_bits = 2048prompt = nodefault_md = sha256distinguished_name = dn[dn]C=USST=RandomStateL=RandomCityO=RandomOrganizationOU=RandomOrganizationUnitemailAddress=hello@example.comCN = localhost

@@ -1,0 +1,69 @@
+.sticky-helper {
+    position: fixed;
+    bottom: 4px;
+    right: 100px;
+    z-index: 1000;
+    height: 52px;
+    width: 52px;
+
+    #sticky-container {
+        position: absolute;
+        height: 197px;
+        top: -214px;
+        left: -168px;
+        -webkit-box-shadow: 0 5px 35px rgba(37, 45, 51, 0.2);
+        box-shadow: 0 5px 35px rgba(37, 45, 51, 0.2);
+        background: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+        width: 319px;
+        margin-bottom: 24px;
+        -webkit-transition: all ease-in-out 0.3s;
+        transition: all ease-in-out 0.3s;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+
+        .support-container {
+            display:inline-block;
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+
+            .contact-link {
+                display: block;
+                text-align: center;
+            }
+
+        }
+
+    }
+
+    #sticky-container.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .sticky-button {
+        height: 52px;
+        width: 152px;
+        margin-left: auto;
+        position: relative;
+        background: #344150;
+        box-shadow: 0 0 15px rgba(37, 45, 51, 0.25);
+        border-radius: 101px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        cursor: pointer;
+
+        .sticky-info-text {
+            color: white;
+            margin-left: 10px;
+        }
+    }
+
+}

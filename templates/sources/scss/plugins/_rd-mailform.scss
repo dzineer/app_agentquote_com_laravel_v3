@@ -1,0 +1,185 @@
+/*
+* @subsection   RD Mail Form
+*
+* @description  Describes style declarations for RD Mail Form extension
+*
+* @version      2.0.0
+*/
+
+$input-height: 50px;
+$input-font-weight: inherit;
+$input-font-size: 16px;
+$input-line-height: 34px;
+
+$input-offset-top: 30px;
+
+$input-color: #333;
+$input-background: none;
+
+$input-border-radius: 0;
+
+$input-border-color: lighten(#000, 92.15686274509804%);
+$input-border: 1px solid $input-border-color;
+
+$input-padding: ($input-height - $input-line-height) / 2 18px;
+
+@if ($input-border != none) {
+  $input-padding: ($input-height - $input-line-height - (nth($input-border, 1) * 2)) / 2 18px;
+}
+
+$textarea-height: 191px;
+
+$placeholder-clr: $input-color;
+$placeholder-opacity: 1;
+
+.rd-mailform {
+  position: relative;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  max-width: 400px;
+
+  fieldset {
+    border: none;
+
+    > .row + .row {
+      margin-top: $input-offset-top;
+    }
+  }
+}
+
+.rd-mailform {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  text-align: center;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  label {
+    font-weight: inherit;
+  }
+
+  input, select {
+    height: $input-height;
+  }
+
+  input, textarea {
+    display: block;
+    width: 100%;
+    font-size: $input-font-size;
+    padding: $input-padding;
+    line-height: $input-line-height;
+    color: $input-color;
+    background: $input-background;
+
+    @if ($input-border != none) {
+      border: $input-border;
+      border-radius: $input-border-radius;
+    }
+
+    &:-moz-placeholder {
+      color: $placeholder-clr;
+      opacity: $placeholder-opacity;
+      transition: 0.3s;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $placeholder-clr;
+      opacity: $placeholder-opacity;
+      transition: 0.3s;
+    }
+
+    &::-moz-placeholder {
+      color: $placeholder-clr;
+      opacity: $placeholder-opacity;
+      transition: 0.3s;
+    }
+
+    &:-ms-input-placeholder {
+      color: $placeholder-clr;
+      opacity: $placeholder-opacity;
+      transition: 0.3s;
+    }
+    &:focus {
+      &:-moz-placeholder {
+        opacity: 0.4;
+      }
+
+      &::-webkit-input-placeholder {
+        opacity: 0.4;
+      }
+
+      &::-moz-placeholder {
+        opacity: 0.4;
+      }
+
+      &:-ms-input-placeholder {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    overflow: auto;
+    min-height: $input-height;
+    height: $textarea-height;
+    max-height: $textarea-height * 1.5;
+  }
+  > * + * {
+    margin-top: 20px;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: $input-offset-top;
+  }
+}
+
+div[class^="rd-mailform-validate"] {
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  @include transform(translateX(-50%));
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  max-width: 400px;
+  min-height: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px 25px 10px 40px;
+  font-size: 16px;
+  opacity: 0;
+  transition: .3s;
+  color: #fff;
+  background: #ff6859;
+  z-index: 999;
+  pointer-events: none;
+
+  &:before {
+    content: '\f00d';
+    font-family: 'FontAwesome';
+    display: inline-block;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    @include transform(translateY(-50%));
+  }
+
+  &.success {
+    opacity: 1;
+  }
+  &.error {
+    opacity: 1;
+  }
+}
+
+.mfInput {
+  position: relative;
+}

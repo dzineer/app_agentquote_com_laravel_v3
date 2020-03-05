@@ -1,0 +1,25 @@
+
+@import "iphone4";
+
+/* Smart phones (portrait and landscape) ----------- */
+@import "portrait_landscape";
+
+@import "min_width_321";
+
+@import "min_width_320";
+
+@import "min_width_580";
+
+@import "min_width_1000";
+
+
+.inline-control {
+  width: 30%;
+  display: inline-block;
+}
+
+.inline-input-group {
+  display: flex;
+  justify-content: space-between;
+}
+

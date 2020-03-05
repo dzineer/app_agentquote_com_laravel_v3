@@ -1,0 +1,37 @@
+mixin post-variant-1(postInfoObj, postMetaObj, imageObj, needMoreBtn, postClass, postHelperClass)
+  .post.post-variant-1(class=postClass)
+    div(class=postHelperClass)
+      .post-media-wrap
+        if(imageObj.src)
+          if(imageObj.src)
+            a(href=postInfoObj.href)
+              +img-set-dimensions(imageObj.src, 'img-responsive post-image')
+          if(imageObj.imgLink)
+            a(href=imageObj.imgLink.link).post-media-link
+              span= imageObj.imgLink.title
+        
+        block
+      if(postInfoObj.title)
+        h4.text-bold
+          a.post-title(href=postInfoObj.href)= postInfoObj.title
+      
+      ul.list-inline.list-inline-dashed.text-italic
+        li.text-gray-lighter
+          ='by '
+          span.text-bold.text-gray-light= postMetaObj.author
+        li
+          time(datetime="2018-04-30").post-meta-time.text-gray-lighter= postMetaObj.date
+        li
+          a(href= postMetaObj.categories.link )=postMetaObj.categories.name
+      
+      if(postInfoObj.description)
+        p= postInfoObj.description
+      
+      if needMoreBtn
+        .post-bottom.reveal-xs-flex.range-xs-justify.range-xs-middle.range-xs-reverse
+          .post-meta
+            a(href=postMetaObj.commentLink).post-meta-comment.text-italic= postMetaObj.comment + ' comments'
+          a(href=postInfoObj.href).btn.btn-primary.post-link.offset-xs-top-0 Read more
+      
+      if needMoreBtn
+        hr.divider

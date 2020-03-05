@@ -1,0 +1,19 @@
+@import "../variables";
+
+$min_height: 470px;
+$margin_top: 20px;
+
+#info-container {
+  flex-grow: 1;
+  min-height: $min_height;
+  /*border: 1px solid #70707045;*/
+  /*border-top: 6px solid red;*/
+  padding-right: 10px;
+  max-width: 450px;
+  /*background-color: #fff;*/
+  /*border-radius: 5px;*/
+
+}
+
+@import "support";
+@import "faq";

@@ -1,0 +1,34 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+
+@import '~bootstrap/scss/bootstrap';
+@import './utilities';
+@import './animations';
+@import './responsive';
+@import "./theme";
+@import "./signup";
+@import "./tables";
+@import "./ads";
+@import "./quote";
+@import "./quote_responsive";
+@import "./pagination";
+@import "./messages";
+@import "./responsive_table";
+@import "./extra";
+@import "./components/quote-widget/style";
+@import "./custom_modules";
+@import "./components/toggles/index";
+@import "./components/suppport-window";
+
+// @import "vendors/font-awesome/5.0.0/sass/wrapper";
+
+.visual-line {
+    border: 1px dotted #1289ff;
+    padding: 20px;
+    min-height: 40px;
+}

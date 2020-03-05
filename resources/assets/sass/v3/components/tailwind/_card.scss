@@ -1,0 +1,56 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    width: 475px;
+    height: 258px;
+
+    .card-left {
+        background: linear-gradient(to bottom, #21c8f6, #637bff);
+
+        .card-skill-button {
+            color: inherit;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .card-difficulty {
+        }
+        
+        .card-mascot {
+            border-radius: 50%;
+            width: 128px;
+            height: 128px;
+            border-color: #21c8f6;
+            background: linear-gradient(to bottom, #21c8f6, #637bff);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        }
+
+    }
+
+    .card-right {
+
+        .card-title {
+        }
+        
+        .card-excerpt {
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: auto;
+        }
+        
+        .card-title > a {
+        }
+        
+        .card-meta {
+        }
+        
+        .card-meta > div:first-child {
+        }
+        
+        .card-meta > div {
+        }
+        
+        .card-meta > div > img {
+        }
+
+    }
+    
+}

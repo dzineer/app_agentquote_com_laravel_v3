@@ -1,0 +1,25 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+
+@import '~bootstrap/scss/bootstrap';
+@import 'utilities';
+@import 'animations';
+@import 'responsive';
+@import "theme";
+@import "signup";
+@import "tables";
+@import "ads";
+@import "quote";
+@import "pagination";
+@import "messages";
+@import "responsive_table";
+@import "extra";
+@import "components/quote-widget/style";
+@import "quote-landingpage/landing-page";
+@import "custom_modules";
+// @import "vendors/font-awesome/5.0.0/sass/wrapper";

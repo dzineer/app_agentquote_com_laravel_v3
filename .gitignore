@@ -1,0 +1,17 @@
+.git
+.DS_Store
+.idea
+/node_modules
+/packages
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/flowroute-sdk-v3-php
+/hosts/working-on/*
+/public/logs/*
+*.psd
+*.ai

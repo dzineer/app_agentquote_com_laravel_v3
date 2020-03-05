@@ -1,0 +1,148 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  transition: .2s ease-in;
+  padding: 12px 15px;
+  font-weight: 800;
+  border-radius: 3px;
+  box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.08);
+
+
+  @media (min-width: $screen-md-min) {
+    padding: 12px 28px;
+  }
+
+  &.fa-search{
+    font-size: 17px;
+  }
+
+
+  &:focus,
+  &:active,
+  &:active:focus{
+    outline: none;
+  }
+
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active:focus,
+  &.focus {
+    box-shadow: 5px 5px 5px -3px rgba(0,0,0,0.08);
+  }
+
+  &:active,
+  &.active {
+    @include box-shadow(none);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  @include button-variant-custom($white, $gray-light, $gray-light, $white, $gray-darker, $gray-darker);
+}
+
+.btn-primary {
+  @include button-variant-custom($white, $brand-primary, $brand-primary, $white, $brand-success, $brand-success);
+}
+
+// Success appears as green
+.btn-success {
+
+}
+
+// Info appears as blue-green
+.btn-info {
+
+}
+
+// Warning appears as orange
+.btn-warning {
+
+}
+
+// Danger and error appear as red
+.btn-danger {
+
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xs {
+
+}
+
+.btn-sm {
+
+}
+
+.btn-lg {
+
+}
+
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-rect {
+  border-radius: 0;
+}
+
+
+// Button Icon styles
+// --------------------------------------------------
+
+.btn{
+
+  &.btn-icon {
+    padding-left: 17px;
+    padding-right: 17px;
+
+    .icon {
+      font-size: 28px;
+      line-height: 28px;
+      vertical-align: middle;
+      transition: 0s;
+    }
+
+    &-left{
+      .icon{
+        float: left;
+        padding-right: 10px;
+      }
+    }
+
+    &-right{
+      .icon{
+        float: right;
+        padding-left: 10px;
+      }
+    }
+
+  }
+}

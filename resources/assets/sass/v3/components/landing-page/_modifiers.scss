@@ -1,0 +1,114 @@
+@mixin padding-modifiers($prefix, $limit) {
+
+        @each $loc, $abbr in (
+            padding-top: pt,
+            padding-bottom: pb,
+            padding-left: pl,
+            padding-right: pr,
+    ) {
+
+        @for $i from 0 through $limit {
+            .#{$prefix}\:#{$abbr}-#{$i} {
+                #{$loc}: unquote(#{$i}px);
+            }
+        }
+
+    }
+
+    @for $i from 0 through $limit {
+        .#{$prefix}\:py-#{$i} {
+            padding-top: unquote($string: #{$i}+px);
+            padding-bottom: unquote($string: #{$i}+px);
+        }
+        .#{$prefix}\:px-#{$i} {
+            padding-left: unquote($string: #{$i}+px);
+            padding-right: unquote($string: #{$i}+px);
+        }   
+    }
+}
+
+@mixin padding-modifiers-bem($prefix, $limit) {
+
+        @each $loc, $abbr in (
+            padding-top: 'p__t',
+            padding-bottom: 'p__b',
+            padding-left: 'p__l',
+            padding-right: 'p__r',
+    ) {
+
+        @for $i from 0 through $limit {
+            .#{$prefix}\:#{$abbr}--#{$i} {
+                #{$loc}: unquote(#{$i}px);
+            }
+        }
+
+    }
+
+    @for $i from 0 through $limit {
+        .#{$prefix}\:p__y-#{$i} {
+            padding-top: unquote($string: #{$i}+px);
+            padding-bottom: unquote($string: #{$i}+px);
+        }
+        .#{$prefix}\:p__x-#{$i} {
+            padding-left: unquote($string: #{$i}+px);
+            padding-right: unquote($string: #{$i}+px);
+        }   
+    }
+}
+
+@mixin margin-modifiers($prefix, $limit: 100) {
+
+    @each $loc, $abbr in (
+            margin-top: mt,
+            margin-bottom: mb,
+            margin-left: ml,
+            margin-right: mr
+    ) {
+
+        @for $i from 0 through $limit {
+            .#{$prefix}\:#{$abbr}-#{$i} {
+                #{$loc}: unquote(#{$i}px);
+            }
+        }
+
+    }
+
+    @for $i from 0 through $limit {
+        .#{$prefix}\:my-#{$i} {
+            margin-top: unquote($string: #{$i}+px);
+            margin-bottom: unquote($string: #{$i}+px);
+        }
+        .#{$prefix}\:mx-#{$i} {
+            margin-left: unquote($string: #{$i}+px);
+            margin-right: unquote($string: #{$i}+px);
+        }   
+    }
+}
+@mixin margin-modifiers-bem($prefix, $limit: 100) {
+
+    @each $loc, $abbr in (
+            margin-top: 'm__t',
+            margin-bottom: 'm__b',
+            margin-left: 'm__l',
+            margin-right: 'm__r'
+    ) {
+
+        @for $i from 0 through $limit {
+            .#{$prefix}\:#{$abbr}--#{$i} {
+                #{$loc}: unquote(#{$i}px);
+            }
+        }
+
+    }
+
+    @for $i from 0 through $limit {
+        .#{$prefix}\:m__y--#{$i} {
+            margin-top: unquote($string: #{$i}+px);
+            margin-bottom: unquote($string: #{$i}+px);
+        }
+        .#{$prefix}\:m__x--#{$i} {
+            margin-left: unquote($string: #{$i}+px);
+            margin-right: unquote($string: #{$i}+px);
+        }   
+    }
+}

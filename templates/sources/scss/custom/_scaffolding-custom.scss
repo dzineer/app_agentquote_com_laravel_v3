@@ -1,0 +1,191 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+// Body reset
+
+body {
+  -webkit-font-smoothing: subpixel-antialiased
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Links
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+// Page
+
+.page {
+  @media (min-width: $screen-md-min) {
+    text-align: left;
+  }
+}
+
+// Images
+
+img {
+  vertical-align: middle;
+}
+
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+  display: inline-block;
+}
+
+// centered image
+.img-centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Rounded corners
+.img-rounded {
+  border-radius: $border-radius-large;
+}
+
+// Horizontal rules
+
+hr {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+// Html5 Audio
+
+audio {
+  width: 100%;
+}
+
+// Twitter iframe
+// -------------------------
+
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+.twitter-widget {
+  width: 100% !important;
+}
+
+// Search page
+// -------------------------
+
+.search {
+  color: darken($brand-primary, 5%);
+}
+
+// Facebook iframe
+// -------------------------
+
+.fb-page-responsive {
+  text-align: center;
+}
+
+.fb-page-responsive,
+.fb-post {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+// Vertical-aligments
+// -------------------------
+
+.va-bottom {
+  vertical-align: bottom !important;
+}
+
+// Breadcrumbs
+// -------------------------
+
+.breadcrumbs {
+  font-size: 16px;
+  a {
+    color: $gray-lighter;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+  li {
+    color: $gray-light;
+  }
+}
+
+// Additional helpers
+// -------------------------
+
+.width-100p {
+  width: 100%;
+}
+
+.flex-direction-column {
+  @include flex-direction(column);
+}
+
+.text-middle {
+  vertical-align: middle;
+}
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    background: $white;
+    transition: .13s ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      width: 0;
+    }
+  }
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.border-radius-small {
+  border-radius: $border-radius-small;
+}
+

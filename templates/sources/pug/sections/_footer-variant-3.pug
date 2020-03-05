@@ -1,0 +1,21 @@
+include ../elements/_ui-list-social
+
+footer.page-footer.text-center
+  .footer-container.footer-copyright
+    .shell
+      .reveal-sm-flex.range-sm-justify.range-sm-reverse.range-sm-middle
+        div
+          +list-social("list-inline-md", "", "icon-default")
+        div.offset-top-15.offset-sm-top-0
+          p
+            | &#169;
+            =' '
+            span(class="copyright-year")
+            =' '
+            a(href="index.html")
+              span.text-primary Dental
+              span.text-white Plus
+            ='. '
+            a(href="privacy.html") Privacy Policy
+
+

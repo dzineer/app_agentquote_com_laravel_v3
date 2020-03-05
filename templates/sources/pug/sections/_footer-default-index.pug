@@ -1,0 +1,68 @@
+include ../elements/_ui-list-social
+
+footer.page-footer.footer-default.text-sm-left
+	.bg-cape-cod.section-60.section-md-top-85.section-md-bottom-70
+		.shell
+			.range
+				.cell-sm-6.cell-md-4
+					.brand
+						+logo
+					.offset-top-20
+						p DentalPlus Dental clinic is here to fix any dental health concern you might have. Our diverse team of professionals and our customer service oriented approach will make you for once feel comfortable while sitting in a dentist's chair!
+				.cell-sm-6.cell-md-4.offset-top-50.offset-md-top-0
+					h6.text-white Opening hours
+					.offset-top-25
+						.unit.unit-xl-horizontal.unit-lg-horizontal.unit-md-horizontal.unit-sm-horizontal
+							.unit-left
+								.icon.fa-clock-o.icon-circle.text-middle.text-primary
+							.unit-body
+								.text-italic
+									| Monday –Friday: 9am–6pm
+									br
+									| Saturday: 10am–4pm
+									br
+									| Sunday: 10am–1pm
+				.cell-sm-6.cell-md-4.offset-top-50.offset-md-top-0
+					h6.text-white Contact info
+					.offset-sm-top-25
+					.unit.unit-middle.unit-xl-horizontal.unit-lg-horizontal.unit-md-horizontal.unit-sm-horizontal.unit-xs-vertical
+						.unit-left
+							.icon.fa-phone.icon-circle.text-middle.text-primary
+						.unit-body
+							.text-italic
+								a(href="tel:#") 555–123–2323
+								span='; '
+								br.veil-lg
+								a(href="tel:#") 555–123–2323
+					.offset-top-25.offset-sm-top-10.unit.unit-middle.unit-xl-horizontal.unit-lg-horizontal.unit-md-horizontal.unit-sm-horizontal.unit-xs-vertical
+						.unit-left
+							.icon.fa-envelope.icon-circle.text-middle.text-primary
+						.unit-body
+							.text-italic
+								a(href="mailto:#") dentalplus@demolink.org
+					.offset-top-25.offset-sm-top-10.unit.unit-middle.unit-xl-horizontal.unit-lg-horizontal.unit-md-horizontal.unit-sm-horizontal.unit-xs-vertical
+						.unit-left
+							.icon.fa-map-marker.icon-circle.text-middle.text-primary
+						.unit-body
+							.text-italic
+								a(href="#") 22 St. Black Road Orlando, PL 3457
+	
+	
+	.shell.footer-container.footer-copyright
+		.reveal-sm-flex.range-sm-justify.range-sm-reverse.range-sm-middle
+			div
+				+list-social("list-inline-md", "", "icon-default")
+			div.offset-top-15.offset-sm-top-0
+				p
+					| &#169;
+					=' '
+					span(class="copyright-year")
+					=' '
+					a(href="index.html")
+						span.text-primary Dental
+						span.text-white Plus
+					='. '
+					a(href="#") Privacy Policy
+
+
+

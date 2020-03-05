@@ -1,0 +1,18 @@
+    5  scp public/js/app.js root@app.agentquote.com:/var/www/html/js/app.js
+    7  scp app/Http/Controllers/SuperUserAdController.php root@app.agentquote.com:/var/www/app/app/Http/Controllers/SuperUserAdController.php
+   14  scp resources/views/ads/super/super-ad.blade.php root@app.agentquote.com:/var/www/app/resources/views/ads/super/super-ad.blade.php
+   17  scp resources/views/ads/super/super-ad.blade.php root@app.agentquote.com:/var/www/app/resources/views/ads/super/super-ad.blade.php
+   18  scp app/Models/SuperAd.php root@app.agentquote.com:/var/www/app/app/Models/SuperAd.php
+   19  scp app/Composers/SuperAdComposer.php root@app.agentquote.com:/var/www/app/app/Composers/SuperAdComposer.php
+   21  scp public/css/app.css root@app.agentquote.com:/var/www/html//css/app.css
+   22  scp public/css/app.css root@app.agentquote.com:/var/www/html/css/app.css
+   24  scp public/css/app.css root@app.agentquote.com:/var/www/html/css/app.css
+   26  scp app/Console/Commands/DzineerCleanReportCommand.php root@app.agentquote.com:/var/www/app/app/Console/Commands/
+  151  scp .env root@dzineer.com:/var/www/data/.env
+  152  scp .env root@dzineer.com:/var/www/app/.env
+  699  scp agentquoter-store\ 3.zip root@app.agentquote.com:/tmp/
+  706  scp resources/views/affiliate/affiliates-table.blade.php root@app.agentquote.com:/var/www/app/views/affiliate/affiliates-table.blade.php
+  708  scp resources/views/affiliate/affiliates-table.blade.php root@app.agentquote.com:/var/www/app/resources/views/affiliate/affiliates-table.blade.php
+  790  scp root@agentquoter.com:/var/www/vhosts/agentquoter.tar.gz .
+ 1120  scp public/js/app.js root@app.agentquote.com:/var/www/html/js/app.js
+ 1135  history | grep scp | grep png > history.scp.pngs

@@ -1,0 +1,44 @@
+//- audio - RD Audio Object
+
+mixin rd-audio-player-with-small-img (img, audio, playlistName)
+  - var playlist = typeof(audio.playlist) !== 'undefined'
+
+  // RD Audio
+  .rd-audio-wrap.reveal-xs-flex
+    +img-set-dimensions(img, 'img-responsive veil reveal-xs-inline-block')
+    .rd-audio.offset-top-15.offset-xs-top-0(data-rd-audio-playlist-name= playlistName, data-rd-volume-bar-type='horizontal')
+      h4.text-light.text-white Additional Treatments
+      div.text-italic.text-white
+        ='by '
+        span.text-extra-bold John Doe
+      .rd-audio-controls.text-center
+        .rd-audio-controls-left
+          // Play\Pause button
+          a.rd-audio-play-pause.fa.fa-play.rd-audio-icon(href="#" class=(playlist) ? 'has-controls' : '')
+
+        .rd-audio-progress-bar-wrap
+          // Progress bar
+          .rd-audio-progress-bar
+
+        //Time
+        .rd-audio-time
+          // currentTime
+          span.rd-audio-current-time 00:00
+        // Volume button
+        a.rd-audio-volume.fa.fa-volume-up.rd-audio-icon(href="#")
+        // Volume bar
+        .rd-audio-volume-bar
+
+        .rd-audio-controls-righ.veil
+          // Playlist button
+          a.rd-audio-playlist-button.rd-audio-icon.mdi.mdi-dots-horizontal(href="#")
+
+
+      if playlist
+        .rd-audio-playlist-wrap
+          h6.rd-audio-playlist-title Playlist
+          ul.rd-audio-playlist(data-rd-audio-playlist= playlistName data-rd-audio-play-on="li")
+            each track in audio.playlist
+              li(data-rd-audio-src=track.href data-rd-audio-title=track.title data-rd-audio-author= track.author)
+
+

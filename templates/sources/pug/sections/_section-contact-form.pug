@@ -1,0 +1,30 @@
+//Contact Form
+section#contacts.section-60.section-md-top-80.section-md-bottom-100
+  .shell
+    h3.text-center Contact us
+    // RD Mailform
+    form.rd-mailform.text-left.offset-top-30(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+      .range.offset-top-0
+        .cell-md-4
+          .form-group
+            label.form-label.form-label-outside(for="contact-name")
+              | Your name
+              span.text-primary *
+            input#contact-name.form-control(type="text" name="name" data-constraints="@Required" placeholder="Your name")
+        .cell-md-4
+          .form-group
+            label.form-label.form-label-outside(for="contact-email")
+              | Email address
+              span.text-primary *
+            input#contact-email.form-control(type="email" name="email" placeholder="info@demolink.org" data-constraints="@Required @Email")
+        .cell-md-4
+          .form-group
+            label.form-label.form-label-outside(for="contact-phone") Subject
+            input#contact-phone.form-control(type="text" name="subject" placeholder="Subject")
+      .form-group.textarea-group
+        label.form-label.form-label-outside(for="contact-message")
+          | You message
+          span.text-primary *
+        textarea#contact-message.form-control(name="message" placeholder="Your message" data-constraints="@Required")
+      .offset-top-40.text-center
+        button(type="submit").btn.btn-primary Send

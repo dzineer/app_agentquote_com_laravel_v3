@@ -1,0 +1,307 @@
+/* @import './bulma';
+@import "toastr";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+@import "toastr";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* @import 'normalize'; */
+@import 'form';
+@import 'header';
+@import 'ut';
+@import 'card';
+@import 'box';
+@import 'needs-analyser';
+
+/* :root {
+    --main-bg-primary: @apply .tw-text-primary;
+    --main-text-color: @apply .tw-text-black;
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    min-width: 320px;
+}
+
+.btn {
+    @apply .tw-no-underline .tw-rounded-full .tw-py-2 .tw-px-6 .tw-uppercase .tw-font-semibold;
+}
+
+.btn-blue {
+    @apply  .tw-bg-primaryBright .tw-text-white
+}
+
+.dz\:btn {
+    @apply .tw-cursor-pointer .tw-no-underline .tw-rounded-full .tw-py-4 .tw-px-8 .tw-uppercase .tw-font-semibold;
+}
+
+.dz\:btn-blue {
+    @apply  .tw-bg-primaryBright .tw-text-white;
+}
+
+.dz\:btn--blue {
+    @apply  .tw-bg-primaryBright .tw-text-white;
+}
+
+.bg {
+    background-image: radial-gradient(circle at 0 100%, #6585b0, #2e4460);
+}
+
+$main_blue: #3B92FF;
+
+.signup-banner {
+    max-height:360px;
+    background-color: #f3f3f3;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.text-color-mainblue {
+    color: $main_blue;
+}
+
+.text-color--mainblue {
+    color: $main_blue;
+}
+
+.button--start-button:hover {
+    background-color: $main_blue;
+    color: white;
+}
+.start-button:hover {
+    background-color: $main_blue;
+    color: white;
+}
+
+.signup-state-amount {
+    min-height: 470px;
+    background-color: white;
+}
+
+.signup-state__amount {
+    min-height: 550px;
+    background-color: white;
+}
+
+.dz\:section-header {
+   @apply .text-color-mainblue
+}
+
+.dz\:section__header {
+   @apply .text-color-mainblue
+}
+
+.dz\:section-header-clean {
+    @apply .text-color-mainblue .tw-text-4xl
+ }
+
+.dz\:section__header--clean {
+    @apply .text-color-mainblue .tw-text-4xl
+ }
+
+.step-image::after {
+    content: "";
+    background: url(/images/left-arrow.svg) no-repeat right center;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    top: 50%;
+    height: 16px;
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.dz\:section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    min-width: 320px;
+}
+
+.price-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.dz\:menu-item {
+    @apply .tw-border-b-3 .tw-border-transparent .tw-rounded-none;
+}
+
+.dz\:menu-item.is-active {
+    @apply .tw-border-primaryLight;
+}
+
+.dz\:menu__item--is-active {
+    @apply .tw-border-primaryLight;
+}
+
+.dz\:menu-item:hover {
+    @apply .tw-border-gray-500;
+}
+
+.icon:hover {
+    @apply .tw-text-white;
+}
+
+@media screen and (min-width: 880px) {
+    .brand-logo {
+        max-width: 200px;
+    }
+
+    .brand__logo {
+        max-width: 200px;
+    }
+
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);
+}
+
+@media screen and (min-width: 780px) {
+    .brand-logo {
+        margin-top: 0;
+    }
+
+    .brand {
+        font-size: 40px;
+    }
+    .brand-logo {
+        max-width: 200px;
+    }
+    .brand__logo {
+        max-width: 200px;
+    }
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);  
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);      
+}
+
+@media screen and (min-width: 680px) {
+    .brand-logo {
+        max-width: 200px;
+    }
+    .brand__logo {
+        max-width: 200px;
+    }
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);    
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);    
+}
+
+@media screen and (min-width: 580px) {
+    .brand-logo {
+        max-width: 200px;
+    }
+
+    .brand__logo {
+        max-width: 200px;
+    }
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);    
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);    
+}
+
+@media screen and (min-width: 420px) {
+    .brand-logo {
+        width: 100% !important;
+    }
+    .brand__logo {
+        width: 100% !important;
+    }
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);    
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);    
+}
+@media screen and (min-width: 321px) {
+    .brand-logo {
+        max-width: 200px;
+    }
+    .brand__logo {
+        max-width: 200px;
+    }
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);    
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);    
+}
+
+@media screen AND (max-width: 1024px) {
+    html, body {
+        font-size: 14px;
+    }
+}
+
+@media screen AND (max-width: 640px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    .dz\:section {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .quote-field {
+        line-height: 1;
+    }
+
+    
+    .quote__field {
+        line-height: 1;
+    }
+}
+
+@media screen AND (max-width: 320px) {
+    html, body {
+        font-size: 11px;
+    }
+}
+
+
+/* .tw-container {
+    height: 100%;
+    background-image: url(/images/home-banner-lary.svg), url(/images/wires.svg), url(/images/bottom-wires.svg);
+    background-repeat: no-repeat;
+    background-size: 500px, 150px 180px, 190px 196px;
+    background-position: 8px 264%, 40px 12px, 100% 112%;
+} */
+
+
+input[type='radio'].dz-input + label.dz-label span {
+    // transition: background .2s, transform .2s;
+}
+
+input[type='radio'].dz-input + label.dz-label span:hover,
+input[type='radio'].dz-input + label.dz-label:hover span{
+ // transform: scale(1.2);
+} 
+
+input[type='radio']:checked + label.dz-label span {
+  background-color: #3490DC; //bg-blue
+  box-shadow: 0px 0px 0px 2px white inset;
+}
+
+input[type='radio']:checked.dz-input + label.dz-label {
+   color: #3490DC; //text-blue
+}
+
+a:focus, input:focus, textarea:focus, button:focus {
+    outline: thin dotted;
+}

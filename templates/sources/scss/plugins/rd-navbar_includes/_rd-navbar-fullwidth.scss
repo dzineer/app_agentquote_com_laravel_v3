@@ -1,0 +1,54 @@
+/*
+* Fullwidth Layout
+*/
+
+.rd-navbar-fullwidth {
+  display: block;
+
+  &.rd-navbar-default {
+
+  }
+
+  //.rd-navbar-variant-1
+  //
+
+  &.rd-navbar-variant-1 {
+    .rd-search.active {
+
+    }
+  }
+
+  // RD Navbar Panel
+  .rd-navbar-panel {
+  }
+
+  // RD Navbar nav wrap
+  .rd-navbar-nav-wrap {
+
+  }
+
+  // RD Navbar Nav
+  .rd-navbar-nav {
+    width: 100%;
+
+    > li + li {
+      margin-left: $navbar-fullwidth-nav-indent;
+    }
+  }
+
+  // RD Navbar States
+  &.rd-navbar--is-stuck {
+
+    //.rd-navbar-panel {
+    //  display: none !important;
+    //}
+    .rd-navbar-brand {
+      display: none;
+    }
+
+    .rd-navbar-nav-container{
+      margin-top: 0;
+    }
+
+  }
+}

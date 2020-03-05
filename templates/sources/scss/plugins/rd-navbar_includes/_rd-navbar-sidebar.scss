@@ -1,0 +1,109 @@
+/*
+* Sidebar Layout
+*/
+html.rd-navbar-sidebar-linked {
+  body {
+    padding-left: $rd-navbar-nav-min-width;
+  }
+}
+
+.rd-navbar-sidebar {
+  position: fixed;
+  display: block;
+
+  .rd-navbar-nav {
+    li {
+      &:hover,
+      &.focus {
+
+        > a, > a:hover {
+          color: $rd-navbar-nav-hover-color;
+          background: $rd-navbar-nav-active-background;
+        }
+        > .rd-navbar-submenu-toggle {
+          color: #fff;
+          &:hover {
+            cursor: pointer;
+            color: #fff;
+          }
+        }
+      }
+
+      .rd-navbar-dropdown,
+      .rd-navbar-megamenu {
+        transition: opacity 0.3s, height 0.4s ease;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+      }
+
+      &.opened {
+        > .rd-navbar-dropdown,
+        > .rd-navbar-megamenu {
+          opacity: 1;
+          height: auto;
+        }
+        > a {
+          background: $rd-navbar-nav-active-background;
+          color: $rd-navbar-nav-hover-color;
+        }
+        > .rd-navbar-submenu-toggle {
+          color: #fff;
+          &::after {
+            @include transform (rotate(180deg));
+          }
+        }
+      }
+    }
+  }
+
+  // RD Navbar Toggle
+  .rd-navbar-submenu-toggle {
+    &::after {
+      content: '\f078';
+      position: absolute;
+      top: 22px;
+      right: 0;
+      margin-top: -22px;
+      width: 65px;
+      height: 44px;
+      font: 400 14px "FontAwesome";
+      line-height: 42px;
+      text-align: center;
+      transition: 0.4s all ease;
+      z-index: 2;
+    }
+  }
+
+  // RD Navbar Brand
+  .rd-navbar-brand {
+    text-align: center;
+  }
+
+  // RD Navbar Collapse
+  .rd-navbar-collapse-items {
+    top: 0;
+    left: 0;
+    padding-top: 45px;
+    @include transform(scale(.7));
+    @include transform-origin(0% 0%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .rd-navbar-collapse {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: inline-block;
+    z-index: 1;
+
+    &.active {
+      .rd-navbar-collapse-items {
+        opacity: 1;
+        visibility: visible;
+        @include transform(scale(1));
+      }
+    }
+  }
+}

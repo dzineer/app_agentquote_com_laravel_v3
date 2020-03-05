@@ -1,0 +1,62 @@
+/*
+    following the block element modifier(bem) naming convention (methodology)
+    1 - block
+    2 - element
+    3 - modifier
+    output: block__element--modifier 
+*/
+@mixin __bem($block, $element:"", $modifier:"") {
+    @if (str-length($element) > 0 and str-length($modifier) > 0) {
+       .#{$block}__#{$element}--#{$modifier} {
+            @content;
+       }
+    }    
+    @else if(str-length($element) > 0) {
+       .#{$block}__#{$element} {
+            @content;
+       }
+    }
+    @else if(str-length($modifier) > 0) {
+       .#{$block}--#{$modifier} {
+            @content;
+       }
+    }    
+    @else {
+       .#{$block} {
+            @content;
+       }
+    }
+}
+
+@function __bem($block, $element:"", $modifier:"") {
+    @if (str-length($element) > 0 and str-length($modifier) > 0) {
+        @return ".#{$block}__#{$element}--#{$modifier}";
+    }    
+    @else if(str-length($element) > 0) {
+       @return ".#{$block}__#{$element}";
+    }
+    @else if(str-length($modifier) > 0) {
+       @return ".#{$block}--#{$modifier}";
+    }    
+    @else {
+       @return ".#{$block}";
+    }
+}
+
+.dzineer {
+    $self: &;
+    &__leg {
+        &--bright {
+            color: baige;
+            #{ $self }--dark-mode & {
+                color: gray;
+            }
+        }
+        width: 140px;
+        background-color: white;
+       /* dzineer__leg in dark mode */
+        #{ $self }--dark-mode & {
+            background-color: black;
+        }
+    }
+}

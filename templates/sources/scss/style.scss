@@ -1,0 +1,22 @@
+//
+// Imports
+//
+
+@import "variables";
+@import "toolkit";
+
+.modal {
+	.modal-wrap {
+		display: flex;
+		height: 100%;
+		.modal-dialog {
+			margin: auto;
+		}
+	}
+}
+
+.checkbox-inline {
+	span + span {
+		margin-left: 5px;
+	}
+}

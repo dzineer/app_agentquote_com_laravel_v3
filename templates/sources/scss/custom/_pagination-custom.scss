@@ -1,0 +1,71 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+
+.pagination {
+  margin: 0;
+  border-radius: 0;
+
+  > li {
+    > a,
+    > span {
+      border: none;
+      background: transparent;
+      color: $gray-light;
+      vertical-align: middle;
+      border-radius: 0;
+      float: none;
+      padding: 0;
+      font-style: italic;
+      vertical-align: middle;
+      transition: 0.2s ease-in;
+    }
+
+    > span {
+      pointer-events: none;
+    }
+
+    &.active{
+      span{
+        background: transparent;
+        color: $brand-primary;
+      }
+    }
+
+    &.active,
+    &:focus,
+    &:hover {
+      > a {
+        color: $brand-primary;
+        background: transparent;
+      }
+    }
+
+
+    a:focus{
+      background: transparent;
+    }
+  }
+
+  li + li {
+    > a,
+    > span {
+      margin-left: 18px;
+    }
+  }
+
+  .next-link {
+    font-style: normal;
+
+    &:after {
+      content: '\f105';
+      font-family: 'FontAwesome';
+      color: $gray-light;
+      padding-left: 7px;
+
+      position: relative;
+      top:1px;
+    }
+  }
+
+}

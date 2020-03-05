@@ -1,0 +1,30 @@
+.footer {
+  background-color: #EDEDED;
+  min-height: 180px;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  .social-media-container {
+    display: flex;
+    justify-content: center;
+    a {
+      margin: 4px 4px 15px;
+      color: #666666;
+    font-size: 2.0rem;
+    }
+  }
+  .import-links-container {
+    display: flex;
+    justify-content: center;
+    a {
+      text-transform: uppercase;
+      color: #666666;
+      font-weight: bold;
+      &:nth-child(odd) {
+        margin-right: 8px;
+      }
+    }
+  }
+}

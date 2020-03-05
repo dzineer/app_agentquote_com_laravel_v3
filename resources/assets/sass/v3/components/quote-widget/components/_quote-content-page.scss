@@ -1,0 +1,23 @@
+/* quote contents page */
+
+#quote-content-page {
+
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+
+  #main-content-container {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 500px;
+
+    @import "form";
+    @import "info-container";
+
+  }
+}

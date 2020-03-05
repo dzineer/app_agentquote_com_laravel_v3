@@ -1,0 +1,205 @@
+<template>
+    <div v-if="show" class="tw-w-full">
+        
+        <re-quote 
+            v-if="canRequote" 
+            :quote="quote" 
+            :quoting="quoting" 
+            :insuranceCategory="insuranceCategory">
+        </re-quote>
+
+        <h2 class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
+
+        <quote-item v-for="(item, index) in quoteItems" :key="index"
+            :policy="item.policy" 
+            :links="item.links" 
+            :logo="item.logo" 
+            :carrierDetails="item.carrierDetails"
+            :reference="item.reference"
+            :insuranceCategory="insuranceCategory"
+            :rate-classifications="item.rateClassifications">
+        </quote-item>         
+    </div>    
+</template>
+
+<script>
+    import QuoteItem from './QuoteItem';
+    import ReQuote from './ReQuote';
+    export default {
+        props: ['items', 'show', 'quoteDetails', 'canRequote', 'heading', 'insuranceCategory'],
+        components: {
+            QuoteItem, ReQuote
+        },
+        data() {
+            return {
+                quoteItems: [],
+                quoting: false,
+                quote: {},
+                category: '',
+                token: ''
+            }
+        },
+        mounted() {
+            debugger;
+            
+            window.vueEvents.$on('generateQuote', this.onGenerateQuote);
+            window.vueEvents.$on('reGenerateQuote', this.onReGenerateQuote);
+            this.$root.$on('quoteUpdated', this.onQuoteUpdated);
+
+            this.quoteItems = this.items;
+            debugger;
+            this.category = this.insuranceCategory;
+            this.category = this.getCategoryFromHash();
+            this.category = this.insuranceCategory === '' ? 'termlife' : this.insuranceCategory;
+            this.quoteResultsTitle = this.getQuoteResultsTitle();
+
+        },
+        methods: {
+            getQuoteResultsTitle() {
+                if (this.insuranceCategory === 'termlife') {
+                    return 'Term Life Quote Results';
+                } else if (this.insuranceCategory === 'fe') {
+                    return 'Burial Insurance Quote Results';
+                } else if(this.insuranceCategory === 'sit') {
+                    return 'Mortgage Protection Quote Results';
+                } else {
+                    return 0;
+                }
+            },            
+            getCategoryFromHash() {
+                return location.hash.length > 0 ? location.hash.substr(1) : '';
+            },         
+            onQuoteUpdated(quote) {
+                this.quote = quote.value;
+            },
+            onReGenerateQuote(data) {
+
+                const token = jQuery('meta[name="csrf-token"]').attr('content');
+
+                axios.defaults.headers.common = {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': token
+                };
+
+                debugger;
+                let benefit = data.benefit;
+                let term = data.term;
+
+                if (benefit === 0) {
+                    toastr.error('You must choose a Face Amount');
+                    return;
+                }
+
+                let url = '/quote/verified/?token=' + this.token + '&format=json&action=requote' + '&benefit=' + benefit + '&term=' + term;
+
+                this.verifying = true;
+
+                axios.get(url).then( res => {
+                    console.log(res);
+                    if (res.statusText === "OK") {
+
+                        if (res.data.success === true) {
+                            debugger;
+                            this.quoteItems = res.data.quote.items;
+                            window.vueEvents.$emit('showQuote');
+                            this.$root.$emit('quoteComplete', {});
+                            window.vueEvents.$emit('finishedRequote');
+                            // location.href = res.data.redirect;
+                        } else {
+                            window.vueEvents.$emit('finishedRequote');
+                        }
+
+                    }
+                });              
+
+            },                 
+            onGenerateQuote(data) {
+
+                const token = jQuery('meta[name="csrf-token"]').attr('content');
+
+                axios.defaults.headers.common = {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': token
+                };
+
+                debugger;
+                let url = '/quote/verified/?token=' + data.token + '&format=json';
+
+                this.token = data.token;
+
+                this.verifying = true;
+
+                axios.get(url).then( res => {
+                    console.log(res);
+                    if (res.statusText === "OK") {
+
+                        if (res.data.success === true) {
+                            debugger;
+                            this.quoteItems = res.data.quote.items;
+                            window.vueEvents.$emit('showQuote');
+                            // location.href = res.data.redirect;
+                        } else {
+
+                        }
+
+                    }
+                });              
+
+            },            
+            getQuote() {
+                let quote = {
+                    items: [
+                        { 
+                            policy: "Protective Classic Choice Term 20",
+                            links: [ { text: 'Click Here to Match a rate to your Health Profile', 'href': '#'}, { text: 'View Policy Details', 'href': '#'} ],
+                            logo: "/images/logos/protective-life-insurance.jpg", 
+                            rateClassificaions: [{ name: 'Preferred Plus', 'premium': '10.20' }, { name: 'Preferred', 'premium': '12.40' }, { name: 'Select', 'premium': '16.02' }, { name: 'Standard', 'premium': '16.50' }]
+                        },    
+                        { 
+                            policy: "Protective Classic Choice Term 20",
+                            links: [ { text: 'Click Here to Match a rate to your Health Profile', 'href': '#'}, { text: 'View Policy Details', 'href': '#'} ],
+                            logo: "/images/logos/protective-life-insurance.jpg", 
+                            rateClassificaions: [{ name: 'Preferred Plus', 'premium': '10.20' }, { name: 'Preferred', 'premium': '12.40' }, { name: 'Select', 'premium': '16.02' }, { name: 'Standard', 'premium': '16.50' }]
+                        },  
+                        { 
+                            policy: "Protective Classic Choice Term 20",
+                            links: [ { text: 'Click Here to Match a rate to your Health Profile', 'href': '#'}, { text: 'View Policy Details', 'href': '#'} ],
+                            logo: "/images/logos/protective-life-insurance.jpg", 
+                            rateClassificaions: [{ name: 'Preferred Plus', 'premium': '10.20' }, { name: 'Preferred', 'premium': '12.40' }, { name: 'Select', 'premium': '16.02' }, { name: 'Standard', 'premium': '16.50' }]
+                        },  
+                        { 
+                            policy: "Protective Classic Choice Term 20",
+                            links: [ { text: 'Click Here to Match a rate to your Health Profile', 'href': '#'}, { text: 'View Policy Details', 'href': '#'} ],
+                            logo: "/images/logos/protective-life-insurance.jpg", 
+                            rateClassificaions: [{ name: 'Preferred Plus', 'premium': '10.20' }, { name: 'Preferred', 'premium': '12.40' }, { name: 'Select', 'premium': '16.02' }, { name: 'Standard', 'premium': '16.50' }]
+                        }                        
+                    ]
+                };
+                return quote;
+            },
+            onQuote( quoteRequest ) {
+
+                this.quoting = true;    
+
+                this.quote = {
+                    benefit: 200000,
+                    term: 20,
+                    birthdate: {
+                        yyyy: 1989,
+                        mm: 1,
+                        dd: 1
+                    }
+                };
+
+                let that = this;
+
+                setTimeout(function() {
+
+                    that.quoteItems = that.getQuote().items;
+                    that.quoting = false; 
+                    
+                }, 2000);
+            }
+        }
+    }
+</script>

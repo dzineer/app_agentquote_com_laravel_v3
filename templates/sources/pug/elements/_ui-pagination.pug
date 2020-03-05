@@ -1,0 +1,30 @@
+mixin pagination(prevLink, paginationsObj, nextLink)
+  // Pagination
+
+  if (prevLink != '')
+    div.pull-sm-left.veil.reveal-sm-inline-block
+      a(href=prevLink).btn.btn-sm.btn-akaro Back
+
+  ul.pagination
+    each paginationItem, index in paginationsObj
+      -var title
+      if(paginationItem.title)
+        -title = paginationItem.title
+      else
+        -title = index + 1
+      if(paginationItem.active)
+        li.active
+          span= title
+      else
+        li
+          a(href=paginationItem.link)= title
+    li.veil.reveal-sm-inline-block
+      span='...'
+    li.veil.reveal-sm-inline-block
+      a(href="#")='125'
+    if (nextLink != '')
+      li
+        a(href=nextLink).text-primary.next-link.text-extra-bold Next
+
+
+

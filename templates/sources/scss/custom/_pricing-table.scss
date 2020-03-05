@@ -1,0 +1,92 @@
+
+.picing-box-item {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 4.25%;
+  padding-right: 4.25%;
+  overflow: hidden;
+  max-width: 320px;
+  margin: 0 auto;
+
+  .btn {
+    padding: 12px 15px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: 33.3%;
+    max-width: none;
+    margin: 20px 0!important;
+
+    * + .btn{
+      margin-top: 24px;
+    }
+  }
+
+  @media (min-width: $screen-lg-min) {
+    .btn {
+      padding: 12px 42px;
+    }
+  }
+
+  .list-marked li {
+    color: $gray-light;
+  }
+
+  hr {
+    margin-left: -55px;
+    width: 200%;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  * + h3 {
+    margin-top: 5px;
+  }
+
+  * + .divider {
+    margin-top: 26px;
+  }
+
+  * .btn {
+    margin-top: 24px;
+  }
+
+  .divider + * {
+    margin-top: 22px;
+  }
+}
+
+.item-centered {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+
+  .pricing-box-heading {
+    font-size: 30px;
+
+    @media (min-width: $screen-md-min) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding-top: 25px;
+    padding-bottom: 54px;
+    margin: 0!important;
+  }
+
+  .list-marked li {
+    color: $white;
+  }
+
+  * + h3 {
+    margin-top: 0px;
+  }
+
+  * + .divider {
+    margin-top: 23px;
+  }
+}

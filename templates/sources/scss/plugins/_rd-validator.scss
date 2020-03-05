@@ -1,0 +1,29 @@
+/**
+ * RD Validator
+ * @Section
+ */
+
+$rd-validation-color: #f00;
+
+.mfValidation {
+  position: absolute;
+  top: 0;
+  right: 7px;
+  color: $rd-validation-color;
+  font-weight: inherit;
+  font-size: 12px;
+  line-height: 2;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: .3s all ease;
+
+  &.mfValidation--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.mfInput{
+  position: relative;
+}

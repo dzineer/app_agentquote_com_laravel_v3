@@ -1,0 +1,242 @@
+extends  ../_skeleton
+
+include ../elements/_ui-post-variant-1
+
+block variables
+	- var activeIndex = 1
+
+block title
+	title Home
+
+block page
+	// Page Header
+	include ../sections/_header-default
+	='\n'
+	
+	// Swiper
+	section.swiper-container.swiper-slider.swiper-slider-home(data-height='', data-min-height='270px', data-autoplay="5000", data-dots="true")
+		.swiper-wrapper
+			.swiper-slide(data-slide-bg='images/slider-01.jpg')
+				.swiper-slide-caption
+					.shell
+						h1.text-primary
+							span.text-light Dr.
+							| Mark Hoffman
+						h4.text-gray-light.veil.reveal-sm-block.text-regular Dr. Mark Hoffman's dental clinic welcomes you!
+						a(href="#" data-toggle="modal" data-target="#bookAppointment").btn.btn-primary Book an Appointment
+			.swiper-slide(data-slide-bg='images/slider-03.jpg')
+				.swiper-slide-caption
+					.shell
+						.range.range-xs-center.range-md-left.offset-top-0
+							.cell-sm-8.cell-md-6
+								h1.text-primary
+									| Appointments
+								h3.small.text-bold.veil.reveal-sm-block.text-regular Booking an appointment at our dental clinic is as easy as it gets...
+								.range.offset-top-10.veil.reveal-sm-flex
+									.cell-md-10
+										p.text-regular.veil.reveal-md-block
+											| You will be able to schedule a convenient time for your meeting with our dentists with just 2 clicks!
+								a(href="#" data-toggle="modal" data-target="#bookAppointment").btn.btn-primary.offset-top-20.offset-md-top-40 Book an Appointment
+			.swiper-slide(data-slide-bg='images/slider-02.jpg')
+				.swiper-slide-caption
+					.shell
+						.range.range-xs-center.range-md-left.offset-top-0
+							.cell-sm-8.cell-md-6
+								h4.text-white.text-bold
+									| We’re always available for customers
+									span.veil.reveal-sm-inline=' with emergent dental problems.'
+								p.text-white.veil.reveal-sm-block You can easily reach us 24/7 via the phone number below:
+								.unit.unit-xl-horizontal.unit-lg-horizontal.unit-md-horizontal.unit-sm-horizontal.unit-xs-vertical.unit-spacing-sm.offset-top-20.offset-sm-top-40
+									.unit-left
+										.icon.fa-phone.icon-circle.icon-lg.text-middle.text-white.veil.reveal-sm-inline-block
+									.unit-body
+										a(href="tel:#").h1.text-white.text-bold 555–123–2323
+			
+		// Swiper Pagination
+		.swiper-pagination
+	='\n'
+	
+	// Welcome to DentalPlus
+	section#about.section-85
+		.shell
+			.range
+				.cell-md-6
+					+img-set-dimensions('images/home-01-550x550.jpg', 'img-responsive')
+				.cell-md-6
+					h3 About us
+					.offset-top-30
+						h4 Our dental clinic has been founded in 2010. The founder is an honorable alumni of NYC's Columbia medical school - Mark Hoffmann, MD.
+						p After 8 previous years of practicing, he and his colleagues collaborated to found their own clinic. Coming from backgrounds of miscellaneous dental institutions of the US, they complement each other. Their common clinic became known as DentalPlus!
+						p The state of Pennsylvania highly appreciates our contribution to state's dental healthcare. Just as our local patients in the upstate Potter county of Pennsylvania.
+						p We combine extensive record of practical experience with an equal focus on customer service approach. In the last 6 years, our dental clinic grew a list of returning clients!
+						p.text-bold.text-italic We look forward to you becoming one of them as well!
+	='\n'
+	
+	include ../sections/_section_our_team
+	='\n'
+	
+	include ../sections/_section-why-choose-dental-clinic
+	='\n'
+	
+	// Our services
+	section#services.section-60.section-md-top-80.section-md-bottom-85
+		.shell
+			h3.text-center Our services
+			.range.range-xs-center.text-center.offset-top-30
+				.cell-xs-8.cell-sm-6.cell-md-3
+					+img-set-dimensions('images/services-04-270x270.jpg', 'img-responsive')
+					h4 General and preventive care
+				.cell-xs-8.cell-sm-6.cell-md-3.offset-top-60.offset-sm-top-0
+					+img-set-dimensions('images/services-5-270x270.jpg', 'img-responsive')
+					h4 Cosmetic solutions
+				.cell-xs-8.cell-sm-6.cell-md-3.offset-top-60.offset-md-top-0
+					+img-set-dimensions('images/services-6-270x270.jpg', 'img-responsive')
+					h4 Restorative solutions
+				.cell-xs-8.cell-sm-6.cell-md-3.offset-top-60.offset-md-top-0
+					+img-set-dimensions('images/services-7-270x270.jpg', 'img-responsive')
+					h4 Additional treatments
+	='\n'
+	
+	include ../sections/_section_what-patients-say
+	='\n'
+	
+	//How we can help...
+	section.bg-primary.section-60.section-md-80
+		.shell
+			.range.range-xs-center.range-md-middle
+				.cell-sm-10.cell-md-9
+					h3.text-white How we can help
+					h5.text-white We offer a wide range of procedures to help you get the perfect smile.
+				.cell-sm-10.cell-md-3.text-md-right.offset-top-25.offset-md-top-0
+					a(href="#" data-toggle="modal" data-target="#bookAppointment").btn.btn-primary Book an Appointment
+	='\n'
+	
+	section.section-50.section-md-bottom-95
+		.shell
+			.range.range-xs-center.text-center
+				.cell-sm-10.cell-md-12
+					h3 Pricing
+					
+					.pricing-box.reveal-md-flex.offset-top-50
+						.picing-box-item.bg-alabaster.text-center
+							h4 Monthly checkups with a dental hygienist
+							h3.reveal-inline-block.text-primary $150
+							span.reveal-inline-block.text-gray-lighter.text-italic
+								=' 30 minutes'
+							hr.divider
+							p Checking your dental health is crucial. Regular checkups with our dental hygienists will ensure that no problem goes unnoticed and unfixed.
+							a(href="#" data-toggle="modal" data-target="#bookAppointment").btn.btn-primary.reveal-md-block
+								| Book an Appointment
+						.picing-box-item.item-centered.bg-primary.text-center
+							p.text-white Best Value
+							.pricing-box-heading.text-white Dental restoration series
+							h3.reveal-inline-block.text-white $300
+							span.reveal-inline-block.text-white.text-italic
+								=' 30 minutes'
+							hr.divider
+							p This pack will be perfect for people who either have a lot of teeth in a need of restoration, or want to patch them up on a regular basis as a part of a preventive oral care.
+							a(href="#" data-toggle="modal" data-target="#bookAppointment").btn.btn-primary.reveal-md-block
+								| Book an Appointment
+						.picing-box-item.bg-alabaster.text-center
+							h4
+								| Teeth Whitening -
+								br
+								| 5 Sessions
+							h3.reveal-inline-block.text-primary $750
+							span.reveal-inline-block.text-gray-lighter.text-italic
+								=' 60 minutes'
+							hr.divider
+							p Teeth whitening will make your smile stand out again and shine bright! Nevertheless, this procedure requires a regular maintenance of that effect.  That is the reason that we provide these 5 teeth whitening sessions as a pack.
+							a(href="#" data-toggle="modal" data-target="#bookAppointment").btn.btn-primary.reveal-md-block
+								| Book an Appointment
+	='\n'
+	
+	// Recent news
+	section#news.section-70.section-md-top-80.section-md-bottom-95.bg-alabaster
+		.shell
+			h3.text-center Recent news
+			.range.range-xs-center.text-center.offset-top-30.text-md-left
+				.cell-md-4
+					+post-variant-1(
+					{
+						"title": "First signs of gum disease",
+						"href": "#",
+						"description": "Gums disease is preceded by few very distinct symptoms. One of these is when you spit out blood after brushing your teeth..."
+					},
+					{
+						"author": "John Doe",
+						"date": "May 10, 2018",
+						"categories": {
+							"name": "Dental",
+							"link": "#"
+						},
+						"commentLink": "#",
+						"comment": 2
+					},
+					{
+						"src": "images/home-02-370x370.jpg"
+					},
+					0,
+					''
+					)
+				.cell-md-4.offset-top-50.offset-md-top-0
+					+post-variant-1(
+					{
+						"title": "Basic dental care 101",
+						"href": "#",
+						"description": "Americans oftentimes ignore some basic, daily routines of oral hygiene that need to be upheld. Practicing healthy habits like these ones will..."
+					},
+					{
+						"author": "John Doe",
+						"date": "May 10, 2018",
+						"categories": {
+							"name": "Dental",
+							"link": "#"
+						},
+						"commentLink": "#",
+						"comment": 2
+					},
+					{
+						"src": "images/home-03-370x370.jpg"
+					},
+					0,
+					''
+					)
+				.cell-md-4.offset-top-50.offset-md-top-0
+					+post-variant-1(
+					{
+						"title": "Avoiding bad breath",
+						"href": "#",
+						"description": "Bad breath is a deal breaker both in business and in personal life of ours. And while breath fresheners or candies hide it, they do not cure…"
+					},
+					{
+						"author": "John Doe",
+						"date": "May 10, 2018",
+						"categories": {
+							"name": "Dental",
+							"link": "#"
+						},
+						"commentLink": "#",
+						"comment": 2
+					},
+					{
+						"src": "images/home-04-370x370.jpg"
+					},
+					0,
+					''
+					)
+	
+	='\n'
+	
+	include ../sections/_section-contact-form
+	
+	section
+		.google-map-container( data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-styles='[{"featureType":"landscape","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]}]' )
+			.google-map
+			ul.google-map-markers
+				li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png' )
+	='\n'
+	
+	.footer-offset-none
+		// Page Footer
+		include ../sections/_footer-default-index

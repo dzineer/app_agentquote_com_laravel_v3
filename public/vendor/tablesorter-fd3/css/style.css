@@ -1,0 +1,114 @@
+/* tables */
+table.tablesorter {
+	margin:10px 0pt 15px;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+}
+/*table.tablesorter thead tr th.header {
+	background-image: url(../images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}*/
+table.tablesorter tbody td {
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+}
+table.tablesorter thead tr th.headerSortUp {
+	background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr th.headerSortDown {
+	background-image: url(../images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+}
+
+table.tablesorter thead tr th.header {
+	position: relative;
+	min-width: 102px;
+}
+
+/*
+y1: 152
+x1: 120
+height: 4
+width: 20
+
+y2: 158
+x2: 120
+height: 4
+width: 20
+
+change y: 6
+change x: 1
+
+
+ */
+
+/*table.tablesorter thead tr th.header:before {
+	content: '';
+	background-image: url(../images/ascending.svg);
+	height: 4px;
+	width: 20px;
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	background-repeat: no-repeat;
+	top: 19px;
+}
+
+
+table.tablesorter thead tr th.header:after {
+	content: '';
+	background-image: url(../images/descending.svg);
+	height: 4px;
+	width: 20px;
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	top: 24px;
+	background-repeat: no-repeat;
+}*/
+
+
+/*
+table.tablesorter thead tr th.header:hover::before {
+	background-image: url(../images/ascending_hover.svg);
+}
+
+table.tablesorter thead tr th.header:hover::after {
+	background-image: url(../images/descending_hover.svg);
+}*/
+
+table.tablesorter thead tr th.header a.ascending {
+	background-image: url(../images/ascending.svg);
+	height: 6px;
+	width: 10px;
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	background-repeat: no-repeat;
+	top: 18px;
+}
+
+table.tablesorter thead tr th.header a.ascending:hover {
+	background-image: url(../images/ascending_hover.svg);
+}
+
+table.tablesorter thead tr th.header a.descending {
+	background-image: url(../images/descending.svg);
+	height: 6px;
+	width: 10px;
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	top: 25px;
+	background-repeat: no-repeat;
+}
+
+table.tablesorter thead tr th.header a.descending:hover {
+	background-image: url(../images/descending_hover.svg);
+}

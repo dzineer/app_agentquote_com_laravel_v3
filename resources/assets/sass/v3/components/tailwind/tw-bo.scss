@@ -1,0 +1,133 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import 'ut';
+
+@media screen and (min-width: 880px) {
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);
+}
+
+@media screen and (min-width: 780px) {
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);  
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);      
+}
+
+@media screen and (min-width: 680px) {
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);    
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);    
+}
+
+@media screen and (min-width: 580px) {
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);    
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);    
+}
+
+@media screen and (min-width: 420px) {
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);    
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);    
+}
+@media screen and (min-width: 321px) {
+    @include padding-modifiers('dz', 500);
+    @include margin-modifiers('dz', 500);    
+
+    @include padding-modifiers-bem('dz', 500);
+    @include margin-modifiers-bem('dz', 500);    
+}
+
+/* .tw-flex-col {
+    border: 2px dotted #bc3c7f;
+    position: relative;
+}
+.tw-flex-row {
+    border: 2px dotted #40bc3c;
+    position: relative;
+}
+.tw-flex {
+    border: 2px dotted #3c8dbc;
+    position: relative;
+}
+
+.tw-flex::after {
+    content: "Flex";
+    width: 50px;
+    height: 28px;
+    background: #3c8dbc;
+    color: white;
+    position: absolute;
+    right: -51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+}
+
+.tw-flex-row::after {
+    content: "Flex Row";
+    width: 50px;
+    height: 28px;
+    background: #40bc3c;
+    color: white;
+    position: absolute;
+    right: -51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+}
+
+.tw-flex-col::after {
+    content: "Flex COL";
+    width: 90px;
+    height: 28px;
+    background: #bc3c7f;
+    color: white;
+    position: absolute;
+    right: -90px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+img,div,a,button,span {
+    position: relative;
+}
+
+div::after {
+    content: "Div";
+    width: 86px;
+    height: 28px;
+    background: #3c49bc;
+    color: white;
+    position: absolute;
+    right: -90px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+} */

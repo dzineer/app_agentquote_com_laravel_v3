@@ -1,0 +1,54 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-image: linear-gradient(to right, #a25b5b, #692e4c);
+    h1 {
+        margin-top: 0;
+    }
+}
+
+.section { 
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+.header-top > a {
+    color: inherit;
+    text-transform: uppercase;
+}
+
+header h1 {
+    color: white;
+    font-size: 1.6em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav > a {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+}

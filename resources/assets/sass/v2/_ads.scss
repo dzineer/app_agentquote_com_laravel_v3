@@ -1,0 +1,19 @@
+.ad-form-field {
+  width: 100%;
+}
+
+#ads-box-container {
+  display: none;
+}
+
+#ads-box-container.show {
+  display: block;
+}
+
+#sponsored {
+  display: block;
+  max-width: 100px;
+  padding-left: 10px;
+  margin: 6px auto 6px 64px;
+  width: 60%;
+}

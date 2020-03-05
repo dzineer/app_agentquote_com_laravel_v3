@@ -1,0 +1,22 @@
+--
+    -- Table structure for table `categories_insurance`
+    --
+        -- REFERENCES categories(cat_id)
+CREATE TABLE `categories_insurance` (
+    `category_id` int(10) UNSIGNED NOT NULL,
+    FOREIGN KEY fk_carrier_id(carrier_id),
+    REFERENCES carriers(carrier_id),
+    `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `created_at` timestamp NULL DEFAULT NULL,
+    `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ON UPDATE CASCADE
+ON DELETE RESTRICT
+
+
+ALTER TABLE `carrier_guides`
+ADD KEY `fk_category` (`category_id`);
+
+
+ALTER TABLE `carrier_guides` ADD FOREIGN KEY (`category_id`) REFERENCES `categories_insurance` (`category_id`)

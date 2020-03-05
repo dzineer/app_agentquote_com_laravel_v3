@@ -1,0 +1,88 @@
+//
+// Comments
+// --------------------------------------------------
+
+.comment {
+  padding: 19px 20px 28px;
+  border-radius: 4px;
+
+  * + p {
+    margin-top: 15px;
+  }
+
+  .icon-reply{
+    position: absolute;
+    bottom: -20px;
+    right: -7px;
+  }
+  
+  .unit-body{
+    position: relative;
+    
+    .range{
+      position: static;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .icon-reply {
+      position: relative;
+      top:0;
+      right: 12px;
+    }
+  }
+
+  @media (max-width: $screen-sm-min) {
+  	.unit-left{
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .list-inline-dashed{
+      li:before{
+        display: none;
+      }
+      li  {
+        display: block;
+      }
+      li+li{
+        margin-left: 0;
+      }
+    }
+  }
+
+
+}
+
+.comment + .comment {
+  margin-top: 10px;
+}
+
+
+
+
+// Comments reply
+// -------------------------
+
+.comment-reply {
+  margin-top: 25px;
+}
+
+@media (min-width: $screen-sm-min) {
+  .comment{
+    img{
+      margin-top:12px;
+    }
+  }
+  .comment-reply {
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .comment-reply {
+    margin-left: 58px;
+  }
+}

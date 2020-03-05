@@ -1,0 +1,214 @@
+.users-table {
+ width: 100%;
+}
+
+/* tables */
+
+
+/*
+y1: 152
+x1: 120
+height: 4
+width: 20
+
+y2: 158
+x2: 120
+height: 4
+width: 20
+
+change y: 6
+change x: 1
+
+
+ */
+
+table.tablesorter {
+ margin:10px 0pt 15px;
+ width: 100%;
+ text-align: left;
+}
+
+table.tablesorter thead tr {
+ position: relative;
+ min-width: 102px;
+}
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+}
+
+table.tablesorter tbody td {
+}
+table.tablesorter tbody tr.odd td {
+}
+table.tablesorter thead tr th.headerSortUp {
+ background-image: url('/vendor/tablesorter-fd3/images/asc.gif');
+}
+table.tablesorter thead tr th.headerSortDown {
+ background-image: url('/vendor/tablesorter-fd3/images/desc.gif');
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+}
+
+table.tablesorter thead tr th.sheader {
+ position: relative;
+ min-width: 102px;
+}
+
+table.tablesorter thead tr th.sheader a.ascending {
+ background-image: url('/vendor/tablesorter-fd3/images/ascending.svg');
+ height: 6px;
+ width: 10px;
+ text-align: right;
+ position: absolute;
+ right: 10px;
+ background-repeat: no-repeat;
+ top: 18px;
+}
+
+table.tablesorter thead tr th.sheader a.ascending:hover {
+ background-image: url('/vendor/tablesorter-fd3/images/ascending_hover.svg');
+}
+
+table.tablesorter thead tr th.sheader a.ascending:hover::after {
+ content: 'Ascending';
+ width: 100px;
+ height: 27px;
+ position: absolute;
+ background: #fff;
+ border: 1px solid #ccc;
+ z-index: 9999999;
+ top: -27px;
+ padding: 1px;
+ text-align: center;
+ left: -110px;
+ border-bottom-left-radius: 15px;
+ border-top-right-radius: 18px;
+ border-top-left-radius: 15px;
+ /* font-weight: normal; */
+ text-transform: capitalize;
+}
+
+
+table.tablesorter thead tr th.sheader a.descending:hover::after {
+ content: 'Descending';
+ width: 100px;
+ height: 27px;
+ position: absolute;
+ background: #fff;
+ border: 1px solid #ccc;
+ z-index: 9999999;
+ top: -27px;
+ padding: 1px;
+ text-align: center;
+ left: -110px;
+ border-bottom-left-radius: 15px;
+ border-top-right-radius: 18px;
+ border-top-left-radius: 15px;
+ /* font-weight: normal; */
+ text-transform: capitalize;
+}
+
+table.tablesorter thead tr th.sheader a.descending {
+ background-image: url('/vendor/tablesorter-fd3/images/descending.svg');
+ height: 6px;
+ width: 10px;
+ text-align: right;
+ position: absolute;
+ right: 10px;
+ top: 25px;
+ background-repeat: no-repeat;
+}
+
+table.tablesorter thead tr th.sheader a.descending:hover {
+ background-image: url('/vendor/tablesorter-fd3/images/descending_hover.svg');
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1400px)  {
+  ._fd3-table-responsive table thead tr th, ._fd3-table-responsive table tbody tr td {
+    font-size: 80% !important;
+    max-width: 80px !important;
+  }
+  table.tablesorter thead tr th.sheader {
+   position: relative;
+   font-size: 80% !important;
+   max-width: 80px !important;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1023px)  {
+  ._fd3-table-responsive table thead tr th, ._fd3-table-responsive table tbody tr td {
+    font-size: 69% !important;
+    max-width: 70px !important;
+  }
+  table.tablesorter thead tr th.sheader {
+    position: relative;
+    font-size: 69% !important;
+    max-width: 70px !important;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px)  {
+  ._fd3-table-responsive table thead tr th, ._fd3-table-responsive table tbody tr td {
+    font-size: 66% !important;
+    max-width: 66px !important;
+  }
+  table.tablesorter thead tr th.sheader {
+    font-size: 66% !important;
+    max-width: 66px !important;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 600px)  {
+  ._fd3-table-responsive table thead tr th, ._fd3-table-responsive table tbody tr td {
+    font-size: 50% !important;
+    max-width: 50px !important;
+  }
+  table.tablesorter thead tr th.sheader {
+   font-size: 50% !important;
+   max-width: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+ ._fd3-table-responsive table thead tr th, ._fd3-table-responsive table tbody tr td {
+  font-size: 48% !important;
+   max-width: 40px !important;
+ }
+ table.tablesorter thead tr th.sheader {
+  font-size: 48% !important;
+  max-width: 40px !important;
+ }
+}
+
+
+
+/*
+@media all and (max-width: 760px)
+{
+  table {
+    display: block;
+  }
+
+  table caption {
+  }
+
+  table tr {
+    display: list-item;
+    border: none;
+  }
+
+  table th {
+    display: inline-block;
+    margin-right: 0.2rem;
+  }
+
+  table td {
+    display: inline-block;
+    margin-right: 0.2rem;
+  }
+
+}
+
+*/
+
+

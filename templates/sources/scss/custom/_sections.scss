@@ -1,0 +1,20 @@
+//
+// Sections
+// --------------------------------------------------
+
+// Section Spacing
+// -------------------------
+
+$insets: (20px, 25px, 30px, 34px, 40px, 50px, 60px, 65px, 70px, 80px, 85px, 90px, 95px, 100px);
+
+@include indent-responsive(section, '', (padding-top, padding-bottom), $medias, $insets);
+@include indent-responsive(section, top, padding-top, $medias, $insets);
+@include indent-responsive(section, bottom, padding-bottom, $medias, $insets);
+
+.section-30-all {
+  padding: 30px 15px;
+
+  @media (min-width: $screen-md-min) {
+    padding: 30px 50px 30px 30px;
+  }
+}

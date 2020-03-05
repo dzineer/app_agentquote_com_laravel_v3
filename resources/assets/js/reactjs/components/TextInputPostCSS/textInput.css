@@ -1,0 +1,15 @@
+/*
+ In real app, would typically use Sass, Less, or PostCSS with cssnext to centralize variables
+ like the error color of red in a separate single file.
+ */
+.fieldset {
+    margin-bottom: 16px;
+}
+
+.error {
+    color: red;
+}
+
+.inputError {
+    border: solid 1px red;
+}

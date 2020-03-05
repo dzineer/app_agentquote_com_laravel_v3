@@ -1,0 +1,280 @@
+/*
+ * Skin: AgentQuote
+ * ----------
+ */
+
+.skin-agentquote {
+  .main-header {
+    .navbar {
+      background-color: $top_bar;
+      .nav {
+        > li > a {
+          color: #ffffff;
+          &:hover, &:active, &:focus {
+            background: rgba(0, 0, 0, 0.1);
+            color: #f6f6f6;
+          }
+        }
+        .open > a {
+          background: rgba(0, 0, 0, 0.1);
+          color: #f6f6f6;
+          &:hover, &:focus {
+            background: rgba(0, 0, 0, 0.1);
+            color: #f6f6f6;
+          }
+        }
+        > .active > a {
+          background: rgba(0, 0, 0, 0.1);
+          color: #f6f6f6;
+        }
+      }
+      .sidebar-toggle {
+        color: #ffffff;
+        &:hover {
+          color: #f6f6f6;
+          background: rgba(0, 0, 0, 0.1);
+          background-color: #367fa9;
+        }
+        color: #fff;
+      }
+    }
+    .logo {
+      background-color: $logo_bg;
+      color: #ffffff;
+      border-bottom: 0 solid transparent;
+      &:hover {
+        background-color: #344150;
+      }
+    }
+    li.user-header {
+      background-color: $top_bar;
+    }
+  }
+  .content-header {
+    background: transparent;
+  }
+  .wrapper, .main-sidebar, .left-side {
+    background-color: #344150;
+  }
+  .user-panel > .info {
+    color: #fff;
+    > a {
+      color: #fff;
+    }
+  }
+  .sidebar-menu > li {
+    &.header {
+      color: #ffffff;
+      background: rgba(26, 34, 38, 0.4196078431372549);
+    }
+    > a {
+      border-left: 3px solid transparent;
+    }
+    &:hover > a, &.active > a, &.menu-open > a {
+      color: #ffffff;
+      background: #1e282c;
+    }
+    &.active > a {
+      border-left-color: $top_bar;
+    }
+    > .treeview-menu {
+      margin: 0 1px;
+      background: #2c3b41;
+    }
+  }
+  .sidebar a {
+    color: #ffffff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .sidebar-menu .treeview-menu > li {
+    > a {
+      color: #8aa4af;
+    }
+    &.active > a, > a:hover {
+      color: #ffffff;
+    }
+  }
+  .sidebar-form {
+    border-radius: 3px;
+    border: 1px solid #374850;
+    margin: 10px 10px;
+    input[type="text"], .btn {
+      box-shadow: none;
+      background-color: #374850;
+      border: 1px solid transparent;
+      height: 35px;
+    }
+    input[type="text"] {
+      color: #666;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 2px;
+      &:focus {
+        background-color: #fff;
+        color: #666;
+        + .input-group-btn .btn {
+          background-color: #fff;
+          color: #666;
+          border-left-color: #fff;
+        }
+      }
+    }
+    .btn {
+      color: #999;
+      border-top-left-radius: 0;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      border-bottom-left-radius: 0;
+    }
+  }
+  &.layout-top-nav .main-header > .logo {
+    background-color: $top_bar;
+    color: #ffffff;
+    border-bottom: 0 solid transparent;
+    &:hover {
+      background-color: #3b8ab8;
+    }
+  }
+
+  .information-box {
+    display: block;
+    min-height: 90px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    /*margin-bottom: 15px;*/
+    padding: 30px 10px;
+    font-size: 1.3em;
+    text-align: center !important;
+  }
+
+  .power-btn {
+      height: 56px;
+      font-size: 1.3em;
+      padding: 13px 18px;
+      color: #fff;
+      border: none;
+      border-radius: 0;
+      background-clip: padding-box;
+      cursor: pointer;
+      display: block;
+      margin-left: 10px;
+  }
+
+  .user-profile {
+    float: left;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 0px;
+  }
+
+  /* Style The Dropdown Button */
+  .dropbtn {
+    background-color: $profile_bg;
+    color: white;
+    padding: 16px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 56px;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: $profile_bg;
+  }
+
+  .heading-info {
+    border-bottom: 3px solid $primary_bg;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+  }
+
+  table thead tr th {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .small-menu-item {
+    color: #006bb2;
+    font-size: 1.2em;
+    text-align: center;
+    margin-right: 0;
+    padding: 9px 9px;
+  }
+
+  .small-menu-item span {
+    font-size: 1.2em;
+    padding-right: 3px;
+    transition: opacity 100ms ease-in-out;
+    margin: 0 16px;
+    width: 20px;
+  }
+
+  .small-nav {
+    padding: 20px 0;
+  }
+
+  label.details-field {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 1.4em;
+  }
+
+  .textarea-message {
+    min-height: 100px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .skin-blue .main-header .navbar .dropdown-menu li {
+    &.divider {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    a {
+      color: #fff;
+      &:hover {
+        background: #367fa9;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.support {
+  min-height: 220px;
+  padding: 10px;
+  border: 1px solid #70707045;
+  border-top: 6px solid var(--our-blue);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.support-header-container {
+  display: flex;
+  justify-content: space-around;
+  height: 104px;
+  width: 100%;
+  align-items: center;
+  .phone-btn {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--our-light-blue);
+    border-radius: 4px;
+  }
+}
+
+.support-footer-container {
+  .search-btn {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--our-blue);
+    border-radius: 4px;
+    height: 45px;
+    color: #fff;
+    font-weight: bold;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--our-blue);
+    border-radius: 4px;
+    height: 45px;
+    color: #fff;
+    font-weight: bold;
+  }
+  background-color: var(--our-blue);
+  .phone-btn {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--our-blue);
+    border-radius: 4px;
+    height: 45px;
+    color: #fff;
+    font-weight: bold;
+  }
+  i.fa {
+    font-size: 2.2rem;
+    color: #fff;
+  }
+  .search-text {
+    width: 90%;
+    margin-right: 13px;
+    height: 47px;
+  }
+  .search i.fa {
+    color: #fff;
+  }
+}
+
+.support-header-container {
+  .phone-btn i.fa {
+    color: #fff;
+  }
+  i.fa {
+    font-size: 2.2rem;
+    color: var(--our-blue);
+  }
+}
+
+.support-header-text {
+  font-size: 1.6rem;
+  color: var(--our-blue);
+}
+
+.support-body-container {
+  margin: 22px 10px;
+  position: relative;
+  background-color: var(--our-blue);
+  min-height: 74px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 20px;
+}
+
+#search-btn {
+  cursor: pointer;
+}
+
+.support-body-container .support-bubble {
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--our-blue);
+  }
+  &::after {
+    content: '';
+  }
+  .support-bubble-text {}
+}
+
+.support-footer-container {
+  background-color: #e7e7e7;
+  padding: 8px;
+  display: flex;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 15.1px 7px 0;
+  border-color: transparent #3c8dbc transparent transparent;
+  line-height: 0;
+  _border-color: #000000 #3c8dbc #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  position: absolute;
+  top: 12px;
+  left: -12px;
+}

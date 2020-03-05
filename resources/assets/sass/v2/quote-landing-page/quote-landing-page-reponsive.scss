@@ -1,0 +1,56 @@
+
+@media screen and (max-width: 640px) {
+    .top {
+        font-size: 1.3rem;
+    }
+    .bottom {
+        font-size: 1.3rem;
+    }
+    .product-name {
+        font-size: 1.3rem!important;
+        padding: 10px 7px!important;
+    }
+    .banner-quoter-container {
+        padding: 0 !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .no-padding {
+        padding: 0 20px!important
+    }
+
+    .top {
+        font-size: 1.6rem
+    }
+
+    .bottom {
+        font-size: 1.6rem
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #get-started-form-lg {
+
+    }
+}
+
+@media screen and (min-width: 1199px) {
+    .quote-results-container {
+        padding-top:1.8rem
+    }
+
+    .top {
+        font-size: 1.9rem;
+        padding: 1.2rem
+    }
+
+    .bottom {
+        font-size: 1.9rem
+    }
+}
+
+
+
+

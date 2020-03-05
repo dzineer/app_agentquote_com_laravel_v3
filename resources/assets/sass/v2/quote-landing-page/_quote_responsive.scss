@@ -1,0 +1,157 @@
+.rc-i {
+
+    p {
+
+    }
+
+}
+
+.rcc {
+
+
+    .rc {
+        .rc-h {
+
+        }
+        .rc-p {
+
+        }
+    }
+
+}
+
+.rc-f {
+    background-color: #3c8dbc !important;
+    border-radius: 0.25rem !important;
+    .p-name {
+
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .quote-results-container {
+        margin-bottom: 20px;
+        height: 220px;
+    }
+
+    .rc-i {
+             display: flex;
+             padding: 0 !important;
+             margin-left: -10px !important;
+             margin-top: -8px !important;
+             margin-bottom: 10px !important;
+             flex: 0 0 100% !important;
+             max-width: 100% !important;
+             align-items: flex-start;
+
+             p {
+                 background-color: transparent;
+                 padding-left: 2rem;
+                 justify-content: flex-start !important;
+             }
+
+         }
+
+    .rcc {
+
+        display: flex;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 8px 0 !important;
+        justify-content: center;
+
+        .rc {
+            .rc-h {
+                height: 50px;
+                width: 100px;
+                font-size: 1.7rem;
+                font-weight: bold;
+                line-height: 1.2;
+                color: #2874a4 !important;
+                padding: 0;
+            }
+            .rc-p {
+                height: 45px;
+                width: 100px;
+                font-size: 1.7rem;
+                padding: 0;
+            }
+        }
+
+    }
+
+    .rc-f {
+        .p-name {
+            font-size: 1.5rem !important;
+            padding: 10px 12px !important;
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    .rc-i {
+
+    }
+
+    .rcc {
+        .rc {
+            .rc-h {
+                font-size: 1.6rem;
+                line-height: 1.2;
+                color: #2874a4 !important;
+                padding: 1.3rem;
+            }
+            .rc-p {
+                font-size: 1.6rem
+            }
+        }
+
+    }
+
+    .rc-f {
+        .p-name {
+            font-size: 1.6rem !important;
+            padding: 10px 7px !important;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1199px) {
+
+    .quote-results-container {
+        padding-top:1.8rem
+    }
+
+    .rc-i {
+
+    }
+
+    .rcc {
+        .rc {
+            .rc-h {
+                font-size: 1.9rem;
+                padding: 1.2rem;
+                color: #2874a4 !important;
+            }
+
+            .rc-p {
+                font-size: 1.9rem
+            }
+        }
+
+    }
+
+    .rc-f {
+        .p-name {
+            font-size: 1.8rem !important;
+            padding: 16px !important;
+        }
+    }
+}

@@ -1,0 +1,187 @@
+//Calendar
+section.section-top-40.section-bottom-80
+	.shell.text-md-left
+		h3.text-center Book an appointment
+		.range.range-xs-center
+			.cell-md-8
+				// RD Calendar
+				.rd-calendar#chapters-select
+					.rdc-panel.text-center
+						a.rdc-prev(data-preloader-dis='')
+						span.rdc-month
+						span=' '
+						span.rdc-fullyear
+						a.rdc-next(data-preloader-dis='')
+					.rdc-table
+					.rdc-events
+						a.rdc-events_close
+						ul.list-unstyled
+							li.rdc-event(data-date='09/09/2018')
+								h4
+									span.text-extra-bold September 9,
+									span=' 2018'
+								a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 9:00am – 9:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 10:00am – 10:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 11:00am – 11:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 12:00am – 13:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 14:00am – 15:20am
+							li.rdc-event(data-date='08/09/2018')
+								h4
+									span.text-extra-bold August 9,
+									span=' 2018'
+								a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 9:00am – 9:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 10:00am – 10:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 11:00am – 11:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 12:00am – 13:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 14:00am – 15:20am
+							li.rdc-event(data-date='07/09/2018')
+								h4
+									span.text-extra-bold July 9,
+									span=' 2018'
+								a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 9:00am – 9:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 10:00am – 10:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 11:00am – 11:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 12:00am – 13:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 14:00am – 15:20am
+							li.rdc-event(data-date='06/08/2018')
+								h4
+									span.text-extra-bold June 8,
+									span=' 2018'
+								a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 9:00am – 9:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 10:00am – 10:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 11:00am – 11:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 12:00am – 13:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 14:00am – 15:20am
+							li.rdc-event(data-date='10/09/2018')
+								h4
+									span.text-extra-bold October 9,
+									span=' 2018'
+								a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 9:00am – 9:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 10:00am – 10:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 11:00am – 11:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 12:00am – 13:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 14:00am – 15:20am
+							li.rdc-event(data-date='11/09/2018')
+								h4
+									span.text-extra-bold November 9,
+									span=' 2018'
+								a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 9:00am – 9:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 10:00am – 10:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 11:00am – 11:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 12:00am – 13:20am
+								div.offset-top-10
+									a.btn-block(href="#" data-toggle="modal" data-target="#appointment").btn.btn-primary 14:00am – 15:20am
+		
+		// Modal
+		#appointment.modal.fade(role='dialog').text-left
+			.modal-dialog
+				// Modal content
+				.modal-content.inset-md-left-30.inset-md-right-30
+					.modal-header
+						button.close(type='button', data-dismiss='modal'): span.icon.icon-light.icon-xxs.fa-close.text-primary
+						.modal-title.border-bottom Request Appointment
+					.modal-body
+						h6.text-gray-light Custom Calendar One
+						p Please review and confirm that you would like to request the following appointment:
+						.form-group
+							span
+								span.icon.icon-primary.fa-calendar.inset-right-5
+								span.text-gray-lighter.text-italic='  May 26, 2018'
+							span.inset-left-20
+								span.icon.icon-primary.fa-clock-o.inset-right-5
+								span.text-gray-lighter.text-italic='  10:00 am'
+						hr.divider
+						// RD Mailform
+						form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							div
+								.reveal-xs-inline-block.radio
+									label
+										input( type="radio" name="optradio" value='login')
+										span.text-primary I am a current customer
+								.reveal-xs-inline-block.radio.inset-xs-left-20
+									label
+										input( type="radio" name="optradio" value='register' checked='checked')
+										span.text-primary I am a new customer
+							
+							hr.divider.offset-top-15
+							
+							.register-form
+								h6
+									span.text-gray-light Registration
+									span.text-primary=' *'
+								p Your first name and an email address are required.
+								
+								// Login form
+								.offset-10
+									.form-group
+										label.form-label(for="name-2") First name *
+										input#name-2.form-control(type="text" name="name" data-constraints="@Required")
+									.form-group
+										label.form-label(for="name-3") Latest name
+										input#name-3.form-control(type="text" name="name2" )
+									.form-group
+										label.form-label(for="email") Your e-mail *
+										input#email.form-control(type="text" name="email" data-constraints="@Required @Email")
+									div.offset-top-25
+										h6
+											span.text-gray-light Custom Text Field:
+									.form-group.offset-top-25
+										label.form-label(for="text2") Text
+										input#text2.form-control(type="text" name="text22" )
+									div.offset-top-25
+										h6
+											span.text-gray-light Custom Checkboxes:
+									
+									.form-group
+										label.checkbox-inline
+											input(name="input-group-radio", value="checkbox-1", type="checkbox", checked)
+											span.text-primary First Checkbox
+									.form-group.offset-top-10
+										label.checkbox-inline
+											input(name="input-group-radio", value="checkbox-2", type="checkbox")
+											span.text-primary Second Checkbox
+									.form-group.offset-top-10
+										label.checkbox-inline
+											input(name="input-group-radio", value="checkbox-2", type="checkbox")
+											span.text-primary Third Checkbox
+									
+									.form-group-btn.offset-top-50
+										button(type="submit").btn.btn-primary Request Appointment
+						
+						.login-form
+							h6
+								span.text-gray-light Login
+							
+							// Login form
+							form.offset-10
+								.form-group
+									label.form-label(for="name") Username or e-mail
+									input#name.form-control(type="text" name="name" )
+								.form-group
+									label.form-label(for="password") Password
+									input#password.form-control(type="password" name="password" )
+								.form-group-btn.offset-top-50
+									button(type="submit").btn.btn-primary Enter

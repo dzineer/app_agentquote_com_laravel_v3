@@ -1,0 +1,41 @@
+header.page-head
+  include ../elements/_ui-list-social
+
+  // RD Navbar
+  .rd-navbar-wrap
+    nav.rd-navbar.rd-navbar-variant-3(data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fullwidth', data-md-device-layout='rd-navbar-fullwidth',  data-sm-device-layout='rd-navbar-fullwidth', data-lg-layout='rd-navbar-static', data-lg-device-layout="rd-navbar-static", data-sm-stick-up-offset="150px", data-lg-stick-up-offset="70px")
+      include _rd-navbar-top-part
+      .rd-navbar-inner
+        // RD Navbar Panel
+        .rd-navbar-panel
+          // RD Navbar Toggle
+          button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+            span
+          div.reveal-md-flex.range-md-justify.range-sm-middle
+            div
+              // RD Navbar Brand
+              .rd-navbar-brand.brand
+                a.brand-name(href='index.html')
+                  span.text-primary
+                    | Be
+                  span.text-uppercase.text-gray-light
+                    | DENTIST
+            div.rd-navbar-nav-container.offset-top-10.offset-md-top-0
+              div.rd-navbar-nav-container.reveal-sm-flex.range-sm-center.range-sm-middle.pos-relative
+                .rd-navbar-nav-wrap.text-md-left
+                  include _rd-navbar-nav
+
+                //RD Navbar Search
+                div.rd-navbar-search.reveal-flex.range-md-middle
+                  form(action="search-results.html" data-search-live="rd-search-results-live" method="GET").rd-search.rd-search-nav
+                    div.form-group
+                      input(class="rd-navbar-search-form-input form-control form-control-gray-lightest" id="rd-navbar-search-form-input" type="text" name="s" placeholder="Enter keyword" autocomplete="off")
+                      button(type="submit").rd-search-form-submit.veil.reveal-sm-inline-block
+                      #rd-search-results-live.rd-search-results-live.veil.reveal-sm-block
+                  a.rd-navbar-search-toggle(data-rd-navbar-toggle=".rd-search-nav, .rd-navbar-nav-container" data-custom-toggle-disable-on-blur="true" href="#")
+                    span
+
+
+
+
+

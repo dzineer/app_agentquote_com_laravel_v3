@@ -1,0 +1,119 @@
+include ../elements/_ui-list-social
+include ../elements/_ui-post-author
+include ../elements/_ui-comments
+
+mixin post-full(postInfoObj, postMetaObj, prevLink, nextLink)
+  .shell
+    .range.range-xs-center.offset-top-25.offset-md-top-35
+      // Posts
+      .cell-sm-8.cell-md-8.offset-top-5
+        .post.post-full
+          if(postInfoObj.title)
+            h3.text-bold= postInfoObj.title
+
+          ul.list-inline.list-inline-dashed.text-italic.offset-top-10
+            li.text-gray-lighter
+              ='by '
+              span.text-bold.text-gray-light= postMetaObj.author
+            li
+              time(datetime="2018-04-30").post-meta-time.text-gray-lighter= postMetaObj.date
+            li
+              a(href= postMetaObj.categories.link )=postMetaObj.categories.name
+
+          block
+
+          .post-bottom.reveal-xs-flex.range-xs-justify.range-xs-middle.range-xs-reverse.offset-top-35
+            .post-meta
+              .post-meta-comment.text-italic.text-primary= postMetaObj.comment + ' comments'
+            div
+              .text-italic.text-gray-lighter.reveal-inline-block='Tags: '
+              ul.list-inline.list-inline-dashed.text-italic.reveal-inline-block.offset-xs-top-0
+                li
+                  a(href="categories-list.html") Dental
+                li
+                  a(href="categories-grid.html") Breath
+                li
+                  a(href="categories-masonry.html") Oral Health
+
+          div.offset-top-40
+            +list-social("list-inline-md", "", "icon-primary")
+
+          div.offset-top-50
+            .bg-primary.border-radius-small
+              +post-author('images/author-138x138.png', 152, 152, 'Mark Hoffmann', "Our clinic's Chief Medical Officer and Founder, Dr. Mark.  Hoffman has been working in this field of medical specialization since 2002.")
+
+          .offset-top-40.clearfix
+            div.pull-left
+              a(href=prevLink).text-extra-bold
+                span.fa.fa-angle-left.inset-right-10.text-normal.text-gray-light
+                | Previous Post
+            div.text-right.pull-right
+              a(href=nextLink).text-extra-bold
+                | Next Post
+                span.fa.fa-angle-right.inset-left-10.text-normal.text-gray-light
+
+          hr.divider
+
+          #comments
+            .text-extra-bold.text-gray-light 2 Reviews
+            .offset-top-25
+              +comments(
+              [
+                {
+                  "img": 'images/comments-86x86.png',
+                  "imgWidth": '86',
+                  "imgHeight": '86',
+                  "author": {
+                    "link": "categories-list.html",
+                    "name": "John Doe"
+                  },
+                  "time": 'May 10, 2018    ',
+                  "comment": 'This problem with bad breath has been killing me... After visiting this clinic, I feel so much more confident!',
+                  "reply": [
+                    {
+                      "img": 'images/comments-86x86.png',
+                      "imgWidth": '86',
+                      "imgHeight": '86',
+                      "author": {
+                        "link": "categories-list.html",
+                        "name": "Mark Hoffmanne"
+                      },
+                      "time": 'May 10, 2018    ',
+                      "comment": 'I’m glad that our doctors have managed with your bad breath. Wish you health!'
+                    }
+                  ]
+                }
+              ]
+              )
+
+          hr.divider
+          #reply
+            h6.text-gray-light Leave a Reply
+            p.text-gray-lighter
+              | Your email address will not be published. Required fields are marked
+              span.text-primary=' *'
+            // RD Mailform
+            form.rd-mailform.text-left.offset-top-25(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .range
+                .cell-md-6
+                  .form-group
+                    label.form-label(for="contact-name")
+                      | Your name
+                      span.text-primary *
+                    input#contact-name.form-control(type="text" name="name" data-constraints="@Required")
+                  .form-group
+                    label.form-label(for="contact-email")
+                      | Your e-mail
+                      span.text-primary *
+                    input#contact-email.form-control(type="email" name="email"  data-constraints="@Required @Email")
+              .form-group.textarea-group
+                label.form-label(for="contact-message")
+                  | Comment
+                  span.text-primary *
+                textarea#contact-message.form-control(name="message" data-constraints="@Required")
+              button(type="submit").btn.btn-primary.offset-top-10 Submit comment
+
+
+      .cell-xs-8.cell-md-4.offset-top-60.offset-md-top-0
+        //Sidebar
+        include ../elements/_ui-sidebar

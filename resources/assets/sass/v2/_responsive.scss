@@ -1,0 +1,223 @@
+
+
+
+@media screen and (max-width: 768px) {
+  .information-box {
+    margin: 40px 0 !important;
+  }
+
+  .quote-results-container.card-body {
+    padding: 0.4rem !important;
+  }
+}
+
+/*.power-btn {
+    visibility: hidden;
+}*/
+
+@media only screen and (max-width: 600px) {
+
+    a.edit-item {
+        display: block;
+    }
+
+    #profile-dropdown {
+        display:none !important;
+    }
+    .can-hide-on-sm {
+        display:none !important;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    table.tablesorter tbody td {
+    }
+    .font-medium {
+        font-size: 0.8rem;
+    }
+/*    .power-btn {
+        visibility: visible;
+    }*/
+}
+
+@media screen and (max-width: 600px) {
+  .order-form-container, .order-summary-container, .account-info-container, .billing-info-container {
+    border: none !important;
+  }
+
+  .total-row {
+    border-bottom: 4px solid #7f7f7f !important;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .order-form-container.no-padding {
+    padding: 0 20px !important;
+  }
+
+  .order-summary-container.no-padding {
+    padding: 20px !important;
+  }
+
+  .control-group {
+    margin-bottom: 15px !important;
+  }
+
+  .form-group {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+
+  #subscribe-btn {
+    margin-top: 0 !important;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+    table.tablesorter.agents-list {
+
+        margin: 17px 0;
+
+        th {
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                display: none;
+            }
+            &:nth-child(6) {
+                display: none;
+            }
+        }
+
+        td {
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                display: none;
+            }
+            &:nth-child(6) {
+                display: none;
+            }
+        }
+
+    }
+
+    table.tablesorter.affiliates-list {
+
+        margin: 17px 0;
+
+        th {
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+
+        td {
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+
+        th {
+            &:nth-child(5) {
+                display: none;
+            }
+        }
+
+        td {
+            &:nth-child(5) {
+                display: none;
+            }
+        }
+
+    }
+
+    .col-md-12.tablesorter-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+  .btn-group {
+    display: table !important;
+    float: none !important;
+    width: 100% !important;
+  }
+  .nav-link {
+    border-radius: 0 !important;
+    margin-top: 0.1rem;
+  }
+  .col-2 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .top {
+    font-size: 0.6rem;
+  }
+  .bottom {
+    font-size: 0.8rem;
+  }
+
+  .card-body {
+    padding: 1.0rem !important;
+  }
+
+  .card-body.quote-body-results-container {
+    padding-left: 0.3rem !important;
+    padding-right: 0.3rem !important;
+  }
+
+  .quote-box-container {
+    padding-left: 0.3rem !important;
+    padding-right: 0.3rem !important;
+  }
+  .quote-menu {
+    padding-left: 0.3rem !important;
+    padding-right: 0.3rem !important;
+  }
+  .product-name {
+    font-size: 0.7rem !important;
+    padding: 10px 7px !important;
+  }
+  .right-guide {
+    margin-left: -2px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pricing-table h2 {
+    font-size: 42px;
+  }
+  .pricing-table .col-item.shadow {
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .no-padding {
+    padding: 0 20px !important;
+  }
+
+  .top {
+    font-size: 0.9rem;
+  }
+  .bottom {
+    font-size: 1.0rem;
+  }
+
+}
+
+@media screen and (min-width: 1199px) {
+  .quote-results-container {
+    padding-top: 1.8rem;
+  }
+  .top {
+    font-size: 1.1rem;
+    padding: 1.2rem;
+    line-height: 1rem;
+  }
+  .bottom {
+    font-size: 1.2rem;
+  }
+}

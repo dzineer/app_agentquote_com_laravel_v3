@@ -1,0 +1,11 @@
+// Typography
+
+// [converter] $parent hack
+@mixin text-emphasis-custom($parent, $color, $hover-color) {
+  #{$parent} {
+    color: $color;
+  }
+  a#{$parent}:hover {
+    color: $hover-color;
+  }
+}

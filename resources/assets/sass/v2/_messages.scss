@@ -1,0 +1,87 @@
+.box-header .from-container {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1;
+  padding: 16px 2px;
+
+  .message-from-container {
+    position: absolute;
+    left: 0;
+  }
+
+  .message-date-container {
+    position: absolute;
+    right: 0;
+  }
+
+}
+
+.message-container {
+  padding: 10px;
+}
+
+.message-subject {
+   border-bottom: 3px solid #344150;
+   margin-bottom: 12px;
+   padding: 4px 0px;
+   font-size: 1rem;
+ }
+.message-body {
+  padding: 10px 0px;
+  font-size: 1.2rem;
+}
+
+.message-preview-container {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1;
+  padding: 16px 2px;
+
+  .message-from-container {
+    display: inline-block;
+    width: 22%;
+  }
+
+  .message-date-container {
+    display: inline-block;
+    width: 22%;
+  }
+
+}
+
+#newLinkPanel {
+  position: absolute;
+  left: 30%;
+  top: 0;
+  display: none;
+  z-index: 999999999;
+  background: #e9ecef;
+  border: 1px solid #d4d8df;
+  padding: 10px 10px;
+  min-width: 450px;
+  min-height: 250px;
+}
+
+#newLinkPanel:before {
+  box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+}
+
+#newLinkPanel .close-btn {
+  position: absolute;
+  cursor: pointer;
+  right: 6px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+}
+
+#newLinkPanel.show {
+  display: block;
+}

@@ -1,0 +1,43 @@
+mixin comments(commentsObj)
+
+  -for(var i = 0; i < commentsObj.length; i++)
+      .comment.bg-alabaster.text-sm-left
+        .unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.unit-xl-horizontal.unit-middle.unit-spacing-sm
+          .unit-left
+            img.max-width-none.img-circle.img-responsive(src=commentsObj[i].img, width=commentsObj[i].imgWidth, height=commentsObj[i].imgSize, alt="")
+          .unit-body
+            .range.range-sm-justify.range-sm-bottom.text-sm-left
+              .cell-sm-10
+                ul.list-inline.list-inline-dashed.list-inline-dashed-from-md.text-italic
+                  li
+                    span.text-gray-lighter='by '
+                      a.text-bold.text-gray-light(href=commentsObj[i].author.link)= commentsObj[i].author.name
+                  li
+                    span.icon-date
+                    span.text-gray-lighter= commentsObj[i].time
+              .cell-sm-2.offset-top-0.text-right
+                a(href="#reply").icon-reply.text-primary.fa-mail-reply
+            p= commentsObj[i].comment
+
+      //-Comments reply
+      if(commentsObj[i].reply.length)
+
+        -for(var j = 0; j < commentsObj[i].reply.length; j++)
+          .comment.comment-reply.text-sm-left.bg-alabaster
+            .unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.unit-xl-horizontal.unit-middle.unit-spacing-sm
+              .unit-left
+                img.max-width-none.img-circle.img-responsive(src=commentsObj[i].reply[j].img, width=commentsObj[i].reply[j].imgWidth, height=commentsObj[i].reply[j].imgSize, alt="")
+              .unit-body
+                .range.range-sm-justify.range-sm-bottom.text-sm-left
+                  .cell-sm-10
+                    ul.list-inline.list-inline-dashed.text-italic
+                      li
+                        span.text-gray-lighter='by '
+                        a.text-bold.text-gray-light(href=commentsObj[i].reply[j].author.link)= commentsObj[i].reply[j].author.name
+                      li
+                        span.icon-date
+                        span.text-gray-lighter= commentsObj[i].reply[j].time
+                  .cell-sm-2.offset-top-0.text-right
+                    a.text-bold(href="#reply").icon-reply.text-primary.fa-mail-reply
+                p= commentsObj[i].reply[j].comment
+
