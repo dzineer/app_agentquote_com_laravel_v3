@@ -16,6 +16,8 @@ use App\Models\PlanSubscription;
 use App\Models\InvoiceUser;
 use App\Models\Profile;
 use App\Models\RoleUser;
+use App\Models\WhmcsProduct;
+use App\Models\Subscription;
 use App\Models\SubscriptionUser;
 use App\Subscriptions\SubscriptionFields;
 use App\User;
@@ -38,7 +40,7 @@ class APIController extends Controller {
         
         $data = $this->validate($request, [
             'token' => 'required|max:32',
-            'username' => 'required:max:32'
+            'username' => 'required:max:32',
         ]);
 
         if ($data['token'] !== 'BD9AFD1F5B993E63FE2DAEE58E66C' && $data['username'] !== 'quotedirect_api') {
@@ -85,6 +87,45 @@ class APIController extends Controller {
                 "data" => request()->all(),
                 "success" => false,
             ]);
+        }
+
+        if($request->has('whmcs_product_name') && $request->has('whmcs_userid') && $request->has('whmcs_email') ) {
+            $email = $request->input('whmcs_email');
+            $whmcs = $request->input('whmcs_userid');
+            $whmcsProductName = $request->input('whmcs_product_name');
+            
+            $user = User::where(['email' => $email])->first();
+            if ($user) {
+
+                $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
+                if ($whmcsLocalProduct) {
+                    $productId = $whmcsLocalProduct->local_product_id;
+                    $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $whmcsLocalProduct->id])->first();
+                    if ($userSubscription) {
+                        return response()->json([
+                            "message" => "User already has product",
+                            "data" => request()->all(),
+                            "success" => false,
+                        ]);
+                    } else {
+                        Subscription::addUser($user);
+                        return response()->json([
+                            "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
+                            "mode" => "debug",
+                            "ip" => request()->ip(),
+                            "ok" => true, 
+                            "success" => true,
+                        ]);
+                    }
+                }
+
+            } else {
+                return response()->json([
+                    "message" => "Invalid user",
+                    "data" => request()->all(),
+                    "success" => false,
+                ]);
+            }
         }
 
         $message = "Assigning ppegram to product xyz.";
