@@ -15,3 +15,4 @@ yarn-error.log
 /public/logs/*
 *.psd
 *.ai
+*.zip
