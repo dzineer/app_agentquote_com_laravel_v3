@@ -1,0 +1,30 @@
+{
+    "name": "dzineer/laravel-adminlte",
+    "description": "AdminLTE integration",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Frank Decker",
+            "email": "frank@dzineer.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dzineer\\LaravelAdminLte\\": "src/"
+        }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "Dzineer\\LaravelAdminLte\\ServiceProvider"
+        ]
+      }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "^5.8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.8"
+    }
+}

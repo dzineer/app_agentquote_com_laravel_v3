@@ -1,0 +1,570 @@
+  348  php artisan serve
+  440  php artisan make:model Carriertable -r
+  447  php artisan serve
+  469  php artisan serve
+  536  php artisan serve
+  647  php artisan serve
+  700  php artisan serve
+  703  php artisan serve
+  713  php artisan serve
+  724  php artisan serve
+  762  php artisan serve
+  769  php artisan serve
+  775  php artisan serve
+  797  php artisan serve
+  813  php artisan key:generate
+  814  php artisan serve
+  815  php artisan serve --port=8001
+  819  php artisan make:resource
+  820  php artisan make:resource Carrier
+  821  php artisan make:resource Policy
+  822  php artisan make:resource Policies
+  823  php artisan make:resource ModalFactors
+  824  php artisan make:resource ProductName
+  825  php artisan make:resource RateClassification
+  826  php artisan make:resource Token
+  827  php artisan make:resource Rate
+  828  php artisan make:resource MicrositePage
+  829  php artisan make:resource UserCollection
+  830  php artisan make:resource CarrierCollection
+  831  php artisan make:resource PolicyCollection
+  832  php artisan make:resource ModalFactorCollection
+  833  php artisan make:resource ProductNameCollection
+  834  php artisan make:resource RateClassificationCollection
+  835  php artisan make:resource TokenCollection
+  836  php artisan make:resource PolicyStateCollection
+  837  php artisan make:resource RateCollection
+  845  php artisan serve --port=8001
+  846  php artisan serve
+  851  php artisan serve
+  852  php artisan serve --port=8001
+  856  php artisan serve --port=8001
+  860  php artisan serve
+  863  php artisan serve
+  867  php artisan serve
+  868  php artisan serve --port=8001
+  872  php artisan serve --port=8000
+  874  php artisan routes
+  875  php artisan route:list
+  889  php artisan serve --port=8000
+  910  php artisan serve --port=8000
+  914  php artisan serve
+  979  php artisan serve
+  988  php artisan serve
+  994  php artisan serve
+ 1015  php artisan show:route
+ 1016  php artisan show route
+ 1017  php artisan route
+ 1018  php artisan routes
+ 1019  php artisan route:list
+ 1115  php artisan key:generate
+ 1116  php artisan serve
+ 1120  php artisan serve
+ 1127  php artisan serve
+ 1146  php artisan serve
+ 1154  php artisan serve
+ 1158  php artisan serve
+ 1223  php artisan make:auth
+ 1224  php artisan migrate
+ 1226  php artisan migrate
+ 1263  php artisan preset react
+ 1267  php artisan migrate
+ 1276  php artisan serve
+ 1279  php artisan serve
+ 1280  php artisan make:model Item -m
+ 1281  php artisan migrate
+ 1282  php artisan make:controller ItemController --resource
+ 1327  php artisan serve
+ 1331  php artisan route:list
+ 1332  php artisan route --help
+ 1333  php artisan route:create
+ 1334  php artisan serve
+ 1335  php artisan make:
+ 1336  php artisan make:model Product -m
+ 1337  php artisan help make:model
+ 1338  php artisan migrate
+ 1339  php artisan make:seeder ProductsTableSeeder
+ 1340  php artisan db:seed --class=ProductsTableSeeder
+ 1341  php artisan make:controller ProductsController
+ 1342  php artisan make:controller ProductsController --resource
+ 1350  php artisan preset react
+ 1376  php artisan serve
+ 1377  php artisan serve --help
+ 1378  php artisan serve --p 8080
+ 1379  php artisan serve --port 8080
+ 1380  php artisan preset react
+ 1383  php artisan serve --port 8080
+ 1385  php artisan serve --port 8080
+ 1393  php artisan serve --port 8080
+ 1395  php artisan migrate
+ 1396  php artisan make:seeder UsersTableSeeder
+ 1397  php artisan db:seed
+ 1398  php artisan make:controller Api/UserController --resource
+ 1399  php artisan make:controller Api/UserController
+ 1400  php artisan make:controller Api/UserController --resource
+ 1401  php artisan serve --port 8080
+ 1404  php artisan make:controller UserController --resource
+ 1405  php artisan route:list
+ 1406  php artisan serve --port 8080
+ 1407  php artisan db:seed
+ 1408  php artisan route:list
+ 1409  php artisan migrate:refresh --seed
+ 1488  php artisan serve
+ 1489  php artisan migrate
+ 1490  php artisan make:view about
+ 1497  php artisan make:social
+ 1498  php artisan make:controller AboutController
+ 1499  php artisan make:route about AboutController@index --type=controller
+ 1501  php artisan make:route about AboutController@index --type=controller
+ 1502  php artisan make:controller UserController --resource
+ 1503  php artisan make:view users
+ 1504  php artisan make:view carriers
+ 1505  php artisan make:controller CarrierController --resource
+ 1506  php artisan make:controller MicrositeController --resource
+ 1507  php artisan make:view microsite
+ 1508  php artisan make:view carrierproducts
+ 1509  php artisan make:controller CarrierProductController --resource
+ 1510  php artisan route:list
+ 1511  php artisan make:seeder UsersTableSeeder
+ 1512  php artisan db:seed
+ 1513  php artisan preset react
+ 1523  php artisan preset react
+ 1541  php artisan serve
+ 1542  php artisan preset react
+ 1544  php artisan serve
+ 1545  php artisan make:auth
+ 1546  php artisan serve
+ 1554  php artisan serve
+ 1556  php artisan vendor:publish --provider="Dzineer\LaravelAdminLte\ServiceProvider" --tag=assets
+ 1557  php artisan make:adminlte
+ 1558  php artisan serve
+ 1559  php artisan vendor:publish --provider="Dzineer\LaravelAdminLte\ServiceProvider" --tag=config
+ 1560  php artisan serve
+ 1561  ^[[200~php artisan vendor:publish --provider="Dzineer\LaravelAdminLte\ServiceProvider" --tag=views
+ 1562  php artisan vendor:publish --provider="Dzineer\LaravelAdminLte\ServiceProvider" --tag=views
+ 1563  php artisan serve
+ 1571  php artisan make:controller UserController --resource
+ 1572  php artisan serve
+ 1573  php artisan serve &
+ 1574  alias artisan='php'
+ 1575  alias artisan='php artisan'
+ 1576  artisan make:controller CarrierController --resource
+ 1577  artisan make:controller MicrositeController --resource
+ 1578  artisan make:controller CarrierProductController --resource
+ 1579  artisan make:controller RoleController --resource
+ 1580  artisan make:controller AdminController --resource
+ 1581  artisan make
+ 1582  artisan make:model AdminModel --resource
+ 1583  artisan make:model Microsite --resource
+ 1584  artisan make:model Role --resource
+ 1585  artisan make:model Carrier --resource
+ 1586  artisan make:model CarrierProduct --resource
+ 1587  artisan make:model UserProfile --resource
+ 1588  artisan make:route
+ 1589  artisan make:model Group --resource
+ 1590  artisan make:controller GroupController --resource
+ 1591  artisan make:controller Api\CarrierController --resource
+ 1592  artisan make:controller Api/CarrierController --resource
+ 1593  artisan make:controller Api/UserController --resource
+ 1594  artisan make:controller Api/GroupController --resource
+ 1595  artisan make:controller Api/RoleController --resource
+ 1596  artisan make:controller Api/MicrositeController --resource
+ 1597  artisan make:controller AboutController --resource
+ 1598  artisan make:controller TermLifeController --resource
+ 1599  artisan make:controller SitController --resource
+ 1600  artisan make:controller SiwlController --resource
+ 1601  artisan make:controller GulController --resource
+ 1602  artisan make:controller QuoteController --resource
+ 1614  alias artisan='php artisan'
+ 1616  artisan serve
+ 1618  ps aux | grep artisan
+ 1620  ps aux | grep artisan
+ 1621  artisan serve
+ 1622  ps aux | grep artisan
+ 1624  ps aux | grep artisan
+ 1626  artisan serve --port 8080
+ 1640  artisan serve --port 8080
+ 1661  alias artisan='php artisan'
+ 1662  artisan serve --port 8080
+ 1664  artisan make:middleware RedirectIfNotSuperUser
+ 1665  alias artisan='php artisan'
+ 1666  artisan make:middleware RedirectIfNotSuperUser
+ 1667  artisan make:middleware RedirectIfNotUser
+ 1668  artisan make:middleware RedirectIfNotManagerUser
+ 1669  artisan make:middleware RedirectIfNotAdminUser
+ 1670  artisan make:model UserGroup
+ 1671  artisan make:model Models/Super --resource
+ 1672  artisan make:model Models\Super --resource
+ 1673  artisan make:controller Models\Super --resource
+ 1674  artisan make:controller SuperController --resoure
+ 1675  artisan make:controller SuperController --resorce
+ 1676  artisan make:controller SuperController --resource
+ 1677  artisan make:controller ManagerController --resource
+ 1678  artisan serve --port 8080
+ 1680  artisan make:provider UserMenuServiceProvider
+ 1721  php artisan serve --port 8080
+ 1724  ps aux | grep artisan
+ 1726  php artisan serve --port 8080
+ 1727  ps aux | grep artisan
+ 1729  ps aux | grep artisan
+ 1737  php artisan serve --port 8080
+ 1753  php artisan make:controller Api\AffilateController --resource
+ 1754  php artisan make:controller Api/AffilateController --resource
+ 1755  php artisan make:model Affiliate
+ 1757  php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+ 1759  php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\JWTAuthServiceProvider"
+ 1760  php artisan jwt:secret
+ 1762  php artisan jwt:secret
+ 1763  php artisan make:controller Api/AuthenticateController
+ 1764  php artisan session:table
+ 1765  php artisan migrate
+ 1771  php artisan migrate
+ 1772  php artisan passport:install 
+ 1773  php artisan make:provider PassportServiceProvider
+ 1774  php artisan passport:keys
+ 1775  php artisan passport:client
+ 1776  php artisan serve --port 8080
+ 1777  ps aux | grep artisan
+ 1779  ps aux | grep artisan
+ 1782  php artisan serve --port 8080
+ 1798  php artisan serve --port 8080
+ 1808  php artisan serve --port 8080
+ 1812  php artisan serve --port 8080
+ 1814  php artisan serve --port 8080
+ 1816  php artisan serve --port 8080
+ 1820  php artisan serve --port 8080
+ 1822  php artisan serve --port 8080
+ 1824  php artisan serve --port 8080
+ 1827  php artisan serve --port 8080
+ 1829  php artisan serve --port 8080 -vvv
+ 1830  php artisan 
+ 1831  php artisan serve --help
+ 1832  php artisan serve --verbose --port 8080
+ 1834  php artisan serve --verbose --port 8080
+ 1836  php artisan serve --verbose --port 8080
+ 1838  php artisan serve --verbose --port 8080
+ 1840  php artisan serve --verbose --port 8080
+ 1890  php artisan serve --port 8282
+ 1894  php artisan serve --port 8282
+ 1895  php artisan passport:client 0
+ 1896  php artisan passport:client
+ 1897  php artisan passport:client --client_credentials
+ 1898  php artisan passport
+ 1915  php artisan
+ 1916  php artisan passport:install
+ 1918  php artisan make:controller Api\ApiController
+ 1919  php artisan make:controller Api/ApiController
+ 1920  php artisan serve --port 8383
+ 1921  php artisan list:route
+ 1922  php artisan route:list
+ 1923  php artisan route:list -v
+ 1924  php artisan route:list
+ 1925  php artisan make:controller Api/UserController
+ 1926  php artisan make:controller Api\UserController
+ 1927  php artisan make:controller UserController
+ 1928  php artisan make:controller Api\UserController
+ 1929  php artisan make:controller Api/UserController
+ 1930  php artisan make:auth
+ 1931  php artisan serve --port 8383
+ 1932  php artisan make:provider ClientCredentialsRoutesServiceProvider
+ 1933  php artisan passport:client --password
+ 1948  php artisan make
+ 1949  php artisan
+ 1950  artisan
+ 1951  php artisan list:routes
+ 1952  php artisan list:route
+ 1953  php artisan route:list
+ 1954  php artisan make:controller MicrositePage/UserController --resource
+ 1955  php artisan route:list
+ 1956  php artisan make:controller Super/SuperController --resource
+ 1957  php artisan make:controller Admin/AdminController --resource
+ 1958  php artisan make:controller Manager/ManagerController --resource
+ 1959  php artisan route:list
+ 1960  php artisan make:model Manager
+ 1961  php artisan make:migration roles
+ 1962  php artisan make:migration --help
+ 1963  php artisan make:migration CreateProfilesTable --table profiles
+ 1964  php artisan make:migration CreateGroupsTable --table groups
+ 1965  php artisan make:migration CreateSubdomainsTable --table subdomains
+ 1966  php artisan make:migration CreateDomainsTable --table domains
+ 1967  php artisan make:model Models/Domain
+ 1968  php artisan make:model Models/Subdomain
+ 1969  php artisan make:migration user_carrier_table --create=user_carrier
+ 1970  php artisan make:migration carrier_user_table --create=carrier_user
+ 1971  php artisan
+ 1972  php artisan migrate
+ 1973  php artisan migrate refresh
+ 1974  php artisan migrate:refresh
+ 1975  php artisan migrate
+ 1976  php artisan db:seed
+ 1977  php artisan db:seed --help
+ 1978  php artisan db:seed
+ 1979  php artisan migrate:refresh
+ 1980  php artisan db:seed
+ 1981  php artisan migrate:refresh
+ 1982  php artisan db:seed
+ 1983  php artisan migrate:refresh
+ 1984  php artisan db:seed
+ 1985  php artisan db:seed -vvv
+ 2000  php artisan make:provider FD3FakerServiceProvider
+ 2004  php artisan make:provider FD3FakerServiceProvider
+ 2038  php artisan db:seed
+ 2057  php artisan db:seed
+ 2058  php artisan migrate:refresh --seed
+ 2059  php artisan make:migration CreateRolesTable --table roles
+ 2060  php artisan migrate:refresh --seed
+ 2061  php artisan migrate:refresh
+ 2062  php artisan make:migration CreateProfilesTable --table profiles
+ 2063  php artisan migrate:refresh
+ 2064  php artisan migrate
+ 2065  php artisan migrate:refresh
+ 2066  php artisan migrate
+ 2067  php artisan make:migration CreateProfilesTable --table profiles
+ 2068  php artisan migrate
+ 2069  php artisan migrate:refresh
+ 2070  php artisan make:migration create_profile_table --table profiles --create=profiles
+ 2071  php artisan migrate
+ 2072  php artisan make:migration create_profile_table --table profiles --create=profiles
+ 2073  php artisan migrate
+ 2074  php artisan migrate:refresh
+ 2075  php artisan migrate:refresh --force
+ 2076  php artisan migrate
+ 2077  php artisan make:migration create_user_table --table users --create=users
+ 2078  php artisan migrate
+ 2079  php artisan migrate:refresh
+ 2080  php artisan make:migration create_role_table --table roles --create=roles
+ 2081  php artisan migrate
+ 2082  php artisan make:migration create_group_table --table groups --create=groups
+ 2083  php artisan migrate
+ 2084  php artisan migrate:refresh
+ 2085  php artisan migrate
+ 2086  php artisan migrate:refresh
+ 2087  php artisan migrate
+ 2088  php artisan migrate:refresh
+ 2089  php artisan migrate
+ 2090  php artisan make:migration aaa
+ 2091  php artisan migrate
+ 2092  php artisan migrate:refresh
+ 2093  php artisan migrate
+ 2094  php artisan migrate:refresh
+ 2095  php artisan make:migration groups
+ 2096  php artisan make:migration profiles
+ 2097  php artisan make:migration roles
+ 2098  php artisan migrate:refresh
+ 2099  php artisan make:migration roles
+ 2100  php artisan make:migration domains
+ 2101  php artisan make:migration subdomains
+ 2102  php artisan make:migration users
+ 2103  php artisan migrate:refresh
+ 2104  php artisan migrate
+ 2105  php artisan migrate:refresh
+ 2106  php artisan migrate --seed
+ 2107  php artisan migrate:refresh --seed
+ 2108  php artisan make:controller aaa --resource
+ 2109  php artisan route:list
+ 2110  php artisan make:controller Api/Profile --resource
+ 2112  php artisan make:mail usercreated
+ 2113  php artisan make --help
+ 2114  php artisan make:mail usercreated
+ 2115  php artisan make:provider CreatedUserEventProvider
+ 2118  php artisan --help
+ 2119  php artisan serve --port 8383
+ 2120  php artisan route:list
+ 2121  php artisan migrate
+ 2122  php artisan make:mail UserMailChanged
+ 2135  php artisan make:mail test -m emails.test
+ 2136  php artisan serve --port 8383
+ 2138  php artisan serve --port 8383
+ 2145  php artisan serve --port 8383
+ 2146  php artisan cache:clear
+ 2147  php artisan view:clear
+ 2148  php artisan cache:clear
+ 2149  php artisan serve --port 8383
+ 2157  php artisan serve --port 8383
+ 2158  php artisan make:middleware SignatureMiddleware
+ 2159  php artisan serve --port 8383
+ 2160  php artisan cache:clear
+ 2170  php artisan
+ 2171  php artisan make:transformer UserTransformer
+ 2172  php artisan serve --port 8383
+ 2173  php artisan migrate --seed
+ 2174  php artisan migrate:refresh --seed
+ 2188  php artisan migrate:refresh --seed
+ 2189  php artisan migrate:refresh --seed --help
+ 2190  php artisan migrate:refresh --seed
+ 2192  php artisan make:factory help
+ 2193  php artisan make:factory --help
+ 2194  php artisan make:factory -m Domain
+ 2195  php artisan make:factory DomainFactory -m Domain
+ 2196  php artisan make:factory SubDomainFactory -m SubDomain
+ 2197  php artisan make:factory ProfileFactory -m Profile
+ 2198  php artisan make:factory GroupFactory -m Group
+ 2199  php artisan make:factory RoleFactory -m Role
+ 2200  php artisan make:seeder UserSeed
+ 2201  php artisan migrate:refresh --seed
+ 2212  php artisan migrate:refresh --seed
+ 2243  php artisan serve --port 8383
+ 2244  php artisan route:list
+ 2253  php artisan route:list
+ 2254  php artisan make:model --help
+ 2255  php artisan make:migration --help
+ 2256  php artisan make:migration create_affiliate_table --table affiliates --create affiliates
+ 2257  php artisan migrate:refresh --seed
+ 2258  php artisan migrate:refresh
+ 2259  php artisan --help
+ 2260  php artisan help
+ 2261  php artisan
+ 2262  php artisan db:seed
+ 2263  php artisan migrate:refresh
+ 2264  php artisan db:seed
+ 2265  php artisan migrate:refresh
+ 2266  php artisan db:seed
+ 2268  php artisan db:seed
+ 2270  php artisan migrate:refresh
+ 2271  php artisan db:seed
+ 2272  php artisan migrate:refresh
+ 2273  php artisan db:seed
+ 2274  php artisan migrate:refresh
+ 2275  php artisan db:seed
+ 2276  php artisan migrate:refresh
+ 2277  php artisan db:seed
+ 2278  php artisan migrate:refresh
+ 2279  php artisan db:seed
+ 2280  php artisan migrate:refresh
+ 2281  php artisan db:seed
+ 2282  php artisan migrate:refresh
+ 2283  php artisan db:seed
+ 2284  php artisan migrate:refresh
+ 2285  php artisan db:seed
+ 2286  php artisan migrate:refresh
+ 2287  php artisan db:seed
+ 2288  php artisan migrate:refresh
+ 2289  php artisan db:seed
+ 2290  php artisan migrate:refresh
+ 2291  php artisan db:seed
+ 2292  php artisan migrate:refresh
+ 2293  php artisan db:seed
+ 2294  php artisan migrate:refresh
+ 2295  php artisan db:seed
+ 2296  php artisan migrate:refresh
+ 2297  php artisan db:seed
+ 2298  php artisan migrate:refresh
+ 2299  php artisan db:seed
+ 2303  php artisan route:list
+ 2307  php artisan serve --port 8383
+ 2315  php artisan make:migration create_affilate_user_table --table affilate_user --create affilate_user
+ 2316  php artisan migrate
+ 2317  php artisan migrate:refresh
+ 2318  php artisan db:seed
+ 2319  php artisan migrate:refresh
+ 2320  php artisan db:seed
+ 2321  php artisan migrate:refresh
+ 2322  php artisan db:seed
+ 2323  php artisan migrate:refresh
+ 2324  php artisan db:seed
+ 2325  php artisan migrate:refresh
+ 2326  php artisan db:seed
+ 2327  php artisan migrate:refresh
+ 2328  php artisan db:seed
+ 2338  php artisan migrate:refresh
+ 2339  php artisan db:seed
+ 2340  php artisan migrate:refresh
+ 2341  php artisan db:seed
+ 2342  php artisan migrate:refresh
+ 2343  php artisan db:seed
+ 2344  php artisan migrate:refresh
+ 2345  php artisan db:seed
+ 2346  php artisan migrate:refresh
+ 2347  php artisan migrate:refresh --seed
+ 2348  php artisan route:list
+ 2349  php artisan migrate:refresh
+ 2350  php artisan migrate:refresh --seed
+ 2351  php artisan migrate:refresh
+ 2352  php artisan migrate:refresh --seed
+ 2353  php artisan migrate:refresh
+ 2354  php artisan db:seed
+ 2355  php artisan migrate:refresh
+ 2356  php artisan db:seed
+ 2357  php artisan migrate:refresh
+ 2358  php artisan db:seed
+ 2359  php artisan migrate:refresh
+ 2360  php artisan db:seed
+ 2361  php artisan migrate:refresh
+ 2362  php artisan migrate:refresh --seed
+ 2363  php artisan migrate:refresh
+ 2364  php artisan db:seed
+ 2365  php artisan migrate:refresh
+ 2366  php artisan db:seed
+ 2367  php artisan migrate:refresh
+ 2368  php artisan db:seed
+ 2369  php artisan migrate:refresh
+ 2370  php artisan db:seed
+ 2371  php artisan migrate:refresh
+ 2372  php artisan db:seed
+ 2373  php artisan migrate:refresh
+ 2374  php artisan db:seed
+ 2381  php artisan route:list
+ 2382  php artisan migrate:refresh
+ 2383  php artisan db:seed
+ 2390  php artisan make:middleware TransformInput
+ 2399  php artisan make:auth
+ 2401  php artisan route:list
+ 2406  php artisan 
+ 2407  php artisan migrate
+ 2408  php artisan
+ 2409  php artisan passport:install
+ 2410  php artisan passport:install --force
+ 2417  php artisan route:list
+ 2419  php artisan route:list
+ 2420  php artisan passport:client
+ 2430  php artisan passport:client --password
+ 2431  php artisan vendor:publish --tag=passport-components
+ 2439  php artisan passport:client --personal
+ 2440  php artisan passport:client --client password
+ 2441  php artisan passport:client --password
+ 2442  php artisan serve --port 8383
+ 2451  php artisan
+ 2452  php artisan make:policy help
+ 2453  php artisan make:policy --help
+ 2454  php artisan make:policy UserPolicy --model=MicrositePage
+ 2472  artisan
+ 2475  php artisan make:migration:schema -help
+ 2483  php artisan make:command CrudGenerator
+ 2484  php artisan
+ 2485  php artisan make:command --help
+ 2486  php artisan make:command --command=fd3:make
+ 2487  php artisan make:command fd3 --command=fd3:make 
+ 2488  php artisan
+ 2489  php artisan make:pivot roles users
+ 2490  php artisan
+ 2491  php artisan make:migration:pivot roles users
+ 2492  php artisan migrate
+ 2494  php artisan migrate
+ 2495  php artisan route:list
+ 2496  php artisan make:facade Alert
+ 2497  php artisan make:provider FD3MessagingProvider
+ 2499  php artisan config:clear
+ 2500  php artisan serve --port 8383
+ 2501  php artisan make:provider FD3EventsProvider
+ 2503  php artisan make:policy UserPolicy --model=MicrositePage
+ 2504  php artisan service --port 8383
+ 2536  php artisan route:list
+ 2537  php artisan route:list -v
+ 2538  php artisan route:list
+ 2703  php artisan route:list
+ 2704  php artisan route:list -vvv
+ 2705  php artisan route:list 
+ 2706  php artisan route:list  | grep go
+ 2707  php artisan route:list > routes.md
+ 2709  php artisan route:list
+ 2710  php artisan serve --port 8383
+ 3107  php artisan servce --port 8383
+ 3109  php artisan serve --port 8383
+ 3111  php artisan serve --port 8383
+ 3113  php artisan serve --port 8383
+ 3114  history | grep artisan > artisan.txt
+ 3115  history | grep artisan | grep migrate > artisan-migrate.txt
+ 3116  php artisan migrate:refresh --seed
+ 3117  php artisan migrate:refresh
+ 3118  php artisan migrate:refresh --seed
+ 3119  php artisan migrate:refresh --seed -v

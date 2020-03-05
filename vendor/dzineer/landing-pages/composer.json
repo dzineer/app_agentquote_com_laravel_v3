@@ -1,0 +1,31 @@
+{
+    "name": "dzineer/landing-pages",
+    "description": "The provide custom landing pages to our Laravel Application",
+    "authors": [
+        {
+            "name": "Frank Decker",
+            "email": "frank@dzineer.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dzineer\\LandingPages\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dzineer\\LandingPages\\LandingPagesServiceProvider"
+            ]
+        }
+    }
+}
