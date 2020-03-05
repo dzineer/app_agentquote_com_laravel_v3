@@ -48,10 +48,6 @@ class ComposerStaticInit61aa210a01e01783fc24755b4bcf8106
         array (
             'iamcal\\' => 7,
         ),
-        'd' => 
-        array (
-            'dekor\\' => 6,
-        ),
         'Z' => 
         array (
             'Zend\\Diactoros\\' => 15,
@@ -221,10 +217,6 @@ class ComposerStaticInit61aa210a01e01783fc24755b4bcf8106
         'iamcal\\' => 
         array (
             0 => __DIR__ . '/..' . '/iamcal/sql-parser/src',
-        ),
-        'dekor\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dekor/php-array-table/src',
         ),
         'Zend\\Diactoros\\' => 
         array (
@@ -6213,7 +6205,6 @@ class ComposerStaticInit61aa210a01e01783fc24755b4bcf8106
         'Zend\\Diactoros\\UploadedFileFactory' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/UploadedFileFactory.php',
         'Zend\\Diactoros\\Uri' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Uri.php',
         'Zend\\Diactoros\\UriFactory' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/UriFactory.php',
-        'dekor\\ArrayToTextTable' => __DIR__ . '/..' . '/dekor/php-array-table/src/ArrayToTextTable.php',
         'iamcal\\SQLParser' => __DIR__ . '/..' . '/iamcal/sql-parser/src/SQLParser.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',

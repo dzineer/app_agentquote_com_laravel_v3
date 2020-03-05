@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2c396b59d104904d9dc6f0364be618d",
+    "content-hash": "e05978bfa65ed2a43be14944c459b6ee",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -60,47 +60,6 @@
                 "validation"
             ],
             "time": "2019-05-28T15:27:37+00:00"
-        },
-        {
-            "name": "dekor/php-array-table",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/deniskoronets/php-array-table.git",
-                "reference": "23c44595202edb5869bebfb69f008430ea180e1e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/deniskoronets/php-array-table/zipball/23c44595202edb5869bebfb69f008430ea180e1e",
-                "reference": "23c44595202edb5869bebfb69f008430ea180e1e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "dekor\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Denis Koronets",
-                    "email": "deniskoronets@woo.zp.ua",
-                    "homepage": "http://woo.zp.ua/"
-                }
-            ],
-            "description": "PHP Library for printing associative arrays as text table (similar to mysql terminal console)",
-            "keywords": [
-                "library",
-                "php"
-            ],
-            "time": "2019-04-11T21:58:18+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -7344,7 +7303,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "dekor/php-array-table": 20,
         "dzineer/custom-modules": 20,
         "dzineer/dz-sms": 20,
         "dzineer/landing-pages": 20,

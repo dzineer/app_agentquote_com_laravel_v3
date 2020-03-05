@@ -180,49 +180,6 @@
         ]
     },
     {
-        "name": "dekor/php-array-table",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/deniskoronets/php-array-table.git",
-            "reference": "23c44595202edb5869bebfb69f008430ea180e1e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/deniskoronets/php-array-table/zipball/23c44595202edb5869bebfb69f008430ea180e1e",
-            "reference": "23c44595202edb5869bebfb69f008430ea180e1e",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0"
-        },
-        "time": "2019-04-11T21:58:18+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "dekor\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Denis Koronets",
-                "email": "deniskoronets@woo.zp.ua",
-                "homepage": "http://woo.zp.ua/"
-            }
-        ],
-        "description": "PHP Library for printing associative arrays as text table (similar to mysql terminal console)",
-        "keywords": [
-            "library",
-            "php"
-        ]
-    },
-    {
         "name": "dnoegel/php-xdg-base-dir",
         "version": "0.1",
         "version_normalized": "0.1.0.0",
