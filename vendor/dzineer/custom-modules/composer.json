@@ -1,0 +1,28 @@
+{
+    "name": "dzineer/custom-modules",
+    "description": "The provide custom functionality to our existing Laravel Application",
+    "authors": [
+        {
+            "name": "Frank Decker",
+            "email": "frank@dzineer.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "^5.8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dzineer\\CustomModules\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dzineer\\CustomModules\\CustomModulesServiceProvider"
+            ]
+        }
+    }
+}

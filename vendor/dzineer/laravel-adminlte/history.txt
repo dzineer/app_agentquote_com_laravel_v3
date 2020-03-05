@@ -1,0 +1,3121 @@
+    1  ls -al
+    2  vi ~/.zshrc
+    3  exit
+    4  ls -al
+    5  cd /var
+    6  ls
+    7  ssh root@45.77.221.8
+    8  host
+    9  host www.google.com 47.77.221.8
+   10  ls -al
+   11  host www.google.com 45.77.221.8
+   12  host www.google.com 8.9.6.205
+   13  host www.google.com 45.77.221.8
+   14  host www.google.com 45.77.221.8 --help
+   15  host --help
+   16  host www.google.com 45.77.221.8
+   17  host www.google.com 47.77.221.8
+   18  ssh root@149.28.40.63
+   19  ssh-keygen -t rsa -b 4096 -C "frankdd3@gmail.com"
+   20  cat /Users/niran/.ssh/ghub_id_rsa.pub
+   21  pwd
+   22  cd /Users/niran/Desktop/Desktop\ Stuff/Projects/Companies/TranceHosting/projects/learning_laravel/dbrates_new_2018
+   23  ls
+   24  ls -al
+   25  mv .git .gitold
+   26  mv .gitold /tmp/
+   27  git init
+   28  git add -A
+   29  git commit -m "Adding to web dbrates Version 2"
+   30  git remote add origin git@ghub.trancehosting.net:dzineer/dbrates-webversion-2018.git
+   31  git push -u origin master
+   32  git remove remote
+   33  git remote remove
+   34  git remote remove dbrates-webversion-2018
+   35  git remote -v
+   36  git remote remove origin
+   37  git remote add origin dzineer@ghub.trancehosting.net:dzineer/dbrates-webversion-2018.git
+   38  git push -u origin master
+   39  git remote remove origin
+   40  git push --set-upstream  git@ghub.trancehosting.net:dzineer/dbrates-webversion-2018.git master
+   41  git config --global user.name "Frank Decker"
+   42  git config --global user.email "frankdd3@gmail.com"
+   43  git remote remove origin
+   44  git remote add origin git@ghub.trancehosting.net:dzineer/dbrates-webversion-2018.git
+   45  git push -u origin master
+   46  ls
+   47  ssh-keygen -t rsa -b 4096 -C "frankdd3@gmail.com"
+   48  cat /Users/niran/.ssh/id_rsa
+   49  cat /Users/niran/.ssh/id_rsa.pub
+   50  git push -u origin master
+   51  git add -A
+   52  git commit -m "Unselected columns after error or success"
+   53  push -u origin master
+   54  git push -u origin master
+   55  ssh root@149.28.40.63
+   56  ssh root@45.77.221.8
+   57  docker --version
+   58  lynx
+   59  lynx https://store.docker.com
+   60  docker --version
+   61  docker version
+   62  docker version > docker.version
+   63  cat docker.version
+   64  pwd
+   65  ls
+   66  cd ~/Desktop/Desktop\ Stuff/
+   67  ls
+   68  pwd
+   69  cd Projects
+   70  ls
+   71  cd Com
+   72  cd Companies
+   73  ls
+   74  cd Docker
+   75  ls
+   76  cd home
+   77  ls
+   78  code .
+   79  brew install bash-completion
+   80  brew insall wget
+   81  brew install wget
+   82  sudo curl -L https://raw.githubusercontent.com/docker/compose/1.21.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose\n
+   83  brew install curl
+   84  sudo curl -L https://raw.githubusercontent.com/docker/compose/1.21.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose\n
+   85  ls
+   86  ls -al
+   87  curl -L https://github.com/docker/compose/releases/download/1.1.0/docker-compose-Darwin-x86_64\nsudo mv docker-compose-Darwin-x86_64 /usr/local/bin/docker-compose\nsudo chmod +x /usr/local/bin/docker-compose
+   88  ls -al
+   89  sudo curl -L https://raw.githubusercontent.com/docker/machine/v0.14.0/contrib/completion/bash/docker-machine.bash -o `brew --prefix`/etc/bash_completion.d/docker-machine\n
+   90  mkdir -p ~/.zsh/completion\ncurl -L https://raw.githubusercontent.com/docker/machine/v0.14.0/contrib/completion/zsh/_docker-machine > ~/.zsh/completion/_docker-machine
+   91  vi ~/.zshrc
+   92  exec $SHELL -l
+   93  brew install zsh
+   94  docker version
+   95  docker info
+   96  docker
+   97  docker container run
+   98  docker container run --publish 80:80 nginx
+   99  docker container run --publish 80:80 --detach nginx
+  100  docker container ls
+  101  docker container stop 195
+  102  ls -a
+  103  docker container ls -a
+  104  docker container run --publish 80:80 --detach --name webhost nginx
+  105  docker container ls -a
+  106  docker container logs webhost
+  107  docker container top webhost
+  108  docker container ls -a
+  109  docker continer rm ace 195
+  110  docker container rm ace 195
+  111  docker container ls -a
+  112  docker container rm aca
+  113  docker container rm 441
+  114  docker container rm -f 441
+  115  history | grep docker >> ~/docker_commands.txt
+  116  mail -t frankdd3@gmail.com < ~/docker_commands.txt
+  117  mail -s "Docker Commands" -F frankdd3@gmail.com < ~/docker_commands.txt
+  118  docker run --name mongo -d mongo
+  119  docker top mongo
+  120  ps aux
+  121  ps aux | mongod
+  122  ps aux | grep mongod
+  123  docker container stop mongo
+  124  ps aux | grep mongod
+  125  ps aux | grep mongo
+  126  ps aux | grep mongod
+  127  docker container start mongo
+  128  docker container ps mongo
+  129  docker top mongo
+  130  docker container top mongo
+  131  ps aux | grep mongod
+  132  ps aux | grep mongo
+  133  top
+  134  docker top mongo
+  135  ps aux | grep mongo
+  136  ps aux | less
+  137  ps aux | grep root
+  138  ps aux | grep root | grep docker
+  139  ps aux | grep root | grep mongo
+  140  ps aux | grep niran | grep mongo
+  141  ps aux | grep niran | grep mongoooo
+  142  ps aux | grep mongoooo
+  143  ls
+  144  pwd
+  145  cd frankdd3
+  146  ls -al
+  147  cat frankdd3
+  148  docker ps
+  149  docker container stop mongo
+  150  docker container rm df5
+  151  docker ps
+  152  docker ps -l
+  153  docker ps -a
+  154  docker container run --publish 80:80 --name "nginx.proj1" -d nginx
+  155  docker container run --publish 8080:80 --name "apache.httpd.frank" -d httpd:latest
+  156  docker ps
+  157  docker container rm -f 67c
+  158  docker container run --publish 8080:80 --name "apache.httpd.proj1" -d httpd:latest
+  159  docker ps
+  160  docker container run --publish 3306:3306 --name "mysql.proj1" -d mysql
+  161  docker ps
+  162  docker container run --publish 3306:3306 --name "mysql.proj1" -d --env 'MYSQL_RANDOM_ROOT_PASSWORD=yet' mysql
+  163  docker container ls
+  164  docker container apache.httpd.proj1
+  165  docker container logs apache.httpd.proj1
+  166  docker container logs mysql.proj1
+  167  docker container logs mysql.proj1 | grep password
+  168  docker container logs mysql.proj1 | grep password -i
+  169  docker container *
+  170  docker container ps -al
+  171  docker container ps -a
+  172  docker container ps -l
+  173  docker container ps -al
+  174  docker container ps -a
+  175  docker container stop a4 84 df
+  176  docker container ps -a
+  177  docker container rma4 84 df
+  178  docker container rma 4 84 df
+  179  docker container rm a4 84 df
+  180  docker container ps -a
+  181  docker container ps l
+  182  docker container ps -l
+  183  docker container images
+  184  docker images ls
+  185  docker images
+  186  docker images rmi mongo nginx mysql http
+  187  docker rmi mongo nginx mysql http
+  188  docker images rmi mongo nginx mysql httpd
+  189  docker rmi httpd
+  190  docker images
+  191  docker container ls
+  192  ls
+  193  mv frankdd3 docker_commands_history.txt
+  194  history >> docker_commands_history.txt
+  195  cat docker_commands_history.txt
+  196  echo "docker container run --publish 80:80 --name "nginx.proj1" -d nginx" >> build_multi.sh
+  197  echo "docker container run --publish 8080:80 --name "apache.httpd.proj1" -d httpd:latest" >> build_multi.sh
+  198  echo "docker container run --publish 3306:3306 --name "mysql.proj1" -d --env 'MYSQL_RANDOM_ROOT_PASSWORD=yet' mysql"  >> build_multi.sh
+  199  vi build_multi.sh
+  200  chmod u+xrw build_multi.sh
+  201  ls
+  202  ./build_multi.sh
+  203  docker container ps
+  204  docker container logs mysql.proj1
+  205  docker container logs mysql | grep -i PASSWORD
+  206  docker container logs mysql.proj1 | grep -i PASSWORD
+  207  ls
+  208  docker container mysql.proj1
+  209  docker container top mysql.proj1
+  210  docker container ls mysql.proj1
+  211  docker conatiners ls
+  212  docker conatiner ls
+  213  docker conatiner ps
+  214  docker ps
+  215  $(docker ps -a)
+  216  echo $(docker ps -a)
+  217  docker conatiner ps
+  218  docker ps
+  219  docker stop mysql apache nginx
+  220  docker container stop a1 cd 21
+  221  docker container rm  a1 cd 21
+  222  docker container rmi  a1 cd 21
+  223  docker rmi  a1 cd 21
+  224  docker images
+  225  docker rmi  mysql httpd
+  226  docker images
+  227  docker container run --publish 80:80 --name nginx nginx -d
+  228  docker container run -d --publish 80:80 --name nginx nginxd
+  229  docker container run -d --publish 80:80 --name nginx nginx
+  230  docker iamges
+  231  docker image ls
+  232  docker container stop nginx
+  233  docker container rm nginx
+  234  docker image rm nginx
+  235  docker ls
+  236  docker ps
+  237  ls
+  238  cat build_multi.sh
+  239  docker container run --publish 80:80 --name nginx.test -d nginx
+  240  docker container run -d --mame mysql -e MYSQL_RANDOM_ROOT_PASSWORD=true mysql
+  241  docker container run -d --name mysql -e MYSQL_RANDOM_ROOT_PASSWORD=true mysql
+  242  docker container ls
+  243  docker container top mysql
+  244  docker container top nginx
+  245  docker container top nginx.test
+  246  docker container inspect mysql
+  247  docker container stats --help
+  248  docker container stats
+  249  docker container ls
+  250  docker container run --help
+  251  docker container run -it --name proxy nginx bash
+  252  docker container ls -a
+  253  docker container run -it --name ubuntu ubuntu
+  254  docker container ls -a
+  255  docker container ls
+  256  docker container --run -it --name mysql mysql
+  257  docker container run -it --name ubuntu ubuntu
+  258  docker container start --help
+  259  docker container start -ai ubuntu
+  260  docker container exec --help
+  261  docker container exec -it mysql.test bash
+  262  docker container ls
+  263  docker container exec -it mysql bash
+  264  docker container ls
+  265  docker container exec -it mysql bash
+  266  docker pull alpine
+  267  docker image ls
+  268  docker container --run -it --name alpine alpine bash
+  269  docker container run -it --name alpine alpine bash
+  270  docker container run -it alpine bash
+  271  docker container run -it alpine sh
+  272  docker container run -it alpine bash
+  273  docker container run -it alpine sh
+  274  docker container run -p 80:80 --name webhost -d nginx
+  275  docker ps
+  276  docker container stop 7be 776
+  277  docker ps
+  278  docker container run -p 80:80 --name webhost -d nginx
+  279  docker container ls
+  280  docker container ls -a
+  281  docker container rm de9 fde 2be bbe d37 476 a85 8b1 9a2 7be
+  282  docker container ls -a
+  283  docker container rm fde 776
+  284  docker container rm fbe
+  285  docker container ls -a
+  286  docker image ls
+  287  docker container run -p 80:80 --name webhost -d nginx
+  288  docker container port webhost
+  289  docker container inspect --format '{{ .NetworkSettings.IPAddress }}' webhost
+  290  ifconfig
+  291  ifconfig en0
+  292  history >> docker_commands_history.txt
+  293  cat docker_commands_history.txt
+  294  docker container run -p 880:80  -d nginx/alpine
+  295  docker container run -p 880:80  -d nginx:alpine
+  296  docker network ls
+  297  docker network inspect
+  298  docker network inspect bridge
+  299  docker network ls
+  300  docker network inspect host
+  301  docker network ls
+  302  docker network inspect none
+  303  docker network inspect bridge
+  304  docker network ls
+  305  docker network create my_app_net
+  306  docker network ls
+  307  docker network inspect my_app_net
+  308  docker network create --help
+  309  docker cotainer run -d --name new_nginx --network my_app_net nginx
+  310  docker container run -d --name new_nginx --network my_app_net nginx
+  311  docker network inspect my_app_network
+  312  docker network inspect my_app_net
+  313  docker network --help
+  314  docker ps
+  315  docker network connect ad2320933636 6d7ef35f83d7
+  316  docker network ls
+  317  docker network connect da5d25aae434 6d7ef35f83d7
+  318  docker network inspect my_app_net
+  319  docker container inspect webhost
+  320  docker network dicconnect da5d25aae434 6d7ef35f83d7
+  321  docker network disconnect da5d25aae434 6d7ef35f83d7
+  322  docker container inspect webhost
+  323  cat docker_commands_history.txt
+  324  history >> docker_commands_history.txt
+  325  cat docker_commands_history.txt
+  326  docker container ls
+  327  docker network ls
+  328  docker network inspect my_app_net
+  329  docker container run -d --name my_nginx --network my_app_net nginx
+  330  docker network inspect my_app_net
+  331  docker container exec -it my_nginx ping new_nginx
+  332  docker container exec -it my_nginx bash
+  333  docker container exec -it my_nginx ping new_nginx
+  334  docker container exec -it new_nginx ping my_nginx
+  335  docker container exec -it new_nginx bash
+  336  docker container exec -it new_nginx ping my_nginx
+  337  docker container exec -it my_nginx ping new_nginx
+  338  docker network ls
+  339  docker container --help
+  340  docker container create --help
+  341  ping google.com
+  342  traceroute google.com
+  343  ping google.om
+  344  ping google.com
+  345  cd dbrates
+  346  ls
+  347  pwd
+  348  php artisan serve
+  349  pwd
+  350  pushd .
+  351  cd cd
+  352  cd
+  353  ls
+  354  cd Applications
+  355  ls
+  356  cd ..
+  357  ls
+  358  pwd
+  359  ls
+  360  cd /Applications
+  361  ls
+  362  cd MAMP\ PRO
+  363  ls
+  364  cd MAMP\ PRO.app
+  365  ls
+  366  cd Contents
+  367  ls
+  368  cd MacOS
+  369  ls
+  370  pwd
+  371  cd ..
+  372  ls
+  373  cd ..
+  374  ls
+  375  ls -al
+  376  cd ..
+  377  ls
+  378  cd MAMP
+  379  ls
+  380  cd ..
+  381  ls
+  382  cd MAMP
+  383  ls
+  384  cd MAMP.app
+  385  ls
+  386  cd Contents
+  387  ls
+  388  cd MacOS
+  389  ls
+  390  cd ..
+  391  ls
+  392  cd Resources
+  393  ls
+  394  /Applications/MAMP/Library/bin/mysql ; exit;
+  395  mysql -u root -p
+  396  cd /Applications/MAMP/Library/bin
+  397  mysqladmin -u root -p "4xpTZz6P9GkfCEpMMz3QPrt6gPqxA3"
+  398  mysqladmin -u root -p "root"
+  399  mysqladmin -u root -p
+  400  mysqladmin -u root -p "Fqbr4MALMETyBZFdeuV43eAWNbSveH"
+  401  mysqld_safe --skip-grant-tables &
+  402  mysql -root
+  403  mysql -u -root
+  404  mysql -u -root -d mysql
+  405  mysql --hel[
+  406  mysql --help
+  407  mysql -u -root -D mysql
+  408  ps aux | grep
+  409  ps aux | grep mysql
+  410  sudo kill -9 23548
+  411  mysql -u -root -D mysql
+  412  ps aux | grep mysql
+  413  sudo kill -9 23474 24897 24874
+  414  ps aux | grep mysql
+  415  \tcd /Library/Application Support/appsolute/MAMP PRO
+  416  ls
+  417  cd /Library/Application Support/appsolute/MAMP PRO
+  418  ls
+  419  cd /Library/Application Support/appsolute/
+  420  cd "/Library/Application Support/appsolute/MAMP PRO"
+  421  ls
+  422  cd phpMyAdmin
+  423  ls
+  424  ls -al
+  425  cat ~/.ssh/id_rsa.pub
+  426  ssh root@159.89.133.18
+  427  ssh root@45.77.221.8
+  428  nslookup yahoo.com 45.77.221.8
+  429  nslookup yahoo.com 8.9.6.205
+  430  nslookup yahoo.com 45.77.221.8
+  431  systemctl stop firewalld
+  432  service iptables stop
+  433  nslookup yahoo.com 45.77.221.8
+  434  nslookup google.com 45.77.221.8
+  435  docker container ps
+  436  docker container ls
+  437  ssh root@45.77.221.8
+  438  cd dbrates
+  439  ls
+  440  php artisan make:model Carriertable -r
+  441  pwd
+  442  npm run watch
+  443  ls
+  444  pwd
+  445  cd dbrates
+  446  ls
+  447  php artisan serve
+  448  cd dbrates
+  449  npm watch run
+  450  npm run watch
+  451  ping jbbeckett.com
+  452  nslookup jbbeckett.com
+  453  cd dbrates
+  454  ls
+  455  cd .git
+  456  cd ..
+  457  cd .git
+  458  ls
+  459  cat config
+  460  git add -A
+  461  cd ..
+  462  pwd
+  463  git add -A
+  464  git commit -m "Added a better structure to the code"
+  465  git push -u origin master
+  466  git add -A
+  467  git commit -m "Added Interator Pattern and Limited Iterator Pattern Classes"
+  468  git push -u origin master
+  469  php artisan serve
+  470  ping agentquote.com
+  471  ping db.aq2e.com
+  472  ping db.aq2e.con
+  473  ping db.aq2e.com
+  474  ping agentquote.com
+  475  ssh root@45.77.221.8
+  476  history | grep docker
+  477  history | grep docker | grep network
+  478  history \| grep network
+  479  history | grep network
+  480  host www.google.com 45.77.221.8
+  481  ping google.com
+  482  host google.com 45.77.221.8
+  483  nslookup
+  484  nslookup -d2
+  485  ssh root@45.77.221.8
+  486  dig any google.com @45.77.221.8
+  487  ssh root@45.77.221.8
+  488  dig any trancehosting.com @45.77.221.8
+  489  dig any www.trancehosting.com @45.77.221.8
+  490  ssh root@45.76.13.148
+  491  ssh root@45.77.221.8
+  492  ssh root@45.76.13.148
+  493  ping google.com
+  494  addr
+  495  vi /etc/hosts
+  496  sudo vi /etc/hosts
+  497  ssh root@45.77.221.8
+  498  docker container ls
+  499  docker container ls -a
+  500  ssh root@45.77.221.8
+  501  ssh root@45.76.13.148
+  502  ssh root@149.28.47.31
+  503  ls
+  504  vi /etc/hosts
+  505  sudo vi /etc/hosts
+  506  pwd
+  507  ls
+  508  pwd
+  509  ssh root@149.28.47.31
+  510  cat ~/Desktop/37097683D15D915D97DA4A1B4981F116.txt
+  511  pwd
+  512  ls
+  513  ssh root@45.77.221.8
+  514  dig google.com ns +trace
+  515  dig +trace google.com
+  516  dig +trace enom.com
+  517  dig +trace www.enom.com
+  518  ping google.com
+  519  dig +trace www.example.com
+  520  dig +trace www.example.com ns
+  521  dig www.example.com
+  522  dig --help
+  523  dig -h
+  524  vi /etc/hosts
+  525  sudo vi /etc/hosts
+  526  ping puranku.com
+  527  ssh root@45.77.221.8
+  528  vi /etc/hosts
+  529  sudo vi /etc/hosts
+  530  ssh root@149.28.47.31
+  531  sudo vi /etc/hosts
+  532  ssh root@149.28.47.31
+  533  ssh root@45.77.144.193
+  534  cd dbrates
+  535  ls
+  536  php artisan serve
+  537  cd dbrates
+  538  npm run watch
+  539  sudo vi /etc/hosts
+  540  cdi /etc/hosts
+  541  cd /etc/hosts
+  542  cd /etc
+  543  sudo vi hosts
+  544  rm -rf .hosts.swp
+  545  sudo rm -rf .hosts.swp
+  546  sudo vi hosts
+  547  ssh root@149.28.40.138
+  548  ping aq2e.com
+  549  ping
+  550  exit
+  551  ping 52.32.136.179
+  552  ssh root@45.77.144.193
+  553  ssh root@149.28.40.63
+  554  ssh root@45.77.107.1
+  555  ssh root@140.82.11.229
+  556  ping ns1.box.trancehosting.com
+  557  ping ns2.box.trancehosting.com
+  558  ping box.trancehosting.com
+  559  ls
+  560  ssh root@140.82.11.229
+  561  ssh root@67.205.158.203
+  562  vi /Users/niran/.ssh/known_hosts
+  563  ssh root@67.205.158.203
+  564  ssh root@ 149.28.40.138
+  565  ssh root@149.28.40.138
+  566  ls
+  567  pwd
+  568  cat .ssh/id_rsa.pub
+  569  cd .ssh
+  570  ls
+  571  vi known_hosts
+  572  ssh root@149.28.47.31
+  573  ssh root@149.28.40.138
+  574  ssh root@45.77.144.193
+  575  ping mail.trancehosting.com
+  576  ssh root@45.77.221.8
+  577  ssh root@149.28.234.113
+  578  vi /Users/niran/.ssh/known_hosts
+  579  ssh root@149.28.234.113
+  580  ssh root@149.28.40.63
+  581  ssh root@45.77.221.8
+  582  ping agentquote.com
+  583  pwd
+  584  ssh root@45.77.221.8
+  585  vi ~/.ssh/known_hosts
+  586  ssh root@149.28.234.113
+  587  vi /etc/hosts
+  588  sudo vi /etc/hosts
+  589  ssh root@149.28.234.113
+  590  mv /Users/niran/Desktop/trancehosting-logo\ \(1\).png trancehosting-logo.png
+  591  scp ./trancehosting-logo.png root@149.28.234.113:/usr/lib/roundcube/trancehosting-logo.png
+  592  scp ./trancehosting-logo.png root@149.28.234.113:/usr/lib/roundcube/
+  593  scp trancehosting-logo.png root@149.28.234.113:/usr/lib/roundcube/
+  594  scp -r trancehosting-logo.png root@149.28.234.113:/usr/lib/roundcube/
+  595  scp -r trancehosting-logo.png root@149.28.234.113:/tmp
+  596  ssh root@149.28.234.113
+  597  mv /Users/niran/Desktop/trancehosting-logo-2.png trancehosting-logo.png
+  598  scp -r trancehosting-logo.png root@149.28.234.113:/tmp
+  599  ssh root@149.28.234.113
+  600  mv /Users/niran/Desktop/trancehosting-logo.png trancehosting-logo.png
+  601  scp -r trancehosting-logo.png root@149.28.234.113:/tmp
+  602  ssh root@149.28.234.113
+  603  exit
+  604  ssh root@149.28.234.113
+  605  cp ~/Desktop/trancehosting-black-269-logo.png .
+  606  scp -r trancehosting-black-269-logo.png root@149.28.234.113:/tmp
+  607  ssh root@149.28.234.113
+  608  ssh root45.77.144.193
+  609  ssh root@45.77.144.193
+  610  ssh root@149.28.234.113
+  611  exit
+  612  ssh root@45.77.144.193
+  613  history | grep ini
+  614  vim /etc/php/7.0/fpm/php.ini
+  615  ssh root@45.77.144.193
+  616  pwd
+  617  cd Desktop
+  618  mkdir square
+  619  cd square
+  620  git clone https://github.com/square/connect-api-examples/tree/master/connect-examples/v2/php_payment
+  621  git clone https://github.com/square/connect-api-examples/
+  622  cd connect-api-examples
+  623  ls
+  624  cd connect-examples
+  625  ls
+  626  cd v
+  627  cd v2
+  628  ls
+  629  cd php_payment
+  630  ls
+  631  php -S localhost:8000
+  632  ls
+  633  vi process-card.php
+  634  php -S localhost:8000
+  635  vi process-card.php
+  636  php -S localhost:8000
+  637  ls
+  638  vi sqpaymentform.
+  639  vi sqpaymentform.js
+  640  php -S localhost:8000
+  641  vi sqpaymentform.js
+  642  php -S localhost:8000
+  643  compose require square/connect
+  644  composer require square/connect
+  645  php -S localhost:8000
+  646  cd dbrates
+  647  php artisan serve
+  648  cd dbrates
+  649  npm run start
+  650  npm start run
+  651  ls
+  652  cat package.json
+  653  npm watch start
+  654  npm start watch
+  655  npm watch run
+  656  history
+  657  history | grep npm
+  658  npm run watch
+  659  ssh root@149.28.234.113
+  660  cd
+  661  ls
+  662  cd ~/Desktop
+  663  ls -al
+  664  scp -r trancehostinglogo.png root@149.28.234.113:/tmp
+  665  ssh root@149.28.234.113
+  666  scp -r trancehostinglogo.png root@45.77.144.193:/tmp
+  667  ssh root@45.77.144.193
+  668  cp ~/Desktop/trancehosting-sm-logo.png .
+  669  cp ~/Desktop/trancehosting-sm-logo.png trancehosting-sm-logo.png
+  670  ls -al
+  671  scp -r trancehosting-sm-logo.png root@45.77.144.193:/tmp
+  672  ssh root@45.77.144.193
+  673  scp -r trancehosting-sm-logo.png root@45.77.144.193:/tmp
+  674  ssh root@45.77.144.193
+  675  exit
+  676  ping mail.agentquote.com
+  677  ssh root@149.28.234.113
+  678  ssh root@45.77.144.193
+  679  ssh root@149.28.234.113
+  680  exit
+  681  ssh root@45.77.144.193
+  682  exit
+  683  cd Desktop
+  684  ls
+  685  cd /Users/niran/Documents/Devin\ Nerison/2018_07_02_5_02_PM_Changes
+  686  ls
+  687  git init
+  688  git add -A
+  689  vi .gitignore
+  690  git commit -m "Start of Devin Nerison Project"
+  691  git remote add origin git@ghub.trancehosting.net:dzineer/dbrates-webversion-2018.git
+  692  git remote remove origin git@ghub.trancehosting.net:dzineer/dbrates-webversion-2018.git
+  693  git remote remove origin
+  694  git remote remove origin git@ghub.trancehosting.net:dzineer/devin-nerison-project.git
+  695  git remote add origin git@ghub.trancehosting.net:dzineer/devin-nerison-project.git
+  696  git push origin master
+  697  ping gogle.com
+  698  cd dbrates
+  699  ls
+  700  php artisan serve
+  701  cd dbrates
+  702  ls
+  703  php artisan serve
+  704  cd dbrates
+  705  ls
+  706  git add -A
+  707  git commit -ma "Updating Policies Part I"
+  708  git commit -m "Updating Policies Part I"
+  709  git push -u origin master
+  710  exit
+  711  cd dbrates
+  712  ls
+  713  php artisan serve
+  714  cd dbrates
+  715  ls
+  716  npm watch run
+  717  npm run watch
+  718  cd /etc
+  719  vi hosts
+  720  sudo vi hosts
+  721  ping publishedhosting.com
+  722  cd dbrates
+  723  ls
+  724  php artisan serve
+  725  ssh root@149.28.47.31
+  726  traceroute google.com
+  727  ssh root@149.28.47.31
+  728  scp -r root@149.28.47.31:/home/publishedhosting/public_html ~/Desktop/publishedhosting
+  729  exit
+  730  ifconfig -a
+  731  sudo wireshark
+  732  traceroute 17.253.27.206
+  733  ssh root@149.28.47.31
+  734  scp root@149.28.47.31:/home/publishedhosting/ph.tar.gz ~/Desktop/
+  735  ping google.com
+  736  cd ~Desktop
+  737  cd ~/Desktop
+  738  ls
+  739  vi /etc/hosts
+  740  sudo vi /etc/hosts
+  741  ping fd3marketing.com
+  742  sudo vi /etc/hosts
+  743  cd ~/Desktop/Desktops
+  744  ls
+  745  cd ..
+  746  ls
+  747  cd /Users/niran/Desktop/Desktop\ Stuff/Projects/Companies/fd3marketing
+  748  php -S localhost:8000
+  749  ls
+  750  vim wp-config.php
+  751  ls
+  752  mv wp-config.php wp-config.php.old
+  753  php -S localhost:8000
+  754  ls
+  755  vi wp-config.php
+  756  cp wp-config.php.old wp-config.php
+  757  vi wp-config.php
+  758  php -S localhost:8000
+  759  rm -rf wp-config.php
+  760  php -S localhost:8000
+  761  cd dbrates
+  762  php artisan serve
+  763  fexit
+  764  exit
+  765  sudo shutdown -r 0 && exit
+  766  sudo vi /etc/hosts
+  767  cd dbrates
+  768  ls
+  769  php artisan serve
+  770  git add -A
+  771  git commit -m "Added Saving Policy and PolicyStates"
+  772  git push -u origin master
+  773  exit
+  774  cd dbrates
+  775  php artisan serve
+  776  cd dbrates
+  777  git add -A
+  778  git commit -m "Added further changes to update policy's product_name+id"
+  779  git push -u origin master
+  780  git add -A
+  781  git commit -m "Added further changes to update policy and reload the policy band on page"
+  782  git push -u origin master
+  783  git add -A
+  784  git commit -m "Added last_changed_on for backwards compatibility and placed save button on bottom of form"
+  785  git push -u origin master
+  786  git add -A
+  787  git commit -m "Added ModalFactorDBFactory and modified ModalFactorFacade to use it to support carrier with different databases"
+  788  git push -u origin master
+  789  git add -A
+  790  git commit -m "Added nextList to  ModalFactorFacade"
+  791  git push -u origin master
+  792  git add -A
+  793  git commit -m "Added nextList to  ModalFactorFacade"
+  794  git push -u origin master
+  795  ping mail.trancehosting.com
+  796  cd dbrates
+  797  php artisan serve
+  798  cd dbrates
+  799  git add -A
+  800  git commit -m "Added Many Items which includes new DBFactories for ProductName, RateClassification, & Token. Added support for the Facade Classes to use same strategies of the three DBFactories listed here."
+  801  git push -u origin master
+  802  pwd
+  803  cd ..
+  804  ls
+  805  tar cvf dbrates_new_2018.tar dbrates_new_2018/
+  806  pwd
+  807  cd dbrates
+  808  cd ..
+  809  cd dbrates_new_2018
+  810  cd dbrates_api/
+  811  ls
+  812  pwd
+  813  php artisan key:generate
+  814  php artisan serve
+  815  php artisan serve --port=8001
+  816  pwd
+  817  cd dbrates_api
+  818  ls
+  819  php artisan make:resource
+  820  php artisan make:resource Carrier
+  821  php artisan make:resource Policy
+  822  php artisan make:resource Policies
+  823  php artisan make:resource ModalFactors
+  824  php artisan make:resource ProductName
+  825  php artisan make:resource RateClassification
+  826  php artisan make:resource Token
+  827  php artisan make:resource Rate
+  828  php artisan make:resource MicrositePage
+  829  php artisan make:resource UserCollection
+  830  php artisan make:resource CarrierCollection
+  831  php artisan make:resource PolicyCollection
+  832  php artisan make:resource ModalFactorCollection
+  833  php artisan make:resource ProductNameCollection
+  834  php artisan make:resource RateClassificationCollection
+  835  php artisan make:resource TokenCollection
+  836  php artisan make:resource PolicyStateCollection
+  837  php artisan make:resource RateCollection
+  838  pwd
+  839  php composer.phar require guzzlehttp/guzzle:~6.0
+  840  composer require guzzlehttp/guzzle:~6.0
+  841  pwd
+  842  cd ..
+  843  cd dbrates
+  844  composer require guzzlehttp/guzzle:~6.0
+  845  php artisan serve --port=8001
+  846  php artisan serve
+  847  ps aux
+  848  lsof -i :8000
+  849  sudo kill -9 8489 8489
+  850  lsof -i :8000
+  851  php artisan serve
+  852  php artisan serve --port=8001
+  853  lsof -i :8001
+  854  sudo kill -98516
+  855  sudo kill -9 8516
+  856  php artisan serve --port=8001
+  857  pwd
+  858  ls
+  859  pwd
+  860  php artisan serve
+  861  lsof -i :8000
+  862  sudo kill -9 20255
+  863  php artisan serve
+  864  lsof -i :8000
+  865  sudo kill -9 22538
+  866  lsof -i :8000
+  867  php artisan serve
+  868  php artisan serve --port=8001
+  869  lsof -i :8000
+  870  pwd
+  871  cd dbrates
+  872  php artisan serve --port=8000
+  873  cd dbrates
+  874  php artisan routes
+  875  php artisan route:list
+  876  ifconfig -a
+  877  ping google.com
+  878  git add -A
+  879  git commit -m "Added better menu using secure token and remove uneccessary forms and made them links, added other pages"
+  880  git push -u origin master
+  881  git add -A
+  882  git commit -m "Added better menu using secure token and remove uneccessary forms and made them links, added other pages - part 2"
+  883  git push -u origin master
+  884  git add -A
+  885  git commit -m "Cleaned up carrier menus. Still need better sub menus but this is a good start."
+  886  git push -u origin master
+  887  exit
+  888  cd dbrates
+  889  php artisan serve --port=8000
+  890  cd dbrates
+  891  git commit -m "Added values for update forms for all carrier items"
+  892  git add -A
+  893  git commit -m "Added values for update forms for all carrier items"
+  894  git push -u origin master
+  895  git add -A
+  896  git commit -m "Added Modal Factor Updates"
+  897  git push -u origin master
+  898  git add -A
+  899  git commit -m "Added Product Name Updates"
+  900  git push -u origin master
+  901  git commit -m "Added Token Updates"
+  902  git add -A
+  903  git commit -m "Added Token Updates"
+  904  git push -u origin master
+  905  git add -A
+  906  git commit -m "Added Policy Updates"
+  907  git push -u origin master
+  908  exit
+  909  cd dbrates
+  910  php artisan serve --port=8000
+  911  ping google.com
+  912  cd "/Users/niran/Desktop/Desktop Stuff/Projects/Companies/fd3marketing/emarketing/routes"
+  913  pwd
+  914  php artisan serve
+  915  pwd
+  916  sudo npm install create-create-app -g
+  917  sudo npm i npm
+  918  sudo npm install create-create-app -g
+  919  npm login
+  920  $ npm login
+  921  Username: npm ERR! canceled
+  922  npm ERR! A complete log of this run can be found in:
+  923  npm install username
+  924  $ npm login
+  925  npm
+  926  npm login
+  927  sudo npm i npm
+  928  sudo npm install create-create-app -g
+  929  sudo npm install create-react-app -g
+  930  create-react-app react-complete-guide
+  931  cd react-complete-guide
+  932  npm start
+  933  cd react-complete-guide-chapter-2
+  934  create-react-app react-complete-guide-chapter-2
+  935  cd react-complete-guide-chapter-2
+  936  pwd
+  937  npm start
+  938  pwd
+  939  cd ..
+  940  cd react-complete-guide-chapter-3
+  941  npm start
+  942  npm install  --save radium
+  943  npm start
+  944  pwd
+  945  cd ..
+  946  cd react-complete-guide-chapter-3-css-modules
+  947  npm start
+  948  npm run eject
+  949  pwd
+  950  cd ..
+  951  ls
+  952  cd ..
+  953  ls
+  954  pwd
+  955  cd ..
+  956  pwd
+  957  cd ..
+  958  mkdir react
+  959  cd react
+  960  ls
+  961  create-react-app react-chapter-3-css-modules
+  962  cd react-chapter-3-css-modules
+  963  ls
+  964  npm start
+  965  pwd
+  966  ls
+  967  cd react-chapter-3-css-modules
+  968  npm start
+  969  cd react-chapter-3-css-modules
+  970  ls
+  971  npm run eject
+  972  npm start
+  973  cd ..
+  974  cd react-chapter-3-component-lifecycle
+  975  npm start
+  976  pwd
+  977  cd dbrates
+  978  ls
+  979  php artisan serve
+  980  pwd
+  981  cd dbrates
+  982  npm run watch
+  983  cd dbrates
+  984  git add -A
+  985  git commit -m "added create pages and fixed menus"
+  986  git push -u origin master
+  987  cd dbrates
+  988  php artisan serve
+  989  cd dbrates
+  990  git add -A
+  991  git commit -m "Added store method and add method for all but polics and carriers"
+  992  git push -u origin master
+  993  cd dbrates
+  994  php artisan serve
+  995  cd dbrates
+  996  git add -A
+  997  git commit -m "added paste feature back... realized it was due to windows vs mac... have Tony's Text on my computer"
+  998  git push -u origin master
+  999  git add -A
+ 1000  git commit -m "add new policy"
+ 1001  git push -u origin master
+ 1002  git add -A
+ 1003  git commit -m "Cleaned up form updates"
+ 1004  git push -u origin master
+ 1005  git add -A
+ 1006  git commit -m "Fixed Policy Creation"
+ 1007  git push -u origin master
+ 1008  git add -A
+ 1009  git commit -m "Fixed Rate Classification Update"
+ 1010  git push -u origin master
+ 1011  git add -A
+ 1012  git commit -m "Added CarriersModelFacade - Assigned Carrier's Model Facades to CarriersModelFacade"
+ 1013  git push -u origin master
+ 1014  pwd
+ 1015  php artisan show:route
+ 1016  php artisan show route
+ 1017  php artisan route
+ 1018  php artisan routes
+ 1019  php artisan route:list
+ 1020  pwd
+ 1021  ls -al
+ 1022  pwd
+ 1023  ls -al
+ 1024  mv software-patterns/* .
+ 1025  ls -al
+ 1026  rm -rf software-patterns
+ 1027  ls -al
+ 1028  git
+ 1029  git init
+ 1030  git add -A
+ 1031  git commit -m "first commit"
+ 1032  git remote add origin git@ghub.trancehosting.net:dzineer/software-patterns.git
+ 1033  git push -u origin master
+ 1034  mkdir markdown
+ 1035  cd markdown
+ 1036  git init
+ 1037  rm -rf .git
+ 1038  git clone https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet .
+ 1039  ls -al
+ 1040  git clone https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+ 1041  git clone https://guides.github.com/features/mastering-markdown/
+ 1042  pwd
+ 1043  ls -al
+ 1044  git init
+ 1045  git add -A
+ 1046  git commit -m "Origin"
+ 1047  git remote add origin http://ghub.trancehosting.net/dzineer/markdown.git
+ 1048  git push -u origin master
+ 1049  pwd
+ 1050  cd ..
+ 1051  mv markdown ..
+ 1052  git add -A
+ 1053  git commit "added mvc pattern and move patterns to patterns folder and removed _pattern in file name"
+ 1054  git commit "added mvc pattern and move patterns to patterns folder and removed _pattern in file name" -m
+ 1055  git commit -m "added mvc pattern and move patterns to patterns folder and removed _pattern in file name"
+ 1056  git push -u origin master
+ 1057  git add -A
+ 1058  git commit "added keys table" -m
+ 1059  git commit -m "added keys table"
+ 1060  git push -u origin master
+ 1061  git add -A
+ 1062  git commit -m "added keys table"
+ 1063  git push -u origin master
+ 1064  git commit -m "added keys table"
+ 1065  git add -A
+ 1066  git commit -m "added keys table"
+ 1067  git push -u origin master
+ 1068  git add -A
+ 1069  pwd
+ 1070  git commit -m "added keys table"
+ 1071  git push -u origin master
+ 1072  git add -A
+ 1073  git commit -m "added keys table aaa"
+ 1074  git push -u origin master
+ 1075  git add -A
+ 1076  git commit -m "added keys table aaa"
+ 1077  git push -u origin master
+ 1078  git add -A
+ 1079  git commit -m "added keys table aaa"
+ 1080  git push -u origin master
+ 1081  git add -A
+ 1082  git commit -m "added keys table aaa"
+ 1083  git push -u origin master
+ 1084  git add -A
+ 1085  git commit -m "added keys table aaa"
+ 1086  git push -u origin master
+ 1087  git commit -m "added keys table aaa"
+ 1088  git push -u origin master
+ 1089  git add -A
+ 1090  git commit -m "added keys table aaa"
+ 1091  git push -u origin master
+ 1092  pwd
+ 1093  cd tests
+ 1094  copy con
+ 1095  touch index.php
+ 1096  php -S localhost:8800
+ 1097  ping mymobilelifequoter.com
+ 1098  ssh root@mymobilelifequoter.com
+ 1099  ssh root@8.9.36.94
+ 1100  ping mymobilelifequoter.com
+ 1101  sudo vi ~/.ssh/known_hosts
+ 1102  ssh root@104.156.226.235
+ 1103  sudo vi ~/.ssh/known_hosts
+ 1104  ssh root@8.9.36.94
+ 1105  scp root@8.9.36.94:/var/www/com_aq2e.tar.gz .
+ 1106  pwd
+ 1107  mv com_aq2e.tar.gz Desktop/
+ 1108  ssh root@8.9.36.94
+ 1109  scp root@8.9.36.94:/var/www/com_aq2e.tar.gz .
+ 1110  mv com_aq2e.tar.gz Desktop/
+ 1111  pwd
+ 1112  ls
+ 1113  pwd
+ 1114  ls
+ 1115  php artisan key:generate
+ 1116  php artisan serve
+ 1117  ps
+ 1118  ps aux
+ 1119  top
+ 1120  php artisan serve
+ 1121  ping googl.com
+ 1122  pwd
+ 1123  ls
+ 1124  c engine
+ 1125  cd engine
+ 1126  ls
+ 1127  php artisan serve
+ 1128  pwd
+ 1129  ls
+ 1130  cd engine
+ 1131  ls
+ 1132  git init
+ 1133  git remote add origin git@ghub.trancehosting.net:dzineer/widget-system-with-iframe-communications.git
+ 1134  git add -A
+ 1135  git commit -m "Origin Commit"
+ 1136  git push -u origin master
+ 1137  git add -A
+ 1138  git commit -m "Origin Commit"
+ 1139  git push -u origin master
+ 1140  git add -A
+ 1141  git commit -m "Optimized Load Script"
+ 1142  git push -u origin master
+ 1143  pwd
+ 1144  ls
+ 1145  cd engine
+ 1146  php artisan serve
+ 1147  pwd
+ 1148  ssh root@149.28.45.153
+ 1149  pwd
+ 1150  ls
+ 1151  cd ..
+ 1152  ls
+ 1153  cd agents_backoffice
+ 1154  php artisan serve
+ 1155  pwd
+ 1156  ls
+ 1157  cd backoffice
+ 1158  php artisan serve
+ 1159  pwd
+ 1160  ssh root@8.9.36.94
+ 1161  pwd
+ 1162  cd ..
+ 1163  cd agents_backoffice
+ 1164  cd backoffice
+ 1165  cd public
+ 1166  ls
+ 1167  scp root@8.9.36.94:/var/www/html/media.tar.gz .
+ 1168  tar xvfz media.tar.gz
+ 1169  pwd
+ 1170  cd ~/Desktop/Desktop\ Stuff
+ 1171  ls
+ 1172  cd Companies
+ 1173  cd Projects
+ 1174  ls
+ 1175  cd Companies
+ 1176  ls
+ 1177  cd Agentquote
+ 1178  ls
+ 1179  cd Projects
+ 1180  ls
+ 1181  pwd
+ 1182  ls
+ 1183  larvel new laravel-5-rest-api
+ 1184  composer
+ 1185  composer global require "laravel/installer=~1.1"
+ 1186  larvel new laravel-5-rest-api
+ 1187  larvael new laravel-5-rest-api
+ 1188  laravel new laravel-5-rest-api
+ 1189  path
+ 1190  echo path
+ 1191  echo $path
+ 1192  sudo vi ~/.bash_profile
+ 1193  exit
+ 1194  pwd
+ 1195  cd Desktop/Desktop\ Stuff
+ 1196  cd Projects
+ 1197  cd Companies
+ 1198  cd Agentquote
+ 1199  cd Projects
+ 1200  laravel new laravel-5-rest-api
+ 1201  echo $PATH
+ 1202  whoami
+ 1203  source ~/.bash_profile
+ 1204  echo $PATH
+ 1205  laravel new laravel-5-rest-api
+ 1206  ls
+ 1207  exit
+ 1208  vi
+ 1209  cd Desktop/Desktop\ Stuff
+ 1210  cd Projects
+ 1211  cd Companies
+ 1212  cd Agentquote
+ 1213  cd Projects
+ 1214  ls
+ 1215  cd laravel-5-rest-api
+ 1216  ls
+ 1217  laravel --help
+ 1218  npm -v
+ 1219  node -v
+ 1220  npm run dev
+ 1221  ls
+ 1222  pwd
+ 1223  php artisan make:auth
+ 1224  php artisan migrate
+ 1225  vi .env
+ 1226  php artisan migrate
+ 1227  npm install --save-dev react react-dom laravel-elixir-webpack-react
+ 1228  yarn
+ 1229  npm install --save-dev yarn
+ 1230  yarn
+ 1231  npm -g install yarn
+ 1232  yarn -v
+ 1233  yarn add --dev react react-dom
+ 1234  vi webpack.mix.js
+ 1235  vi resources/views/layouts/app.blade.php
+ 1236  pwd
+ 1237  cd ..
+ 1238  ls
+ 1239  pwd
+ 1240  cd laravel-5-rest-api
+ 1241  cd resources
+ 1242  cd assets
+ 1243  cd js
+ 1244  ls
+ 1245  cd components
+ 1246  ls
+ 1247  rm -rf ExampleComponent.vue
+ 1248  vi Example.js
+ 1249  pwd
+ 1250  cd ..
+ 1251  vi webpack.mix.js
+ 1252  cd resources/assets
+ 1253  ls
+ 1254  cd js
+ 1255  ls
+ 1256  vi app.js
+ 1257  cd ..
+ 1258  vi views/home.blade.php
+ 1259  gulp watch
+ 1260  cd ..
+ 1261  gulp watch
+ 1262  yarn run start
+ 1263  php artisan preset react
+ 1264  npm install && npm run dev
+ 1265  pwd
+ 1266  vi .env
+ 1267  php artisan migrate
+ 1268  phpstorm .
+ 1269  whereis phpstorm
+ 1270  ~pwd
+ 1271  pwd
+ 1272  ls
+ 1273  rpm run dev
+ 1274  npm run dev
+ 1275  php arisan serve
+ 1276  php artisan serve
+ 1277  npm install react-router@2.8.1
+ 1278  npm run watch
+ 1279  php artisan serve
+ 1280  php artisan make:model Item -m
+ 1281  php artisan migrate
+ 1282  php artisan make:controller ItemController --resource
+ 1283  npm run watch
+ 1284  cd ..
+ 1285  mkdir learning
+ 1286  cd learning
+ 1287  mkdir laravel
+ 1288  ls
+ 1289  cd ..
+ 1290  cd laravel-5-rest-api
+ 1291  cd ..
+ 1292  pwd
+ 1293  ls
+ 1294  cd learning
+ 1295  ls
+ 1296  cd laravel
+ 1297  ls
+ 1298  mkdir projects
+ 1299  cd projects
+ 1300  laravel new laravel_react_v1
+ 1301  echo $PATH
+ 1302  vi /etc/bashrc
+ 1303  echo $PATH
+ 1304  cat ~/.bash_profile
+ 1305  export PATH="$PATH:/Users/niran/.composer/vendor/bin"
+ 1306  echo $PATH
+ 1307  laravel new laravel_react_v1
+ 1308  ls
+ 1309  tar zcvf laravel_react_v1.tar.gz laravel_react_v1
+ 1310  ls
+ 1311  mkdir tmp
+ 1312  cp laravel_react_v1.tar.gz tmp
+ 1313  cd tmp
+ 1314  ls
+ 1315  tar xvfz laravel_react_v1.tar.gz
+ 1316  ls
+ 1317  rm -rf laravel_react_v1
+ 1318  cd ..
+ 1319  ls
+ 1320  rm -rf tmp
+ 1321  ls
+ 1322  mkdir backups
+ 1323  mv laravel_react_v1.tar.gz backups
+ 1324  ls
+ 1325  cd laravel_react_v1
+ 1326  ls
+ 1327  php artisan serve
+ 1328  vi .env
+ 1329  phpstorm .
+ 1330  pstorm .
+ 1331  php artisan route:list
+ 1332  php artisan route --help
+ 1333  php artisan route:create
+ 1334  php artisan serve
+ 1335  php artisan make:
+ 1336  php artisan make:model Product -m
+ 1337  php artisan help make:model
+ 1338  php artisan migrate
+ 1339  php artisan make:seeder ProductsTableSeeder
+ 1340  php artisan db:seed --class=ProductsTableSeeder
+ 1341  php artisan make:controller ProductsController
+ 1342  php artisan make:controller ProductsController --resource
+ 1343  pwd
+ 1344  cd ..
+ 1345  tar -zcvf 2018_08_06_11_27_PM_laravel_react_v1.tar.gz laravel_react_v1
+ 1346  ls
+ 1347  mv 2018_08_06_11_27_PM_laravel_react_v1.tar.gz backups
+ 1348  ls -al
+ 1349  cd laravel_react_v1
+ 1350  php artisan preset react
+ 1351  npm install && npm run dev
+ 1352  npm run dev
+ 1353  npm run watch
+ 1354  vim map_filter.js
+ 1355  touch output.js
+ 1356  vim map_filter.js
+ 1357  vim output.js
+ 1358  pwd
+ 1359  cd ~/Desktop/Desktop\ Stuff
+ 1360  cd Projects
+ 1361  cd Companies
+ 1362  cd Agentquote
+ 1363  cd ..
+ 1364  cd Dzineer
+ 1365  ls
+ 1366  cd Projects
+ 1367  ls
+ 1368  pwd
+ 1369  mkdir laravel
+ 1370  cd laravel
+ 1371  ls
+ 1372  laravel
+ 1373  export PATH="$PATH:/Users/niran/.composer/vendor/bin"
+ 1374  laravel new lara-react
+ 1375  cd lara-react
+ 1376  php artisan serve
+ 1377  php artisan serve --help
+ 1378  php artisan serve --p 8080
+ 1379  php artisan serve --port 8080
+ 1380  php artisan preset react
+ 1381  npm install && npm run dev
+ 1382  history
+ 1383  php artisan serve --port 8080
+ 1384  pstorm .
+ 1385  php artisan serve --port 8080
+ 1386  pwd
+ 1387  npm run dev
+ 1388  npn run watch
+ 1389  npm run watch
+ 1390  npn run watch
+ 1391  clear
+ 1392  npm run watch
+ 1393  php artisan serve --port 8080
+ 1394  clear
+ 1395  php artisan migrate
+ 1396  php artisan make:seeder UsersTableSeeder
+ 1397  php artisan db:seed
+ 1398  php artisan make:controller Api/UserController --resource
+ 1399  php artisan make:controller Api/UserController
+ 1400  php artisan make:controller Api/UserController --resource
+ 1401  php artisan serve --port 8080
+ 1402  npm run watch
+ 1403  npm install axios --save
+ 1404  php artisan make:controller UserController --resource
+ 1405  php artisan route:list
+ 1406  php artisan serve --port 8080
+ 1407  php artisan db:seed
+ 1408  php artisan route:list
+ 1409  php artisan migrate:refresh --seed
+ 1410  git init
+ 1411  git remote add origin git@ghub.trancehosting.net:dzineer/laravel-react.git
+ 1412  git add -A
+ 1413  git commit -m "Initial commit"
+ 1414  git push -u origin master
+ 1415  exit
+ 1416  pwd
+ 1417  cd Desktop/Desktop\ Stuff/Projects/Companies/Agentquote/Projects
+ 1418  cd laravel
+ 1419  ls
+ 1420  cd learning
+ 1421  ls
+ 1422  cd laravel
+ 1423  ls
+ 1424  cd projects
+ 1425  ls
+ 1426  composer
+ 1427  composer global require "acacha/adminlte-laravel-installer"
+ 1428  vi ~/.composer/composer.json
+ 1429  composer global require "acacha/adminlte-laravel-installer"
+ 1430  vi ~/.composer/composer.json
+ 1431  export PATH="$PATH:/Users/niran/.composer/vendor/bin"
+ 1432  laravel new laravel-with-admin-lte
+ 1433  composer global require "acacha/adminlte-laravel-installer"
+ 1434  vi ~/.composer/composer.json
+ 1435  push .
+ 1436  pushd .
+ 1437  cd  ~/.composer/
+ 1438  ls
+ 1439  cat composer.lock
+ 1440  vi ~/.composer/composer.json
+ 1441  ls
+ 1442  cat composer.lock | grep installer
+ 1443  cd vendor
+ 1444  ls
+ 1445  cd laravel
+ 1446  ls
+ 1447  cd installer
+ 1448  ls
+ 1449  cat LICENSE.txt
+ 1450  ls
+ 1451  cat composer.json
+ 1452  pwd
+ 1453  cd ..
+ 1454  cd .,.
+ 1455  ls
+ 1456  pwd
+ 1457  cd ..
+ 1458  ls
+ 1459  vi composer.json
+ 1460  laravel -v
+ 1461  composer update laravel/installer
+ 1462  vi composer.json
+ 1463  composer update laravel/installer
+ 1464  vi composer.json
+ 1465  composer update laravel/installer
+ 1466  vi composer.json
+ 1467  composer install laravel/installer
+ 1468  composer require laravel/installer
+ 1469  laravel -v
+ 1470  composer global require "acacha/adminlte-laravel-installer"
+ 1471  popd
+ 1472  ls
+ 1473  pwd
+ 1474  popd
+ 1475  pwd
+ 1476  cd ~/Desktop/Desktop Stuff/Projects/Companies/Agentquote/Projects/learning/laravel
+ 1477  cd ~/Desktop/Desktop Stuff/Projects/Companies/Agentquote/Projects/learning
+ 1478  cd "~/Desktop/Desktop Stuff/Projects/Companies/Agentquote/Projects/learning"
+ 1479  cd ~/Desktop/Desktop\ Stuff/Projects/Companies/Agentquote/Projects/learning/laravel
+ 1480  ls
+ 1481  cd projects
+ 1482  ls
+ 1483  cd laravel-with-admin-lte
+ 1484  ls
+ 1485  adminlte-laravel install
+ 1486  ls
+ 1487  vi .env
+ 1488  php artisan serve
+ 1489  php artisan migrate
+ 1490  php artisan make:view about
+ 1491  adminlte-laravel social
+ 1492  pwd
+ 1493  adminlte-laravel social
+ 1494  export PATH="$PATH:/Users/niran/.composer/vendor/bin"
+ 1495  adminlte-laravel social
+ 1496  composer require acacha/laravel-social
+ 1497  php artisan make:social
+ 1498  php artisan make:controller AboutController
+ 1499  php artisan make:route about AboutController@index --type=controller
+ 1500  brew install gnu-sed --with-default-names
+ 1501  php artisan make:route about AboutController@index --type=controller
+ 1502  php artisan make:controller UserController --resource
+ 1503  php artisan make:view users
+ 1504  php artisan make:view carriers
+ 1505  php artisan make:controller CarrierController --resource
+ 1506  php artisan make:controller MicrositeController --resource
+ 1507  php artisan make:view microsite
+ 1508  php artisan make:view carrierproducts
+ 1509  php artisan make:controller CarrierProductController --resource
+ 1510  php artisan route:list
+ 1511  php artisan make:seeder UsersTableSeeder
+ 1512  php artisan db:seed
+ 1513  php artisan preset react
+ 1514  npm install && npm run dev
+ 1515  pwd
+ 1516  ls
+ 1517  cd ..
+ 1518  history > history.done.txt
+ 1519  laravel new laravel-admin-lte-react
+ 1520  cd laravel-admin-lte-react
+ 1521  ls
+ 1522  npm install adminlte-reactjs
+ 1523  php artisan preset react
+ 1524  npm install && npm run dev
+ 1525  npm update webpack
+ 1526  npm update webpack -g
+ 1527  webpack --help
+ 1528  npm install npm@latest -g
+ 1529  npm update webpack --save-dev
+ 1530  npm install adminlte-reactjs
+ 1531  npm install webpack@4.0.0
+ 1532  npm install react-dom@15.6.2
+ 1533  ls
+ 1534  cd ..
+ 1535  ls
+ 1536  rm -rf laravel-admin-lte-react
+ 1537  laravel new laravel-admin-lte-react
+ 1538  ls
+ 1539  cd laravel-admin-lte-react
+ 1540  ls
+ 1541  php artisan serve
+ 1542  php artisan preset react
+ 1543  npm install && npm run dev
+ 1544  php artisan serve
+ 1545  php artisan make:auth
+ 1546  php artisan serve
+ 1547  cd ..
+ 1548  tar zcvf laravel-admin-lte-react.tar.gz laravel-admin-lte-react
+ 1549  ls -al
+ 1550  npm install adminlte-reactjs
+ 1551  ls
+ 1552  cd laravel-admin-lte-react
+ 1553  npm install adminlte-reactjs
+ 1554  php artisan serve
+ 1555  composer require dzineer/laravel-adminlte
+ 1556  php artisan vendor:publish --provider="Dzineer\LaravelAdminLte\ServiceProvider" --tag=assets
+ 1557  php artisan make:adminlte
+ 1558  php artisan serve
+ 1559  php artisan vendor:publish --provider="Dzineer\LaravelAdminLte\ServiceProvider" --tag=config
+ 1560  php artisan serve
+ 1561  ^[[200~php artisan vendor:publish --provider="Dzineer\LaravelAdminLte\ServiceProvider" --tag=views
+ 1562  php artisan vendor:publish --provider="Dzineer\LaravelAdminLte\ServiceProvider" --tag=views
+ 1563  php artisan serve
+ 1564  cd ..
+ 1565  `date`
+ 1566  date
+ 1567  date('Y-m-d')
+ 1568  tar zcvf backup-$(date +%Y-%m-%d)-laravel-admin-lte-react.tar.g laravel-admin-lte-react/
+ 1569  cd laravel-admin-lte-react
+ 1570  ls
+ 1571  php artisan make:controller UserController --resource
+ 1572  php artisan serve
+ 1573  php artisan serve &
+ 1574  alias artisan='php'
+ 1575  alias artisan='php artisan'
+ 1576  artisan make:controller CarrierController --resource
+ 1577  artisan make:controller MicrositeController --resource
+ 1578  artisan make:controller CarrierProductController --resource
+ 1579  artisan make:controller RoleController --resource
+ 1580  artisan make:controller AdminController --resource
+ 1581  artisan make
+ 1582  artisan make:model AdminModel --resource
+ 1583  artisan make:model Microsite --resource
+ 1584  artisan make:model Role --resource
+ 1585  artisan make:model Carrier --resource
+ 1586  artisan make:model CarrierProduct --resource
+ 1587  artisan make:model UserProfile --resource
+ 1588  artisan make:route
+ 1589  artisan make:model Group --resource
+ 1590  artisan make:controller GroupController --resource
+ 1591  artisan make:controller Api\CarrierController --resource
+ 1592  artisan make:controller Api/CarrierController --resource
+ 1593  artisan make:controller Api/UserController --resource
+ 1594  artisan make:controller Api/GroupController --resource
+ 1595  artisan make:controller Api/RoleController --resource
+ 1596  artisan make:controller Api/MicrositeController --resource
+ 1597  artisan make:controller AboutController --resource
+ 1598  artisan make:controller TermLifeController --resource
+ 1599  artisan make:controller SitController --resource
+ 1600  artisan make:controller SiwlController --resource
+ 1601  artisan make:controller GulController --resource
+ 1602  artisan make:controller QuoteController --resource
+ 1603  pwd
+ 1604  cd Desktop/Desktop\ Stuff/Projects/Companies/Agentquote/Projects
+ 1605  ls
+ 1606  cd learning
+ 1607  ls
+ 1608  cd laravel
+ 1609  ls
+ 1610  cd projects/
+ 1611  ls
+ 1612  tar zcvf backup-$(date +%Y-%m-%d)-laravel-admin-lte-react.tar.g laravel-admin-lte-react/
+ 1613  arisan serve
+ 1614  alias artisan='php artisan'
+ 1615  arisan serve
+ 1616  artisan serve
+ 1617  top
+ 1618  ps aux | grep artisan
+ 1619  sudo kill -9 1622
+ 1620  ps aux | grep artisan
+ 1621  artisan serve
+ 1622  ps aux | grep artisan
+ 1623  sudo kill -9 3359
+ 1624  ps aux | grep artisan
+ 1625  top
+ 1626  artisan serve --port 8080
+ 1627  ping google.com
+ 1628  ping agentquote.com
+ 1629  ping yui.agentquote.com
+ 1630  pwd
+ 1631  ps aux | grep mysqld
+ 1632  kill -9 4517
+ 1633  ps aux | grep mysqld
+ 1634  clear
+ 1635  ps aux | grep mysqld
+ 1636  kill -9 4220
+ 1637  ps aux | grep mysqld
+ 1638  kill -9 17363
+ 1639  ps aux | grep mysqld
+ 1640  artisan serve --port 8080
+ 1641  pwd
+ 1642  cd Desktop
+ 1643  ls
+ 1644  cd Desktop\ Stuff
+ 1645  cd Projects
+ 1646  ls
+ 1647  cd Companies
+ 1648  ls
+ 1649  cd Agentquote
+ 1650  ls
+ 1651  cd Projects
+ 1652  ls
+ 1653  cd learning
+ 1654  ls
+ 1655  cd laravel
+ 1656  ls
+ 1657  cd projects
+ 1658  ls
+ 1659  cd laravel-admin-lte-react
+ 1660  ls
+ 1661  alias artisan='php artisan'
+ 1662  artisan serve --port 8080
+ 1663  pwd
+ 1664  artisan make:middleware RedirectIfNotSuperUser
+ 1665  alias artisan='php artisan'
+ 1666  artisan make:middleware RedirectIfNotSuperUser
+ 1667  artisan make:middleware RedirectIfNotUser
+ 1668  artisan make:middleware RedirectIfNotManagerUser
+ 1669  artisan make:middleware RedirectIfNotAdminUser
+ 1670  artisan make:model UserGroup
+ 1671  artisan make:model Models/Super --resource
+ 1672  artisan make:model Models\Super --resource
+ 1673  artisan make:controller Models\Super --resource
+ 1674  artisan make:controller SuperController --resoure
+ 1675  artisan make:controller SuperController --resorce
+ 1676  artisan make:controller SuperController --resource
+ 1677  artisan make:controller ManagerController --resource
+ 1678  artisan serve --port 8080
+ 1679  ping google.com
+ 1680  artisan make:provider UserMenuServiceProvider
+ 1681  pwd
+ 1682  git add -A
+ 1683  git init
+ 1684  git remote add origin git@ghub.trancehosting.net:dzineer/laravel-admin-lte-react.git
+ 1685  git add -A
+ 1686  git commit -m "New Project"
+ 1687  git push -u origin master
+ 1688  git add -A
+ 1689  git commit -m "New Project - Added Profile to MicrositePage Levels"
+ 1690  git push -u origin master
+ 1691  git add -A
+ 1692  git commit -m "Created Basic Views with Correct Bredcrumbs and page titles"
+ 1693  git push -u origin master
+ 1694  git add -A
+ 1695  git commit -m "Updated the super user role and admmin role..."
+ 1696  git push -u origin master
+ 1697  git add -A
+ 1698  git commit -m "Added beginning of permissions pages for each group type and added microsite page for user"
+ 1699  git push -u origin master
+ 1700  npm run watch
+ 1701  pwd
+ 1702  npm install axios —save
+ 1703  npm install axios --save
+ 1704  cd ..
+ 1705  pwd
+ 1706  tar zcvf backup-$(date +%Y-%m-%d)-laravel-admin-lte-react.tar.g laravel-admin-lte-react/
+ 1707  ls -al
+ 1708  tar zcvf backup-$(date +%Y-%m-%d-%h-%m)-laravel-admin-lte-react.tar.g laravel-admin-lte-react/
+ 1709  ls -al
+ 1710  tar zcvf backup-$(date +%Y-%m-%d-%H-%M)-laravel-admin-lte-react.tar.g laravel-admin-lte-react/
+ 1711  ls -al
+ 1712  tar zcvf backup-$(date +%Y-%m-%d-%H-%M)-laravel-admin-lte-react.tar.gz laravel-admin-lte-react/
+ 1713  pwd
+ 1714  cd laravel-admin-lte-react
+ 1715  git add -A
+ 1716  git commit -m "Added password for user change password "
+ 1717  git push -u origin master
+ 1718  git add -A
+ 1719  git commit -m "user change password update"
+ 1720  git push -u origin master
+ 1721  php artisan serve --port 8080
+ 1722  ps -aux
+ 1723  ps aux
+ 1724  ps aux | grep artisan
+ 1725  sudo kill -9 27541
+ 1726  php artisan serve --port 8080
+ 1727  ps aux | grep artisan
+ 1728  kill -9 14156
+ 1729  ps aux | grep artisan
+ 1730  ps aux | grep php
+ 1731  kill -9 27547
+ 1732  ps aux | grep php
+ 1733  kill -9 1638
+ 1734  ps aux | grep php
+ 1735  kill -9 15094
+ 1736  ps aux | grep php
+ 1737  php artisan serve --port 8080
+ 1738  ping 45.77.221.178
+ 1739  ssh root@149.28.45.153
+ 1740  ssh root@8.9.36.94
+ 1741  pwd
+ 1742  cd /Users/niran/Desktop/Desktop\ Stuff/Projects/Companies/Agentquote/Projects/click_monitor
+ 1743  git init
+ 1744  git add -A
+ 1745  git commit -m "Click Monitor and Status Window for Monitor"
+ 1746  git remote add origin git@ghub.trancehosting.net:dzineer/click-monitor-status-window.git
+ 1747  git push -u origin master
+ 1748  node run watch
+ 1749  pwd
+ 1750  node watch run
+ 1751  node run watch
+ 1752  npm run watch
+ 1753  php artisan make:controller Api\AffilateController --resource
+ 1754  php artisan make:controller Api/AffilateController --resource
+ 1755  php artisan make:model Affiliate
+ 1756  composer require tymon/jwt-auth
+ 1757  php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+ 1758  composer update
+ 1759  php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\JWTAuthServiceProvider"
+ 1760  php artisan jwt:secret
+ 1761  composer require tymon/jwt-auth:dev-develop --prefer-source
+ 1762  php artisan jwt:secret
+ 1763  php artisan make:controller Api/AuthenticateController
+ 1764  php artisan session:table
+ 1765  php artisan migrate
+ 1766  cd ..
+ 1767  pwd
+ 1768  tar zcvf backup-$(date +%Y-%m-%d-%H-%M)-laravel-admin-lte-react.tar.gz laravel-admin-lte-react/
+ 1769  cd laravel-admin-lte-react
+ 1770  composer require laravel/passport
+ 1771  php artisan migrate
+ 1772  php artisan passport:install
+ 1773  php artisan make:provider PassportServiceProvider
+ 1774  php artisan passport:keys
+ 1775  php artisan passport:client
+ 1776  php artisan serve --port 8080
+ 1777  ps aux | grep artisan
+ 1778  kill -9 82089
+ 1779  ps aux | grep artisan
+ 1780  ps aux | grep php
+ 1781  kill -9 15345
+ 1782  php artisan serve --port 8080
+ 1783  ps aux | grep php
+ 1784  ps aux | grep " /user/bin/php"
+ 1785  ps aux | grep " /user/bin/php" | awk "print {$1}"
+ 1786  ps aux | grep " /user/bin/php" | awk {"print $1}
+ 1787  ps aux | grep " /user/bin/php" | awk {"print $1}"
+ 1788  ps aux | grep " /user/bin/php" | awk "{print $1}"
+ 1789  ps aux | grep " /user/bin/php" | awk "{print $2}"
+ 1790  ps aux | grep " /user/bin/php" | awk {'print $2'}
+ 1791  kill -9 $(ps aux | grep " /user/bin/php" | awk {'print $2'})
+ 1792  ps aux | grep " /user/bin/php" | awk {'print $2'}
+ 1793  ps aux | grep " /user/bin/php" | awk {'print $2'} | kill -9
+ 1794  kill $(ps aux | grep " /user/bin/php" | awk {'print $2'})
+ 1795  kill $(ps aux | grep "/user/bin/php" | awk {'print $2'})
+ 1796  ps aux | grep " /user/bin/php" | awk {'print $2'}
+ 1797  ps aux | grep " /user/bin/php"
+ 1798  php artisan serve --port 8080
+ 1799  ps aux | grep "php"
+ 1800  ps aux | grep "laravel"
+ 1801  ps aux | grep "php"
+ 1802  ps aux | grep "php -S"
+ 1803  ps aux | grep "php -S" | awk '{print $2}'
+ 1804  $(ps aux | grep "php -S" | awk '{print $2}')
+ 1805  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1806  ps aux | grep "php -S" | awk '{print $2}'
+ 1807  ps aux | grep "php -S"
+ 1808  php artisan serve --port 8080
+ 1809  ps aux | grep "php -S" | awk '{print $2}'
+ 1810  kill -9 86057 86278
+ 1811  ps aux | grep "php -S" | awk '{print $2}'
+ 1812  php artisan serve --port 8080
+ 1813  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1814  php artisan serve --port 8080
+ 1815  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1816  php artisan serve --port 8080
+ 1817  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1818  composer require GuzzleHttp/Client
+ 1819  composer require guzzlehttp/guzzle
+ 1820  php artisan serve --port 8080
+ 1821  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1822  php artisan serve --port 8080
+ 1823  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1824  php artisan serve --port 8080
+ 1825  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1826  composer update
+ 1827  php artisan serve --port 8080
+ 1828  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1829  php artisan serve --port 8080 -vvv
+ 1830  php artisan
+ 1831  php artisan serve --help
+ 1832  php artisan serve --verbose --port 8080
+ 1833  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1834  php artisan serve --verbose --port 8080
+ 1835  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1836  php artisan serve --verbose --port 8080
+ 1837  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1838  php artisan serve --verbose --port 8080
+ 1839  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1840  php artisan serve --verbose --port 8080
+ 1841  composer
+ 1842  composer require guzzlehttp/guzzle
+ 1843  pwd
+ 1844  cd ..
+ 1845  pwd
+ 1846  cd ..
+ 1847  pwd
+ 1848  cd ..
+ 1849  pwd
+ 1850  composer require guzzlehttp/guzzle
+ 1851  composer update
+ 1852  traceroute netflix.com
+ 1853  pwd
+ 1854  cd ..
+ 1855  tar zcvf backup-$(date +%Y-%m-%d-%H-%M)-laravel-admin-lte-react.tar.gz laravel-admin-lte-react/
+ 1856  cd laravel-admin-lte-react/
+ 1857  cd ..
+ 1858  mkdir laravel-api-service
+ 1859  date
+ 1860  ls -al
+ 1861  mv *.gz backups
+ 1862  ls -al
+ 1863  cd backups
+ 1864  ls
+ 1865  cp backup-2018-08-17-14-52-laravel-admin-lte-react.tar.gz ../laravel-api-service
+ 1866  cd ../laravel-api-service
+ 1867  ls
+ 1868  mkdir hold
+ 1869  mv backup-2018-08-17-14-52-laravel-admin-lte-react.tar.gz hold
+ 1870  cd hold
+ 1871  tar -xvfz backup-2018-08-17-14-52-laravel-admin-lte-react.tar.gz
+ 1872  tar xvfz backup-2018-08-17-14-52-laravel-admin-lte-react.tar.gz
+ 1873  ls
+ 1874  cd laravel-admin-lte-react
+ 1875  ls
+ 1876  mv * ../../
+ 1877  ls
+ 1878  cd ..
+ 1879  ls
+ 1880  rm -rf *
+ 1881  ls
+ 1882  cd ..
+ 1883  ls
+ 1884  pwd
+ 1885  pstorm .
+ 1886  pwd
+ 1887  cd ..
+ 1888  cd laravel-api-service
+ 1889  composer update
+ 1890  php artisan serve --port 8282
+ 1891  kill -9 $(ps aux | grep "php -S" | awk '{print $2}')
+ 1892  pwd
+ 1893  ls
+ 1894  php artisan serve --port 8282
+ 1895  php artisan passport:client 0
+ 1896  php artisan passport:client
+ 1897  php artisan passport:client --client_credentials
+ 1898  php artisan passport
+ 1899  pwd
+ 1900  ls
+ 1901  cd ..
+ 1902  mdkir hold
+ 1903  mkdir hold
+ 1904  ls
+ 1905  laravel
+ 1906  export PATH="$PATH:/Users/niran/.composer/vendor/bin"
+ 1907  laravel
+ 1908  laravel new laravel-api-service
+ 1909  ls
+ 1910  cd laravel-api-service
+ 1911  pwd
+ 1912  ls
+ 1913  composer require laravel/passport
+ 1914  pwd
+ 1915  php artisan
+ 1916  php artisan passport:install
+ 1917  php arisan make:controller Api\ApiController
+ 1918  php artisan make:controller Api\ApiController
+ 1919  php artisan make:controller Api/ApiController
+ 1920  php artisan serve --port 8383
+ 1921  php artisan list:route
+ 1922  php artisan route:list
+ 1923  php artisan route:list -v
+ 1924  php artisan route:list
+ 1925  php artisan make:controller Api/UserController
+ 1926  php artisan make:controller Api\UserController
+ 1927  php artisan make:controller UserController
+ 1928  php artisan make:controller Api\UserController
+ 1929  php artisan make:controller Api/UserController
+ 1930  php artisan make:auth
+ 1931  php artisan serve --port 8383
+ 1932  php artisan make:provider ClientCredentialsRoutesServiceProvider
+ 1933  php artisan passport:client --password
+ 1934  pwd
+ 1935  cd /Users/niran/Desktop
+ 1936  ls
+ 1937  mkdir apps
+ 1938  pwd
+ 1939  cd apps
+ 1940  pwd
+ 1941  clone git@github.com:FaisalUmair/udemy-downloader-gui.git
+ 1942  git clone git@github.com:FaisalUmair/udemy-downloader-gui.git
+ 1943  ls
+ 1944  cd udemy-downloader-gui
+ 1945  ls
+ 1946  npm install
+ 1947  npm start
+ 1948  php artisan make
+ 1949  php artisan
+ 1950  artisan
+ 1951  php artisan list:routes
+ 1952  php artisan list:route
+ 1953  php artisan route:list
+ 1954  php artisan make:controller MicrositePage/UserController --resource
+ 1955  php artisan route:list
+ 1956  php artisan make:controller Super/SuperController --resource
+ 1957  php artisan make:controller Admin/AdminController --resource
+ 1958  php artisan make:controller Manager/ManagerController --resource
+ 1959  php artisan route:list
+ 1960  php artisan make:model Manager
+ 1961  php artisan make:migration roles
+ 1962  php artisan make:migration --help
+ 1963  php artisan make:migration CreateProfilesTable --table profiles
+ 1964  php artisan make:migration CreateGroupsTable --table groups
+ 1965  php artisan make:migration CreateSubdomainsTable --table subdomains
+ 1966  php artisan make:migration CreateDomainsTable --table domains
+ 1967  php artisan make:model Models/Domain
+ 1968  php artisan make:model Models/Subdomain
+ 1969  php artisan make:migration user_carrier_table --create=user_carrier
+ 1970  php artisan make:migration carrier_user_table --create=carrier_user
+ 1971  php artisan
+ 1972  php artisan migrate
+ 1973  php artisan migrate refresh
+ 1974  php artisan migrate:refresh
+ 1975  php artisan migrate
+ 1976  php artisan db:seed
+ 1977  php artisan db:seed --help
+ 1978  php artisan db:seed
+ 1979  php artisan migrate:refresh
+ 1980  php artisan db:seed
+ 1981  php artisan migrate:refresh
+ 1982  php artisan db:seed
+ 1983  php artisan migrate:refresh
+ 1984  php artisan db:seed
+ 1985  php artisan db:seed -vvv
+ 1986  cd packages
+ 1987  ls
+ 1988  cd fd3faker
+ 1989  LS
+ 1990  PWD
+ 1991  pwd
+ 1992  composer init
+ 1993  composer update
+ 1994  pwd
+ 1995  cd ..
+ 1996  pwd
+ 1997  cd ..
+ 1998  ls
+ 1999  pwd
+ 2000  php artisan make:provider FD3FakerServiceProvider
+ 2001  cp app/Providers/FD3FakerServiceProvider.php packages/dzineer/fd3faker/src
+ 2002  mv app/Providers/FD3FakerServiceProvider.php packages/dzineer/fd3faker/src
+ 2003  pwd
+ 2004  php artisan make:provider FD3FakerServiceProvider
+ 2005  pwd
+ 2006  cd package
+ 2007  cd dzineer
+ 2008  ls
+ 2009  composer init
+ 2010  pwd
+ 2011  cd ..
+ 2012  pwd
+ 2013  composer dump-autoload
+ 2014  cd package
+ 2015  ls
+ 2016  cd dzineer
+ 2017  ls
+ 2018  cd ..
+ 2019  ls -al
+ 2020  cd dzineer
+ 2021  ls -al
+ 2022  cd fd3faker
+ 2023  ls
+ 2024  composer require --dev phpunit/phpunit
+ 2025  composer require --dev orchestra/testbench
+ 2026  pwd
+ 2027  composer update
+ 2028  pwd
+ 2029  cd ..
+ 2030  ls
+ 2031  cd ..
+ 2032  ls
+ 2033  cd ..
+ 2034  ls
+ 2035  pwd
+ 2036  composer update
+ 2037  composer dump-autoload
+ 2038  php artisan db:seed
+ 2039  pwd
+ 2040  cd ..
+ 2041  history | grep tar
+ 2042  echo
+ 2043  tar zcvf backup-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2044  history | grep git
+ 2045  git remote add origin git@ghub.trancehosting.net:dzineer/laravel-api-service.git
+ 2046  pwd
+ 2047  cd laravel-api-service
+ 2048  git remote add origin git@ghub.trancehosting.net:dzineer/laravel-api-service.git
+ 2049  git init
+ 2050  git remote add origin git@ghub.trancehosting.net:dzineer/laravel-api-service.git
+ 2051  git add -A
+ 2052  git commit -m "Laravel API Service"
+ 2053  git push -u origin master
+ 2054  git add -A
+ 2055  git commit -m "Modified Exceptions/Handler.php to response to all Request Exceptions for our API with JSON format and not the normal format"
+ 2056  git push -u origin master
+ 2057  php artisan db:seed
+ 2058  php artisan migrate:refresh --seed
+ 2059  php artisan make:migration CreateRolesTable --table roles
+ 2060  php artisan migrate:refresh --seed
+ 2061  php artisan migrate:refresh
+ 2062  php artisan make:migration CreateProfilesTable --table profiles
+ 2063  php artisan migrate:refresh
+ 2064  php artisan migrate
+ 2065  php artisan migrate:refresh
+ 2066  php artisan migrate
+ 2067  php artisan make:migration CreateProfilesTable --table profiles
+ 2068  php artisan migrate
+ 2069  php artisan migrate:refresh
+ 2070  php artisan make:migration create_profile_table --table profiles --create=profiles
+ 2071  php artisan migrate
+ 2072  php artisan make:migration create_profile_table --table profiles --create=profiles
+ 2073  php artisan migrate
+ 2074  php artisan migrate:refresh
+ 2075  php artisan migrate:refresh --force
+ 2076  php artisan migrate
+ 2077  php artisan make:migration create_user_table --table users --create=users
+ 2078  php artisan migrate
+ 2079  php artisan migrate:refresh
+ 2080  php artisan make:migration create_role_table --table roles --create=roles
+ 2081  php artisan migrate
+ 2082  php artisan make:migration create_group_table --table groups --create=groups
+ 2083  php artisan migrate
+ 2084  php artisan migrate:refresh
+ 2085  php artisan migrate
+ 2086  php artisan migrate:refresh
+ 2087  php artisan migrate
+ 2088  php artisan migrate:refresh
+ 2089  php artisan migrate
+ 2090  php artisan make:migration aaa
+ 2091  php artisan migrate
+ 2092  php artisan migrate:refresh
+ 2093  php artisan migrate
+ 2094  php artisan migrate:refresh
+ 2095  php artisan make:migration groups
+ 2096  php artisan make:migration profiles
+ 2097  php artisan make:migration roles
+ 2098  php artisan migrate:refresh
+ 2099  php artisan make:migration roles
+ 2100  php artisan make:migration domains
+ 2101  php artisan make:migration subdomains
+ 2102  php artisan make:migration users
+ 2103  php artisan migrate:refresh
+ 2104  php artisan migrate
+ 2105  php artisan migrate:refresh
+ 2106  php artisan migrate --seed
+ 2107  php artisan migrate:refresh --seed
+ 2108  php artisan make:controller aaa --resource
+ 2109  php artisan route:list
+ 2110  php artisan make:controller Api/Profile --resource
+ 2111  composer require guzzlehttp/guzzle
+ 2112  php artisan make:mail usercreated
+ 2113  php artisan make --help
+ 2114  php artisan make:mail usercreated
+ 2115  php artisan make:provider CreatedUserEventProvider
+ 2116  php aritsan serve --port 8383
+ 2117  ls
+ 2118  php artisan --help
+ 2119  php artisan serve --port 8383
+ 2120  php artisan route:list
+ 2121  php artisan migrate
+ 2122  php artisan make:mail UserMailChanged
+ 2123  cd ..
+ 2124  tar zcvf backup-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2125  cd laravel-api-service
+ 2126  git add -A
+ 2127  git commit -m 'Added Many New Features, Including new mail feature that goes to log and also user verification'
+ 2128  git push -u origin master
+ 2129  git add -A
+ 2130  git commit -m 'Fixed UserController update to support uploading optional logos/portraits and storing them on the respective filesystem'
+ 2131  git push -u origin master
+ 2132  git add -A
+ 2133  git commit -m 'Added resend verification for users not been verified already'
+ 2134  git push -u origin master
+ 2135  php artisan make:mail test -m emails.test
+ 2136  php artisan serve --port 8383
+ 2137  curl -s --user 'api:122f42947951ba274a9b5b4f0d6e4712-a4502f89-9daedaa8' \\n    https://api.mailgun.net/v3/sandboxacfbf7dd4c874ce6b6c062dd56ea968f.mailgun.org/messages \\n        -F from='Mailgun Sandbox <postmaster@sandboxacfbf7dd4c874ce6b6c062dd56ea968f.mailgun.org>' \\n        -F to='Franklin D Decker <frankdd3@gmail.com>' \\n        -F subject='Hello Franklin D Decker' \\n        -F text='Congratulations Franklin D Decker, you just sent an email with Mailgun!  You are truly awesome!'
+ 2138  php artisan serve --port 8383
+ 2139  composer update
+ 2140  pwd
+ 2141  mv vendor vendor.bak
+ 2142  composer update -v
+ 2143  ls
+ 2144  mv vendor.bak ..
+ 2145  php artisan serve --port 8383
+ 2146  php artisan cache:clear
+ 2147  php artisan view:clear
+ 2148  php artisan cache:clear
+ 2149  php artisan serve --port 8383
+ 2150  cd ..
+ 2151  tar zcvf backup-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2152  cd laravel-api-service
+ 2153  ls
+ 2154  git add -A
+ 2155  git commit -m "Added support for email templates and Mailgun api service - for new signup and confirm and re-confirm emails"
+ 2156  git push -u origin master
+ 2157  php artisan serve --port 8383
+ 2158  php artisan make:middleware SignatureMiddleware
+ 2159  php artisan serve --port 8383
+ 2160  php artisan cache:clear
+ 2161  git add -A
+ 2162  git commit -m "Added custom headers to all our api & web responses"
+ 2163  git push -u origin master
+ 2164  cd ..
+ 2165  tar zcvf backup-before-fractal-install-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2166  cd laravel-api-service
+ 2167  composer require spattle/laravel-fractal
+ 2168  composer require spatle/laravel-fractal
+ 2169  composer require spatie/laravel-fractal
+ 2170  php artisan
+ 2171  php artisan make:transformer UserTransformer
+ 2172  php artisan serve --port 8383
+ 2173  php artisan migrate --seed
+ 2174  php artisan migrate:refresh --seed
+ 2175  pwd
+ 2176  cd ..
+ 2177  mkdir hold
+ 2178  cd hold
+ 2179  ls
+ 2180  pwd
+ 2181  ls -al
+ 2182  git clone http://ghub.trancehosting.net/dzineer/laravel-api-service
+ 2183  ls
+ 2184  pwd
+ 2185  cd ..
+ 2186  cd laravel-api-service
+ 2187  ls
+ 2188  php artisan migrate:refresh --seed
+ 2189  php artisan migrate:refresh --seed --help
+ 2190  php artisan migrate:refresh --seed
+ 2191  composer dump-autoload
+ 2192  php artisan make:factory help
+ 2193  php artisan make:factory --help
+ 2194  php artisan make:factory -m Domain
+ 2195  php artisan make:factory DomainFactory -m Domain
+ 2196  php artisan make:factory SubDomainFactory -m SubDomain
+ 2197  php artisan make:factory ProfileFactory -m Profile
+ 2198  php artisan make:factory GroupFactory -m Group
+ 2199  php artisan make:factory RoleFactory -m Role
+ 2200  php artisan make:seeder UserSeed
+ 2201  php artisan migrate:refresh --seed
+ 2202  git add -A
+ 2203  git commit -m "Fixed the Database Migration and Database Seeds For Generating Random Data with working relationship ids"
+ 2204  git push -u master origin
+ 2205  git push -u origin master
+ 2206  cd ..
+ 2207  tar zcvf backup-using-working-migrations-with-seeding-install-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2208  cd ..
+ 2209  cd Projects
+ 2210  cd laravel-api-service
+ 2211  ls
+ 2212  php artisan migrate:refresh --seed
+ 2213  git add -A
+ 2214  git commit -m "Fixed the Database Migration and Database Seeds For Generating Proper Image Paths and Modified UserTransformer for modifying who is admin/addding group name/correct image links"
+ 2215  git push -u origin master
+ 2216  git add -A
+ 2217  git commit -m "Added Sort Feature Attribute to sort our Transformed Data"
+ 2218  git push -u origin master
+ 2219  git add -A
+ 2220  git commit -m "Added Filtered Feature Filter based on provided Attributes"
+ 2221  git push -u origin master
+ 2222  cd ..
+ 2223  tar zcvf backup-using-sorting-filtering-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2224  cd ..
+ 2225  cd Projects
+ 2226  cd laravel-api-service
+ 2227  cd ..
+ 2228  tar zcvf backup-inlcudes-pagination-keeping-params-passed-aswell-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2229  cd laravel-api-service
+ 2230  cd ..
+ 2231  tar zcvf backup-inlcudes-pagination-per_page-param-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2232  cd ..
+ 2233  cd Projects
+ 2234  cd laravel-api-service
+ 2235  git all -A
+ 2236  pwd
+ 2237  git add -A
+ 2238  git commit -m 'Added per_page parameter to our pagination'
+ 2239  git push -u origin master
+ 2240  git add -A
+ 2241  git commit -m 'Added per_page parameter fix for per_page > collection count then set per_page to collection count'
+ 2242  git push -u origin master
+ 2243  php artisan serve --port 8383
+ 2244  php artisan route:list
+ 2245  git add -A
+ 2246  git commit -m "Added HATEOAS (Hypermedia as the Engine of Application State) for different models"
+ 2247  git push -u master origin
+ 2248  git push -u origin master
+ 2249  cd ..
+ 2250  tar zcvf backup-inlcudes-hateoas-links-json-model-responses-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2251  cd laravel-api-service
+ 2252  pwd
+ 2253  php artisan route:list
+ 2254  php artisan make:model --help
+ 2255  php artisan make:migration --help
+ 2256  php artisan make:migration create_affiliate_table --table affiliates --create affiliates
+ 2257  php artisan migrate:refresh --seed
+ 2258  php artisan migrate:refresh
+ 2259  php artisan --help
+ 2260  php artisan help
+ 2261  php artisan
+ 2262  php artisan db:seed
+ 2263  php artisan migrate:refresh
+ 2264  php artisan db:seed
+ 2265  php artisan migrate:refresh
+ 2266  php artisan db:seed
+ 2267  composer dump-autoload
+ 2268  php artisan db:seed
+ 2269  composer dump-autoload
+ 2270  php artisan migrate:refresh
+ 2271  php artisan db:seed
+ 2272  php artisan migrate:refresh
+ 2273  php artisan db:seed
+ 2274  php artisan migrate:refresh
+ 2275  php artisan db:seed
+ 2276  php artisan migrate:refresh
+ 2277  php artisan db:seed
+ 2278  php artisan migrate:refresh
+ 2279  php artisan db:seed
+ 2280  php artisan migrate:refresh
+ 2281  php artisan db:seed
+ 2282  php artisan migrate:refresh
+ 2283  php artisan db:seed
+ 2284  php artisan migrate:refresh
+ 2285  php artisan db:seed
+ 2286  php artisan migrate:refresh
+ 2287  php artisan db:seed
+ 2288  php artisan migrate:refresh
+ 2289  php artisan db:seed
+ 2290  php artisan migrate:refresh
+ 2291  php artisan db:seed
+ 2292  php artisan migrate:refresh
+ 2293  php artisan db:seed
+ 2294  php artisan migrate:refresh
+ 2295  php artisan db:seed
+ 2296  php artisan migrate:refresh
+ 2297  php artisan db:seed
+ 2298  php artisan migrate:refresh
+ 2299  php artisan db:seed
+ 2300  git add -A
+ 2301  git commit -m "Added Random Users/Affiliates/Profiles/Domains/SubDomains/Roles/Groups db:seed"
+ 2302  git push -u origin master
+ 2303  php artisan route:list
+ 2304  git add -A
+ 2305  git commit -m "Added Random Users/Affiliates still working on..."
+ 2306  git push -u origin master
+ 2307  php artisan serve --port 8383
+ 2308  pwd
+ 2309  cd ..
+ 2310  ls
+ 2311  pwd
+ 2312  ccd ..
+ 2313  cd ..
+ 2314  pwd
+ 2315  php artisan make:migration create_affilate_user_table --table affilate_user --create affilate_user
+ 2316  php artisan migrate
+ 2317  php artisan migrate:refresh
+ 2318  php artisan db:seed
+ 2319  php artisan migrate:refresh
+ 2320  php artisan db:seed
+ 2321  php artisan migrate:refresh
+ 2322  php artisan db:seed
+ 2323  php artisan migrate:refresh
+ 2324  php artisan db:seed
+ 2325  php artisan migrate:refresh
+ 2326  php artisan db:seed
+ 2327  php artisan migrate:refresh
+ 2328  php artisan db:seed
+ 2329  git add -A
+ 2330  git commit -m "added Affilate/AffilateUser ModelFactory/Affiliate_User Model and Custom MicrositePage Type Mail Stuff"
+ 2331  git push -u master origin
+ 2332  git push -u origin_master
+ 2333  git push -u origin master
+ 2334  cd ..
+ 2335  tar zcvf backup-inlcudes-affiliate_stuff-mail_classes_reorganinzed_email_templates-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2336  cd laravel-api-service
+ 2337  pwd
+ 2338  php artisan migrate:refresh
+ 2339  php artisan db:seed
+ 2340  php artisan migrate:refresh
+ 2341  php artisan db:seed
+ 2342  php artisan migrate:refresh
+ 2343  php artisan db:seed
+ 2344  php artisan migrate:refresh
+ 2345  php artisan db:seed
+ 2346  php artisan migrate:refresh
+ 2347  php artisan migrate:refresh --seed
+ 2348  php artisan route:list
+ 2349  php artisan migrate:refresh
+ 2350  php artisan migrate:refresh --seed
+ 2351  php artisan migrate:refresh
+ 2352  php artisan migrate:refresh --seed
+ 2353  php artisan migrate:refresh
+ 2354  php artisan db:seed
+ 2355  php artisan migrate:refresh
+ 2356  php artisan db:seed
+ 2357  php artisan migrate:refresh
+ 2358  php artisan db:seed
+ 2359  php artisan migrate:refresh
+ 2360  php artisan db:seed
+ 2361  php artisan migrate:refresh
+ 2362  php artisan migrate:refresh --seed
+ 2363  php artisan migrate:refresh
+ 2364  php artisan db:seed
+ 2365  php artisan migrate:refresh
+ 2366  php artisan db:seed
+ 2367  php artisan migrate:refresh
+ 2368  php artisan db:seed
+ 2369  php artisan migrate:refresh
+ 2370  php artisan db:seed
+ 2371  php artisan migrate:refresh
+ 2372  php artisan db:seed
+ 2373  php artisan migrate:refresh
+ 2374  php artisan db:seed
+ 2375  git add -A
+ 2376  git commit -m "Fixed affiliates and users | users to have affiliate_id and affiliates to have user_id"
+ 2377  git push -u origin master
+ 2378  cd ..
+ 2379  tar zcvf backup-inlcudes-users-to-have-affiliate_id-and-affiliates-to-have-user_id-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2380  cd laravel-api-service
+ 2381  php artisan route:list
+ 2382  php artisan migrate:refresh
+ 2383  php artisan db:seed
+ 2384  git add -A
+ 2385  git commit -m "added the affiliate users route. fixed issues with affiliate table added back user_id. fixed the db seeder to assoicate affiliates correctly"
+ 2386  git push -u origin master
+ 2387  cd ..
+ 2388  tar zcvf backup-inlcudes-users-to-have-affiliate_id-and-affiliates-to-have-user_id-fixes-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2389  cd laravel-api-service
+ 2390  php artisan make:middleware TransformInput
+ 2391  get add -A
+ 2392  git add -A
+ 2393  git commit -m "Fixed issue where the transformed field names cannot be updated since they donnot exist in the request and the erorrs that would show the field name before they are transformed fixed"
+ 2394  git push -u origin master
+ 2395  pwd
+ 2396  cd ..
+ 2397  tar zcvf backup-before-auth-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2398  cd laravel-api-service
+ 2399  php artisan make:auth
+ 2400  php route:list
+ 2401  php artisan route:list
+ 2402  cd ..
+ 2403  tar zcvf backup-before-oauth2-install-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2404  cd laravel-api-service
+ 2405  composer require laravel/passport
+ 2406  php artisan
+ 2407  php artisan migrate
+ 2408  php artisan
+ 2409  php artisan passport:install
+ 2410  php artisan passport:install --force
+ 2411  git add -A
+ 2412  git commit -m "added laravel/password 7.0 using oauth2"
+ 2413  git push -u origin master
+ 2414  cd ..
+ 2415  tar zcvf backup-immediately-after-laravel-passport-install-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2416  cd laravel-api-service
+ 2417  php artisan route:list
+ 2418  composer dump-autoload
+ 2419  php artisan route:list
+ 2420  php artisan passport:client
+ 2421  pwd
+ 2422  git add -A
+ 2423  git commit -m "configured using oauth2"
+ 2424  git push -u origin master
+ 2425  cd ..
+ 2426  tar zcvf backup--after-passport-configuration-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2427  tar zcvf backup-before-protecting-rest-of-routes-using-auth-middleware-guard-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2428  cd laravel-api-service
+ 2429  ls
+ 2430  php artisan passport:client --password
+ 2431  php artisan vendor:publish --tag=passport-components
+ 2432  cd ..
+ 2433  tar zcvf backup-before-installing-vue-guard-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2434  tar zcvf backup-before-installing-vue-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2435  cd laravel-api-service
+ 2436  npm install
+ 2437  npm run dev
+ 2438  npm run watch
+ 2439  php artisan passport:client --personal
+ 2440  php artisan passport:client --client password
+ 2441  php artisan passport:client --password
+ 2442  php artisan serve --port 8383
+ 2443  npm run watch
+ 2444  cd ..
+ 2445  tar zcvf backup-before-installing-last-security-layer-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2446  tar zcvf backup-before-adding-oauth2-scopes-layer-$(date +%Y-%m-%d-%H-%M)-laravel-api-service.tar.gz laravel-api-service/
+ 2447  cd laravel-api-service
+ 2448  git add -A
+ 2449  git commit -m "adding scopes to classes"
+ 2450  git push -u origin master
+ 2451  php artisan
+ 2452  php artisan make:policy help
+ 2453  php artisan make:policy --help
+ 2454  php artisan make:policy UserPolicy --model=MicrositePage
+ 2455  vi ~/.bash_profile
+ 2456  vi ~/.profile
+ 2457  vi ~/.bash_profile
+ 2458  vi ~/.profile
+ 2459  source ~/.profile
+ 2460  pwd
+ 2461  source ~/.profile
+ 2462  vi ~/.profile
+ 2463  m:mig create_roates_table --fields="name:string:unique"
+ 2464  m:mig create_roates_table --help
+ 2465  composer require laracasts/generators --dev
+ 2466  m:p ExtendedLaravelGeneratorsServiceProvider
+ 2467  cat ~/.bash_profile
+ 2468  cat ~/.profile
+ 2469  vi ~/.profile
+ 2470  source  ~/.profile
+ 2471  m:p ExtendedLaravelGeneratorsServiceProvider
+ 2472  artisan
+ 2473  m:mig --help
+ 2474  m:mig create_roates_table --fields="name:string:unique"
+ 2475  php artisan make:migration:schema -help
+ 2476  m:mig:schema -help
+ 2477  vi ~/.profile
+ 2478  source  ~/.profile
+ 2479  m:mig:schema -help
+ 2480  m:migs -help
+ 2481  m:migs -s "name:string:unique" create_roles_table
+ 2482  vi ~/.profile
+ 2483  php artisan make:command CrudGenerator
+ 2484  php artisan
+ 2485  php artisan make:command --help
+ 2486  php artisan make:command --command=fd3:make
+ 2487  php artisan make:command fd3 --command=fd3:make
+ 2488  php artisan
+ 2489  php artisan make:pivot roles users
+ 2490  php artisan
+ 2491  php artisan make:migration:pivot roles users
+ 2492  php artisan migrate
+ 2493  m:migs -s "name:string:unique,role_id:integer" create_roles_permissons_table
+ 2494  php artisan migrate
+ 2495  php artisan route:list
+ 2496  php artisan make:facade Alert
+ 2497  php artisan make:provider FD3MessagingProvider
+ 2498  composer dump-auto
+ 2499  php artisan config:clear
+ 2500  php artisan serve --port 8383
+ 2501  php artisan make:provider FD3EventsProvider
+ 2502  npm install jquery
+ 2503  php artisan make:policy UserPolicy --model=MicrositePage
+ 2504  php artisan service --port 8383
+ 2505  sudo vi /etc/hosts
+ 2506  ping landing-pages.dev
+ 2507  ping bob.landing-pages.com
+ 2508  ping bob.landing-pages.dev
+ 2509  sudo vi /etc/hosts
+ 2510  ping app.landing-pages.dev
+ 2511  ping landing-pages.dev
+ 2512  sudo vi /etc/hosts
+ 2513  ping mc
+ 2514  sudo vi /etc/hosts
+ 2515  ping app.landing-pages.test
+ 2516  composer dump-auto
+ 2517  composer update
+ 2518  composer dump-auto
+ 2519  pwd
+ 2520  cd package
+ 2521  ls
+ 2522  cd dzineer
+ 2523  ls
+ 2524  cd framework
+ 2525  ls
+ 2526  composer init
+ 2527  pwd
+ 2528  ls
+ 2529  composer init
+ 2530  composer dump-autoload
+ 2531  pwd
+ 2532  cd ..
+ 2533  pwd
+ 2534  cd ..
+ 2535  composer dump-autoload
+ 2536  php artisan route:list
+ 2537  php artisan route:list -v
+ 2538  php artisan route:list
+ 2539  npm init
+ 2540  npm install --save react
+ 2541  rm -rf package.json
+ 2542  ls
+ 2543  npm install --save react
+ 2544  npm install --save react-dom
+ 2545  npm install --save-dev babel-core babel-loader babel-preset-react
+ 2546  npm audit fix
+ 2547  npm init sdfasdfasd
+ 2548  ls
+ 2549  npm init
+ 2550  npm audit fix
+ 2551  npm install --save react
+ 2552  npm install --save react-dom
+ 2553  npm install --save-dev babel-core babel-loader babel-preset-react
+ 2554  touch .babelrc
+ 2555  npm i --save-dev webpack webpack-dev-server html-webpack-plugin
+ 2556  touch webpack.config.js
+ 2557  touch js/app.js
+ 2558  npm i webpack webpack-cli webpack-dev-server html-webpack-plugin style-loader css-loader babel-core babel-loader babel-preset-env babel-preset-react -D
+ 2559  npm start
+ 2560  npm install yarn
+ 2561  pwd
+ 2562  mkdir another_app
+ 2563  cd another_app
+ 2564  ls
+ 2565  yarn create react-app my-first-react
+ 2566  ls
+ 2567  cd my-first-react
+ 2568  ls
+ 2569  yarn start
+ 2570  yarn build
+ 2571  cd ..
+ 2572  npm init
+ 2573  npm init -y
+ 2574  npm i webpack webpack-cli --save-dev
+ 2575  npm i babel-loader babel-core babel-preset-env babel-preset-react --dev-save
+ 2576  touch .babelrc
+ 2577  touch wepack.config.js
+ 2578  npm i react react-dom --save-dev
+ 2579  np install prop-types --save-dev
+ 2580  npm install prop-types --save-dev
+ 2581  npm run build
+ 2582  npm install prop-types --save-dev
+ 2583  npm run build
+ 2584  pwd
+ 2585  npm run build
+ 2586  webpack-cli --mode production
+ 2587  webpack
+ 2588  npm i webpack-cli --save-dev
+ 2589  pwd
+ 2590  rm -rf *
+ 2591  ls -al
+ 2592  rm -rf .babelrc
+ 2593  git clone https://github.com/StephenGrider/ReduxSimpleStarter
+ 2594  ls
+ 2595  cd ReduxSimpleStarter
+ 2596  ls
+ 2597  git init
+ 2598  cd .git
+ 2599  ls
+ 2600  cd ..
+ 2601  rm -rf .git
+ 2602  git init
+ 2603  git -add -A
+ 2604  git add -A
+ 2605  git commit -m "basic ReduxReactBoilerPlate"
+ 2606  git remote add origin git@ghub.trancehosting.net:dzineer/react-redux-boiler-plate.git
+ 2607  git push -u origin master
+ 2608  mv * ..
+ 2609  ls -al
+ 2610  npm install
+ 2611  npm start
+ 2612  pwd
+ 2613  cd ..
+ 2614  ls
+ 2615  pwd
+ 2616  cd ..
+ 2617  ls
+ 2618  pwd
+ 2619  cd Desktop
+ 2620  cd react-101
+ 2621  ls
+ 2622  npm install
+ 2623  pwd
+ 2624  npm start
+ 2625  npm i youtube-api-search --save
+ 2626  npm start
+ 2627  npm i loadash --save
+ 2628  npm i lodash --save
+ 2629  npm r loadash --save
+ 2630  npm start
+ 2631  pwd
+ 2632  ls
+ 2633  git remote add origin git@ghub.trancehosting.net:dzineer/react-search-001-plate.git
+ 2634  pwd
+ 2635  ls
+ 2636  git remote add origin git@ghub.trancehosting.net:dzineer/react-search-001-plate.git
+ 2637  rm -rf .gitignore
+ 2638  rm -rf .git
+ 2639  git remote add origin git@ghub.trancehosting.net:dzineer/react-search-001-plate.git
+ 2640  git init
+ 2641  git remote add origin git@ghub.trancehosting.net:dzineer/react-search-001-plate.git
+ 2642  git add -A
+ 2643  rm -rf .git
+ 2644  touch .gitignore
+ 2645  git init
+ 2646  git remote add origin git@ghub.trancehosting.net:dzineer/react-search-001-plate.git
+ 2647  git remote remove origin git@ghub.trancehosting.net:dzineer/react-search-001-plate.git
+ 2648  git remote remove git@ghub.trancehosting.net:dzineer/react-search-001-plate.git
+ 2649  git remote add origin git@ghub.trancehosting.net:dzineer/react-search-001.git
+ 2650  git remove help
+ 2651  git remove --help
+ 2652  git remote remove --help
+ 2653  git --help
+ 2654  rm -rf .git
+ 2655  git init
+ 2656  git remote add origin git@ghub.trancehosting.net:dzineer/react-search-001.git
+ 2657  git add -A
+ 2658  git commit -m "React Basic Component for Google Youtube API Search"
+ 2659  git push -u origin master
+ 2660  cd react-redux
+ 2661  ls
+ 2662  npm install
+ 2663  npm start
+ 2664  pwd
+ 2665  npm start
+ 2666  node redux-basic.js
+ 2667  node redux-basic
+ 2668  npm start
+ 2669  git add -A
+ 2670  git commit -m "React - Redux App with Basic Redux State"
+ 2671  git push -u origin master
+ 2672  rm -rf .git
+ 2673  git init
+ 2674  git add -A
+ 2675  git remote add origin git@ghub.trancehosting.net:dzineer/react-redux-basic-001.git
+ 2676  git commit -m "React - Redux App with Basic Redux State"
+ 2677  git push -u origin master
+ 2678  pwd
+ 2679  pwed
+ 2680  pwd
+ 2681  cd ..
+ 2682  mkdir electron-projects
+ 2683  cd electron-projects
+ 2684  git clone https://github.com/electron/electron-quick-start
+ 2685  cd electron-quick-start
+ 2686  ls
+ 2687  npm install && npm start
+ 2688  pwd
+ 2689  cd ..
+ 2690  https://github.com/electron/electron-api-demos
+ 2691  git clone https://github.com/electron/electron-api-demos
+ 2692  cd electron-api-demos
+ 2693  ls
+ 2694  npm install && npm start
+ 2695  ping landing-pages.test
+ 2696  sudo vi /etc/hosts
+ 2697  ping landing-pages.test
+ 2698  sudo vi /etc/hosts
+ 2699  ping landing-pages.test
+ 2700  ping bga.landing-pages.test
+ 2701  ping bga2.landing-pages.test
+ 2702  sudo vi /etc/hosts
+ 2703  php artisan route:list
+ 2704  php artisan route:list -vvv
+ 2705  php artisan route:list
+ 2706  php artisan route:list  | grep go
+ 2707  php artisan route:list > routes.md
+ 2708  composer dump-autoload
+ 2709  php artisan route:list
+ 2710  php artisan serve --port 8383
+ 2711  npm start
+ 2712  pwd
+ 2713  cd react-redux
+ 2714  npm start
+ 2715  ping aq2e.com
+ 2716  ping admin.aq2e.com
+ 2717  cd bluekit
+ 2718  npm install react-bluekit --save
+ 2719  npm run
+ 2720  pwd
+ 2721  ls -al
+ 2722  npm install react-bluekit --save
+ 2723  npm init -y
+ 2724  npm install react-bluekit --save
+ 2725  npm run
+ 2726  npm
+ 2727  node
+ 2728  node start
+ 2729  ssh root@149.28.47.31
+ 2730  ssh root@45.77.144.193
+ 2731  pwd
+ 2732  cd ..
+ 2733  mkdir react-docgen-ex
+ 2734  npm init -y
+ 2735  npm i react-docgen --save
+ 2736  npm install -g react-docgen
+ 2737  npm install react-docgen --save-dev
+ 2738  pwd
+ 2739  cd react-docgen-ex
+ 2740  ls
+ 2741  npm init -y
+ 2742  npm install react-docgen --save-dev
+ 2743  npm i -D react-docgen@2.14.0 chokidar@1.6.1 npm-run-all@4.0.2
+ 2744  npm i -S highlight.js@9.10.0
+ 2745  pwd
+ 2746  cd ..
+ 2747  pwd
+ 2748  cd react-docgen-ex
+ 2749  ls
+ 2750  npm start
+ 2751  npm install -D react-docgen@2.14.0 chokidar@1.6.1 npm-run-all@4.0.2
+ 2752  pwd
+ 2753  mdkir another
+ 2754  mkdir another
+ 2755  cd another
+ 2756  ls
+ 2757  npm --version
+ 2758  node --version
+ 2759  yarn
+ 2760  git remote add origin git@ghub.trancehosting.net:dzineer/ps-react.git
+ 2761  git init
+ 2762  git remote add origin git@ghub.trancehosting.net:dzineer/ps-react.git
+ 2763  pwd
+ 2764  npm i create-react-app -g
+ 2765  pwd
+ 2766  mkdir ps-react
+ 2767  cd ..
+ 2768  pwd
+ 2769  cd another
+ 2770  ls
+ 2771  ls -al
+ 2772  mv .git ps-react
+ 2773  cd ps-react
+ 2774  ls
+ 2775  npm i create-react-app ./
+ 2776  npm init -y
+ 2777  npm i create-react-app ./
+ 2778  npm install
+ 2779  npm install -g yarn
+ 2780  npm install
+ 2781  yarn
+ 2782  yarn install
+ 2783  yarn i create-react-app ./
+ 2784  yarn install create-react-app ./
+ 2785  yarn create-react-app ./
+ 2786  pwd
+ 2787  ls -al
+ 2788  pwd
+ 2789  cd ..
+ 2790  pwd
+ 2791  cd ..
+ 2792  pwd
+ 2793  mkdir ps-react
+ 2794  cd ps-react
+ 2795  yarn init
+ 2796  yarn init -y
+ 2797  history | grep npm i
+ 2798  history | grep npm
+ 2799  yarn install create-react-app -g
+ 2800  yarn global add create-react-app
+ 2801  create-react-app ./
+ 2802  ls
+ 2803  rm -rf *
+ 2804  ls
+ 2805  create-react-app ./
+ 2806  yarn start
+ 2807  npm t
+ 2808  yarn run eject
+ 2809  yarn start
+ 2810  npm start
+ 2811  yarn update
+ 2812  yarn --help
+ 2813  yarn upgrade
+ 2814  yarn install
+ 2815  npm start
+ 2816  cd ..
+ 2817  mkdir ps-react
+ 2818  cd ps-react
+ 2819  npm init -y
+ 2820  npm i create-react-app -g
+ 2821  pwd
+ 2822  ls -al
+ 2823  rm -rf .
+ 2824  ls -al
+ 2825  rm -rf *
+ 2826  ls -al
+ 2827  npm init -y
+ 2828  npm update
+ 2829  npm install create-react-app -g
+ 2830  pwd
+ 2831  cd Desktop
+ 2832  cd Desktop\ Stuff
+ 2833  ls
+ 2834  cd Projects
+ 2835  cd Companies
+ 2836  cd ..
+ 2837  pwd
+ 2838  cd ..
+ 2839  pwd
+ 2840  cd ..
+ 2841  cd react-101
+ 2842  ls
+ 2843  rm -rf ps-react
+ 2844  mkdir ps-react
+ 2845  cd ps-react
+ 2846  ls
+ 2847  npm init -y
+ 2848  npm install create-react-app -g
+ 2849  npm -g update
+ 2850  npm install create-react-app -g
+ 2851  sudo npm install create-react-app -g
+ 2852  pwd
+ 2853  ls -al
+ 2854  sudo npm install create-react-app --save
+ 2855  ls -al
+ 2856  history | grep npm
+ 2857  create-react-app ./
+ 2858  ls -al
+ 2859  rm -rf *
+ 2860  ls
+ 2861  create-react-app ./
+ 2862  ls -al
+ 2863  rm -rf node_modules
+ 2864  ls -al
+ 2865  rm -rf node_modules
+ 2866  sudo rm -rf node_modules
+ 2867  ls -al
+ 2868  create-react-app ./
+ 2869  yarn start
+ 2870  yarn run eject
+ 2871  pwd
+ 2872  l s-al
+ 2873  ls -al
+ 2874  pwd
+ 2875  cd ..
+ 2876  ls
+ 2877  cd ps-react
+ 2878  ls
+ 2879  yarn run eject
+ 2880  yarn start
+ 2881  pwd
+ 2882  yarn start
+ 2883  ls -al
+ 2884  rm -rf *
+ 2885  npm remove yarn
+ 2886  sudo npm remove create-react-app
+ 2887  pwd
+ 2888  ls
+ 2889  npm i create-react-app
+ 2890  ls -al
+ 2891  create-react-app ./
+ 2892  sudo npm uninstall -g yarn
+ 2893  brew uninstall yarn
+ 2894  yarn
+ 2895  pwd
+ 2896  ls -al
+ 2897  rm -rf *
+ 2898  ls -al
+ 2899  npm install create-react-app
+ 2900  create-react-app ./
+ 2901  npm start
+ 2902  pwd
+ 2903  npm run eject
+ 2904  npm start
+ 2905  npm update
+ 2906  npm start
+ 2907  npm update
+ 2908  npm install babel-core
+ 2909  npm start
+ 2910  pwd
+ 2911  cd ps-react
+ 2912  ls
+ 2913  npm i --save @types/react
+ 2914  npm start
+ 2915  npm i --save @types/react-dom
+ 2916  npm install prototypes --save
+ 2917  npm install prop-types --save
+ 2918  npm remove prototypes --save
+ 2919  npm install -D react-docgen@2.14.0 chokidar@1.6.1 npm-run-all@4.0.2
+ 2920  npm i -S highlight.js@9.10.0
+ 2921  npm start
+ 2922  npm cache clean --force
+ 2923  npm start
+ 2924  npm start -vvv
+ 2925  npm start -v
+ 2926  npm --help
+ 2927  npm start --help
+ 2928  npm help npm
+ 2929  npm start
+ 2930  npm install --save react-docgen
+ 2931  npm start
+ 2932  git init
+ 2933  git add -A
+ 2934  git remote add origin git@ghub.trancehosting.net:dzineer/ps-react.git
+ 2935  git commit -m "First version of my React Components Documenation Project"
+ 2936  git push -u origin master
+ 2937  npm start
+ 2938  git add -A
+ 2939  git commit -m "Added CodeExample Component to contain the example code with syntax highlighting"
+ 2940  git push -u origin master
+ 2941  npm start
+ 2942  git add -A
+ 2943  git commit -m "Added default show_default for Code Show"
+ 2944  git push -u origin master
+ 2945  npm install -S bootstrap@~4.0.0
+ 2946  npm start
+ 2947  git add -A
+ 2948  git commit -m "Added bootstrap classes"
+ 2949  git push -u origin master
+ 2950  npm start
+ 2951  git all -A
+ 2952  git add -A
+ 2953  git commit -m "Added Molecules & Atoms TextInput, PasswordInput, RegistrationForm"
+ 2954  git push -u origin master
+ 2955  npm start
+ 2956  pwd
+ 2957  cd ps-react
+ 2958  npm start
+ 2959  npm -i -D react-test-renderer@15.5.4 enzyme@2.8.2 react-addons-test-utils@15.5.1
+ 2960  npm i -D react-test-renderer@15.5.4 enzyme@2.8.2 react-addons-test-utils@15.5.1
+ 2961  npm start
+ 2962  npm t
+ 2963  pwd
+ 2964  cd ..
+ 2965  tar zcvf before-yarn-install-$(date +%Y-%m-%d-%H-%M)-ps-react.tar.gz
+ 2966  tar zcvf before-yarn-install-$(date +%Y-%m-%d-%H-%M)-ps-react.tar.gz ps-react
+ 2967  cd ps-react
+ 2968  ls
+ 2969  npm i -g yarn
+ 2970  yarn install
+ 2971  yarn t
+ 2972  yarn add enzyme enzyme-adapter-react-16
+ 2973  yarn test
+ 2974  clear
+ 2975  yarn test
+ 2976  yarn update
+ 2977  yarn install
+ 2978  yarn test
+ 2979  clear
+ 2980  yarn test
+ 2981  pwd
+ 2982  cd ps-react
+ 2983  ls
+ 2984  yarn test
+ 2985  pwd
+ 2986  cd ..
+ 2987  tar zcvf after-yarn-install-with-jest-and-enzyme-testing$(date +%Y-%m-%d-%H-%M)-ps-react.tar.gz ps-react
+ 2988  pwd
+ 2989  cd ps-react
+ 2990  git add -A
+ 2991  git commit -m "Added Testing Suite"
+ 2992  git push -u origin master
+ 2993  git remote add origin git@ghub.trancehosting.net:dzineer/ps-react.git
+ 2994  git remote remove origin git@ghub.trancehosting.net:dzineer/ps-react.git
+ 2995  git remote remove origin
+ 2996  git remote add origin git@github.com:dzineer/ps-react.git
+ 2997  git push -u origin master
+ 2998  git remote remove origin
+ 2999  git remote add origin git@github.com:dzineer/ps-react.git
+ 3000  git push -u origin master
+ 3001  add add -A .travis.yml
+ 3002  git add -A .travis.yml
+ 3003  git commit -m "Added travis ci"
+ 3004  git push -u origin master
+ 3005  git add -A all
+ 3006  git add -A
+ 3007  git commit -m "commented out src/script/test.js:18 - it was complaining about jest existing twice"
+ 3008  git push -u origin master
+ 3009  git add -A
+ 3010  pwd
+ 3011  git commit -m "commented out src/script/test.js:18 - it was complaining about jest existing twice"
+ 3012  git push -u origin master
+ 3013  pwd
+ 3014  git add -A
+ 3015  git commit -m "commented out src/script/test.js:18 - it was complaining about jest existing twice"
+ 3016  git push -u origin master
+ 3017  yarn test
+ 3018  git add -A
+ 3019  git commit -m "commented out src/script/test.js:18 - removed script directory from src as it is in parent alrady"
+ 3020  git push -u origin master
+ 3021  git remote remove origin
+ 3022  git remote add origin git@ghub.trancehosting.net:dzineer/ps-react.git
+ 3023  git push -u origin master
+ 3024  git remote remove origin
+ 3025  git remote add origin git@github.com:dzineer/ps-react.git
+ 3026  yarn start
+ 3027  yarn install bootstrap@4.0.0-alpha.6
+ 3028  yarn add bootstrap@4.0.0-alpha.6
+ 3029  yarn start
+ 3030  clear
+ 3031  yarn start
+ 3032  get add -A
+ 3033  git add -A
+ 3034  git commit -m "Added new components and improved existing ones"
+ 3035  git push -u origin master
+ 3036  git remote remove origin
+ 3037  git remote add origin git@ghub.trancehosting.net:dzineer/ps-react.git
+ 3038  git push -u origin master
+ 3039  ping
+ 3040  ping lifesourcebrokerage.com
+ 3041  exit
+ 3042  pwd
+ 3043  cd ps-react
+ 3044  ls
+ 3045  yarn start
+ 3046  pwd
+ 3047  cd ps-react
+ 3048  ls
+ 3049  yarn start
+ 3050  yarn add react-router
+ 3051  yarn add react-polyfill
+ 3052  yarn start
+ 3053  yarn add history
+ 3054  yarn start
+ 3055  yarn add react-router-dom
+ 3056  yarn start
+ 3057  yarn build
+ 3058  pwd
+ 3059  php --server
+ 3060  php -S localhost:8000
+ 3061  ls
+ 3062  cd build
+ 3063  ls
+ 3064  php -S localhost:8000
+ 3065  pwd
+ 3066  cd react-ps
+ 3067  cd ps-react
+ 3068  ls
+ 3069  yarn start
+ 3070  yarn add react-redux
+ 3071  yarn start
+ 3072  yarn add redux
+ 3073  yarn start
+ 3074  yarn add redux-immutable-state-varient
+ 3075  yarn add redux-immutable-state-invarient
+ 3076  yarn add redux-immutable-state-invariant
+ 3077  yarn start
+ 3078  pwd
+ 3079  cd ..
+ 3080  ls
+ 3081  yarn add redux-thunk
+ 3082  yarn start
+ 3083  yarn add @babel-polyfill
+ 3084  yarn add babel-polyfill
+ 3085  yarn start
+ 3086  yarn add react-hot-loader
+ 3087  yarn start
+ 3088  pwd
+ 3089  yarn add toaster
+ 3090  yarn remove toaster
+ 3091  yarn add react-toastify
+ 3092  yarn start
+ 3093  yarn add toastr
+ 3094  yarn remove react-toastify
+ 3095  yarn build
+ 3096  pwd
+ 3097  cd build
+ 3098  ls
+ 3099  cd static
+ 3100  ls
+ 3101  cd ..
+ 3102  ls
+ 3103  pwd
+ 3104  cd ..
+ 3105  yarn build
+ 3106  pwd
+ 3107  php artisan servce --port 8383
+ 3108  pwd
+ 3109  php artisan serve --port 8383
+ 3110  exit
+ 3111  php artisan serve --port 8383
+ 3112  exit
+ 3113  php artisan serve --port 8383
+ 3114  history | grep artisan > artisan.txt
+ 3115  history | grep artisan | grep migrate > artisan-migrate.txt
+ 3116  php artisan migrate:refresh --seed
+ 3117  php artisan migrate:refresh
+ 3118  php artisan migrate:refresh --seed
+ 3119  php artisan migrate:refresh --seed -v
+ 3120  history > history.txt
+ 3121  history | grep artisan > artisan.txt

@@ -1,0 +1,43 @@
+{
+    "name": "symfony/error-handler",
+    "type": "library",
+    "description": "Symfony ErrorHandler Component",
+    "keywords": [],
+    "homepage": "https://symfony.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fabien Potencier",
+            "email": "fabien@symfony.com"
+        },
+        {
+            "name": "Symfony Community",
+            "homepage": "https://symfony.com/contributors"
+        }
+    ],
+    "require": {
+        "php": "^7.2.9",
+        "psr/log": "~1.0"
+    },
+    "require-dev": {
+        "symfony/http-kernel": "^3.4|^4.0|^5.0"
+    },
+    "suggest": {
+        "symfony/error-renderer": "For better error rendering"
+    },
+    "conflict": {
+        "symfony/http-kernel": "<3.4"
+    },
+    "autoload": {
+        "psr-4": { "Symfony\\Component\\ErrorHandler\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    }
+}
