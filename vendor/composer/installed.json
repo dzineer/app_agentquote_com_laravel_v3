@@ -180,69 +180,6 @@
         ]
     },
     {
-        "name": "chumper/zipper",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Chumper/Zipper.git",
-            "reference": "aa42817f3e33c7e6bec6b3cb3b666724e500f1ec"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Chumper/Zipper/zipball/aa42817f3e33c7e6bec6b3cb3b666724e500f1ec",
-            "reference": "aa42817f3e33c7e6bec6b3cb3b666724e500f1ec",
-            "shasum": ""
-        },
-        "require": {
-            "ext-zip": "*",
-            "illuminate/filesystem": "^5.0",
-            "illuminate/support": "^5.0",
-            "php": ">=5.6.0"
-        },
-        "require-dev": {
-            "mockery/mockery": "^0.9.4",
-            "phpunit/phpunit": "^5.7"
-        },
-        "time": "2019-08-08T14:46:40+00:00",
-        "type": "library",
-        "extra": {
-            "laravel": {
-                "providers": [
-                    "Chumper\\Zipper\\ZipperServiceProvider"
-                ],
-                "aliases": {
-                    "Zipper": "Chumper\\Zipper\\Zipper"
-                }
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Chumper\\Zipper\\": "src/Chumper/Zipper"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache2"
-        ],
-        "authors": [
-            {
-                "name": "Nils Plaschke",
-                "email": "github@nilsplaschke.de",
-                "homepage": "http://nilsplaschke.de",
-                "role": "Developer"
-            }
-        ],
-        "description": "This is a little neat helper for the ZipArchive methods with handy functions",
-        "homepage": "http://github.com/Chumper/zipper",
-        "keywords": [
-            "archive",
-            "laravel",
-            "zip"
-        ]
-    },
-    {
         "name": "dekor/php-array-table",
         "version": "dev-master",
         "version_normalized": "9999999-dev",

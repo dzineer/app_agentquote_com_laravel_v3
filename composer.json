@@ -9,7 +9,6 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-zip": "*",
-        "chumper/zipper": "dev-master",
         "dekor/php-array-table": "dev-master",
         "dzineer/custom-modules": "dev-master",
         "dzineer/dz-sms": "dev-master",

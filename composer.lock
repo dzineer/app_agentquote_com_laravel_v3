@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "466acb1f9658ec10c91f5d19d5947a16",
+    "content-hash": "d2c396b59d104904d9dc6f0364be618d",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -60,67 +60,6 @@
                 "validation"
             ],
             "time": "2019-05-28T15:27:37+00:00"
-        },
-        {
-            "name": "chumper/zipper",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Chumper/Zipper.git",
-                "reference": "aa42817f3e33c7e6bec6b3cb3b666724e500f1ec"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Chumper/Zipper/zipball/aa42817f3e33c7e6bec6b3cb3b666724e500f1ec",
-                "reference": "aa42817f3e33c7e6bec6b3cb3b666724e500f1ec",
-                "shasum": ""
-            },
-            "require": {
-                "ext-zip": "*",
-                "illuminate/filesystem": "^5.0",
-                "illuminate/support": "^5.0",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^5.7"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Chumper\\Zipper\\ZipperServiceProvider"
-                    ],
-                    "aliases": {
-                        "Zipper": "Chumper\\Zipper\\Zipper"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Chumper\\Zipper\\": "src/Chumper/Zipper"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Nils Plaschke",
-                    "email": "github@nilsplaschke.de",
-                    "homepage": "http://nilsplaschke.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "This is a little neat helper for the ZipArchive methods with handy functions",
-            "homepage": "http://github.com/Chumper/zipper",
-            "keywords": [
-                "archive",
-                "laravel",
-                "zip"
-            ],
-            "time": "2019-08-08T14:46:40+00:00"
         },
         {
             "name": "dekor/php-array-table",
@@ -7405,7 +7344,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "chumper/zipper": 20,
         "dekor/php-array-table": 20,
         "dzineer/custom-modules": 20,
         "dzineer/dz-sms": 20,
