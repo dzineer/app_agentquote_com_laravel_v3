@@ -177,6 +177,7 @@ class APIController extends Controller {
                             "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
                             "mode" => "debug",
                             "user" => $user,
+                            "subscription" => $subscription, 
                             "ip" => request()->ip(),
                             "ok" => true, 
                             "success" => true,
