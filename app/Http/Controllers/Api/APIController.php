@@ -108,7 +108,8 @@ class APIController extends Controller {
                             "success" => false,
                         ]);
                     } else {
-                        Subscription::addUser($user);
+                        (new Subscription)->addUser($user);
+
                         return response()->json([
                             "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
                             "mode" => "debug",
@@ -116,6 +117,7 @@ class APIController extends Controller {
                             "ok" => true, 
                             "success" => true,
                         ]);
+
                     }
                 }
 
