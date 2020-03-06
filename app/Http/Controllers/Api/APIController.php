@@ -74,7 +74,7 @@ class APIController extends Controller {
             ]);
         }
 
-        Log::debug( print_r([
+        Log::info( print_r([
             "data" => request()->all(),
         ], true) );
 
