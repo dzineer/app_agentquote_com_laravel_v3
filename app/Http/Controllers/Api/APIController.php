@@ -79,6 +79,10 @@ class APIController extends Controller {
             "data" => request()->all(),
         ]) );
 
+        Log::info(json_encode([
+            "data" => request()->all(),
+        ]));
+
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
