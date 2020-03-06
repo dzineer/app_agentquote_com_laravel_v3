@@ -65,6 +65,16 @@ class APIController extends Controller {
 	public function assignUserProduct(Request $request) {
         
         if (!$this->isAllowed()) {
+
+            Log::info( json_encode([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,                 
+                "success" => false,
+            ]) );
+
             return response()->json([
                 "message" => "Invalid IP Address",
                 "data" => request()->all(),
