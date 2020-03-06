@@ -75,9 +75,9 @@ class APIController extends Controller {
             ]);
         }
 
-        AQLog::info( print_r([
+        AQLog::info( json_encode([
             "data" => request()->all(),
-        ], true) );
+        ]) );
 
         $data = $this->validate($request, [
             'token' => 'required|max:32',
@@ -96,9 +96,9 @@ class APIController extends Controller {
 
         if($request->has('whmcs_product_name') && $request->has('whmcs_userid') && $request->has('whmcs_email') ) {
 
-            AQLog::info( print_r([
+            AQLog::info( json_encode([
                 "message" => "Inside request->has",
-            ], true) );
+            ]) );
 
             $email = $request->input('whmcs_email');
             $whmcs = $request->input('whmcs_userid');
@@ -108,18 +108,18 @@ class APIController extends Controller {
             
             if ($user) {
 
-                AQLog::info( print_r([
+                AQLog::info( json_encode([
                     "message" => "Got User",
                     "data" => $user
-                ], true) );
+                ]) );
 
                 $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
                 if ($whmcsLocalProduct) {
 
-                    AQLog::info( print_r([
+                    AQLog::info( json_encode([
                         "message" => "Got WHMCS Product",
                         "data" => $whmcsLocalProduct
-                    ], true) );
+                    ]) );
 
                     $productId = $whmcsLocalProduct->local_product_id;
                     $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $whmcsLocalProduct->id])->first();
@@ -141,18 +141,18 @@ class APIController extends Controller {
                             "product_id" => $productId
                         ]);
 
-                        AQLog::info( print_r([
+                        AQLog::info( json_encode([
                             "message" => "Adding user to subscription",
                             "data" => $subscription 
-                        ], true) );
+                        ]) );
 
-                        AQLog::info( print_r([
+                        AQLog::info( json_encode([
                             "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
                             "mode" => "debug",
                             "ip" => request()->ip(),
                             "ok" => true, 
                             "success" => true,
-                        ], true) );
+                        ]) );
 
                         return response()->json([
                             "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
@@ -171,6 +171,12 @@ class APIController extends Controller {
                     "data" => request()->all(),
                     "success" => false,
                 ]);
+
+                AQLog::info( json_encode([
+                    "message" => "Invalid user",
+                    "data" => request()->all(),
+                    "success" => false,
+                ]) );
             }
         }
 
