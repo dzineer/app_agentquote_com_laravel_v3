@@ -139,7 +139,7 @@ class APIController extends Controller {
                     ]) );
 
                     $productId = $whmcsLocalProduct->local_product_id;
-                    $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $whmcsLocalProduct->id])->first();
+                    $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
                     if ($userSubscription) {
 
                         AQLog::info( print_r([
@@ -150,6 +150,7 @@ class APIController extends Controller {
                         return response()->json([
                             "message" => "User already has product",
                             "data" => request()->all(),
+                            "userSubscription" => $userSubscription,
                             "success" => false,
                         ]);
                     } else {
