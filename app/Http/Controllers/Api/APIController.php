@@ -25,6 +25,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use App\Facades\AQLog;
 use App\Subscriptions\SubscriptionsDispatcher;
 
 error_reporting(E_ALL);
@@ -74,7 +75,7 @@ class APIController extends Controller {
             ]);
         }
 
-        Log::info( print_r([
+        AQLog::info( print_r([
             "data" => request()->all(),
         ], true) );
 
@@ -95,6 +96,10 @@ class APIController extends Controller {
 
         if($request->has('whmcs_product_name') && $request->has('whmcs_userid') && $request->has('whmcs_email') ) {
 
+            AQLog::info( print_r([
+                "message" => "Inside request->has",
+            ], true) );
+
             $email = $request->input('whmcs_email');
             $whmcs = $request->input('whmcs_userid');
             $whmcsProductName = $request->input('whmcs_product_name');
@@ -103,18 +108,51 @@ class APIController extends Controller {
             
             if ($user) {
 
+                AQLog::info( print_r([
+                    "message" => "Got User",
+                    "data" => $user
+                ], true) );
+
                 $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
                 if ($whmcsLocalProduct) {
+
+                    AQLog::info( print_r([
+                        "message" => "Got WHMCS Product",
+                        "data" => $whmcsLocalProduct
+                    ], true) );
+
                     $productId = $whmcsLocalProduct->local_product_id;
                     $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $whmcsLocalProduct->id])->first();
                     if ($userSubscription) {
+
+                        AQLog::info( print_r([
+                            "message" => "User already has subscription",
+                            "data" => $userSubscription
+                        ], true) );
+
                         return response()->json([
                             "message" => "User already has product",
                             "data" => request()->all(),
                             "success" => false,
                         ]);
                     } else {
-                        (new Subscription)->addUser($user);
+                        $subscription = Subscription::create([
+                            "user_id" => $user->id,
+                            "product_id" => $productId
+                        ]);
+
+                        AQLog::info( print_r([
+                            "message" => "Adding user to subscription",
+                            "data" => $subscription 
+                        ], true) );
+
+                        AQLog::info( print_r([
+                            "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
+                            "mode" => "debug",
+                            "ip" => request()->ip(),
+                            "ok" => true, 
+                            "success" => true,
+                        ], true) );
 
                         return response()->json([
                             "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
