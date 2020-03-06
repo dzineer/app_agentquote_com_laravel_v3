@@ -150,6 +150,7 @@ class APIController extends Controller {
                         return response()->json([
                             "message" => "User already has product",
                             "data" => request()->all(),
+                            "user" => $user,
                             "userSubscription" => $userSubscription,
                             "success" => false,
                         ]);
@@ -175,6 +176,7 @@ class APIController extends Controller {
                         return response()->json([
                             "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
                             "mode" => "debug",
+                            "user" => $user,
                             "ip" => request()->ip(),
                             "ok" => true, 
                             "success" => true,
