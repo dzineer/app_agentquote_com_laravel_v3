@@ -18,6 +18,7 @@ use App\Models\Profile;
 use App\Models\RoleUser;
 use App\Models\WhmcsProduct;
 use App\Models\Subscription;
+use App\Models\LandingPageUser;
 use App\Models\SubscriptionUser;
 use App\Subscriptions\SubscriptionFields;
 use App\User;
@@ -158,6 +159,10 @@ class APIController extends Controller {
                         $subscription = Subscription::create([
                             "user_id" => $user->id,
                             "product_id" => $productId
+                        ]);
+
+                        LandingPageUser::create([
+                            "user_id" => $user->id
                         ]);
 
                         AQLog::info( json_encode([
