@@ -74,6 +74,10 @@ class APIController extends Controller {
             ]);
         }
 
+        Log::debug( print_r([
+            "data" => request()->all(),
+        ], true) );
+
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
@@ -90,11 +94,13 @@ class APIController extends Controller {
         }
 
         if($request->has('whmcs_product_name') && $request->has('whmcs_userid') && $request->has('whmcs_email') ) {
+
             $email = $request->input('whmcs_email');
             $whmcs = $request->input('whmcs_userid');
             $whmcsProductName = $request->input('whmcs_product_name');
             
             $user = User::where(['email' => $email])->first();
+            
             if ($user) {
 
                 $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
