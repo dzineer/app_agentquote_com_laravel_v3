@@ -64,6 +64,8 @@ class APIController extends Controller {
     }
 	public function assignUserProduct(Request $request) {
         
+        return "hey";
+
         if (!$this->isAllowed()) {
 
             Log::info( json_encode([
