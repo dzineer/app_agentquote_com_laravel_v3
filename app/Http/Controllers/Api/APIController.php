@@ -164,7 +164,9 @@ class APIController extends Controller {
                             "product_id" => $productId
                         ]);
 
-                        $product->class::create([
+                        $class = 'App\\Models\\'.$product->class;
+
+                        $class::create([
                             "user_id" => $user->id
                         ]);
 
@@ -315,8 +317,10 @@ class APIController extends Controller {
                             "user_id" => $user->id,
                             "product_id" => $productId
                         ])->delete();
+                        
+                        $class = 'App\\Models\\'.$product->class;
 
-                        $product->class::where([
+                        $class::where([
                             "user_id" => $user->id
                         ])->delete();
                          
