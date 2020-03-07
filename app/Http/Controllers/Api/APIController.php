@@ -143,7 +143,6 @@ class APIController extends Controller {
 
                     $productId = $whmcsLocalProduct->local_product_id;
                     $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
-                    $product = Product::where(["id" => $productId])->first();
                     if ($userSubscription) {
 
                         AQLog::info( print_r([
@@ -164,7 +163,7 @@ class APIController extends Controller {
                             "product_id" => $productId
                         ]);
 
-                        $class = 'App\\Models\\'.$product->class;
+                        $class = 'App\\Models\\'.$whmcsLocalProduct->class;
 
                         $class::create([
                             "user_id" => $user->id
@@ -304,7 +303,6 @@ class APIController extends Controller {
  
                      $productId = $whmcsLocalProduct->local_product_id;
                      $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
-                     $product = Product::where(["id" => $productId])->first();
 
                      if ($userSubscription) {
  
@@ -318,7 +316,7 @@ class APIController extends Controller {
                             "product_id" => $productId
                         ])->delete();
                         
-                        $class = 'App\\Models\\'.$product->class;
+                        $class = 'App\\Models\\'.$whmcsLocalProduct->class;
 
                         $class::where([
                             "user_id" => $user->id
