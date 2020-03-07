@@ -306,14 +306,14 @@ class APIController extends Controller {
                              "data" => $userSubscription
                          ], true) );
  
-                         Subscription::delete([
+                         Subscription::where([
                             "user_id" => $user->id,
                             "product_id" => $productId
-                        ]);
+                        ])->delete();
 
-                        LandingPageUser::delete([
+                        LandingPageUser::where([
                             "user_id" => $user->id
-                        ]);
+                        ])->delete();
                          
                      } else {
                         AQLog::info( print_r([
