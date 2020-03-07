@@ -143,7 +143,7 @@ class APIController extends Controller {
 
                     $productId = $whmcsLocalProduct->local_product_id;
                     $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
-                    $product = Product::where(["product_id" => $productId])->first();
+                    $product = Product::where(["id" => $productId])->first();
                     if ($userSubscription) {
 
                         AQLog::info( print_r([
@@ -302,7 +302,7 @@ class APIController extends Controller {
  
                      $productId = $whmcsLocalProduct->local_product_id;
                      $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
-                     $product = Product::where(["product_id" => $productId])->first();
+                     $product = Product::where(["id" => $productId])->first();
 
                      if ($userSubscription) {
  
