@@ -223,48 +223,143 @@ class APIController extends Controller {
     }
 
 	public function removeUserProduct(Request $request) {
-
-        if (!$this->isAllowed()) {
-            return response()->json([
-                "message" => "Invalid IP Address",
-                "data" => request()->all(),
-                "mode" => "debug",
-                "ip" => request()->ip(),
-                "ok" => false,                 
-                "success" => false,
-            ]);
-        }        
         
-        $data = $this->validate($request, [
-            'token' => 'required|max:32',
-            'username' => 'required:max:32',
-            'product_id' => 'required:max:32',
-            'user_id' => 'required:max:32',
-        ]);
+        // return "hey";
+ 
+         if (!$this->isAllowed()) {
+ 
+             Log::info( json_encode([
+                 "message" => "Invalid IP Address",
+                 "data" => request()->all(),
+                 "mode" => "debug",
+                 "ip" => request()->ip(),
+                 "ok" => false,                 
+                 "success" => false,
+             ]) );
+ 
+             return response()->json([
+                 "message" => "Invalid IP Address",
+                 "data" => request()->all(),
+                 "mode" => "debug",
+                 "ip" => request()->ip(),
+                 "ok" => false,                 
+                 "success" => false,
+             ]);
+         }
+ 
+         AQLog::info( json_encode([
+             "data" => request()->all(),
+         ]) );
+ 
+         Log::info(json_encode([
+             "data" => request()->all(),
+         ]));
+ 
+         $data = $this->validate($request, [
+             'token' => 'required|max:32',
+             'username' => 'required:max:32',
+         //    'product_id' => 'required:max:32',
+         //    'user_id' => 'required:max:32',
+         ]);
+ 
+         if ($data['token'] !== 'BD9AFD1F5B993E63FE2DAEE58E66C' && $data['username'] !== 'quotedirect_api') {
+             return response()->json([
+                 "message" => "Invalid Request",
+                 "data" => request()->all(),
+                 "success" => false,
+             ]);
+         }
+ 
+         if($request->has('whmcs_product_name') && $request->has('whmcs_userid') && $request->has('whmcs_email') ) {
+ 
+             AQLog::info( json_encode([
+                 "message" => "Inside request->has",
+             ]) );
+ 
+             $email = $request->input('whmcs_email');
+             $whmcs = $request->input('whmcs_userid');
+             $whmcsProductName = $request->input('whmcs_product_name');
+             
+             $user = User::where(['email' => $email])->first();
+             
+             if ($user) {
+ 
+                 AQLog::info( json_encode([
+                     "message" => "Got User",
+                     "data" => $user
+                 ]) );
+ 
+                 $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
+                 if ($whmcsLocalProduct) {
+ 
+                     AQLog::info( json_encode([
+                         "message" => "Got WHMCS Product",
+                         "data" => $whmcsLocalProduct
+                     ]) );
+ 
+                     $productId = $whmcsLocalProduct->local_product_id;
+                     $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
+                     if ($userSubscription) {
+ 
+                         AQLog::info( print_r([
+                             "message" => "User has subscription",
+                             "data" => $userSubscription
+                         ], true) );
+ 
+                         Subscription::delete([
+                            "user_id" => $user->id,
+                            "product_id" => $productId
+                        ]);
 
-        if ($data['token'] !== 'BD9AFD1F5B993E63FE2DAEE58E66C' && $data['username'] !== 'quotedirect_api') {
-            return response()->json([
-                "message" => "Invalid Request",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
+                        LandingPageUser::delete([
+                            "user_id" => $user->id
+                        ]);
+                         
+                     } else {
+                        AQLog::info( print_r([
+                            "message" => "User does not have product",
+                        ], true) );
 
-        $message = "Removing product xyz from ppegram.";
-
-        return response()->json([
-            "message" => $message,
-            "data" => request()->all(),
-            "token" => $data['token'],
-            "username" => $data['username'],
-           // "user_id" => $data['user_id'],
-           // "product_id" => $data['product_id'], 
-            "ip" => request()->ip(),
-            "mode" => "debug",
-            "ok" => true,      
-            "success" => true,
-        ]);
-    }
+                        return response()->json([
+                            "message" => "User does not have product",
+                            "data" => request()->all(),
+                            "user" => $user,
+                            "success" => false,
+                        ]);
+ 
+                     }
+                 }
+ 
+             } else {
+                 return response()->json([
+                     "message" => "Invalid user",
+                     "data" => request()->all(),
+                     "success" => false,
+                 ]);
+ 
+                 AQLog::info( json_encode([
+                     "message" => "Invalid user",
+                     "data" => request()->all(),
+                     "success" => false,
+                 ]) );
+             }
+         }
+ 
+         $message = "Removing product xyz from user ppegram.";
+ 
+         return response()->json([
+             "message" => $message,
+             "data" => request()->all(),
+             "token" => $data['token'],
+             "username" => $data['username'],
+            // "user_id" => $data['user_id'],
+            // "product_id" => $data['product_id'],           
+             "mode" => "debug",
+             "ip" => request()->ip(),
+             "ok" => true, 
+             "success" => true,
+         ]);
+     }
 
     /**
      * @return mixed
