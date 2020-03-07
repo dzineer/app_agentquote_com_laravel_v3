@@ -14,6 +14,7 @@ class WhmcsProduct extends Model
     protected $fillable = [
 		'id' ,
 		'name' ,
+		'class',
 		'active'
 	];
 }
