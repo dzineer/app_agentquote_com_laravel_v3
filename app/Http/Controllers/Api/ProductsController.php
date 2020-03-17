@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Api;
 use App\Helpers\AddresHelper;
 use App\Libraries\ProductConfig;
 use App\Libraries\ZohoProxyUpdate;
+use App\Models\Affiliate;
 use App\Models\InvoiceItemUser;
 use App\Models\PlanSubscription;
 use App\Models\InvoiceUser;
@@ -35,6 +36,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 class ProductsController extends Controller {
+
+    const DEFAULT_AFFILIATE_ID = 1;
+    const DEFAULT_USER_TYPE = 5;
 
     private function isAllowed() {
         return true;
@@ -102,7 +106,7 @@ class ProductsController extends Controller {
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
-        //    'product_id' => 'required:max:32',
+            'whmcs_product_name' => 'required:max:128',
         //    'user_id' => 'required:max:32',
         ]);
 
@@ -137,12 +141,34 @@ class ProductsController extends Controller {
                     $name = $request->input('whmcs_name');
                 }
 
-                $this->newUser([
+                // Agent Quote Inc Affiliate Default
+                $affiliate_id = self::DEFAULT_AFFILIATE_ID;
+
+                // Basic User
+                $user_type_id = self::DEFAULT_USER_TYPE;
+
+                if ($request->has('whmcs_affiliate')) {
+                    $affiliate = Affiliate::where(["name" => $request->input('whmcs_affiliate')])->first();
+
+                    if($affiliate) {
+                        $affiliate_id = $affiliate_id->id;
+                    }
+                }
+
+                $user = User::create([
+                    // password should already be hashed
                     'password' => $request->input('whmcs_password'),
                     'email' =>  $request->input('whmcs_email'),
                     'fname' => $request->input('whmcs_firstname'),
-                    'lname' => $request->has('whmcs_lastname'),
-                    'name' => $name
+                    'lname' => $request->input('whmcs_lastname'),
+                    'name' => $name,
+                    'affiliate_id' => $affiliate_id,
+                    'type_id' => $user_type_id,
+                ]);
+
+                $roleUser = RoleUser::create([
+                    'role_id' => $user_type_id,
+                    'user_id' => $user->id
                 ]);
 
 
@@ -152,13 +178,18 @@ class ProductsController extends Controller {
                     $company = $request->input('whmcs_firstname') . ' ' . $request->has('whmcs_lastname');
                 }
 
+                $givenState = AddresHelper::getCorrectState($request->input('whmcs_state_abbrev'));
+
+
                 $profileUser = Profile::create([
                     'user_id' => $user->id,
                     'contact_email' => $user->email,
                     'company' => $company,
                     'contact_addr1' => $request->input('whmcs_street'),
                     'contact_city' => $request->input('whmcs_city'),
-                    'contact_state' => $request->input('whmcs_state_abbrev')
+                    'contact_state' => $givenState,
+                    'contact_zip' => $request->input('whmcs_zip'),
+
                 ]);
 
 
