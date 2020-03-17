@@ -260,7 +260,7 @@ class ProductsController extends Controller {
                     ]) );
 
                     AQLog::info( json_encode([
-                        "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
+                        "message" => "Product " . $whmcsLocalProduct->name . " added to " . $user->email . " user.",
                         "mode" => "debug",
                         "ip" => request()->ip(),
                         "ok" => true,
@@ -268,7 +268,7 @@ class ProductsController extends Controller {
                     ]) );
 
                     return response()->json([
-                        "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
+                        "message" => "Product " . $whmcsLocalProduct->name . " added to " . $user->email . " user.",
                         "mode" => "debug",
                         "user" => $user,
                         "subscription" => $subscription,
