@@ -178,10 +178,10 @@ class ProductsController extends Controller {
 
                     $affiliate = Affiliate::where(["name" => $request->input('whmcs_affiliate')])->first();
 
-                    AQLog::info( print_r([
+/*                    AQLog::info( print_r([
                         "message" => "Affiliate",
                         "data" => $affiliate
-                    ], true) );
+                    ], true) );*/
 
                     if($affiliate) {
 
