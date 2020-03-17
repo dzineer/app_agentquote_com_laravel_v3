@@ -12,6 +12,8 @@ use App\Helpers\AddresHelper;
 use App\Libraries\ProductConfig;
 use App\Libraries\ZohoProxyUpdate;
 use App\Models\Affiliate;
+use App\Models\AffiliateGroup;
+use App\Models\AffiliateGroupUser;
 use App\Models\InvoiceItemUser;
 use App\Models\PlanSubscription;
 use App\Models\InvoiceUser;
@@ -27,6 +29,7 @@ use App\Subscriptions\SubscriptionFields;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use App\Facades\AQLog;
@@ -127,6 +130,8 @@ class ProductsController extends Controller {
             "data" => $request->all()
         ]) );
 
+        $affiliateGroup = null;
+        $affiliateGroupUser = null;
 
         if($request->has('whmcs_product_name') && $request->has('whmcs_email') ) {
 
@@ -191,6 +196,14 @@ class ProductsController extends Controller {
                             "message" => "Affiliate Found",
                         ], true) );
 
+                        $affiliateGroup = AffiliateGroup::where( ["affiliate_id" => $affiliate_id] )->first();
+
+                        if ($affiliateGroup) {
+                            $affiliateGroupUser = AffiliateGroupUser::where( ["user_id" => $affiliate->user_id ] )->first();
+                        }
+
+
+
                     }
                 }
 
@@ -206,54 +219,79 @@ class ProductsController extends Controller {
                     'type_id' => $user_type_id,
                 ], true) );
 
-                $user = User::create([
-                    // password should already be hashed
-                    'password' => $request->input('whmcs_password'),
-                    'email' =>  $request->input('whmcs_email'),
-                    'fname' => $request->input('whmcs_firstname'),
-                    'lname' => $request->input('whmcs_lastname'),
-                    'name' => $name,
-                    'affiliate_id' => $affiliate_id,
-                    'type_id' => $user_type_id,
-                ]);
+                try {
 
-                AQLog::info( print_r([
-                    // password should already be hashed
-                    'message' => "New User",
-                    'user' =>  $user
-                ], true) );
+                    DB::beginTransaction();
 
-                $roleUser = RoleUser::create([
-                    'role_id' => $user_type_id,
-                    'user_id' => $user->id
-                ]);
-
-                AQLog::info( print_r([
-                    // password should already be hashed
-                    'message' => "Role assigned to user",
-                    'user' =>  $roleUser
-                ], true) );
+                    $user = User::create([
+                        // password should already be hashed
+                        'password' => $request->input('whmcs_password'),
+                        'email' => $request->input('whmcs_email'),
+                        'fname' => $request->input('whmcs_firstname'),
+                        'lname' => $request->input('whmcs_lastname'),
+                        'name' => $name,
+                        'affiliate_id' => $affiliate_id,
+                        'type_id' => $user_type_id,
+                    ]);
 
 
-                if ($request->has('whmcs_company')) {
-                    $company = $request->input('whmcs_company');
-                } else {
-                    $company = $request->input('whmcs_firstname') . ' ' . $request->input('whmcs_lastname');
+                    AffiliateGroupUser::create([
+                        'affiliate_id' => $affiliate_id,
+                        'group_id' => $affiliateGroupUser->group_id,
+                        'user_id' => $user->id
+                    ]);
+
+                    AQLog::info(print_r([
+                        // password should already be hashed
+                        'message' => "New User",
+                        'user' => $user
+                    ], true));
+
+                    $roleUser = RoleUser::create([
+                        'role_id' => $user_type_id,
+                        'user_id' => $user->id
+                    ]);
+
+                    AQLog::info(print_r([
+                        // password should already be hashed
+                        'message' => "Role assigned to user",
+                        'user' => $roleUser
+                    ], true));
+
+
+                    if ($request->has('whmcs_company')) {
+                        $company = $request->input('whmcs_company');
+                    } else {
+                        $company = $request->input('whmcs_firstname') . ' ' . $request->input('whmcs_lastname');
+                    }
+
+                    $givenState = AddresHelper::getCorrectState($request->input('whmcs_state_abbrev'));
+
+
+                    $profileUser = Profile::create([
+                        'user_id' => $user->id,
+                        'contact_email' => $user->email,
+                        'company' => $company,
+                        'contact_addr1' => $request->input('whmcs_street'),
+                        'contact_city' => $request->input('whmcs_city'),
+                        'contact_state' => $givenState,
+                        'contact_zip' => $request->input('whmcs_zip'),
+
+                    ]);
+
+                    DB::commit();
+
                 }
+                catch(\PDOException $e) {
 
-                $givenState = AddresHelper::getCorrectState($request->input('whmcs_state_abbrev'));
+                    AQLog::info(print_r([
+                        // password should already be hashed
+                        'message' => "Transaction Failed",
+                        'user' => $e->getMessage()
+                    ], true));
 
-
-                $profileUser = Profile::create([
-                    'user_id' => $user->id,
-                    'contact_email' => $user->email,
-                    'company' => $company,
-                    'contact_addr1' => $request->input('whmcs_street'),
-                    'contact_city' => $request->input('whmcs_city'),
-                    'contact_state' => $givenState,
-                    'contact_zip' => $request->input('whmcs_zip'),
-
-                ]);
+                    DB::rollBack();
+                }
 
 
                 AQLog::info( print_r([
