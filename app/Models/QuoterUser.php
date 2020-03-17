@@ -15,7 +15,8 @@ class QuoterUser extends Model
 
     protected $fillable = [
         'category_id',
-        'user_id'
+        'user_id',
+        'active'
     ];
 
     protected $with = [

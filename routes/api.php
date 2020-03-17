@@ -94,11 +94,13 @@ Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesController::
 Route::post('/affiliate.disable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'disableWHMCSAffiliate'])->name('api-request.affiliate.disable');
 Route::post('/affiliate.enable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'enableWHMCSAffiliate'])->name('api-request.affiliate.enable');
 
-Route::post('/user.landingPage.get',  [\App\Http\Controllers\Api\LandingPagesController::class, 'getWHMCSLandingPageUser'])->name('api-request.landing-page.get');
-Route::post('/user.landingPage.disable',  [\App\Http\Controllers\Api\LandingPagesController::class, 'disableWHMCSLandingPageUser'])->name('api-request.landing-page.disable');
-Route::post('/user.landingPage.enable',  [\App\Http\Controllers\Api\LandingPagesController::class, 'enableWHMCSLandingPageUser'])->name('api-request.landing-page.enable');
+Route::post('/user.landingPage.get',  [\App\Http\Controllers\Api\LandingPagesController::class, 'getWHMCSLandingPageUser'])->name('api-request.user.landing-page.get');
+Route::post('/user.landingPage.disable',  [\App\Http\Controllers\Api\LandingPagesController::class, 'disableWHMCSLandingPageUser'])->name('api-request.user.landing-page.disable');
+Route::post('/user.landingPage.enable',  [\App\Http\Controllers\Api\LandingPagesController::class, 'enableWHMCSLandingPageUser'])->name('api-request.user.landing-page.enable');
 
-
+Route::post('/user.quoter.get',  [\App\Http\Controllers\Api\QuoterUsersController::class, 'getWHMCSQuoterUser'])->name('api-request.user.quoter.get');
+Route::post('/user.quoter.disable',  [\App\Http\Controllers\Api\QuoterUsersController::class, 'disableWHMCSQuoterUser'])->name('api-request.user.quoter.disable');
+Route::post('/user.quoter.enable',  [\App\Http\Controllers\Api\QuoterUsersController::class, 'enableWHMCSQuoterUser'])->name('api-request.user.quoter.enable');
 
 /*Route::group(
     [
