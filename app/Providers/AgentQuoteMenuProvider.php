@@ -111,11 +111,12 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                     ], true));
 
                                     if ($productToCheck) {
-                                        $productFound = Product::find(intval($productToCheck['id']));
+
+                                        $productFound = Product::where( [ "id" => $productToCheck['id'] ] )->first();
 
                                         AQLog::info(print_r([
                                             'message' => "AgentQuoteMenuProvider::boot - Product found ?",
-                                            'data' => $productFound
+                                            'data' => !!$productFound
                                         ], true));
 
                                         if ($productFound) {
