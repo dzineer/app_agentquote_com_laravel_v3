@@ -125,7 +125,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                             $hasSubscription = Subscription::where([
                                                 'user_id' => $user->id,
                                                 'product_id' => $productFound->id
-                                            ])->exists();
+                                            ])->first();
 
                                             if ($hasSubscription) {
                                                 $event->menu->add($item);
@@ -134,7 +134,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                             AQLog::info(print_r([
                                                 'message' => "AgentQuoteMenuProvider::boot - User have subscription?",
                                                 'data' => $hasSubscription,
-                                                'answer' => $hasSubscription ? 'Yes' : 'No'
+                                                'answer' => !!$hasSubscription ? 'Yes' : 'No'
                                             ], true));
 
                                         }
