@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Facades\AQLog;
 use Dzineer\LaravelAdminLte\Events\BuildingMenu;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\Facades\Auth;
@@ -21,9 +22,16 @@ class AgentQuoteMenuProvider extends ServiceProvider
         //compose all the views....
         view()->composer('*', function ($view) use ($events) {
             if (auth()->check()) {
+
                 $user_type = strtolower(request()->user()->type->name);
+
                 $user = auth()->user();
-                dd($user_type);
+
+                AQLog::info(print_r([
+                    // password should already be hashed
+                    'message' => "User",
+                    'user' => $user
+                ], true));
 
                 $events->listen(BuildingMenu::class, function (BuildingMenu $event) use ($events, $user, $user_type) {
                     $menu_type = 'agentquote.menus.'.$user_type;
@@ -33,6 +41,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
                     $products = Product::all();
                     $productDetails = [];
 
+
                     if ($products) {
                         $productDetails = $products->map(function($product) {
                             return $product->menu_path;
@@ -41,9 +50,36 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                     $products = $products->toArray();
 
+                    AQLog::info(print_r([
+                        'message' => "Products",
+                        'user' => $products
+                    ], true));
+
+                    AQLog::info(print_r([
+                        'message' => "Product Details",
+                        'user' => $productDetails
+                    ], true));
+
+                    AQLog::info(print_r([
+                        'message' => "Menu Items",
+                        'user' => $menu_items
+                    ], true));
+
                     // loop though all items and see if one of the menu items belongs to a product. If so, only show the menu product item if the user is subscribed to it.
                     foreach ($menu_items as $item) {
+
+
+                        AQLog::info(print_r([
+                            'message' => "Menu Item",
+                            'user' => $item
+                        ], true));
+
                         if (is_array($item) && array_key_exists('url', $item) ) {
+
+                            AQLog::info(print_r([
+                                'message' => "Line 80",
+                                'data' => is_array($item) && array_key_exists('url', $item)
+                            ], true));
 
                             if ( array_key_exists('url', $item) && in_array($item['url'], $productDetails) ) {
 
@@ -52,10 +88,28 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                 });
                                 // since we got an array of array of one item, pop array item out of outer array
                                 $productToCheck = array_pop($productToCheck);
+
+                                AQLog::info(print_r([
+                                    'message' => "Product to check",
+                                    'data' => $productToCheck
+                                ], true));
+
                                 if ($productToCheck) {
                                     $productFound = Product::find(intval($productToCheck['id']));
 
+                                    AQLog::info(print_r([
+                                        'message' => "Product found ?",
+                                        'data' => $productFound
+                                    ], true));
+
                                     if ($productFound) {
+
+                                        AQLog::info(print_r([
+                                            'message' => "User have subscription?",
+                                            'data' => $productFound->hasSubscription($user->id),
+                                            'answer' => $productFound->hasSubscription($user->id) ? 'Yes' : 'No'
+                                        ], true));
+
                                         if ($productFound->hasSubscription($user->id)) {
                                             $event->menu->add($item);
                                         }
