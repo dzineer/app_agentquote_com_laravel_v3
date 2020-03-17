@@ -86,6 +86,7 @@ Route::post('/chat.postMessage',  [\App\Http\Controllers\Api\APIController::clas
 Route::post('/user.assignProduct',  [\App\Http\Controllers\Api\APIController::class, 'assignUserProduct'])->name('api-request.user.assign-product');
 Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\APIController::class, 'removeUserProduct'])->name('api-request.user.remove-product');
 
+Route::post('/affiliate.get',  [\App\Http\Controllers\Api\AffiliatesController::class, 'getWHMCSAffiliate'])->name('api-request.affiliate.get');
 Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesController::class, 'storeWHMCSAffiliate'])->name('api-request.affiliate.add');
 Route::post('/affiliate.disable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'disableWHMCSAffiliate'])->name('api-request.affiliate.disable');
 Route::post('/affiliate.enable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'enableWHMCSAffiliate'])->name('api-request.affiliate.enable');

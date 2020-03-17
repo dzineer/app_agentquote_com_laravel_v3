@@ -41,6 +41,55 @@ class AffiliatesController extends Controller
     }
 
 
+    public function getWHMCSAffiliate(Request $request)
+    {
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'email' => 'required'
+        ]);
+
+        // Agent Quote's WHMCS Security
+
+        $whmcsAPI = config('agentquote.whmcs_api');
+
+        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user = User::where([
+            "email" => $data['email']
+        ])->first();
+
+        if( !$user ) {
+            return response()->json([
+                "message" => "Affiliate does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        if ( !$user->is_affiliate() ) {
+            return response()->json([
+                "message" => "User is not an affiliate.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        return response()->json([
+            "message" => "Affiliate received.",
+            "data" => $user,
+            "success" => true,
+        ]);
+
+
+    }
+
     public function disableWHMCSAffiliate(Request $request)
     {
         $data = $this->validate($request, [
