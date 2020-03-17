@@ -128,7 +128,7 @@ class ProductsController extends Controller {
         ]) );
 
 
-        if($request->has('whmcs_product_name') && $request->has('whmcs_userid') && $request->has('whmcs_email') ) {
+        if($request->has('whmcs_product_name') && $request->has('whmcs_email') ) {
 
             AQLog::info( json_encode([
                 "message" => "Inside request->has",
