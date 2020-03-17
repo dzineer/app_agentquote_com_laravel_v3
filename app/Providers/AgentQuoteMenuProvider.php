@@ -29,11 +29,13 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                 AQLog::info(print_r([
                     // password should already be hashed
-                    'message' => "User",
+                    'message' => "AgentQuoteMenuProvider::boot - User",
                     'user' => $user
                 ], true));
 
                 $events->listen(BuildingMenu::class, function (BuildingMenu $event) use ($events, $user, $user_type) {
+
+
                     $menu_type = 'agentquote.menus.'.$user_type;
                     $menu_items = config($menu_type);
                     // dd($menu_items);
@@ -51,17 +53,17 @@ class AgentQuoteMenuProvider extends ServiceProvider
                     $products = $products->toArray();
 
                     AQLog::info(print_r([
-                        'message' => "Products",
+                        'message' => "AgentQuoteMenuProvider::boot - Products",
                         'user' => $products
                     ], true));
 
                     AQLog::info(print_r([
-                        'message' => "Product Details",
+                        'message' => "AgentQuoteMenuProvider::boot - Product Details",
                         'user' => $productDetails
                     ], true));
 
                     AQLog::info(print_r([
-                        'message' => "Menu Items",
+                        'message' => "AgentQuoteMenuProvider::boot - Menu Items",
                         'user' => $menu_items
                     ], true));
 
@@ -70,14 +72,14 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
 
                         AQLog::info(print_r([
-                            'message' => "Menu Item",
+                            'message' => "AgentQuoteMenuProvider::boot - Menu Item",
                             'user' => $item
                         ], true));
 
                         if (is_array($item) && array_key_exists('url', $item) ) {
 
                             AQLog::info(print_r([
-                                'message' => "Line 80",
+                                'message' => "AgentQuoteMenuProvider::boot - Line 80",
                                 'data' => is_array($item) && array_key_exists('url', $item)
                             ], true));
 
@@ -90,7 +92,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                 $productToCheck = array_pop($productToCheck);
 
                                 AQLog::info(print_r([
-                                    'message' => "Product to check",
+                                    'message' => "AgentQuoteMenuProvider::boot - Product to check",
                                     'data' => $productToCheck
                                 ], true));
 
@@ -98,14 +100,14 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                     $productFound = Product::find(intval($productToCheck['id']));
 
                                     AQLog::info(print_r([
-                                        'message' => "Product found ?",
+                                        'message' => "AgentQuoteMenuProvider::boot - Product found ?",
                                         'data' => $productFound
                                     ], true));
 
                                     if ($productFound) {
 
                                         AQLog::info(print_r([
-                                            'message' => "User have subscription?",
+                                            'message' => "AgentQuoteMenuProvider::boot - User have subscription?",
                                             'data' => $productFound->hasSubscription($user->id),
                                             'answer' => $productFound->hasSubscription($user->id) ? 'Yes' : 'No'
                                         ], true));
