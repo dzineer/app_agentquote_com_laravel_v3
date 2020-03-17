@@ -180,7 +180,7 @@ class QuoterUsersController extends Controller
             ]);
         }
 
-        $quoterUser->update( ['active' => 0 ] );
+        $quoterUser->update( ['active' => 1 ] );
 
         return response()->json([
             "message" => "Quoter User enabled.",
