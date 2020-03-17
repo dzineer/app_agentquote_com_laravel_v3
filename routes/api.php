@@ -91,6 +91,8 @@ Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesController::
 Route::post('/affiliate.disable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'disableWHMCSAffiliate'])->name('api-request.affiliate.disable');
 Route::post('/affiliate.enable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'enableWHMCSAffiliate'])->name('api-request.affiliate.enable');
 
+
+
 /*Route::group(
     [
         'middleware' => ['landing-pages.domains']
