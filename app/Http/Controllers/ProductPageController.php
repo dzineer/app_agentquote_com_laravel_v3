@@ -63,6 +63,7 @@ class ProductPageController extends Controller
         }
 
         if ( ! $user ) {
+            echo "405"; exit;
             return abort( 405 );
         }
 
