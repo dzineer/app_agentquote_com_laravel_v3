@@ -23,8 +23,8 @@ class AgentQuoteMenuProvider extends ServiceProvider
             if (auth()->check()) {
                 $user_type = strtolower(request()->user()->type->name);
                 $user = auth()->user();
-                // dd($user_type);
-                
+                dd($user_type);
+
                 $events->listen(BuildingMenu::class, function (BuildingMenu $event) use ($events, $user, $user_type) {
                     $menu_type = 'agentquote.menus.'.$user_type;
                     $menu_items = config($menu_type);
@@ -32,7 +32,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
                     $event->menu->clear();
                     $products = Product::all();
                     $productDetails = [];
-                   
+
                     if ($products) {
                         $productDetails = $products->map(function($product) {
                             return $product->menu_path;
@@ -58,17 +58,17 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                     if ($productFound) {
                                         if ($productFound->hasSubscription($user->id)) {
                                             $event->menu->add($item);
-                                        }                                    
+                                        }
                                     }
                                 }
-                                
+
                             } else {
                                 $event->menu->add($item);
                             }
 
                         }
                     }
-                });    
+                });
             }
         });
     }
