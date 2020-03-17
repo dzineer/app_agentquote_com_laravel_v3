@@ -238,7 +238,7 @@ class ProductsController extends Controller {
                 if ($request->has('whmcs_company')) {
                     $company = $request->input('whmcs_company');
                 } else {
-                    $company = $request->input('whmcs_firstname') . ' ' . $request->has('whmcs_lastname');
+                    $company = $request->input('whmcs_firstname') . ' ' . $request->input('whmcs_lastname');
                 }
 
                 $givenState = AddresHelper::getCorrectState($request->input('whmcs_state_abbrev'));
