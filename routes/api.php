@@ -83,8 +83,10 @@ Route::get('/chat.postMessage', function() {
 });
 
 Route::post('/chat.postMessage',  [\App\Http\Controllers\Api\APIController::class, 'index'])->name('api-request');
-Route::post('/user.assignProduct',  [\App\Http\Controllers\Api\APIController::class, 'assignUserProduct'])->name('api-request.user.assign-product');
-Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\APIController::class, 'removeUserProduct'])->name('api-request.user.remove-product');
+
+Route::post('/user.assignProduct',  [\App\Http\Controllers\Api\ProductsController::class, 'assignUserProduct'])->name('api-request.user.assign-product');
+Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\ProductsController::class, 'removeUserProduct'])->name('api-request.user.remove-product');
+
 Route::post('/user.get',  [\App\Http\Controllers\Api\UsersController::class, 'getWHMCSUser'])->name('api-request.user.get');
 Route::post('/user.disable',  [\App\Http\Controllers\Api\UsersController::class, 'disableWHMCSUser'])->name('api-request.user.disable');
 Route::post('/user.enable',  [\App\Http\Controllers\Api\UsersController::class, 'enableWHMCSUser'])->name('api-request.user.enable');
