@@ -25,7 +25,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
         // view()->composer('*', function ($view) use ($events) {
 
 
-                $events->listen(BuildingMenu::class, function (BuildingMenu $event) use ($events) {
+                $events->listen(BuildingMenu::class, function (BuildingMenu $event) {
 
                     if (auth()->check()) {
 
