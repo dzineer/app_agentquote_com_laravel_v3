@@ -90,7 +90,7 @@ class UsersController extends Controller
 
         if( !$user ) {
             return response()->json([
-                "message" => "Affiliate does not exists.",
+                "message" => "User does not exists.",
                 "data" => request()->all(),
                 "success" => false,
             ]);
@@ -131,7 +131,7 @@ class UsersController extends Controller
 
         if( !$user ) {
             return response()->json([
-                "message" => "Affiliate does not exists.",
+                "message" => "User does not exists.",
                 "data" => request()->all(),
                 "success" => false,
             ]);
@@ -144,7 +144,7 @@ class UsersController extends Controller
 
         return response()->json([
             "message" => "User disabled.",
-            "data" => request()->all(),
+            "data" => $user,
             "success" => true,
         ]);
 
@@ -188,8 +188,8 @@ class UsersController extends Controller
         ]);
 
         return response()->json([
-            "message" => "User disabled.",
-            "data" => request()->all(),
+            "message" => "User enabled.",
+            "data" => $user,
             "success" => true,
         ]);
     }
