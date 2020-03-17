@@ -35,7 +35,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                         $userArr = User::find($user->id)->toArray();
 
-                        AQLog::info(print_r([
+/*                        AQLog::info(print_r([
                             // password should already be hashed
                             'message' => "AgentQuoteMenuProvider::boot - User",
                             'user' => $userArr
@@ -43,7 +43,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                         AQLog::info(print_r([
                             'message' => "AgentQuoteMenuProvider::boot  - events->listen",
-                        ], true));
+                        ], true));*/
 
                         $menu_type = 'agentquote.menus.'.$user_type;
                         $menu_items = config($menu_type);
@@ -61,7 +61,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                         $products = $products->toArray();
 
-                        AQLog::info(print_r([
+/*                        AQLog::info(print_r([
                             'message' => "AgentQuoteMenuProvider::boot - Products",
                             'user' => $products
                         ], true));
@@ -74,20 +74,20 @@ class AgentQuoteMenuProvider extends ServiceProvider
                         AQLog::info(print_r([
                             'message' => "AgentQuoteMenuProvider::boot - Menu Items",
                             'user' => $menu_items
-                        ], true));
+                        ], true));*/
 
                         // loop though all items and see if one of the menu items belongs to a product. If so, only show the menu product item if the user is subscribed to it.
                         foreach ($menu_items as $item) {
 
 
-                            AQLog::info(print_r([
+/*                            AQLog::info(print_r([
                                 'message' => "AgentQuoteMenuProvider::boot - Menu Item",
                                 'user' => $item
-                            ], true));
+                            ], true));*/
 
                             if (is_array($item) && array_key_exists('url', $item) ) {
 
-                                AQLog::info(print_r([
+/*                                AQLog::info(print_r([
                                     'message' => "AgentQuoteMenuProvider::boot - Line 80",
                                     'data' => is_array($item) && array_key_exists('url', $item)
                                 ], true));
@@ -101,7 +101,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                 AQLog::info(print_r([
                                     'message' => "Products",
                                     'data' => $products
-                                ], true));
+                                ], true));*/
 
                                 if ( array_key_exists('url', $item) && in_array($item['url'], $productDetails) ) {
 
@@ -112,10 +112,10 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                         $productFound = Product::where( [ "id" => $product['id'] ] )->first();
 
-                                        AQLog::info(print_r([
+/*                                        AQLog::info(print_r([
                                             'message' => "Product Found",
                                             'data' => $productFound
-                                        ], true));
+                                        ], true));*/
 
                                         if ($productFound) {
                                             $hasSubscription = Subscription::where([
