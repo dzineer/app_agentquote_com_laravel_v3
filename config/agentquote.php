@@ -241,7 +241,6 @@ return [
                     ]
                 ],
 
-/**
                 'PRODUCTS',
                 [
                     'text' => 'Quoter',
@@ -251,7 +250,7 @@ return [
                 [
                     'text' => 'Landing Page',
                     'icon' => 'newspaper-o',
-//                    'url'  => 'landing-page/settings',
+                    'url'  => 'landing-page/settings',
 //                     'submenu' => [
 //                        [
 //                            'text' => 'General',
@@ -264,7 +263,7 @@ return [
 //                            'icon' => 'no-icon'
 //                        ],
 //                    ]
-                ],*/
+                ],
 
         ],
 
