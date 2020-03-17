@@ -56,7 +56,7 @@ class ProductPageController extends Controller
         } else if ( $request->has('domain') ) {
             // get user based on domain name
             $domain =  $request->instance()->query('domain');
-            $user = User::find( $domain['user_id'] )->where(['active' => 1]);;
+            $user = User::find( $domain['user_id'] )->where(['active' => 1]);
            // $customUserModule = CustomModules::getUserModule($moduleName, $user->user_id);
         } else {
             return abort( 405 );
