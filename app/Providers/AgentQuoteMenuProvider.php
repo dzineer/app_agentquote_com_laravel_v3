@@ -98,6 +98,11 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                     'data' => $productDetails
                                 ], true));
 
+                                AQLog::info(print_r([
+                                    'message' => "Products",
+                                    'data' => $products
+                                ], true));
+
                                 if ( array_key_exists('url', $item) && in_array($item['url'], $productDetails) ) {
 
 
