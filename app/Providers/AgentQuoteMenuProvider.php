@@ -103,7 +103,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                      // loop through each product to see which one the user has
 
-                                    $menuItemsToAdd = array_filter($products, function($product) use ($item, $user) {
+                                    $menuItemsToAdd = array_map(function($product) use ($item, $user) {
 
                                         $productFound = Product::where( [ "id" => $product['id'] ] )->first();
 
@@ -119,7 +119,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                         return false;
 
-                                    });
+                                    }, $products);
 
                                     AQLog::info(print_r([
                                         'message' => "Menu Items To Add",
