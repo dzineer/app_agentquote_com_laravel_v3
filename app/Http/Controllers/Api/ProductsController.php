@@ -339,7 +339,7 @@ class ProductsController extends Controller {
              ]);
          }
 
-         if($request->has('whmcs_product_name') && $request->has('whmcs_userid') && $request->has('whmcs_email') ) {
+         if($request->has('whmcs_product_name') && $request->has('whmcs_email') ) {
 
              AQLog::info( json_encode([
                  "message" => "Inside request->has",
@@ -385,6 +385,14 @@ class ProductsController extends Controller {
 
                         $class = 'App\\Models\\'.$whmcsLocalProduct->class;
 
+                         AQLog::info( json_encode([
+                             "message" => "Removing Product " . $whmcsLocalProduct->name . " from " . $user->email . " user.",
+                             "mode" => "debug",
+                             "ip" => request()->ip(),
+                             "ok" => true,
+                             "success" => true,
+                         ]) );
+
                         $class::where([
                             "user_id" => $user->id
                         ])->delete();
@@ -419,20 +427,12 @@ class ProductsController extends Controller {
              }
          }
 
-         $message = "Removing product xyz from user ppegram.";
-
-         return response()->json([
-             "message" => $message,
-             "data" => request()->all(),
-             "token" => $data['token'],
-             "username" => $data['username'],
-            // "user_id" => $data['user_id'],
-            // "product_id" => $data['product_id'],
-             "mode" => "debug",
-             "ip" => request()->ip(),
-             "ok" => true,
-             "success" => true,
-         ]);
+        return response()->json([
+            "message" => "Error",
+            "mode" => "debug",
+            "ip" => request()->ip(),
+            "success" => false
+        ]);
      }
 
     /**
