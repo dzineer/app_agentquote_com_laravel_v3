@@ -241,9 +241,9 @@ return [
                     ]
                 ],
 
+/**
                 'PRODUCTS',
-                'PRODUCTS 2',
-/*                [
+                [
                     'text' => 'Quoter',
                     'url' => 'user/quote',
                     'icon' => 'calculator'
