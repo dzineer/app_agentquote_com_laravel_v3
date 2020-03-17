@@ -184,11 +184,11 @@ class ProductsController extends Controller {
                     ], true) );
 
                     if($affiliate) {
+
                         $affiliate_id = $affiliate_id->id;
 
                         AQLog::info( print_r([
                             "message" => "Affiliate Found",
-                            "data" => $affiliate,
                         ], true) );
 
                     }
