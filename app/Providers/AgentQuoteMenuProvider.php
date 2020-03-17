@@ -121,6 +121,10 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                     });
 
+                                    AQLog::info(print_r([
+                                        'message' => "Menu Items To Add",
+                                        'data' => $menuItemsToAdd
+                                    ], true));
 
                                     if (count($menuItemsToAdd)) {
                                         $event->menu->add(...$menuItemsToAdd);
