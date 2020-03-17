@@ -44,9 +44,19 @@ class LandingPagesController extends Controller
             ]);
         }
 
+        $landingPageUser = LandingPageUser::where([ 'user_id' => $user->id ])->first();
+
+        if( !$landingPageUser ) {
+            return response()->json([
+                "message" => "User does not have a landing page.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
         return response()->json([
-            "message" => "User received.",
-            "data" => $user,
+            "message" => "Landing Page User received.",
+            "data" => $landingPageUser,
             "success" => true,
         ]);
 
@@ -101,7 +111,7 @@ class LandingPagesController extends Controller
         ]);
 
         return response()->json([
-            "message" => "User's landing page disabled.",
+            "message" => "Landing Page User disabled.",
             "data" => $landingPageUser,
             "success" => true,
         ]);
@@ -157,7 +167,7 @@ class LandingPagesController extends Controller
         ]);
 
         return response()->json([
-            "message" => "User's landing page enabled.",
+            "message" => "Landing Page User enabled.",
             "data" => $landingPageUser,
             "success" => true,
         ]);
