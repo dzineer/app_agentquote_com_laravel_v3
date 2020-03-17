@@ -157,7 +157,7 @@ class ProductsController extends Controller {
                     "message" => "User does not exist. Creating...",
                 ], true) );
 
-                $name = $request->input('whmcs_firstname') . ' ' . $request->has('whmcs_lastname');
+                $name = $request->input('whmcs_firstname') . ' ' . $request->input('whmcs_lastname');
 
                 if ($request->has('whmcs_name')) {
                     $name = $request->input('whmcs_name');
