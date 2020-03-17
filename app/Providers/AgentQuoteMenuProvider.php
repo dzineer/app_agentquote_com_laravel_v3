@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Facades\AQLog;
+use App\User;
 use Dzineer\LaravelAdminLte\Events\BuildingMenu;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\Facades\Auth;
@@ -27,10 +28,12 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                 $user = auth()->user();
 
+                $userArr = User::find($user->id)->toArray();
+
                 AQLog::info(print_r([
                     // password should already be hashed
                     'message' => "AgentQuoteMenuProvider::boot - User",
-                    'user' => $user
+                    'user' => $userArr
                 ], true));
 
                 $events->listen(BuildingMenu::class, function (BuildingMenu $event) use ($events, $user, $user_type) {
