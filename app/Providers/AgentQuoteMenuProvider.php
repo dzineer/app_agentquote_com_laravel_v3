@@ -127,7 +127,8 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                     ], true));
 
                                     if (count($menuItemsToAdd)) {
-                                        $event->menu->add(...$menuItemsToAdd);
+                                        foreach($menuItemsToAdd as $menuItem)
+                                        $event->menu->add($menuItem);
                                     }
 
 
