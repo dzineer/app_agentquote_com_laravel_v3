@@ -136,7 +136,11 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                                     'data' => $item,
                                                 ], true));
 
-                                                $event->menu->add($item);
+                                                $event->menu->add([
+                                                    'text' => $item['text'],
+                                                    'icon' => $item['icon'],
+                                                    'url' => $item['url'],
+                                                ]);
                                             }
 
                                             AQLog::info(print_r([
