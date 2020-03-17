@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Facades\AQLog;
+use App\Models\Subscription;
 use App\User;
 use Dzineer\LaravelAdminLte\Events\BuildingMenu;
 use Illuminate\Contracts\Events\Dispatcher;
@@ -121,15 +122,21 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                         if ($productFound) {
 
-                                            AQLog::info(print_r([
-                                                'message' => "AgentQuoteMenuProvider::boot - User have subscription?",
-                                                'data' => $productFound->hasSubscription($user->id),
-                                                'answer' => $productFound->hasSubscription($user->id) ? 'Yes' : 'No'
-                                            ], true));
+                                            $hasSubscription = Subscription::where([
+                                                'user_id' => $user->id,
+                                                'product_id' => $productFound->id
+                                            ])->exists();
 
-                                            if ($productFound->hasSubscription($user->id)) {
+                                            if ($hasSubscription) {
                                                 $event->menu->add($item);
                                             }
+
+                                            AQLog::info(print_r([
+                                                'message' => "AgentQuoteMenuProvider::boot - User have subscription?",
+                                                'data' => $hasSubscription,
+                                                'answer' => $hasSubscription ? 'Yes' : 'No'
+                                            ], true));
+
                                         }
                                     }
 
