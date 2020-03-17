@@ -1,4 +1,61 @@
+# Upgrade to 2.11
+
+## Deprecated `Doctrine\DBAL\Version` class
+
+The usage of the `Doctrine\DBAL\Version` class is deprecated as internal implementation detail. Please refrain from checking the DBAL version at runtime.
+
+## Deprecated `ExpressionBuilder` methods
+
+The usage of the `andX()` and `orX()` methods of the `ExpressionBuilder` class has been deprecated. Use `and()` and `or()` instead.
+
+## Deprecated `CompositeExpression` methods
+
+- The usage of the `add()` and `addMultiple()` methods of the `CompositeExpression` class has been deprecated. Use `with()` instead, which returns a new instance.
+In the future, the `add*()` methods will be removed and the class will be effectively immutable.
+- The usage of the `CompositeExpression` constructor has been deprecated. Use the `and()` / `or()` factory methods.
+
+## Deprecated calling `QueryBuilder` methods with an array argument
+
+Calling the `select()`, `addSelect()`, `groupBy()` and `addGroupBy()` methods with an array argument is deprecated.
+
 # Upgrade to 2.10
+
+## Deprecated `Doctrine\DBAL\Event\ConnectionEventArgs` methods
+
+The usage of the `getDriver()`, `getDatabasePlatform()` and `getSchemaManager()` methods of the `ConnectionEventArgs` class has been deprecated. Obtain the underlying connection via `getConnection()` and call the corresponding methods on the connection instance.
+
+## Deprecated `Doctrine\DBAL\Event\SchemaColumnDefinitionEventArgs` methods
+
+The usage of the `getDatabasePlatform()` method of the `SchemaColumnDefinitionEventArgs` class has been deprecated. Obtain the underlying connection via `getConnection()` and call the corresponding method on the connection instance.
+
+## Deprecated `Doctrine\DBAL\Connection` methods
+
+The usage of the `getHost()`, `getPort()`, `getUsername()` and `getPassword()` methods of the `Connection` class has been deprecated as they leak implementation details.
+
+## Deprecated array of statements in `addSql()` of `SchemaEventArgs`-based classes.
+
+Passing multiple SQL statements as an array to `SchemaAlterTableAddColumnEventArgs::addSql()` and the same method in other `SchemaEventArgs`-based classes is deprecated. Pass each statement as an individual argument instead.
+
+## Deprecated calling `AbstractSchemaManager::tablesExist()` with a string argument.
+
+Instead of passing a string, pass a one-element array.
+
+## Deprecated calling `OracleSchemaManager::createDatabase()` without an argument or by passing NULL.
+
+In order to create a database, always pass the database name.
+
+## Deprecated unused schema manager methods.
+
+The following methods have been deprecated as unused:
+
+- `AbstractSchemaManager::_getPortableFunctionsList()`,
+- `AbstractSchemaManager::_getPortableFunctionDefinition()`,
+- `OracleSchemaManager::_getPortableFunctionDefinition()`,
+- `SqliteSchemaManager::_getPortableTableIndexDefinition()`.
+
+# Deprecations in `Doctrine\DBAL\Driver`
+
+- The usage of NULL to indicate empty `$username` or `$password` when calling `connect()` is deprecated. Use an empty string instead.
 
 ## Deprecated `Doctrine\DBAL\Platforms::_getAlterTableIndexForeignKeySQL()`
 

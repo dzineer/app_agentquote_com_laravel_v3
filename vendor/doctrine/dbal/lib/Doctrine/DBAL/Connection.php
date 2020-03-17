@@ -242,6 +242,8 @@ class Connection implements DriverConnection
     /**
      * Gets the hostname of the currently connected database.
      *
+     * @deprecated
+     *
      * @return string|null
      */
     public function getHost()
@@ -251,6 +253,8 @@ class Connection implements DriverConnection
 
     /**
      * Gets the port of the currently connected database.
+     *
+     * @deprecated
      *
      * @return mixed
      */
@@ -262,6 +266,8 @@ class Connection implements DriverConnection
     /**
      * Gets the username used by this connection.
      *
+     * @deprecated
+     *
      * @return string|null
      */
     public function getUsername()
@@ -271,6 +277,8 @@ class Connection implements DriverConnection
 
     /**
      * Gets the password used by this connection.
+     *
+     * @deprecated
      *
      * @return string|null
      */
@@ -353,6 +361,8 @@ class Connection implements DriverConnection
 
         $this->_conn       = $this->_driver->connect($this->params, $user, $password, $driverOptions);
         $this->isConnected = true;
+
+        $this->transactionNestingLevel = 0;
 
         if ($this->autoCommit === false) {
             $this->beginTransaction();
