@@ -397,6 +397,12 @@ class ProductsController extends Controller {
                             "user_id" => $user->id
                         ])->delete();
 
+                         return response()->json([
+                             "message" => "Removed Product " . $whmcsLocalProduct->name . " from " . $user->email . " user.",
+                             "okay" => true,
+                             "success" => true,
+                         ]);
+
                      } else {
                         AQLog::info( print_r([
                             "message" => "User does not have product",
