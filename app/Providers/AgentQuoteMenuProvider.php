@@ -122,7 +122,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                                 'user_id' => $user->id,
                                                 'product_id' => $productFound->id
                                             ])->first();
-                                            if ($hasSubscription) {
+                                            if ($hasSubscription && $productFound->menu_path === $item['url']) {
                                                 $event->menu->add($item);
                                             }
                                         }
