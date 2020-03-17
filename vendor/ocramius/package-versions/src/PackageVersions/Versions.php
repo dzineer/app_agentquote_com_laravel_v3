@@ -21,8 +21,18 @@ final class Versions
      * @internal
      */
     public const VERSIONS          = array (
+  'barryvdh/laravel-ide-helper' => 'dev-master@1d1484025c254eb95b806937b0fb672019cb225b',
+  'barryvdh/reflection-docblock' => 'dev-master@144140cd39ffa3ac55ae844dfa115895d351e4ef',
   'beberlei/assert' => 'v2.x-dev@124317de301b7c91d5fce34c98bba2c6925bec95',
+  'composer/ca-bundle' => 'dev-master@47fe531de31fca4a1b997f87308e7d7804348f7e',
+  'composer/composer' => 'dev-master@3405781f1576512dbd2c9607e3f2ac57826e9711',
+  'composer/semver' => 'dev-master@39da74948fd424cf0e8321b96f04c2a1b2480a15',
+  'composer/spdx-licenses' => 'dev-master@1f989fe43d4579a28b2c6461f54b24461666a09c',
+  'composer/xdebug-handler' => '1.4.1@1ab9842d69e64fb3a01be6b656501032d1b78cb7',
   'dnoegel/php-xdg-base-dir' => '0.1@265b8593498b997dc2d31e75b89f053b5cc9621a',
+  'doctrine/cache' => 'dev-master@c29471b93a163e79674d1928ec996916f509178c',
+  'doctrine/dbal' => 'dev-master@81922a272dda84c8578996db534dfebc43fcb5e9',
+  'doctrine/event-manager' => 'dev-master@e05ae70c633f3ada0f699b4628a2995b5dec1c26',
   'doctrine/inflector' => '1.3.x-dev@45d9b132b262c1d03835cdeefd42938d881556fa',
   'doctrine/lexer' => 'dev-master@29ed26d6cae6a60a09e245d4273c6146893331d6',
   'dragonmantank/cron-expression' => 'dev-master@c9d0f452bcc19c3f788132f14de2920b958b00f1',
@@ -41,6 +51,7 @@ final class Versions
   'intervention/image' => '2.5.0@39eaef720d082ecc54c64bf54541c55f10db546d',
   'jakub-onderka/php-console-color' => 'v0.2@d5deaecff52a0d61ccb613bb3804088da0307191',
   'jakub-onderka/php-console-highlighter' => 'v0.4@9f7a229a69d52506914b4bc61bfdb199d90c5547',
+  'justinrainbow/json-schema' => '5.2.9@44c6787311242a979fa15c704327c20e7221a0e4',
   'laravel-notification-channels/webpush' => '3.0.1@cb285b704ec877f2de74a1da0c381962e6c2e45b',
   'laravel/framework' => '5.8.x-dev@2bd0ef74d6962daea31045cb6f15aecb1fe2d19e',
   'laravel/tinker' => 'dev-master@80f6787d4db0b3eaf62ff17a825c837bc5bc61e1',
@@ -72,6 +83,8 @@ final class Versions
   'psy/psysh' => 'dev-develop@fca347d4a80400997bb3075de4f5380cde5fbd21',
   'ralouphie/getallheaders' => '3.0.3@120b605dfeb996808c31b6477290a714d356e822',
   'ramsey/uuid' => '3.x-dev@4c467ce4d5a72c3cf0832c813d4d84d222c3d4bb',
+  'seld/jsonlint' => '1.7.2@e2e5d290e4d2a4f0eb449f510071392e00e10d19',
+  'seld/phar-utils' => 'dev-master@8800503d56b9867d43d9c303b9cbcc26016e82f0',
   'spomky-labs/aes-key-wrap' => 'v4.0.1@6d302dc2d20cd61fc8bf0e253d628c70724d302a',
   'spomky-labs/base64url' => 'v1.x-dev@a6d123a94f7b9b9dacebd1d8db205d81289fa2ea',
   'spomky-labs/jose' => 'dev-master@258147540e8304ba178db12a94ecef49525da768',
@@ -84,6 +97,7 @@ final class Versions
   'symfony/error-renderer' => 'dev-master@c7ed1680f63d8ab6af3b3d9cecb9c93024a0ee11',
   'symfony/event-dispatcher' => '4.4.x-dev@4bc5679ace049e7c28ef582c4e62ab6febbbfd4c',
   'symfony/event-dispatcher-contracts' => 'dev-master@c43ab685673fb6c8d84220c77897b1d6cdbe1d18',
+  'symfony/filesystem' => 'dev-master@d2b1b822a56565c79608da03240cb537c026eb2e',
   'symfony/finder' => '4.4.x-dev@30898bbac041d71f18862366a7a0987dd5cff7dd',
   'symfony/http-foundation' => '4.4.x-dev@0eebd4379eb075910e0c91864188ad5dd0035e01',
   'symfony/http-kernel' => '4.4.x-dev@1608e1d2c93477a4e9bdac46a3d0fd3199be582e',
@@ -108,9 +122,6 @@ final class Versions
   'zendframework/zend-diactoros' => 'dev-develop@4930fd0646f98cd6be9c0e1963faf4ab5db17a58',
   'ajthinking/tinx' => 'v2.6.0@1521cf0a8035d8192ac317f39e1a09b3222b9cf0',
   'barryvdh/laravel-debugbar' => 'dev-master@4fb3665d24bdcdb403035e81ec1c36cca505f778',
-  'doctrine/cache' => 'dev-master@c29471b93a163e79674d1928ec996916f509178c',
-  'doctrine/dbal' => 'dev-master@81922a272dda84c8578996db534dfebc43fcb5e9',
-  'doctrine/event-manager' => 'dev-master@e05ae70c633f3ada0f699b4628a2995b5dec1c26',
   'doctrine/instantiator' => 'dev-master@7c71fc2932158d00f24f10635bf3b3b8b6ee5b68',
   'filp/whoops' => '2.5.0@cde50e6720a39fdacb240159d3eea6865d51fd96',
   'fzaninotto/faker' => 'dev-master@73192096ed649e2b3d7043a227aa94bd4d8be561',
@@ -146,7 +157,7 @@ final class Versions
   'simplesoftwareio/simple-sms' => 'dev-master@93e7feb7a1f76634b49247bb5849f06a879a3fb4',
   'theseer/tokenizer' => '1.1.3@11336f6f84e16a720dae9d8e6ed5019efa85a0f9',
   'webmozart/assert' => '1.5.0@88e6d84706d09a236046d686bbea96f07b3a34f4',
-  'laravel/laravel' => 'dev-master@1f03d2a144386959afcd6f55824dd41e54e5f494',
+  'laravel/laravel' => 'dev-master@14b84d442cb6b144100046e1fb465d667a8f18c0',
 );
 
     private function __construct()

@@ -25,6 +25,10 @@ return [
 	'modules' => [
 		'subscriptions'
 	],
+    "whmcs_api" => [
+        "token" => "BD9AFD1F5B993E63FE2DAEE58E66C",
+        "username" => "quotedirect_api"
+    ],
 	'store' => [
 		'api' => [
 			'jverify' => 'https://store.agentquote.com/user/jverify'

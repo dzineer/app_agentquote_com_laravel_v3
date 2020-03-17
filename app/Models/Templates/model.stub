@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model as Eloquent;
+
+/**
+ * Class {{CLASS}}
+ *
+ * @package App\Notifications
+ */
+class {{CLASS}} extends Eloquent
+{
+	protected $table = '{{TABLE}}';
+	
+	protected $fillable = [
+	
+	];
+}
+

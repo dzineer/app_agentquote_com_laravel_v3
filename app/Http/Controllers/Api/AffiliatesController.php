@@ -40,6 +40,236 @@ class AffiliatesController extends Controller
         //
     }
 
+
+    public function disableWHMCSAffiliate(Request $request)
+    {
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'email' => 'required'
+        ]);
+
+        // Agent Quote's WHMCS Security
+
+        $whmcsAPI = config('agentquote.whmcs_api');
+
+        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user = User::where([
+            "email" => $data['email']
+        ])->first();
+
+        if( !$user ) {
+            return response()->json([
+                "message" => "Affiliate does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        if ( !$user->is_affiliate() ) {
+            return response()->json([
+                "message" => "User is not an affiliate.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user->affiliate->update([
+            'active' => 0
+        ]);
+
+        $user->update([
+            'active' => 0
+        ]);
+
+        return response()->json([
+            "message" => "Affiliate disabled.",
+            "data" => request()->all(),
+            "success" => true,
+        ]);
+
+
+    }
+
+    public function enableWHMCSAffiliate(Request $request)
+    {
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'email' => 'required'
+        ]);
+
+        // Agent Quote's WHMCS Security
+
+        $whmcsAPI = config('agentquote.whmcs_api');
+
+        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user = User::where([
+            "email" => $data['email']
+        ])->first();
+
+        if( !$user ) {
+            return response()->json([
+                "message" => "Affiliate does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        if ( !$user->is_affiliate() ) {
+            return response()->json([
+                "message" => "User is not an affiliate.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user->affiliate->update([
+            'active' => 1
+        ]);
+
+        $user->update([
+            'active' => 1
+        ]);
+
+        return response()->json([
+            "message" => "Affiliate disabled.",
+            "data" => request()->all(),
+            "success" => true,
+        ]);
+    }
+
+
+    public function storeWHMCSAffiliate(Request $request)
+    {
+
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'name' => 'required',
+            'fname' => 'required',
+            'lname' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'code' => 'required'
+        ]);
+
+        // Agent Quote's WHMCS Security
+
+        $whmcsAPI = config('agentquote.whmcs_api');
+
+        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $newUser = [
+            "type_id" => self::AFFILIATE_USER,
+            "lname" => $data['lname'],
+            "fname" => $data['fname'],
+            "name" => $data['name'],
+            "email" => $data['email'],
+            "password" => Hash::make($data['password'])
+        ];
+
+        $newUser['password'] =  Hash::make($data['password']);
+
+        if( User::where([
+            "email" => $data['email']
+        ])->exists() ) {
+            return response()->json([
+                "message" => "User already exists. Try different email address.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        if( Affiliate::where([
+            "name" => $data['name']
+        ])->exists() ) {
+            return response()->json([
+                "message" => "Affiliate already exists. Try different Company Name.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        if( AffiliateGroup::where([
+            "name" => $data['name']
+        ])->exists() ) {
+            return response()->json([
+                "message" => "Affiliate Group already exists. Try different Company Name.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+
+        $newUser = User::create($newUser);
+
+        $newAffiliate = Affiliate::create([
+            "name" => $data['name']
+        ]);
+
+        $affiliateCoupon = AffiliateCoupon::create([
+            'affiliate_id' => $newAffiliate->id,
+            "coupon" => $data['code'],
+            'billing_coupon_id' => self::MY_MOBILE_LIFE_QUOTER,
+        ]);
+
+        $group = AffiliateGroup::create([
+            'affiliate_id' => $newAffiliate->id,
+            'name' => $data['name'],
+            'description' => $data['name'],
+        ]);
+
+        $affgroupUser = AffiliateGroupUser::create([
+            "affiliate_id" => $newAffiliate->id,
+            "group_id" => $group->id,
+            "user_id" => $newUser->id,
+        ]);
+
+        $affBBillingCoupon = AffiliateBillingCoupon::create([
+            'affiliate_coupon_id' => $affiliateCoupon->id,
+            'billing_coupon_id' => self::MY_MOBILE_LIFE_QUOTER,
+        ]);
+
+        $newUser->affiliate_id = $newAffiliate->id;
+        $newAffiliate->user_id = $newUser->id;
+
+        $newUser->save();
+        $newAffiliate->save();
+
+        $coupons = $this->getAffiliateCoupons();
+
+        return response()->json([
+            "message" => "Affiliate created successfully",
+            "mode" => "debug",
+            "ip" => request()->ip(),
+            "ok" => true,
+            "success" => true,
+        ]);
+
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *

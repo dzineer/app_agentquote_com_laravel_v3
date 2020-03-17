@@ -42,7 +42,7 @@ class APIController extends Controller {
     }
 
 	public function index(Request $request) {
-        
+
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
@@ -62,12 +62,12 @@ class APIController extends Controller {
             "token" => $data['token'],
             "username" => $data['username'],
             "mode" => "debug",
-            "ok" => true, 
+            "ok" => true,
             "success" => true,
         ]);
     }
 	public function assignUserProduct(Request $request) {
-        
+
        // return "hey";
 
         if (!$this->isAllowed()) {
@@ -77,7 +77,7 @@ class APIController extends Controller {
                 "data" => request()->all(),
                 "mode" => "debug",
                 "ip" => request()->ip(),
-                "ok" => false,                 
+                "ok" => false,
                 "success" => false,
             ]) );
 
@@ -86,7 +86,7 @@ class APIController extends Controller {
                 "data" => request()->all(),
                 "mode" => "debug",
                 "ip" => request()->ip(),
-                "ok" => false,                 
+                "ok" => false,
                 "success" => false,
             ]);
         }
@@ -106,7 +106,11 @@ class APIController extends Controller {
         //    'user_id' => 'required:max:32',
         ]);
 
-        if ($data['token'] !== 'BD9AFD1F5B993E63FE2DAEE58E66C' && $data['username'] !== 'quotedirect_api') {
+        // Agent Quote's WHMCS Security
+
+        $whmcsAPI = config('agentquote.whmcs_api');
+
+        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
             return response()->json([
                 "message" => "Invalid Request",
                 "data" => request()->all(),
@@ -123,9 +127,9 @@ class APIController extends Controller {
             $email = $request->input('whmcs_email');
             $whmcs = $request->input('whmcs_userid');
             $whmcsProductName = $request->input('whmcs_product_name');
-            
+
             $user = User::where(['email' => $email])->first();
-            
+
             if ($user) {
 
                 AQLog::info( json_encode([
@@ -171,14 +175,14 @@ class APIController extends Controller {
 
                         AQLog::info( json_encode([
                             "message" => "Adding user to subscription",
-                            "data" => $subscription 
+                            "data" => $subscription
                         ]) );
 
                         AQLog::info( json_encode([
                             "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
                             "mode" => "debug",
                             "ip" => request()->ip(),
-                            "ok" => true, 
+                            "ok" => true,
                             "success" => true,
                         ]) );
 
@@ -186,9 +190,9 @@ class APIController extends Controller {
                             "message" => "Product " . $whmcsLocalProduct . " added to " . $user->email . " user.",
                             "mode" => "debug",
                             "user" => $user,
-                            "subscription" => $subscription, 
+                            "subscription" => $subscription,
                             "ip" => request()->ip(),
-                            "ok" => true, 
+                            "ok" => true,
                             "success" => true,
                         ]);
 
@@ -218,54 +222,54 @@ class APIController extends Controller {
             "token" => $data['token'],
             "username" => $data['username'],
            // "user_id" => $data['user_id'],
-           // "product_id" => $data['product_id'],           
+           // "product_id" => $data['product_id'],
             "mode" => "debug",
             "ip" => request()->ip(),
-            "ok" => true, 
+            "ok" => true,
             "success" => true,
         ]);
     }
 
 	public function removeUserProduct(Request $request) {
-        
+
         // return "hey";
- 
+
          if (!$this->isAllowed()) {
- 
+
              Log::info( json_encode([
                  "message" => "Invalid IP Address",
                  "data" => request()->all(),
                  "mode" => "debug",
                  "ip" => request()->ip(),
-                 "ok" => false,                 
+                 "ok" => false,
                  "success" => false,
              ]) );
- 
+
              return response()->json([
                  "message" => "Invalid IP Address",
                  "data" => request()->all(),
                  "mode" => "debug",
                  "ip" => request()->ip(),
-                 "ok" => false,                 
+                 "ok" => false,
                  "success" => false,
              ]);
          }
- 
+
          AQLog::info( json_encode([
              "data" => request()->all(),
          ]) );
- 
+
          Log::info(json_encode([
              "data" => request()->all(),
          ]));
- 
+
          $data = $this->validate($request, [
              'token' => 'required|max:32',
              'username' => 'required:max:32',
          //    'product_id' => 'required:max:32',
          //    'user_id' => 'required:max:32',
          ]);
- 
+
          if ($data['token'] !== 'BD9AFD1F5B993E63FE2DAEE58E66C' && $data['username'] !== 'quotedirect_api') {
              return response()->json([
                  "message" => "Invalid Request",
@@ -273,55 +277,55 @@ class APIController extends Controller {
                  "success" => false,
              ]);
          }
- 
+
          if($request->has('whmcs_product_name') && $request->has('whmcs_userid') && $request->has('whmcs_email') ) {
- 
+
              AQLog::info( json_encode([
                  "message" => "Inside request->has",
              ]) );
- 
+
              $email = $request->input('whmcs_email');
              $whmcs = $request->input('whmcs_userid');
              $whmcsProductName = $request->input('whmcs_product_name');
-             
+
              $user = User::where(['email' => $email])->first();
-             
+
              if ($user) {
- 
+
                  AQLog::info( json_encode([
                      "message" => "Got User",
                      "data" => $user
                  ]) );
- 
+
                  $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
                  if ($whmcsLocalProduct) {
- 
+
                      AQLog::info( json_encode([
                          "message" => "Got WHMCS Product",
                          "data" => $whmcsLocalProduct
                      ]) );
- 
+
                      $productId = $whmcsLocalProduct->local_product_id;
                      $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
 
                      if ($userSubscription) {
- 
+
                          AQLog::info( print_r([
                              "message" => "User has subscription",
                              "data" => $userSubscription
                          ], true) );
- 
+
                          Subscription::where([
                             "user_id" => $user->id,
                             "product_id" => $productId
                         ])->delete();
-                        
+
                         $class = 'App\\Models\\'.$whmcsLocalProduct->class;
 
                         $class::where([
                             "user_id" => $user->id
                         ])->delete();
-                         
+
                      } else {
                         AQLog::info( print_r([
                             "message" => "User does not have product",
@@ -333,17 +337,17 @@ class APIController extends Controller {
                             "user" => $user,
                             "success" => false,
                         ]);
- 
+
                      }
                  }
- 
+
              } else {
                  return response()->json([
                      "message" => "Invalid user",
                      "data" => request()->all(),
                      "success" => false,
                  ]);
- 
+
                  AQLog::info( json_encode([
                      "message" => "Invalid user",
                      "data" => request()->all(),
@@ -351,19 +355,19 @@ class APIController extends Controller {
                  ]) );
              }
          }
- 
+
          $message = "Removing product xyz from user ppegram.";
- 
+
          return response()->json([
              "message" => $message,
              "data" => request()->all(),
              "token" => $data['token'],
              "username" => $data['username'],
             // "user_id" => $data['user_id'],
-            // "product_id" => $data['product_id'],           
+            // "product_id" => $data['product_id'],
              "mode" => "debug",
              "ip" => request()->ip(),
-             "ok" => true, 
+             "ok" => true,
              "success" => true,
          ]);
      }

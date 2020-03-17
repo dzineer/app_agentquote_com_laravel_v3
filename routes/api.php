@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\APIController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,6 +85,10 @@ Route::get('/chat.postMessage', function() {
 Route::post('/chat.postMessage',  [\App\Http\Controllers\Api\APIController::class, 'index'])->name('api-request');
 Route::post('/user.assignProduct',  [\App\Http\Controllers\Api\APIController::class, 'assignUserProduct'])->name('api-request.user.assign-product');
 Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\APIController::class, 'removeUserProduct'])->name('api-request.user.remove-product');
+
+Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesController::class, 'storeWHMCSAffiliate'])->name('api-request.affiliate.add');
+Route::post('/affiliate.disable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'disableWHMCSAffiliate'])->name('api-request.affiliate.disable');
+Route::post('/affiliate.enable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'enableWHMCSAffiliate'])->name('api-request.affiliate.enable');
 
 /*Route::group(
     [

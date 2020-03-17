@@ -15,6 +15,7 @@ class WhmcsProduct extends Model
 		'id' ,
 		'name' ,
 		'class',
+		'local_product_id',
 		'active'
 	];
 }

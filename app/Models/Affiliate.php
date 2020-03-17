@@ -12,6 +12,7 @@ class Affiliate extends Model
 
     protected $fillable = [
         'name',
+        'active',
     ];
 
 /*	protected $hidden = [
