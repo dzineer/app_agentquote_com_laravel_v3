@@ -133,6 +133,18 @@ class ProductsController extends Controller {
 
             $user = User::where(['email' => $email])->first();
 
+            // make sure we don't add any product for a disabled user
+            if ($user->active === 0) {
+                AQLog::info( print_r([
+                    "message" => "User is not active.",
+                ], true) );
+
+                return response()->json([
+                    "message" => "User is not active.",
+                    "success" => false,
+                ]);
+            }
+
             if (!$user && $request->has('whmcs_password') && $request->has('whmcs_firstname') && $request->has('whmcs_lastname') && $request->has('whmcs_addr1') && $request->has('whmcs_city') && $request->has('whmcs_state_abbrev')) {
 
                 $name = $request->input('whmcs_firstname') . ' ' . $request->has('whmcs_lastname');
@@ -193,20 +205,6 @@ class ProductsController extends Controller {
                 ]);
 
 
-
-            } else {
-
-                return response()->json([
-                    "message" => "Invalid user",
-                    "data" => request()->all(),
-                    "success" => false,
-                ]);
-
-                AQLog::info( json_encode([
-                    "message" => "Invalid user",
-                    "data" => request()->all(),
-                    "success" => false,
-                ]) );
             }
 
             AQLog::info( json_encode([
