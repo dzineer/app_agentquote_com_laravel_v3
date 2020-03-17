@@ -94,6 +94,10 @@ Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesController::
 Route::post('/affiliate.disable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'disableWHMCSAffiliate'])->name('api-request.affiliate.disable');
 Route::post('/affiliate.enable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'enableWHMCSAffiliate'])->name('api-request.affiliate.enable');
 
+Route::post('/user.landingPage.get',  [\App\Http\Controllers\Api\LandingPagesController::class, 'getWHMCSUser'])->name('api-request.landing-page.get');
+Route::post('/user.landingPage.disable',  [\App\Http\Controllers\Api\LandingPagesController::class, 'disableWHMCSUser'])->name('api-request.landing-page.disable');
+Route::post('/user.landingPage.enable',  [\App\Http\Controllers\Api\LandingPagesController::class, 'enableWHMCSUser'])->name('api-request.landing-page.enable');
+
 
 
 /*Route::group(
