@@ -117,8 +117,11 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                         AQLog::info(print_r([
                                             'message' => "AgentQuoteMenuProvider::boot - Product found ?",
-                                            'data' => !!$productFound
+                                            'data' => !!$productFound,
+                                            'check for' => [ "id" => $productToCheck['id'] ]
                                         ], true));
+
+
 
                                         if ($productFound) {
 
