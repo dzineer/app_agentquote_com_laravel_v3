@@ -153,6 +153,10 @@ class ProductsController extends Controller {
 
             if (!$user && $request->has('whmcs_password') && $request->has('whmcs_firstname') && $request->has('whmcs_lastname') && $request->has('whmcs_addr1') && $request->has('whmcs_city') && $request->has('whmcs_state_abbrev')) {
 
+                AQLog::info( print_r([
+                    "message" => "User does not exist. Creating...",
+                ], true) );
+
                 $name = $request->input('whmcs_firstname') . ' ' . $request->has('whmcs_lastname');
 
                 if ($request->has('whmcs_name')) {
@@ -166,12 +170,35 @@ class ProductsController extends Controller {
                 $user_type_id = self::DEFAULT_USER_TYPE;
 
                 if ($request->has('whmcs_affiliate')) {
+
+                    AQLog::info( print_r([
+                        "message" => "Request has affiliate",
+                    ], true) );
+
                     $affiliate = Affiliate::where(["name" => $request->input('whmcs_affiliate')])->first();
 
                     if($affiliate) {
                         $affiliate_id = $affiliate_id->id;
+
+                        AQLog::info( print_r([
+                            "message" => "Found affiliate",
+                            "data" => $affiliate,
+                        ], true) );
+
                     }
                 }
+
+                AQLog::info( print_r([
+                    "message" => "Creating user...",
+                    // password should already be hashed
+                    'password' => $request->input('whmcs_password'),
+                    'email' =>  $request->input('whmcs_email'),
+                    'fname' => $request->input('whmcs_firstname'),
+                    'lname' => $request->input('whmcs_lastname'),
+                    'name' => $name,
+                    'affiliate_id' => $affiliate_id,
+                    'type_id' => $user_type_id,
+                ], true) );
 
                 $user = User::create([
                     // password should already be hashed
@@ -184,10 +211,22 @@ class ProductsController extends Controller {
                     'type_id' => $user_type_id,
                 ]);
 
+                AQLog::info( print_r([
+                    // password should already be hashed
+                    'message' => "New User",
+                    'user' =>  $user
+                ], true) );
+
                 $roleUser = RoleUser::create([
                     'role_id' => $user_type_id,
                     'user_id' => $user->id
                 ]);
+
+                AQLog::info( print_r([
+                    // password should already be hashed
+                    'message' => "Role assigned to user",
+                    'user' =>  $roleUser
+                ], true) );
 
 
                 if ($request->has('whmcs_company')) {
@@ -209,6 +248,13 @@ class ProductsController extends Controller {
                     'contact_zip' => $request->input('whmcs_zip'),
 
                 ]);
+
+
+                AQLog::info( print_r([
+                    // password should already be hashed
+                    'message' => "Profile assigned to user",
+                    'profileUser' =>  $profileUser
+                ], true) );
 
 
             }
