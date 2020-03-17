@@ -173,15 +173,21 @@ class ProductsController extends Controller {
 
                     AQLog::info( print_r([
                         "message" => "Request has affiliate",
+                        "data" => $request->all()
                     ], true) );
 
                     $affiliate = Affiliate::where(["name" => $request->input('whmcs_affiliate')])->first();
+
+                    AQLog::info( print_r([
+                        "message" => "Affiliate",
+                        "data" => $affiliate
+                    ], true) );
 
                     if($affiliate) {
                         $affiliate_id = $affiliate_id->id;
 
                         AQLog::info( print_r([
-                            "message" => "Found affiliate",
+                            "message" => "Affiliate Found",
                             "data" => $affiliate,
                         ], true) );
 
