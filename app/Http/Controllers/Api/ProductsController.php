@@ -198,12 +198,6 @@ class ProductsController extends Controller {
 
                         $affiliateGroup = AffiliateGroup::where( ["affiliate_id" => $affiliate_id] )->first();
 
-                        if ($affiliateGroup) {
-                            $affiliateGroupUser = AffiliateGroupUser::where( ["user_id" => $affiliate->user_id ] )->first();
-                        }
-
-
-
                     }
                 }
 
@@ -237,7 +231,7 @@ class ProductsController extends Controller {
 
                     AffiliateGroupUser::create([
                         'affiliate_id' => $affiliate_id,
-                        'group_id' => $affiliateGroupUser->group_id,
+                        'group_id' => $affiliateGroup->id,
                         'user_id' => $user->id
                     ]);
 
