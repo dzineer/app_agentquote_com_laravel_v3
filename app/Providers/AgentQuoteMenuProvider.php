@@ -100,57 +100,32 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                 if ( array_key_exists('url', $item) && in_array($item['url'], $productDetails) ) {
 
-                                    $productToCheck = array_filter($products, function($product) use ($item) {
-                                        return $product['menu_path'] === $item['url'];
-                                    });
-                                    // since we got an array of array of one item, pop array item out of outer array
-                                    $productToCheck = array_pop($productToCheck);
 
-                                    AQLog::info(print_r([
-                                        'message' => "AgentQuoteMenuProvider::boot - Product to check",
-                                        'data' => $productToCheck
-                                    ], true));
+                                     // loop through each product to see which one the user has
 
-                                    if ($productToCheck) {
+                                    $menuItemsToAdd = array_filter($products, function($product) use ($item, $user) {
 
-                                        $productFound = Product::where( [ "id" => $productToCheck['id'] ] )->first();
-
-                                        AQLog::info(print_r([
-                                            'message' => "AgentQuoteMenuProvider::boot - Product found ?",
-                                            'data' => !!$productFound,
-                                            'check for' => [ "id" => $productToCheck['id'] ]
-                                        ], true));
-
+                                        $productFound = Product::where( [ "id" => $product['id'] ] )->first();
 
                                         if ($productFound) {
-
                                             $hasSubscription = Subscription::where([
                                                 'user_id' => $user->id,
                                                 'product_id' => $productFound->id
                                             ])->first();
-
                                             if ($hasSubscription) {
-
-                                                AQLog::info(print_r([
-                                                    'message' => "AgentQuoteMenuProvider::boot - adding item",
-                                                    'data' => $item,
-                                                ], true));
-
-                                                $event->menu->add([
-                                                    'text' => $item['text'],
-                                                    'icon' => $item['icon'],
-                                                    'url' => $item['url'],
-                                                ]);
+                                                return $item;
                                             }
-
-                                            AQLog::info(print_r([
-                                                'message' => "AgentQuoteMenuProvider::boot - User have subscription?",
-                                                'data' => $hasSubscription,
-                                                'answer' => !!$hasSubscription ? 'Yes' : 'No'
-                                            ], true));
-
                                         }
+
+                                        return false;
+
+                                    });
+
+
+                                    if (count($menuItemsToAdd)) {
+                                        $event->menu->add(...$menuItemsToAdd);
                                     }
+
 
                                 } else {
                                     $event->menu->add($item);

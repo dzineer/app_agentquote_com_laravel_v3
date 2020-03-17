@@ -249,8 +249,8 @@ return [
                 ],
                 [
                     'text' => 'Landing Page',
-                    'icon' => 'newspaper-o',
                     'url'  => 'landing-page/settings',
+                    'icon' => 'newspaper-o',
 //                     'submenu' => [
 //                        [
 //                            'text' => 'General',
