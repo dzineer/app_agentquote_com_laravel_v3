@@ -67,7 +67,7 @@ class QuoterUsersController extends Controller
         }
 
         return response()->json([
-            "message" => "Landing Page User received.",
+            "message" => "Quoter User received.",
             "data" => $quoterUser,
             "success" => true,
         ]);
