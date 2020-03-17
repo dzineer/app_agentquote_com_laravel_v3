@@ -122,7 +122,6 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                         ], true));
 
 
-
                                         if ($productFound) {
 
                                             $hasSubscription = Subscription::where([
@@ -131,6 +130,12 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                             ])->first();
 
                                             if ($hasSubscription) {
+
+                                                AQLog::info(print_r([
+                                                    'message' => "AgentQuoteMenuProvider::boot - adding item",
+                                                    'data' => $item,
+                                                ], true));
+
                                                 $event->menu->add($item);
                                             }
 
