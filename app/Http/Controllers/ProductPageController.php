@@ -59,17 +59,17 @@ class ProductPageController extends Controller
             $user = User::where([ 'id' => $domain['user_id'], 'active' => 1])->first();
            // $customUserModule = CustomModules::getUserModule($moduleName, $user->user_id);
         } else {
-            return abort( 405 );
+            return abort( 405, 'Page Not Found!' );
         }
 
         if ( ! $user ) {
-            return abort( 405 );
+            return abort( 405, 'Page Not Found!' );
         }
 
         $landingPageUserRecord = LandingPageUser::where(['user_id' => $user->id])->first();
 
         if ( ! $landingPageUserRecord->exists()) {
-            return abort( 405 );
+            return abort( 405, 'Page Not Found!' );
         }
 
         $landingPageUser = $landingPageUserRecord->first();
