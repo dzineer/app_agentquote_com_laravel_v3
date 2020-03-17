@@ -177,7 +177,7 @@ class UsersController extends Controller
 
         if( !$user ) {
             return response()->json([
-                "message" => "Affiliate does not exists.",
+                "message" => "User does not exists.",
                 "data" => request()->all(),
                 "success" => false,
             ]);
@@ -204,7 +204,7 @@ class UsersController extends Controller
 
         $super_user = Auth::user();
 
-        $action_reponse = [
+        $action_response = [
             '1' => 'User enabled',
             '0' => 'User disabled'
         ];
@@ -228,7 +228,7 @@ class UsersController extends Controller
                 $user->active = $data['active'];
                 $user->save();
 
-                $user_str = $action_reponse[ $data['active'] ];
+                $user_str = $action_response[ $data['active'] ];
 
                 return response()->json([
                     'success' => true,
