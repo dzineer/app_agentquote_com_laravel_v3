@@ -133,9 +133,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
                             }
                         }
                     }
-                });
-            }
-       // });
+                }); // ./$events->listen
     }
 
     /**
