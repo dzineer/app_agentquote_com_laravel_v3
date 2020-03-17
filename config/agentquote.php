@@ -242,7 +242,7 @@ return [
                 ],
 
                 'PRODUCTS',
-                [
+/*                [
                     'text' => 'Quoter',
                     'url' => 'user/quote',
                     'icon' => 'calculator'
@@ -250,20 +250,20 @@ return [
                 [
                     'text' => 'Landing Page',
                     'icon' => 'newspaper-o',
-                    'url'  => 'landing-page/settings',
-/*                     'submenu' => [
-                        [
-                            'text' => 'General',
-                            'url'  => 'landing-page/settings',
-                            'icon' => 'no-icon',
-                        ],
-                        [
-                            'text' => 'Modules',
-                            'url'  => 'user/modules',
-                            'icon' => 'no-icon'
-                        ],
-                    ] */
-                ],
+//                    'url'  => 'landing-page/settings',
+//                     'submenu' => [
+//                        [
+//                            'text' => 'General',
+//                            'url'  => 'landing-page/settings',
+//                            'icon' => 'no-icon',
+//                        ],
+//                        [
+//                            'text' => 'Modules',
+//                            'url'  => 'user/modules',
+//                            'icon' => 'no-icon'
+//                        ],
+//                    ]
+                ],*/
 
         ],
 
