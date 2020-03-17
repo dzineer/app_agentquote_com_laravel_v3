@@ -103,7 +103,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                      // loop through each product to see which one the user has
 
-                                    $menuItemsToAdd = array_map(function($product) use ($item, $user) {
+                                    foreach($products as $product) {
 
                                         $productFound = Product::where( [ "id" => $product['id'] ] )->first();
 
@@ -113,22 +113,10 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                                 'product_id' => $productFound->id
                                             ])->first();
                                             if ($hasSubscription) {
-                                                return $item;
+                                                $event->menu->add($item);
                                             }
                                         }
 
-                                        return false;
-
-                                    }, $products);
-
-                                    AQLog::info(print_r([
-                                        'message' => "Menu Items To Add",
-                                        'data' => $menuItemsToAdd
-                                    ], true));
-
-                                    if (count($menuItemsToAdd)) {
-                                        foreach($menuItemsToAdd as $menuItem)
-                                        $event->menu->add($menuItem);
                                     }
 
 
