@@ -41,7 +41,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
 
                     AQLog::info(print_r([
-                        'message' => "AgentQuoteMenuProvider::boot - events->listen",
+                        'message' => "AgentQuoteMenuProvider::boot  - events->listen ",
                     ], true));
 
                     $menu_type = 'agentquote.menus.'.$user_type;
