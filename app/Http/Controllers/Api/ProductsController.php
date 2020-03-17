@@ -122,6 +122,12 @@ class ProductsController extends Controller {
             ]);
         }
 
+        AQLog::info( json_encode([
+            "message" => "Request",
+            "data" => $request->all()
+        ]) );
+
+
         if($request->has('whmcs_product_name') && $request->has('whmcs_userid') && $request->has('whmcs_email') ) {
 
             AQLog::info( json_encode([
