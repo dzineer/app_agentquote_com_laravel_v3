@@ -14,25 +14,19 @@ class QuoterUser extends Model
     protected $table = 'quoter_users';
 
     protected $fillable = [
-        'category_id',
         'user_id',
         'active'
     ];
 
-    protected $with = [
-        'category'
-    ];
 
     /**
      * @param \App\User $user
-     * @param int $category_id
      *
      * @return \Illuminate\Database\Eloquent\Model
      */
-    public function subscribe(User $user, $category_id) {
+    public function subscribe(User $user) {
         return $this->create([
-            'user_id' => $user->id,
-            'category_id' => $category_id
+            'user_id' => $user->id
         ]);
     }
 
