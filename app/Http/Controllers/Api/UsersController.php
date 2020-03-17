@@ -64,6 +64,137 @@ class UsersController extends Controller
         //
     }
 
+    public function getWHMCSUser(Request $request)
+    {
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'email' => 'required'
+        ]);
+
+        // Agent Quote's WHMCS Security
+
+        $whmcsAPI = config('agentquote.whmcs_api');
+
+        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user = User::where([
+            "email" => $data['email']
+        ])->first();
+
+        if( !$user ) {
+            return response()->json([
+                "message" => "Affiliate does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        return response()->json([
+            "message" => "User received.",
+            "data" => $user,
+            "success" => true,
+        ]);
+
+
+    }
+
+    public function disableWHMCSUser(Request $request)
+    {
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'email' => 'required'
+        ]);
+
+        // Agent Quote's WHMCS Security
+
+        $whmcsAPI = config('agentquote.whmcs_api');
+
+        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user = User::where([
+            "email" => $data['email']
+        ])->first();
+
+        if( !$user ) {
+            return response()->json([
+                "message" => "Affiliate does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+
+        $user->update([
+            'active' => 0
+        ]);
+
+        return response()->json([
+            "message" => "User disabled.",
+            "data" => request()->all(),
+            "success" => true,
+        ]);
+
+
+    }
+
+    public function enableWHMCSUser(Request $request)
+    {
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'email' => 'required'
+        ]);
+
+        // Agent Quote's WHMCS Security
+
+        $whmcsAPI = config('agentquote.whmcs_api');
+
+        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user = User::where([
+            "email" => $data['email']
+        ])->first();
+
+        if( !$user ) {
+            return response()->json([
+                "message" => "Affiliate does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user->update([
+            'active' => 1
+        ]);
+
+        return response()->json([
+            "message" => "User disabled.",
+            "data" => request()->all(),
+            "success" => true,
+        ]);
+    }
+
+
     public function update(Request $request)
     {
         $actions = [
