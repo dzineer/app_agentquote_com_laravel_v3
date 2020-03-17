@@ -14,10 +14,10 @@ use App\Libraries\VanityHost;
 use App\Libraries\LandingPageDetails;
 
 class ProductPageController extends Controller
-{   
+{
     // public function index( Request $request, $subomain, $customModule ) {
     public function index( Request $request ) {
-        // if is vanity subdomain or custom domain ? 
+        // if is vanity subdomain or custom domain ?
         // yes - has category ?
         // display category product service page
         // no - display default category product service page
@@ -51,12 +51,12 @@ class ProductPageController extends Controller
 
         if ( $request->has('subdomain') ) {
             $domain = $request->instance()->query('subdomain');
-            $user = User::find( $subomain['user_id'] );
+            $user = User::find( $subomain['user_id'] )->where(['active' => 1]);
            // $customUserModule = CustomModules::getUserModule($moduleName, $user->user_id);
         } else if ( $request->has('domain') ) {
             // get user based on domain name
             $domain =  $request->instance()->query('domain');
-            $user = User::find( $domain['user_id'] );
+            $user = User::find( $domain['user_id'] )->where(['active' => 1]);;
            // $customUserModule = CustomModules::getUserModule($moduleName, $user->user_id);
         } else {
             return abort( 405 );
@@ -73,14 +73,14 @@ class ProductPageController extends Controller
         }
 
         $landingPageUser = $landingPageUserRecord->first();
-        
+
         $gaCode = '';
         $gaCodeRecord = UserGoogleAnalytic::where(['user_id' => $user->id])->first();
 
         if ($gaCodeRecord) {
             $gaCode = $gaCodeRecord->data;
-        } 
- 
+        }
+
 /*          dd([
             $domain,
             $user,
@@ -93,7 +93,7 @@ class ProductPageController extends Controller
         } else {
             $template = $requestedRoute['view'];
         }
-        
+
         $landingPageDetails = new LandingPageDetails();
 
         $landingPageDetails->setLandingPageUserCategory( $landingPageUser );
@@ -117,11 +117,11 @@ class ProductPageController extends Controller
 
             case 'sit_module':
                 $product       = 'mortgage-protection';
-                break;   
+                break;
 
             default:
             $product = 'term-life';
-        }    
+        }
 
         return $product;
     }
