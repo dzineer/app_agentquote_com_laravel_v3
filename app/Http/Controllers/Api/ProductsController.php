@@ -276,19 +276,11 @@ class ProductsController extends Controller {
 
         }
 
-        $message = "Assigning ppegram to product xyz.";
-
         return response()->json([
-            "message" => $message,
-            "data" => request()->all(),
-            "token" => $data['token'],
-            "username" => $data['username'],
-           // "user_id" => $data['user_id'],
-           // "product_id" => $data['product_id'],
+            "message" => "Error",
             "mode" => "debug",
             "ip" => request()->ip(),
-            "ok" => true,
-            "success" => true,
+            "success" => false
         ]);
     }
 
@@ -328,7 +320,8 @@ class ProductsController extends Controller {
          $data = $this->validate($request, [
              'token' => 'required|max:32',
              'username' => 'required:max:32',
-         //    'product_id' => 'required:max:32',
+             'whmcs_email' => 'required:max:128',
+             'whmcs_product_name' => 'required:max:128',
          //    'user_id' => 'required:max:32',
          ]);
 
@@ -360,6 +353,7 @@ class ProductsController extends Controller {
                  ]) );
 
                  $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
+
                  if ($whmcsLocalProduct) {
 
                      AQLog::info( json_encode([
@@ -368,6 +362,7 @@ class ProductsController extends Controller {
                      ]) );
 
                      $productId = $whmcsLocalProduct->local_product_id;
+
                      $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
 
                      if ($userSubscription) {
