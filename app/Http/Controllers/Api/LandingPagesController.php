@@ -178,12 +178,14 @@ class LandingPagesController extends Controller
             'active' => self::ACTIVE
         ]);
 
-        Subscription::where(["user_id" => $user->id, "product_id" => 2])
+        $subscription = Subscription::where(["user_id" => $user->id, "product_id" => 2])
             ->orWhere(["user_id" => $user->id, "product_id" => 6])
             ->orWhere(["user_id" => $user->id, "product_id" => 7])
-            ->update([
-                "active" => self::ACTIVE
-            ]);
+            ->first();
+
+        $subscription->update([
+            "active" => self::ACTIVE
+        ]);
 
         return response()->json([
             "message" => "Landing Page User enabled.",
