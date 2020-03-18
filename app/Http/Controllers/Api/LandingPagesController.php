@@ -114,12 +114,14 @@ class LandingPagesController extends Controller
             'active' => self::NOT_ACTIVE
         ]);
 
-        Subscription::where(["user_id" => $user->id, "product_id" => 2])
+        $subscription = Subscription::where(["user_id" => $user->id, "product_id" => 2])
             ->orWhere(["user_id" => $user->id, "product_id" => 6])
             ->orWhere(["user_id" => $user->id, "product_id" => 7])
-            ->update([
-                "active" => self::NOT_ACTIVE
-            ]);
+            ->first();
+
+        $subscription->update([
+            "active" => self::NOT_ACTIVE
+        ]);
 
         return response()->json([
             "message" => "Landing Page User disabled.",
