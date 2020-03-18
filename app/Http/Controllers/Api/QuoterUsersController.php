@@ -126,9 +126,11 @@ class QuoterUsersController extends Controller
             ]);
         }
 
-        $quoterUser->update( ['active' => 0 ] );
+        $quoterUser->update( ['active' => self::NOT_ACTIVE ] );
 
-        Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->update([
+        $subscription = Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->first();
+
+        $subscription->update([
             "active" => self::NOT_ACTIVE
         ]);
 
@@ -190,7 +192,9 @@ class QuoterUsersController extends Controller
 
         $quoterUser->update( ['active' => 1 ] );
 
-        Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->update([
+        $subscription = Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->first();
+
+        $subscription->update([
             "active" => self::ACTIVE
         ]);
 
