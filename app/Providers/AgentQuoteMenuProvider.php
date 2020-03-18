@@ -103,6 +103,8 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                     'data' => $products
                                 ], true));*/
 
+                                $userHasActiveSubscription = null;
+
                                 if ( array_key_exists('url', $item) && in_array($item['url'], $productDetails) ) {
 
 
@@ -112,7 +114,10 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                         $productFound = Product::where( [ "id" => $product['id'] ] )->first();
 
-                                        $userHasActiveSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $product['id'], "active" => 1])->first();
+
+                                        if ($productFound) {
+                                            $userHasActiveSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productFound->id, "active" => 1])->first();
+                                        }
 
 /*                                        AQLog::info(print_r([
                                             'message' => "Product Found",
