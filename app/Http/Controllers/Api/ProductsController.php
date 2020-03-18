@@ -524,10 +524,19 @@ class ProductsController extends Controller {
              }
          }
 
+        AQLog::info( json_encode([
+            "message" => "Error",
+            "mode" => "debug",
+            "ip" => request()->ip(),
+            "data" => request()->all(),
+            "success" => false
+        ]) );
+
         return response()->json([
             "message" => "Error",
             "mode" => "debug",
             "ip" => request()->ip(),
+            "data" => request()->all(),
             "success" => false
         ]);
      }
