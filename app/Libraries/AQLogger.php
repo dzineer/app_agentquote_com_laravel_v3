@@ -10,7 +10,7 @@ class AQLogger {
     }
 
     public function info($s, $from = '') {
-        $out = strlen($from) ? $from . " - " . $s;
+        $out = strlen($from) ? $from . " - " . $s : $s;
         Log::channel('agentquoteLog')->info($out);
     }
 
