@@ -47,7 +47,7 @@ class LandingPageController extends BackendController
         AQLog::info(print_r([
             'message' => "AgentQuoteMenuProvider::boot - Product Details",
             'data' => $data
-        ], true));
+        ], true), __CLASS__ . '::' . __METHOD__);
 
 		return view('landing-pages.profile.index', $data);
 	}
