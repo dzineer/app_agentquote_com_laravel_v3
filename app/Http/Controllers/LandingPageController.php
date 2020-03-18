@@ -27,8 +27,6 @@ class LandingPageController extends BackendController
 
         // dd($user->profile);
 
-
-
         $categories = LandingPageCategory::all();
         $currentPageCategory = LandingPageUser::where(['user_id' => $user->id])->first();
         $gaCodeRecord = UserGoogleAnalytic::where(['user_id' => $user->id])->first();
@@ -44,7 +42,7 @@ class LandingPageController extends BackendController
             "currentPageCategory" => json_encode($currentPageCategory)
         ];
 
-    //    dd($data);
+        dd($data);
 
 		return view('landing-pages.profile.index', $data);
 	}
