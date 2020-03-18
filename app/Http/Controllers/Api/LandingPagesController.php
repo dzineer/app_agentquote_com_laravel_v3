@@ -114,9 +114,12 @@ class LandingPagesController extends Controller
             'active' => self::NOT_ACTIVE
         ]);
 
-        Subscription::where(["user_id" => $user->id, "product_id" => self::LANDING_PAGE])->update([
-            "active" => self::NOT_ACTIVE
-        ]);
+        Subscription::where(["user_id" => $user->id, "product_id" => 2])
+            ->orWhere(["user_id" => $user->id, "product_id" => 6])
+            ->orWhere(["user_id" => $user->id, "product_id" => 7])
+            ->update([
+                "active" => self::NOT_ACTIVE
+            ]);
 
         return response()->json([
             "message" => "Landing Page User disabled.",
@@ -173,9 +176,12 @@ class LandingPagesController extends Controller
             'active' => self::ACTIVE
         ]);
 
-        Subscription::where(["user_id" => $user->id, "product_id" => self::LANDING_PAGE])->update([
-            "active" => self::ACTIVE
-        ]);
+        Subscription::where(["user_id" => $user->id, "product_id" => 2])
+            ->orWhere(["user_id" => $user->id, "product_id" => 6])
+            ->orWhere(["user_id" => $user->id, "product_id" => 7])
+            ->update([
+                "active" => self::ACTIVE
+            ]);
 
         return response()->json([
             "message" => "Landing Page User enabled.",
