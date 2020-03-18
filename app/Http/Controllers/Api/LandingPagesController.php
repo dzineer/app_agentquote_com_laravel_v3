@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\LandingPageUser;
+use App\Models\Subscription;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -11,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 class LandingPagesController extends Controller
 {
     const PROGRAM_USER = 5;
+    const ACTIVE = 1;
+    const NOT_ACTIVE = 0;
 
     public function getWHMCSLandingPageUser(Request $request)
     {
@@ -110,6 +113,10 @@ class LandingPagesController extends Controller
             'active' => 0
         ]);
 
+        Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->update([
+            "active" => self::NOT_ACTIVE
+        ]);
+
         return response()->json([
             "message" => "Landing Page User disabled.",
             "data" => $landingPageUser,
@@ -164,6 +171,10 @@ class LandingPagesController extends Controller
 
         $landingPageUser->update([
             'active' => 1
+        ]);
+
+        Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->update([
+            "active" => self::NOT_ACTIVE
         ]);
 
         return response()->json([
