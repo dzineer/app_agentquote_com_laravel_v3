@@ -112,14 +112,14 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                         $productFound = Product::where( [ "id" => $product['id'] ] )->first();
 
-                                        $userHasSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $product['id'], "active" => 1])->first();
+                                        $userHasActiveSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $product['id'], "active" => 1])->first();
 
 /*                                        AQLog::info(print_r([
                                             'message' => "Product Found",
                                             'data' => $productFound
                                         ], true));*/
 
-                                        if ($productFound && $userHasSubscription) {
+                                        if ($productFound && $userHasActiveSubscription) {
                                             $hasSubscription = Subscription::where([
                                                 'user_id' => $user->id,
                                                 'product_id' => $productFound->id

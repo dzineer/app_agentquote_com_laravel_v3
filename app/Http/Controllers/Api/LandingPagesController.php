@@ -14,6 +14,7 @@ class LandingPagesController extends Controller
     const PROGRAM_USER = 5;
     const ACTIVE = 1;
     const NOT_ACTIVE = 0;
+    const LANDING_PAGE = 2;
 
     public function getWHMCSLandingPageUser(Request $request)
     {
@@ -110,10 +111,10 @@ class LandingPagesController extends Controller
 
 
         $landingPageUser->update([
-            'active' => 0
+            'active' => self::NOT_ACTIVE
         ]);
 
-        Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->update([
+        Subscription::where(["user_id" => $user->id, "product_id" => self::LANDING_PAGE])->update([
             "active" => self::NOT_ACTIVE
         ]);
 
@@ -168,13 +169,12 @@ class LandingPagesController extends Controller
             ]);
         }
 
-
         $landingPageUser->update([
-            'active' => 1
+            'active' => self::ACTIVE
         ]);
 
-        Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->update([
-            "active" => self::NOT_ACTIVE
+        Subscription::where(["user_id" => $user->id, "product_id" => self::LANDING_PAGE])->update([
+            "active" => self::ACTIVE
         ]);
 
         return response()->json([
