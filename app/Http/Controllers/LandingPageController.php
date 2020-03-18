@@ -24,14 +24,14 @@ class LandingPageController extends BackendController
 	{
         $user = Auth::user();
         $gaCode = '';
-        // dd($user->profile);
+        dd($user->profile);
         $categories = LandingPageCategory::all();
         $currentPageCategory = LandingPageUser::where(['user_id' => $user->id])->first();
         $gaCodeRecord = UserGoogleAnalytic::where(['user_id' => $user->id])->first();
 
         if ($gaCodeRecord) {
             $gaCode = $gaCodeRecord->data;
-        } 
+        }
 
         $data = [
             "user" => $user,
@@ -113,7 +113,7 @@ class LandingPageController extends BackendController
             if ($landingPageUserRecord->exists()) {
                 $landingPageUserRecord->update(['category_id' => $category_id]);
             }
-        }        
+        }
 
         if ($request->has('ga_code')) {
             $gaCode = $request->input('ga_code');
@@ -218,7 +218,7 @@ class LandingPageController extends BackendController
             $resp->portrait = null;
         }
 
-        
+
         return response()->json($resp);
     }
 
@@ -265,7 +265,7 @@ class LandingPageController extends BackendController
         // save logo to store/public/landing-pages/logos and filename to profile
 
         AQLog::info([
-            "hasFile" => $request->hasFile('logo'), 
+            "hasFile" => $request->hasFile('logo'),
             "logo" => $request->input('logo')
         ]);
 
@@ -274,8 +274,8 @@ class LandingPageController extends BackendController
             $profileUpdated = true;
             AQLog::info([
                 "description" => "Logo to be erased",
-                "hasFile" => $request->hasFile('logo'), 
-                "logo" => $request->has('logo'), 
+                "hasFile" => $request->hasFile('logo'),
+                "logo" => $request->has('logo'),
                 "profile" => $profile]
             );
 
@@ -364,7 +364,7 @@ class LandingPageController extends BackendController
           [ 'name' => 'instagram_link', 'key' => 'instagram_link'],
         ];
 
-        
+
         foreach( $fields as $field ) {
             if ($request->has( $field['name'] )) {
                 $n = $field['key'];
