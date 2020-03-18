@@ -45,11 +45,18 @@ class LandingPageController extends BackendController
         // dd($data);
 
         AQLog::info(print_r([
-            'message' => "",
+            'message' => "data",
             'data' => $data
         ], true), __CLASS__ . '::' . __METHOD__);
 
-		return view('landing-pages.profile.index', $data);
+		$response = view('landing-pages.profile.index', $data);
+
+        AQLog::info(print_r([
+            'message' => "landing-pages.profile.index",
+            'response' => $response
+        ], true), __CLASS__ . '::' . __METHOD__);
+
+		return $response;
 	}
 
     /**
