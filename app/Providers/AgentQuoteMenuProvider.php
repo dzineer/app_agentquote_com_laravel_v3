@@ -121,7 +121,8 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                                         AQLog::info(print_r([
                                             'message' => "Does user have an active subscription",
-                                            'data' => !! $userHasActiveSubscription
+                                            'data' => $userHasActiveSubscription === null ? 'No' : 'Yes',
+                                            'subscription' => $productFound->name
                                         ], true));
 
                                         if ($productFound && $userHasActiveSubscription) {
