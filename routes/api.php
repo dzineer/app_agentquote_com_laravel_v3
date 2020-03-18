@@ -84,6 +84,8 @@ Route::get('/chat.postMessage', function() {
 
 Route::post('/chat.postMessage',  [\App\Http\Controllers\Api\APIController::class, 'index'])->name('api-request');
 
+Route::post('/user.subscriptions',  [\App\Http\Controllers\Api\SubscriptionUsersController::class, 'getSubscriptions'])->name('api-request.user.subscriptions');
+
 Route::post('/user.assignProduct',  [\App\Http\Controllers\Api\ProductsController::class, 'assignUserProduct'])->name('api-request.user.assign-product');
 Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\ProductsController::class, 'removeUserProduct'])->name('api-request.user.remove-product');
 
