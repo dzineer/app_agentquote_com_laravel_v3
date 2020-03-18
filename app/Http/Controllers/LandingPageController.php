@@ -24,7 +24,9 @@ class LandingPageController extends BackendController
 	{
         $user = Auth::user();
         $gaCode = '';
+
         dd($user->profile);
+
         $categories = LandingPageCategory::all();
         $currentPageCategory = LandingPageUser::where(['user_id' => $user->id])->first();
         $gaCodeRecord = UserGoogleAnalytic::where(['user_id' => $user->id])->first();
