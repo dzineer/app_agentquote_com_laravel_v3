@@ -8,6 +8,12 @@ class Subscription extends Model
 {
     protected $table = 'subscriptions';
 
+    protected $fillable = [
+        'user_id',
+        'product_id',
+        'active'
+    ];
+
     public function product() {
       return $this->belongsTo(Product::class);
     }
