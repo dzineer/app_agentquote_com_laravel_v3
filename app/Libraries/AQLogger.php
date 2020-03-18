@@ -9,8 +9,9 @@ class AQLogger {
         Log::channel('agentquoteLog')->info($s);
     }
 
-    public function info($s) {
-        Log::channel('agentquoteLog')->info($s);
+    public function info($s, $from = '') {
+        $out = strlen($from) ? $from . " - " . $s;
+        Log::channel('agentquoteLog')->info($out);
     }
 
     public function network($s) {

@@ -42,7 +42,12 @@ class LandingPageController extends BackendController
             "currentPageCategory" => json_encode($currentPageCategory)
         ];
 
-        dd($data);
+        // dd($data);
+
+        AQLog::info(print_r([
+            'message' => "AgentQuoteMenuProvider::boot - Product Details",
+            'data' => $data
+        ], true));
 
 		return view('landing-pages.profile.index', $data);
 	}
