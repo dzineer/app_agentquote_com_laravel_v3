@@ -303,6 +303,7 @@ class ProductsController extends Controller {
             ]) );
 
             $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
+
             if ($whmcsLocalProduct) {
 
                 AQLog::info( json_encode([
@@ -362,6 +363,22 @@ class ProductsController extends Controller {
                     ]);
 
                 }
+            } else {
+
+                AQLog::info( json_encode([
+                    "message" => "Cannot find product",
+                    "mode" => "debug",
+                    "ip" => request()->ip(),
+                    "data" => $request->all(),
+                    "success" => true,
+                ]) );
+
+                return response()->json([
+                    "message" => "Cannot find product",
+                    "mode" => "debug",
+                    "ip" => request()->ip(),
+                    "success" => false
+                ]);
             }
 
         }
