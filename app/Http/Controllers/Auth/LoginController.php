@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Arr;
 
 class LoginController extends Controller
 {
@@ -26,6 +27,8 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers; /*, ThrottlesLogins;*/
+    const ACTIVE = 1;
+    const NOT_ACTIVE = 0;
 
     /**
      * Log the user out of the application.
@@ -40,6 +43,12 @@ class LoginController extends Controller
         $request->session()->invalidate();
 
         return $this->loggedOut($request) ?: redirect('/login');
+    }
+
+    protected function credentials(Request $request)
+    {
+        $credentials = $request->only($this->username(), 'password'); // get data from login form
+        return Arr::add($credentials, 'active', self::ACTIVE);
     }
 
     /**

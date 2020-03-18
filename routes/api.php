@@ -90,6 +90,8 @@ Route::post('/user.assignProduct',  [\App\Http\Controllers\Api\ProductsControlle
 Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\ProductsController::class, 'removeUserProduct'])->name('api-request.user.remove-product');
 
 Route::post('/user.get',  [\App\Http\Controllers\Api\UsersController::class, 'getWHMCSUser'])->name('api-request.user.get');
+Route::post('/user.password.update',  [\App\Http\Controllers\Api\UsersController::class, 'changePasswordWHMCSUser'])->name('api-request.user.password-update');
+
 Route::post('/user.disable',  [\App\Http\Controllers\Api\UsersController::class, 'disableWHMCSUser'])->name('api-request.user.disable');
 Route::post('/user.enable',  [\App\Http\Controllers\Api\UsersController::class, 'enableWHMCSUser'])->name('api-request.user.enable');
 

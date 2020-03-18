@@ -204,7 +204,7 @@ class UsersController extends Controller
 
         $super_user = Auth::user();
 
-        $action_response = [
+        $action_reponse = [
             '1' => 'User enabled',
             '0' => 'User disabled'
         ];
@@ -228,7 +228,7 @@ class UsersController extends Controller
                 $user->active = $data['active'];
                 $user->save();
 
-                $user_str = $action_response[ $data['active'] ];
+                $user_str = $action_reponse[ $data['active'] ];
 
                 return response()->json([
                     'success' => true,
@@ -248,6 +248,51 @@ class UsersController extends Controller
             'message' => 'Invalid request'
         ]);
 
+
+    }
+
+    public function changePasswordWHMCSUser(Request $request)
+    {
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
+        // Agent Quote's WHMCS Security
+
+        $whmcsAPI = config('agentquote.whmcs_api');
+
+        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user = User::where([
+            "email" => $data['email']
+        ])->first();
+
+        if( !$user ) {
+            return response()->json([
+                "message" => "User does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        $user->update([
+            'password' => $request->input('whmcs_password')
+        ]);
+
+        return response()->json([
+            "message" => "User password updated.",
+            "data" => $user,
+            "success" => true,
+        ]);
     }
 
     /**
