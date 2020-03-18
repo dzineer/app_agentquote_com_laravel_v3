@@ -500,6 +500,13 @@ class ProductsController extends Controller {
                         ]);
 
                      }
+                 } else {
+                     return response()->json([
+                         "message" => "Cannot find product",
+                         "data" => request()->all(),
+                         "user" => $user,
+                         "success" => false,
+                     ]);
                  }
 
              } else {
