@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Facades\AQLog;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -256,8 +257,8 @@ class UsersController extends Controller
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
-            'email' => 'required',
-            'password' => 'required'
+            'whmcs_email' => 'required',
+            'whmcs_password' => 'required'
         ]);
 
         // Agent Quote's WHMCS Security
@@ -288,10 +289,17 @@ class UsersController extends Controller
             'password' => $request->input('whmcs_password')
         ]);
 
+
+        AQLog::info( json_encode([
+            "message" => "Password Changed",
+            "data" => $request->input('whmcs_password')
+        ]) );
+
         return response()->json([
             "message" => "User password updated.",
             "data" => $user,
-            "success" => true,
+            "okay" => true,
+            "success" => true
         ]);
     }
 
