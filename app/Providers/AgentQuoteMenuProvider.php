@@ -125,7 +125,7 @@ class AgentQuoteMenuProvider extends ServiceProvider
                                             'subscription' => $productFound->name
                                         ], true));
 
-                                        if ($productFound && $userHasActiveSubscription) {
+                                        if ($productFound && $userHasActiveSubscription !== null) {
                                             $hasSubscription = Subscription::where([
                                                 'user_id' => $user->id,
                                                 'product_id' => $productFound->id
