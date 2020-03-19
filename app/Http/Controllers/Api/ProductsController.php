@@ -355,17 +355,15 @@ class ProductsController extends Controller {
                             "success" => true,
                         ];
 
-                        if ($createdNewUser) {
-                            $payload = array_merge( $payload, [
-                                "portal_user_id" => $user->id,
-                                "portal_affiliate_id" => $user->affiliate_id,
-                            ]);
-                        }
-
                         if ($request->has("whmcs_token_request")) {
                             $tokenUser = TokenUser::where($user->id)->first();
                             if ($tokenUser) {
-                                $payload = array_merge( $payload, ["portal_user_token" => $tokenUser->token, "portal_user_id" => $user->id] );
+                                $payload = array_merge( $payload,
+                                    [
+                                        "portal_user_token" => $tokenUser->token,
+                                        "portal_user_id" => $user->id,
+                                        "portal_affiliate_id" => $user->affiliate_id,
+                                    ]);
                             } else {
                                 try {
 
@@ -376,7 +374,11 @@ class ProductsController extends Controller {
                                        "token" => $token
                                     ]);
 
-                                    $payload = array_merge( $payload, ["portal_user_token" => $token, "portal_user_id" => $user->id] );
+                                    $payload = array_merge( $payload, [
+                                        "portal_user_token" => $token,
+                                        "portal_user_id" => $user->id,
+                                        "portal_affiliate_id" => $user->affiliate_id,
+                                    ]);
 
                                 } catch (\Exception $e) {
 
