@@ -353,7 +353,7 @@ class ProductsController extends Controller {
                         if ($request->has("whmcs_token_request")) {
                             $token = TokenUser::where($user->id)->first()->pluck('token');
                             if ($token) {
-                                $payload = array_merge($payload, ["token" => $token]);
+                                $payload = array_merge( $payload, ["portal_user_token" => $token, "portal_user_id" => $user->id] );
                             } else {
                                 try {
 
@@ -364,7 +364,7 @@ class ProductsController extends Controller {
                                        "token" => $token
                                     ]);
 
-                                    $payload = array_merge($payload, ["token" => $token]);
+                                    $payload = array_merge( $payload, ["portal_user_token" => $token, "portal_user_id" => $user->id] );
 
                                 } catch (\Exception $e) {
 
