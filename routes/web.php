@@ -3,6 +3,8 @@
 use App\Facades\AQLog;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\UserMessagesController;
+use App\Models\TokenUser;
+use App\User;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -187,9 +189,19 @@ Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function(
 });
 
 Route::get('/l/{token}', function ($token, Request $request) {
+
+    $tokenUser = TokenUser::where([
+        'token' => $token
+    ])->first();
+
+    $user =User::where([
+        'id' => $token->user_id
+    ])->first();
+
     dd([
-        $request->all(),
-        $token
+        $tokenUser,
+        $token,
+        $user
     ]);
 });
 
