@@ -3,9 +3,6 @@
 
 namespace Libraries\Utilities;
 
-
-public
-
 /**
  * Class TokenGenerator
  * @package Libraries\Utilities
