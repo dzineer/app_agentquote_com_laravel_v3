@@ -194,15 +194,26 @@ Route::get('/l/{token}', function ($token, Request $request) {
         'token' => $token
     ])->first();
 
-    $user = User::where([
-        'id' => $tokenUser->user_id
-    ])->first();
+    if ($tokenUser) {
 
-    dd([
+        $user = User::where([
+            'id' => $tokenUser->user_id
+        ])->first();
+
+        if ($user) {
+            Auth::loginUsingId($user->id);
+            return response()->redirectTo('/');
+        }
+
+    }
+
+    return abort(405);
+
+/*    dd([
         $tokenUser,
         $token,
         $user
-    ]);
+    ]);*/
 });
 
 Route::group(['middleware' => ['auth']], function () {
