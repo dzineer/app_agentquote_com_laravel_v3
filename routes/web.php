@@ -185,7 +185,7 @@ Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function(
     });
 });
 
-Route::get('/l/{token}', function ($request, $token) {
+Route::get('/l/{token}', function ($token, $request) {
     dd([
         $request->all(),
         $token
