@@ -363,7 +363,7 @@ class ProductsController extends Controller {
                         ]));
 
                         if ($request->has("whmcs_token_request")) {
-                            $tokenUser = TokenUser::where($user->id)->first();
+                            $tokenUser = TokenUser::where([ "user_id" => $user->id])->first();
                             if ($tokenUser) {
                                 $payload = array_merge( $payload,
                                     [
