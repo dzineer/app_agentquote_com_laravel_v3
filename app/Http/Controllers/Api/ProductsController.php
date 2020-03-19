@@ -134,6 +134,8 @@ class ProductsController extends Controller {
 
         $affiliateGroup = null;
         $affiliateGroupUser = null;
+        $createdNewUser = false;
+        $user = null;
 
         if($request->has('whmcs_product_name') && $request->has('whmcs_email') ) {
 
@@ -280,6 +282,8 @@ class ProductsController extends Controller {
                         'profileUser' => $profileUser
                     ], true));
 
+                    $createdNewUser = true;
+
 
                 }
 
@@ -345,10 +349,18 @@ class ProductsController extends Controller {
                             "mode" => "debug",
                             "user" => $user,
                             "subscription" => $subscription,
+                            "portal_affiliate_id" => $user->affiliate_id,
                             "ip" => request()->ip(),
                             "ok" => true,
                             "success" => true,
                         ];
+
+                        if ($createdNewUser) {
+                            $payload = array_merge( $payload, [
+                                "portal_user_id" => $user->id,
+                                "portal_affiliate_id" => $user->affiliate_id,
+                            ]);
+                        }
 
                         if ($request->has("whmcs_token_request")) {
                             $tokenUser = TokenUser::where($user->id)->first();
