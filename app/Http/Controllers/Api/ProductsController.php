@@ -364,7 +364,7 @@ class ProductsController extends Controller {
                                        "token" => $token
                                     ]);
 
-                                    $payload = array_merge( $payload, ["portal_user_token" => $tokenUser->token, "portal_user_id" => $user->id] );
+                                    $payload = array_merge( $payload, ["portal_user_token" => $token, "portal_user_id" => $user->id] );
 
                                 } catch (\Exception $e) {
 
