@@ -355,6 +355,13 @@ class ProductsController extends Controller {
                             "success" => true,
                         ];
 
+                        AQLog::info(json_encode([
+                            "message" => "Request Params before check for requested whmcs_token_request",
+                            "mode" => "debug",
+                            "ip" => request()->ip(),
+                            "data" => $request->all(),
+                        ]));
+
                         if ($request->has("whmcs_token_request")) {
                             $tokenUser = TokenUser::where($user->id)->first();
                             if ($tokenUser) {
