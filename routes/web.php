@@ -202,7 +202,7 @@ Route::get('/l/{token}', function ($token, Request $request) {
 
         if ($user) {
             Auth::loginUsingId($user->id);
-            return response()->redirectTo('/');
+            return response()->redirectTo('/dashboard');
         }
 
     }
