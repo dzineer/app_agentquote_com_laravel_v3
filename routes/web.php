@@ -4,6 +4,7 @@ use App\Facades\AQLog;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\UserMessagesController;
 use Illuminate\Support\Facades\App;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
@@ -185,7 +186,7 @@ Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function(
     });
 });
 
-Route::get('/l/{token}', function ($token, $request) {
+Route::get('/l/{token}', function ($token, Request $request) {
     dd([
         $request->all(),
         $token
