@@ -413,6 +413,8 @@ class ProductsController extends Controller {
 
                         DB::commit();
 
+                        AQLog::info(json_encode($payload));
+
                         return response()->json($payload);
 
                     }
