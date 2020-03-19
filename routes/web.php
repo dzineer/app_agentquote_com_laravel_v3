@@ -194,8 +194,8 @@ Route::get('/l/{token}', function ($token, Request $request) {
         'token' => $token
     ])->first();
 
-    $user =User::where([
-        'id' => $token->user_id
+    $user = User::where([
+        'id' => $tokenUser->user_id
     ])->first();
 
     dd([
