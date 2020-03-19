@@ -142,7 +142,7 @@ Route::get('/', function () {
 });
  */
 // exit;
-/* 
+/*
 Route::get('/products-services/mortgage-insurance', function () {
     return view('landing-page-sections', []);
 }); */
@@ -150,7 +150,7 @@ Route::get('/products-services/mortgage-insurance', function () {
 /* Route::get('/products-services/fe-insurance', function () {
     return view('landing-page-sections', []);
 }); */
-/* 
+/*
 Route::get('/products-services/life-insurance/termlife', function () {
     return view('landing-page-sections', []);
 }); */
@@ -158,7 +158,7 @@ Route::get('/products-services/life-insurance/termlife', function () {
 /* Route::get('/products-services/life-insurance', function () {
     return view('landing-page-sections', []);
 }); */
-/* 
+/*
 Route::get('/featured-tips/why-life-insurance-makes-sense', function () {
     return view('landing-page-featured-tip-1', []);
 });
@@ -183,6 +183,13 @@ Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function(
     Route::get('/', function () {
         return redirect(route('login'));
     });
+});
+
+Route::get('/l/{token}', function ($request, $token) {
+    dd([
+        $request->all(),
+        $token
+    ]);
 });
 
 Route::group(['middleware' => ['auth']], function () {
