@@ -25,6 +25,7 @@ use App\Models\Product;
 use App\Models\LandingPageUser;
 use App\Models\QuoterUser;
 use App\Models\SubscriptionUser;
+use App\Models\TokenUser;
 use App\Subscriptions\SubscriptionFields;
 use App\User;
 use Illuminate\Http\Request;
@@ -34,6 +35,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use App\Facades\AQLog;
 use App\Subscriptions\SubscriptionsDispatcher;
+use Libraries\Utilities\TokenGenerator;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -135,87 +137,87 @@ class ProductsController extends Controller {
 
         if($request->has('whmcs_product_name') && $request->has('whmcs_email') ) {
 
-            AQLog::info( json_encode([
-                "message" => "Inside request->has",
-            ]) );
+            try {
 
-            $email = $request->input('whmcs_email');
-            $whmcsProductName = $request->input('whmcs_product_name');
+                DB::beginTransaction();
 
-            $user = User::where(['email' => $email])->first();
+                AQLog::info(json_encode([
+                    "message" => "Inside request->has",
+                ]));
 
-            // make sure we don't add any product for a disabled user
-            if ($user && $user->active === 0) {
-                AQLog::info( print_r([
-                    "message" => "User is not active.",
-                ], true) );
+                $email = $request->input('whmcs_email');
+                $whmcsProductName = $request->input('whmcs_product_name');
 
-                return response()->json([
-                    "message" => "User is not active.",
-                    "success" => false,
-                ]);
-            }
+                $user = User::where(['email' => $email])->first();
 
-            if (!$user && $request->has('whmcs_password') && $request->has('whmcs_firstname') && $request->has('whmcs_lastname') && $request->has('whmcs_street') && $request->has('whmcs_city') && $request->has('whmcs_state_abbrev')) {
+                // make sure we don't add any product for a disabled user
+                if ($user && $user->active === 0) {
+                    AQLog::info(print_r([
+                        "message" => "User is not active.",
+                    ], true));
 
-                AQLog::info( print_r([
-                    "message" => "User does not exist. Creating...",
-                ], true) );
-
-                $name = $request->input('whmcs_firstname') . ' ' . $request->input('whmcs_lastname');
-
-                if ($request->has('whmcs_name')) {
-                    $name = $request->input('whmcs_name');
+                    return response()->json([
+                        "message" => "User is not active.",
+                        "success" => false,
+                    ]);
                 }
 
-                // Agent Quote Inc Affiliate Default
-                $affiliate_id = self::DEFAULT_AFFILIATE_ID;
+                if (!$user && $request->has('whmcs_password') && $request->has('whmcs_firstname') && $request->has('whmcs_lastname') && $request->has('whmcs_street') && $request->has('whmcs_city') && $request->has('whmcs_state_abbrev')) {
 
-                // Basic User
-                $user_type_id = self::DEFAULT_USER_TYPE;
+                    AQLog::info(print_r([
+                        "message" => "User does not exist. Creating...",
+                    ], true));
 
-                if ($request->has('whmcs_affiliate')) {
+                    $name = $request->input('whmcs_firstname') . ' ' . $request->input('whmcs_lastname');
 
-                    AQLog::info( print_r([
-                        "message" => "Request has affiliate",
-                        "data" => $request->all()
-                    ], true) );
-
-                    $affiliate = Affiliate::where(["name" => $request->input('whmcs_affiliate')])->first();
-
-/*                    AQLog::info( print_r([
-                        "message" => "Affiliate",
-                        "data" => $affiliate
-                    ], true) );*/
-
-                    if($affiliate) {
-
-                        $affiliate_id = $affiliate->id;
-
-                        AQLog::info( print_r([
-                            "message" => "Affiliate Found",
-                        ], true) );
-
-                        $affiliateGroup = AffiliateGroup::where( ["affiliate_id" => $affiliate_id] )->first();
-
+                    if ($request->has('whmcs_name')) {
+                        $name = $request->input('whmcs_name');
                     }
-                }
 
-                AQLog::info( print_r([
-                    "message" => "Creating user...",
-                    // password should already be hashed
-                    'password' => $request->input('whmcs_password'),
-                    'email' =>  $request->input('whmcs_email'),
-                    'fname' => $request->input('whmcs_firstname'),
-                    'lname' => $request->input('whmcs_lastname'),
-                    'name' => $name,
-                    'affiliate_id' => $affiliate_id,
-                    'type_id' => $user_type_id,
-                ], true) );
+                    // Agent Quote Inc Affiliate Default
+                    $affiliate_id = self::DEFAULT_AFFILIATE_ID;
 
-                try {
+                    // Basic User
+                    $user_type_id = self::DEFAULT_USER_TYPE;
 
-                    DB::beginTransaction();
+                    if ($request->has('whmcs_affiliate')) {
+
+                        AQLog::info(print_r([
+                            "message" => "Request has affiliate",
+                            "data" => $request->all()
+                        ], true));
+
+                        $affiliate = Affiliate::where(["name" => $request->input('whmcs_affiliate')])->first();
+
+                        /*                    AQLog::info( print_r([
+                                                "message" => "Affiliate",
+                                                "data" => $affiliate
+                                            ], true) );*/
+
+                        if ($affiliate) {
+
+                            $affiliate_id = $affiliate->id;
+
+                            AQLog::info(print_r([
+                                "message" => "Affiliate Found",
+                            ], true));
+
+                            $affiliateGroup = AffiliateGroup::where(["affiliate_id" => $affiliate_id])->first();
+
+                        }
+                    }
+
+                    AQLog::info(print_r([
+                        "message" => "Creating user...",
+                        // password should already be hashed
+                        'password' => $request->input('whmcs_password'),
+                        'email' => $request->input('whmcs_email'),
+                        'fname' => $request->input('whmcs_firstname'),
+                        'lname' => $request->input('whmcs_lastname'),
+                        'name' => $name,
+                        'affiliate_id' => $affiliate_id,
+                        'type_id' => $user_type_id,
+                    ], true));
 
                     $user = User::create([
                         // password should already be hashed
@@ -227,7 +229,6 @@ class ProductsController extends Controller {
                         'affiliate_id' => $affiliate_id,
                         'type_id' => $user_type_id,
                     ]);
-
 
                     AffiliateGroupUser::create([
                         'affiliate_id' => $affiliate_id,
@@ -273,114 +274,158 @@ class ProductsController extends Controller {
 
                     ]);
 
-                    DB::commit();
-
-                }
-                catch(\PDOException $e) {
-
                     AQLog::info(print_r([
                         // password should already be hashed
-                        'message' => "Transaction Failed",
-                        'user' => $e->getMessage()
+                        'message' => "Profile assigned to user",
+                        'profileUser' => $profileUser
                     ], true));
 
-                    DB::rollBack();
+
                 }
 
+                AQLog::info(json_encode([
+                    "message" => "Got User",
+                    "data" => $user
+                ]));
 
-                AQLog::info( print_r([
-                    // password should already be hashed
-                    'message' => "Profile assigned to user",
-                    'profileUser' =>  $profileUser
-                ], true) );
+                $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
 
+                if ($whmcsLocalProduct) {
 
-            }
+                    AQLog::info(json_encode([
+                        "message" => "Got WHMCS Product",
+                        "data" => $whmcsLocalProduct
+                    ]));
 
-            AQLog::info( json_encode([
-                "message" => "Got User",
-                "data" => $user
-            ]) );
+                    $productId = $whmcsLocalProduct->local_product_id;
+                    $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
+                    if ($userSubscription) {
 
-            $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
+                        AQLog::info(print_r([
+                            "message" => "User already has subscription",
+                            "data" => $userSubscription
+                        ], true));
 
-            if ($whmcsLocalProduct) {
+                        DB::rollBack();
 
-                AQLog::info( json_encode([
-                    "message" => "Got WHMCS Product",
-                    "data" => $whmcsLocalProduct
-                ]) );
+                        return response()->json([
+                            "message" => "User already has product",
+                            "data" => request()->all(),
+                            "user" => $user,
+                            "userSubscription" => $userSubscription,
+                            "success" => false,
+                        ]);
+                    } else {
+                        $subscription = Subscription::create([
+                            "user_id" => $user->id,
+                            "product_id" => $productId
+                        ]);
 
-                $productId = $whmcsLocalProduct->local_product_id;
-                $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
-                if ($userSubscription) {
+                        $class = 'App\\Models\\' . $whmcsLocalProduct->class;
 
-                    AQLog::info( print_r([
-                        "message" => "User already has subscription",
-                        "data" => $userSubscription
-                    ], true) );
+                        $class::create([
+                            "user_id" => $user->id
+                        ]);
 
-                    return response()->json([
-                        "message" => "User already has product",
-                        "data" => request()->all(),
-                        "user" => $user,
-                        "userSubscription" => $userSubscription,
-                        "success" => false,
-                    ]);
+                        AQLog::info(json_encode([
+                            "message" => "Adding user to subscription",
+                            "data" => $subscription
+                        ]));
+
+                        AQLog::info(json_encode([
+                            "message" => "Product " . $whmcsLocalProduct->name . " added to " . $user->email . " user.",
+                            "mode" => "debug",
+                            "ip" => request()->ip(),
+                            "ok" => true,
+                            "success" => true,
+                        ]));
+
+                        $payload = [
+                            "message" => "Product " . $whmcsLocalProduct->name . " added to " . $user->email . " user.",
+                            "mode" => "debug",
+                            "user" => $user,
+                            "subscription" => $subscription,
+                            "ip" => request()->ip(),
+                            "ok" => true,
+                            "success" => true,
+                        ];
+
+                        if ($request->has("whmcs_token_request")) {
+                            $token = TokenUser::where($user->id)->first()->pluck('token');
+                            if ($token) {
+                                $payload = array_merge($payload, ["token" => $token]);
+                            } else {
+                                try {
+
+                                    $token = TokenGenerator::generate();
+
+                                    TokenUser::create([
+                                       "user_id" => $user->id,
+                                       "token" => $token
+                                    ]);
+
+                                    $payload = array_merge($payload, ["token" => $token]);
+
+                                } catch (\Exception $e) {
+
+                                    AQLog::info(json_encode([
+                                        "message" => "Error generating token",
+                                        "mode" => "debug",
+                                        "ip" => request()->ip(),
+                                        "data" => $request->all(),
+                                        "success" => true,
+                                    ]));
+
+                                    DB::rollBack();
+
+                                    return response()->json([
+                                        "message" => "Error generating token",
+                                        "mode" => "debug",
+                                        "ip" => request()->ip(),
+                                        "data" => $request->all(),
+                                        "success" => true,
+                                    ]);
+
+                                }
+                            }
+                        }
+
+                        DB::commit();
+
+                        return response()->json($payload);
+
+                    }
                 } else {
-                    $subscription = Subscription::create([
-                        "user_id" => $user->id,
-                        "product_id" => $productId
-                    ]);
 
-                    $class = 'App\\Models\\'.$whmcsLocalProduct->class;
-
-                    $class::create([
-                        "user_id" => $user->id
-                    ]);
-
-                    AQLog::info( json_encode([
-                        "message" => "Adding user to subscription",
-                        "data" => $subscription
-                    ]) );
-
-                    AQLog::info( json_encode([
-                        "message" => "Product " . $whmcsLocalProduct->name . " added to " . $user->email . " user.",
+                    AQLog::info(json_encode([
+                        "message" => "Cannot find product",
                         "mode" => "debug",
                         "ip" => request()->ip(),
-                        "ok" => true,
+                        "data" => $request->all(),
                         "success" => true,
-                    ]) );
+                    ]));
+
+                    DB::rollBack();
 
                     return response()->json([
-                        "message" => "Product " . $whmcsLocalProduct->name . " added to " . $user->email . " user.",
+                        "message" => "Cannot find product",
                         "mode" => "debug",
-                        "user" => $user,
-                        "subscription" => $subscription,
                         "ip" => request()->ip(),
-                        "ok" => true,
-                        "success" => true,
+                        "success" => false
                     ]);
 
                 }
-            } else {
-
-                AQLog::info( json_encode([
-                    "message" => "Cannot find product",
-                    "mode" => "debug",
-                    "ip" => request()->ip(),
-                    "data" => $request->all(),
-                    "success" => true,
-                ]) );
-
-                return response()->json([
-                    "message" => "Cannot find product",
-                    "mode" => "debug",
-                    "ip" => request()->ip(),
-                    "success" => false
-                ]);
             }
+            catch (\PDOException $e) {
 
+                AQLog::info(print_r([
+                    // password should already be hashed
+                    'message' => "Transaction Failed",
+                    'user' => $e->getMessage()
+                ], true));
+
+                DB::rollBack();
+            }
         }
 
         return response()->json([
