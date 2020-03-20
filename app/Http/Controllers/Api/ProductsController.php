@@ -357,7 +357,7 @@ class ProductsController extends Controller {
                 if ($whmcsProduct->class === "LandingPageUser") {
 
                     if (UserDomain::where([
-                        ['name' => $request->input('whmcs_domain')]
+                        'name' => $request->input('whmcs_domain')
                     ])->exists()) {
                         AQLog::info(print_r([
                             "message" =>  "Domain name " . $request->input('whmcs_domain') . " already exists.",
