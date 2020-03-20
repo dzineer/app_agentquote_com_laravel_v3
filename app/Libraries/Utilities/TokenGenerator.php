@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Libraries\Utilities;
+namespace App\Libraries\Utilities;
 
 /**
  * Class TokenGenerator
