@@ -78,6 +78,13 @@ class UsersController extends Controller
         $whmcsAPI = config('agentquote.whmcs_api');
 
         if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]) );
+
             return response()->json([
                 "message" => "Invalid Request",
                 "data" => request()->all(),
@@ -90,12 +97,25 @@ class UsersController extends Controller
         ])->first();
 
         if( !$user ) {
+
+            AQLog::info( json_encode([
+                "message" => "User does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]) );
+
             return response()->json([
                 "message" => "User does not exists.",
                 "data" => request()->all(),
                 "success" => false,
             ]);
         }
+
+        AQLog::info( json_encode([
+            "message" => "User received.",
+            "data" => $user,
+            "success" => true,
+        ]) );
 
         return response()->json([
             "message" => "User received.",
@@ -119,6 +139,13 @@ class UsersController extends Controller
         $whmcsAPI = config('agentquote.whmcs_api');
 
         if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]) );
+
             return response()->json([
                 "message" => "Invalid Request",
                 "data" => request()->all(),
@@ -131,6 +158,13 @@ class UsersController extends Controller
         ])->first();
 
         if( !$user ) {
+
+            AQLog::info( json_encode([
+                "message" => "User does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]) );
+
             return response()->json([
                 "message" => "User does not exists.",
                 "data" => request()->all(),
@@ -142,6 +176,13 @@ class UsersController extends Controller
         $user->update([
             'active' => 0
         ]);
+
+        AQLog::info( json_encode([
+            "message" => "User disabled.",
+            "data" => $user,
+            "ok" => true,
+            "success" => true,
+        ]) );
 
         return response()->json([
             "message" => "User disabled.",
@@ -166,6 +207,13 @@ class UsersController extends Controller
         $whmcsAPI = config('agentquote.whmcs_api');
 
         if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]) );
+
             return response()->json([
                 "message" => "Invalid Request",
                 "data" => request()->all(),
@@ -178,6 +226,13 @@ class UsersController extends Controller
         ])->first();
 
         if( !$user ) {
+
+            AQLog::info( json_encode([
+                "message" => "User does not exists.",
+                "data" => request()->all(),
+                "success" => false,
+            ]) );
+
             return response()->json([
                 "message" => "User does not exists.",
                 "data" => request()->all(),
@@ -188,6 +243,13 @@ class UsersController extends Controller
         $user->update([
             'active' => 1
         ]);
+
+        AQLog::info( json_encode([
+            "message" => "User enabled.",
+            "data" => $user,
+            "ok" => true,
+            "success" => true,
+        ]) );
 
         return response()->json([
             "message" => "User enabled.",
