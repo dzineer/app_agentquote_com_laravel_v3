@@ -104,10 +104,6 @@ class ProductsController extends Controller {
             "request all" => request()->all(),
         ]) );
 
-        Log::info(json_encode([
-            "data" => request()->all(),
-        ]));
-
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
@@ -128,7 +124,7 @@ class ProductsController extends Controller {
         }
 
         AQLog::info( json_encode([
-            "message" => "Request",
+            "request all()" => "Request",
             "data" => $request->all()
         ]) );
 
