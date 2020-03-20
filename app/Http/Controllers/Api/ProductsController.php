@@ -137,7 +137,7 @@ class ProductsController extends Controller {
         $createdNewUser = false;
         $user = null;
 
-        if($request->has('whmcs_product_name') && $request->has('whmcs_email') ) {
+        if($request->has('whmcs_product_id') && $request->has('whmcs_email') ) {
 
             try {
 
@@ -148,7 +148,7 @@ class ProductsController extends Controller {
                 ]));
 
                 $email = $request->input('whmcs_email');
-                $whmcsProductName = $request->input('whmcs_product_name');
+                $whmcsProductId = $request->input('whmcs_product_id');
 
                 $user = User::where(['email' => $email])->first();
 
@@ -292,17 +292,20 @@ class ProductsController extends Controller {
                     "data" => $user
                 ]));
 
-                $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
+                $whmcs_product_id = $request->input('whmcs_product_id');
 
-                if ($whmcsLocalProduct) {
+                $whmcsProduct = WhmcsProduct::where(["pid" => $whmcs_product_id])->first();
+
+                if ($whmcsProduct) {
 
                     AQLog::info(json_encode([
                         "message" => "Got WHMCS Product",
-                        "data" => $whmcsLocalProduct
+                        "data" => $whmcsProduct
                     ]));
 
-                    $productId = $whmcsLocalProduct->local_product_id;
+                    $productId = $whmcsProduct->local_product_id;
                     $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
+
                     if ($userSubscription) {
 
                         AQLog::info(print_r([
@@ -325,7 +328,7 @@ class ProductsController extends Controller {
                             "product_id" => $productId
                         ]);
 
-                        $class = 'App\\Models\\' . $whmcsLocalProduct->class;
+                        $class = 'App\\Models\\' . $whmcsProduct->class;
 
                         $class::create([
                             "user_id" => $user->id
@@ -337,7 +340,7 @@ class ProductsController extends Controller {
                         ]));
 
                         AQLog::info(json_encode([
-                            "message" => "Product " . $whmcsLocalProduct->name . " added to " . $user->email . " user.",
+                            "message" => "Product " . $whmcsProduct->name . " added to " . $user->email . " user.",
                             "mode" => "debug",
                             "ip" => request()->ip(),
                             "ok" => true,
@@ -345,7 +348,7 @@ class ProductsController extends Controller {
                         ]));
 
                         $payload = [
-                            "message" => "Product " . $whmcsLocalProduct->name . " added to " . $user->email . " user.",
+                            "message" => "Product " . $whmcsProduct->name . " added to " . $user->email . " user.",
                             "mode" => "debug",
                             "user" => $user,
                             "subscription" => $subscription,
@@ -508,7 +511,7 @@ class ProductsController extends Controller {
              ]);
          }
 
-         if($request->has('whmcs_product_name') && $request->has('whmcs_email') ) {
+         if($request->has('whmcs_product_id') && $request->has('whmcs_email') ) {
 
              AQLog::info( json_encode([
                  "message" => "Inside request->has",
@@ -516,7 +519,7 @@ class ProductsController extends Controller {
 
              $email = $request->input('whmcs_email');
              $whmcs = $request->input('whmcs_userid');
-             $whmcsProductName = $request->input('whmcs_product_name');
+             $whmcsProductId = $request->input('whmcs_product_id');
 
              $user = User::where(['email' => $email])->first();
 
@@ -527,16 +530,16 @@ class ProductsController extends Controller {
                      "data" => $user
                  ]) );
 
-                 $whmcsLocalProduct = WhmcsProduct::where(["name" => $whmcsProductName])->first();
+                 $whmcsProduct = WhmcsProduct::where(["name" => $whmcsProductId])->first();
 
-                 if ($whmcsLocalProduct) {
+                 if ($whmcsProduct) {
 
                      AQLog::info( json_encode([
                          "message" => "Got WHMCS Product",
-                         "data" => $whmcsLocalProduct
+                         "data" => $whmcsProduct
                      ]) );
 
-                     $productId = $whmcsLocalProduct->local_product_id;
+                     $productId = $whmcsProduct->local_product_id;
 
                      $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
 
@@ -552,10 +555,10 @@ class ProductsController extends Controller {
                             "product_id" => $productId
                         ])->delete();
 
-                        $class = 'App\\Models\\'.$whmcsLocalProduct->class;
+                        $class = 'App\\Models\\'.$whmcsProduct->class;
 
                          AQLog::info( json_encode([
-                             "message" => "Removing Product " . $whmcsLocalProduct->name . " from " . $user->email . " user.",
+                             "message" => "Removing Product " . $whmcsProduct->name . " from " . $user->email . " user.",
                              "mode" => "debug",
                              "ip" => request()->ip(),
                              "ok" => true,
@@ -567,7 +570,7 @@ class ProductsController extends Controller {
                         ])->delete();
 
                          return response()->json([
-                             "message" => "Removed Product " . $whmcsLocalProduct->name . " from " . $user->email . " user.",
+                             "message" => "Removed Product " . $whmcsProduct->name . " from " . $user->email . " user.",
                              "okay" => true,
                              "success" => true,
                          ]);

@@ -13,6 +13,7 @@ class WhmcsProduct extends Model
 
     protected $fillable = [
 		'id' ,
+        'pid',
 		'name' ,
 		'class',
 		'local_product_id',

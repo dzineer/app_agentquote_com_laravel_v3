@@ -207,7 +207,7 @@ Route::get('/l/{token}', function ($token, Request $request) {
 
     }
 
-    return abort(405);
+    abort(405);
 
 /*    dd([
         $tokenUser,
