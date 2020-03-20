@@ -493,6 +493,8 @@ class ProductsController extends Controller {
                             }
                         }
 
+
+
                         DB::commit();
 
                         AQLog::info(json_encode($payload));
@@ -647,6 +649,12 @@ class ProductsController extends Controller {
                         $class::where([
                             "user_id" => $user->id
                         ])->delete();
+
+                        if ($whmcsProduct->class === "LandingPageUser") {
+                            UserDomain::where([
+                                'user_id' => $user->id
+                            ])->delete();
+                        }
 
                          return response()->json([
                              "message" => "Removed Product " . $whmcsProduct->name . " from " . $user->email . " user.",
