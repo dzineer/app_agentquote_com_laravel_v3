@@ -171,12 +171,6 @@ class ProductsController extends Controller {
                     ]);
                 }
 
-                if (!$user) {
-                    AQLog::info(print_r([
-                        "message" => "User does not exist. Creating...",
-                    ], true));
-                }
-
                 if (!$user
                       && $request->has('whmcs_password')
                       && $request->has('whmcs_firstname')
@@ -235,7 +229,7 @@ class ProductsController extends Controller {
                     AQLog::info(print_r([
                         "message" => "Creating user...",
                         // password should already be hashed
-                        'password' => $request->input('whmcs_password'),
+                        'password' => Hash::make($request->input('whmcs_password')),
                         'email' => $request->input('whmcs_email'),
                         'fname' => $request->input('whmcs_firstname'),
                         'lname' => $request->input('whmcs_lastname'),
@@ -263,8 +257,7 @@ class ProductsController extends Controller {
 
                     AQLog::info(print_r([
                         // password should already be hashed
-                        'message' => "New User",
-                        'user' => $user
+                        'message' => "New User"
                     ], true));
 
                     $roleUser = RoleUser::create([
