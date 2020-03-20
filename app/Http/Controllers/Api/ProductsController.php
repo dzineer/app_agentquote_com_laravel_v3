@@ -580,7 +580,7 @@ class ProductsController extends Controller {
              'token' => 'required|max:32',
              'username' => 'required:max:32',
              'whmcs_email' => 'required:max:128',
-             'whmcs_product_name' => 'required:max:128',
+             'whmcs_product_id' => 'required:max:128',
          //    'user_id' => 'required:max:32',
          ]);
 
