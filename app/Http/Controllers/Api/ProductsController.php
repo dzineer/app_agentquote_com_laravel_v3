@@ -345,22 +345,6 @@ class ProductsController extends Controller {
 
                 }
 
-                if(UserDomain::where([
-                    'user_id' => $user->id
-                ])->first()) {
-                    AQLog::info(print_r([
-                        "message" => "User has a domain already registered",
-                    ], true));
-
-                    DB::rollBack();
-
-                    return response()->json([
-                        "data" => request()->all(),
-                        "message" => "User has a domain already registered",
-                        "success" => false,
-                    ]);
-                }
-
                 AQLog::info(json_encode([
                     "message" => "Got User",
                     "data" => $user
