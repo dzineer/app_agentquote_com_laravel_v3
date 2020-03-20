@@ -182,6 +182,7 @@ class ProductsController extends Controller {
                       && $request->has('whmcs_domain')
                 ) {
 
+                    $affiliateGroup = null;
 
                     AQLog::info(print_r([
                         "message" => "User does not exist. Creating...",
@@ -223,6 +224,19 @@ class ProductsController extends Controller {
 
                             $affiliateGroup = AffiliateGroup::where(["affiliate_id" => $affiliate_id])->first();
 
+                        } else {
+                            AQLog::info(print_r([
+                                "message" => "Affiliate does not exist.",
+                                "affiliate_name" => $request->input('whmcs_affiliate')
+                            ], true));
+
+                            DB::rollBack();
+
+                            return response()->json([
+                                "data" => request()->all(),
+                                "message" => "Affiliate does not exist.",
+                                "success" => false,
+                            ]);
                         }
                     }
 
