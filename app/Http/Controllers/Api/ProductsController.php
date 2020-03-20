@@ -139,6 +139,11 @@ class ProductsController extends Controller {
 
         if($request->has('whmcs_product_id') && $request->has('whmcs_email') ) {
 
+            AQLog::info(json_encode([
+                "message" => "Product Id was passed",
+                "product_id" => $request->input('whmcs_product_id'),
+            ]));
+
             try {
 
                 DB::beginTransaction();
