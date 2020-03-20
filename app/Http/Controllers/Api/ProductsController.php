@@ -611,7 +611,9 @@ class ProductsController extends Controller {
                      "data" => $user
                  ]) );
 
-                 $whmcsProduct = WhmcsProduct::where(["name" => $whmcsProductId])->first();
+                 $whmcs_product_id = $request->input('whmcs_product_id');
+
+                 $whmcsProduct = WhmcsProduct::where(["pid" => $whmcs_product_id])->first();
 
                  if ($whmcsProduct) {
 
