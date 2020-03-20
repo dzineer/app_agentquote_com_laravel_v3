@@ -209,10 +209,10 @@ class ProductsController extends Controller {
 
                         $affiliate = Affiliate::where(["name" => $request->input('whmcs_affiliate')])->first();
 
-                        /*                    AQLog::info( print_r([
-                                                "message" => "Affiliate",
-                                                "data" => $affiliate
-                                            ], true) );*/
+                        AQLog::info( print_r([
+                            "message" => "Affiliate",
+                            "data" => $affiliate
+                        ], true) );
 
                         if ($affiliate) {
 
@@ -238,6 +238,19 @@ class ProductsController extends Controller {
                                 "success" => false,
                             ]);
                         }
+                    } else {
+                        AQLog::info(print_r([
+                            "message" => "Affiliate is required.",
+                            "affiliate_name" => $request->input('whmcs_affiliate')
+                        ], true));
+
+                        DB::rollBack();
+
+                        return response()->json([
+                            "data" => request()->all(),
+                            "message" => "Affiliate is required.",
+                            "success" => false,
+                        ]);
                     }
 
                     AQLog::info(print_r([
