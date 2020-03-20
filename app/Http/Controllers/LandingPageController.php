@@ -263,7 +263,7 @@ class LandingPageController extends BackendController
             'portrait' => 'max:300'
         ]);
 
-        $profile = $user->profile;
+        // $profile = $user->profile;
         $profileUpdated = false;
         $fieldsToUpdate = [];
 
