@@ -101,7 +101,7 @@ class ProductsController extends Controller {
         }
 
         AQLog::info( json_encode([
-            "data" => request()->all(),
+            "request all" => request()->all(),
         ]) );
 
         Log::info(json_encode([
