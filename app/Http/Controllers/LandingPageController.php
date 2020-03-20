@@ -264,6 +264,11 @@ class LandingPageController extends BackendController
         ]);
 
         // $profile = $user->profile;
+
+        $profile = Profile::where([
+            "user_id" => $user->id
+        ])->first();
+
         $profileUpdated = false;
         $fieldsToUpdate = [];
 
