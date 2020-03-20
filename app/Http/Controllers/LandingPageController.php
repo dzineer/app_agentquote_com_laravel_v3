@@ -308,19 +308,19 @@ class LandingPageController extends BackendController
                 case 'png':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
                     $fieldsToUpdate["logo"] = '/storage/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
-                    $fieldsToUpdate["profile"] = null;
+                    $fieldsToUpdate["portrait"] = null;
                     $profileUpdated = true;
                     break;
                 case 'jpg':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
                     $fieldsToUpdate["logo"] = '/storage/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
-                    $fieldsToUpdate["profile"] = null;
+                    $fieldsToUpdate["portrait"] = null;
                     $profileUpdated = true;
                     break;
                 case 'gif':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
                     $fieldsToUpdate["logo"] = '/storage/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
-                    $fieldsToUpdate["profile"] = null;
+                    $fieldsToUpdate["portrait"] = null;
                     $profileUpdated = true;
                     break;
 
@@ -328,6 +328,7 @@ class LandingPageController extends BackendController
             }
 
         }
+
 
         if (! $request->hasFile('portrait') && $request->has('portrait') && $request->input('portrait')  === 'null') {
             $fieldsToUpdate["portrait"] = null;
@@ -348,6 +349,7 @@ class LandingPageController extends BackendController
                 $profileUpdated = true;
             }
         }
+
 
         if ($request->has('product_category')) {
             $category_id = $request->input('product_category');
