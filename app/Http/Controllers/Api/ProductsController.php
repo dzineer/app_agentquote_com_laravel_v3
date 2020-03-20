@@ -336,27 +336,6 @@ class ProductsController extends Controller {
                         'profileUser' => $profileUser
                     ], true));
 
-                    if(UserDomain::where([
-                        'domain' => $request->input('whmcs_domain')
-                    ])->first()) {
-                        AQLog::info(print_r([
-                            "message" => "Domain not available",
-                        ], true));
-
-                        DB::rollBack();
-
-                        return response()->json([
-                            "data" => request()->all(),
-                            "message" => "Domain not available",
-                            "success" => false,
-                        ]);
-                    }
-
-                    UserDomain::create([
-                        'user_id' => $user->id,
-                        'domain' => $request->input('whmcs_domain')
-                    ]);
-
                     AQLog::info(print_r([
                         "message" => "Domain name added successfully",
                         "data" => $request->input('whmcs_domain')
@@ -365,6 +344,27 @@ class ProductsController extends Controller {
                     $createdNewUser = true;
 
                 }
+
+                if(UserDomain::where([
+                    'user_id' => $user->id
+                ])->first()) {
+                    AQLog::info(print_r([
+                        "message" => "User has a domain already registered",
+                    ], true));
+
+                    DB::rollBack();
+
+                    return response()->json([
+                        "data" => request()->all(),
+                        "message" => "User has a domain already registered",
+                        "success" => false,
+                    ]);
+                }
+
+                UserDomain::create([
+                    'user_id' => $user->id,
+                    'domain' => $request->input('whmcs_domain')
+                ]);
 
                 AQLog::info(json_encode([
                     "message" => "Got User",
