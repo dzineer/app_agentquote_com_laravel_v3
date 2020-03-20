@@ -133,6 +133,11 @@ class ProductsController extends Controller {
         $createdNewUser = false;
         $user = null;
 
+        AQLog::info(json_encode([
+            "message" => "Product Id was passed",
+            "product_id" => !! $request->has('whmcs_product_id') && $request->has('whmcs_email') ? "Has required Parameters." : "Does not have required parameters."
+        ]));
+
         if($request->has('whmcs_product_id') && $request->has('whmcs_email') ) {
 
             AQLog::info(json_encode([
