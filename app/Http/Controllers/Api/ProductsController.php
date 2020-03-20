@@ -361,11 +361,6 @@ class ProductsController extends Controller {
                     ]);
                 }
 
-                UserDomain::create([
-                    'user_id' => $user->id,
-                    'domain' => $request->input('whmcs_domain')
-                ]);
-
                 AQLog::info(json_encode([
                     "message" => "Got User",
                     "data" => $user
@@ -374,6 +369,26 @@ class ProductsController extends Controller {
                 $whmcs_product_id = $request->input('whmcs_product_id');
 
                 $whmcsProduct = WhmcsProduct::where(["pid" => $whmcs_product_id])->first();
+
+                if ($whmcsProduct->class === "LandingPageUser") {
+
+                    if (UserDomain::where([
+                        'user_id' => $user->id
+                    ])->exists()) {
+                        UserDomain::where([
+                            'user_id' => $user->id
+                        ])->delete();
+                    }
+
+                    AQLog::info(json_encode([
+                        "message" => "Adding user domain " . $request->input('whmcs_domain'),
+                    ]));
+
+                    UserDomain::create([
+                        'user_id' => $user->id,
+                        'domain' => $request->input('whmcs_domain')
+                    ]);
+                }
 
                 if ($whmcsProduct) {
 
