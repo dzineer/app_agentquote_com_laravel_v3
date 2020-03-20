@@ -170,6 +170,12 @@ class ProductsController extends Controller {
                     ]);
                 }
 
+                if (!$user) {
+                    AQLog::info(print_r([
+                        "message" => "User does not exist. Creating...",
+                    ], true));
+                }
+
                 if (!$user && $request->has('whmcs_password') && $request->has('whmcs_firstname') && $request->has('whmcs_lastname') && $request->has('whmcs_street') && $request->has('whmcs_city') && $request->has('whmcs_state_abbrev')) {
 
                     AQLog::info(print_r([
