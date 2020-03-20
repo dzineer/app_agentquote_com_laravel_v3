@@ -366,7 +366,7 @@ class ProductsController extends Controller {
                         DB::rollBack();
 
                         return response()->json([
-                            "message" =>  "Domain name " . $request->input('whmcs_domain') . " already exists or user",
+                            "message" =>  "Domain name " . $request->input('whmcs_domain') . " already exists.",
                             "data" => request()->all(),
                             "user" => $user,
                             "success" => false,
