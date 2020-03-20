@@ -310,7 +310,7 @@ class ProductsController extends Controller {
                     ]));
 
                     $productId = $whmcsProduct->local_product_id;
-                    $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
+                    $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $whmcsProduct->local_product_id])->first();
 
                     if ($userSubscription) {
 
