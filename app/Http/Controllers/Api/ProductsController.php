@@ -357,11 +357,20 @@ class ProductsController extends Controller {
                 if ($whmcsProduct->class === "LandingPageUser") {
 
                     if (UserDomain::where([
-                        'user_id' => $user->id
-                    ])->exists()) {
-                        UserDomain::where([
-                            'user_id' => $user->id
-                        ])->delete();
+                        ['name' => $request->input('whmcs_domain')]
+                    ])->orWhere(["user_id" => $user->id])->exists()) {
+                        AQLog::info(print_r([
+                            "message" =>  "Domain name " . $request->input('whmcs_domain') . " already exists.",
+                        ], true));
+
+                        DB::rollBack();
+
+                        return response()->json([
+                            "message" =>  "Domain name " . $request->input('whmcs_domain') . " already exists.",
+                            "data" => request()->all(),
+                            "user" => $user,
+                            "success" => false,
+                        ]);
                     }
 
                     AQLog::info(json_encode([
@@ -383,6 +392,7 @@ class ProductsController extends Controller {
 
                     $productId = $whmcsProduct->local_product_id;
                     $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $whmcsProduct->local_product_id])->first();
+
 
                     if ($userSubscription) {
 
