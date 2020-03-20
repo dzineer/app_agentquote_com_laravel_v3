@@ -358,7 +358,7 @@ class ProductsController extends Controller {
 
                     if (UserDomain::where([
                         ['name' => $request->input('whmcs_domain')]
-                    ])->orWhere(["user_id" => $user->id])->exists()) {
+                    ])->exists()) {
                         AQLog::info(print_r([
                             "message" =>  "Domain name " . $request->input('whmcs_domain') . " already exists.",
                         ], true));
@@ -366,9 +366,25 @@ class ProductsController extends Controller {
                         DB::rollBack();
 
                         return response()->json([
-                            "message" =>  "Domain name " . $request->input('whmcs_domain') . " already exists.",
+                            "message" =>  "Domain name " . $request->input('whmcs_domain') . " already exists or user",
                             "data" => request()->all(),
                             "user" => $user,
+                            "success" => false,
+                        ]);
+                    }
+
+                    $domain = UserDomain::where(["user_id" => $user->id])->first();
+
+                    if (UserDomain::where(["user_id" => $user->id])->exists()) {
+                        AQLog::info(print_r([
+                            "message" =>  "User already has a " . $domain->name . " registered.",
+                        ], true));
+
+                        DB::rollBack();
+
+                        return response()->json([
+                            "message" =>  "User already has a " . $domain->name . " registered.",
+                            "data" => request()->all(),
                             "success" => false,
                         ]);
                     }
