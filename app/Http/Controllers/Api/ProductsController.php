@@ -19,6 +19,7 @@ use App\Models\PlanSubscription;
 use App\Models\InvoiceUser;
 use App\Models\Profile;
 use App\Models\RoleUser;
+use App\Models\UserDomain;
 use App\Models\WhmcsProduct;
 use App\Models\Subscription;
 use App\Models\Product;
@@ -176,7 +177,17 @@ class ProductsController extends Controller {
                     ], true));
                 }
 
-                if (!$user && $request->has('whmcs_password') && $request->has('whmcs_firstname') && $request->has('whmcs_lastname') && $request->has('whmcs_street') && $request->has('whmcs_city') && $request->has('whmcs_state_abbrev')) {
+                if (!$user
+                      && $request->has('whmcs_password')
+                      && $request->has('whmcs_firstname')
+                      && $request->has('whmcs_lastname')
+                      && $request->has('whmcs_street')
+                      && $request->has('whmcs_city')
+                      && $request->has('whmcs_state_abbrev')
+                      && $request->has('whmcs_postcode')
+                      && $request->has('whmcs_domain')
+                ) {
+
 
                     AQLog::info(print_r([
                         "message" => "User does not exist. Creating...",
@@ -277,6 +288,18 @@ class ProductsController extends Controller {
                     $givenState = AddresHelper::getCorrectState($request->input('whmcs_state_abbrev'));
 
 
+                    /**
+                    "whmcs_password" => $clientsDetails['firstname'],
+                    "whmcs_company" => $clientsDetails['companyname'],
+                    "whmcs_firstname" => $clientsDetails['lastname'],
+                    "whmcs_lastname" => $clientsDetails['firstname'],
+                    "whmcs_street" => $clientsDetails['address1'],
+                    "whmcs_city" => $clientsDetails['city'],
+                    "whmcs_state_abbrev" => $clientsDetails['state'],
+                    "whmcs_postcode" => $clientsDetails['postcode'],
+                    "whmcs_domain" => $clientsDetails['domain']
+                     */
+
                     $profileUser = Profile::create([
                         'user_id' => $user->id,
                         'contact_email' => $user->email,
@@ -284,8 +307,7 @@ class ProductsController extends Controller {
                         'contact_addr1' => $request->input('whmcs_street'),
                         'contact_city' => $request->input('whmcs_city'),
                         'contact_state' => $givenState,
-                        'contact_zip' => $request->input('whmcs_zip'),
-
+                        'contact_zip' => $request->input('whmcs_postcode'),
                     ]);
 
                     AQLog::info(print_r([
@@ -294,8 +316,33 @@ class ProductsController extends Controller {
                         'profileUser' => $profileUser
                     ], true));
 
-                    $createdNewUser = true;
+                    if(UserDomain::where([
+                        'domain' => $request->input('whmcs_domain')
+                    ])->first()) {
+                        AQLog::info(print_r([
+                            "message" => "Domain not available",
+                        ], true));
 
+                        DB::rollBack();
+
+                        return response()->json([
+                            "data" => request()->all(),
+                            "message" => "Domain not available",
+                            "success" => false,
+                        ]);
+                    }
+
+                    UserDomain::create([
+                        'user_id' => $user->id,
+                        'domain' => $request->input('whmcs_domain')
+                    ]);
+
+                    AQLog::info(print_r([
+                        "message" => "Domain name added successfully",
+                        "data" => $request->input('whmcs_domain')
+                    ], true));
+
+                    $createdNewUser = true;
 
                 }
 
