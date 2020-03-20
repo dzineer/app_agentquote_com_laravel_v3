@@ -651,9 +651,14 @@ class ProductsController extends Controller {
                         ])->delete();
 
                         if ($whmcsProduct->class === "LandingPageUser") {
-                            UserDomain::where([
+
+                            if (UserDomain::where([
                                 'user_id' => $user->id
-                            ])->delete();
+                            ])->exists()) {
+                                UserDomain::where([
+                                    'user_id' => $user->id
+                                ])->delete();
+                            }
                         }
 
                          return response()->json([
