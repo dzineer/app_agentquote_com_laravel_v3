@@ -70,7 +70,7 @@ class UsersController extends Controller
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
-            'email' => 'required'
+            'whmcs_email' => 'required'
         ]);
 
         // Agent Quote's WHMCS Security
@@ -86,7 +86,7 @@ class UsersController extends Controller
         }
 
         $user = User::where([
-            "email" => $data['email']
+            "email" => $data['whmcs_email']
         ])->first();
 
         if( !$user ) {
@@ -111,7 +111,7 @@ class UsersController extends Controller
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
-            'email' => 'required'
+            'whmcs_email' => 'required'
         ]);
 
         // Agent Quote's WHMCS Security
@@ -127,7 +127,7 @@ class UsersController extends Controller
         }
 
         $user = User::where([
-            "email" => $data['email']
+            "email" => $data['whmcs_email']
         ])->first();
 
         if( !$user ) {
@@ -146,6 +146,7 @@ class UsersController extends Controller
         return response()->json([
             "message" => "User disabled.",
             "data" => $user,
+            "ok" => true,
             "success" => true,
         ]);
 
@@ -157,7 +158,7 @@ class UsersController extends Controller
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
-            'email' => 'required'
+            'whmcs_email' => 'required'
         ]);
 
         // Agent Quote's WHMCS Security
@@ -173,7 +174,7 @@ class UsersController extends Controller
         }
 
         $user = User::where([
-            "email" => $data['email']
+            "email" => $data['whmcs_email']
         ])->first();
 
         if( !$user ) {
@@ -191,6 +192,7 @@ class UsersController extends Controller
         return response()->json([
             "message" => "User enabled.",
             "data" => $user,
+            "ok" => true,
             "success" => true,
         ]);
     }
