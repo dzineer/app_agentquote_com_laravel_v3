@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Helpers\AddresHelper;
 use App\Libraries\ProductConfig;
+use App\Libraries\Utilities\TokenGenerator;
 use App\Libraries\ZohoProxyUpdate;
 use App\Models\Affiliate;
 use App\Models\AffiliateGroup;
@@ -36,7 +37,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use App\Facades\AQLog;
 use App\Subscriptions\SubscriptionsDispatcher;
-use Libraries\Utilities\TokenGenerator;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
