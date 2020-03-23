@@ -48,6 +48,7 @@ class LoginController extends Controller
     protected function credentials(Request $request)
     {
         $credentials = $request->only($this->username(), 'password'); // get data from login form
+        dd(Arr::add($credentials, 'active', self::ACTIVE));
         return Arr::add($credentials, 'active', self::ACTIVE);
     }
 
