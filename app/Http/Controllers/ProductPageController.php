@@ -64,7 +64,8 @@ class ProductPageController extends Controller
             return abort( 405, 'Page Not Found!' );
         }
 
-        // dd($user);
+
+        dd($user);
 
 
         if ( ! $user || $user->active === self::NOT_ACTIVE) {
