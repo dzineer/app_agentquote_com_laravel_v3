@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Facades\AQLog;
 use App\Models\QuoterUser;
 use App\Models\Subscription;
 use App\User;
@@ -16,6 +17,13 @@ use App\Api\QuoterUsersApiFacade;
  */
 class QuoterUsersApiController extends Controller
 {
+    /**
+     * @return bool
+     */
+    private function isAllowed() {
+        return true;
+        return '140.82.47.226' === request()->ip();
+    }
 
     /**
      * @param Request $request
@@ -24,6 +32,27 @@ class QuoterUsersApiController extends Controller
      */
     public function getQuoterUser(Request $request)
     {
+        if (!$this->isAllowed()) {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]) );
+
+            return response()->json([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]);
+        }
+
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
@@ -41,6 +70,27 @@ class QuoterUsersApiController extends Controller
      */
     public function disableQuoterUser(Request $request)
     {
+        if (!$this->isAllowed()) {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]) );
+
+            return response()->json([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]);
+        }
+
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
@@ -58,6 +108,27 @@ class QuoterUsersApiController extends Controller
      */
     public function enableQuoterUser(Request $request)
     {
+        if (!$this->isAllowed()) {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]) );
+
+            return response()->json([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]);
+        }
+
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',

@@ -13,13 +13,24 @@ ini_set('display_errors', 1);
 
 class ProductUsersApiController extends Controller {
 
-    public function assignUserProduct(Request $request) {
+    /**
+     * @return bool
+     */
+    private function isAllowed() {
+        return true;
+        return '140.82.47.226' === request()->ip();
+    }
 
-        // return "hey";
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function assignUserProduct(Request $request) {
 
         if (!$this->isAllowed()) {
 
-            Log::info( json_encode([
+            AQLog::info( json_encode([
                 "message" => "Invalid IP Address",
                 "data" => request()->all(),
                 "mode" => "debug",
@@ -64,13 +75,18 @@ class ProductUsersApiController extends Controller {
         return (new ProductUsersApiFacade())->assignUserProduct($data);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
     public function removeUserProduct(Request $request) {
 
         // return "hey";
 
         if (!$this->isAllowed()) {
 
-            Log::info( json_encode([
+            AQLog::info( json_encode([
                 "message" => "Invalid IP Address",
                 "data" => request()->all(),
                 "mode" => "debug",
