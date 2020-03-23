@@ -136,6 +136,8 @@ use App\Models\Profile;
     });
 }*/
 
+const USER_ACTIVE = 1;
+
 Route::get('/', function () {
     return view('landing-page-sections', []);
 });
@@ -200,9 +202,12 @@ Route::get('/l/{token}', function ($token, Request $request) {
             'id' => $tokenUser->user_id
         ])->first();
 
-        if ($user) {
+        if ($user && $user->active === USER_ACTIVE) {
             Auth::loginUsingId($user->id);
             return response()->redirectTo('/dashboard');
+        }
+        else {
+            abort(405);
         }
 
     }
