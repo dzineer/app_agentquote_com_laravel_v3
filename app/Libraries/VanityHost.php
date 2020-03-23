@@ -11,8 +11,9 @@ use App\Libraries\LandingPageDetails;
 class VanityHost
 {
     /**
-     * @param \Illuminate\Http\Request $request
-     *
+     * @param $user
+     * @param \App\Libraries\iLandingPageDetails $landingPageDetails
+     * @param string $template
      * @return mixed
      */
     public function byHost( $user, iLandingPageDetails $landingPageDetails, $template = '') {
