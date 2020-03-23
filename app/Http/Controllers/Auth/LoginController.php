@@ -51,7 +51,7 @@ class LoginController extends Controller
         $credentials = $request->only($this->username(), 'password'); // get data from login form
 
         AQLog::info(json_encode([
-            "credentials" => $credentials
+            "credentials" => $this->username()
         ]));
 
         return Arr::add($credentials, 'active', self::ACTIVE);
