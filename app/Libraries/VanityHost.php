@@ -40,8 +40,6 @@ class VanityHost
 
         $company = $this->genCompanyDetails( $user, $profile );
 
-        // dnd($company);
-
         $data['version'] = 'v3';
 
         $data['company'] = $company;
