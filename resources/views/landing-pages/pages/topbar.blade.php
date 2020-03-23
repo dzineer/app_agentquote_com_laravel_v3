@@ -3,5 +3,5 @@
         @if($branding['use_logo'])
         <header-logo path="{!! $user->profile->logo !!}" target="self" link="/"></header-logo>
         @else
-            {{ $branding['company']['name'] }}
+            <header-name name="{!! $branding['company']['name'] !!}"></header-name>
         @endif
