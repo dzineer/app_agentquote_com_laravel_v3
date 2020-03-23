@@ -80,7 +80,7 @@ Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\ProductUsersApiCo
 // Users Api
 Route::post('/user.get',  [\App\Http\Controllers\Api\UsersApiController::class, 'getUser'])->name('api-request.user.get');
 Route::post('/user.password.update',  [\App\Http\Controllers\Api\UsersApiController::class, 'changePassword'])->name('api-request.user.password-update');
-Route::post('/user.disable',  [\App\Http\Controllers\Api\UsersApiController::class, 'disableSUser'])->name('api-request.user.disable');
+Route::post('/user.disable',  [\App\Http\Controllers\Api\UsersApiController::class, 'disableUser'])->name('api-request.user.disable');
 Route::post('/user.enable',  [\App\Http\Controllers\Api\UsersApiController::class, 'enableUser'])->name('api-request.user.enable');
 
 // Affiliates Api
