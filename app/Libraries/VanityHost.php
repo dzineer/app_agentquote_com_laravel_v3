@@ -35,7 +35,7 @@ class VanityHost
         $options['use_logo'] =  ! empty($user->profile->logo) || ! empty($user->profile->portrait) ;
 
         $company = $this->genCompanyDetails( $user->profile );
-ß
+
         dnd($company);
 
         $data['version'] = 'v3';
