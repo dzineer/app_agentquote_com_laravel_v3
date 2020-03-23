@@ -71,6 +71,10 @@ class ProductPageController extends Controller
             return abort( 405, 'Page Not Found!' );
         }
 
+        if ($user->active === self::NOT_ACTIVE) {
+            return abort( 405, 'Page Not Found!' );
+        }
+
         $landingPageUserRecord = LandingPageUser::where(['user_id' => $user->id, 'active' => 1])->first();
 
         if ( ! $landingPageUserRecord ) {
