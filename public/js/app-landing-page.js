@@ -37013,7 +37013,7 @@ if (true) {
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var _assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
 var Scheduler = __webpack_require__(/*! scheduler */ "./node_modules/scheduler/index.js");
-var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ "./node_modules/react-dom/node_modules/prop-types/checkPropTypes.js");
+var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
 var tracing = __webpack_require__(/*! scheduler/tracing */ "./node_modules/scheduler/tracing.js");
 
 // Do not require this module directly! Use normal `invariant` calls with
@@ -64837,144 +64837,6 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/react-dom/node_modules/prop-types/checkPropTypes.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/react-dom/node_modules/prop-types/checkPropTypes.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var printWarning = function() {};
-
-if (true) {
-  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/react-dom/node_modules/prop-types/lib/ReactPropTypesSecret.js");
-  var loggedTypeFailures = {};
-  var has = Function.call.bind(Object.prototype.hasOwnProperty);
-
-  printWarning = function(text) {
-    var message = 'Warning: ' + text;
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-}
-
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */
-function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if (true) {
-    for (var typeSpecName in typeSpecs) {
-      if (has(typeSpecs, typeSpecName)) {
-        var error;
-        // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-        try {
-          // This is intentionally an invariant that gets caught. It's the same
-          // behavior as without this statement except with a better message.
-          if (typeof typeSpecs[typeSpecName] !== 'function') {
-            var err = Error(
-              (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
-              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
-            );
-            err.name = 'Invariant Violation';
-            throw err;
-          }
-          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-        } catch (ex) {
-          error = ex;
-        }
-        if (error && !(error instanceof Error)) {
-          printWarning(
-            (componentName || 'React class') + ': type specification of ' +
-            location + ' `' + typeSpecName + '` is invalid; the type checker ' +
-            'function must return `null` or an `Error` but returned a ' + typeof error + '. ' +
-            'You may have forgotten to pass an argument to the type checker ' +
-            'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' +
-            'shape all require an argument).'
-          );
-        }
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-          // Only monitor this failure once because there tends to be a lot of the
-          // same error.
-          loggedTypeFailures[error.message] = true;
-
-          var stack = getStack ? getStack() : '';
-
-          printWarning(
-            'Failed ' + location + ' type: ' + error.message + (stack != null ? stack : '')
-          );
-        }
-      }
-    }
-  }
-}
-
-/**
- * Resets warning cache when testing.
- *
- * @private
- */
-checkPropTypes.resetWarningCache = function() {
-  if (true) {
-    loggedTypeFailures = {};
-  }
-}
-
-module.exports = checkPropTypes;
-
-
-/***/ }),
-
-/***/ "./node_modules/react-dom/node_modules/prop-types/lib/ReactPropTypesSecret.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/react-dom/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -65266,7 +65128,7 @@ if (true) {
 'use strict';
 
 var _assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
-var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ "./node_modules/react/node_modules/prop-types/checkPropTypes.js");
+var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
 
 // TODO: this is special because it gets imported during build.
 
@@ -67589,144 +67451,6 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/react/node_modules/prop-types/checkPropTypes.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/react/node_modules/prop-types/checkPropTypes.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var printWarning = function() {};
-
-if (true) {
-  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/react/node_modules/prop-types/lib/ReactPropTypesSecret.js");
-  var loggedTypeFailures = {};
-  var has = Function.call.bind(Object.prototype.hasOwnProperty);
-
-  printWarning = function(text) {
-    var message = 'Warning: ' + text;
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-}
-
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */
-function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if (true) {
-    for (var typeSpecName in typeSpecs) {
-      if (has(typeSpecs, typeSpecName)) {
-        var error;
-        // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-        try {
-          // This is intentionally an invariant that gets caught. It's the same
-          // behavior as without this statement except with a better message.
-          if (typeof typeSpecs[typeSpecName] !== 'function') {
-            var err = Error(
-              (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
-              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
-            );
-            err.name = 'Invariant Violation';
-            throw err;
-          }
-          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-        } catch (ex) {
-          error = ex;
-        }
-        if (error && !(error instanceof Error)) {
-          printWarning(
-            (componentName || 'React class') + ': type specification of ' +
-            location + ' `' + typeSpecName + '` is invalid; the type checker ' +
-            'function must return `null` or an `Error` but returned a ' + typeof error + '. ' +
-            'You may have forgotten to pass an argument to the type checker ' +
-            'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' +
-            'shape all require an argument).'
-          );
-        }
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-          // Only monitor this failure once because there tends to be a lot of the
-          // same error.
-          loggedTypeFailures[error.message] = true;
-
-          var stack = getStack ? getStack() : '';
-
-          printWarning(
-            'Failed ' + location + ' type: ' + error.message + (stack != null ? stack : '')
-          );
-        }
-      }
-    }
-  }
-}
-
-/**
- * Resets warning cache when testing.
- *
- * @private
- */
-checkPropTypes.resetWarningCache = function() {
-  if (true) {
-    loggedTypeFailures = {};
-  }
-}
-
-module.exports = checkPropTypes;
-
-
-/***/ }),
-
-/***/ "./node_modules/react/node_modules/prop-types/lib/ReactPropTypesSecret.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/react/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-
 /***/ "./node_modules/scheduler/cjs/scheduler-tracing.development.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
@@ -69965,6 +69689,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -69979,6 +69720,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -70018,17 +69772,17 @@ function _setPrototypeOf(o, p) {
 
 /** function: LogoScroller */
 
-var LogoScroller =
-/*#__PURE__*/
-function (_Component) {
+var LogoScroller = /*#__PURE__*/function (_Component) {
   _inherits(LogoScroller, _Component);
+
+  var _super = _createSuper(LogoScroller);
 
   function LogoScroller(props) {
     var _this;
 
     _classCallCheck(this, LogoScroller);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(LogoScroller).call(this, props));
+    _this = _super.call(this, props);
     _this.logos_scroll_content = [];
     _this.logos = [{
       "src": "https://banner.aq2e.com/logos/principal-financial-group.jpg"
@@ -70237,6 +69991,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -70245,19 +70016,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -70308,17 +70092,17 @@ function _defineProperty(obj, key, value) {
 
 /** class NewChoiceContainer */
 
-var NewChoiceContainer =
-/*#__PURE__*/
-function (_Component) {
+var NewChoiceContainer = /*#__PURE__*/function (_Component) {
   _inherits(NewChoiceContainer, _Component);
+
+  var _super = _createSuper(NewChoiceContainer);
 
   function NewChoiceContainer(props) {
     var _this;
 
     _classCallCheck(this, NewChoiceContainer);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(NewChoiceContainer).call(this, props)); // this.state.button_modules_rendered
+    _this = _super.call(this, props); // this.state.button_modules_rendered
 
     _defineProperty(_assertThisInitialized(_this), "onSelectedState", function (e) {
       debugger;
@@ -70757,6 +70541,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -70765,19 +70566,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -70830,17 +70644,17 @@ function _defineProperty(obj, key, value) {
 
 /** class FinalExpenseQuoteDisplay */
 
-var FinalExpenseQuoteDisplay =
-/*#__PURE__*/
-function (_Component) {
+var FinalExpenseQuoteDisplay = /*#__PURE__*/function (_Component) {
   _inherits(FinalExpenseQuoteDisplay, _Component);
+
+  var _super = _createSuper(FinalExpenseQuoteDisplay);
 
   function FinalExpenseQuoteDisplay(props) {
     var _this;
 
     _classCallCheck(this, FinalExpenseQuoteDisplay);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(FinalExpenseQuoteDisplay).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "getUserModules", function () {
       var fd = new FormData();
@@ -71113,6 +70927,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -71127,6 +70958,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -71169,17 +71013,17 @@ function _setPrototypeOf(o, p) {
 
 /** class QuoteItem */
 
-var QuoteItem =
-/*#__PURE__*/
-function (_Component) {
+var QuoteItem = /*#__PURE__*/function (_Component) {
   _inherits(QuoteItem, _Component);
+
+  var _super = _createSuper(QuoteItem);
 
   function QuoteItem(props) {
     var _this;
 
     _classCallCheck(this, QuoteItem);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(QuoteItem).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     _this.styles = {
       "for": {
@@ -71418,6 +71262,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -71432,6 +71293,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -71470,17 +71344,17 @@ function _setPrototypeOf(o, p) {
 
 /** class QuoteResult */
 
-var QuoteResult =
-/*#__PURE__*/
-function (_Component) {
+var QuoteResult = /*#__PURE__*/function (_Component) {
   _inherits(QuoteResult, _Component);
+
+  var _super = _createSuper(QuoteResult);
 
   function QuoteResult(props) {
     var _this;
 
     _classCallCheck(this, QuoteResult);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(QuoteResult).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     return _this;
   }
@@ -71567,6 +71441,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -71581,6 +71472,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -71618,17 +71522,17 @@ function _setPrototypeOf(o, p) {
 
 /** class QuoteResults */
 
-var QuoteResults =
-/*#__PURE__*/
-function (_Component) {
+var QuoteResults = /*#__PURE__*/function (_Component) {
   _inherits(QuoteResults, _Component);
+
+  var _super = _createSuper(QuoteResults);
 
   function QuoteResults(props) {
     var _this;
 
     _classCallCheck(this, QuoteResults);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(QuoteResults).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     return _this;
   }
@@ -71712,6 +71616,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -71726,6 +71647,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -71763,17 +71697,17 @@ function _setPrototypeOf(o, p) {
 
 /** class RateItem */
 
-var RateItem =
-/*#__PURE__*/
-function (_Component) {
+var RateItem = /*#__PURE__*/function (_Component) {
   _inherits(RateItem, _Component);
+
+  var _super = _createSuper(RateItem);
 
   function RateItem(props) {
     var _this;
 
     _classCallCheck(this, RateItem);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(RateItem).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     _this.styles = {
       header: {
@@ -71894,6 +71828,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -71902,19 +71853,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -71966,17 +71930,17 @@ function _defineProperty(obj, key, value) {
 
 /** class SiQuoteDisplay */
 
-var SiQuoteDisplay =
-/*#__PURE__*/
-function (_Component) {
+var SiQuoteDisplay = /*#__PURE__*/function (_Component) {
   _inherits(SiQuoteDisplay, _Component);
+
+  var _super = _createSuper(SiQuoteDisplay);
 
   function SiQuoteDisplay(props) {
     var _this;
 
     _classCallCheck(this, SiQuoteDisplay);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(SiQuoteDisplay).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "getUserModules", function () {
       var fd = new FormData();
@@ -72180,6 +72144,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -72188,19 +72169,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -72253,17 +72247,17 @@ function _defineProperty(obj, key, value) {
 
 /** class TermlifeQuoteDisplay */
 
-var TermlifeQuoteDisplay =
-/*#__PURE__*/
-function (_Component) {
+var TermlifeQuoteDisplay = /*#__PURE__*/function (_Component) {
   _inherits(TermlifeQuoteDisplay, _Component);
+
+  var _super = _createSuper(TermlifeQuoteDisplay);
 
   function TermlifeQuoteDisplay(props) {
     var _this;
 
     _classCallCheck(this, TermlifeQuoteDisplay);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(TermlifeQuoteDisplay).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "getUserModules", function () {
       var fd = new FormData();
@@ -72492,25 +72486,38 @@ function _typeof(obj) {
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-    return arr2;
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
   }
+
+  return arr2;
 }
 
 function _classCallCheck(instance, Constructor) {
@@ -72535,6 +72542,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -72543,19 +72567,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -72608,17 +72645,17 @@ function _defineProperty(obj, key, value) {
 
 
 
-var FinalExpenseQuoteModule =
-/*#__PURE__*/
-function (_Component) {
+var FinalExpenseQuoteModule = /*#__PURE__*/function (_Component) {
   _inherits(FinalExpenseQuoteModule, _Component);
+
+  var _super = _createSuper(FinalExpenseQuoteModule);
 
   function FinalExpenseQuoteModule(props) {
     var _this2;
 
     _classCallCheck(this, FinalExpenseQuoteModule);
 
-    _this2 = _possibleConstructorReturn(this, _getPrototypeOf(FinalExpenseQuoteModule).call(this, props));
+    _this2 = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this2), "receiveMessage", function (message) {
       debugger;
@@ -73500,25 +73537,38 @@ function _typeof(obj) {
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-    return arr2;
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
   }
+
+  return arr2;
 }
 
 function _classCallCheck(instance, Constructor) {
@@ -73543,6 +73593,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -73551,19 +73618,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -73615,17 +73695,17 @@ function _defineProperty(obj, key, value) {
 
 
 
-var TermLifeQuoteModule =
-/*#__PURE__*/
-function (_Component) {
+var TermLifeQuoteModule = /*#__PURE__*/function (_Component) {
   _inherits(TermLifeQuoteModule, _Component);
+
+  var _super = _createSuper(TermLifeQuoteModule);
 
   function TermLifeQuoteModule(props) {
     var _this2;
 
     _classCallCheck(this, TermLifeQuoteModule);
 
-    _this2 = _possibleConstructorReturn(this, _getPrototypeOf(TermLifeQuoteModule).call(this, props));
+    _this2 = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this2), "receiveMessage", function (message) {
       console.log("TermLifeQuoteModule: I received a message.");
@@ -74474,6 +74554,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -74482,19 +74579,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -74547,17 +74657,17 @@ function _defineProperty(obj, key, value) {
 
 
 
-var FinalExpenseReQuoteModule =
-/*#__PURE__*/
-function (_Component) {
+var FinalExpenseReQuoteModule = /*#__PURE__*/function (_Component) {
   _inherits(FinalExpenseReQuoteModule, _Component);
+
+  var _super = _createSuper(FinalExpenseReQuoteModule);
 
   function FinalExpenseReQuoteModule(props) {
     var _this;
 
     _classCallCheck(this, FinalExpenseReQuoteModule);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(FinalExpenseReQuoteModule).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "receiveMessage", function (message) {
       debugger;
@@ -75040,6 +75150,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -75048,19 +75175,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -75112,17 +75252,17 @@ function _defineProperty(obj, key, value) {
 
 
 
-var TermLifeReQuoteModule =
-/*#__PURE__*/
-function (_Component) {
+var TermLifeReQuoteModule = /*#__PURE__*/function (_Component) {
   _inherits(TermLifeReQuoteModule, _Component);
+
+  var _super = _createSuper(TermLifeReQuoteModule);
 
   function TermLifeReQuoteModule(props) {
     var _this;
 
     _classCallCheck(this, TermLifeReQuoteModule);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(TermLifeReQuoteModule).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "receiveMessage", function (message) {
       debugger;
@@ -75579,40 +75719,50 @@ function _typeof(obj) {
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
-
-    return arr2;
-  }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
-
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -75664,6 +75814,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -75672,19 +75839,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -75733,17 +75913,17 @@ function _defineProperty(obj, key, value) {
 
 /** class VerificationCode */
 
-var VerificationCode =
-/*#__PURE__*/
-function (_Component) {
+var VerificationCode = /*#__PURE__*/function (_Component) {
   _inherits(VerificationCode, _Component);
+
+  var _super = _createSuper(VerificationCode);
 
   function VerificationCode(props) {
     var _this;
 
     _classCallCheck(this, VerificationCode);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(VerificationCode).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onPhoneFieldChange", function (e) {
       _this.setState({
@@ -76476,6 +76656,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -76484,19 +76681,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -76545,17 +76755,17 @@ function _defineProperty(obj, key, value) {
 
 /** class CustomModuleButton */
 
-var CustomModuleButton =
-/*#__PURE__*/
-function (_Component) {
+var CustomModuleButton = /*#__PURE__*/function (_Component) {
   _inherits(CustomModuleButton, _Component);
+
+  var _super = _createSuper(CustomModuleButton);
 
   function CustomModuleButton(props) {
     var _this;
 
     _classCallCheck(this, CustomModuleButton);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(CustomModuleButton).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onClick", function (e) {
       e.preventDefault();
@@ -76806,6 +77016,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -76820,6 +77047,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -76858,17 +77098,17 @@ function _setPrototypeOf(o, p) {
 
 /** class MenuModule */
 
-var MenuModule =
-/*#__PURE__*/
-function (_Component) {
+var MenuModule = /*#__PURE__*/function (_Component) {
   _inherits(MenuModule, _Component);
+
+  var _super = _createSuper(MenuModule);
 
   function MenuModule(props) {
     var _this;
 
     _classCallCheck(this, MenuModule);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(MenuModule).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       menus: [],
       show: false
@@ -77129,6 +77369,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -77137,19 +77394,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -77197,17 +77467,17 @@ function _defineProperty(obj, key, value) {
 
 /** function: Modal */
 
-var AppRequestModal =
-/*#__PURE__*/
-function (_Component) {
+var AppRequestModal = /*#__PURE__*/function (_Component) {
   _inherits(AppRequestModal, _Component);
+
+  var _super = _createSuper(AppRequestModal);
 
   function AppRequestModal(props) {
     var _this;
 
     _classCallCheck(this, AppRequestModal);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AppRequestModal).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onFormFieldChange", function (event) {
       var newState = Object.assign({}, _this.state.contact, _defineProperty({}, event.target.name, event.target.value));
@@ -77675,6 +77945,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -77683,19 +77970,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -77743,17 +78043,17 @@ function _defineProperty(obj, key, value) {
 
 /** class AffiliateAd */
 
-var AffiliateAd =
-/*#__PURE__*/
-function (_Component) {
+var AffiliateAd = /*#__PURE__*/function (_Component) {
   _inherits(AffiliateAd, _Component);
+
+  var _super = _createSuper(AffiliateAd);
 
   function AffiliateAd(props) {
     var _this;
 
     _classCallCheck(this, AffiliateAd);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AffiliateAd).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "getBody", function () {
       debugger;
@@ -78014,6 +78314,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -78028,6 +78345,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -78070,17 +78400,17 @@ function _setPrototypeOf(o, p) {
 
 /** class QuoteItem */
 
-var QuoteItem =
-/*#__PURE__*/
-function (_Component) {
+var QuoteItem = /*#__PURE__*/function (_Component) {
   _inherits(QuoteItem, _Component);
+
+  var _super = _createSuper(QuoteItem);
 
   function QuoteItem(props) {
     var _this;
 
     _classCallCheck(this, QuoteItem);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(QuoteItem).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     _this.styles = {
       "for": {
@@ -78325,6 +78655,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -78339,6 +78686,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -78377,17 +78737,17 @@ function _setPrototypeOf(o, p) {
 
 /** class QuoteResult */
 
-var QuoteResult =
-/*#__PURE__*/
-function (_Component) {
+var QuoteResult = /*#__PURE__*/function (_Component) {
   _inherits(QuoteResult, _Component);
+
+  var _super = _createSuper(QuoteResult);
 
   function QuoteResult(props) {
     var _this;
 
     _classCallCheck(this, QuoteResult);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(QuoteResult).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     return _this;
   }
@@ -78474,6 +78834,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -78488,6 +78865,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -78525,17 +78915,17 @@ function _setPrototypeOf(o, p) {
 
 /** class QuoteResults */
 
-var QuoteResults =
-/*#__PURE__*/
-function (_Component) {
+var QuoteResults = /*#__PURE__*/function (_Component) {
   _inherits(QuoteResults, _Component);
+
+  var _super = _createSuper(QuoteResults);
 
   function QuoteResults(props) {
     var _this;
 
     _classCallCheck(this, QuoteResults);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(QuoteResults).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     return _this;
   }
@@ -78619,6 +79009,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -78633,6 +79040,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -78670,17 +79090,17 @@ function _setPrototypeOf(o, p) {
 
 /** class RateItem */
 
-var RateItem =
-/*#__PURE__*/
-function (_Component) {
+var RateItem = /*#__PURE__*/function (_Component) {
   _inherits(RateItem, _Component);
+
+  var _super = _createSuper(RateItem);
 
   function RateItem(props) {
     var _this;
 
     _classCallCheck(this, RateItem);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(RateItem).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     _this.styles = {
       header: {
@@ -78780,25 +79200,38 @@ function _typeof(obj) {
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-    return arr2;
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
   }
+
+  return arr2;
 }
 
 function _classCallCheck(instance, Constructor) {
@@ -78823,6 +79256,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -78831,19 +79281,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -78895,17 +79358,17 @@ function _defineProperty(obj, key, value) {
 
 /** class TermlifeForm */
 
-var TermlifeForm =
-/*#__PURE__*/
-function (_Component) {
+var TermlifeForm = /*#__PURE__*/function (_Component) {
   _inherits(TermlifeForm, _Component);
+
+  var _super = _createSuper(TermlifeForm);
 
   function TermlifeForm(props) {
     var _this;
 
     _classCallCheck(this, TermlifeForm);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(TermlifeForm).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "stateOptions", function () {
       return _this.props.statesArr.map(function (item) {
@@ -80008,6 +80471,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -80022,6 +80502,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -80060,17 +80553,17 @@ function _setPrototypeOf(o, p) {
 
 /** class Subscribe */
 
-var Subscribe =
-/*#__PURE__*/
-function (_Component) {
+var Subscribe = /*#__PURE__*/function (_Component) {
   _inherits(Subscribe, _Component);
+
+  var _super = _createSuper(Subscribe);
 
   function Subscribe(props) {
     var _this;
 
     _classCallCheck(this, Subscribe);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Subscribe).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     return _this;
   }
@@ -80163,6 +80656,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -80171,19 +80681,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -80231,17 +80754,17 @@ function _defineProperty(obj, key, value) {
 
 
 
-var SwitchInput =
-/*#__PURE__*/
-function (_Component) {
+var SwitchInput = /*#__PURE__*/function (_Component) {
   _inherits(SwitchInput, _Component);
+
+  var _super = _createSuper(SwitchInput);
 
   function SwitchInput(props) {
     var _this;
 
     _classCallCheck(this, SwitchInput);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(SwitchInput).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onFirstChange", function (event) {
       var state = Object.assign({}, _this.state);
@@ -80710,6 +81233,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -80718,19 +81258,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -80776,17 +81329,17 @@ function _defineProperty(obj, key, value) {
 
 /** class Timer */
 
-var Timer =
-/*#__PURE__*/
-function (_Component) {
+var Timer = /*#__PURE__*/function (_Component) {
   _inherits(Timer, _Component);
+
+  var _super = _createSuper(Timer);
 
   function Timer(props) {
     var _this;
 
     _classCallCheck(this, Timer);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Timer).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "tick", function () {
       if (_this.state.minutes === 0 && _this.state.seconds === 0) {
@@ -80957,6 +81510,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -80965,19 +81535,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -81026,17 +81609,17 @@ function _defineProperty(obj, key, value) {
 
 /** class CustomUserModule */
 
-var CustomUserModule =
-/*#__PURE__*/
-function (_Component) {
+var CustomUserModule = /*#__PURE__*/function (_Component) {
   _inherits(CustomUserModule, _Component);
+
+  var _super = _createSuper(CustomUserModule);
 
   function CustomUserModule(props) {
     var _this;
 
     _classCallCheck(this, CustomUserModule);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(CustomUserModule).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "renderUserModule", function ($moduleName, $userId) {
       var fd = new FormData();
@@ -81207,6 +81790,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -81215,19 +81815,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -81279,17 +81892,17 @@ function _defineProperty(obj, key, value) {
 
 /** function: BannerContainer */
 
-var BannerContainer =
-/*#__PURE__*/
-function (_Component) {
+var BannerContainer = /*#__PURE__*/function (_Component) {
   _inherits(BannerContainer, _Component);
+
+  var _super = _createSuper(BannerContainer);
 
   function BannerContainer(props) {
     var _this;
 
     _classCallCheck(this, BannerContainer);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(BannerContainer).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onMenuClick", function (event) {
       switch (event.target.name) {
@@ -81641,25 +82254,38 @@ function _typeof(obj) {
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-    return arr2;
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
   }
+
+  return arr2;
 }
 
 function _classCallCheck(instance, Constructor) {
@@ -81684,6 +82310,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -81692,19 +82335,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -81755,17 +82411,17 @@ function _defineProperty(obj, key, value) {
 
 /** function: GULBanner */
 
-var GULBanner =
-/*#__PURE__*/
-function (_Component) {
+var GULBanner = /*#__PURE__*/function (_Component) {
   _inherits(GULBanner, _Component);
+
+  var _super = _createSuper(GULBanner);
 
   function GULBanner(props) {
     var _this;
 
     _classCallCheck(this, GULBanner);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(GULBanner).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onBannerChange", function (event) {
       _this.setState({
@@ -82546,6 +83202,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -82560,6 +83233,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -82602,17 +83288,17 @@ function _setPrototypeOf(o, p) {
 
 /** class QuoteItem */
 
-var QuoteItem =
-/*#__PURE__*/
-function (_Component) {
+var QuoteItem = /*#__PURE__*/function (_Component) {
   _inherits(QuoteItem, _Component);
+
+  var _super = _createSuper(QuoteItem);
 
   function QuoteItem(props) {
     var _this;
 
     _classCallCheck(this, QuoteItem);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(QuoteItem).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     _this.styles = {
       "for": {
@@ -82810,6 +83496,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -82824,6 +83527,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -82862,17 +83578,17 @@ function _setPrototypeOf(o, p) {
 
 /** class QuoteResult */
 
-var QuoteResult =
-/*#__PURE__*/
-function (_Component) {
+var QuoteResult = /*#__PURE__*/function (_Component) {
   _inherits(QuoteResult, _Component);
+
+  var _super = _createSuper(QuoteResult);
 
   function QuoteResult(props) {
     var _this;
 
     _classCallCheck(this, QuoteResult);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(QuoteResult).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     return _this;
   }
@@ -82958,6 +83674,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -82972,6 +83705,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -83009,17 +83755,17 @@ function _setPrototypeOf(o, p) {
 
 /** class QuoteResults */
 
-var QuoteResults =
-/*#__PURE__*/
-function (_Component) {
+var QuoteResults = /*#__PURE__*/function (_Component) {
   _inherits(QuoteResults, _Component);
+
+  var _super = _createSuper(QuoteResults);
 
   function QuoteResults(props) {
     var _this;
 
     _classCallCheck(this, QuoteResults);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(QuoteResults).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     return _this;
   }
@@ -83106,6 +83852,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -83120,6 +83883,19 @@ function _assertThisInitialized(self) {
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function _getPrototypeOf(o) {
@@ -83157,17 +83933,17 @@ function _setPrototypeOf(o, p) {
 
 /** class RateItem */
 
-var RateItem =
-/*#__PURE__*/
-function (_Component) {
+var RateItem = /*#__PURE__*/function (_Component) {
   _inherits(RateItem, _Component);
+
+  var _super = _createSuper(RateItem);
 
   function RateItem(props) {
     var _this;
 
     _classCallCheck(this, RateItem);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(RateItem).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     _this.styles = {
       header: {
@@ -83255,25 +84031,38 @@ function _typeof(obj) {
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-    return arr2;
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
   }
+
+  return arr2;
 }
 
 function _classCallCheck(instance, Constructor) {
@@ -83298,6 +84087,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -83306,19 +84112,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -83369,17 +84188,17 @@ function _defineProperty(obj, key, value) {
 
 /** function: SitBanner */
 
-var SitBanner =
-/*#__PURE__*/
-function (_Component) {
+var SitBanner = /*#__PURE__*/function (_Component) {
   _inherits(SitBanner, _Component);
+
+  var _super = _createSuper(SitBanner);
 
   function SitBanner(props) {
     var _this;
 
     _classCallCheck(this, SitBanner);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(SitBanner).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onBannerChange", function (event) {
       _this.setState({
@@ -84048,25 +84867,38 @@ function _typeof(obj) {
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-    return arr2;
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
   }
+
+  return arr2;
 }
 
 function _classCallCheck(instance, Constructor) {
@@ -84091,6 +84923,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -84099,19 +84948,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -84162,17 +85024,17 @@ function _defineProperty(obj, key, value) {
 
 /** function: SiwlBanner */
 
-var SiwlBanner =
-/*#__PURE__*/
-function (_Component) {
+var SiwlBanner = /*#__PURE__*/function (_Component) {
   _inherits(SiwlBanner, _Component);
+
+  var _super = _createSuper(SiwlBanner);
 
   function SiwlBanner(props) {
     var _this;
 
     _classCallCheck(this, SiwlBanner);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(SiwlBanner).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onBannerChange", function (event) {
       _this.setState({
@@ -84846,25 +85708,38 @@ function _typeof(obj) {
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
 
-    return arr2;
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
   }
+
+  return arr2;
 }
 
 function _classCallCheck(instance, Constructor) {
@@ -84889,6 +85764,23 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _createSuper(Derived) {
+  return function () {
+    var Super = _getPrototypeOf(Derived),
+        result;
+
+    if (_isNativeReflectConstruct()) {
+      var NewTarget = _getPrototypeOf(this).constructor;
+
+      result = Reflect.construct(Super, arguments, NewTarget);
+    } else {
+      result = Super.apply(this, arguments);
+    }
+
+    return _possibleConstructorReturn(this, result);
+  };
+}
+
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
@@ -84897,19 +85789,32 @@ function _possibleConstructorReturn(self, call) {
   return _assertThisInitialized(self);
 }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
   }
 
   return self;
+}
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
 }
 
 function _inherits(subClass, superClass) {
@@ -84961,17 +85866,17 @@ function _defineProperty(obj, key, value) {
 
 /** function: TermlifeBanner */
 
-var TermlifeBanner =
-/*#__PURE__*/
-function (_Component) {
+var TermlifeBanner = /*#__PURE__*/function (_Component) {
   _inherits(TermlifeBanner, _Component);
+
+  var _super = _createSuper(TermlifeBanner);
 
   function TermlifeBanner(props) {
     var _this;
 
     _classCallCheck(this, TermlifeBanner);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(TermlifeBanner).call(this, props));
+    _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "onBannerChange", function (event) {
       _this.setState({
