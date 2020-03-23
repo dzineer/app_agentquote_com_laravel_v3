@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use Api\ProductUsersApiFacade;
+use App\Api\ProductUsersApiFacade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Facades\AQLog;

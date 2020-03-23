@@ -1,7 +1,6 @@
 <?php
 
-
-namespace Api;
+namespace App\Api;
 
 
 use App\Facades\AQLog;
