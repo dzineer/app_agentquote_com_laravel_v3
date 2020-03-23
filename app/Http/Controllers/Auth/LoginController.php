@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Facades\AQLog;
 use App\Http\Controllers\Controller;
 use App\Traits\DeviceLoginTrait;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -48,7 +49,11 @@ class LoginController extends Controller
     protected function credentials(Request $request)
     {
         $credentials = $request->only($this->username(), 'password'); // get data from login form
-        dd($credentials);
+
+        AQLog::info(json_encode([
+            "credentials" => $credentials
+        ]));
+
         return Arr::add($credentials, 'active', self::ACTIVE);
     }
 

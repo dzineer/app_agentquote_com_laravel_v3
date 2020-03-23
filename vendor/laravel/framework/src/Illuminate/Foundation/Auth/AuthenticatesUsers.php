@@ -2,9 +2,12 @@
 
 namespace Illuminate\Foundation\Auth;
 
+use App\Facades\AQLog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
+
+
 
 trait AuthenticatesUsers
 {
