@@ -29,7 +29,7 @@ class VanityHost
         $data['social_media'] = $this->genSocialMediaDetails( $user );
         // $data['ga_code'] = CustomModules::customModuleRender( 'google_analytics_module', $user['id'] );
         $data['ga_code'] = $landingPageDetails->getGACode();
-        
+
         $data['selected_state'] = $user->profile->contact_state;
         $data['user']           = $user;
         $options['use_logo'] =  ! empty($user->profile->logo) || ! empty($user->profile->portrait) ;
@@ -46,12 +46,12 @@ class VanityHost
 
        // dd($company);
 
-    //   dd($data);
+        dd($data);
 
         // return view( 'landing-pages.v3.quote_modules.underwritten.index', $data );
         return view( $template, $data );
     }
-   
+
     /**
      * @param $profile
      *
@@ -133,6 +133,6 @@ class VanityHost
 
         return json_encode( $socialMedia );
 
-    }    
+    }
 
 }

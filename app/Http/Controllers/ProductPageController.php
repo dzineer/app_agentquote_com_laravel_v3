@@ -15,7 +15,6 @@ use App\Libraries\LandingPageDetails;
 
 class ProductPageController extends Controller
 {
-    // public function index( Request $request, $subomain, $customModule ) {
     const NOT_ACTIVE = 0;
 
     public function index(Request $request ) {

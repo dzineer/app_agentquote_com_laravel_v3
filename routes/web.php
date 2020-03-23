@@ -428,14 +428,6 @@ Route::group(
     function() {
 
     Route::get('/', [\App\Http\Controllers\ProductPageController::class, 'index'])->name('landing-pages.domains.index');
-
-/*     Route::get('/termlife', [\App\Http\Controllers\InsuranceModuleControllers\TermLifePageModuleController::class, 'page'])->name('user.quote.insurance_modules.termlife');
-    Route::post('/termlife', [\App\Http\Controllers\InsuranceModuleControllers\TermLifePageModuleController::class, 'page'])->name('user.quote.insurance_modules.update.termlife');
-    Route::get('/fe', [\App\Http\Controllers\InsuranceModuleControllers\FinalExpensePageModuleController::class, 'page'])->name('user.quote.insurance_modules.fe');
-    Route::post('/fe', [\App\Http\Controllers\InsuranceModuleControllers\FinalExpensePageModuleController::class, 'page'])->name('user.quote.insurance_modules.update.fe');
-    Route::get('/si', [\App\Http\Controllers\InsuranceModuleControllers\SiPageModuleController::class, 'page'])->name('user.quote.insurance_modules.si');
-    Route::post('/si', [\App\Http\Controllers\InsuranceModuleControllers\SiPageModuleController::class, 'page'])->name('user.quote.insurance_modules.update.si'); */
-
     Route::get('/quote/verify', [\App\Http\Controllers\UserQuoteController::class, 'verify_quote'])->name('domains.user.quote.verify.quote');
     Route::get('/quote/verified', [\App\Http\Controllers\ModulesLandingPage::class, 'gen_verified_quote'])->name('domains.user.quote.show.verified');
     Route::get('/quote', [\App\Http\Controllers\ModulesLandingPage::class, 'gen_quote'])->name('domains.user.quote.show.quote');
@@ -451,14 +443,6 @@ Route::group(
     function () {
 
         Route::get('/', [\App\Http\Controllers\ProductPageController::class, 'index'])->name('landing-pages.domains.index');
-
-/*         Route::get('/termlife', [\App\Http\Controllers\InsuranceModuleControllers\TermLifePageModuleController::class, 'page'])->name('user.quote.insurance_modules.termlife');
-        Route::post('/termlife', [\App\Http\Controllers\InsuranceModuleControllers\TermLifePageModuleController::class, 'page'])->name('user.quote.insurance_modules.update.termlife');
-        Route::get('/fe', [\App\Http\Controllers\InsuranceModuleControllers\FinalExpensePageModuleController::class, 'page'])->name('user.quote.insurance_modules.fe');
-        Route::post('/fe', [\App\Http\Controllers\InsuranceModuleControllers\FinalExpensePageModuleController::class, 'page'])->name('user.quote.insurance_modules.update.fe');
-        Route::get('/si', [\App\Http\Controllers\InsuranceModuleControllers\SiPageModuleController::class, 'page'])->name('user.quote.insurance_modules.si');
-        Route::post('/si', [\App\Http\Controllers\InsuranceModuleControllers\SiPageModuleController::class, 'page'])->name('user.quote.insurance_modules.update.si'); */
-
         Route::get('/quote/verify', [\App\Http\Controllers\UserQuoteController::class, 'verify_quote'])->name('domains.user.quote.verify.quote');
         Route::get('/quote/verified', [\App\Http\Controllers\ModulesLandingPage::class, 'gen_verified_quote'])->name('domains.user.quote.show.verified');
         Route::get('/quote', [\App\Http\Controllers\ModulesLandingPage::class, 'gen_quote'])->name('domains.user.quote.show.quote');
