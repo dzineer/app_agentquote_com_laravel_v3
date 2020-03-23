@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});*/
-
 Route::post('/app_module', [\App\Http\Controllers\Api\AppCustomModulesController::class, 'action'])->name('app.modules.action');
 
 Route::post('/password/reset', [\App\Http\Controllers\Api\PasswordResetController::class, 'store']);
@@ -74,45 +70,31 @@ Route::get('/user/custom_modules/{userId}', [\App\Http\Controllers\UserCustomMod
 Route::get('/user/custom_module/{userId}', [\App\Http\Controllers\UserCustomModulesController::class, 'render'])->name('custom.user.render.module');
 Route::post('/user/custom_module/{id}', [\App\Http\Controllers\Api\UserCustomModulesController::class, 'update'])->name('custom.user.modules.update');
 
-Route::get('/chat.postMessage', function() {
-    return response()->json([
-        "message" => "We we received your message",
-        "data" => request()->all(),
-        "success" => true
-    ]);
-});
+// Subscriptions Users Api
+Route::post('/user.subscriptions',  [\App\Http\Controllers\Api\SubscriptionUsersApiController::class, 'getSubscriptions'])->name('api-request.user.subscriptions');
 
-Route::post('/chat.postMessage',  [\App\Http\Controllers\Api\APIController::class, 'index'])->name('api-request');
+// Products Users Api
+Route::post('/user.assignProduct',  [\App\Http\Controllers\Api\ProductUsersApiController::class, 'assignUserProduct'])->name('api-request.user.assign-product');
+Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\ProductUsersApiController::class, 'removeUserProduct'])->name('api-request.user.remove-product');
 
-Route::post('/user.subscriptions',  [\App\Http\Controllers\Api\SubscriptionUsersController::class, 'getSubscriptions'])->name('api-request.user.subscriptions');
+// Users Api
+Route::post('/user.get',  [\App\Http\Controllers\Api\UsersApiController::class, 'getUser'])->name('api-request.user.get');
+Route::post('/user.password.update',  [\App\Http\Controllers\Api\UsersApiController::class, 'changePassword'])->name('api-request.user.password-update');
+Route::post('/user.disable',  [\App\Http\Controllers\Api\UsersApiController::class, 'disableSUser'])->name('api-request.user.disable');
+Route::post('/user.enable',  [\App\Http\Controllers\Api\UsersApiController::class, 'enableUser'])->name('api-request.user.enable');
 
-Route::post('/user.assignProduct',  [\App\Http\Controllers\Api\ProductsController::class, 'assignUserProduct'])->name('api-request.user.assign-product');
-Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\ProductsController::class, 'removeUserProduct'])->name('api-request.user.remove-product');
+// Affiliates Api
+Route::post('/affiliate.get',  [\App\Http\Controllers\Api\AffiliatesApiController::class, 'getAffiliate'])->name('api-request.affiliate.get');
+Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesApiController::class, 'storeAffiliate'])->name('api-request.affiliate.add');
+Route::post('/affiliate.disable',  [\App\Http\Controllers\Api\AffiliatesApiController::class, 'disableAffiliate'])->name('api-request.affiliate.disable');
+Route::post('/affiliate.enable',  [\App\Http\Controllers\Api\AffiliatesApiController::class, 'enableAffiliate'])->name('api-request.affiliate.enable');
 
-Route::post('/user.get',  [\App\Http\Controllers\Api\UsersController::class, 'getWHMCSUser'])->name('api-request.user.get');
-Route::post('/user.password.update',  [\App\Http\Controllers\Api\UsersController::class, 'changePasswordWHMCSUser'])->name('api-request.user.password-update');
+// Landing Page Users Api
+Route::post('/user.landingPage.get',  [\App\Http\Controllers\Api\LandingPageUsersApiController::class, 'getLandingPageUser'])->name('api-request.user.landing-page.get');
+Route::post('/user.landingPage.disable',  [\App\Http\Controllers\Api\LandingPageUsersApiController::class, 'disableLandingPageUser'])->name('api-request.user.landing-page.disable');
+Route::post('/user.landingPage.enable',  [\App\Http\Controllers\Api\LandingPageUsersApiController::class, 'enableLandingPageUser'])->name('api-request.user.landing-page.enable');
 
-Route::post('/user.disable',  [\App\Http\Controllers\Api\UsersController::class, 'disableWHMCSUser'])->name('api-request.user.disable');
-Route::post('/user.enable',  [\App\Http\Controllers\Api\UsersController::class, 'enableWHMCSUser'])->name('api-request.user.enable');
-
-Route::post('/affiliate.get',  [\App\Http\Controllers\Api\AffiliatesController::class, 'getWHMCSAffiliate'])->name('api-request.affiliate.get');
-Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesController::class, 'storeWHMCSAffiliate'])->name('api-request.affiliate.add');
-Route::post('/affiliate.disable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'disableWHMCSAffiliate'])->name('api-request.affiliate.disable');
-Route::post('/affiliate.enable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'enableWHMCSAffiliate'])->name('api-request.affiliate.enable');
-
-Route::post('/user.landingPage.get',  [\App\Http\Controllers\Api\LandingPagesController::class, 'getWHMCSLandingPageUser'])->name('api-request.user.landing-page.get');
-Route::post('/user.landingPage.disable',  [\App\Http\Controllers\Api\LandingPagesController::class, 'disableWHMCSLandingPageUser'])->name('api-request.user.landing-page.disable');
-Route::post('/user.landingPage.enable',  [\App\Http\Controllers\Api\LandingPagesController::class, 'enableWHMCSLandingPageUser'])->name('api-request.user.landing-page.enable');
-
-Route::post('/user.quoter.get',  [\App\Http\Controllers\Api\QuoterUsersController::class, 'getWHMCSQuoterUser'])->name('api-request.user.quoter.get');
-Route::post('/user.quoter.disable',  [\App\Http\Controllers\Api\QuoterUsersController::class, 'disableWHMCSQuoterUser'])->name('api-request.user.quoter.disable');
-Route::post('/user.quoter.enable',  [\App\Http\Controllers\Api\QuoterUsersController::class, 'enableWHMCSQuoterUser'])->name('api-request.user.quoter.enable');
-
-/*Route::group(
-    [
-        'middleware' => ['landing-pages.domains']
-    ],
-    function () {
-        Route::post('/user/quote/generate', [\App\Http\Controllers\Api\UserQuoteController::class, 'gen_verify'])->name('api.user.quote.generate');
-    }
-);*/
+// Quoter Users Api
+Route::post('/user.quoter.get',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'getQuoterUser'])->name('api-request.user.quoter.get');
+Route::post('/user.quoter.disable',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'disableQuoterUser'])->name('api-request.user.quoter.disable');
+Route::post('/user.quoter.enable',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'enableQuoterUser'])->name('api-request.user.quoter.enable');

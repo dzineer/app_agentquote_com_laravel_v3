@@ -17,15 +17,15 @@ use App\Facades\AQLog;
  */
 class LandingPageController extends BackendController
 {
-	/**
-	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-	 */
-	public function settings()
+
+    /**
+     * @return array|string
+     * @throws \Throwable
+     */
+    public function settings()
 	{
         $user = Auth::user();
         $gaCode = '';
-
-        // dd($user->profile);
 
         $categories = LandingPageCategory::all();
         $currentPageCategory = LandingPageUser::where(['user_id' => $user->id])->first();
@@ -42,29 +42,14 @@ class LandingPageController extends BackendController
             "currentPageCategory" => json_encode($currentPageCategory)
         ];
 
-        // dd($data);
-
-/*        AQLog::info(print_r([
-            'message' => "data",
-            'data' => $data
-        ], true), __CLASS__ . '::' . __METHOD__);*/
-
-		// $response = view('landing-pages.profile.index', $data)->render();
 		return view('landing-pages.profile.index', $data)->render();
-/*
-        AQLog::info(print_r([
-            'message' => "landing-pages.profile.index",
-            'response' => $response
-        ], true), __CLASS__ . '::' . __METHOD__);*/
-
-		// return $response;
 	}
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request, $id)
     {
@@ -74,23 +59,13 @@ class LandingPageController extends BackendController
         ]);
 
         $user = Auth::user();
-        // echo print_r($user,true);
-        // exit;
-        // $subdomain = auth()->user()
 
-        // echo print_r($user, true);
-        // exit;
 
         $profile = Profile::create([
             'user_id' => $user->id
         ]);
 
         $profileUpdated = false;
-
-        // assign profile id to user
-
-        $user->profile_id = $profile->id;
-        $user->save();
 
         // save logo to store/public/landing-pages/logos and filename to profile
         if ($request->hasFile('logo')) {
@@ -238,23 +213,10 @@ class LandingPageController extends BackendController
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\User $user
-     *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param User $user
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function update(Request $request, User $user)
     {
@@ -263,24 +225,9 @@ class LandingPageController extends BackendController
             'portrait' => 'max:300'
         ]);
 
-        // $profile = $user->profile;
-
         $profile = Profile::where([
             "user_id" => $user->id
         ])->first();
-
-        $profileUpdated = false;
-        $fieldsToUpdate = [];
-
-        // cho print_r($profile, true);
-        // exit;
-
-        // assign profile id to user
-
-        $ext = '';
-
-       // return response()->json(["success" => false, "Input" => $request->all()]);
-
 
         // save logo to store/public/landing-pages/logos and filename to profile
 
@@ -350,7 +297,6 @@ class LandingPageController extends BackendController
             }
         }
 
-
         if ($request->has('product_category')) {
             $category_id = $request->input('product_category');
             $landingPageUserRecord = LandingPageUser::where(['user_id' => $user->id]);
@@ -400,23 +346,7 @@ class LandingPageController extends BackendController
             Profile::where(["user_id" => $user->id])->update($fieldsToUpdate);
         }
 
-        // AQLog::info(["success" => false, "request" => $request->all(), "profile" => $profile]);
-
-       // return response()->json(["success" => false, "request" => $request->all(), "profile" => $profile]);
-
-       // dd($request->all());
-
         return response()->json(["success" => true, "message" => 'Profile updated.', "profile" => $profile]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

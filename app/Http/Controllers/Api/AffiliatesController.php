@@ -15,33 +15,27 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+/**
+ * Class AffiliatesController
+ * @package App\Http\Controllers\Api
+ */
 class AffiliatesController extends Controller
 {
+    /**
+     *
+     */
     const AFFILIATE_USER = 2;
+    /**
+     *
+     */
     const MY_MOBILE_LIFE_QUOTER = 1;
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
      */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-
-    public function getWHMCSAffiliate(Request $request)
+    public function getAffiliate(Request $request)
     {
         $data = $this->validate($request, [
             'token' => 'required|max:32',
@@ -87,10 +81,14 @@ class AffiliatesController extends Controller
             "success" => true,
         ]);
 
-
     }
 
-    public function disableWHMCSAffiliate(Request $request)
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function disableAffiliate(Request $request)
     {
         $data = $this->validate($request, [
             'token' => 'required|max:32',
@@ -147,7 +145,12 @@ class AffiliatesController extends Controller
 
     }
 
-    public function enableWHMCSAffiliate(Request $request)
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function enableAffiliate(Request $request)
     {
         $data = $this->validate($request, [
             'token' => 'required|max:32',
@@ -202,8 +205,12 @@ class AffiliatesController extends Controller
         ]);
     }
 
-
-    public function storeWHMCSAffiliate(Request $request)
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function storeAffiliate(Request $request)
     {
 
         $data = $this->validate($request, [
@@ -270,7 +277,6 @@ class AffiliatesController extends Controller
             ]);
         }
 
-
         $newUser = User::create($newUser);
 
         $newAffiliate = Affiliate::create([
@@ -318,12 +324,10 @@ class AffiliatesController extends Controller
 
     }
 
-
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request)
     {
@@ -411,6 +415,11 @@ class AffiliatesController extends Controller
         ]);
     }
 
+    /**
+     * @param string $sortBy
+     * @param string $order
+     * @return mixed
+     */
     private function getAffiliateCoupons($sortBy='created_at', $order='desc')
     {
         $coupons = \DB::table('affiliate_coupon')
@@ -421,27 +430,10 @@ class AffiliatesController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
      */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
     public function update(Request $request)
     {
         $actions = [
@@ -497,14 +489,4 @@ class AffiliatesController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -1,41 +1,32 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Api;
 
-use App\Models\QuoterUser;
+use App\Models\LandingPageUser;
 use App\Models\Subscription;
 use App\User;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 
 /**
- * Class QuoterUsersController
- * @package App\Http\Controllers\Api
+ * Class LandingPageUsersApiFacade
+ * @package Api
  */
-class QuoterUsersController extends Controller
+class LandingPageUsersApiFacade
 {
     /**
      *
      */
-    const PROGRAM_USER = 5;
-    const QUOTER = 1;
     const ACTIVE = 1;
+    /**
+     *
+     */
     const NOT_ACTIVE = 0;
 
     /**
-     * @param Request $request
+     * @param $data
      * @return \Illuminate\Http\JsonResponse
-     * @throws \Illuminate\Validation\ValidationException
      */
-    public function getWHMCSQuoterUser(Request $request)
+    public function getLandingPageUser($data)
     {
-        $data = $this->validate($request, [
-            'token' => 'required|max:32',
-            'username' => 'required:max:32',
-            'email' => 'required'
-        ]);
-
         // Agent Quote's WHMCS Security
 
         $whmcsAPI = config('agentquote.whmcs_api');
@@ -55,43 +46,31 @@ class QuoterUsersController extends Controller
         if( !$user ) {
             return response()->json([
                 "message" => "User does not exists.",
-                "data" => request()->all(),
                 "success" => false,
             ]);
         }
 
-        $quoterUser = QuoterUser::where([ 'user_id' => $user->id ])->first();
+        $landingPageUser = LandingPageUser::where([ 'user_id' => $user->id ])->first();
 
-        if( !$quoterUser ) {
+        if( !$landingPageUser ) {
             return response()->json([
-                "message" => "User does not have a Quoter.",
-                "data" => request()->all(),
+                "message" => "User does not have a landing page.",
                 "success" => false,
             ]);
         }
 
         return response()->json([
-            "message" => "Quoter User received.",
-            "data" => $quoterUser,
+            "message" => "Landing Page User received.",
             "success" => true,
         ]);
-
-
     }
 
     /**
-     * @param Request $request
+     * @param $data
      * @return \Illuminate\Http\JsonResponse
-     * @throws \Illuminate\Validation\ValidationException
      */
-    public function disableWHMCSQuoterUser(Request $request)
+    public function disableLandingPageUser($data)
     {
-        $data = $this->validate($request, [
-            'token' => 'required|max:32',
-            'username' => 'required:max:32',
-            'email' => 'required'
-        ]);
-
         // Agent Quote's WHMCS Security
 
         $whmcsAPI = config('agentquote.whmcs_api');
@@ -111,51 +90,42 @@ class QuoterUsersController extends Controller
         if( !$user ) {
             return response()->json([
                 "message" => "User does not exists.",
-                "data" => request()->all(),
                 "success" => false,
             ]);
         }
 
-        $quoterUser = QuoterUser::where([ 'user_id' => $user->id ])->first();
+        $landingPageUser = LandingPageUser::where([ 'user_id' => $user->id ])->first();
 
-        if( !$quoterUser ) {
+        if( !$landingPageUser ) {
             return response()->json([
-                "message" => "User does not have a Quoter.",
-                "data" => request()->all(),
+                "message" => "User does not have a landing page.",
                 "success" => false,
             ]);
         }
 
-        $quoterUser->update( ['active' => self::NOT_ACTIVE ] );
+        $landingPageUser->update([
+            'active' => self::NOT_ACTIVE
+        ]);
 
-        $subscription = Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->first();
+        $subscription = Subscription::where(["user_id" => $user->id, "product_id" => 2])
+            ->first();
 
         $subscription->update([
             "active" => self::NOT_ACTIVE
         ]);
 
         return response()->json([
-            "message" => "Quoter User disabled.",
-            "data" => $quoterUser,
+            "message" => "Landing Page User disabled.",
             "success" => true,
         ]);
-
-
     }
 
     /**
-     * @param Request $request
+     * @param $data
      * @return \Illuminate\Http\JsonResponse
-     * @throws \Illuminate\Validation\ValidationException
      */
-    public function enableWHMCSQuoterUser(Request $request)
+    public function enableLandingPageUser($data)
     {
-        $data = $this->validate($request, [
-            'token' => 'required|max:32',
-            'username' => 'required:max:32',
-            'email' => 'required'
-        ]);
-
         // Agent Quote's WHMCS Security
 
         $whmcsAPI = config('agentquote.whmcs_api');
@@ -175,35 +145,33 @@ class QuoterUsersController extends Controller
         if( !$user ) {
             return response()->json([
                 "message" => "User does not exists.",
-                "data" => request()->all(),
                 "success" => false,
             ]);
         }
 
-        $quoterUser = QuoterUser::where([ 'user_id' => $user->id ])->first();
+        $landingPageUser = LandingPageUser::where([ 'user_id' => $user->id ])->first();
 
-        if( !$quoterUser ) {
+        if( !$landingPageUser ) {
             return response()->json([
-                "message" => "User does not have a Quoter.",
-                "data" => request()->all(),
+                "message" => "User does not have a landing page.",
                 "success" => false,
             ]);
         }
 
-        $quoterUser->update( ['active' => 1 ] );
+        $landingPageUser->update([
+            'active' => self::ACTIVE
+        ]);
 
-        $subscription = Subscription::where(["user_id" => $user->id, "product_id" => self::QUOTER])->first();
+        $subscription = Subscription::where(["user_id" => $user->id, "product_id" => 2])
+            ->first();
 
         $subscription->update([
             "active" => self::ACTIVE
         ]);
 
         return response()->json([
-            "message" => "Quoter User enabled.",
-            "data" => $quoterUser,
+            "message" => "Landing Page User enabled.",
             "success" => true,
         ]);
     }
-
-
 }

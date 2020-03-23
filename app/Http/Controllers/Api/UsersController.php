@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Facades\AQLog;
 use App\User;
+use Http\Controllers\Api\UserApi;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -11,6 +12,10 @@ use Illuminate\Support\Facades\Auth;
 class UsersController extends Controller
 {
     const PROGRAM_USER = 5;
+    use UserApi;
+
+
+
 
     /**
      * Display a listing of the resource.
@@ -63,200 +68,6 @@ class UsersController extends Controller
     public function edit($id)
     {
         //
-    }
-
-    public function getWHMCSUser(Request $request)
-    {
-        $data = $this->validate($request, [
-            'token' => 'required|max:32',
-            'username' => 'required:max:32',
-            'whmcs_email' => 'required'
-        ]);
-
-        // Agent Quote's WHMCS Security
-
-        $whmcsAPI = config('agentquote.whmcs_api');
-
-        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
-
-            AQLog::info( json_encode([
-                "message" => "Invalid Request",
-                "data" => request()->all(),
-                "success" => false,
-            ]) );
-
-            return response()->json([
-                "message" => "Invalid Request",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        $user = User::where([
-            "email" => $data['whmcs_email']
-        ])->first();
-
-        if( !$user ) {
-
-            AQLog::info( json_encode([
-                "message" => "User does not exists.",
-                "data" => request()->all(),
-                "success" => false,
-            ]) );
-
-            return response()->json([
-                "message" => "User does not exists.",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        AQLog::info( json_encode([
-            "message" => "User received.",
-            "data" => $user,
-            "success" => true,
-        ]) );
-
-        return response()->json([
-            "message" => "User received.",
-            "data" => $user,
-            "success" => true,
-        ]);
-
-
-    }
-
-    public function disableWHMCSUser(Request $request)
-    {
-        $data = $this->validate($request, [
-            'token' => 'required|max:32',
-            'username' => 'required:max:32',
-            'whmcs_email' => 'required'
-        ]);
-
-        // Agent Quote's WHMCS Security
-
-        $whmcsAPI = config('agentquote.whmcs_api');
-
-        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
-
-            AQLog::info( json_encode([
-                "message" => "Invalid Request",
-                "data" => request()->all(),
-                "success" => false,
-            ]) );
-
-            return response()->json([
-                "message" => "Invalid Request",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        $user = User::where([
-            "email" => $data['whmcs_email']
-        ])->first();
-
-        if( !$user ) {
-
-            AQLog::info( json_encode([
-                "message" => "User does not exists.",
-                "data" => request()->all(),
-                "success" => false,
-            ]) );
-
-            return response()->json([
-                "message" => "User does not exists.",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-
-        $user->update([
-            'active' => 0
-        ]);
-
-        AQLog::info( json_encode([
-            "message" => "User disabled.",
-            "data" => $user,
-            "ok" => true,
-            "success" => true,
-        ]) );
-
-        return response()->json([
-            "message" => "User disabled.",
-            "data" => $user,
-            "ok" => true,
-            "success" => true,
-        ]);
-
-
-    }
-
-    public function enableWHMCSUser(Request $request)
-    {
-        $data = $this->validate($request, [
-            'token' => 'required|max:32',
-            'username' => 'required:max:32',
-            'whmcs_email' => 'required'
-        ]);
-
-        // Agent Quote's WHMCS Security
-
-        $whmcsAPI = config('agentquote.whmcs_api');
-
-        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
-
-            AQLog::info( json_encode([
-                "message" => "Invalid Request",
-                "data" => request()->all(),
-                "success" => false,
-            ]) );
-
-            return response()->json([
-                "message" => "Invalid Request",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        $user = User::where([
-            "email" => $data['whmcs_email']
-        ])->first();
-
-        if( !$user ) {
-
-            AQLog::info( json_encode([
-                "message" => "User does not exists.",
-                "data" => request()->all(),
-                "success" => false,
-            ]) );
-
-            return response()->json([
-                "message" => "User does not exists.",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        $user->update([
-            'active' => 1
-        ]);
-
-        AQLog::info( json_encode([
-            "message" => "User enabled.",
-            "data" => $user,
-            "ok" => true,
-            "success" => true,
-        ]) );
-
-        return response()->json([
-            "message" => "User enabled.",
-            "data" => $user,
-            "ok" => true,
-            "success" => true,
-        ]);
     }
 
 
@@ -316,56 +127,7 @@ class UsersController extends Controller
 
     }
 
-    public function changePasswordWHMCSUser(Request $request)
-    {
-        $data = $this->validate($request, [
-            'token' => 'required|max:32',
-            'username' => 'required:max:32',
-            'whmcs_email' => 'required',
-            'whmcs_password' => 'required'
-        ]);
 
-        // Agent Quote's WHMCS Security
-
-        $whmcsAPI = config('agentquote.whmcs_api');
-
-        if ($data['token'] !== $whmcsAPI['token'] && $data['username'] !== $whmcsAPI['username']) {
-            return response()->json([
-                "message" => "Invalid Request",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        $user = User::where([
-            "email" => $data['email']
-        ])->first();
-
-        if( !$user ) {
-            return response()->json([
-                "message" => "User does not exists.",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        $user->update([
-            'password' => $request->input('whmcs_password')
-        ]);
-
-
-        AQLog::info( json_encode([
-            "message" => "Password Changed",
-            "data" => $request->input('whmcs_password')
-        ]) );
-
-        return response()->json([
-            "message" => "User password updated.",
-            "data" => $user,
-            "okay" => true,
-            "success" => true
-        ]);
-    }
 
     /**
      * Remove the specified resource from storage.
