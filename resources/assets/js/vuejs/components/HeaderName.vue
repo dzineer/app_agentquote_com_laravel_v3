@@ -15,11 +15,9 @@ export default {
 </script>
 
 <style scoped>
-    @media screen AND (max-width: 320px) {
-        .brand-name {
-            width: 80%;
-            margin-top: 1.8rem;
-            color: #000000;
-        }
+    .brand-name {
+        width: 80%;
+        margin-top: 1.8rem;
+        color: #000000;
     }
 </style>
