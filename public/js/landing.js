@@ -7530,7 +7530,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n@media screen AND (max-width: 320px) {\n.brand-name[data-v-1eb69aef] {\n        width: 80%;\n        margin-top: 1.8rem;\n}\n}\n", ""]);
+exports.push([module.i, "\n@media screen AND (max-width: 320px) {\n.brand-name[data-v-1eb69aef] {\n        width: 80%;\n        margin-top: 1.8rem;\n        color: #000000;\n}\n}\n", ""]);
 
 // exports
 
