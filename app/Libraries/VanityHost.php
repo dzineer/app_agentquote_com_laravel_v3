@@ -63,7 +63,7 @@ class VanityHost
     protected function genCompanyDetails( $user, $profile ): array {
 
         return [
-            'name' => $profile->company,
+            'name' => empty($profile->company) ? $user->name : $profile->company,
 
             'phone' => $profile->contact_phone,
 
