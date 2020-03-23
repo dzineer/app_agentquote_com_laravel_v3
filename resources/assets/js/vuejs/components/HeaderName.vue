@@ -19,6 +19,7 @@ export default {
         .brand-name {
             width: 80%;
             margin-top: 1.8rem;
+            color: #000000;
         }
     }
 </style>
