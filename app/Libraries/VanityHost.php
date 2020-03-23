@@ -22,20 +22,22 @@ class VanityHost
         // $landingPageUser->category;
         // dd($template);
 
+        $profile = Profile::where(['user_id' => $user->id])->first();
+
         $data = [];
         $options = [];
 
-        $data['selected_state'] = $user->profile->contact_state;
+        $data['selected_state'] = $profile->contact_state;
 
-        $data['social_media'] = $this->genSocialMediaDetails( $user );
+        $data['social_media'] = $this->genSocialMediaDetails( $user, $profile );
         // $data['ga_code'] = CustomModules::customModuleRender( 'google_analytics_module', $user['id'] );
         $data['ga_code'] = $landingPageDetails->getGACode();
 
-        $data['selected_state'] = $user->profile->contact_state;
+        $data['selected_state'] = $profile->contact_state;
         $data['user']           = $user;
-        $options['use_logo'] =  ! empty($user->profile->logo) || ! empty($user->profile->portrait) ;
+        $options['use_logo'] =  ! empty($profile->logo) || ! empty($profile->portrait) ;
 
-        $company = $this->genCompanyDetails( $user );
+        $company = $this->genCompanyDetails( $user, $profile );
 
         dnd($company);
 
@@ -55,11 +57,10 @@ class VanityHost
 
     /**
      * @param $user
+     * @param $profile
      * @return array
      */
-    protected function genCompanyDetails( $user ): array {
-
-        $profile = Profile::where(['user_id' => $user->id])->first();
+    protected function genCompanyDetails( $user, $profile ): array {
 
         return [
             'name' => $profile->company,
@@ -104,35 +105,34 @@ class VanityHost
 
     /**
      * @param $user
-     * @param $data
-     *
+     * @param $profile
      * @return mixed
      */
-    private function genSocialMediaDetails( $user ) {
+    private function genSocialMediaDetails( $user, $profile ) {
 
         $socialMedia = [];
 
-        if ( $user->profile->facebook_link && strlen( $user->profile->facebook_link ) ) {
-            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-facebook', 'link' => $user->profile->facebook_link ];
+        if ( $profile->facebook_link && strlen( $profile->facebook_link ) ) {
+            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-facebook', 'link' => $profile->facebook_link ];
         }
 
-        if ( $user->profile->twitter_link && strlen( $user->profile->twitter_link ) ) {
-            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-twitter', 'link' => $user->profile->twitter_link ];
+        if ( $profile->twitter_link && strlen( $profile->twitter_link ) ) {
+            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-twitter', 'link' => $profile->twitter_link ];
         }
 
-        if ( $user->profile->youtube_link && strlen( $user->profile->youtube_link ) ) {
-            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-youtube', 'link' => $user->profile->youtube_link ];
+        if ( $profile->youtube_link && strlen( $profile->youtube_link ) ) {
+            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-youtube', 'link' => $profile->youtube_link ];
         }
 
-        if ( $user->profile->linkedin_link && strlen( $user->profile->linkedin_link ) ) {
-            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-linkedin', 'link' => $user->profile->linkedin_link ];
+        if ( $profile->linkedin_link && strlen( $profile->linkedin_link ) ) {
+            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-linkedin', 'link' => $profile->linkedin_link ];
         }
 
-        if ( $user->profile->instagram_link && strlen( $user->profile->instagram_link ) ) {
+        if ( $profile->instagram_link && strlen( $profile->instagram_link ) ) {
             $socialMedia[] = [
                 'name' => 'facebook',
                 'icon' => 'fa-instagram',
-                'link' => $user->profile->instagram_link
+                'link' => $profile->instagram_link
             ];
         }
 
