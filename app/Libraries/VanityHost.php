@@ -40,7 +40,7 @@ class VanityHost
 
         $company = $this->genCompanyDetails( $user, $profile );
 
-        dnd($company);
+        // dnd($company);
 
         $data['version'] = 'v3';
 
@@ -48,9 +48,9 @@ class VanityHost
         $data['options'] = $options;
         $data['branding'] = $this->genBranding( $user, $company, $options['use_logo'], $data['version'] );
 
-       // dd($company);
+        // dd($company);
 
-        dd($data);
+        // dd($data);
 
         // return view( 'landing-pages.v3.quote_modules.underwritten.index', $data );
         return view( $template, $data );
