@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Libraries;
+use App\Models\Profile;
 use Illuminate\Support\Facades\View;
 use App\CustomModules\UserCustomPagesModule;
 use Dzineer\CustomModules\Facades\CustomModules;
@@ -34,7 +35,7 @@ class VanityHost
         $data['user']           = $user;
         $options['use_logo'] =  ! empty($user->profile->logo) || ! empty($user->profile->portrait) ;
 
-        $company = $this->genCompanyDetails( $user->profile );
+        $company = $this->genCompanyDetails( $user );
 
         dnd($company);
 
@@ -42,7 +43,7 @@ class VanityHost
 
         $data['company'] = $company;
         $data['options'] = $options;
-        $data['branding'] = $this->genBranding( $user, $options['use_logo'], $data['version'] );
+        $data['branding'] = $this->genBranding( $user, $company, $options['use_logo'], $data['version'] );
 
        // dd($company);
 
@@ -53,11 +54,13 @@ class VanityHost
     }
 
     /**
-     * @param $profile
-     *
+     * @param $user
      * @return array
      */
-    protected function genCompanyDetails( $profile ): array {
+    protected function genCompanyDetails( $user ): array {
+
+        $profile = Profile::where(['user_id' => $user->id])->first();
+
         return [
             'name' => $profile->company,
 
@@ -76,26 +79,25 @@ class VanityHost
     /**
      * @param $user
      *
+     * @param $company
      * @param $useLogo
      * @param $version
      *
      * @return array
      */
-    private function genBranding( $user, $useLogo, $version ): array {
+    private function genBranding( $user, $company, $useLogo, $version ): array {
 
         $default_logo = asset_prepend('templates/landing-pages/' . $version . '/', 'images/logo-200x40.png');
 
         $imageUsed = $user->profile->portrait ? '/storage/' . $user->profile->portrait : '/storage/' . $user->profile->logo;
 
         $branding                  = [];
-        $branding['company']       = $user->profile->company;
+        $branding['company']       = $company;
         $branding['logo']['light'] = $useLogo ? $imageUsed : '';
         $branding['logo']['dark']  = '';
-        if (empty($branding['logo']['light'] === '')) {
-            $branding['company'] = ?
-        }
         $branding['special_text']  = 'We provide a full spectrum of mobile quoters and web applications for insurance agents. Focusing on Life insurance, Health, Financial Advisors, and P&C. Our quoters and website applications cover all stages of the program development life cycle and keep you one step ahead of the competition.';
         $branding['copyright']     = 'Agent Quote Inc.';
+        $branding['use_logo']      =  $useLogo;
 
         return $branding;
     }
