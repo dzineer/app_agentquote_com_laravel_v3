@@ -16,7 +16,9 @@ use App\Libraries\LandingPageDetails;
 class ProductPageController extends Controller
 {
     // public function index( Request $request, $subomain, $customModule ) {
-    public function index( Request $request ) {
+    const NOT_ACTIVE = 0;
+
+    public function index(Request $request ) {
         // if is vanity subdomain or custom domain ?
         // yes - has category ?
         // display category product service page
@@ -62,7 +64,7 @@ class ProductPageController extends Controller
             return abort( 405, 'Page Not Found!' );
         }
 
-        if ( ! $user ) {
+        if ( ! $user || $user->active === self::NOT_ACTIVE) {
             return abort( 405, 'Page Not Found!' );
         }
 
