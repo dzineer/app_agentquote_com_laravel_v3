@@ -310,6 +310,12 @@ class ProductUsersApiFacade
                     "data" => $whmcsProduct
                 ]));
 
+                AQLog::info(json_encode([
+                    "message" => "Checking User",
+                    "data" => $user
+                ]));
+
+
                 $productId = $whmcsProduct->local_product_id;
                 $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $whmcsProduct->local_product_id])->first();
 

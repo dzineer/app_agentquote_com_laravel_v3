@@ -72,8 +72,8 @@ return [
 	],
     "defaults" => [
       "main" => [
-          "domain" => "app.staging.agentquote.com",
-          "vanity_domain" => get_ip() === '127.0.0.1' ? 'base.subdomains.test' : 'app.staging.agentquote.com'
+          "domain" => "app2.agentquote.com",
+          "vanity_domain" => get_ip() === '127.0.0.1' ? 'base.subdomains.test' : 'app2.agentquote.com'
       ],
       "routes" => [
           "default" => 'login'
