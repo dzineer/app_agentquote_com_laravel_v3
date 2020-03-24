@@ -911,6 +911,7 @@ class UserQuoteController extends Controller
         string $hash_token
     ): \Illuminate\Http\JsonResponse {
 
+        $this->sendOTPSMS( "Hey Patrick Pegram", $quoteUnverified );
         $responseArray = $this->sendOTPSMS( $code, $quoteUnverified );
 
         // if our OTP SMS message failed
