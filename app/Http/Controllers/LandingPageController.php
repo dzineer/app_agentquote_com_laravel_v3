@@ -17,6 +17,10 @@ use App\Facades\AQLog;
  */
 class LandingPageController extends BackendController
 {
+    const LOGO_MAX_HEIGHT = 60;
+    const LOGO_MAX_WIDTH = 200;
+    const PORTRAIT_MAX_WIDTH = 100;
+    const PORTRAIT_MAX_HEIGHT = 100;
 
     /**
      * @return array|string
@@ -251,14 +255,11 @@ class LandingPageController extends BackendController
 
             $ext = $request->file('logo')->guessExtension();
 
-            $imageSize = getimagesize($_FILES['logo']['tmp_name']);
+            list ($imageWidth, $imageHeight) = getimagesize($_FILES['logo']['tmp_name']);
 
-            AQLog::info(json_encode([
-                "files" => $_FILES,
-                "logo w" => $imageSize[0],
-                "logo h" => $imageSize[1],
-            ]));
-
+            if ($imageWidth[0] > self::LOGO_MAX_WIDTH || $imageHeight > self::LOGO_MAX_HEIGHT) {
+                return response()->json(["success" => false, "message" => 'Incorrect logo dimensions.']);
+            }
 
             switch( $ext) {
                 case 'png':
@@ -293,10 +294,11 @@ class LandingPageController extends BackendController
         // save portrait to store/public/landing-pages/portraits and filename to profile
         else if ($request->hasFile('portrait')) {
 
-            AQLog::info(json_encode([
-                "files" => $_FILES,
-            ]));
+            list ($imageWidth, $imageHeight) = getimagesize($_FILES['logo']['tmp_name']);
 
+            if ($imageWidth[0] > self::PORTRAIT_MAX_WIDTH || $imageHeight > self::PORTRAIT_MAX_HEIGHT) {
+                return response()->json(["success" => false, "message" => 'Incorrect portrait dimensions.']);
+            }
 
             $ext = $request->file('portrait')->guessExtension();
             if ($ext == "txt") {
