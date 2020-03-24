@@ -78,13 +78,7 @@ class ProductUsersApiFacade
 
             AQLog::info(print_r([
                 "message" => "whmcs_ fields",
-                "data" => [ $data['whmcs_password'],
-                $data['whmcs_firstname'],
-                $data['whmcs_lastname'],
-                $data['whmcs_street'],
-                $data['whmcs_city'],
-                $data['whmcs_state_abbrev'],
-                $data['whmcs_postcode']]
+                "data" => $data
             ], true));
 
                 // make sure we don't add any product for a disabled user
