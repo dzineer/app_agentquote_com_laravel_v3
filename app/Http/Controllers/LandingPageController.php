@@ -253,7 +253,8 @@ class LandingPageController extends BackendController
 
 
             AQLog::info(json_encode([
-                "files" => $_FILES
+                "files" => $_FILES,
+                "logo" => getimagesize($_FILES['logo']['tmp_name']),
             ]));
 
 
@@ -291,7 +292,7 @@ class LandingPageController extends BackendController
         else if ($request->hasFile('portrait')) {
 
             AQLog::info(json_encode([
-                "files" => $_FILES
+                "files" => $_FILES,
             ]));
 
 
