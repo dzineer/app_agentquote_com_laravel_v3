@@ -531,6 +531,7 @@ class LandingPageSettings extends Component {
 
                     }
                         .bind(this),
+
                     1200
                 );
                 console.log(error);
