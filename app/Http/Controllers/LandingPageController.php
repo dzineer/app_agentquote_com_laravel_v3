@@ -257,7 +257,7 @@ class LandingPageController extends BackendController
 
             list ($imageWidth, $imageHeight) = getimagesize($_FILES['logo']['tmp_name']);
 
-            if ($imageWidth[0] > self::LOGO_MAX_WIDTH || $imageHeight > self::LOGO_MAX_HEIGHT) {
+            if ($imageWidth > self::LOGO_MAX_WIDTH || $imageHeight > self::LOGO_MAX_HEIGHT) {
                 return response()->json(["success" => false, "message" => 'Incorrect logo dimensions.']);
             }
 
@@ -296,7 +296,7 @@ class LandingPageController extends BackendController
 
             list ($imageWidth, $imageHeight) = getimagesize($_FILES['portrait']['tmp_name']);
 
-            if ($imageWidth[0] > self::PORTRAIT_MAX_WIDTH || $imageHeight > self::PORTRAIT_MAX_HEIGHT) {
+            if ($imageWidth > self::PORTRAIT_MAX_WIDTH || $imageHeight > self::PORTRAIT_MAX_HEIGHT) {
                 return response()->json(["success" => false, "message" => 'Incorrect portrait dimensions.']);
             }
 
