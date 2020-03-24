@@ -251,10 +251,12 @@ class LandingPageController extends BackendController
 
             $ext = $request->file('logo')->guessExtension();
 
+            $imageSize = getimagesize($_FILES['logo']['tmp_name']);
 
             AQLog::info(json_encode([
                 "files" => $_FILES,
-                "logo" => getimagesize($_FILES['logo']['tmp_name']),
+                "logo w" => $imageSize[0],
+                "logo h" => $imageSize[1],
             ]));
 
 
