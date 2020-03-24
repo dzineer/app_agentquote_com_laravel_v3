@@ -419,7 +419,7 @@ class LandingPageSettings extends Component {
         newState.product_category =  this.currentPageCategory.category_id;
         newState.analytics.ga_code = this.props.ga_code;
 
-        this.setState(newState);    
+        this.setState(newState);
     }
 
     updateProfileDetails = () => {
@@ -491,7 +491,7 @@ class LandingPageSettings extends Component {
         fd.append('youtube_link', this.state.profile.youtube_link);
         fd.append('linkedin_link', this.state.profile.linkedin_link);
         fd.append('instagram_link', this.state.profile.instagram_link);
-        
+
         fd.append('product_category', this.state.product.product_category);
         fd.append('ga_code', this.state.analytics.ga_code);
 
@@ -519,7 +519,7 @@ class LandingPageSettings extends Component {
                 if (res.data.success) {
                     toastr.success(res.data.message);
                 } else {
-                    toastr.warning("some issue!");
+                    toastr.error(res.data.message);
                 }
             }).catch( error => {
                 setTimeout(
@@ -534,7 +534,7 @@ class LandingPageSettings extends Component {
                     1200
                 );
                 console.log(error);
-                toastr.error("something went wrong");
+                toastr.error(error);
             });
         } else {
             this.setState({
@@ -712,7 +712,7 @@ class LandingPageSettings extends Component {
                             </div>
 
                         </div>
-                        
+
                         <div className="col-md-12">
 
                             <div className="row">
@@ -730,7 +730,7 @@ class LandingPageSettings extends Component {
                                         options={this.pageCategoryOptions}
                                         onChange={this.onSelectedDefaultProductHandler}
                                     />
-                                </div>                                
+                                </div>
 
 
                             </div>
@@ -861,7 +861,7 @@ class LandingPageSettings extends Component {
                                         styles={styles.for.field.spacing}
                                     />
                                 </div>
-                                
+
 
                             </div>
                         </div>
