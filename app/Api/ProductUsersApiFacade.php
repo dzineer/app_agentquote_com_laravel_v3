@@ -71,12 +71,10 @@ class ProductUsersApiFacade
                 'email' => $email
             ], true));
 
-            if ($user) {
-                AQLog::info(print_r([
-                    "message" => "user details",
-                    "data" => $user
-                ], true));
-            }
+            AQLog::info(print_r([
+                "message" => "User",
+                "data" => $user
+            ], true));
 
                 // make sure we don't add any product for a disabled user
             if ($user && $user->active === 0) {
@@ -90,7 +88,7 @@ class ProductUsersApiFacade
                 ]);
             }
 
-            if (!$user
+            if ( empty($user) // is null
                 && isset($data['whmcs_password'])
                 && isset($data['whmcs_firstname'])
                 && isset($data['whmcs_lastname'])
