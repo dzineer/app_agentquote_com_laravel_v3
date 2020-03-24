@@ -72,7 +72,7 @@ class ProductUsersApiController extends Controller {
         ]);
 
 
-        return (new ProductUsersApiFacade())->assignUserProduct($data);
+        return (new ProductUsersApiFacade())->assignUserProduct($request->all());
     }
 
     /**
