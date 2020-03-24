@@ -251,6 +251,12 @@ class LandingPageController extends BackendController
 
             $ext = $request->file('logo')->guessExtension();
 
+
+            AQLog::info(json_ecode([
+                "files" => $_FILES
+            ]));
+
+
             switch( $ext) {
                 case 'png':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
@@ -283,6 +289,11 @@ class LandingPageController extends BackendController
         }
         // save portrait to store/public/landing-pages/portraits and filename to profile
         else if ($request->hasFile('portrait')) {
+
+            AQLog::info(json_ecode([
+                "files" => $_FILES
+            ]));
+
             $ext = $request->file('portrait')->guessExtension();
             if ($ext == "txt") {
                 $md5Name = md5_file($request->file('portrait')->getRealPath());
