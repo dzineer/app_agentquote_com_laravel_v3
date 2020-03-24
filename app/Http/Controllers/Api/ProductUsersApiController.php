@@ -57,20 +57,8 @@ class ProductUsersApiController extends Controller {
             'token' => 'required|max:32',
             'username' => 'required:max:32',
             'whmcs_email' => 'required:max:128',
-            'whmcs_product_id' => 'required:max:128',
-            'whmcs_token_request',
-            'whmcs_affiliate',
-            'whmcs_password',
-            'whmcs_company',
-            'whmcs_firstname',
-            'whmcs_lastname',
-            'whmcs_street',
-            'whmcs_city',
-            'whmcs_state_abbrev',
-            'whmcs_postcode',
-            'whmcs_domain'
+            'whmcs_product_id' => 'required:max:128'
         ]);
-
 
         return (new ProductUsersApiFacade())->assignUserProduct($request->all());
     }
