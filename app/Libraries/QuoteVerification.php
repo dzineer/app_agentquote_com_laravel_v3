@@ -11,6 +11,28 @@ trait QuoteVerification {
   //  use LocalAQLogger;
 
     /**
+     * @param $s
+     * @param $quoteUnverified
+     *
+     * @return array
+     */
+    protected function sendStringSMS( $s, $quoteUnverified ) : array {
+        $response = SMS::send( $s, [ "phone" => $quoteUnverified->phone ], function ( $sms ) use (
+            $quoteUnverified
+        ) {
+            $sms->to( $quoteUnverified->phone );
+        } );
+
+        // $this->Log( "::gen_verify - verification response: " . $response . "" );
+
+        // var_dump((array)$response);
+
+        $responseArray = json_decode( $response, true );
+
+        return $responseArray;
+    }
+
+    /**
      * @param int $code
      * @param $quoteUnverified
      *
