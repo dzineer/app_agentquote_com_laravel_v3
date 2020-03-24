@@ -294,7 +294,7 @@ class LandingPageController extends BackendController
         // save portrait to store/public/landing-pages/portraits and filename to profile
         else if ($request->hasFile('portrait')) {
 
-            list ($imageWidth, $imageHeight) = getimagesize($_FILES['logo']['tmp_name']);
+            list ($imageWidth, $imageHeight) = getimagesize($_FILES['portrait']['tmp_name']);
 
             if ($imageWidth[0] > self::PORTRAIT_MAX_WIDTH || $imageHeight > self::PORTRAIT_MAX_HEIGHT) {
                 return response()->json(["success" => false, "message" => 'Incorrect portrait dimensions.']);
