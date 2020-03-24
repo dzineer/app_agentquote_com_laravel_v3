@@ -96,7 +96,6 @@ class ProductUsersApiFacade
                 && isset($data['whmcs_city'])
                 && isset($data['whmcs_state_abbrev'])
                 && isset($data['whmcs_postcode'])
-                && isset($data['whmcs_domain'])
             ) {
 
                 $affiliateGroup = null;
