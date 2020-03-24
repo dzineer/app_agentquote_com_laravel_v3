@@ -66,6 +66,11 @@ class ProductUsersApiFacade
 
             $user = User::where(['email' => $email])->first();
 
+            AQLog::info(print_r([
+                "message" => "Checking again email: ",
+                'email' => $email
+            ], true));
+
             if ($user) {
                 AQLog::info(print_r([
                     "message" => "user details",
