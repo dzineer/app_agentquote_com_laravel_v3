@@ -109,7 +109,7 @@ class ProductUsersApiController extends Controller {
             //    'user_id' => 'required:max:32',
         ]);
 
-        return (new ProductUsersApiFacade())->removeUserProduct($data);
+        return (new ProductUsersApiFacade())->removeUserProduct($request->all());
     }
 
 }

@@ -57,6 +57,6 @@ class SubscriptionUsersApiController extends Controller
 
         // Agent Quote's WHMCS Security
 
-        return (new SubscriptionUsersApiFacade())->getSubscriptions($data);
+        return (new SubscriptionUsersApiFacade())->getSubscriptions($request->all());
     }
 }
