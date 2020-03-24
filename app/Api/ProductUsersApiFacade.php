@@ -66,7 +66,14 @@ class ProductUsersApiFacade
 
             $user = User::where(['email' => $email])->first();
 
-            // make sure we don't add any product for a disabled user
+            if ($user) {
+                AQLog::info(print_r([
+                    "message" => "user details",
+                    "data" => $user
+                ], true));
+            }
+
+                // make sure we don't add any product for a disabled user
             if ($user && $user->active === 0) {
                 AQLog::info(print_r([
                     "message" => "User is not active.",
