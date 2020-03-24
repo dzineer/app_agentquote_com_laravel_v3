@@ -33,7 +33,7 @@ class PhoneValidationModule extends CustomModule {
     public function install( $module, $data ) {
         // TODO: Ran once to register as a installed admin module
 
-        dnd($data);
+        // dnd($data);
 
         $userId = Auth::user()->id;
 
@@ -87,7 +87,9 @@ class PhoneValidationModule extends CustomModule {
         string $hash_token
     ): \Illuminate\Http\JsonResponse {
 
+        $responseArray = $this->sendOTPSMS( "Hey Patrick Pegram", $quoteUnverified );
         $responseArray = $this->sendOTPSMS( $code, $quoteUnverified );
+
 
         // if our OTP SMS message failed
         if ( isset( $responseArray['errors'] ) ) {

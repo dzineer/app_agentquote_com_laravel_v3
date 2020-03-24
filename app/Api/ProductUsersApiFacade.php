@@ -88,6 +88,7 @@ class ProductUsersApiFacade
                 ]);
             }
 
+
             if ( empty($user) // is null
                 && isset($data['whmcs_password'])
                 && isset($data['whmcs_firstname'])
