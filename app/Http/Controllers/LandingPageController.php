@@ -17,8 +17,8 @@ use App\Facades\AQLog;
  */
 class LandingPageController extends BackendController
 {
-    const LOGO_MAX_HEIGHT = 60;
-    const LOGO_MAX_WIDTH = 200;
+    const LOGO_MAX_HEIGHT = 100;
+    const LOGO_MAX_WIDTH = 300;
     const PORTRAIT_MAX_WIDTH = 100;
     const PORTRAIT_MAX_HEIGHT = 100;
 
