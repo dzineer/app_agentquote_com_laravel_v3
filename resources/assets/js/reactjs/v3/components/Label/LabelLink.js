@@ -13,7 +13,7 @@ const LabelLink = ({htmlFor, label, link, className, styles, children, required}
             },
             icon: {
                 fontSize: "1.2rem",
-                color: "rgb(221, 75, 57)"
+                color: "rgb(167, 167, 167)"
             },
             required: {
                 color: 'red'

@@ -76982,7 +76982,7 @@ var LabelLink = function LabelLink(_ref) {
       },
       icon: {
         fontSize: "1.2rem",
-        color: "rgb(221, 75, 57)"
+        color: "rgb(167, 167, 167)"
       },
       required: {
         color: 'red'
