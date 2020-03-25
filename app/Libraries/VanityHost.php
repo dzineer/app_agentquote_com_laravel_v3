@@ -90,9 +90,14 @@ class VanityHost
 
         $default_logo = asset_prepend('templates/landing-pages/' . $version . '/', 'images/logo-200x40.png');
 
+        $useLogo = ! empty($profile->logo) || ! empty($profile->portrait);
+
         $imageUsed = $profile->portrait ? '/storage/' . $profile->portrait : '/storage/' . $profile->logo;
 
-        dd($profile);
+        dd([
+            $useLogo,
+            $imageUsed
+        ]);
 
         $branding                  = [];
         $branding['company']       = $company;
