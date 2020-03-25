@@ -1,6 +1,6 @@
 <template>
         <div v-if="signingUp" class="tw-w-full">
-                
+
                 <fixed-top-nav v-if="showStatusBar" :delay="500" classes="tw-bg-white" offsetFromTheTop="25" >
                     <progress-bar :heading="stepsTitle[currentStep]" :states="states" classes="tw-mt-2 tw-px-8"></progress-bar>
                 </fixed-top-nav>
@@ -9,17 +9,17 @@
 
                 <needs-analyser :show="displayCalculator" @quoteFromCalculator="onQuoteFromCalculator"></needs-analyser>
 
-                <signup-state-amount v-if="stepsState.SignupStateAmount" 
+                <signup-state-amount v-if="stepsState.SignupStateAmount"
                                 :defaultAmount="quoteRequest.quoteAmount"
-                                :defaultState="quoteRequest.state" 
-                                :show="stepsState.SignupStateAmount" 
-                                @change="onAmountChange" 
-                                @stateChange="onStateChange" 
-                                @prev="prevStep" 
+                                :defaultState="quoteRequest.state"
+                                :show="stepsState.SignupStateAmount"
+                                @change="onAmountChange"
+                                @stateChange="onStateChange"
+                                @prev="prevStep"
                                 :increment="benefitIncrement"
                                 @next="nextStep"></signup-state-amount>
 
-                <signup-birth-sex v-if="stepsState.SignupBirthSex" :show="stepsState.SignupBirthSex" 
+                <signup-birth-sex v-if="stepsState.SignupBirthSex" :show="stepsState.SignupBirthSex"
                                 :defaultFirstName="quoteRequest.fname"
                                 :defaultLastName="quoteRequest.lname"
                                 :defaultEmail="quoteRequest.email"
@@ -28,34 +28,34 @@
                                 :defaultDOBYear="quoteRequest.birthdate.year"
                                 :defaultDOBAge="quoteRequest.birthdate.age"
                                 :defaultGender="quoteRequest.gender"
-                                @lnameChange="onLastNameChange" 
-                                @fnameChange="onFirstNameChange" 
-                                @emailChange="onEmailChange" 
+                                @lnameChange="onLastNameChange"
+                                @fnameChange="onFirstNameChange"
+                                @emailChange="onEmailChange"
                                 @stateChange="onStateChange"
-                                @genderChange="onGenderChange" 
+                                @genderChange="onGenderChange"
                                 @birthdateChange="onBirthdateChange"
-                                @prev="prevStep" 
+                                @prev="prevStep"
                                 @next="nextStep"></signup-birth-sex>
 
-                <signup-smoking-term v-if="stepsState.SignupSmokingTerm" :show="stepsState.SignupSmokingTerm" 
+                <signup-smoking-term v-if="stepsState.SignupSmokingTerm" :show="stepsState.SignupSmokingTerm"
                                 :defaultTerm="quoteRequest.term"
                                 :defaultTobacco="quoteRequest.tobacco"
-                                @tobaccoChange="onTobaccoChange" 
-                                @termChange="onTermChange" 
-                                @prev="prevStep" 
+                                @tobaccoChange="onTobaccoChange"
+                                @termChange="onTermChange"
+                                @prev="prevStep"
                                 :terms="terms"
                                 :insuranceCategory="insuranceCategory"
-                                @next="nextStep"></signup-smoking-term>     
+                                @next="nextStep"></signup-smoking-term>
 
-                <signup-mobile-verification v-if="stepsState.SignupMobileVerification" :show="stepsState.SignupMobileVerification" 
-                                @phoneChange="onPhoneChange" 
+                <signup-mobile-verification v-if="stepsState.SignupMobileVerification" :show="stepsState.SignupMobileVerification"
+                                @phoneChange="onPhoneChange"
                                 @emailChange="onEmailChange"
-                                :phone="quoteRequest.phone" 
+                                :phone="quoteRequest.phone"
                                 :token="token"
                                 :sendverificationby="verification_send_method"
-                                :email="quoteRequest.email" 
+                                :email="quoteRequest.email"
                                 @showFakeQuote="onShowFakeQuote"
-                                @generateQuote="onGenerateQuote"></signup-mobile-verification>                                              
+                                @generateQuote="onGenerateQuote"></signup-mobile-verification>
         </div>
 </template>
 
@@ -73,7 +73,7 @@ export default {
     components: {
         ProgressBar, SignupBar, SignupStateAmount, SignupBirthSex, SignupSmokingTerm, SignupMobileVerification, NeedsAnalyser
     },
-    data() {    
+    data() {
         return {
             socialMediaIcons: [{"name":"facebook","icon":"fa-facebook","link":"https://facebook.com/agentquoter2"},{"name":"facebook","icon":"fa-twitter","link":"https://twitter.com/agentquoter2"},{"name":"facebook","icon":"fa-linkedin","link":"https://instagram.com/agentquoter2"}],
             showSignupBar: true,
@@ -93,7 +93,7 @@ export default {
                 'not-completed',
                 'not-completed',
             ],
-            
+
             verification_send_method: 'phone',
             token: null,
             quoteRequest: {
@@ -167,12 +167,12 @@ export default {
             return n;
         },
         formatValuedAmount(a) {
-            let n = this.cleanValuedAmount( a ); 
+            let n = this.cleanValuedAmount( a );
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return "$" + n;
         },
         commaFormatAmount(a) {
-            let n = this.cleanValuedAmount( a ); 
+            let n = this.cleanValuedAmount( a );
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return n;
         },
@@ -187,7 +187,7 @@ export default {
                 data[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]);
             }
             return data;
-        },        
+        },
         getCategoryFromHash() {
             return location.hash.length > 0 ? location.hash.substr(1) : '';
         },
@@ -220,7 +220,7 @@ export default {
         },
         prevStep() {
          //   toastr.success(`Continuing quote with amount: ${this.quoteAmount}...`);
-           
+
             if (this.hasPrev()) {
                 this.updateProgressStatus( this.currentStep, 'not-completed');
                 this.stepsState[ this.steps[this.currentStep] ] = false;
@@ -236,7 +236,7 @@ export default {
             this.showSignupBar = true;
             this.displayCalculator = false;
           //  this.stepsState[ this.steps[this.currentStep] ] = true;
-        },        
+        },
         startQuote() {
             window.vueEvents.$emit('hide-section-views');
             this.showStatusBar = true;
@@ -246,13 +246,13 @@ export default {
         },
         nextStep() {
             if (this.hasNext()) {
-                    
+
                     this.updateProgressStatus( this.currentStep, 'completed');
                     this.stepsState[ this.steps[this.currentStep] ] = false;
                     this.next();
                     this.updateProgressStatus( this.currentStep, 'in-progress');
                     this.stepsState[ this.steps[this.currentStep] ] = true;
-                    
+
             }
         },
         updateProgressStatus( statePos, newStatus ) {
@@ -309,7 +309,7 @@ export default {
                 return {
                     min: 1, max: 10000000
                 };
-            }   
+            }
         },
         setBenefitPlaceHolderValues() {
             const limits = this.getBenefitLimits();
@@ -332,12 +332,12 @@ export default {
             }
         },
         getCategoryId() {
-            if (this.category === 'termlife') {
+            if (this.props.insuranceCategory === 'termlife') {
                 return '1';
-            } else if (this.category === 'fe') {
+            } else if (this.props.insuranceCategory === 'fe') {
                 return '4';
-            } else if(this.category === 'sit') {
-                return '1';
+            } else if(this.props.insuranceCategory === 'sit') {
+                return '2';
             } else {
                 return 0;
             }
@@ -376,19 +376,19 @@ export default {
             fd.append("phone" , this.quoteRequest.phone);
 
             if (this.quoteRequest.birthdate.type === 'age') {
-                fd.append("month" , this.quoteRequest.birthdate.month == -1 ? 1 : this.quoteRequest.birthdate.month );
-                fd.append("day" , this.quoteRequest.birthdate.day == -1 ? 1 : this.quoteRequest.birthdate.day );
-                fd.append("year" , this.quoteRequest.birthdate.year == -1 ? 1 : this.quoteRequest.birthdate.year ); 
+                fd.append("month" , this.quoteRequest.birthdate.month === -1 ? 1 : this.quoteRequest.birthdate.month );
+                fd.append("day" , this.quoteRequest.birthdate.day === -1 ? 1 : this.quoteRequest.birthdate.day );
+                fd.append("year" , this.quoteRequest.birthdate.year === -1 ? 1 : this.quoteRequest.birthdate.year );
             } else {
                 fd.append("month" , this.quoteRequest.birthdate.month );
                 fd.append("day" , this.quoteRequest.birthdate.day );
-                fd.append("year" , this.quoteRequest.birthdate.year ); 
+                fd.append("year" , this.quoteRequest.birthdate.year );
             }
 
             fd.append("gender" , this.quoteRequest.gender);
             fd.append("term" , this.quoteRequest.term);
             fd.append("tobacco" , this.quoteRequest.tobacco);
-            fd.append("benefit" , 
+            fd.append("benefit" ,
                 parseInt(
                     this.cleanValuedAmount(this.quoteRequest.quoteAmount)
                 ) / 1000
@@ -428,7 +428,7 @@ export default {
                     }
 
                 }
-            });              
+            });
 
             // toastr.info('Verifying verification code...');
             // toastr.info('Verification successful.');

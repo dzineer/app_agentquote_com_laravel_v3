@@ -5954,12 +5954,12 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     getCategoryId: function getCategoryId() {
-      if (this.category === 'termlife') {
+      if (this.props.insuranceCategory === 'termlife') {
         return '1';
-      } else if (this.category === 'fe') {
+      } else if (this.props.insuranceCategory === 'fe') {
         return '4';
-      } else if (this.category === 'sit') {
-        return '1';
+      } else if (this.props.insuranceCategory === 'sit') {
+        return '2';
       } else {
         return 0;
       }
@@ -5997,9 +5997,9 @@ __webpack_require__.r(__webpack_exports__);
       fd.append("phone", this.quoteRequest.phone);
 
       if (this.quoteRequest.birthdate.type === 'age') {
-        fd.append("month", this.quoteRequest.birthdate.month == -1 ? 1 : this.quoteRequest.birthdate.month);
-        fd.append("day", this.quoteRequest.birthdate.day == -1 ? 1 : this.quoteRequest.birthdate.day);
-        fd.append("year", this.quoteRequest.birthdate.year == -1 ? 1 : this.quoteRequest.birthdate.year);
+        fd.append("month", this.quoteRequest.birthdate.month === -1 ? 1 : this.quoteRequest.birthdate.month);
+        fd.append("day", this.quoteRequest.birthdate.day === -1 ? 1 : this.quoteRequest.birthdate.day);
+        fd.append("year", this.quoteRequest.birthdate.year === -1 ? 1 : this.quoteRequest.birthdate.year);
       } else {
         fd.append("month", this.quoteRequest.birthdate.month);
         fd.append("day", this.quoteRequest.birthdate.day);
