@@ -43,7 +43,7 @@ class VanityHost
 
         $data['company'] = $company;
         $data['options'] = $options;
-        $data['branding'] = $this->genBranding( $user, $profile, $company, $options['use_logo'], $data['version'] );
+        $data['branding'] = $this->genBranding( $user, $profile, $company, $data['version'] );
 
         // dd($company);
 
@@ -85,7 +85,7 @@ class VanityHost
      *
      * @return array
      */
-    private function genBranding( $user, $profile, $company, $useLogo, $version ): array {
+    private function genBranding( $user, $profile, $company, $version ): array {
 
         $default_logo = asset_prepend('templates/landing-pages/' . $version . '/', 'images/logo-200x40.png');
 
@@ -106,7 +106,7 @@ class VanityHost
         $branding['special_text']  = 'We provide a full spectrum of mobile quoters and web applications for insurance agents. Focusing on Life insurance, Health, Financial Advisors, and P&C. Our quoters and website applications cover all stages of the program development life cycle and keep you one step ahead of the competition.';
         $branding['copyright']     = 'Agent Quote Inc.';
         $branding['use_logo']      =  $useLogo;
-        $branding['use_portrait']      =  $usePortrait;
+        $branding['use_portrait']  =  $usePortrait;
 
         return $branding;
     }
