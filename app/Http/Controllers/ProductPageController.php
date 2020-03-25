@@ -18,6 +18,7 @@ class ProductPageController extends Controller
     const NOT_ACTIVE = 0;
 
     public function index(Request $request ) {
+
         // if is vanity subdomain or custom domain ?
         // yes - has category ?
         // display category product service page
@@ -121,7 +122,7 @@ class ProductPageController extends Controller
                 break;
 
             case 'sit_module':
-                $product       = 'mortgage-protection';
+                $product = 'mortgage-protection';
                 break;
 
             default:
