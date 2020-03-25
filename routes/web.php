@@ -183,7 +183,6 @@ Route::get('/component-builder', function () {
 
 Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function() {
     Route::get('/', function () {
-        echo "we are here"; exit;
         return redirect(route('login'));
     });
 });
