@@ -24,7 +24,7 @@ const TextInput = ({
     let css = {
         for: {
             container: {
-                marginBottom: '16px'
+                marginBottom: '4px'
             },
             input: {
             },

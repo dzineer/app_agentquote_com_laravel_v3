@@ -81104,7 +81104,7 @@ var TextInput = function TextInput(_ref) {
   var css = {
     "for": {
       container: {
-        marginBottom: '16px'
+        marginBottom: '4px'
       },
       input: {},
       error: {
