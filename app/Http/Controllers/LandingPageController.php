@@ -7,6 +7,7 @@ use App\Models\LandingPageCategory;
 use App\Models\LandingPageUser;
 use App\Models\UserGoogleAnalytic;
 use App\User;
+use Dzineer\LandingPages\Models\UserDomain;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Facades\AQLog;
@@ -216,6 +217,9 @@ class LandingPageController extends BackendController
             $resp->portrait = null;
         }
 
+        $subdomain = UserDomain::where(['user_id' => $user])->first();
+
+        $resp->vanity_domain = $subdomain->domain;
 
         return response()->json($resp);
     }

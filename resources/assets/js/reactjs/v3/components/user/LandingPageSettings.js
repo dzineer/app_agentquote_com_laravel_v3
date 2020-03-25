@@ -27,10 +27,12 @@ class LandingPageSettings extends Component {
             analytics: {
                 ga_code: ''
             },
+            domain: '',
             profile: {
                 logo: null,
                 portrait: null,
                 company: '',
+                vanity_domain: '',
                 position_title: '',
                 contact_email: '',
                 contact_phone: '',
@@ -743,6 +745,28 @@ class LandingPageSettings extends Component {
                                     />
                                 </div>
 
+
+                            </div>
+
+                        </div>
+
+                        <div className="col-md-12">
+
+                            <div className="row">
+
+                                <div className="col-md-12 p-y-4">
+                                    <h4>Website</h4>
+                                </div>
+
+                                <div className="col-md-12 p-y-4">
+                                    <div className="form-group" style="margin-bottom: 20px;">
+                                        <label htmlFor="facebook_link" style="margin-bottom: 20px;">
+                                            <a href={this.state.profile.vanity_domain} target="_blank" style={{textDecoration: "none"}}>My Landing Page
+                                                <i className="fa fa-external-link" style={{fontSize: "1.2rem", color: "rgb(167, 167, 167)", paddingLeft: "4px"}}></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
 
                             </div>
 
