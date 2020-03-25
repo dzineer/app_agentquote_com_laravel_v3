@@ -76996,7 +76996,10 @@ var LabelLink = function LabelLink(_ref) {
     style: css["for"].link
   }, children, label, " ", required && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     style: css["for"].required
-  }, " *")));
+  }, " *"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fa fa-link",
+    style: "font-size: 1.2rem; color: rgb(221, 75, 57);"
+  })));
 };
 
 LabelLink.propTypes = {
