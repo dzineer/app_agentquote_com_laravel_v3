@@ -789,7 +789,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
-                                    <a href="https://facebook.com/" target="_blank" className="m-b-12"> <em>Sign up for Facebook</em></a>
+                                    <a href="https://facebook.com/" target="_blank" className="d-block m-b-12"> <em>Sign up for Facebook</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
@@ -801,7 +801,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
-                                    <a href="https://twitter.com/" target="_blank" className="m-b-12"> <em>Sign up for Twitter</em></a>
+                                    <a href="https://twitter.com/" target="_blank" className="d-block m-b-12"> <em>Sign up for Twitter</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
@@ -813,7 +813,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
-                                    <a href="https://youtube.com/" target="_blank" className="m-b-12"> <em>Sign up for Youtube</em></a>
+                                    <a href="https://youtube.com/" target="_blank" className="d-block m-b-12"> <em>Sign up for Youtube</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
@@ -825,7 +825,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
-                                    <a href="https://linkedin.com/" target="_blank" className="m-b-12"> <em>Sign up for LinkedIn</em></a>
+                                    <a href="https://linkedin.com/" target="_blank" className="d-block m-b-12"> <em>Sign up for LinkedIn</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
@@ -837,7 +837,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
-                                    <a href="https://instagram.com/" target="_blank" className="m-b-12"> <em>Sign up for Instagram</em></a>
+                                    <a href="https://instagram.com/" target="_blank" className="d-block m-b-12"> <em>Sign up for Instagram</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-t-4 p-b-1">
@@ -849,7 +849,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
-                                    <a href="https://calendly.com/" target="_blank" className="m-b-12"> <em>Sign up for Calendly</em></a>
+                                    <a href="https://calendly.com/" target="_blank" className="d-block m-b-12"> <em>Sign up for Calendly</em></a>
                                 </div>
 
                             </div>
