@@ -46,7 +46,7 @@ class LandingPageController extends BackendController
             "currentPageCategory" => json_encode($currentPageCategory)
         ];
 
-        dd($data);
+        // dd($data);
 
 		return view('landing-pages.profile.index', $data)->render();
 	}
