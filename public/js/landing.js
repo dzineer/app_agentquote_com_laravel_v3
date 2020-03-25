@@ -5954,11 +5954,13 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     getCategoryId: function getCategoryId() {
-      if (this.props.insuranceCategory === 'termlife') {
+      debugger;
+
+      if (this.insuranceCategory === 'termlife') {
         return '1';
-      } else if (this.props.insuranceCategory === 'fe') {
+      } else if (this.insuranceCategory === 'fe') {
         return '4';
-      } else if (this.props.insuranceCategory === 'sit') {
+      } else if (this.insuranceCategory === 'sit') {
         return '2';
       } else {
         return 0;
