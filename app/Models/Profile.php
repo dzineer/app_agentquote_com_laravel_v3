@@ -53,6 +53,7 @@ class Profile extends Eloquent
 		'twitter_link',
 		'youtube_link',
 		'linkedin_link',
-		'instagram_link'
+		'instagram_link',
+		'calendly_link'
 	];
 }
