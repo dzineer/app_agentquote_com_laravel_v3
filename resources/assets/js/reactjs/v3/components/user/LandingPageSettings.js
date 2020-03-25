@@ -661,7 +661,7 @@ class LandingPageSettings extends Component {
                                         name="contact_phone"
                                         label="Phone"
                                         value={this.state.profile.contact_phone}
-                                        required={false}
+                                        required={true}
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
@@ -672,7 +672,7 @@ class LandingPageSettings extends Component {
                                         name="contact_addr1"
                                         label="Address 1"
                                         value={this.state.profile.contact_addr1}
-                                        required={false}
+                                        required={true}
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
@@ -694,7 +694,7 @@ class LandingPageSettings extends Component {
                                         name="contact_city"
                                         label="City"
                                         value={this.state.profile.contact_city}
-                                        required={false}
+                                        required={true}
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
@@ -705,7 +705,7 @@ class LandingPageSettings extends Component {
                                         name="contact_state"
                                         label="State"
                                         defaultValue={this.state.profile.contact_state}
-                                        required
+                                        required={true}
                                         options={this.stateOptions}
                                         onChange={this.onSelectedHandler}
                                     />
@@ -716,7 +716,7 @@ class LandingPageSettings extends Component {
                                         name="contact_zipcode"
                                         label="Zip code"
                                         value={this.state.profile.contact_zipcode}
-                                        required={false}
+                                        required={true}
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
