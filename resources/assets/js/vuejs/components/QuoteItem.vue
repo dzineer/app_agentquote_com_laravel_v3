@@ -6,12 +6,12 @@
                     <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
                         <div class="tw-flex tw-flex-col tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-4 tw-flex-wrap">
                             <p class="tw-py-2 tw-font-bold tw-text-md" v-text="carrierDetails.name"></p>
-                            <p class="tw-py-2" v-text="carrierDetails.address1">3275 Bennett Creek Avenue</p>
+                            <p class="tw-py-2" v-text="carrierDetails.address1"></p>
                             <p class="tw-py-2" v-text="carrierDetails.city + ', ' + carrierDetails.state + '  ' + carrierDetails.zipCode "></p>
                             <p class="tw-py-2" v-html="carrierDetails.website"></p>
                             <p class="tw-py-2" v-html="carrierDetails.addressTrailer"></p>
                             <p class="tw-py-2">Policy Form #: {{ carrierDetails.reference }}</p>
-                            <button class="tw-my-4 tw-py-4 tw-px-6 tw-bg-primary tw-text-white tw-rounded" @click="togglePolicyDetails">Close</button>
+                            <button class="tw-my-4 tw-py-4 tw-px-6 tw-bg-primary tw-text-white tw-rounded" @click="togglePolicyDetails">Close to return to rate</button>
                         </div>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                     <div class="tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap">
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <carrier-logo :path="logo"></carrier-logo>
-                            <rate-classification-items 
+                            <rate-classification-items
                                 :items="rateClassifications">
                             </rate-classification-items>
                         </div>
@@ -40,7 +40,7 @@
                 </div>
 
             </div>
-        </div>    
+        </div>
 </template>
 
 <script>
@@ -65,6 +65,6 @@ import Icon from "./Icon";
                 this.showPolicy = !this.showPolicy;
             }
 
-        } 
+        }
     }
 </script>
