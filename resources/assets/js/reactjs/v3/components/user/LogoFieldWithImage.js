@@ -27,7 +27,8 @@ class LogoFieldWithImage extends Component {
                 logo: {
                     for: {
                         image: {
-                            width: "100%", maxWidth: '100%'
+                            maxWidth: this.props.dimensions.width,
+                            maxHeight: this.props.dimensions.height,
                         }
                     }
                 }
@@ -63,6 +64,7 @@ LogoFieldWithImage.propTypes = {
     name: PropTypes.string,
     error: PropTypes.string,
     label: PropTypes.string,
+    dimensions: PropTypes.object,
     onChange: PropTypes.func.isRequired,
     onRemoveImage: PropTypes.func.isRequired,
     using: PropTypes.bool.isRequired,
@@ -73,6 +75,7 @@ LogoFieldWithImage.defaultProps = {
     name: "",
     error: "",
     label: "Image",
+    dimensions: { height: '100px', 'width': '100px' },
     onChange: () => {},
     onRemoveImage: () => {},
     using: false,
