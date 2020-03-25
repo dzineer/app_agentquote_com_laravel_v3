@@ -835,7 +835,7 @@ class LandingPageSettings extends Component {
                                     />
                                 </div>
 
-                                <div className="col-md-4 p-y-4">
+                                <div className="col-md-4 p-t-4 p-b-1">
                                     <TextInput
                                         name="calendly_link"
                                         label="Calendly"
@@ -844,7 +844,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
-                                    <a href="https://calendly.com/" target="_blank">Calendly</a>
+                                    <a href="https://calendly.com/" target="_blank">Sign up for Calendly</a>
                                 </div>
 
                             </div>
