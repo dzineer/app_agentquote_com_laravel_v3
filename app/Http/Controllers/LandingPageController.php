@@ -201,6 +201,7 @@ class LandingPageController extends BackendController
         $resp->youtube_link = $profile->youtube_link ?: '';
         $resp->linkedin_link = $profile->linkedin_link ?: '';
         $resp->instagram_link = $profile->instagram_link ?: '';
+        $resp->calendly_link = $profile->calendly_link ?: '';
 
         if( $profile->logo ) {
             $resp->logo = $profile->logo;
@@ -349,8 +350,8 @@ class LandingPageController extends BackendController
           [ 'name' => 'youtube_link', 'key' => 'youtube_link'],
           [ 'name' => 'linkedin_link', 'key' => 'linkedin_link'],
           [ 'name' => 'instagram_link', 'key' => 'instagram_link'],
+          [ 'name' => 'calendly_link', 'key' => 'calendly_link'],
         ];
-
 
         foreach( $fields as $field ) {
             if ($request->has( $field['name'] )) {

@@ -43,7 +43,8 @@ class LandingPageSettings extends Component {
                 twitter_link: '',
                 youtube_link: '',
                 linkedin_link: '',
-                instagram_link: ''
+                instagram_link: '',
+                calendly_link: ''
             },
             submit: {
                 disabled: false,
@@ -499,6 +500,7 @@ class LandingPageSettings extends Component {
         fd.append('youtube_link', this.state.profile.youtube_link);
         fd.append('linkedin_link', this.state.profile.linkedin_link);
         fd.append('instagram_link', this.state.profile.instagram_link);
+        fd.append('calendly_link', this.state.profile.calendly_link);
 
         fd.append('product_category', this.state.product.product_category);
         fd.append('ga_code', this.state.analytics.ga_code);
@@ -827,6 +829,17 @@ class LandingPageSettings extends Component {
                                         name="instagram_link"
                                         label="Instagram"
                                         value={this.state.profile.instagram_link}
+                                        required={false}
+                                        onChange={this.onChange}
+                                        styles={styles.for.field.spacing}
+                                    />
+                                </div>
+
+                                <div className="col-md-4 p-y-4">
+                                    <TextInput
+                                        name="calendly_link"
+                                        label="Instagram"
+                                        value={this.state.profile.calendly_link}
                                         required={false}
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
