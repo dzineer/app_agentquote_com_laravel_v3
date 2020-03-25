@@ -789,6 +789,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
+                                    <a href="https://facebook.com/" target="_blank"> <em>Sign up for Facebook</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
@@ -800,6 +801,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
+                                    <a href="https://twitter.com/" target="_blank"> <em>Sign up for Twitter</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
@@ -811,6 +813,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
+                                    <a href="https://youtube.com/" target="_blank"> <em>Sign up for Youtube</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
@@ -822,6 +825,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
+                                    <a href="https://linkedin.com/" target="_blank"> <em>Sign up for LinkedIn</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
@@ -833,6 +837,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
+                                    <a href="https://instagram.com/" target="_blank"> <em>Sign up for Instagram</em></a>
                                 </div>
 
                                 <div className="col-md-4 p-t-4 p-b-1">
