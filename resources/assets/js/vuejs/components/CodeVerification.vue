@@ -22,30 +22,30 @@
         </p>
 
         <i class="tw-flex tw-justify-center tw-items-center tw-mt-1 tw-mb-2 tw-text-md tw-tracking-widest tw-text-gray-800" v-if="verification.showVerificationByPhone">
-            <a @click.prevent="onShowPhoneField" 
+            <a @click.prevent="onShowPhoneField"
                 v-if="verification.showVerificationByPhone"
-                class="tw-cursor-pointer tw-underline" 
+                class="tw-cursor-pointer tw-underline"
                 :disabled="!verification.ready" >Change mobile number</a>
         </i>
 
         <i class="tw-flex tw-justify-center tw-items-center tw-mt-1 tw-mb-2 tw-text-md tw-tracking-widest tw-text-gray-800" v-if="verification.showVerificationByEmail">
-            <a @click.prevent="verification.showVerificationField = false; verification.showVerificationByEmail = false; verification.showVerificationByPhone = false;  verification.showPhoneField = false; verification.showEmailField = true;" 
-                class="tw-cursor-pointer tw-underline" 
+            <a @click.prevent="verification.showVerificationField = false; verification.showVerificationByEmail = false; verification.showVerificationByPhone = false;  verification.showPhoneField = false; verification.showEmailField = true;"
+                class="tw-cursor-pointer tw-underline"
                 :disabled="!verification.ready" >Change email address</a>
         </i>
 
         <div class="tw-flex tw-flex-row tw-justify-center tw-items-center tw-my-2">
 
             <div class="tw-flex tw-flex-row tw-justify-center tw-items-center tw-my-2 tw-w-full sm:tw-w-2/3 md:tw-w-1/2 xs:tw-mr-0 tw-mr-2">
-                
-                <input type="text" name="phone" class="focus:tw-outline-none tw-h-13 focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-4 tw-px-3 tw-py-4 tw-shadow tw-text-center tw-text-gray-700 tw-w-1/2 sm:tw-w-2/5" 
+
+                <input type="text" name="phone" class="focus:tw-outline-none tw-h-13 focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-4 tw-px-3 tw-py-4 tw-shadow tw-text-center tw-text-gray-700 tw-w-1/2 sm:tw-w-2/5"
                     v-if="showPhoneField"
-                    placeholder="Phone" 
-                    v-model="phone" 
+                    placeholder="Phone"
+                    v-model="phone"
                     @change="onPhoneUpdate"
                     :disabled="sending"
                     required>
-                    
+
                 <button @click.prevent="onGenerateQuote"
                  v-if="showPhoneField"
                 class="tw-cursor-pointer tw-no-underline tw-rounded tw-py-4 tw-h-13 tw-px-4 sm:tw-px-8 tw-uppercase tw-font-semibold tw-bg-primaryBright tw-text-white tw-w-1/2 sm:tw-w-2/5"
@@ -55,17 +55,17 @@
                 Send Code
                 </button>
 
-                <input type="text" name="phone" class="focus:tw-outline-none tw-h-13 focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-4 tw-px-3 tw-py-4 tw-shadow tw-text-center tw-text-gray-700 tw-w-1/2 sm:tw-w-2/5" 
+                <input type="text" name="phone" class="focus:tw-outline-none tw-h-13 focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-4 tw-px-3 tw-py-4 tw-shadow tw-text-center tw-text-gray-700 tw-w-1/2 sm:tw-w-2/5"
                     v-if="verification.showVerificationField"
-                    placeholder="Code" 
-                    v-model="verification.code" 
-                    @change="onValidationCodeUpdate"
+                    placeholder="Code"
+                    v-model="verification.code"
+                    @keyup="onValidationCodeUpdate"
                     :disabled="verifying"
                     required>
 
-                <button @click.prevent="onValidateCode" 
+                <button @click.prevent="onValidateCode"
                 v-if="verification.showVerificationField"
-                class="tw-cursor-pointer tw-no-underline tw-rounded tw-py-4 tw-h-13 tw-px-4 sm:tw-px-8 tw-uppercase tw-font-semibold tw-bg-primaryBright tw-text-white tw-w-1/2 sm:tw-w-2/5" 
+                class="tw-cursor-pointer tw-no-underline tw-rounded tw-py-4 tw-h-13 tw-px-4 sm:tw-px-8 tw-uppercase tw-font-semibold tw-bg-primaryBright tw-text-white tw-w-1/2 sm:tw-w-2/5"
                 :disabled="verifying"
                  >
                  <icon v-if="verifying" name="refresh" classes="tw-inline-block fa-spin fa-fw tw-mr-2" />
@@ -73,15 +73,15 @@
                  {{ captions.verifyButton }}
                  </button>
 
-                <input type="text" name="email" class="focus:tw-outline-none tw-h-13 focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-4 tw-px-3 tw-py-4 tw-shadow tw-text-center tw-text-gray-700 tw-w-1/2 sm:tw-w-2/5" 
+                <input type="text" name="email" class="focus:tw-outline-none tw-h-13 focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-4 tw-px-3 tw-py-4 tw-shadow tw-text-center tw-text-gray-700 tw-w-1/2 sm:tw-w-2/5"
                     v-if="verification.showEmailField"
-                    placeholder="Email" 
-                    v-model="verification.email" 
+                    placeholder="Email"
+                    v-model="verification.email"
                     @change="onEmailUpdate"
                     :disabled="sending"
                     required>
 
-                <button @click.prevent="onSendEmail" 
+                <button @click.prevent="onSendEmail"
                 v-if="verification.showEmailField"
                 class="tw-cursor-pointer tw-no-underline tw-h-13 tw-rounded tw-py-4 tw-px-8 tw-uppercase tw-font-semibold tw-bg-primaryBright tw-text-white tw-w-1/2 sm:tw-w-2/5"
                 :disabled="!verification.ready || sending" >
@@ -91,8 +91,8 @@
                 </button>
 
             </div>
-            
-        </div>    
+
+        </div>
 
         <secure-confidential-banner></secure-confidential-banner>
 
@@ -147,7 +147,7 @@ export default {
     methods: {
         isNumeric(n) {
             return !isNaN(parseFloat(n)) && isFinite(n);
-        },       
+        },
         showVerifcationField() {
             this.showPhoneField = false;
             this.verification.showVerificationByPhone = false;
@@ -155,7 +155,7 @@ export default {
             this.verification.showVerificationField = false;
             this.verification.showEmailField = false;
             this.verification.showVerificationField = true;
-        }, 
+        },
         onShowPhoneField() {
             this.showPhoneField = true;
             this.verification.showVerificationByPhone = false;
@@ -164,27 +164,27 @@ export default {
             this.verification.showEmailField = false;
         },
         onShowPhoneVerification() {
-            this.verification.showVerificationField = true; 
-            this.verification.showVerificationByEmail = false; 
-            this.verification.showVerificationByPhone = true; 
-            this.showPhoneField = false; 
-            this.verification.showEmailField = false;  
+            this.verification.showVerificationField = true;
+            this.verification.showVerificationByEmail = false;
+            this.verification.showVerificationByPhone = true;
+            this.showPhoneField = false;
+            this.verification.showEmailField = false;
         },
         onShowEmailVerification() {
-            this.verification.showEmailField = false; 
-            this.verification.showVerificationField = true; 
-            this.verification.showVerificationByEmail = true; 
-            this.verification.showVerificationByPhone = false; 
-            this.showPhoneField = false; 
+            this.verification.showEmailField = false;
+            this.verification.showVerificationField = true;
+            this.verification.showVerificationByEmail = true;
+            this.verification.showVerificationByPhone = false;
+            this.showPhoneField = false;
             this.showPhoneField = false;
         },
         onShowEmailField() {
-            this.verification.showVerificationField = false; 
-            this.verification.showVerificationByEmail = false; 
-            this.verification.showVerificationByPhone = false; 
-            this.showPhoneField = false; 
-            this.verification.showEmailField = true; 
-            this.showPhoneField = false; 
+            this.verification.showVerificationField = false;
+            this.verification.showVerificationByEmail = false;
+            this.verification.showVerificationByPhone = false;
+            this.showPhoneField = false;
+            this.verification.showEmailField = true;
+            this.showPhoneField = false;
         },
         onPhoneUpdate() {
             if(!this.isReady()) {
@@ -205,7 +205,7 @@ export default {
 		isReady() {
             this.ready = this.phoneExpression.test(this.phone);
             return this.ready;
-        },        
+        },
         onValidateCode() {
             this.verification.ready = true;
 
@@ -256,13 +256,13 @@ export default {
                         }
 
                     }
-                });              
+                });
 
 				// toastr.info('Verifying verification code...');
                 // toastr.info('Verification successful.');
-                
+
 			}
-        },        
+        },
         onGenerateQuote() {
             debugger;
             this.sending = true;
@@ -275,7 +275,7 @@ export default {
                 this.showPhoneField = false;
                 this.verification.showVerificationByPhone = true;
 			}
-        },        
+        },
         onSendEmail() {
             if (this.isReady()) {
 				// toastr.info('Sending verification code...');
@@ -284,7 +284,7 @@ export default {
                 this.verification.showEmailField = false;
                 this.verification.showVerificationByPhone = true;
 			}
-        }        
+        }
     },
     watch: {
         token(value) {
