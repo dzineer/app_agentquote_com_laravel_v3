@@ -185,6 +185,17 @@ Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function(
     Route::get('/', function () {
         return redirect(route('login'));
     });
+
+    Route::get('login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('login', [\App\Http\Controllers\Auth\SecureLoginController::class, 'login']);
+    Route::post('logout',  [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+    Route::post('password/email', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+    Route::get('password/reset',  [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+    Route::post('password/reset', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'])->name('password.update');
+    Route::get('password/reset/{token}', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+    Route::post('register', [\App\Http\Controllers\Auth\RegisterController::class, 'register']);
+    Route::get('register',  [\App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
+
 });
 
 Route::get('/l/{token}', function ($token, Request $request) {
@@ -359,15 +370,7 @@ Route::get('/beta/landing-page', [\App\Http\Controllers\LandingPage::class, 'ind
 Route::get('passgen', [\App\Http\Controllers\UtilsController::class, 'passgen'])->name('utils.passgen');
 Route::get('imagetool/ratio', [\App\Http\Controllers\ImageToolsController::class, 'ratio'])->name('color.ratio');
 
-Route::get('login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
-Route::post('login', [\App\Http\Controllers\Auth\SecureLoginController::class, 'login']);
-Route::post('logout',  [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
-Route::post('password/email', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
-Route::get('password/reset',  [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
-Route::post('password/reset', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'])->name('password.update');
-Route::get('password/reset/{token}', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'])->name('password.reset');
-Route::post('register', [\App\Http\Controllers\Auth\RegisterController::class, 'register']);
-Route::get('register',  [\App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
+// was here login stuff
 
 /*Route::group(['domain' => '{subdomain}.landing-pages.test'], function() {
 	// Microsite - Pages
