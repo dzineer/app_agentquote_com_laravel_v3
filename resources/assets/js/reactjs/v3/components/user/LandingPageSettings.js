@@ -777,7 +777,7 @@ class LandingPageSettings extends Component {
                             <div className="row">
 
                                 <div className="col-md-12 p-y-4">
-                                    <h4>Social Media Links</h4>
+                                    <h4>Links</h4>
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
