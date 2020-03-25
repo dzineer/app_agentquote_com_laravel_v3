@@ -49,7 +49,7 @@ class LogoFieldWithImage extends Component {
                         <div className="d-flex align-items-center">
                             <img name={ this.props.name } src={ this.props.path } style={css.for.logo.for.image} />
                             { this.props.using && <a href="" className="m-l-6" onClick={ this.props.onRemoveImage } style={{ "cursor":"pointer", "textDecoration":"initial" }} alt="Remove" title="Remove" data-toggle="tooltip" data-html="true">
-                                <i className="fa fa-times" style={{ "fontSize": "1.2rem", "color": "#dd4b39"}} />
+                                <i className="fa fa-times" style={{ "fontSize": "1.2rem", "color": "#dd4b39"}} /> Remove
                             </a> }
                         </div>
                     ) }
