@@ -37,10 +37,10 @@ const TextInput = ({
     };
 
     let labelUser = link.length ?
-        <Label htmlFor={name} label={label} required={required} styles={styles} className={className} /> :
-        <LabelLink htmlFor={name} label={label} link={link} required={required} styles={styles} className={className} /> ;
+        <LabelLink htmlFor={name} label={label} link={link} required={required} styles={styles} className={className} /> :
+        <Label htmlFor={name} label={label} required={required} styles={styles} className={className} /> ;
 
-    console.log(
+/*    console.log(
         "[many props]",
         { name:name,
         label: label,
@@ -50,7 +50,7 @@ const TextInput = ({
         required: required,
         error: error,
         styles: styles }
-    );
+    );*/
 
     return (
         <div className={classNames.wrapperClass} style={styles}>

@@ -76962,7 +76962,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 
 
-/** Label with required field display, htmlFor, and block styling */
+/** LabelLink with required field display, htmlFor, and block styling */
 
 var LabelLink = function LabelLink(_ref) {
   var htmlFor = _ref.htmlFor,
@@ -81197,30 +81197,32 @@ var TextInput = function TextInput(_ref) {
       }
     }
   };
-  var labelUser = link.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Label__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    htmlFor: name,
-    label: label,
-    required: required,
-    styles: styles,
-    className: className
-  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Label_LabelLink__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  var labelUser = link.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Label_LabelLink__WEBPACK_IMPORTED_MODULE_3__["default"], {
     htmlFor: name,
     label: label,
     link: link,
     required: required,
     styles: styles,
     className: className
-  });
-  console.log("[many props]", {
-    name: name,
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Label__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    htmlFor: name,
     label: label,
-    placeholder: placeholder,
-    onChange: onChange,
-    value: value,
     required: required,
-    error: error,
-    styles: styles
+    styles: styles,
+    className: className
   });
+  /*    console.log(
+          "[many props]",
+          { name:name,
+          label: label,
+          placeholder: placeholder,
+          onChange: onChange,
+          value: value,
+          required: required,
+          error: error,
+          styles: styles }
+      );*/
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classNames.wrapperClass,
     style: styles

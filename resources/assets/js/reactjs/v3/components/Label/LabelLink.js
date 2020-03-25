@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/** Label with required field display, htmlFor, and block styling */
+/** LabelLink with required field display, htmlFor, and block styling */
 const LabelLink = ({htmlFor, label, link, className, styles, children, required}) => {
     const css = {
         for: {
