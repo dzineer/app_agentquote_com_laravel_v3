@@ -44,7 +44,7 @@ class VanityHost
 
         $data['company'] = $company;
         $data['options'] = $options;
-        $data['branding'] = $this->genBranding( $user, $company, $options['use_logo'], $data['version'] );
+        $data['branding'] = $this->genBranding( $user, $profile, $company, $options['use_logo'], $data['version'] );
 
         // dd($company);
 
@@ -79,17 +79,18 @@ class VanityHost
     /**
      * @param $user
      *
+     * @param $profile
      * @param $company
      * @param $useLogo
      * @param $version
      *
      * @return array
      */
-    private function genBranding( $user, $company, $useLogo, $version ): array {
+    private function genBranding( $user, $profile, $company, $useLogo, $version ): array {
 
         $default_logo = asset_prepend('templates/landing-pages/' . $version . '/', 'images/logo-200x40.png');
 
-        $imageUsed = $user->profile->portrait ? '/storage/' . $user->profile->portrait : '/storage/' . $user->profile->logo;
+        $imageUsed = $profile->portrait ? '/storage/' . $profile->portrait : '/storage/' . $profile->logo;
 
         $branding                  = [];
         $branding['company']       = $company;
