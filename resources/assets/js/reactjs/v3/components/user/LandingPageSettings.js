@@ -844,6 +844,7 @@ class LandingPageSettings extends Component {
                                         onChange={this.onChange}
                                         styles={styles.for.field.spacing}
                                     />
+                                    <a href="https://calendly.com/" target="_blank">Calendly</a>
                                 </div>
 
                             </div>
