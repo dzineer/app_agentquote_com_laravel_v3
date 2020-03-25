@@ -94,10 +94,10 @@ class VanityHost
 
         $imageUsed = $profile->portrait ? '/storage/' . $profile->portrait : '/storage/' . $profile->logo;
 
-        dd([
+/*        dd([
             $useLogo,
             $imageUsed
-        ]);
+        ]);*/
 
         $branding                  = [];
         $branding['company']       = $company;
