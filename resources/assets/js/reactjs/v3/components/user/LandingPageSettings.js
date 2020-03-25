@@ -328,6 +328,9 @@ class LandingPageSettings extends Component {
             "extendedTimeOut": 21000
         };
 
+        this.displayLogo = '';
+        this.displayPortrait = '';
+
         this.onRemoveLogo.bind(this);
         this.onAnalyticsChange.bind(this);
         this.onRemovePortrait.bind(this);
@@ -357,11 +360,18 @@ class LandingPageSettings extends Component {
         let profile = Object.assign({}, this.state.profile );
         profile.logo = null;
 
+        this.updateImages();
+
         this.setState({ profile });
 
     };
 
-    onRemovePortrait= event => {
+    updateImages = () => {
+        this.displayLogo = typeof this.state.profile.logo !== 'undefined' && this.state.profile.logo !== null ? this.state.profile.logo : '/storage/landing-pages/defaults/no-logo.png';
+        this.displayPortrait = typeof this.state.profile.portrait !== 'undefined' && this.state.profile.portrait !== null ? this.state.profile.portrait : '/storage/landing-pages/defaults/no-portrait.png';
+    };
+
+    onRemovePortrait = event => {
         event.preventDefault();
 
         let profile = Object.assign({}, this.state.profile );
@@ -593,8 +603,8 @@ class LandingPageSettings extends Component {
 
         debugger;
 
-        let displayLogo = typeof this.state.profile.logo !== 'undefined' && this.state.profile.logo !== null ? this.state.profile.logo : '/storage/landing-pages/defaults/no-logo.png';
-        let displayPortrait = typeof this.state.profile.portrait !== 'undefined' && this.state.profile.portrait !== null ? this.state.profile.portrait : '/storage/landing-pages/defaults/no-portrait.png';
+        this.displayLogo = typeof this.state.profile.logo !== 'undefined' && this.state.profile.logo !== null ? this.state.profile.logo : '/storage/landing-pages/defaults/no-logo.png';
+        this.displayPortrait = typeof this.state.profile.portrait !== 'undefined' && this.state.profile.portrait !== null ? this.state.profile.portrait : '/storage/landing-pages/defaults/no-portrait.png';
 
         return (
 
