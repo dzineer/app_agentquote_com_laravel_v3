@@ -183,7 +183,7 @@ class LandingPageController extends BackendController
         $user = User::find($id);
         // return response()->json($user);
 
-        $profile = Profile::where(['user_id' => $user->id]);
+        $profile = Profile::where(['user_id' => $user->id])->first();
 
         $resp = new \stdClass();
 
