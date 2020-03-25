@@ -838,7 +838,7 @@ class LandingPageSettings extends Component {
                                 <div className="col-md-4 p-y-4">
                                     <TextInput
                                         name="calendly_link"
-                                        label="Instagram"
+                                        label="Calendly"
                                         value={this.state.profile.calendly_link}
                                         required={false}
                                         onChange={this.onChange}
