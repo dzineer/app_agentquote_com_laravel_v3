@@ -769,7 +769,7 @@ class LandingPageSettings extends Component {
                                     </div> */}
 
 
-                                    <LogoFieldWithImage error="" label="Portrait" onChange={this.onFileAddedHandler} style={this.style} path={ displayPortrait } onRemoveLogo={ this.onRemovePortrait } using={ this.state.profile.portrait !== null } disclaimer="Image should be no more than 60 pixels high and 200 pixels wide." />
+                                    <LogoFieldWithImage error="" label="Portrait" onChange={this.onFileAddedHandler} style={this.style} path={ displayPortrait } onRemoveLogo={ this.onRemovePortrait } using={ this.state.profile.portrait !== null } disclaimer="Image should be no more than 100 pixels high and 200 pixels wide." />
 
                                 </div>
 
