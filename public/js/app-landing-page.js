@@ -76947,6 +76947,88 @@ Label.defautTypes = {
 
 /***/ }),
 
+/***/ "./resources/assets/js/reactjs/v3/components/Label/LabelLink.js":
+/*!**********************************************************************!*\
+  !*** ./resources/assets/js/reactjs/v3/components/Label/LabelLink.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/** Label with required field display, htmlFor, and block styling */
+
+var LabelLink = function LabelLink(_ref) {
+  var htmlFor = _ref.htmlFor,
+      label = _ref.label,
+      link = _ref.link,
+      className = _ref.className,
+      styles = _ref.styles,
+      children = _ref.children,
+      required = _ref.required;
+  var css = {
+    "for": {
+      label: {
+        display: 'block'
+      },
+      link: {
+        textDecoration: 'none'
+      },
+      required: {
+        color: 'red'
+      }
+    }
+  };
+  console.log("[LabelLink]", className);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: htmlFor,
+    style: styles,
+    className: className
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: link,
+    target: "_blank",
+    style: css["for"].link
+  }, children, label, " ", required && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    style: css["for"].required
+  }, " *")));
+};
+
+LabelLink.propTypes = {
+  /** HTML ID for associated input */
+  htmlFor: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+
+  /** Label text */
+  label: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+
+  /** Label text */
+  link: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+
+  /** Label Classname for CSS */
+  className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+
+  /** Styles for CSS */
+  styles: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+
+  /** Child elements */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+
+  /** Display asterisk after label if true */
+  required: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+};
+LabelLink.defautTypes = {
+  required: false,
+  styles: {}
+};
+/* harmony default export */ __webpack_exports__["default"] = (LabelLink);
+
+/***/ }),
+
 /***/ "./resources/assets/js/reactjs/v3/components/Label/index.js":
 /*!******************************************************************!*\
   !*** ./resources/assets/js/reactjs/v3/components/Label/index.js ***!
@@ -81026,6 +81108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Label__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Label */ "./resources/assets/js/reactjs/v3/components/Label/index.js");
+/* harmony import */ var _Label_LabelLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Label/LabelLink */ "./resources/assets/js/reactjs/v3/components/Label/LabelLink.js");
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -81083,6 +81166,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 
 
+
 /** Text input with integrated label to enforce consistency in layout, error display, label placement  */
 
 var TextInput = function TextInput(_ref) {
@@ -81094,8 +81178,9 @@ var TextInput = function TextInput(_ref) {
       required = _ref.required,
       error = _ref.error,
       styles = _ref.styles,
+      link = _ref.link,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["name", "label", "placeholder", "onChange", "value", "required", "error", "styles", "className"]);
+      props = _objectWithoutProperties(_ref, ["name", "label", "placeholder", "onChange", "value", "required", "error", "styles", "link", "className"]);
 
   var classNames = {
     wrapperClass: 'form-group',
@@ -81104,7 +81189,7 @@ var TextInput = function TextInput(_ref) {
   var css = {
     "for": {
       container: {
-        marginBottom: '4px'
+        marginBottom: '16px'
       },
       input: {},
       error: {
@@ -81112,6 +81197,20 @@ var TextInput = function TextInput(_ref) {
       }
     }
   };
+  var labelUser = link.length ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Label__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    htmlFor: name,
+    label: label,
+    required: required,
+    styles: styles,
+    className: className
+  }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Label_LabelLink__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    htmlFor: name,
+    label: label,
+    link: link,
+    required: required,
+    styles: styles,
+    className: className
+  });
   console.log("[many props]", {
     name: name,
     label: label,
@@ -81125,13 +81224,7 @@ var TextInput = function TextInput(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: classNames.wrapperClass,
     style: styles
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Label__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    htmlFor: name,
-    label: label,
-    required: required,
-    styles: styles,
-    className: className
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, labelUser, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "field"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", _extends({
     id: name,
@@ -81172,11 +81265,13 @@ TextInput.propTypes = {
 
   /** Styles */
   styles: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+  className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  link: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
 };
 TextInput.defaultProps = {
   error: '',
-  styles: {}
+  styles: {},
+  link: ''
 };
 /* harmony default export */ __webpack_exports__["default"] = (TextInput);
 

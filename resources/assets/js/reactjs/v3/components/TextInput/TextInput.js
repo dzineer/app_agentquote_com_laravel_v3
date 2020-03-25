@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Label from '../Label';
+import LabelLink from '../Label/LabelLink';
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement  */
 const TextInput = ({
@@ -12,6 +13,7 @@ const TextInput = ({
         required,
         error,
         styles,
+        link,
         className,
         ...props
     }) => {
@@ -24,7 +26,7 @@ const TextInput = ({
     let css = {
         for: {
             container: {
-                marginBottom: '4px'
+                marginBottom: '16px'
             },
             input: {
             },
@@ -33,6 +35,10 @@ const TextInput = ({
             }
         }
     };
+
+    let labelUser = link.length ?
+        <Label htmlFor={name} label={label} required={required} styles={styles} className={className} /> :
+        <LabelLink htmlFor={name} label={label} link={link} required={required} styles={styles} className={className} /> ;
 
     console.log(
         "[many props]",
@@ -48,7 +54,7 @@ const TextInput = ({
 
     return (
         <div className={classNames.wrapperClass} style={styles}>
-            <Label htmlFor={name} label={label} required={required} styles={styles} className={className} />
+            { labelUser }
             <div className="field">
                 <input
                     id={name}
@@ -94,12 +100,15 @@ TextInput.propTypes = {
     /** Styles */
     styles: PropTypes.object,
 
-    className: PropTypes.string
+    className: PropTypes.string,
+
+    link: PropTypes.string
 };
 
 TextInput.defaultProps = {
     error: '',
-    styles: {}
+    styles: {},
+    link: ''
 };
 
 export default TextInput;
