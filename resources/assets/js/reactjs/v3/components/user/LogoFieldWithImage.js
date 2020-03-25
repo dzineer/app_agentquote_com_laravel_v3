@@ -12,7 +12,7 @@ class LogoFieldWithImage extends Component {
 
 
     componentDidUpdate() {
-        console.log(this.props.path);
+        console.log("Path: ", this.props.path);
     }
 
     render() {
