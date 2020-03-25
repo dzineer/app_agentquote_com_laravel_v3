@@ -76980,6 +76980,10 @@ var LabelLink = function LabelLink(_ref) {
       link: {
         textDecoration: 'none'
       },
+      icon: {
+        fontSize: "1.2rem",
+        color: "rgb(221, 75, 57)"
+      },
       required: {
         color: 'red'
       }
@@ -76998,7 +77002,7 @@ var LabelLink = function LabelLink(_ref) {
     style: css["for"].required
   }, " *"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fa fa-link",
-    style: "font-size: 1.2rem; color: rgb(221, 75, 57);"
+    style: css["for"].icon
   })));
 };
 

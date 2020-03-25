@@ -11,6 +11,10 @@ const LabelLink = ({htmlFor, label, link, className, styles, children, required}
             link: {
                 textDecoration: 'none'
             },
+            icon: {
+                fontSize: "1.2rem",
+                color: "rgb(221, 75, 57)"
+            },
             required: {
                 color: 'red'
             }
@@ -22,7 +26,7 @@ const LabelLink = ({htmlFor, label, link, className, styles, children, required}
             <a href={link} target="_blank" style={css.for.link}>
             {children}
             {label} { required && <span style={css.for.required}> *</span> }
-            <i className="fa fa-link" style="font-size: 1.2rem; color: rgb(221, 75, 57);"></i>
+            <i className="fa fa-link" style={css.for.icon}></i>
             </a>
         </label>
     );
