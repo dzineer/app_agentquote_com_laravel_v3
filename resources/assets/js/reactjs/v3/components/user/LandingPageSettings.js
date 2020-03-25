@@ -748,28 +748,13 @@ class LandingPageSettings extends Component {
 
                                 <div className="col-md-4 p-y-4">
 
-{/*                                     <div className="d-flex align-items-center">
-                                        <img name="profile-logo" src={ displayLogo } style={this.styles.logo.for.image} alt='[Website Logo]' />
-                                        { this.state.profile.logo && <a href="" className="m-l-6" onClick={ this.onRemoveLogo } style={{ "cursor":"pointer", "textDecoration":"initial" }} alt="Remove Logo" title="Remove Logo" data-toggle="tooltip" data-html="true">
-                                            <i className="fa fa-times" style={{ "fontSize": "1.2rem", "color": "#dd4b39"}} />
-                                        </a> }
-                                    </div> */}
-
-                                    <LogoFieldWithImage error="" label="Logo" onChange={this.onFileAddedHandler} style={this.style} path={ displayLogo } onRemoveLogo={ this.onRemoveLogo }  using={ this.state.profile.logo !== null } disclaimer="Image should be no more than 60 pixels high and 200 pixels wide." />
+                                    <LogoFieldWithImage name="logo" error="" label="Logo" onChange={this.onFileAddedHandler} style={this.style} path={ displayLogo } onRemoveImage={ this.onRemoveLogo } using={ this.state.profile.logo !== null } note="Image should be no more than 60 pixels high and 200 pixels wide." />
 
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
 
-{/*                                     <div className="d-flex align-items-center">
-                                        <img onChange={this.onSelectedHandler} src={ displayPortrait } style={this.styles.portrait.for.image} alt='[Profile portrait]'/>
-                                        { this.state.profile.portrait && <a href="" className="m-l-6" onClick={ this.onRemovePortrait } style={{ "cursor":"pointer", "textDecoration":"initial" }} alt="Remove Portrait" title="Remove Portrait" data-toggle="tooltip" data-html="true">
-                                            <i className="fa fa-times" style={{ "fontSize": "1.2rem", "color": "#dd4b39"}} />
-                                        </a>}
-                                    </div> */}
-
-
-                                    <LogoFieldWithImage error="" label="Portrait" onChange={this.onFileAddedHandler} style={this.style} path={ displayPortrait } onRemoveLogo={ this.onRemovePortrait } using={ this.state.profile.portrait !== null } disclaimer="Image should be no more than 100 pixels high and 200 pixels wide." />
+                                    <LogoFieldWithImage name="portrait" error="" label="Portrait" onChange={this.onFileAddedHandler} style={this.style} path={ displayPortrait } onRemoveImage={ this.onRemovePortrait } using={ this.state.profile.portrait !== null } note="Image should be no more than 100 pixels high and 200 pixels wide." />
 
                                 </div>
 

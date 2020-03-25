@@ -17,20 +17,20 @@ class LogoFieldWithImage extends Component {
                 fileInput: {
                     display: "inline-block"
                 },
-                disclaimer: {
+                note: {
                     "fontStyle": "italic",
                     "fontSize": "0.9rem"
                 },
-                portrait: {
+                image: {
                     display: "block"
                 },
                 logo: {
                     for: {
                         image: {
-                            width: "168px", maxWidth: '100%'
+                            width: "100%", maxWidth: '100%'
                         }
                     }
-                }                
+                }
             }
         };
 
@@ -42,17 +42,17 @@ class LogoFieldWithImage extends Component {
                             {this.props.error}
                         </div>
                     )}
-                    <label htmlFor="logo" style={css.for.portrait}>{ this.props.label }</label>
-                    <p style={css.for.disclaimer}>{ this.props.disclaimer }</p>
+                    <label htmlFor={ this.props.name } style={css.for.image}>{ this.props.label }</label>
+                    <p style={ css.for.note }>{ this.props.note }</p>
                     { this.props.path && (
                         <div className="d-flex align-items-center">
-                            <img name="profile-logo" src={ this.props.path } style={css.for.logo.for.image} alt='[Website Logo]' />
-                            { this.props.using && <a href="" className="m-l-6" onClick={ this.props.onRemoveLogo } style={{ "cursor":"pointer", "textDecoration":"initial" }} alt="Remove Logo" title="Remove Logo" data-toggle="tooltip" data-html="true">
+                            <img name={ this.props.name } src={ this.props.path } style={css.for.logo.for.image} alt='[Website Logo]' />
+                            { this.props.using && <a href="" className="m-l-6" onClick={ this.props.onRemoveImage } style={{ "cursor":"pointer", "textDecoration":"initial" }} alt="Remove Logo" title="Remove Logo" data-toggle="tooltip" data-html="true">
                                 <i className="fa fa-times" style={{ "fontSize": "1.2rem", "color": "#dd4b39"}} />
                             </a> }
                         </div>
                     ) }
-                    <input id="logo" name="logo" type="file" className="form-control-file" style={css.for.fileInput} onChange={this.props.onChange} />
+                    <input id="logo" name="logo" type="file" className="form-control-file" style={ css.for.fileInput } onChange={ this.props.onChange } />
                 </div>
             </div>
         );
@@ -60,21 +60,23 @@ class LogoFieldWithImage extends Component {
 }
 
 LogoFieldWithImage.propTypes = {
+    name: PropTypes.string,
     error: PropTypes.string,
     label: PropTypes.string,
     onChange: PropTypes.func.isRequired,
-    onRemoveLogo: PropTypes.func.isRequired,
+    onRemoveImage: PropTypes.func.isRequired,
     using: PropTypes.bool.isRequired,
-    disclaimer: PropTypes.string
+    note: PropTypes.string
 };
 
 LogoFieldWithImage.defaultProps = {
+    name: "",
     error: "",
     label: "Image",
     onChange: () => {},
-    onRemoveLogo: () => {},
+    onRemoveImage: () => {},
     using: false,
-    disclaimer: ''
+    note: ''
 };
 
 export default LogoFieldWithImage;
