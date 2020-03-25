@@ -770,6 +770,7 @@ class LandingPageSettings extends Component {
 
                             </div>
 
+
                         </div>
 
                         <div className="col-md-12">
