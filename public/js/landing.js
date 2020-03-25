@@ -4555,6 +4555,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -40214,7 +40216,16 @@ var staticRenderFns = [
     return _c(
       "div",
       { staticClass: "tw-w-full tw-flex tw-justify-end tw-items-center" },
-      [_c("button", [_vm._v("Print Quote")])]
+      [
+        _c(
+          "button",
+          {
+            staticClass:
+              "tw-w-full tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-2 tw-rounded tw-capitalize"
+          },
+          [_vm._v("\n            Print Quote\n        ")]
+        )
+      ]
     )
   }
 ]

@@ -11,7 +11,9 @@
         <h2 class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
 
         <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
-            <button >Print Quote</button>
+            <button class="tw-w-full tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-2 tw-rounded tw-capitalize">
+                Print Quote
+            </button>
         </div>
 
         <quote-item v-for="(item, index) in quoteItems" :key="index"
