@@ -1,25 +1,29 @@
 <template>
     <div v-if="show" class="tw-w-full">
-        
-        <re-quote 
-            v-if="canRequote" 
-            :quote="quote" 
-            :quoting="quoting" 
+
+        <re-quote
+            v-if="canRequote"
+            :quote="quote"
+            :quoting="quoting"
             :insuranceCategory="insuranceCategory">
         </re-quote>
 
         <h2 class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
 
+        <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
+            <button >Print Quote</button>
+        </div>
+
         <quote-item v-for="(item, index) in quoteItems" :key="index"
-            :policy="item.policy" 
-            :links="item.links" 
-            :logo="item.logo" 
+            :policy="item.policy"
+            :links="item.links"
+            :logo="item.logo"
             :carrierDetails="item.carrierDetails"
             :reference="item.reference"
             :insuranceCategory="insuranceCategory"
             :rate-classifications="item.rateClassifications">
-        </quote-item>         
-    </div>    
+        </quote-item>
+    </div>
 </template>
 
 <script>
@@ -41,7 +45,7 @@
         },
         mounted() {
             debugger;
-            
+
             window.vueEvents.$on('generateQuote', this.onGenerateQuote);
             window.vueEvents.$on('reGenerateQuote', this.onReGenerateQuote);
             this.$root.$on('quoteUpdated', this.onQuoteUpdated);
@@ -65,10 +69,10 @@
                 } else {
                     return 0;
                 }
-            },            
+            },
             getCategoryFromHash() {
                 return location.hash.length > 0 ? location.hash.substr(1) : '';
-            },         
+            },
             onQuoteUpdated(quote) {
                 this.quote = quote.value;
             },
@@ -110,9 +114,9 @@
                         }
 
                     }
-                });              
+                });
 
-            },                 
+            },
             onGenerateQuote(data) {
 
                 const token = jQuery('meta[name="csrf-token"]').attr('content');
@@ -143,43 +147,43 @@
                         }
 
                     }
-                });              
+                });
 
-            },            
+            },
             getQuote() {
                 let quote = {
                     items: [
-                        { 
+                        {
                             policy: "Protective Classic Choice Term 20",
                             links: [ { text: 'Click Here to Match a rate to your Health Profile', 'href': '#'}, { text: 'View Policy Details', 'href': '#'} ],
-                            logo: "/images/logos/protective-life-insurance.jpg", 
+                            logo: "/images/logos/protective-life-insurance.jpg",
                             rateClassificaions: [{ name: 'Preferred Plus', 'premium': '10.20' }, { name: 'Preferred', 'premium': '12.40' }, { name: 'Select', 'premium': '16.02' }, { name: 'Standard', 'premium': '16.50' }]
-                        },    
-                        { 
+                        },
+                        {
                             policy: "Protective Classic Choice Term 20",
                             links: [ { text: 'Click Here to Match a rate to your Health Profile', 'href': '#'}, { text: 'View Policy Details', 'href': '#'} ],
-                            logo: "/images/logos/protective-life-insurance.jpg", 
+                            logo: "/images/logos/protective-life-insurance.jpg",
                             rateClassificaions: [{ name: 'Preferred Plus', 'premium': '10.20' }, { name: 'Preferred', 'premium': '12.40' }, { name: 'Select', 'premium': '16.02' }, { name: 'Standard', 'premium': '16.50' }]
-                        },  
-                        { 
+                        },
+                        {
                             policy: "Protective Classic Choice Term 20",
                             links: [ { text: 'Click Here to Match a rate to your Health Profile', 'href': '#'}, { text: 'View Policy Details', 'href': '#'} ],
-                            logo: "/images/logos/protective-life-insurance.jpg", 
+                            logo: "/images/logos/protective-life-insurance.jpg",
                             rateClassificaions: [{ name: 'Preferred Plus', 'premium': '10.20' }, { name: 'Preferred', 'premium': '12.40' }, { name: 'Select', 'premium': '16.02' }, { name: 'Standard', 'premium': '16.50' }]
-                        },  
-                        { 
+                        },
+                        {
                             policy: "Protective Classic Choice Term 20",
                             links: [ { text: 'Click Here to Match a rate to your Health Profile', 'href': '#'}, { text: 'View Policy Details', 'href': '#'} ],
-                            logo: "/images/logos/protective-life-insurance.jpg", 
+                            logo: "/images/logos/protective-life-insurance.jpg",
                             rateClassificaions: [{ name: 'Preferred Plus', 'premium': '10.20' }, { name: 'Preferred', 'premium': '12.40' }, { name: 'Select', 'premium': '16.02' }, { name: 'Standard', 'premium': '16.50' }]
-                        }                        
+                        }
                     ]
                 };
                 return quote;
             },
             onQuote( quoteRequest ) {
 
-                this.quoting = true;    
+                this.quoting = true;
 
                 this.quote = {
                     benefit: 200000,
@@ -196,8 +200,8 @@
                 setTimeout(function() {
 
                     that.quoteItems = that.getQuote().items;
-                    that.quoting = false; 
-                    
+                    that.quoting = false;
+
                 }, 2000);
             }
         }

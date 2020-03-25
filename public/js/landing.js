@@ -4551,6 +4551,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -40181,6 +40185,8 @@ var render = function() {
             domProps: { textContent: _vm._s(_vm.quoteResultsTitle) }
           }),
           _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
           _vm._l(_vm.quoteItems, function(item, index) {
             return _c("quote-item", {
               key: index,
@@ -40200,7 +40206,18 @@ var render = function() {
       )
     : _vm._e()
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "tw-w-full tw-flex tw-justify-end tw-items-center" },
+      [_c("button", [_vm._v("Print Quote")])]
+    )
+  }
+]
 render._withStripped = true
 
 if (false) {}
