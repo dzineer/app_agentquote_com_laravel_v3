@@ -759,8 +759,8 @@ class LandingPageSettings extends Component {
                                 </div>
 
                                 <div className="col-md-12 p-y-4">
-                                    <div className="form-group" style="margin-bottom: 20px;">
-                                        <label htmlFor="facebook_link" style="margin-bottom: 20px;">
+                                    <div className="form-group" style={{marginBottom: "20px"}}>
+                                        <label htmlFor="facebook_link" style={{marginBottom: "20px"}}>
                                             <a href={this.state.profile.vanity_domain} target="_blank" style={{textDecoration: "none"}}>My Landing Page
                                                 <i className="fa fa-external-link" style={{fontSize: "1.2rem", color: "rgb(167, 167, 167)", paddingLeft: "4px"}}></i>
                                             </a>
