@@ -45,7 +45,7 @@ class LogoFieldWithImage extends Component {
                     )}
                     <label htmlFor={ this.props.name } style={css.for.image}>{ this.props.label }</label>
                     <p style={ css.for.note }>{ this.props.note }</p>
-                    { this.props.path && (
+                    { this.props.using && (
                         <div className="d-flex align-items-center">
                             <img name={ this.props.name } src={ this.props.path } style={css.for.logo.for.image} />
                             { this.props.using && <a href="" className="m-l-6" onClick={ this.props.onRemoveImage } style={{ "cursor":"pointer", "textDecoration":"initial" }} alt="Remove Logo" title="Remove Logo" data-toggle="tooltip" data-html="true">
