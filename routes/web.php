@@ -138,9 +138,6 @@ use App\Models\Profile;
 
 const USER_ACTIVE = 1;
 
-Route::get('/', function () {
-    return view('landing-page-sections', []);
-});
 
 /* Route::get('/products-services/insurance/termlife-insurance', function () {
     return view('landing-page-sections', []);
