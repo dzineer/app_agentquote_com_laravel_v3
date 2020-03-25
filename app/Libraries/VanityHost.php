@@ -36,7 +36,6 @@ class VanityHost
 
         $data['selected_state'] = $profile->contact_state;
         $data['user']           = $user;
-        $options['use_logo'] =  ! empty($profile->logo) || ! empty($profile->portrait) ;
 
         $company = $this->genCompanyDetails( $user, $profile );
 
@@ -90,7 +89,8 @@ class VanityHost
 
         $default_logo = asset_prepend('templates/landing-pages/' . $version . '/', 'images/logo-200x40.png');
 
-        $useLogo = ! empty($profile->logo) || ! empty($profile->portrait);
+        $useLogo = ! empty($profile->logo);
+        $usePortrait = ! empty($profile->portrait);
 
         $imageUsed = $profile->portrait ? '/storage/' . $profile->portrait : '/storage/' . $profile->logo;
 
@@ -106,6 +106,7 @@ class VanityHost
         $branding['special_text']  = 'We provide a full spectrum of mobile quoters and web applications for insurance agents. Focusing on Life insurance, Health, Financial Advisors, and P&C. Our quoters and website applications cover all stages of the program development life cycle and keep you one step ahead of the competition.';
         $branding['copyright']     = 'Agent Quote Inc.';
         $branding['use_logo']      =  $useLogo;
+        $branding['use_portrait']      =  $usePortrait;
 
         return $branding;
     }
