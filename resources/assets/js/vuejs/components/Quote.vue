@@ -10,23 +10,14 @@
 
         <h2 class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
 
-        <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
-            <button class="tw-w-full tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-2 tw-rounded tw-capitalize">
-                Print Quote
-            </button>
-        </div>
-
         <div class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
-                <!---->
-                <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
-                    <div class="tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap">
+                <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto" style="/* border: none; */">
+                    <div class="tw-flex tw-w-1/3 tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center">
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
-                                <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
-                                    <button class="tw-w-full tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-2 tw-rounded tw-capitalize">
-                                        Print Quote
-                                    </button>
+                                <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
+                                    <button class="tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-8 tw-rounded tw-capitalize">Print Quote</button>
                                 </div>
                             </div>
                         </div>

@@ -4567,15 +4567,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -40208,8 +40199,6 @@ var render = function() {
           _vm._v(" "),
           _vm._m(0),
           _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
           _vm._l(_vm.quoteItems, function(item, index) {
             return _c("quote-item", {
               key: index,
@@ -40236,25 +40225,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "tw-w-full tw-flex tw-justify-end tw-items-center" },
-      [
-        _c(
-          "button",
-          {
-            staticClass:
-              "tw-w-full tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-2 tw-rounded tw-capitalize"
-          },
-          [_vm._v("\n            Print Quote\n        ")]
-        )
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
       {
         staticClass:
           "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4"
@@ -40265,14 +40235,15 @@ var staticRenderFns = [
             "div",
             {
               staticClass:
-                "dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto"
+                "dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto",
+              staticStyle: { "/* border": "none" }
             },
             [
               _c(
                 "div",
                 {
                   staticClass:
-                    "tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap"
+                    "tw-flex tw-w-1/3 tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center"
                 },
                 [
                   _c(
@@ -40290,20 +40261,16 @@ var staticRenderFns = [
                             "div",
                             {
                               staticClass:
-                                "tw-w-full tw-flex tw-justify-end tw-items-center"
+                                "tw-w-full tw-flex tw-justify-center tw-items-center"
                             },
                             [
                               _c(
                                 "button",
                                 {
                                   staticClass:
-                                    "tw-w-full tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-2 tw-rounded tw-capitalize"
+                                    "tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-8 tw-rounded tw-capitalize"
                                 },
-                                [
-                                  _vm._v(
-                                    "\n                                    Print Quote\n                                "
-                                  )
-                                ]
+                                [_vm._v("Print Quote")]
                               )
                             ]
                           )
