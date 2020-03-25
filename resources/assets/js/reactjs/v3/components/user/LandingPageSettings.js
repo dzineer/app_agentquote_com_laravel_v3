@@ -456,13 +456,15 @@ class LandingPageSettings extends Component {
             return;
         }*/
 
-        if (this.state.profile.company && this.state.profile.company) {
-            fd.append('company', this.state.profile.company);
-        }
+        //if (this.state.profile.company && this.state.profile.company) {
+        fd.append('company', this.state.profile.company);
+        //}
 
-        if (this.state.profile.position_title && this.state.profile.position_title.length) {
-            fd.append('position_title', this.state.profile.position_title);
-        }
+        //if (this.state.profile.position_title && this.state.profile.position_title.length) {
+        fd.append('position_title', this.state.profile.position_title);
+        //}
+
+        // should require an email confirmation first
 
         if (!this.state.profile.contact_email.length) {
             toastr.error('You must provide an email address');
@@ -479,9 +481,9 @@ class LandingPageSettings extends Component {
             fd.append('contact_addr1', this.state.profile.contact_addr1);
         }
 
-        if (this.state.profile.contact_addr2 && this.state.profile.contact_addr2.length) {
-            fd.append('contact_addr2', this.state.profile.contact_addr2);
-        }
+        // if (this.state.profile.contact_addr2 && this.state.profile.contact_addr2.length) {
+        fd.append('contact_addr2', this.state.profile.contact_addr2);
+        // }
 
         if (this.state.profile.contact_city && this.state.profile.contact_city.length) {
             fd.append('contact_city', this.state.profile.contact_city);
