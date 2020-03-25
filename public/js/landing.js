@@ -5442,7 +5442,7 @@ __webpack_require__.r(__webpack_exports__);
       }];
       var arr = [];
       stops.map(function (point) {
-        for (var i = point.start; i < point.end; i = i + point.inc) {
+        for (var i = point.start; i <= point.end; i = i + point.inc) {
           var v = _this3.formatCurrency(i * 1000);
 
           arr.push({
