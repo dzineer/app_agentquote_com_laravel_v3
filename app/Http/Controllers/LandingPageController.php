@@ -217,7 +217,7 @@ class LandingPageController extends BackendController
             $resp->portrait = null;
         }
 
-        $subdomain = UserDomain::where(['user_id' => $user])->first();
+        $subdomain = UserDomain::where(['user_id' => $user->id])->first();
 
         $resp->vanity_domain = $subdomain->domain;
 
