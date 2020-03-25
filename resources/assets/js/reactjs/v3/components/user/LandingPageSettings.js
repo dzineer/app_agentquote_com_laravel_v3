@@ -372,6 +372,7 @@ class LandingPageSettings extends Component {
     };
 
     onFileAddedHandler = event => {
+        debugger;
         console.log(event.target.value);
         let newState = Object.assign({}, this.state.profile);
         newState[event.target.name] = event.target.files[0];
