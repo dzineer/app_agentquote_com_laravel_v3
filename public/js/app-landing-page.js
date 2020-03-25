@@ -76982,7 +76982,8 @@ var LabelLink = function LabelLink(_ref) {
       },
       icon: {
         fontSize: "1.2rem",
-        color: "rgb(167, 167, 167)"
+        color: "rgb(167, 167, 167)",
+        paddingLeft: "4px"
       },
       required: {
         color: 'red'
@@ -77001,7 +77002,7 @@ var LabelLink = function LabelLink(_ref) {
   }, children, label, " ", required && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     style: css["for"].required
   }, " *"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "fa fa-link",
+    className: "fa fa-external-link",
     style: css["for"].icon
   })));
 };
