@@ -48,12 +48,12 @@ class LogoFieldWithImage extends Component {
                     { this.props.using && (
                         <div className="d-flex align-items-center">
                             <img name={ this.props.name } src={ this.props.path } style={css.for.logo.for.image} />
-                            { this.props.using && <a href="" className="m-l-6" onClick={ this.props.onRemoveImage } style={{ "cursor":"pointer", "textDecoration":"initial" }} alt="Remove Logo" title="Remove Logo" data-toggle="tooltip" data-html="true">
+                            { this.props.using && <a href="" className="m-l-6" onClick={ this.props.onRemoveImage } style={{ "cursor":"pointer", "textDecoration":"initial" }} alt="Remove" title="Remove" data-toggle="tooltip" data-html="true">
                                 <i className="fa fa-times" style={{ "fontSize": "1.2rem", "color": "#dd4b39"}} />
                             </a> }
                         </div>
                     ) }
-                    <input id="logo" name="logo" type="file" className="form-control-file" style={ css.for.fileInput } onChange={ this.props.onChange } />
+                    <input id={ this.props.name } name={ this.props.name } type="file" className="form-control-file" style={ css.for.fileInput } onChange={ this.props.onChange } />
                 </div>
             </div>
         );
