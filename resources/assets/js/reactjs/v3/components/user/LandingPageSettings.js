@@ -360,15 +360,10 @@ class LandingPageSettings extends Component {
         let profile = Object.assign({}, this.state.profile );
         profile.logo = null;
 
-        this.updateImages();
+        this.displayLogo = '/storage/landing-pages/defaults/no-logo.png';
 
         this.setState({ profile });
 
-    };
-
-    updateImages = () => {
-        this.displayLogo = typeof this.state.profile.logo !== 'undefined' && this.state.profile.logo !== null ? this.state.profile.logo : '/storage/landing-pages/defaults/no-logo.png';
-        this.displayPortrait = typeof this.state.profile.portrait !== 'undefined' && this.state.profile.portrait !== null ? this.state.profile.portrait : '/storage/landing-pages/defaults/no-portrait.png';
     };
 
     onRemovePortrait = event => {
@@ -376,6 +371,8 @@ class LandingPageSettings extends Component {
 
         let profile = Object.assign({}, this.state.profile );
         profile.portrait = null;
+
+        this.displayPortrait = typeof this.state.profile.portrait !== 'undefined' && this.state.profile.portrait !== null ? this.state.profile.portrait : '/storage/landing-pages/defaults/no-portrait.png';
 
         this.setState({ profile });
 
