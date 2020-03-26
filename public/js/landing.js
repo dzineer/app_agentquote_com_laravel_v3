@@ -40356,9 +40356,11 @@ var render = function() {
                                       },
                                       [
                                         _c("icon", {
-                                          staticClass:
-                                            "tw-inline-block fa-fw tw-mr-0",
-                                          attrs: { name: _vm.print }
+                                          attrs: {
+                                            name: _vm.print,
+                                            classes:
+                                              "tw-inline-block fa-fw tw-mr-0"
+                                          }
                                         }),
                                         _vm._v("Print")
                                       ],
