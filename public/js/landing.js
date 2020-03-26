@@ -40360,7 +40360,7 @@ var render = function() {
                                           attrs: {
                                             name: _vm.print,
                                             classes:
-                                              "tw-inline-block fa-fw tw-mr-0"
+                                              "tw-inline-block fa-fw tw-mr-1"
                                           }
                                         }),
                                         _vm._v("Print")
