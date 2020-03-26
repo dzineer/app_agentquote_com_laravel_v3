@@ -42411,7 +42411,8 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap"
+                      "tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap",
+                    class: { "tw-border": !_vm.forceShowPolicy }
                   },
                   [
                     _vm.forceShowPolicy
@@ -42423,7 +42424,7 @@ var render = function() {
                                 "tw-flex tw-justify-start tw-items-center tw-px-0 sm:tw-mb-6 tw-mb-4"
                             },
                             [
-                              _c("p", { staticClass: "tw-text-3xl" }, [
+                              _c("p", { staticClass: "tw-text-2xl" }, [
                                 _vm._v(_vm._s(_vm.policy))
                               ])
                             ]
