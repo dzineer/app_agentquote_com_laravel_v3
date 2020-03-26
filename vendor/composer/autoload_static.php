@@ -1774,7 +1774,6 @@ class ComposerStaticInit61aa210a01e01783fc24755b4bcf8106
         'FG\\X509\\SAN\\DNSName' => __DIR__ . '/..' . '/fgrosse/phpasn1/lib/X509/SAN/DNSName.php',
         'FG\\X509\\SAN\\IPAddress' => __DIR__ . '/..' . '/fgrosse/phpasn1/lib/X509/SAN/IPAddress.php',
         'FG\\X509\\SAN\\SubjectAlternativeNames' => __DIR__ . '/..' . '/fgrosse/phpasn1/lib/X509/SAN/SubjectAlternativeNames.php',
-        'FPDF' => __DIR__ . '/..' . '/setasign/fpdf/fpdf.php',
         'Faker\\Calculator\\Ean' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Ean.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',

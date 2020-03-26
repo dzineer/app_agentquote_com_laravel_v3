@@ -1173,7 +1173,6 @@ return array(
     'FG\\X509\\SAN\\DNSName' => $vendorDir . '/fgrosse/phpasn1/lib/X509/SAN/DNSName.php',
     'FG\\X509\\SAN\\IPAddress' => $vendorDir . '/fgrosse/phpasn1/lib/X509/SAN/IPAddress.php',
     'FG\\X509\\SAN\\SubjectAlternativeNames' => $vendorDir . '/fgrosse/phpasn1/lib/X509/SAN/SubjectAlternativeNames.php',
-    'FPDF' => $vendorDir . '/setasign/fpdf/fpdf.php',
     'Faker\\Calculator\\Ean' => $vendorDir . '/fzaninotto/faker/src/Faker/Calculator/Ean.php',
     'Faker\\Calculator\\Iban' => $vendorDir . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
     'Faker\\Calculator\\Inn' => $vendorDir . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',
