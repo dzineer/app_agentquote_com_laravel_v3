@@ -42411,7 +42411,7 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap",
+                      "tw-flex tw-w-full tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap",
                     class: { "tw-border": !_vm.forceShowPolicy }
                   },
                   [
