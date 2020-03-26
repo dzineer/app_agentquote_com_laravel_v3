@@ -19,7 +19,7 @@
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
                                     <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="togglePrintMode">{{ printMode.text }}</button>
-                                    <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="printQuote"><icon name="print" classes="tw-inline-block fa-fw tw-mr-1" />Print</button>
+                                    <button v-show="printView" class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="printQuote"><icon name="print" classes="tw-inline-block fa-fw tw-mr-1" />Print</button>
                                 </div>
                             </div>
                         </div>
