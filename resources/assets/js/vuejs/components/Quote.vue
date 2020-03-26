@@ -85,9 +85,9 @@
                 token: '',
                 printMode: false,
                 printModeText: {
-                    value: 'Show Normal View',
-                    true: 'Show Print View',
-                    false: 'Show Normal View',
+                    value: 'Show Print View',
+                    true: 'Show Normal View',
+                    false: 'Show Print View',
                 }
             }
         },
