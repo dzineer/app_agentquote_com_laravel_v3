@@ -4596,6 +4596,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -4843,6 +4846,20 @@ __webpack_require__.r(__webpack_exports__);
         that.quoteItems = that.getQuote().items;
         that.quoting = false;
       }, 2000);
+    }
+  },
+  computed: {
+    insuranceName: function insuranceName() {
+      switch (this.quote.category) {
+        case 1:
+          return 'Term Life';
+
+        case 2:
+          return 'Mortgage Protection';
+
+        case 4:
+          return 'Burial Insurance';
+      }
     }
   }
 });
@@ -40429,12 +40446,53 @@ var render = function() {
                                     )
                                   ]),
                                   _vm._v(" "),
-                                  _vm._m(0),
+                                  _c("label", { staticClass: "tw-text-xl" }, [
+                                    _c("strong", [_vm._v("Insurance:")]),
+                                    _vm._v(" " + _vm._s(_vm.insuranceName))
+                                  ]),
                                   _vm._v(" "),
                                   _c("label", { staticClass: "tw-text-xl" }, [
                                     _c("strong", [_vm._v("Term Length:")]),
                                     _vm._v(
                                       " " + _vm._s(_vm.quote.term) + " Years"
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("label", { staticClass: "tw-text-xl" }, [
+                                    _c("strong", [_vm._v("Birthdate:")]),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(
+                                          _vm.quote.birthdate.month +
+                                            "/" +
+                                            _vm.quote.birthdate.day +
+                                            "/" +
+                                            _vm.quote.birthdate.year
+                                        )
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("label", { staticClass: "tw-text-xl" }, [
+                                    _c("strong", [_vm._v("Gender:")]),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(
+                                          _vm.quote.gender === "M"
+                                            ? "Male"
+                                            : "Female"
+                                        )
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("label", { staticClass: "tw-text-xl" }, [
+                                    _c("strong", [_vm._v("Tobacco:")]),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(
+                                          _vm.quote.tobacco === "Y"
+                                            ? "Yes"
+                                            : "No"
+                                        )
                                     )
                                   ]),
                                   _vm._v(" "),
@@ -40480,17 +40538,7 @@ var render = function() {
       )
     : _vm._e()
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "tw-text-xl" }, [
-      _c("strong", [_vm._v("Insurance:")]),
-      _vm._v(" Term Life")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 if (false) {}

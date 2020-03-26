@@ -36,8 +36,11 @@
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-flex-col tw-justify-center tw-leading-loose tw-items-center tw-rounded tw-border-0 tw-py-4 tw-px-4">
                                     <label class="tw-text-xl"><strong>Name:</strong> {{ quote.fname +  " " + quote.lname }}</label>
-                                    <label class="tw-text-xl"><strong>Insurance:</strong> Term Life</label>
+                                    <label class="tw-text-xl"><strong>Insurance:</strong> {{ insuranceName }}</label>
                                     <label class="tw-text-xl"><strong>Term Length:</strong> {{ quote.term }} Years</label>
+                                    <label class="tw-text-xl"><strong>Birthdate:</strong> {{ quote.birthdate.month + '/' + quote.birthdate.day + '/' + quote.birthdate.year }}</label>
+                                    <label class="tw-text-xl"><strong>Gender:</strong> {{ quote.gender === 'M' ? 'Male' : 'Female' }}</label>
+                                    <label class="tw-text-xl"><strong>Tobacco:</strong> {{ quote.tobacco === 'Y' ? 'Yes' : 'No' }}</label>
                                     <label class="tw-text-xl"><strong>Benefit:</strong> {{ quote.quoteAmount }}</label>
                                 </div>
                             </div>
@@ -266,6 +269,18 @@
                     that.quoting = false;
 
                 }, 2000);
+            }
+        },
+        computed: {
+            insuranceName() {
+                switch (this.quote.category) {
+                    case 1:
+                        return 'Term Life';
+                    case 2:
+                        return 'Mortgage Protection';
+                    case 4:
+                        return 'Burial Insurance'
+                }
             }
         }
     }
