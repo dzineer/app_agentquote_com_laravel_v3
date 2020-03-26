@@ -50,6 +50,11 @@
                     </div>
                 </div>
 
+                <div v-if="forceShowPolicy" class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-my-4 tw-mx-auto">
+                    <div class="tw-w-full tw-bg-primary" style="height: 2px;">
+                    </div>
+                </div>
+
             </div>
         </div>
 </template>

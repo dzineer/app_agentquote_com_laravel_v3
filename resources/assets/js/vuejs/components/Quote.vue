@@ -121,7 +121,6 @@
               } else {
                   this.printMode.text = this.printMode.hidden;
               }
-              this.printModeText.value = this.printMode[this.printView];
             },
             printQuote() {
               this.printing = true;

@@ -4649,8 +4649,6 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.printMode.text = this.printMode.hidden;
       }
-
-      this.printModeText.value = this.printMode[this.printView];
     },
     printQuote: function printQuote() {
       this.printing = true;
@@ -4882,6 +4880,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _QuoteItemBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./QuoteItemBar */ "./resources/assets/js/vuejs/components/QuoteItemBar.vue");
 /* harmony import */ var _CarrierLogo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CarrierLogo */ "./resources/assets/js/vuejs/components/CarrierLogo.vue");
 /* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Icon */ "./resources/assets/js/vuejs/components/Icon.vue");
+//
+//
+//
+//
+//
 //
 //
 //
@@ -42642,6 +42645,22 @@ var render = function() {
                 ]
               )
             ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.forceShowPolicy
+          ? _c(
+              "div",
+              {
+                staticClass:
+                  "dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-my-4 tw-mx-auto"
+              },
+              [
+                _c("div", {
+                  staticClass: "tw-w-full tw-bg-primary",
+                  staticStyle: { height: "2px" }
+                })
+              ]
+            )
           : _vm._e()
       ])
     ]
