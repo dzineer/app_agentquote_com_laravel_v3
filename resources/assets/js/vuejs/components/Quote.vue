@@ -11,15 +11,15 @@
 
         <h2 v-show="!printing" class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
 
-        <div v-show="!printing" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
+        <div class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
                 <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto" style="/* border: none; */">
-                    <div class="tw-flex tw-w-1/3 tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center">
+                    <div class="tw-flex tw-w-full tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center">
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
                                     <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize" @click.prevent="printing = !printing">Toggle Print Friendly</a>
-                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize" @click.prevent="window.print()">Print</a>
+                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize" @click.prevent="window.print()"><icon :name="links[1].icon" classes="tw-inline-block fa-fw fa-print tw-mr-0" />Print</a>
                                 </div>
                             </div>
                         </div>
@@ -35,12 +35,12 @@
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-flex-col tw-justify-center tw-leading-loose tw-items-center tw-rounded tw-border-0 tw-py-4 tw-px-4">
-                                    <label class="tw-text-xl"><strong>Name:</strong>{{ quote.fname +  " " + quote.lname }}</label>
+                                    <label class="tw-text-xl"><strong>Name:</strong> {{ quote.fname +  " " + quote.lname }}</label>
                                     <label class="tw-text-xl"><strong>Insurance:</strong> Term Life</label>
                                     <label class="tw-text-xl"><strong>Term Length:</strong> {{ quote.term }} Years</label>
                                     <label class="tw-text-xl"><strong>Benefit:</strong> {{ quote.quoteAmount }}</label>
                                 </div>
-                            </div>
+                            </div>s
                         </div>
                     </div>
                 </div>

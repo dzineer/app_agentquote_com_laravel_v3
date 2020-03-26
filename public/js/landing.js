@@ -40287,14 +40287,6 @@ var render = function() {
           _c(
             "div",
             {
-              directives: [
-                {
-                  name: "show",
-                  rawName: "v-show",
-                  value: !_vm.printing,
-                  expression: "!printing"
-                }
-              ],
               staticClass:
                 "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4"
             },
@@ -40312,7 +40304,7 @@ var render = function() {
                       "div",
                       {
                         staticClass:
-                          "tw-flex tw-w-1/3 tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center"
+                          "tw-flex tw-w-full tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center"
                       },
                       [
                         _c(
@@ -40360,7 +40352,17 @@ var render = function() {
                                           }
                                         }
                                       },
-                                      [_vm._v("Print")]
+                                      [
+                                        _c("icon", {
+                                          attrs: {
+                                            name: _vm.links[1].icon,
+                                            classes:
+                                              "tw-inline-block fa-fw fa-print tw-mr-0"
+                                          }
+                                        }),
+                                        _vm._v("Print")
+                                      ],
+                                      1
                                     )
                                   ]
                                 )
@@ -40422,9 +40424,12 @@ var render = function() {
                                   _c("label", { staticClass: "tw-text-xl" }, [
                                     _c("strong", [_vm._v("Name:")]),
                                     _vm._v(
-                                      _vm._s(
-                                        _vm.quote.fname + " " + _vm.quote.lname
-                                      )
+                                      " " +
+                                        _vm._s(
+                                          _vm.quote.fname +
+                                            " " +
+                                            _vm.quote.lname
+                                        )
                                     )
                                   ]),
                                   _vm._v(" "),
@@ -40444,7 +40449,8 @@ var render = function() {
                                 ]
                               )
                             ]
-                          )
+                          ),
+                          _vm._v("s\n                    ")
                         ]
                       )
                     ])
