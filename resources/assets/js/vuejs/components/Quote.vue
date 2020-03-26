@@ -2,14 +2,14 @@
     <div v-if="show" class="tw-w-full">
 
         <re-quote
-            v-show="!printMode"
+            v-show="!printing"
             v-if="canRequote"
             :quote="quote"
             :quoting="quoting"
             :insuranceCategory="insuranceCategory">
         </re-quote>
 
-        <h2 v-show="!printMode" class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
+        <h2 v-show="!printing" class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
 
         <div class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div v-show="printMode" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
+        <div v-show="printing" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
                 <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto" style="/* border: none; */">
                     <div class="tw-flex tw-w-full">
@@ -57,7 +57,7 @@
                 :reference="item.reference"
                 :insuranceCategory="insuranceCategory"
                 :rate-classifications="item.rateClassifications"
-                :force-show-policy="printMode"
+                :force-show-policy="printing"
             >
             </quote-item>
 
@@ -83,6 +83,7 @@
                 quote: {},
                 category: '',
                 token: '',
+                printing: false,
                 printMode: {
                     text: 'Show Print View',
                     show: false,

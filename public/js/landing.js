@@ -4613,6 +4613,7 @@ __webpack_require__.r(__webpack_exports__);
       quote: {},
       category: '',
       token: '',
+      printing: false,
       printMode: {
         text: 'Show Print View',
         show: false,
@@ -40263,8 +40264,8 @@ var render = function() {
                   {
                     name: "show",
                     rawName: "v-show",
-                    value: !_vm.printMode,
-                    expression: "!printMode"
+                    value: !_vm.printing,
+                    expression: "!printing"
                   }
                 ],
                 attrs: {
@@ -40280,8 +40281,8 @@ var render = function() {
               {
                 name: "show",
                 rawName: "v-show",
-                value: !_vm.printMode,
-                expression: "!printMode"
+                value: !_vm.printing,
+                expression: "!printing"
               }
             ],
             staticClass:
@@ -40380,8 +40381,8 @@ var render = function() {
                 {
                   name: "show",
                   rawName: "v-show",
-                  value: _vm.printMode,
-                  expression: "printMode"
+                  value: _vm.printing,
+                  expression: "printing"
                 }
               ],
               staticClass:
@@ -40468,7 +40469,7 @@ var render = function() {
                   reference: item.reference,
                   insuranceCategory: _vm.insuranceCategory,
                   "rate-classifications": item.rateClassifications,
-                  "force-show-policy": _vm.printMode
+                  "force-show-policy": _vm.printing
                 }
               })
             }),
