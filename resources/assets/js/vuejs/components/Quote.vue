@@ -18,7 +18,7 @@
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
-                                    <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="printMode = !printMode">Toggle Print Friendly</button>
+                                    <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="togglePrintMode">{{ printModeText.value }}</button>
                                     <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="printQuote"><icon name="print" classes="tw-inline-block fa-fw tw-mr-1" />Print</button>
                                 </div>
                             </div>
@@ -83,7 +83,12 @@
                 quote: {},
                 category: '',
                 token: '',
-                printMode: false
+                printMode: false,
+                printModeText: {
+                    value: 'Toggle Normal View',
+                    true: 'Toggle Print View',
+                    false: 'Toggle Normal View',
+                }
             }
         },
         mounted() {
@@ -102,6 +107,10 @@
 
         },
         methods: {
+            togglePrintMode() {
+              this.printing = !this.printing;
+              this.printModeText.value = this.printMode[this.printing];
+            },
             printQuote() {
               window.print();
             },
