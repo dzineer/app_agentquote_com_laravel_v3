@@ -5205,6 +5205,51 @@
         "homepage": "https://github.com/sebastianbergmann/version"
     },
     {
+        "name": "setasign/fpdf",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Setasign/FPDF.git",
+            "reference": "b1ce6923091443d497ad67d11f562a86f876e6f1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Setasign/FPDF/zipball/b1ce6923091443d497ad67d11f562a86f876e6f1",
+            "reference": "b1ce6923091443d497ad67d11f562a86f876e6f1",
+            "shasum": ""
+        },
+        "require": {
+            "ext-gd": "*",
+            "ext-zlib": "*"
+        },
+        "time": "2020-01-02T10:16:06+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "fpdf.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Olivier Plathey",
+                "email": "oliver@fpdf.org",
+                "homepage": "http://fpdf.org/"
+            }
+        ],
+        "description": "FPDF is a PHP class which allows to generate PDF files with pure PHP. F from FPDF stands for Free: you may use it for any kind of usage and modify it to suit your needs.",
+        "homepage": "http://www.fpdf.org",
+        "keywords": [
+            "fpdf",
+            "pdf"
+        ]
+    },
+    {
         "name": "simplesoftwareio/simple-sms",
         "version": "dev-master",
         "version_normalized": "9999999-dev",

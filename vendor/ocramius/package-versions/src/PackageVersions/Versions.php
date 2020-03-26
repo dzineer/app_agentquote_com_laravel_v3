@@ -72,6 +72,7 @@ final class Versions
   'psy/psysh' => 'dev-develop@fca347d4a80400997bb3075de4f5380cde5fbd21',
   'ralouphie/getallheaders' => '3.0.3@120b605dfeb996808c31b6477290a714d356e822',
   'ramsey/uuid' => '3.x-dev@4c467ce4d5a72c3cf0832c813d4d84d222c3d4bb',
+  'setasign/fpdf' => 'dev-master@b1ce6923091443d497ad67d11f562a86f876e6f1',
   'spomky-labs/aes-key-wrap' => 'v4.0.1@6d302dc2d20cd61fc8bf0e253d628c70724d302a',
   'spomky-labs/base64url' => 'v1.x-dev@a6d123a94f7b9b9dacebd1d8db205d81289fa2ea',
   'spomky-labs/jose' => 'dev-master@258147540e8304ba178db12a94ecef49525da768',
@@ -146,7 +147,7 @@ final class Versions
   'simplesoftwareio/simple-sms' => 'dev-master@93e7feb7a1f76634b49247bb5849f06a879a3fb4',
   'theseer/tokenizer' => '1.1.3@11336f6f84e16a720dae9d8e6ed5019efa85a0f9',
   'webmozart/assert' => '1.5.0@88e6d84706d09a236046d686bbea96f07b3a34f4',
-  'laravel/laravel' => 'dev-master@fb494fcc555f787db9884a84e99685c1932c4f9f',
+  'laravel/laravel' => 'dev-master@e1b14eda0614cca0665821d17e24270303dea188',
 );
 
     private function __construct()

@@ -4567,6 +4567,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4597,6 +4602,12 @@ __webpack_require__.r(__webpack_exports__);
     this.quoteResultsTitle = this.getQuoteResultsTitle();
   },
   methods: {
+    printQuote: function printQuote() {
+      var allBody = document.body.innerHTML;
+      document.body.innerHTML = document.querySelector('#quote-body').innerHTML;
+      window.print();
+      document.body.innerHTML = allBody;
+    },
     getQuoteResultsTitle: function getQuoteResultsTitle() {
       if (this.insuranceCategory === 'termlife') {
         return 'Term Life Quote Results';
@@ -40197,96 +40208,96 @@ var render = function() {
             domProps: { textContent: _vm._s(_vm.quoteResultsTitle) }
           }),
           _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _vm._l(_vm.quoteItems, function(item, index) {
-            return _c("quote-item", {
-              key: index,
-              attrs: {
-                policy: item.policy,
-                links: item.links,
-                logo: item.logo,
-                carrierDetails: item.carrierDetails,
-                reference: item.reference,
-                insuranceCategory: _vm.insuranceCategory,
-                "rate-classifications": item.rateClassifications
-              }
-            })
-          })
-        ],
-        2
-      )
-    : _vm._e()
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4"
-      },
-      [
-        _c("div", { staticClass: "tw-w-full" }, [
           _c(
             "div",
             {
               staticClass:
-                "dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto",
-              staticStyle: { "/* border": "none" }
+                "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4"
             },
             [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "tw-flex tw-w-1/3 tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center"
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2"
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "tw-flex tw-w-full md:tw-w-full" },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "tw-w-full tw-flex tw-justify-center tw-items-center"
-                            },
-                            [
-                              _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-8 tw-rounded tw-capitalize"
-                                },
-                                [_vm._v("Print Quote")]
-                              )
-                            ]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              )
+              _c("div", { staticClass: "tw-w-full" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto",
+                    staticStyle: { "/* border": "none" }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "tw-flex tw-w-1/3 tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center"
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2"
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "tw-flex tw-w-full md:tw-w-full" },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "tw-w-full tw-flex tw-justify-center tw-items-center"
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-8 tw-rounded tw-capitalize",
+                                        attrs: { type: "button" },
+                                        on: { click: _vm.printQuote }
+                                      },
+                                      [_vm._v("Print Quote")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ])
             ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "tw-w-full", attrs: { id: "quote-body" } },
+            _vm._l(_vm.quoteItems, function(item, index) {
+              return _c("quote-item", {
+                key: index,
+                attrs: {
+                  policy: item.policy,
+                  links: item.links,
+                  logo: item.logo,
+                  carrierDetails: item.carrierDetails,
+                  reference: item.reference,
+                  insuranceCategory: _vm.insuranceCategory,
+                  "rate-classifications": item.rateClassifications
+                }
+              })
+            }),
+            1
           )
-        ])
-      ]
-    )
-  }
-]
+        ],
+        1
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
 render._withStripped = true
 
 if (false) {}

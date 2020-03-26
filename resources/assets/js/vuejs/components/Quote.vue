@@ -17,7 +17,7 @@
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
-                                    <button class="tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-8 tw-rounded tw-capitalize">Print Quote</button>
+                                    <button type="button" class="tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-8 tw-rounded tw-capitalize" @click="printQuote">Print Quote</button>
                                 </div>
                             </div>
                         </div>
@@ -26,21 +26,27 @@
             </div>
         </div>
 
-        <quote-item v-for="(item, index) in quoteItems" :key="index"
-            :policy="item.policy"
-            :links="item.links"
-            :logo="item.logo"
-            :carrierDetails="item.carrierDetails"
-            :reference="item.reference"
-            :insuranceCategory="insuranceCategory"
-            :rate-classifications="item.rateClassifications">
-        </quote-item>
+        <div class="tw-w-full" id="quote-body">
+
+            <quote-item v-for="(item, index) in quoteItems" :key="index"
+                :policy="item.policy"
+                :links="item.links"
+                :logo="item.logo"
+                :carrierDetails="item.carrierDetails"
+                :reference="item.reference"
+                :insuranceCategory="insuranceCategory"
+                :rate-classifications="item.rateClassifications">
+            </quote-item>
+
+        </div>
+
     </div>
 </template>
 
 <script>
     import QuoteItem from './QuoteItem';
     import ReQuote from './ReQuote';
+
     export default {
         props: ['items', 'show', 'quoteDetails', 'canRequote', 'heading', 'insuranceCategory'],
         components: {
@@ -71,6 +77,12 @@
 
         },
         methods: {
+            printQuote() {
+                let allBody = document.body.innerHTML;
+                document.body.innerHTML = document.querySelector('#quote-body').innerHTML;
+                window.print();
+                document.body.innerHTML = allBody;
+            },
             getQuoteResultsTitle() {
                 if (this.insuranceCategory === 'termlife') {
                     return 'Term Life Quote Results';
