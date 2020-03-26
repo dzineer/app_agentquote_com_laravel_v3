@@ -4570,6 +4570,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -40271,22 +40273,27 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _vm._l(_vm.quoteItems, function(item, index) {
-            return _c("quote-item", {
-              key: index,
-              attrs: {
-                policy: item.policy,
-                links: item.links,
-                logo: item.logo,
-                carrierDetails: item.carrierDetails,
-                reference: item.reference,
-                insuranceCategory: _vm.insuranceCategory,
-                "rate-classifications": item.rateClassifications
-              }
-            })
-          })
+          _c(
+            "div",
+            { staticClass: "tw-w-full", attrs: { id: "quote-body" } },
+            _vm._l(_vm.quoteItems, function(item, index) {
+              return _c("quote-item", {
+                key: index,
+                attrs: {
+                  policy: item.policy,
+                  links: item.links,
+                  logo: item.logo,
+                  carrierDetails: item.carrierDetails,
+                  reference: item.reference,
+                  insuranceCategory: _vm.insuranceCategory,
+                  "rate-classifications": item.rateClassifications
+                }
+              })
+            }),
+            1
+          )
         ],
-        2
+        1
       )
     : _vm._e()
 }
