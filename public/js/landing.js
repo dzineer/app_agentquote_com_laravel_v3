@@ -40333,12 +40333,16 @@ var render = function() {
                                   },
                                   [
                                     _c(
-                                      "button",
+                                      "a",
                                       {
                                         staticClass:
                                           "tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-8 tw-rounded tw-capitalize",
-                                        attrs: { type: "button" },
-                                        on: { click: _vm.printQuote }
+                                        on: {
+                                          click: function($event) {
+                                            $event.preventDefault()
+                                            _vm.printing = !_vm.printing
+                                          }
+                                        }
                                       },
                                       [_vm._v("Print Quote")]
                                     )
