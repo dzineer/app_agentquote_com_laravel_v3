@@ -4613,7 +4613,7 @@ __webpack_require__.r(__webpack_exports__);
       quote: {},
       category: '',
       token: '',
-      printing: false
+      printMode: false
     };
   },
   mounted: function mounted() {
@@ -4630,9 +4630,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     printQuote: function printQuote() {
-      this.printing = true;
       window.print();
-      this.printing = false;
     },
     getQuoteResultsTitle: function getQuoteResultsTitle() {
       if (this.insuranceCategory === 'termlife') {
@@ -40261,8 +40259,8 @@ var render = function() {
                   {
                     name: "show",
                     rawName: "v-show",
-                    value: !_vm.printing,
-                    expression: "!printing"
+                    value: !_vm.printMode,
+                    expression: "!printMode"
                   }
                 ],
                 attrs: {
@@ -40278,8 +40276,8 @@ var render = function() {
               {
                 name: "show",
                 rawName: "v-show",
-                value: !_vm.printing,
-                expression: "!printing"
+                value: !_vm.printMode,
+                expression: "!printMode"
               }
             ],
             staticClass:
@@ -40329,14 +40327,13 @@ var render = function() {
                                   },
                                   [
                                     _c(
-                                      "a",
+                                      "button",
                                       {
                                         staticClass:
                                           "tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer",
                                         on: {
                                           click: function($event) {
-                                            $event.preventDefault()
-                                            _vm.printing = !_vm.printing
+                                            _vm.printMode = !_vm.printMode
                                           }
                                         }
                                       },
@@ -40344,16 +40341,11 @@ var render = function() {
                                     ),
                                     _vm._v(" "),
                                     _c(
-                                      "a",
+                                      "button",
                                       {
                                         staticClass:
                                           "tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer",
-                                        on: {
-                                          click: function($event) {
-                                            $event.preventDefault()
-                                            return _vm.window.print()
-                                          }
-                                        }
+                                        on: { click: _vm.printQuote }
                                       },
                                       [
                                         _c("icon", {
@@ -40388,8 +40380,8 @@ var render = function() {
                 {
                   name: "show",
                   rawName: "v-show",
-                  value: _vm.printing,
-                  expression: "printing"
+                  value: _vm.printMode,
+                  expression: "printMode"
                 }
               ],
               staticClass:
@@ -40452,8 +40444,7 @@ var render = function() {
                                 ]
                               )
                             ]
-                          ),
-                          _vm._v("s\n                    ")
+                          )
                         ]
                       )
                     ])
@@ -40477,7 +40468,7 @@ var render = function() {
                   reference: item.reference,
                   insuranceCategory: _vm.insuranceCategory,
                   "rate-classifications": item.rateClassifications,
-                  "force-show-policy": _vm.printing
+                  "force-show-policy": _vm.printMode
                 }
               })
             }),

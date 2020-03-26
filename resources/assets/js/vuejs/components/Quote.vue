@@ -2,14 +2,14 @@
     <div v-if="show" class="tw-w-full">
 
         <re-quote
-            v-show="!printing"
+            v-show="!printMode"
             v-if="canRequote"
             :quote="quote"
             :quoting="quoting"
             :insuranceCategory="insuranceCategory">
         </re-quote>
 
-        <h2 v-show="!printing" class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
+        <h2 v-show="!printMode" class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
 
         <div class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
@@ -18,8 +18,8 @@
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
-                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click.prevent="printing = !printing">Toggle Print Friendly</a>
-                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click.prevent="window.print()"><icon name="print" classes="tw-inline-block fa-fw tw-mr-1" />Print</a>
+                                    <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="printMode = !printMode">Toggle Print Friendly</button>
+                                    <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="printQuote"><icon name="print" classes="tw-inline-block fa-fw tw-mr-1" />Print</button>
                                 </div>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div v-show="printing" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
+        <div v-show="printMode" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
                 <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto" style="/* border: none; */">
                     <div class="tw-flex tw-w-full">
@@ -40,7 +40,7 @@
                                     <label class="tw-text-xl"><strong>Term Length:</strong> {{ quote.term }} Years</label>
                                     <label class="tw-text-xl"><strong>Benefit:</strong> {{ quote.quoteAmount }}</label>
                                 </div>
-                            </div>s
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                 :reference="item.reference"
                 :insuranceCategory="insuranceCategory"
                 :rate-classifications="item.rateClassifications"
-                :force-show-policy="printing"
+                :force-show-policy="printMode"
             >
             </quote-item>
 
@@ -83,7 +83,7 @@
                 quote: {},
                 category: '',
                 token: '',
-                printing: false
+                printMode: false
             }
         },
         mounted() {
@@ -103,9 +103,7 @@
         },
         methods: {
             printQuote() {
-              this.printing = true;
               window.print();
-              this.printing = false;
             },
             getQuoteResultsTitle() {
                 if (this.insuranceCategory === 'termlife') {
