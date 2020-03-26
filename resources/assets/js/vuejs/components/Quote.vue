@@ -17,8 +17,9 @@
                     <div class="tw-flex tw-w-1/3 tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center">
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
-                                <div class="tw-w-full tw-flex tw-justify-center tw-items-center">
-                                    <a class="tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-8 tw-rounded tw-capitalize" @click.prevent="printing = !printing">Print Quote</a>
+                                <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
+                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize" @click.prevent="printing = !printing">Toggle Print View</a>
+                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize" @click.prevent="window.print()">Print</a>
                                 </div>
                             </div>
                         </div>

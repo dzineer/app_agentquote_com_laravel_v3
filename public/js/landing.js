@@ -4594,6 +4594,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -40329,14 +40330,14 @@ var render = function() {
                                   "div",
                                   {
                                     staticClass:
-                                      "tw-w-full tw-flex tw-justify-center tw-items-center"
+                                      "tw-w-full tw-flex tw-justify-end tw-items-center"
                                   },
                                   [
                                     _c(
                                       "a",
                                       {
                                         staticClass:
-                                          "tw-font-semibold tw-bg-primary tw-text-white tw-py-4 tw-px-8 tw-rounded tw-capitalize",
+                                          "tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize",
                                         on: {
                                           click: function($event) {
                                             $event.preventDefault()
@@ -40344,7 +40345,22 @@ var render = function() {
                                           }
                                         }
                                       },
-                                      [_vm._v("Print Quote")]
+                                      [_vm._v("Toggle Print View")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "a",
+                                      {
+                                        staticClass:
+                                          "tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize",
+                                        on: {
+                                          click: function($event) {
+                                            $event.preventDefault()
+                                            return _vm.window.print()
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Print")]
                                     )
                                   ]
                                 )
