@@ -82,7 +82,7 @@
               debugger;
               let printMe = document.body.innerHTML; // document.getElementById('quote-body');
               let wme = window.open("", "", "width=900,height=700");
-              wme.document.write(printMe.outerHTML);
+              wme.document.write(printMe);
               wme.document.close();
               wme.focus();
               wme.print();
