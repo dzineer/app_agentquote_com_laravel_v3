@@ -40332,7 +40332,7 @@ var render = function() {
                                       "a",
                                       {
                                         staticClass:
-                                          "tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize",
+                                          "tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer",
                                         on: {
                                           click: function($event) {
                                             $event.preventDefault()
@@ -40347,7 +40347,7 @@ var render = function() {
                                       "a",
                                       {
                                         staticClass:
-                                          "tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize",
+                                          "tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer",
                                         on: {
                                           click: function($event) {
                                             $event.preventDefault()

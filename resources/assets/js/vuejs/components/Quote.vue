@@ -18,8 +18,8 @@
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
-                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize" @click.prevent="printing = !printing">Toggle Print Friendly</a>
-                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize" @click.prevent="window.print()"><icon :name="print" classes="tw-inline-block fa-fw tw-mr-1" />Print</a>
+                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click.prevent="printing = !printing">Toggle Print Friendly</a>
+                                    <a class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click.prevent="window.print()"><icon :name="print" classes="tw-inline-block fa-fw tw-mr-1" />Print</a>
                                 </div>
                             </div>
                         </div>
