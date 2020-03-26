@@ -79,6 +79,7 @@
         },
         methods: {
             printQuote() {
+                debugger;
                 let allBody = document.body.innerHTML;
                 document.body.innerHTML = document.querySelector('#quote-body').innerHTML;
                 window.print();

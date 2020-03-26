@@ -4604,6 +4604,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     printQuote: function printQuote() {
+      debugger;
       var allBody = document.body.innerHTML;
       document.body.innerHTML = document.querySelector('#quote-body').innerHTML;
       window.print();
