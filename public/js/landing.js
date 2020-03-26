@@ -40345,7 +40345,7 @@ var render = function() {
                                           }
                                         }
                                       },
-                                      [_vm._v("Toggle Print View")]
+                                      [_vm._v("Toggle Print Friendly")]
                                     ),
                                     _vm._v(" "),
                                     _c(
