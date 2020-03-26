@@ -4603,7 +4603,8 @@ __webpack_require__.r(__webpack_exports__);
   props: ['items', 'show', 'quoteDetails', 'canRequote', 'heading', 'insuranceCategory'],
   components: {
     QuoteItem: _QuoteItem__WEBPACK_IMPORTED_MODULE_0__["default"],
-    ReQuote: _ReQuote__WEBPACK_IMPORTED_MODULE_1__["default"]
+    ReQuote: _ReQuote__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Icon: _Icon__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {

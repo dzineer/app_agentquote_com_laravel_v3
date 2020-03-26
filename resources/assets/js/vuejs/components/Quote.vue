@@ -74,7 +74,7 @@
     export default {
         props: ['items', 'show', 'quoteDetails', 'canRequote', 'heading', 'insuranceCategory'],
         components: {
-            QuoteItem, ReQuote
+            QuoteItem, ReQuote, Icon
         },
         data() {
             return {
