@@ -55,7 +55,9 @@
                 :carrierDetails="item.carrierDetails"
                 :reference="item.reference"
                 :insuranceCategory="insuranceCategory"
-                :rate-classifications="item.rateClassifications">
+                :rate-classifications="item.rateClassifications"
+                :force-show-policy="printing"
+            >
             </quote-item>
 
         </div>
@@ -99,9 +101,9 @@
         },
         methods: {
             printQuote() {
-              this.printing = ! this.printing;
+              this.printing = true;
               window.print();
-              this.printing = ! this.printing;
+              this.printing = false;
             },
             getQuoteResultsTitle() {
                 if (this.insuranceCategory === 'termlife') {

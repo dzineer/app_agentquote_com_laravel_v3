@@ -4592,6 +4592,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4624,9 +4626,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     printQuote: function printQuote() {
-      this.printing = !this.printing;
+      this.printing = true;
       window.print();
-      this.printing = !this.printing;
+      this.printing = false;
     },
     getQuoteResultsTitle: function getQuoteResultsTitle() {
       if (this.insuranceCategory === 'termlife') {
@@ -40445,7 +40447,8 @@ var render = function() {
                   carrierDetails: item.carrierDetails,
                   reference: item.reference,
                   insuranceCategory: _vm.insuranceCategory,
-                  "rate-classifications": item.rateClassifications
+                  "rate-classifications": item.rateClassifications,
+                  "force-show-policy": _vm.printing
                 }
               })
             }),
@@ -42426,7 +42429,7 @@ var render = function() {
                                 "tw-flex tw-justify-start tw-items-center tw-px-0 sm:tw-mb-6 tw-mb-4"
                             },
                             [
-                              _c("p", { staticClass: "tw-text-2xl" }, [
+                              _c("p", { staticClass: "tw-text-xl" }, [
                                 _vm._v(_vm._s(_vm.policy))
                               ])
                             ]

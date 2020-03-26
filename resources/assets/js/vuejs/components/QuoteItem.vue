@@ -7,7 +7,7 @@
 
                         <div v-if="forceShowPolicy" class="tw-flex tw-w-full">
                             <div class="tw-flex tw-justify-start tw-items-center tw-px-0 sm:tw-mb-6 tw-mb-4">
-                                <p class="tw-text-2xl">{{ policy }}</p>
+                                <p class="tw-text-xl">{{ policy }}</p>
                             </div>
                         </div>
 
