@@ -4605,7 +4605,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     printQuote: function printQuote() {
       debugger;
-      var printMe = document.getElementById('quote-body');
+      var printMe = document.body.innerHTML; // document.getElementById('quote-body');
+
       var wme = window.open("", "", "width=900,height=700");
       wme.document.write(printMe.outerHTML);
       wme.document.close();
