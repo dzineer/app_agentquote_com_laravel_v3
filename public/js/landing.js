@@ -4884,6 +4884,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -42388,6 +42389,52 @@ var render = function() {
     },
     [
       _c("div", { staticClass: "tw-w-full" }, [
+        !_vm.showPolicy
+          ? _c(
+              "div",
+              {
+                staticClass:
+                  "dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2"
+                      },
+                      [
+                        _c("carrier-logo", { attrs: { path: _vm.logo } }),
+                        _vm._v(" "),
+                        _c("rate-classification-items", {
+                          attrs: { items: _vm.rateClassifications }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("quote-item-bar", {
+                      attrs: {
+                        policy: _vm.policy,
+                        links: _vm.links,
+                        insuranceCategory: _vm.insuranceCategory
+                      },
+                      on: { togglePolicyDetails: _vm.togglePolicyDetails }
+                    })
+                  ],
+                  1
+                )
+              ]
+            )
+          : _vm._e(),
+        _vm._v(" "),
         _vm.showPolicy || _vm.forceShowPolicy
           ? _c("div", { staticClass: "tw-w-full" }, [
               _c(
@@ -42466,52 +42513,6 @@ var render = function() {
                 ]
               )
             ])
-          : _vm._e(),
-        _vm._v(" "),
-        !_vm.showPolicy
-          ? _c(
-              "div",
-              {
-                staticClass:
-                  "dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap"
-                  },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2"
-                      },
-                      [
-                        _c("carrier-logo", { attrs: { path: _vm.logo } }),
-                        _vm._v(" "),
-                        _c("rate-classification-items", {
-                          attrs: { items: _vm.rateClassifications }
-                        })
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("quote-item-bar", {
-                      attrs: {
-                        policy: _vm.policy,
-                        links: _vm.links,
-                        insuranceCategory: _vm.insuranceCategory
-                      },
-                      on: { togglePolicyDetails: _vm.togglePolicyDetails }
-                    })
-                  ],
-                  1
-                )
-              ]
-            )
           : _vm._e()
       ])
     ]
