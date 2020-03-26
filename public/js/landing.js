@@ -42395,7 +42395,9 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4"
+      staticClass:
+        "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4",
+      class: { "tw-mb-6": !_vm.forceShowPolicy }
     },
     [
       _c("div", { staticClass: "tw-w-full" }, [

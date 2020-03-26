@@ -1,5 +1,5 @@
 <template>
-        <div class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
+        <div class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4" :class="{ 'tw-mb-6': !forceShowPolicy}">
             <div class="tw-w-full">
 
                 <div v-if="!showPolicy" class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
