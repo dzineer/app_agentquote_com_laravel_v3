@@ -4615,9 +4615,9 @@ __webpack_require__.r(__webpack_exports__);
       token: '',
       printMode: false,
       printModeText: {
-        value: 'Toggle Normal View',
-        "true": 'Toggle Print View',
-        "false": 'Toggle Normal View'
+        value: 'Show Normal View',
+        "true": 'Show Print View',
+        "false": 'Show Normal View'
       }
     };
   },
