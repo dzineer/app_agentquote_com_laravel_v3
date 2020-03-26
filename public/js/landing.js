@@ -40358,7 +40358,7 @@ var render = function() {
                                       [
                                         _c("icon", {
                                           attrs: {
-                                            name: _vm.print,
+                                            name: "print",
                                             classes:
                                               "tw-inline-block fa-fw tw-mr-1"
                                           }
