@@ -4885,6 +4885,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -42411,6 +42420,23 @@ var render = function() {
                           "tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2"
                       },
                       [
+                        _vm.forceShowPolicy
+                          ? _c("div", { staticClass: "tw-flex tw-w-full" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "tw-flex tw-justify-start tw-items-center tw-px-0 sm:tw-mb-6 tw-mb-4"
+                                },
+                                [
+                                  _c("p", { staticClass: "tw-text-3xl" }, [
+                                    _vm._v(_vm._s(_vm.policy))
+                                  ])
+                                ]
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
                         _c("carrier-logo", { attrs: { path: _vm.logo } }),
                         _vm._v(" "),
                         _c("rate-classification-items", {
@@ -42421,6 +42447,14 @@ var render = function() {
                     ),
                     _vm._v(" "),
                     _c("quote-item-bar", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: !_vm.forceShowPolicy,
+                          expression: "!forceShowPolicy"
+                        }
+                      ],
                       attrs: {
                         policy: _vm.policy,
                         links: _vm.links,
@@ -42502,6 +42536,14 @@ var render = function() {
                       _c(
                         "button",
                         {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: !_vm.forceShowPolicy,
+                              expression: "!forceShowPolicy"
+                            }
+                          ],
                           staticClass:
                             "tw-my-4 tw-py-4 tw-px-6 tw-bg-primary tw-text-white tw-rounded",
                           on: { click: _vm.togglePolicyDetails }
