@@ -4,13 +4,14 @@
 
                 <div v-if="!showPolicy" class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
                     <div class="tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap">
-                        <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
 
-                            <div v-if="forceShowPolicy" class="tw-flex tw-w-full">
-                                <div class="tw-flex tw-justify-start tw-items-center tw-px-0 sm:tw-mb-6 tw-mb-4">
-                                    <p class="tw-text-3xl">{{ policy }}</p>
-                                </div>
+                        <div v-if="forceShowPolicy" class="tw-flex tw-w-full">
+                            <div class="tw-flex tw-justify-start tw-items-center tw-px-0 sm:tw-mb-6 tw-mb-4">
+                                <p class="tw-text-3xl">{{ policy }}</p>
                             </div>
+                        </div>
+
+                        <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
 
                             <carrier-logo :path="logo"></carrier-logo>
 

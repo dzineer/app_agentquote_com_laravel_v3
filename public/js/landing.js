@@ -4894,6 +4894,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -42413,6 +42414,23 @@ var render = function() {
                       "tw-flex tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-2 tw-flex-wrap"
                   },
                   [
+                    _vm.forceShowPolicy
+                      ? _c("div", { staticClass: "tw-flex tw-w-full" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "tw-flex tw-justify-start tw-items-center tw-px-0 sm:tw-mb-6 tw-mb-4"
+                            },
+                            [
+                              _c("p", { staticClass: "tw-text-3xl" }, [
+                                _vm._v(_vm._s(_vm.policy))
+                              ])
+                            ]
+                          )
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
                     _c(
                       "div",
                       {
@@ -42420,23 +42438,6 @@ var render = function() {
                           "tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2"
                       },
                       [
-                        _vm.forceShowPolicy
-                          ? _c("div", { staticClass: "tw-flex tw-w-full" }, [
-                              _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "tw-flex tw-justify-start tw-items-center tw-px-0 sm:tw-mb-6 tw-mb-4"
-                                },
-                                [
-                                  _c("p", { staticClass: "tw-text-3xl" }, [
-                                    _vm._v(_vm._s(_vm.policy))
-                                  ])
-                                ]
-                              )
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
                         _c("carrier-logo", { attrs: { path: _vm.logo } }),
                         _vm._v(" "),
                         _c("rate-classification-items", {
