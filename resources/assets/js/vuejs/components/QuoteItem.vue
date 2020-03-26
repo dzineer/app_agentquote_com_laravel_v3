@@ -64,25 +64,25 @@ import Icon from "./Icon";
     export default {
         props: {
             'carrierDetails': {
-                type: String
+
             },
             'reference': {
-                type: String
+
             },
             'rateClassifications': {
-                type: String
+
             },
             'policy': {
-                type: String
+
             },
             'links': {
-                type: Array
+
             },
             'logo': {
-                type: String
+
             },
             'insuranceCategory': {
-                type: String
+
             },
             'forceShowPolicy': {
                 type: Boolean,

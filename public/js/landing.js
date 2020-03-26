@@ -4914,27 +4914,13 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    'carrierDetails': {
-      type: String
-    },
-    'reference': {
-      type: String
-    },
-    'rateClassifications': {
-      type: String
-    },
-    'policy': {
-      type: String
-    },
-    'links': {
-      type: Array
-    },
-    'logo': {
-      type: String
-    },
-    'insuranceCategory': {
-      type: String
-    },
+    'carrierDetails': {},
+    'reference': {},
+    'rateClassifications': {},
+    'policy': {},
+    'links': {},
+    'logo': {},
+    'insuranceCategory': {},
     'forceShowPolicy': {
       type: Boolean,
       "default": false
