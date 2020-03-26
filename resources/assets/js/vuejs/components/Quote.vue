@@ -2,16 +2,16 @@
     <div v-if="show" class="tw-w-full">
 
         <re-quote
-            v-show="!printing"
+            v-show="!printView"
             v-if="canRequote"
             :quote="quote"
             :quoting="quoting"
             :insuranceCategory="insuranceCategory">
         </re-quote>
 
-        <h2 v-show="!printing" class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
+        <h2 v-show="!printView" class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
 
-        <div class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
+        <div v-show="!printing" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
                 <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto" style="/* border: none; */">
                     <div class="tw-flex tw-w-full tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center">
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div v-show="printing" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
+        <div v-show="printView" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
                 <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto" style="/* border: none; */">
                     <div class="tw-flex tw-w-full">
@@ -60,7 +60,7 @@
                 :reference="item.reference"
                 :insuranceCategory="insuranceCategory"
                 :rate-classifications="item.rateClassifications"
-                :force-show-policy="printing"
+                :force-show-policy="printView"
             >
             </quote-item>
 
@@ -86,6 +86,7 @@
                 quote: {},
                 category: '',
                 token: '',
+                printView: false,
                 printing: false,
                 printMode: {
                     text: 'Show Print View',
@@ -113,17 +114,19 @@
         },
         methods: {
             togglePrintMode() {
-              this.printing = !this.printing;
-              this.printMode.show = this.printing;
+              this.printView = !this.printView;
+              this.printMode.show = this.printView;
               if (this.printMode.show) {
                   this.printMode.text = this.printMode.visible;
               } else {
                   this.printMode.text = this.printMode.hidden;
               }
-              this.printModeText.value = this.printMode[this.printing];
+              this.printModeText.value = this.printMode[this.printView];
             },
             printQuote() {
+              this.printing = true;
               window.print();
+              this.printing = false;
             },
             getQuoteResultsTitle() {
                 if (this.insuranceCategory === 'termlife') {

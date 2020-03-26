@@ -4616,6 +4616,7 @@ __webpack_require__.r(__webpack_exports__);
       quote: {},
       category: '',
       token: '',
+      printView: false,
       printing: false,
       printMode: {
         text: 'Show Print View',
@@ -4640,8 +4641,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     togglePrintMode: function togglePrintMode() {
-      this.printing = !this.printing;
-      this.printMode.show = this.printing;
+      this.printView = !this.printView;
+      this.printMode.show = this.printView;
 
       if (this.printMode.show) {
         this.printMode.text = this.printMode.visible;
@@ -4649,10 +4650,12 @@ __webpack_require__.r(__webpack_exports__);
         this.printMode.text = this.printMode.hidden;
       }
 
-      this.printModeText.value = this.printMode[this.printing];
+      this.printModeText.value = this.printMode[this.printView];
     },
     printQuote: function printQuote() {
+      this.printing = true;
       window.print();
+      this.printing = false;
     },
     getQuoteResultsTitle: function getQuoteResultsTitle() {
       if (this.insuranceCategory === 'termlife') {
@@ -40281,8 +40284,8 @@ var render = function() {
                   {
                     name: "show",
                     rawName: "v-show",
-                    value: !_vm.printing,
-                    expression: "!printing"
+                    value: !_vm.printView,
+                    expression: "!printView"
                   }
                 ],
                 attrs: {
@@ -40298,8 +40301,8 @@ var render = function() {
               {
                 name: "show",
                 rawName: "v-show",
-                value: !_vm.printing,
-                expression: "!printing"
+                value: !_vm.printView,
+                expression: "!printView"
               }
             ],
             staticClass:
@@ -40310,6 +40313,14 @@ var render = function() {
           _c(
             "div",
             {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: !_vm.printing,
+                  expression: "!printing"
+                }
+              ],
               staticClass:
                 "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4"
             },
@@ -40398,8 +40409,8 @@ var render = function() {
                 {
                   name: "show",
                   rawName: "v-show",
-                  value: _vm.printing,
-                  expression: "printing"
+                  value: _vm.printView,
+                  expression: "printView"
                 }
               ],
               staticClass:
@@ -40527,7 +40538,7 @@ var render = function() {
                   reference: item.reference,
                   insuranceCategory: _vm.insuranceCategory,
                   "rate-classifications": item.rateClassifications,
-                  "force-show-policy": _vm.printing
+                  "force-show-policy": _vm.printView
                 }
               })
             }),
