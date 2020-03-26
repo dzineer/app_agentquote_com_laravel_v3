@@ -26,7 +26,6 @@
             </div>
         </div>
 
-        <div class="tw-w-full" id="quote-body">
 
             <quote-item v-for="(item, index) in quoteItems" :key="index"
                 :policy="item.policy"
@@ -38,7 +37,6 @@
                 :rate-classifications="item.rateClassifications">
             </quote-item>
 
-        </div>
 
     </div>
 </template>
