@@ -18,7 +18,7 @@
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-justify-end tw-items-center">
-                                    <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="togglePrintMode">{{ printModeText.value }}</button>
+                                    <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="togglePrintMode">{{ printMode.text }}</button>
                                     <button class="tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer" @click="printQuote"><icon name="print" classes="tw-inline-block fa-fw tw-mr-1" />Print</button>
                                 </div>
                             </div>
@@ -83,11 +83,11 @@
                 quote: {},
                 category: '',
                 token: '',
-                printMode: false,
-                printModeText: {
-                    value: 'Show Print View',
-                    true: 'Show Normal View',
-                    false: 'Show Print View',
+                printMode: {
+                    text: 'Show Print View',
+                    show: false,
+                    visible: 'Show Normal View',
+                    hidden: 'Show Print View',
                 }
             }
         },
@@ -104,11 +104,18 @@
             this.category = this.getCategoryFromHash();
             this.category = this.insuranceCategory === '' ? 'termlife' : this.insuranceCategory;
             this.quoteResultsTitle = this.getQuoteResultsTitle();
+            this.printMode.show = false;
 
         },
         methods: {
             togglePrintMode() {
               this.printing = !this.printing;
+              this.printMode.show = this.printing;
+              if (this.printMode.show) {
+                  this.printMode.text = this.printMode.visible;
+              } else {
+                  this.printMode.text = this.printMode.hidden;
+              }
               this.printModeText.value = this.printMode[this.printing];
             },
             printQuote() {

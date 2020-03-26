@@ -4613,11 +4613,11 @@ __webpack_require__.r(__webpack_exports__);
       quote: {},
       category: '',
       token: '',
-      printMode: false,
-      printModeText: {
-        value: 'Show Print View',
-        "true": 'Show Normal View',
-        "false": 'Show Print View'
+      printMode: {
+        text: 'Show Print View',
+        show: false,
+        visible: 'Show Normal View',
+        hidden: 'Show Print View'
       }
     };
   },
@@ -4632,10 +4632,19 @@ __webpack_require__.r(__webpack_exports__);
     this.category = this.getCategoryFromHash();
     this.category = this.insuranceCategory === '' ? 'termlife' : this.insuranceCategory;
     this.quoteResultsTitle = this.getQuoteResultsTitle();
+    this.printMode.show = false;
   },
   methods: {
     togglePrintMode: function togglePrintMode() {
       this.printing = !this.printing;
+      this.printMode.show = this.printing;
+
+      if (this.printMode.show) {
+        this.printMode.text = this.printMode.visible;
+      } else {
+        this.printMode.text = this.printMode.hidden;
+      }
+
       this.printModeText.value = this.printMode[this.printing];
     },
     printQuote: function printQuote() {
@@ -40328,7 +40337,7 @@ var render = function() {
                                           "tw-font-semibold tw-text-primary tw-py-4 tw-px-8 tw-rounded tw-capitalize tw-cursor-pointer",
                                         on: { click: _vm.togglePrintMode }
                                       },
-                                      [_vm._v(_vm._s(_vm.printModeText.value))]
+                                      [_vm._v(_vm._s(_vm.printMode.text))]
                                     ),
                                     _vm._v(" "),
                                     _c(
