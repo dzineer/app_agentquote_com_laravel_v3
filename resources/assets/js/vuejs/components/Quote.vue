@@ -79,11 +79,14 @@
         },
         methods: {
             printQuote() {
-                debugger;
-                let allBody = document.body.innerHTML;
-                document.body.innerHTML = document.querySelector('#quote-body').innerHTML;
-                window.print();
-                document.body.innerHTML = allBody;
+              debugger;
+              let printMe = document.getElementById('quote-body');
+              let wme = window.open("", "", "width=900,height=700");
+              wme.document.write(printMe.outerHTML);
+              wme.document.close();
+              wme.focus();
+              wme.print();
+              wme.close();
             },
             getQuoteResultsTitle() {
                 if (this.insuranceCategory === 'termlife') {

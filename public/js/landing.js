@@ -4605,10 +4605,13 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     printQuote: function printQuote() {
       debugger;
-      var allBody = document.body.innerHTML;
-      document.body.innerHTML = document.querySelector('#quote-body').innerHTML;
-      window.print();
-      document.body.innerHTML = allBody;
+      var printMe = document.getElementById('quote-body');
+      var wme = window.open("", "", "width=900,height=700");
+      wme.document.write(printMe.outerHTML);
+      wme.document.close();
+      wme.focus();
+      wme.print();
+      wme.close();
     },
     getQuoteResultsTitle: function getQuoteResultsTitle() {
       if (this.insuranceCategory === 'termlife') {
