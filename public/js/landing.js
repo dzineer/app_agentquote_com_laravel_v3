@@ -4573,6 +4573,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4587,7 +4606,8 @@ __webpack_require__.r(__webpack_exports__);
       quoting: false,
       quote: {},
       category: '',
-      token: ''
+      token: '',
+      printing: false
     };
   },
   mounted: function mounted() {
@@ -4604,15 +4624,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     printQuote: function printQuote() {
-      debugger;
-      var printMe = document.body.innerHTML; // document.getElementById('quote-body');
-
-      var wme = window.open("", "", "width=900,height=700");
-      wme.document.write(printMe);
-      wme.document.close();
-      wme.focus();
-      wme.print();
-      wme.close();
+      this.printing = !this.printing;
+      window.print();
+      this.printing = !this.printing;
     },
     getQuoteResultsTitle: function getQuoteResultsTitle() {
       if (this.insuranceCategory === 'termlife') {
@@ -4875,7 +4889,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['carrierDetails', 'reference', 'rateClassifications', 'policy', 'links', 'logo', 'insuranceCategory'],
+  props: {
+    'carrierDetails': {
+      type: String
+    },
+    'reference': {
+      type: String
+    },
+    'rateClassifications': {
+      type: String
+    },
+    'policy': {
+      type: String
+    },
+    'links': {
+      type: Array
+    },
+    'logo': {
+      type: String
+    },
+    'insuranceCategory': {
+      type: String
+    },
+    'forceShowPolicy': {
+      type: Boolean,
+      "default": false
+    }
+  },
   components: {
     RateClassificationItems: _RateClassificationItems__WEBPACK_IMPORTED_MODULE_0__["default"],
     QuoteItemBar: _QuoteItemBar__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -40200,6 +40240,14 @@ var render = function() {
         [
           _vm.canRequote
             ? _c("re-quote", {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: !_vm.printing,
+                    expression: "!printing"
+                  }
+                ],
                 attrs: {
                   quote: _vm.quote,
                   quoting: _vm.quoting,
@@ -40209,6 +40257,14 @@ var render = function() {
             : _vm._e(),
           _vm._v(" "),
           _c("h2", {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: !_vm.printing,
+                expression: "!printing"
+              }
+            ],
             staticClass:
               "tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4",
             domProps: { textContent: _vm._s(_vm.quoteResultsTitle) }
@@ -40217,6 +40273,14 @@ var render = function() {
           _c(
             "div",
             {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: !_vm.printing,
+                  expression: "!printing"
+                }
+              ],
               staticClass:
                 "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4"
             },
@@ -40281,6 +40345,84 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.printing,
+                  expression: "printing"
+                }
+              ],
+              staticClass:
+                "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4"
+            },
+            [
+              _c("div", { staticClass: "tw-w-full" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto",
+                    staticStyle: { "/* border": "none" }
+                  },
+                  [
+                    _c("div", { staticClass: "tw-flex tw-w-full" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2"
+                        },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "tw-flex tw-w-full md:tw-w-full" },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "tw-w-full tw-flex tw-flex-col tw-justify-center tw-leading-loose tw-items-center tw-rounded tw-border-0 tw-py-4 tw-px-4"
+                                },
+                                [
+                                  _c("label", { staticClass: "tw-text-xl" }, [
+                                    _c("strong", [_vm._v("Name:")]),
+                                    _vm._v(
+                                      _vm._s(
+                                        _vm.quote.fname + " " + _vm.quote.lname
+                                      )
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _vm._m(0),
+                                  _vm._v(" "),
+                                  _c("label", { staticClass: "tw-text-xl" }, [
+                                    _c("strong", [_vm._v("Term Length:")]),
+                                    _vm._v(
+                                      " " + _vm._s(_vm.quote.term) + " Years"
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("label", { staticClass: "tw-text-xl" }, [
+                                    _c("strong", [_vm._v("Benefit:")]),
+                                    _vm._v(" " + _vm._s(_vm.quote.quoteAmount))
+                                  ])
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
             { staticClass: "tw-w-full", attrs: { id: "quote-body" } },
             _vm._l(_vm.quoteItems, function(item, index) {
               return _c("quote-item", {
@@ -40303,7 +40445,17 @@ var render = function() {
       )
     : _vm._e()
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "tw-text-xl" }, [
+      _c("strong", [_vm._v("Insurance:")]),
+      _vm._v(" Term Life")
+    ])
+  }
+]
 render._withStripped = true
 
 if (false) {}
@@ -42236,7 +42388,7 @@ var render = function() {
     },
     [
       _c("div", { staticClass: "tw-w-full" }, [
-        _vm.showPolicy
+        _vm.showPolicy || _vm.forceShowPolicy
           ? _c("div", { staticClass: "tw-w-full" }, [
               _c(
                 "div",

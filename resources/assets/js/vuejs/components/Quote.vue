@@ -2,15 +2,16 @@
     <div v-if="show" class="tw-w-full">
 
         <re-quote
+            v-show="!printing"
             v-if="canRequote"
             :quote="quote"
             :quoting="quoting"
             :insuranceCategory="insuranceCategory">
         </re-quote>
 
-        <h2 class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
+        <h2 v-show="!printing" class="tw-text-center tw-text-primaryLighter tw-text-3xl tw-font-bold tw-pb-4" v-text="quoteResultsTitle"></h2>
 
-        <div class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
+        <div v-show="!printing" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
                 <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto" style="/* border: none; */">
                     <div class="tw-flex tw-w-1/3 tw-justify-around tw-rounded tw-py-2 tw-px-2 tw-flex-wrap tw-justify-center tw-items-center">
@@ -26,6 +27,24 @@
             </div>
         </div>
 
+        <div v-show="printing" class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
+            <div class="tw-w-full">
+                <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto" style="/* border: none; */">
+                    <div class="tw-flex tw-w-full">
+                        <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
+                            <div class="tw-flex tw-w-full md:tw-w-full">
+                                <div class="tw-w-full tw-flex tw-flex-col tw-justify-center tw-leading-loose tw-items-center tw-rounded tw-border-0 tw-py-4 tw-px-4">
+                                    <label class="tw-text-xl"><strong>Name:</strong>{{ quote.fname +  " " + quote.lname }}</label>
+                                    <label class="tw-text-xl"><strong>Insurance:</strong> Term Life</label>
+                                    <label class="tw-text-xl"><strong>Term Length:</strong> {{ quote.term }} Years</label>
+                                    <label class="tw-text-xl"><strong>Benefit:</strong> {{ quote.quoteAmount }}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="tw-w-full" id="quote-body">
 
@@ -59,7 +78,8 @@
                 quoting: false,
                 quote: {},
                 category: '',
-                token: ''
+                token: '',
+                printing: false
             }
         },
         mounted() {
@@ -79,14 +99,9 @@
         },
         methods: {
             printQuote() {
-              debugger;
-              let printMe = document.body.innerHTML; // document.getElementById('quote-body');
-              let wme = window.open("", "", "width=900,height=700");
-              wme.document.write(printMe);
-              wme.document.close();
-              wme.focus();
-              wme.print();
-              wme.close();
+              this.printing = ! this.printing;
+              window.print();
+              this.printing = ! this.printing;
             },
             getQuoteResultsTitle() {
                 if (this.insuranceCategory === 'termlife') {

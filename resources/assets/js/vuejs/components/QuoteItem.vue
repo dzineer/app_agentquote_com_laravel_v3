@@ -2,7 +2,7 @@
         <div class="tw-w-full tw-flex tw-justify-center tw-items-center tw-my-4">
             <div class="tw-w-full">
 
-                <div v-if="showPolicy" class="tw-w-full">
+                <div v-if="showPolicy || forceShowPolicy" class="tw-w-full">
                     <div class="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
                         <div class="tw-flex tw-flex-col tw-w-full tw-justify-around tw-border tw-rounded tw-py-2 tw-px-4 tw-flex-wrap">
                             <p class="tw-py-2 tw-font-bold tw-text-md" v-text="carrierDetails.name"></p>
@@ -51,13 +51,39 @@ import CarrierLogo from './CarrierLogo';
 import Icon from "./Icon";
 
     export default {
-        props: ['carrierDetails', 'reference', 'rateClassifications', 'policy', 'links', 'logo','insuranceCategory'],
+        props: {
+            'carrierDetails': {
+                type: String
+            },
+            'reference': {
+                type: String
+            },
+            'rateClassifications': {
+                type: String
+            },
+            'policy': {
+                type: String
+            },
+            'links': {
+                type: Array
+            },
+            'logo': {
+                type: String
+            },
+            'insuranceCategory': {
+                type: String
+            },
+            'forceShowPolicy': {
+                type: Boolean,
+                default: false
+            }
+        },
         components: {
             RateClassificationItems, QuoteItemBar, CarrierLogo, Icon
         },
         data() {
             return {
-                showPolicy: false
+                showPolicy: false,
             }
         },
         methods: {
