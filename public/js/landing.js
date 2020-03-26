@@ -4527,6 +4527,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _QuoteItem__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./QuoteItem */ "./resources/assets/js/vuejs/components/QuoteItem.vue");
 /* harmony import */ var _ReQuote__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReQuote */ "./resources/assets/js/vuejs/components/ReQuote.vue");
+/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Icon */ "./resources/assets/js/vuejs/components/Icon.vue");
 //
 //
 //
@@ -4595,6 +4596,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -40354,11 +40356,9 @@ var render = function() {
                                       },
                                       [
                                         _c("icon", {
-                                          attrs: {
-                                            name: _vm.links[1].icon,
-                                            classes:
-                                              "tw-inline-block fa-fw fa-print tw-mr-0"
-                                          }
+                                          staticClass:
+                                            "tw-inline-block fa-fw tw-mr-0",
+                                          attrs: { name: _vm.print }
                                         }),
                                         _vm._v("Print")
                                       ],
