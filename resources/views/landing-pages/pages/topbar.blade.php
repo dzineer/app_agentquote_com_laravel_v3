@@ -11,10 +11,10 @@
                 @endif
             </div>
             <div slot="right">
-                @if($book_appointment->hasLink)
+                @if($book_appointment.hasLink)
                 <div class="tw-flex tw-flex-col">
                     <p class="tw-text-primary tw-uppercase tw-tracking-widest tw-text-sm">by appointment/mon-sat</p>
-                    <a href="{{ $book_appointment->hasLink }}" target="_blank" class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-rounded tw-text-center tw-py-3 tw-px-3 focus:tw-outline-none focus:tw-shadow-outline tw-uppercase tw-text-sm tw-font-bold">
+                    <a href="{{ $book_appointment.link }}" target="_blank" class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-rounded tw-text-center tw-py-3 tw-px-3 focus:tw-outline-none focus:tw-shadow-outline tw-uppercase tw-text-sm tw-font-bold">
                         book an appointment
                     </a>
                 </div>

@@ -34,7 +34,7 @@ class VanityHost
         $data['book_appointment'] = $this->genBookAppointment( $user, $profile );
 
         if (isset($_GET['debugger'])) {
-            dd($data['social_media']);
+            dd($data);
         }
 
         // $data['ga_code'] = CustomModules::customModuleRender( 'google_analytics_module', $user['id'] );
