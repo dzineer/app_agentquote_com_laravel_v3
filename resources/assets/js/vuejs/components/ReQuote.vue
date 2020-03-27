@@ -194,9 +194,9 @@
                 stops.forEach( point => {
 
                     for (let i = point.start; i <= point.end; i = i + point.inc) {
-                        let txt = this.formatCurrency(i);
+                        let txt = this.formatCurrency(i*1000);
                         debugger;
-                        arr.push({ "text": txt, "value": i*1000 });
+                        arr.push({ "text": txt, "value": i/1000 });
                     }
 
                 });
