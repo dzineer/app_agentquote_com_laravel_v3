@@ -3,14 +3,9 @@
     <div class="dz:section tw-py-4 tw-border-b tw-flex tw-flex-row tw-items-center tw-justify-start tw-text-white tw-w-full" style="min-height: 45px;">
         <div class="tw-flex tw-w-full tw-justify-between tw-items-center">
 
-            <div class="tw-flex">
-                <slot name="left"></slot>
-            </div>
+            <slot name="left"></slot>
 
-
-            <div class="tw-flex">
-                <slot name="right"></slot>
-            </div>
+            <slot name="right"></slot>
 
         </div>
     </div>

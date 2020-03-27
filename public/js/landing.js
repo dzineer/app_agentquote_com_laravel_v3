@@ -1885,11 +1885,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -40321,11 +40316,8 @@ var render = function() {
               staticClass:
                 "tw-flex tw-w-full tw-justify-between tw-items-center"
             },
-            [
-              _c("div", { staticClass: "tw-flex" }, [_vm._t("left")], 2),
-              _vm._v(" "),
-              _c("div", { staticClass: "tw-flex" }, [_vm._t("right")], 2)
-            ]
+            [_vm._t("left"), _vm._v(" "), _vm._t("right")],
+            2
           )
         ]
       )
