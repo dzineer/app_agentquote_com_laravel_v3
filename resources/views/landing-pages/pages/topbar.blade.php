@@ -11,6 +11,11 @@
                 @endif
             </div>
             <div slot="right">
-                Here is the right
+                <div class="tw-flex tw-flex-col">
+                    <p class="tw-capitalize">by appointment/mon-sat</p>
+                    <a class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-py-2 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline tw-w-1/2 tw-capitalize">
+                        book an appointment
+                    </a>
+                </div>
             </div>
         </brand-bar>
