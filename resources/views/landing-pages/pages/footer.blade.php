@@ -66,6 +66,7 @@
                 </div>
             </div>
         </page-section>
+
         <?php if( isset($ga_code) && strlen($ga_code) ) : ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_code ?>"></script>
@@ -81,7 +82,7 @@
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
         <script type="application/javascript">
             Calendly.initInlineWidget({
-                url: '{!! $book_appointment->link !!}',
+                url: '{{ $book_appointment->link }}',
                 parentElement: document.getElementById('calendly-inline-widget'),
                 prefill: {},
                 utm: {}
