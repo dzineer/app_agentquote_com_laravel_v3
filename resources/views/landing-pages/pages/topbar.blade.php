@@ -12,7 +12,7 @@
             </div>
             <div slot="right">
                 <div class="tw-flex tw-flex-col">
-                    <p class="tw-text-primary tw-text-sm tw-uppercase tw-tracking-widest">by appointment/mon-sat</p>
+                    <p class="tw-text-primary tw-text-sm tw-uppercase tw-tracking-widest tw-text-xs">by appointment/mon-sat</p>
                     <a class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-py-4 tw-px-6 focus:tw-outline-none focus:tw-shadow-outline tw-uppercase tw-text-xs tw-font-bold">
                         book an appointment
                     </a>
