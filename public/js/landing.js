@@ -5510,13 +5510,13 @@ __webpack_require__.r(__webpack_exports__);
       }];
       var arr = [];
       stops.forEach(function (point) {
-        for (var i = point.start; i < point.end; i = i + point.inc) {
+        for (var i = point.start; i <= point.end; i = i + point.inc) {
           var txt = _this.formatCurrency(i);
 
           debugger;
           arr.push({
             "text": txt,
-            "value": i / 1000
+            "value": i * 1000
           });
         }
       });

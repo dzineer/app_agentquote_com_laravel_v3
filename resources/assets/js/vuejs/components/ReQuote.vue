@@ -193,10 +193,10 @@
 
                 stops.forEach( point => {
 
-                    for (let i = point.start; i < point.end; i = i + point.inc) {
+                    for (let i = point.start; i <= point.end; i = i + point.inc) {
                         let txt = this.formatCurrency(i);
                         debugger;
-                        arr.push({ "text": txt, "value": i/1000 });
+                        arr.push({ "text": txt, "value": i*1000 });
                     }
 
                 });
