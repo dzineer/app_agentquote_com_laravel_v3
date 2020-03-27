@@ -12,8 +12,8 @@
             </div>
             <div slot="right">
                 <div class="tw-flex tw-flex-col">
-                    <p class="tw-capitalize">by appointment/mon-sat</p>
-                    <a class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-py-2 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline tw-w-1/2 tw-capitalize">
+                    <p class="tw-text-primary tw-text-sm tw-uppercase tw-tracking-widest">by appointment/mon-sat</p>
+                    <a class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-py-2 tw-px-8 focus:tw-outline-none focus:tw-shadow-outline tw-uppercase tw-text-xs tw-font-bold">
                         book an appointment
                     </a>
                 </div>
