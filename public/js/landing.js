@@ -5491,22 +5491,16 @@ __webpack_require__.r(__webpack_exports__);
     genSitBenefits: function genSitBenefits() {
       var _this = this;
 
-      var stops = [{
-        start: 25,
-        end: 201,
-        inc: 25
-      }, {
-        start: 250,
-        end: 950,
-        inc: 50
-      }, {
-        start: 1000,
-        end: 4500,
-        inc: 500
-      }, {
-        start: 5000,
-        end: 10000,
-        inc: 1000
+      //    { start: 25000, end: 400000, inc: 25000 },
+      var stops = [
+      /*                    { start: 25, end: 201, inc: 25 },
+                          { start: 250, end: 950, inc: 50 },
+                          { start: 1000, end: 4500, inc: 500 },
+                          { start: 5000, end: 10000, inc: 1000 },*/
+      {
+        start: 25000,
+        end: 400000,
+        inc: 25000
       }];
       var arr = [];
       stops.forEach(function (point) {
@@ -5526,14 +5520,23 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // { start: 25, end: 401, inc: 25 },
-      var stops = [// { start: 1000, end: 10000, inc: 1000 },
-      // { start: 10000, end: 25000, inc: 2500 },
-      {
-        start: 25000,
-        end: 400000,
+      var stops = [{
+        start: 1000,
+        end: 10000,
+        inc: 1000
+      }, {
+        start: 10000,
+        end: 25000,
         inc: 2500
-      } //  { start: 50000, end: 100001, inc: 10000 },
-      ];
+      }, {
+        start: 25000,
+        end: 50000,
+        inc: 5000
+      }, {
+        start: 50000,
+        end: 100001,
+        inc: 10000
+      }];
       var arr = [];
       stops.forEach(function (point) {
         for (var i = point.start; i < point.end; i = i + point.inc) {
