@@ -66,7 +66,7 @@
                 </div>
             </div>
         </page-section>
-        @if( strlen($ga_code) )
+        <?php if( isset($ga_code) && strlen($ga_code) ) : ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_code ?>"></script>
             <script type="application/javascript">
@@ -75,7 +75,7 @@
                 gtag('js', new Date());
                 gtag('config', '<?php echo $ga_code ?>');
             </script>
-        @endif
+        <?php endif; ?>
 
         @if($book_appointment->hasLink)
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
