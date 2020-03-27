@@ -31,6 +31,7 @@ class VanityHost
         $data['selected_state'] = $profile->contact_state;
 
         $data['social_media'] = $this->genSocialMediaDetails( $user, $profile );
+        $data['book_appointment'] = $this->genBookAppointment( $user, $profile );
 
         if (isset($_GET['debugger'])) {
             dd($data['social_media']);
@@ -141,6 +142,10 @@ class VanityHost
             $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-linkedin', 'link' => $profile->linkedin_link ];
         }
 
+        if ( $profile->calendly_link && strlen( $profile->calendly_link ) ) {
+            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-linkedin', 'link' => $profile->linkedin_link ];
+        }
+
         if ( $profile->instagram_link && strlen( $profile->instagram_link ) ) {
             $socialMedia[] = [
                 'name' => 'facebook',
@@ -150,6 +155,25 @@ class VanityHost
         }
 
         return json_encode( $socialMedia );
+
+    }
+
+    /**
+     * @param $user
+     * @param $profile
+     * @return mixed
+     */
+    private function genBookAppointment( $user, $profile ) {
+
+        $bookAppointment = new \stdClass();
+        $bookAppointment->hasLink = false;
+
+        if ( $profile->calendly_link && strlen( $profile->calendly_link ) ) {
+            $bookAppointment->link = $profile->calendly_link;
+            $bookAppointment->hasLink = true;
+        }
+
+        return json_encode( $bookAppointment );
 
     }
 
