@@ -69,7 +69,7 @@
         @if( strlen($ga_code) )
         <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_code ?>"></script>
-            <script>
+            <script type="application/javascript">
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
@@ -79,7 +79,7 @@
 
         @if($book_appointment->hasLink)
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-        <script>
+        <script type="application/javascript">
             Calendly.initInlineWidget({
                 url: '{!! $book_appointment->link !!}',
                 parentElement: document.getElementById('calendly-inline-widget'),
