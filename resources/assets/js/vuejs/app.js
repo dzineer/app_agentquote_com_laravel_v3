@@ -156,6 +156,9 @@ Vue.component('page-section', PageSection);
 import QuoteItem from './components/QuoteItem';
 Vue.component('quote-item', QuoteItem);
 
+import BrandBar from './components/BrandBar';
+Vue.component('brand-bar', BrandBar);
+
 import Icon from './components/Icon';
 Vue.component('web-icon', Icon);
 
