@@ -173,7 +173,7 @@ class VanityHost
             $bookAppointment->hasLink = true;
         }
 
-        return json_encode( $bookAppointment );
+        return $bookAppointment;
 
     }
 
