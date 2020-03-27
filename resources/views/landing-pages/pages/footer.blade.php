@@ -48,13 +48,6 @@
 
         </div>
 
-        @if($book_appointment->hasLink)
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" id="calendly-inline-widget" style="min-width:320px;height:580px;" data-auto-load="false">
-        </div>
-        <!-- Calendly inline widget end -->
-        @endif
-
         <page-section frame-classes="tw-justify-around tw-borderr tw-roundedr tw-py-2 tw-px-2 tw-flex-wrapr" classes="tw-w-full tw-py-1" container="container-mark tw-py-1 tw-bg-black tw-text-lightGray tw-my-0" section-classes="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
             <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
                 <div class="tw-flex tw-flex-row tw-w-full tw-justify-center tw-items-center tw-px-20">
@@ -77,17 +70,3 @@
                 gtag('config', '<?php echo $ga_code ?>');
             </script>
         <?php endif; ?>
-
-        @if($book_appointment->hasLink)
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-        <script type="application/javascript">
-            Calendly.initInlineWidget({
-                url: '{{ $book_appointment->link }}',
-                parentElement: document.getElementById('calendly-inline-widget'),
-                prefill: {},
-                utm: {}
-            });
-        </script>
-        @endif
-
-
