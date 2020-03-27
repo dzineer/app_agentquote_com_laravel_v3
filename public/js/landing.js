@@ -5508,20 +5508,19 @@ __webpack_require__.r(__webpack_exports__);
         end: 10000,
         inc: 1000
       }];
-      return stops.map(function (point) {
-        var arr = [];
-
+      var arr = [];
+      stops.forEach(function (point) {
         for (var i = point.start; i < point.end; i = i + point.inc) {
-          var v = _this.formatCurrency(i * 1000);
+          var txt = _this.formatCurrency(i);
 
+          debugger;
           arr.push({
-            "text": v,
-            "value": v
+            "text": txt,
+            "value": i / 1000
           });
         }
-
-        return arr;
       });
+      return arr;
     },
     genFeBenefits: function genFeBenefits() {
       var _this2 = this;

@@ -189,14 +189,20 @@
                     { start: 5000, end: 10000, inc: 1000 },
                 ];
 
-                return stops.map( point => {
-                    let arr = [];
+                let arr = [];
+
+                stops.forEach( point => {
+
                     for (let i = point.start; i < point.end; i = i + point.inc) {
-                        let v = this.formatCurrency(i*1000);
-                        arr.push({ "text": v, "value": v });
+                        let txt = this.formatCurrency(i);
+                        debugger;
+                        arr.push({ "text": txt, "value": i/1000 });
                     }
-                    return arr;
+
                 });
+
+                return arr;
+
             },
             genFeBenefits() {
                 const stops = [
