@@ -131,27 +131,15 @@ class VanityHost
         }
 
         if ( $profile->twitter_link && strlen( $profile->twitter_link ) ) {
-            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-twitter', 'link' => $profile->twitter_link ];
+            $socialMedia[] = [ 'name' => 'twitter', 'icon' => 'fa-twitter', 'link' => $profile->twitter_link ];
         }
 
         if ( $profile->youtube_link && strlen( $profile->youtube_link ) ) {
-            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-youtube', 'link' => $profile->youtube_link ];
+            $socialMedia[] = [ 'name' => 'youtube', 'icon' => 'fa-youtube', 'link' => $profile->youtube_link ];
         }
 
         if ( $profile->linkedin_link && strlen( $profile->linkedin_link ) ) {
-            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-linkedin', 'link' => $profile->linkedin_link ];
-        }
-
-        if ( $profile->calendly_link && strlen( $profile->calendly_link ) ) {
-            $socialMedia[] = [ 'name' => 'facebook', 'icon' => 'fa-linkedin', 'link' => $profile->linkedin_link ];
-        }
-
-        if ( $profile->instagram_link && strlen( $profile->instagram_link ) ) {
-            $socialMedia[] = [
-                'name' => 'facebook',
-                'icon' => 'fa-instagram',
-                'link' => $profile->instagram_link
-            ];
+            $socialMedia[] = [ 'name' => 'linkedin', 'icon' => 'fa-linkedin', 'link' => $profile->linkedin_link ];
         }
 
         return json_encode( $socialMedia );
