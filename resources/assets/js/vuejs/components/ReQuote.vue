@@ -170,6 +170,7 @@
                 }
             },
             getBenefits() {
+                debugger
                 if (this.category === 'termlife') {
                     return this.genTermlifeBenefits();
                 } else if (this.category === 'fe') {
