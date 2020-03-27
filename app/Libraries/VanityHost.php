@@ -31,6 +31,11 @@ class VanityHost
         $data['selected_state'] = $profile->contact_state;
 
         $data['social_media'] = $this->genSocialMediaDetails( $user, $profile );
+
+        if (isset($_GET['debugger'])) {
+            dd($data['social_media']);
+        }
+
         // $data['ga_code'] = CustomModules::customModuleRender( 'google_analytics_module', $user['id'] );
         $data['ga_code'] = $landingPageDetails->getGACode();
 
