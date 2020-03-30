@@ -43021,7 +43021,7 @@ var render = function() {
                     },
                     domProps: { value: _vm.phone },
                     on: {
-                      keyup: _vm.onPhoneUpdate,
+                      change: _vm.onPhoneUpdate,
                       input: function($event) {
                         if ($event.target.composing) {
                           return

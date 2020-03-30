@@ -42,7 +42,7 @@
                     v-if="showPhoneField"
                     placeholder="Phone"
                     v-model="phone"
-                    @keyup="onPhoneUpdate"
+                    @change="onPhoneUpdate"
                     :disabled="sending"
                     required>
 
