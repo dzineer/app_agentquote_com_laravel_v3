@@ -142,7 +142,13 @@ export default {
                 this.showGeneralFields = false;
                 this.showTotal = false;
                 this.showCollegeFields = true;
-            } else {
+            }
+            else if (newState === 'TOTALS') {
+                this.showCollegeFields = false;
+                this.showGeneralFields = false;
+                this.showTotal = true;
+            }
+            else {
                 this.showCollegeFields = false;
                 this.showTotal = false;
                 this.showGeneralFields = true;
@@ -150,11 +156,7 @@ export default {
 
             this.$emit('toggle', {value: newState});
 
-            if (newState === 'TOTALS') {
-                this.showCollegeFields = false;
-                this.showGeneralFields = false;
-                this.showTotal = true;
-            }
+
 
         },
         closeNeedsAnalyser() {

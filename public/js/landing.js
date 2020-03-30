@@ -4141,6 +4141,10 @@ __webpack_require__.r(__webpack_exports__);
         this.showGeneralFields = false;
         this.showTotal = false;
         this.showCollegeFields = true;
+      } else if (newState === 'TOTALS') {
+        this.showCollegeFields = false;
+        this.showGeneralFields = false;
+        this.showTotal = true;
       } else {
         this.showCollegeFields = false;
         this.showTotal = false;
@@ -4150,12 +4154,6 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('toggle', {
         value: newState
       });
-
-      if (newState === 'TOTALS') {
-        this.showCollegeFields = false;
-        this.showGeneralFields = false;
-        this.showTotal = true;
-      }
     },
     closeNeedsAnalyser: function closeNeedsAnalyser() {
       window.vueEvents.$emit('restartQuote');
