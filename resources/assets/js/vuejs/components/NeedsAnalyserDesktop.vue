@@ -143,7 +143,7 @@ export default {
                 this.showTotal = false;
                 this.showCollegeFields = true;
             }
-            else if (newState === 'COLLEGE_FUNDING') {
+            else if (newState === 'OTHER_EXPENSES') {
                 this.showCollegeFields = false;
                 this.showGeneralFields = false;
                 this.showTotal = true;
