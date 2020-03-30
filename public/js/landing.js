@@ -3853,7 +3853,7 @@ var collegeTuition = {
       var collegeFunding = this.cleanValuedAmount(lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['college_funding'], {
         name: 'total'
       }).value);
-      collegeFunding = parseFloat(collegeFunding); // console.log("collegeFunding", collegeFunding);    
+      collegeFunding = parseFloat(collegeFunding); // console.log("collegeFunding", collegeFunding);
 
       this.total_part_1 = parseFloat(totalNeeded) - parseFloat(investibleFamilyAssets);
       this.total_part_2 = parseFloat(debtRepayment) +
@@ -3902,6 +3902,7 @@ var collegeTuition = {
       this.nextState = this.getNextState(this.currentState);
     },
     getNextState: function getNextState() {
+      debugger;
       var keys = Object.keys(this.sectionStates);
       var idIndex = keys.indexOf(this.currentState);
       var nextIndex = idIndex += 1; // if we go beyond our states, return current state

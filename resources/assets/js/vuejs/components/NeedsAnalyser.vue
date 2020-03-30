@@ -4,8 +4,8 @@
 
             <div class="tw-h-screen-off tw-w-full tw-flex tw-justify-center tw-items-center tw-my-6">
                 <div class="tw-container dz:section tw-w-full md:tw-w-11/12 lg:tw-w-4/5 tw-flex tw-justify-center tw-items-center md:tw-no-margin">
-                    
-                    <needs-analyser-mobile 
+
+                    <needs-analyser-mobile
                         :show="isMobile()"
                         :sections="sections"
                         :previousState="previousState"
@@ -23,8 +23,8 @@
                         @toggle="toggleState"
                     >
                     </needs-analyser-mobile>
-                    
-                    <needs-analyser-desktop 
+
+                    <needs-analyser-desktop
                         :show="!isMobile()"
                         :sections="sections"
                         :previousState="previousState"
@@ -39,13 +39,13 @@
                         :totalPart2="total_part_2"
                         @quoteFromCalculator="quoteFromCalculator"
                         @fieldChange="onFieldChange"
-                        @toggle="toggleState"       
+                        @toggle="toggleState"
                     >
                     </needs-analyser-desktop>
                 </div>
             </div>
-    </div>        
-</div>            
+    </div>
+</div>
 </template>
 
 <script>
@@ -70,7 +70,7 @@ export default {
     ],
     components: {
         NeedsAnalyserMobile, NeedsAnalyserDesktop
-    },    
+    },
     data() {
         return {
             visible: false,
@@ -79,7 +79,7 @@ export default {
                 mobile: false
             },
             previousState: '',
-            currentState: '',   
+            currentState: '',
             nextState: '',
             collegeCosts: 0.00,
             collegeTuition: collegeTuition,
@@ -107,7 +107,7 @@ export default {
                 COLLEGE_FUNDING: 'College Funding',
                 OTHER_EXPENSES: 'Other Expenses',
                 TOTALS: '',
-            },            
+            },
             sectionStates: {
                 FAMILY_INCOME: true,
                 REPLACEMENT_INCOME: false,
@@ -115,11 +115,11 @@ export default {
                 DEBIT_REPAYMENT: false,
                 COLLEGE_FUNDING: false,
                 OTHER_EXPENSES: false
-            },            
-            currentHeader: '', 
-            total_part_1: 0.00,       
-            total_part_2: 0.00,       
-            total_needed: 0.00,       
+            },
+            currentHeader: '',
+            total_part_1: 0.00,
+            total_part_2: 0.00,
+            total_needed: 0.00,
             sections: {
                 family_income: [
                     { component: 'amount-field', name: 'gross_income', value: 0.00, text: 'your gross income', classes: 'tw-text-gray-800', readonly: false },
@@ -159,7 +159,7 @@ export default {
                     { component: 'amount-field', name: 'special_bequests', value: 0.00, text: 'Special Bequests ?', classes: 'tw-text-gray-800', readonly: false },
                     { component: 'amount-field', name: 'other_expenses', value: 0.00, text: 'Consumer Debt ?', classes: 'tw-text-gray-800', readonly: false },
                     { component: 'amount-field', name: 'total', value: 0.00, text: 'TOTAL EXPENSES', classes: 'tw-text-gray-800', readonly: true },
-                ]                                 
+                ]
             }
         }
     },
@@ -181,7 +181,7 @@ export default {
                 college_funding: this.collegeFundingCalculator,
                 other_expenses: this.otherExpensesCalculator
             }
-        }        
+        }
     },
     filters: {
         formatAmount(a) {
@@ -191,7 +191,7 @@ export default {
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return "$" + n;
         }
-    },    
+    },
     methods: {
         netPVR(r, ir, yy) {
             var rr;
@@ -216,9 +216,9 @@ export default {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
                    a = parseFloat(a);
-                   subtotal += a;        
+                   subtotal += a;
                 }
-            });        
+            });
             _.find(this.sections[ 'family_income' ], { name: 'total' }).value = subtotal;
             return 0.00;
         },
@@ -247,9 +247,9 @@ export default {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
                    a = parseFloat(a);
-                   subtotal += a;        
+                   subtotal += a;
                 }
-            });        
+            });
             _.find(this.sections[ 'investible_family_assets' ], { name: 'total' }).value = subtotal;
             return 0.00;
         },
@@ -259,9 +259,9 @@ export default {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
                    a = parseFloat(a);
-                   subtotal += a;        
+                   subtotal += a;
                 }
-            });        
+            });
             _.find(this.sections[ 'debt_repayment' ], { name: 'total' }).value = subtotal;
             return 0.00;
         },
@@ -274,9 +274,9 @@ export default {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
                    a = parseFloat(a);
-                   subtotal += a;        
+                   subtotal += a;
                 }
-            });        
+            });
             _.find(this.sections[ 'other_expenses' ], { name: 'total' }).value = subtotal;
             return 0.00;
         },
@@ -293,10 +293,10 @@ export default {
             Object.values(this.calculators.other_income).map( calculator => {
                 calculator();
             });
-            
+
             // family
             let familyGrossIncome = _.find(this.sections[ 'family_income' ], { name: 'total' }).value;
-            
+
             // replacement income
             let percentIncome = _.find(this.sections[ 'replacement_income' ], { name: 'percent_income' }).value;
             let incomeToBeReplaced =  _.find(this.sections[ 'replacement_income' ], { name: 'total' }).value;
@@ -326,16 +326,16 @@ export default {
             else {
                 totalNeeded = npv * baseNeeded;
             }
-            
+
             let collegeFunding = this.cleanValuedAmount(_.find(this.sections[ 'college_funding' ], { name: 'total' }).value);
             collegeFunding = parseFloat(collegeFunding);
-            // console.log("collegeFunding", collegeFunding);    
+            // console.log("collegeFunding", collegeFunding);
 
             this.total_part_1 = parseFloat(totalNeeded) - parseFloat(investibleFamilyAssets);
-            this.total_part_2 = parseFloat(debtRepayment) + /*college*/ collegeFunding + parseFloat(otherExpenses);            
+            this.total_part_2 = parseFloat(debtRepayment) + /*college*/ collegeFunding + parseFloat(otherExpenses);
             this.total_needed = this.total_part_1 + this.total_part_2;
         },
-      
+
         onFieldChange(field) {
             _.find(this.sections[ this.applicationStates[ this.currentState ] ], { name: field.name }).value = field.value;
             this.calc();
@@ -351,7 +351,7 @@ export default {
             let totals = 0;
             Object.values(this.applicationStates).forEach( section => {
                 let total = _.find(this.sections [ section ], { name: 'total' }).value;
-                totals += total; 
+                totals += total;
             });
 
             this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseFloat(this.toReplace.percentIncome) / 100), false);
@@ -361,13 +361,14 @@ export default {
         },
         toggleState( newState ) {
             this.resetNonSelectedStates( newState.value );
-            this.currentState = newState.value; 
+            this.currentState = newState.value;
             this.sectionStates[ newState.value ] = ! this.sectionStates[ newState.value ];
             this.currentHeader = this.applicationHeaders[ newState.value ];
             this.previousState = this.getPreviousState( this.currentState );
-            this.nextState = this.getNextState( this.currentState );            
+            this.nextState = this.getNextState( this.currentState );
         },
         getNextState() {
+            debugger;
             let keys = Object.keys( this.sectionStates );
             let idIndex = keys.indexOf( this.currentState );
             let nextIndex = idIndex += 1;
@@ -394,7 +395,7 @@ export default {
             this.$emit('quoteFromCalculator', { value: this.total_part_1 + this.total_part_2 })
         },
         currentSection() {
-            return this.sections[ this.applicationStates[ this.currentState ] ];  
+            return this.sections[ this.applicationStates[ this.currentState ] ];
         },
         formatAmount(a) {
             let n = a + "";
@@ -402,13 +403,13 @@ export default {
             n = n.replace(/,/g, "");
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return "$" + n;
-        },        
+        },
         cleanValuedAmount(a) {
 			let n = a + "";
 			n = n.replace(/\$/g, "");
 			n = n.replace(/,/g, "");
 			return n;
-		},  
+		},
          isMobile() {
             if(window.location.href.indexOf("userAgent") > -1) {
                 console.log("userAgent", navigator.userAgent);
