@@ -4147,9 +4147,13 @@ __webpack_require__.r(__webpack_exports__);
         this.showGeneralFields = true;
       }
 
-      this.$emit('toggle', {
-        value: newState
-      });
+      if (newState === 'TOTALS') {
+        this.toggleTotal();
+      } else {
+        this.$emit('toggle', {
+          value: newState
+        });
+      }
     },
     closeNeedsAnalyser: function closeNeedsAnalyser() {
       window.vueEvents.$emit('restartQuote');

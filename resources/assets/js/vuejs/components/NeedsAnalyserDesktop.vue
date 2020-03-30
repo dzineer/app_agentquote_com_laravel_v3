@@ -147,7 +147,11 @@ export default {
                 this.showTotal = false;
                 this.showGeneralFields = true;
             }
-            this.$emit('toggle', { value: newState } );
+            if (newState === 'TOTALS') {
+                this.toggleTotal();
+            } else {
+                this.$emit('toggle', {value: newState});
+            }
         },
         closeNeedsAnalyser() {
             window.vueEvents.$emit('restartQuote');
