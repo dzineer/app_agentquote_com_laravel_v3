@@ -2660,8 +2660,7 @@ __webpack_require__.r(__webpack_exports__);
     var originalOffsetTop = this.$el.offsetTop;
     var offsetFromTop = this.offsetFromTheTop || 0;
     window.addEventListener('scroll', lodash__WEBPACK_IMPORTED_MODULE_0___default.a.throttle(function () {
-      console.log('scrolling');
-
+      // console.log('scrolling');
       if (offsetFromTop > 0) {
         el.classList[window.scrollY >= originalOffsetTop ? 'add' : 'remove']('tw-fixed', 'tw-w-full', 'tw-top-0', 'tw-z-20');
       } else {

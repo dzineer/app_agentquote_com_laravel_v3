@@ -2,7 +2,7 @@
     <div class="tw-w-full mark-fixed-top-nav">
         <div class="md:tw-block" :class="classes">
             <slot></slot>
-        </div>    
+        </div>
     </div>
 </template>
 
@@ -16,12 +16,12 @@ export default {
        let originalOffsetTop = this.$el.offsetTop;
        let offsetFromTop = this.offsetFromTheTop || 0;
 
-       window.addEventListener('scroll', 
+       window.addEventListener('scroll',
          _.throttle(function() {
-               console.log('scrolling');
-              
+              // console.log('scrolling');
+
                if (offsetFromTop > 0) {
-              
+
                     el.classList[
                         window.scrollY >= originalOffsetTop ? 'add' : 'remove'
                     ]('tw-fixed',
