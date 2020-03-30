@@ -132,7 +132,8 @@ export default {
                 showEmailField: false,
                 verificationFailed: false
             },
-            phoneExpression: /^(1\s?)?((\([0-9]{3}\))|[0-9]{3})[\s\-]?[\0-9]{3}[\s\-]?[0-9]{4}$/
+            // phoneExpression: /^(1\s?)?((\([0-9]{3}\))|[0-9]{3})[\s\-]?[\0-9]{3}[\s\-]?[0-9]{4}$/
+            phoneExpression: /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
         }
     },
     mounted() {

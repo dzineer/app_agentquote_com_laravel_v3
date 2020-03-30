@@ -2,9 +2,11 @@
 
 namespace Dzineer\SMS\Drivers;
 
+use App\Facades\AQLog;
 use GuzzleHttp\Client;
 use Dzineer\SMS\MakesRequests;
 use Dzineer\SMS\OutgoingMessage;
+
 
 class FlowrouteSMS extends AbstractSMS implements DriverInterface
 {
@@ -49,7 +51,19 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
         $from = $message->getFrom();
         $composeMessage = $message->composeMessage();
 
-        foreach ($message->getTo() as $number) {
+        $number = $message->getTo();
+
+        $data = [
+            'from'          => $from,
+            'to'            => $number,
+            'body'          => $composeMessage,
+        ];
+
+        $this->buildBody($data);
+        // return first response
+        return $this->postRequest();
+
+/*        foreach ($message->getTo() as $number) {
             $data = [
                 'from'          => $from,
                 'to'            => $number,
@@ -59,7 +73,7 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
             $this->buildBody($data);
             // return first response
             return $this->postRequest();
-        }
+        }*/
 
     }
 
@@ -177,7 +191,7 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
             'json' => $payload,
         ]);*/
 
-        \Illuminate\Support\Facades\Log::info( self::class . "::postRequest -  response : " . print_r($response,true) );
+        AQLog::info( self::class . "::postRequest -  response : " . print_r($response,true) );
 
         $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
