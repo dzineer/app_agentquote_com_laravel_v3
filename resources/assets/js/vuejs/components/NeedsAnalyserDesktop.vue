@@ -55,7 +55,6 @@
                         </h1>
                     </div>
 
-
                     <div v-show="showCollegeFields" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto" style="max-height: 720px;margin-top: 93px;margin-bottom: 20px;">
                         <h2 class="tw-flex tw-justify-center tw-text-center tw-text-2xl" :id="currentState">College Funding</h2>
                         <college-field @fieldChange="onFieldChange" header="Number of children" name="total" classes=""  :readonly="false"></college-field>
