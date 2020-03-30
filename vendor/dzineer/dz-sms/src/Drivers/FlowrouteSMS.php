@@ -51,7 +51,7 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
         $from = $message->getFrom();
         $composeMessage = $message->composeMessage();
 
-        $number = $message->getTo();
+/*        $number = $message->getTo();
 
         $data = [
             'from'          => $from,
@@ -61,9 +61,9 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
 
         $this->buildBody($data);
         // return first response
-        return $this->postRequest();
+        return $this->postRequest();*/
 
-/*        foreach ($message->getTo() as $number) {
+        foreach ($message->getTo() as $number) {
             $data = [
                 'from'          => $from,
                 'to'            => $number,
@@ -73,7 +73,7 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
             $this->buildBody($data);
             // return first response
             return $this->postRequest();
-        }*/
+        }
 
     }
 
