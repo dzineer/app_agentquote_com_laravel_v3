@@ -2,7 +2,7 @@
     <div v-if="visible" class="tw-container dz:section tw-w-full md:tw-w-11/12 lg:tw-w-11/12 tw-flex tw-justify-center tw-items-center md:tw-no-margin">
         <div class="tw-w-full tw-bg-black na-container tw-rounded-t-xl tw-relative">
 
-            
+
             <div class="tw-flex tw-relative">
 
                 <div class="tw-absolute tw-top-0 tw-right-0 tw-w-8 tw-h-8 tw-z-50" style="right: 36px;top: 20px;" @click="closeNeedsAnalyser">
@@ -23,15 +23,15 @@
 
                     <na-part>
                         part ii: debt, college, & other needed
-                    </na-part>        
+                    </na-part>
 
                     <na-section-header icon="minus-circle" title="debt repayment" :show="sectionStates.DEBIT_REPAYMENT" :selected="sectionStates.DEBIT_REPAYMENT" @fieldChange="onFieldChange" @toggle="toggleState('DEBIT_REPAYMENT')" :fields="currentSection()" ></na-section-header>
 
                     <na-desktop-college-header-section icon="graduation-cap" title="college funding" :show="sectionStates.COLLEGE_FUNDING" :selected="sectionStates.COLLEGE_FUNDING" @fieldChange="onFieldChange" @toggle="toggleState('COLLEGE_FUNDING');" :value="this.sections.college_funding" ></na-desktop-college-header-section>
 
-                    <na-section-header icon="balance-scale" title="other expenses" :show="sectionStates.OTHER_EXPENSES" :selected="sectionStates.OTHER_EXPENSES" @fieldChange="onFieldChange" @toggle="toggleState('OTHER_EXPENSES')" :fields="currentSection()" ></na-section-header>                
-<!--                    
-                    <na-total icon="umbrella" title="total insurance needed" :show="true" :part1="totalPart1" :part2="totalPart2" :total="totalNeeded | formatAmount" ></na-total>  
+                    <na-section-header icon="balance-scale" title="other expenses" :show="sectionStates.OTHER_EXPENSES" :selected="sectionStates.OTHER_EXPENSES" @fieldChange="onFieldChange" @toggle="toggleState('OTHER_EXPENSES')" :fields="currentSection()" ></na-section-header>
+<!--
+                    <na-total icon="umbrella" title="total insurance needed" :show="true" :part1="totalPart1" :part2="totalPart2" :total="totalNeeded | formatAmount" ></na-total>
 -->
 
                     <div class="na-section-block tw-w-full" >
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="tw-flex tw-w-2/3 tw-justify-center tw-items-center tw-relative tw-px-4" style="background-color:#F4F3F3;">
                     <!-- <na-header>(Desktop) Total Insurance Needed: {{ totalNeeded | formatAmount }}</na-header> -->
@@ -55,13 +55,19 @@
                         </h1>
                     </div>
 
-                    <div v-show="showCollegeFields" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto" style="max-height: 720px;margin-top: 93px;margin-bottom: 20px;">   
+
+                    <div v-show="showCollegeFields" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto" style="max-height: 720px;margin-top: 93px;margin-bottom: 20px;">
                         <h2 class="tw-flex tw-justify-center tw-text-center tw-text-2xl" :id="currentState">College Funding</h2>
                         <college-field @fieldChange="onFieldChange" header="Number of children" name="total" classes=""  :readonly="false"></college-field>
-                    </div>    
+                        <div class="tw-flex">
+                            <button class="tw-w-full tw-rounded tw-bg-primary tw-text-center tw-text-white tw-py-4 tw-px-2 tw-mt-4 tw-mr-2" v-if="previousState !== currentState" @click="toggleState( previousState )">Previous</button>
+                            <button class="tw-w-full tw-rounded tw-bg-primary tw-text-center tw-text-white tw-py-4 tw-px-2 tw-mt-4 tw-ml-2" @click="toggleState( nextState )">Continue</button>
+                        </div>
+                    </div>
+                    
 
-                    <div v-if="showGeneralFields" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto" style="max-height: 720px;margin-top: 93px;margin-bottom: 20px;">  
-                        <h2 class="tw-flex tw-justify-center tw-text-center tw-text-2xl" :id="currentState">{{ currentHeader }}</h2> 
+                    <div v-if="showGeneralFields" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto" style="max-height: 720px;margin-top: 93px;margin-bottom: 20px;">
+                        <h2 class="tw-flex tw-justify-center tw-text-center tw-text-2xl" :id="currentState">{{ currentHeader }}</h2>
                         <div v-for="(field, index) in currentSection()" :key="index" @fieldChange="onFieldChange" :header="field.text" :name="field.name" :value="field.value" :class="field.classes" :readonly="field.readonly" :is="field.component"></div>
                         <div class="tw-flex">
                             <button class="tw-w-full tw-rounded tw-bg-primary tw-text-center tw-text-white tw-py-4 tw-px-2 tw-mt-4 tw-mr-2" v-if="previousState !== currentState" @click="toggleState( previousState )">Previous</button>
@@ -69,13 +75,13 @@
                         </div>
                     </div>
 
-                    <div v-if="showTotal" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto">   
+                    <div v-if="showTotal" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto">
                         <h2 class="tw-flex tw-justify-center tw-text-center tw-text-2xl">Total Insurance Needed</h2>
                         <amount-field header="Income Replacement Insurance Needed (Part I)" :value="totalPart1 | formatAmount" :readonly="true"></amount-field>
                         <amount-field header="Total Additional Expenses (Part II)" :value="totalPart2 | formatAmount" :readonly="true"></amount-field>
                         <amount-field header="Total Insurance Needed" :value="totalNeeded | formatAmount" :readonly="true"></amount-field>
                         <button class="tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline"  @click="onQuoteAmount">Quote Amount</button>
-                    </div> 
+                    </div>
 
                 </div>
             </div>
@@ -105,7 +111,7 @@ export default {
     ],
     components: {
         NaDesktopView, NaPart, Icon, NaHeader, NaSection, NaSectionHeader, NaDesktopCollegeHeaderSection, NaDesktopTotal, Fields, AmountField, PercentageField, YearField, CollegeField, Field
-    },    
+    },
     mounted() {
         this.visible = this.show;
     },
@@ -127,7 +133,7 @@ export default {
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return "$" + n;
         }
-    },    
+    },
     methods: {
         onFieldChange(field) {
             this.$emit('fieldChange', field);
@@ -144,7 +150,7 @@ export default {
                 this.showGeneralFields = true;
             }
             this.$emit('toggle', { value: newState } );
-        },   
+        },
         closeNeedsAnalyser() {
             window.vueEvents.$emit('restartQuote');
         },
@@ -156,7 +162,7 @@ export default {
         },
         currentSection() {
            // console.log("NeedsAnalyserDesktop::currentSection", this.sections[ this.applicationStates[ this.currentState ] ]);
-            return this.sections[ this.applicationStates[ this.currentState ] ];  
+            return this.sections[ this.applicationStates[ this.currentState ] ];
         },
         onQuoteAmount() {
             debugger;
@@ -171,7 +177,7 @@ export default {
         },
         showCollegeFields() {
         //    document.getElementById(this.currentState).scrollIntoView();
-        }        
+        }
     } */
 }
 </script>

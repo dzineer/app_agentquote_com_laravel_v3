@@ -4071,6 +4071,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -4175,7 +4181,7 @@ __webpack_require__.r(__webpack_exports__);
           },
           showCollegeFields() {
           //    document.getElementById(this.currentState).scrollIntoView();
-          }        
+          }
       } */
 
 });
@@ -5491,13 +5497,7 @@ __webpack_require__.r(__webpack_exports__);
     genSitBenefits: function genSitBenefits() {
       var _this = this;
 
-      //    { start: 25000, end: 400000, inc: 25000 },
-      var stops = [
-      /*                    { start: 25, end: 201, inc: 25 },
-                          { start: 250, end: 950, inc: 50 },
-                          { start: 1000, end: 4500, inc: 500 },
-                          { start: 5000, end: 10000, inc: 1000 },*/
-      {
+      var stops = [{
         start: 25000,
         end: 400000,
         inc: 25000
@@ -5519,7 +5519,6 @@ __webpack_require__.r(__webpack_exports__);
     genFeBenefits: function genFeBenefits() {
       var _this2 = this;
 
-      // { start: 25, end: 401, inc: 25 },
       var stops = [{
         start: 1000,
         end: 10000,
@@ -43515,7 +43514,39 @@ var render = function() {
                             readonly: false
                           },
                           on: { fieldChange: _vm.onFieldChange }
-                        })
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "tw-flex" }, [
+                          _vm.previousState !== _vm.currentState
+                            ? _c(
+                                "button",
+                                {
+                                  staticClass:
+                                    "tw-w-full tw-rounded tw-bg-primary tw-text-center tw-text-white tw-py-4 tw-px-2 tw-mt-4 tw-mr-2",
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.toggleState(_vm.previousState)
+                                    }
+                                  }
+                                },
+                                [_vm._v("Previous")]
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "tw-w-full tw-rounded tw-bg-primary tw-text-center tw-text-white tw-py-4 tw-px-2 tw-mt-4 tw-ml-2",
+                              on: {
+                                click: function($event) {
+                                  return _vm.toggleState(_vm.nextState)
+                                }
+                              }
+                            },
+                            [_vm._v("Continue")]
+                          )
+                        ])
                       ],
                       1
                     ),

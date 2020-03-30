@@ -183,13 +183,7 @@
             },
             genSitBenefits() {
 
-            //    { start: 25000, end: 400000, inc: 25000 },
-
                 const stops = [
-/*                    { start: 25, end: 201, inc: 25 },
-                    { start: 250, end: 950, inc: 50 },
-                    { start: 1000, end: 4500, inc: 500 },
-                    { start: 5000, end: 10000, inc: 1000 },*/
                     { start: 25000, end: 400000, inc: 25000 }
                 ];
 
@@ -209,8 +203,6 @@
 
             },
             genFeBenefits() {
-
-                // { start: 25, end: 401, inc: 25 },
 
                 const stops = [
                     { start: 1000, end: 10000, inc: 1000 },

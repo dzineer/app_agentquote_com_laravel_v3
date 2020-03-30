@@ -28,21 +28,21 @@ mix
     .sass('resources/assets/sass/' + version + '/quote-landing-page/style.scss', 'public/templates/landing-pages/v1/css/style.css')
     .sass('resources/assets/sass/' + version + '/quote-landing-page/app.scss', 'public/templates/landing-pages/v1/css/app.css')
     .sass('resources/assets/sass/' + version + '/vendors/font-awesome/5.0.0/sass/wrapper.scss', 'public/templates/landing-pages/v2/css/dz-fa-5.css')
-    .js('resources/assets/js/vuejs/app.js', 'public/js'); 
+    .js('resources/assets/js/vuejs/app.js', 'public/js');
 
 mix.js('resources/assets/js/vuejs/app.js', 'public/js/landing.js')
     .sass('resources/assets/sass/' + version + '/components/landing-page/landing-page.scss', 'public/css/landing.css')
    // .sass('resources/assets/sass/' + version + '/components/landing-page/landing-page.scss', 'public/css/tw.css')
-    .browserSync('http://ppegram.test/')
+   // .browserSync('http://ppegram.test/')
     .tailwind();
 
 /* mix.sass('resources/assets/sass/' + version + '/wp/_wp_tailwind.scss', 'public/css/wptw.css')
-    .tailwind();   */  
+    .tailwind();   */
 
 mix.sass('resources/assets/sass/' + version + '/components/tailwind/tw-bo.scss', 'public/css/tw-bo.css')
-    .tailwind();    
+    .tailwind();
 
-    
+
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.
