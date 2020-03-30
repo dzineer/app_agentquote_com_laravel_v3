@@ -74,10 +74,10 @@ class TermLifeQuoteWidget extends Component {
 
     receiveMessage = (message) => {
         debugger;
-        console.log("TermLifeQuoteWidget: I received a message.");
-        console.log("TermLifeQuoteWidget: this message event is " + message.event );
-        console.log("TermLifeQuoteWidget: this data i received " + message.data );
-        console.log(message);
+        // console.log("TermLifeQuoteWidget: I received a message.");
+        // console.log("TermLifeQuoteWidget: this message event is " + message.event );
+        // console.log("TermLifeQuoteWidget: this data i received " + message.data );
+        // console.log(message);
     };
 
     renderTobacco = () => {
@@ -403,10 +403,10 @@ class TermLifeQuoteWidget extends Component {
         birth_month = birth_month + 1;
 
         if (age_or_date === 'age') {
-            console.log('use age: ', { age });
-            console.log('which is date: ', { birth_month, birth_day, birth_year });
+            // console.log('use age: ', { age });
+            // console.log('which is date: ', { birth_month, birth_day, birth_year });
         } else {
-            console.log('use birthday: ', { birth_month, birth_day, birth_year });
+            // console.log('use birthday: ', { birth_month, birth_day, birth_year });
         }
 
         this.setState({
@@ -542,7 +542,7 @@ class TermLifeQuoteWidget extends Component {
         }
 
         let query = Object.keys(this.state.quoteInfo).map( k => this.state.quoteInfo[k]).join("|");
-        console.log("Request Vars", query);
+        // console.log("Request Vars", query);
 
 /*        render(
             '',
@@ -612,7 +612,7 @@ class TermLifeQuoteWidget extends Component {
         fd.append("category" , '1');
 
         axios.post(url, fd).then( res => {
-            console.log(res);
+            // console.log(res);
             if (res.statusText === "OK") {
 
                 debugger;

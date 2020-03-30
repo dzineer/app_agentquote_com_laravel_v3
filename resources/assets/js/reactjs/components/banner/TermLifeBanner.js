@@ -122,7 +122,7 @@ class TermlifeBanner extends Component {
             return <option key={item.value+item.text} value={item.value}>{item.text}</option>
         });
 
-        console.log("stateOptions", this.stateOptions);
+        // console.log("stateOptions", this.stateOptions);
 
         this.benefitGroup = (
             <div className="input-group mb-3" style={this.styles.inputGroup}>
@@ -386,7 +386,7 @@ class TermlifeBanner extends Component {
 
         }).catch( error => {
             toastr.error("An error occurred, please try again later.");
-            console.log(error);
+            // console.log(error);
         });
 
     };

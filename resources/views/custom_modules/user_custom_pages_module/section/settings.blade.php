@@ -14,7 +14,7 @@
     -->
     <!--
         {!! $moduleData !!}
-    -->    
+    -->
     <script src="{{ asset('js/vendors/tinymce/js/tinymce/tinymce.min.js') }}"></script>
     <script>
         var editor_config = {
@@ -33,7 +33,7 @@
                 '/js/vendors/tinymce/js/tinymce/skins/content/default/content.min.css',
                 '/css/fonts.css',
                 '/css/tw-bo.css',
-            ],                
+            ],
             toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
             // toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media",
             relative_urls: false,
@@ -88,7 +88,7 @@
                     width : x * 0.8,
                     height : y * 0.8,
                     onChange: (api, message) => {
-                        console.log(message);
+                        // console.log(message);
                         callback(message.content);
                         api.close();
                     }

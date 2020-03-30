@@ -343,7 +343,7 @@ $(function() {
                     }
                 },
                 pageLoad: function() {
-                    console.log('family');
+                    // console.log('family');
                 }
             },
             toReplace: {
@@ -515,7 +515,7 @@ $(function() {
                     }
                 },
                 pageLoad: function() {
-                    console.log('toReplace');
+                    // console.log('toReplace');
                 }
             },
             familyAssets: {
@@ -786,7 +786,7 @@ $(function() {
                     }
                 },
                 pageLoad: function() {
-                    console.log('toReplace');
+                    // console.log('toReplace');
                 }
             },
             college: {
@@ -954,7 +954,7 @@ $(function() {
                     }
                 },
                 pageLoad: function() {
-                    console.log('toReplace');
+                    // console.log('toReplace');
                 },
                 calculate: function(c, r, waitTime, duration) {
 
@@ -1135,7 +1135,7 @@ $(function() {
                     }
                 },
                 pageLoad: function() {
-                    console.log('toReplace');
+                    // console.log('toReplace');
                 }
             },
             total: {
@@ -1150,7 +1150,7 @@ $(function() {
                 getTotals: function() {
                 },
                 pageLoad: function() {
-                    console.log('total');
+                    // console.log('total');
                 }
             }
         };
@@ -1341,7 +1341,7 @@ $(function() {
             NA.form.inputs.push(this);
         });
 
-        console.log(NA.form.inputs)
+        // console.log(NA.form.inputs)
 
     }, {
         startSection: '.sect.start'
@@ -1362,7 +1362,7 @@ $(function() {
         NA.sections.removeClass('show');
         NA.selected.removeClass('selected');
 
-        console.log("item: " + NA.section.section);
+        // console.log("item: " + NA.section.section);
 
         //  section.addClass("show");
 
@@ -1399,7 +1399,7 @@ $(function() {
 
         $(this).val(val);
 
-        console.log('input: ' + input);
+        // console.log('input: ' + input);
 
     });
 
@@ -1427,7 +1427,7 @@ $(function() {
 
         $(this).val(val);
 
-        console.log('input: ' + input);
+        // console.log('input: ' + input);
 
     });
 
@@ -1571,7 +1571,7 @@ $(function() {
                     for (var i = NA.numberChilden; i < createHowMany; i++) {
 
 
-                        console.log("numberChilden: " + NA.numberChilden);
+                        // console.log("numberChilden: " + NA.numberChilden);
 
                         collgeBuilder(i);
 
@@ -1808,7 +1808,7 @@ $(function() {
                     for (var i = NA.numberChildenInline; i < createHowMany; i++) {
 
 
-                        console.log("numberChilden: " + NA.numberChildenInline);
+                        // console.log("numberChilden: " + NA.numberChildenInline);
 
                         collgeBuilder(i);
 
@@ -2182,7 +2182,7 @@ window.fd3 = {
 
     log: function(m) {
         if(window.console) {
-            console.log( m );
+            // console.log( m );
         }
     },
 

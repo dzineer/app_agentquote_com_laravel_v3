@@ -103,7 +103,7 @@ class AgentsTable extends Component {
                 return res.json();
             })
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (typeof data.success !== "undefined" && data.success === true) {
                     this.updateGroups(safe_description, data);
                     cb(data);
@@ -117,7 +117,7 @@ class AgentsTable extends Component {
                 }
             })
             .catch(error => {
-                console.log(error)
+                // console.log(error)
             });
 
     };
@@ -138,7 +138,7 @@ class AgentsTable extends Component {
                 return res.json();
             })
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (typeof data.success !== "undefined" && data.success === true) {
                     this.message("success", data.message);
                 }
@@ -150,7 +150,7 @@ class AgentsTable extends Component {
                 }
             })
             .catch(error => {
-                console.log(error)
+                // console.log(error)
             });
     };
 
@@ -183,7 +183,7 @@ class AgentsTable extends Component {
                 }
             })
             .catch(error => {
-                console.log(error)
+                // console.log(error)
             });
     };
 

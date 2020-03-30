@@ -41,7 +41,7 @@ class ContactsPanel extends Component {
     }
 
     updateHandler = event => {
-        console.log(event.target.value);
+        // console.log(event.target.value);
         const newState = Object.assign({}, this.state, { [event.target.name]: event.target.value });
         this.setState(newState);
     };
@@ -111,13 +111,13 @@ class ContactsPanel extends Component {
                 );
                 toastr.error(res.data.message);
             }
-            console.log(res.data);
+            // console.log(res.data);
         }).catch( error => {
             this.setState({
                 submit: Object.assign({}, this.state.submit, { caption: this.state.submit.normal, disabled: false })
             });
             toastr.error("An error occurred, please try again later.");
-            console.log(error);
+            // console.log(error);
         });
     };
 

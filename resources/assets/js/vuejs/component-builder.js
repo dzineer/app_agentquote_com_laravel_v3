@@ -16,7 +16,7 @@ import PopperToolTip from 'tooltip.js';
 
 /* import PortalVue from 'portal-vue';
 import VModal from 'vue-js-modal'; */
-/* 
+/*
 Vue.use(PortalVue);
 Vue.use(VModal);
 
@@ -24,11 +24,11 @@ Vue.use(VModal);
 
 Vue.directive('tooltip', {
     bind(elem, bindings) {
-        console.log(bindings);
+        // console.log(bindings);
         new PopperToolTip(elem, {
             placement: bindings.arg || 'top',
             title: bindings.value
-        }); 
+        });
     }
 })
 
@@ -93,7 +93,7 @@ window.vueEvents = vueEvents; */
 import _ from "lodash";
 
 new Vue({
-    el: '#app', 
+    el: '#app',
     components: { /* MegaMenu, SupportButton,  */FixedTopNav, Question, Accordian, Signup },
     data() {
        return {
@@ -144,7 +144,7 @@ new Vue({
             new PopperToolTip(elem, {
                 placement: elem.dataset.tooltipPlacement || 'top',
                 title: elem.dataset.tooltip
-            }); 
+            });
         });
 
         this.container = document.getElementById("builder-container");
@@ -179,7 +179,7 @@ new Vue({
 
             this.selectedElement.setAttribute("v-model", this.selectedElement.classList);
 
-            console.log('onSelected', this.selectedElement);
+            // console.log('onSelected', this.selectedElement);
             this.updateScreen();
 
             this.selectedElementProperties = [];
@@ -187,7 +187,7 @@ new Vue({
                 this.selectedElementProperties.push(
                     { key: prop, value: this.selectedElement[prop] }
                 );
-            } 
+            }
 
         },
         selectedActionButton(e) {

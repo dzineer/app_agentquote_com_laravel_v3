@@ -442,7 +442,7 @@ class SiwlBanner extends Component {
 
         }).catch( error => {
             toastr.error("An error occurred, please try again later.");
-            console.log(error);
+            // console.log(error);
         });
 
     };

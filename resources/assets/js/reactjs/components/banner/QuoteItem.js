@@ -78,7 +78,7 @@ class QuoteItem extends Component {
     }
 
     componentDidMount() {
-        console.log("[QuoteItem::componentDidMount]", this.props);
+        // console.log("[QuoteItem::componentDidMount]", this.props);
     }
 
     render() {

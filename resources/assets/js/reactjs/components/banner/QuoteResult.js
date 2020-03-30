@@ -18,7 +18,7 @@ class QuoteResult extends Component {
         item.Rate3Adj = item.Rate3Adj ? item.Rate3Adj : '';
         item.Rate4Adj = item.Rate4Adj ? item.Rate4Adj : '';
 
-        console.log("[item]", item);
+        // console.log("[item]", item);
 
         return (
             <QuoteItem item={item} />

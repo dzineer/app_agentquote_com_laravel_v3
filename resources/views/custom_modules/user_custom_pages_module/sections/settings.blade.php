@@ -71,7 +71,7 @@
                     width : x * 0.8,
                     height : y * 0.8,
                     onChange: (api, message) => {
-                        console.log(message);
+                        // console.log(message);
                         callback(message.content);
                         api.close();
                     }

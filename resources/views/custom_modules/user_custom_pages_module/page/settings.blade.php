@@ -31,7 +31,7 @@
                 '/js/vendors/tinymce/js/tinymce/skins/content/default/content.min.css',
                 '/css/fonts.css',
                 '/css/tw-bo.css',
-            ],       
+            ],
             images_upload_handler: function (blobInfo, success, failure) {
                 var xhr, formData;
 
@@ -79,7 +79,7 @@
                     width : x * 0.8,
                     height : y * 0.8,
                     onChange: (api, message) => {
-                        console.log(message);
+                        // console.log(message);
                         callback(message.content);
                         api.close();
                     }

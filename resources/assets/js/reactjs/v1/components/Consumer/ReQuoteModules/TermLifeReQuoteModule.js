@@ -45,16 +45,16 @@ class TermLifeReQuoteModule extends Component {
 
     componentDidMount() {
         debugger;
-        console.log(this);
+        // console.log(this);
        // this.props.eventsRouter.on('hello', this.receiveMessage.bind(this) );
     }
 
     receiveMessage = (message) => {
         debugger;
-        console.log("TermLifeQuoteModule: I received a message.");
-        console.log("TermLifeQuoteModule: this message event is " + message.event );
-        console.log("TermLifeQuoteModule: this data i received " + message.data );
-        console.log(message);
+        // console.log("TermLifeQuoteModule: I received a message.");
+        // console.log("TermLifeQuoteModule: this message event is " + message.event );
+        // console.log("TermLifeQuoteModule: this data i received " + message.data );
+        // console.log(message);
     };
 
     generateBenefitOptions = () => {
@@ -290,7 +290,7 @@ class TermLifeReQuoteModule extends Component {
         fd.append("category" , '1');
 
         axios.post(url, fd).then( res => {
-            console.log(res);
+            // console.log(res);
             if (res.statusText === "OK") {
 
                 debugger;

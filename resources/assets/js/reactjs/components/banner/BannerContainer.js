@@ -247,7 +247,7 @@ class BannerContainer extends Component {
             return {text: item.name, value: item.abbr}
         });
 
-        console.log("State Options: ", this.stateOptions);
+        // console.log("State Options: ", this.stateOptions);
 
         this.token = jQuery('meta[name="csrf-token"]').attr('content');
 
@@ -267,7 +267,7 @@ class BannerContainer extends Component {
     }
 
     componentDidMount() {
-        console.log('[Component Did Mount]', 'I mounted');
+        // console.log('[Component Did Mount]', 'I mounted');
 
         if (this.props.bannerType === 'termlife') {
             this.setState({ quoteContainer: <TermLifeBanner statesArr={this.stateOptions} /> });

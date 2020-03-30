@@ -24,11 +24,11 @@ window.Loader = (function(loaders) {
             return this;
         },
         echo: function(s) {
-            console.log(s);
+            // console.log(s);
             return this;
         },
         store: function(payload) {
-            console.log("payload: " + payload);
+            // console.log("payload: " + payload);
             let data = new FormData();
             data.append(  "data", JSON.stringify( payload ) );
 
@@ -38,8 +38,8 @@ window.Loader = (function(loaders) {
                     body: data
                 })
                 .then(function(res){ return res.json(); })
-                .then(function(data){ console.log( data  ) })
-                .catch(error => console.log(error))
+                .then(function(data){ // console.log( data  ) })
+                .catch(error => // console.log(error))
         },
         getHymn: function (n, url) {
             fetch(url)
@@ -48,7 +48,7 @@ window.Loader = (function(loaders) {
                     let parser = new DOMParser();
                     let doc = parser.parseFromString(data, "text/html");
                    // doc.querySelector('.line');
-                    console.log(doc);
+                    // console.log(doc);
                     let page = {};
 
                     let title = doc.querySelector('.titlebox h3 a span.white').innerHTML;
@@ -65,9 +65,9 @@ window.Loader = (function(loaders) {
                     page.title = titlePieces[1];
                     page.category = titlePieces[1];
 
-                    console.log("\n\n\nHymn #: " + n);
-                    console.log("Category: " + titlePieces[0]);
-                    console.log("Title: " + titlePieces[1]);
+                    // console.log("\n\n\nHymn #: " + n);
+                    // console.log("Category: " + titlePieces[0]);
+                    // console.log("Title: " + titlePieces[1]);
                     for(let i=0; i < verses.length; i++) {
                         let verse = verses[i];
                         let p = verse.querySelectorAll('p');
@@ -75,15 +75,15 @@ window.Loader = (function(loaders) {
                         for(let j=0; j < p.length; j++) {
                             if (p.className !== "greenbox") {
                                // page.verses.push(p[j].innerHTML);
-                                console.log(p[j].innerHTML);
+                                // console.log(p[j].innerHTML);
                             }
                         }
-                        //console.log(lines[i].innerHTML);
+                        //// console.log(lines[i].innerHTML);
                     }
                     this.store(page);
 
                 }).catch(error => {
-                console.log(error);
+                // console.log(error);
                 });
 
             return this;

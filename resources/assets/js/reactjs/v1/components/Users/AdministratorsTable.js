@@ -117,7 +117,7 @@ class AdministratorsTable extends Component {
                 return res.json();
             })
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (typeof data.success !== "undefined" && data.success === true) {
                     this.message("success", data.message);
                 }
@@ -129,7 +129,7 @@ class AdministratorsTable extends Component {
                 }
             })
             .catch(error => {
-                console.log(error)
+                // console.log(error)
             });
     };
 
@@ -152,7 +152,7 @@ class AdministratorsTable extends Component {
                 return res.json();
             })
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (typeof data.success !== "undefined" && data.success === true) {
                     debugger;
                     message.success(data.message);
@@ -172,7 +172,7 @@ class AdministratorsTable extends Component {
                 }
             })
             .catch(error => {
-                console.log(error)
+                // console.log(error)
             });
     };
 
@@ -197,7 +197,7 @@ class AdministratorsTable extends Component {
                 return res.json();
             })
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 if (typeof data.success !== "undefined" && data.success === true) {
                     debugger;
                     this.updateGroups(safe_description, data);
@@ -211,7 +211,7 @@ class AdministratorsTable extends Component {
                 }
             })
             .catch(error => {
-                console.log(error)
+                // console.log(error)
             });
 
     };

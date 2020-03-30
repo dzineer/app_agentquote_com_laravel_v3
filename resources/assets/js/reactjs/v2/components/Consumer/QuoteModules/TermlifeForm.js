@@ -275,10 +275,10 @@ class TermlifeForm extends Component {
         birth_month = birth_month + 1;
 
         if (age_or_date === 'age') {
-            console.log('use age: ', { age });
-            console.log('which is date: ', { birth_month, birth_day, birth_year });
+            // console.log('use age: ', { age });
+            // console.log('which is date: ', { birth_month, birth_day, birth_year });
         } else {
-            console.log('use birthday: ', { birth_month, birth_day, birth_year });
+            // console.log('use birthday: ', { birth_month, birth_day, birth_year });
         }
 
         this.setState({
@@ -358,7 +358,7 @@ class TermlifeForm extends Component {
         // https://banner.aq2e.com/q/g?request=3|1000|20|5|7|1980|CA|0|M|N|0&response=json
 
         let query = Object.keys(this.state.quoteInfo).map( k => this.state.quoteInfo[k]).join("|");
-        console.log("Request Vars", query);
+        // console.log("Request Vars", query);
 
         render(
             '',
@@ -389,7 +389,7 @@ class TermlifeForm extends Component {
             scrollTop: $("#quote-results").offset().top
         }, 'slow');
 
-        console.log("account: ", this.account);
+        // console.log("account: ", this.account);
 
         /*        this.axios_instance.post(this.account.hostname+this.account.endpoint).then( res => {
 
@@ -419,7 +419,7 @@ class TermlifeForm extends Component {
         fd.append("category" , '1');
 
         axios.post(url, fd).then( res => {
-            console.log(res);
+            // console.log(res);
             if (res.statusText === "OK") {
 
                 let quote_results = res.data;
