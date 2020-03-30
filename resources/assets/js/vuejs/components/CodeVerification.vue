@@ -42,7 +42,7 @@
                     v-if="showPhoneField"
                     placeholder="Phone"
                     v-model="phone"
-                    @change="onPhoneUpdate"
+                    @keyup="onPhoneUpdate"
                     :disabled="sending"
                     required>
 
@@ -55,7 +55,7 @@
                 Send Code
                 </button>
 
-                <input type="text" name="phone" class="focus:tw-outline-none tw-h-13 focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-4 tw-px-3 tw-py-4 tw-shadow tw-text-center tw-text-gray-700 tw-w-1/2 sm:tw-w-2/5"
+                <input type="text" name="code" class="focus:tw-outline-none tw-h-13 focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-4 tw-px-3 tw-py-4 tw-shadow tw-text-center tw-text-gray-700 tw-w-1/2 sm:tw-w-2/5"
                     v-if="verification.showVerificationField"
                     placeholder="Code"
                     v-model="verification.code"

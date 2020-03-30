@@ -43019,7 +43019,7 @@ var render = function() {
                     },
                     domProps: { value: _vm.phone },
                     on: {
-                      change: _vm.onPhoneUpdate,
+                      keyup: _vm.onPhoneUpdate,
                       input: function($event) {
                         if ($event.target.composing) {
                           return
@@ -43077,7 +43077,7 @@ var render = function() {
                       "focus:tw-outline-none tw-h-13 focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-4 tw-px-3 tw-py-4 tw-shadow tw-text-center tw-text-gray-700 tw-w-1/2 sm:tw-w-2/5",
                     attrs: {
                       type: "text",
-                      name: "phone",
+                      name: "code",
                       placeholder: "Code",
                       disabled: _vm.verifying,
                       required: ""
