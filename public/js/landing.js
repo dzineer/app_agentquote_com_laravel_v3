@@ -4148,12 +4148,15 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (newState === 'TOTALS') {
-        this.toggleTotal();
-      } else {
-        this.$emit('toggle', {
-          value: newState
-        });
+        this.toggleState('TOTALS');
+        this.showCollegeFields = false;
+        this.showGeneralFields = false;
+        this.showTotal = true;
       }
+
+      this.$emit('toggle', {
+        value: newState
+      });
     },
     closeNeedsAnalyser: function closeNeedsAnalyser() {
       window.vueEvents.$emit('restartQuote');
