@@ -114,7 +114,8 @@ export default {
                 INVESTIBLE_FAMILY_ASSETS: false,
                 DEBIT_REPAYMENT: false,
                 COLLEGE_FUNDING: false,
-                OTHER_EXPENSES: false
+                OTHER_EXPENSES: false,
+                TOTALS: false
             },
             currentHeader: '',
             total_part_1: 0.00,
