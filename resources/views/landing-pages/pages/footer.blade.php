@@ -62,7 +62,7 @@
 
         <?php if( isset($ga_code) && strlen($ga_code) ) : ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_code ?>"></script>
+            <script type="application/javascript" async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $ga_code ?>"></script>
             <script type="application/javascript">
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
