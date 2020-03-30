@@ -64,7 +64,6 @@
                         </div>
                     </div>
 
-
                     <div v-if="showGeneralFields" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto" style="max-height: 720px;margin-top: 93px;margin-bottom: 20px;">
                         <h2 class="tw-flex tw-justify-center tw-text-center tw-text-2xl" :id="currentState">{{ currentHeader }}</h2>
                         <div v-for="(field, index) in currentSection()" :key="index" @fieldChange="onFieldChange" :header="field.text" :name="field.name" :value="field.value" :class="field.classes" :readonly="field.readonly" :is="field.component"></div>
