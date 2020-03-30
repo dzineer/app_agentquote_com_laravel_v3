@@ -2028,6 +2028,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['email', 'token', 'sendverificationby'],
@@ -43021,7 +43022,10 @@ var render = function() {
                     },
                     domProps: { value: _vm.phone },
                     on: {
-                      change: _vm.onPhoneUpdate,
+                      paste: function($event) {
+                        $event.preventDefault()
+                      },
+                      keyup: _vm.onPhoneUpdate,
                       input: function($event) {
                         if ($event.target.composing) {
                           return
