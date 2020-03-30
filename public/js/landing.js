@@ -2112,6 +2112,8 @@ __webpack_require__.r(__webpack_exports__);
       this.showPhoneField = false;
     },
     onPhoneUpdate: function onPhoneUpdate() {
+      debugger;
+
       if (!this.isReady()) {
         toastr.error('Invalid phone number.');
         return;

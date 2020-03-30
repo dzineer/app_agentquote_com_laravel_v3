@@ -188,6 +188,7 @@ export default {
             this.showPhoneField = false;
         },
         onPhoneUpdate() {
+            debugger;
             if(!this.isReady()) {
                 toastr.error('Invalid phone number.');
                 return;
