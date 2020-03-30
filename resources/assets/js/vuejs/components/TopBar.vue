@@ -1,6 +1,6 @@
 <template>
     <fixed-top-nav :delay="500" classes="tw-bg-white mark-fixed-top-nav">
-        
+
         <div class="dz:section tw-bg-primary tw-flex tw-flex-row tw-items-center tw-justify-center tw-text-white tw-w-full tw-fixed tw-top-0 tw-z-10 mark-top-bar" style="min-height: 45px;">
             <nav class="tw-flex tw-flex-row tw-items-center tw-justify-between tw-justify-center tw-w-full">
                 <social-media-bar :icons="icons"></social-media-bar>
@@ -24,7 +24,7 @@
       mounted() {
           debugger;
           this.aria.phoneLabel = 'You can contact us by calling us at ' + this.phone;
-          console.dir(this.icons);
+          // console.dir(this.icons);
       }
     }
 </script>

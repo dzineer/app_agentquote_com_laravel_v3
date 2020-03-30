@@ -7548,8 +7548,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     debugger;
-    this.aria.phoneLabel = 'You can contact us by calling us at ' + this.phone;
-    console.dir(this.icons);
+    this.aria.phoneLabel = 'You can contact us by calling us at ' + this.phone; // console.dir(this.icons);
   }
 });
 
