@@ -4148,7 +4148,6 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (newState === 'TOTALS') {
-        this.toggleState('TOTALS');
         this.showCollegeFields = false;
         this.showGeneralFields = false;
         this.showTotal = true;

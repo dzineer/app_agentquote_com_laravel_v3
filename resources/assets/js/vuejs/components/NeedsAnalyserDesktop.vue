@@ -148,14 +148,13 @@ export default {
                 this.showGeneralFields = true;
             }
             if (newState === 'TOTALS') {
-                this.toggleState('TOTALS');
                 this.showCollegeFields = false;
                 this.showGeneralFields = false;
                 this.showTotal = true;
             }
 
             this.$emit('toggle', {value: newState});
-            
+
         },
         closeNeedsAnalyser() {
             window.vueEvents.$emit('restartQuote');
