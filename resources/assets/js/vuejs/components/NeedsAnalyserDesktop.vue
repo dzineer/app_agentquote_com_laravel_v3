@@ -147,13 +147,14 @@ export default {
                 this.showTotal = false;
                 this.showGeneralFields = true;
             }
+
+            this.$emit('toggle', {value: newState});
+
             if (newState === 'TOTALS') {
                 this.showCollegeFields = false;
                 this.showGeneralFields = false;
                 this.showTotal = true;
             }
-
-            this.$emit('toggle', {value: newState});
 
         },
         closeNeedsAnalyser() {
