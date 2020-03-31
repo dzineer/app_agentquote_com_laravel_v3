@@ -192,7 +192,7 @@ export default {
         onPhoneUpdate() {
             debugger;
             if(!this.isReady()) {
-                toastr.error('Invalid phone number.');
+                // toastr.error('Invalid phone number.');
                 return;
             }
             this.$emit('phoneChange', { value: this.phone } );
@@ -284,6 +284,7 @@ export default {
             if (this.isReady()) {
 				// toastr.info('Sending verification code...');
                 // toastr.info('Verification code sent.');
+// just commend
                 this.sending = true;
                 this.verification.showEmailField = false;
                 this.verification.showVerificationByPhone = true;
