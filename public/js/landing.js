@@ -2206,7 +2206,7 @@ __webpack_require__.r(__webpack_exports__);
       if (this.isReady()) {
         // toastr.info('Sending verification code...');
         // toastr.info('Verification code sent.');
-        // just commend
+        // just comment
         this.sending = true;
         this.verification.showEmailField = false;
         this.verification.showVerificationByPhone = true;
