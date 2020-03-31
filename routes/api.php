@@ -76,6 +76,8 @@ Route::post('/user.subscriptions',  [\App\Http\Controllers\Api\SubscriptionUsers
 // Products Users Api
 Route::post('/user.assignProduct',  [\App\Http\Controllers\Api\ProductUsersApiController::class, 'assignUserProduct'])->name('api-request.user.assign-product');
 Route::post('/user.removeProduct',  [\App\Http\Controllers\Api\ProductUsersApiController::class, 'removeUserProduct'])->name('api-request.user.remove-product');
+Route::post('/user.disableProduct',  [\App\Http\Controllers\Api\ProductUsersApiController::class, 'disableUserProduct'])->name('api-request.user.disable-product');
+Route::post('/user.enableProduct',  [\App\Http\Controllers\Api\ProductUsersApiController::class, 'enableUserProduct'])->name('api-request.user.enable-product');
 
 // Users Api
 Route::post('/user.get',  [\App\Http\Controllers\Api\UsersApiController::class, 'getUser'])->name('api-request.user.get');

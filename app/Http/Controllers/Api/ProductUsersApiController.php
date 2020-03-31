@@ -112,4 +112,102 @@ class ProductUsersApiController extends Controller {
         return (new ProductUsersApiFacade())->removeUserProduct($request->all());
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function disableUserProduct(Request $request) {
+
+        // return "hey";
+
+        if (!$this->isAllowed()) {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]) );
+
+            return response()->json([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]);
+        }
+
+        AQLog::info( json_encode([
+            "data" => request()->all(),
+        ]) );
+
+        Log::info(json_encode([
+            "data" => request()->all(),
+        ]));
+
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'whmcs_email' => 'required:max:128',
+            'whmcs_product_id' => 'required:max:128',
+            //    'user_id' => 'required:max:32',
+        ]);
+
+        return (new ProductUsersApiFacade())->disableUserProduct($request->all());
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    public function enableUserProduct(Request $request) {
+
+        // return "hey";
+
+        if (!$this->isAllowed()) {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]) );
+
+            return response()->json([
+                "message" => "Invalid IP Address",
+                "data" => request()->all(),
+                "mode" => "debug",
+                "ip" => request()->ip(),
+                "ok" => false,
+                "success" => false,
+            ]);
+        }
+
+        AQLog::info( json_encode([
+            "data" => request()->all(),
+        ]) );
+
+        Log::info(json_encode([
+            "data" => request()->all(),
+        ]));
+
+        $data = $this->validate($request, [
+            'token' => 'required|max:32',
+            'username' => 'required:max:32',
+            'whmcs_email' => 'required:max:128',
+            'whmcs_product_id' => 'required:max:128',
+            //    'user_id' => 'required:max:32',
+        ]);
+
+        return (new ProductUsersApiFacade())->enableUserProduct($request->all());
+    }
+
 }

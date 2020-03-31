@@ -46,7 +46,7 @@
                     @keyup="onPhoneUpdate"
                     :disabled="sending"
                     required>
-                
+
 
                 <button @click.prevent="onGenerateQuote"
                  v-if="showPhoneField"

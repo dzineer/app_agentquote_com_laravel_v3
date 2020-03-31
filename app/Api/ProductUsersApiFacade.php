@@ -618,4 +618,262 @@ class ProductUsersApiFacade
             "success" => false
         ]);*/
     }
+
+    public function disableUserProduct($data) {
+
+        if ($data['token'] !== 'BD9AFD1F5B993E63FE2DAEE58E66C' && $data['username'] !== 'quotedirect_api') {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        AQLog::info( json_encode([
+            "message" => "Inside request->has",
+        ]) );
+
+        $email = $data['whmcs_email'];
+        $whmcs = $data['whmcs_userid'];
+        $whmcsProductId = $data['whmcs_product_id'];
+
+        $user = User::where(['email' => $email])->first();
+
+        if ($user) {
+
+            AQLog::info( json_encode([
+                "message" => "Got User",
+                "data" => $user
+            ]) );
+
+            $whmcs_product_id = $data['whmcs_product_id'];
+
+            $whmcsProduct = WhmcsProduct::where(["pid" => $whmcs_product_id])->first();
+
+            if ($whmcsProduct) {
+
+                AQLog::info( json_encode([
+                    "message" => "Got WHMCS Product",
+                    "data" => $whmcsProduct
+                ]) );
+
+                $productId = $whmcsProduct->local_product_id;
+
+                $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
+
+                if ($userSubscription) {
+
+                    AQLog::info( print_r([
+                        "message" => "User has subscription",
+                        "data" => $userSubscription
+                    ], true) );
+
+                    Subscription::where([
+                        "user_id" => $user->id,
+                        "product_id" => $productId
+                    ])->update([
+                        "active" => 0
+                    ]);
+
+                    $class = 'App\\Models\\'.$whmcsProduct->class;
+
+                    AQLog::info( json_encode([
+                        "message" => "Disabling Product " . $whmcsProduct->name . " for " . $user->email . " user.",
+                        "mode" => "debug",
+                        "ok" => true,
+                        "success" => true,
+                    ]) );
+
+                    $class::where([
+                        "user_id" => $user->id
+                    ])->update([
+                        "active" => 0
+                    ]);
+
+                    return response()->json([
+                        "message" => "Disabled Product " . $whmcsProduct->name . " for " . $user->email . " user.",
+                        "okay" => true,
+                        "success" => true,
+                    ]);
+
+                } else {
+                    AQLog::info( print_r([
+                        "message" => "User does not have product",
+                    ], true) );
+
+                    return response()->json([
+                        "message" => "User does not have product",
+                        "data" => request()->all(),
+                        "user" => $user,
+                        "success" => false,
+                    ]);
+
+                }
+            } else {
+                return response()->json([
+                    "message" => "Cannot find product",
+                    "data" => request()->all(),
+                    "user" => $user,
+                    "success" => false,
+                ]);
+            }
+
+        } else {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid user",
+                "success" => false,
+            ]) );
+
+            return response()->json([
+                "message" => "Invalid user",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+
+        }
+
+/*        AQLog::info( json_encode([
+            "message" => "Error",
+            "mode" => "debug",
+            "success" => false
+        ]) );
+
+        return response()->json([
+            "message" => "Error",
+            "mode" => "debug",
+            "ip" => request()->ip(),
+            "data" => request()->all(),
+            "success" => false
+        ]);*/
+    }
+
+    public function enableUserProduct($data) {
+
+        if ($data['token'] !== 'BD9AFD1F5B993E63FE2DAEE58E66C' && $data['username'] !== 'quotedirect_api') {
+            return response()->json([
+                "message" => "Invalid Request",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+        }
+
+        AQLog::info( json_encode([
+            "message" => "Inside request->has",
+        ]) );
+
+        $email = $data['whmcs_email'];
+        $whmcs = $data['whmcs_userid'];
+        $whmcsProductId = $data['whmcs_product_id'];
+
+        $user = User::where(['email' => $email])->first();
+
+        if ($user) {
+
+            AQLog::info( json_encode([
+                "message" => "Got User",
+                "data" => $user
+            ]) );
+
+            $whmcs_product_id = $data['whmcs_product_id'];
+
+            $whmcsProduct = WhmcsProduct::where(["pid" => $whmcs_product_id])->first();
+
+            if ($whmcsProduct) {
+
+                AQLog::info( json_encode([
+                    "message" => "Got WHMCS Product",
+                    "data" => $whmcsProduct
+                ]) );
+
+                $productId = $whmcsProduct->local_product_id;
+
+                $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $productId])->first();
+
+                if ($userSubscription) {
+
+                    AQLog::info( print_r([
+                        "message" => "User has subscription",
+                        "data" => $userSubscription
+                    ], true) );
+
+                    Subscription::where([
+                        "user_id" => $user->id,
+                        "product_id" => $productId
+                    ])->update([
+                        "active" => 1
+                    ]);
+
+                    $class = 'App\\Models\\'.$whmcsProduct->class;
+
+                    AQLog::info( json_encode([
+                        "message" => "Disabling Product " . $whmcsProduct->name . " for " . $user->email . " user.",
+                        "mode" => "debug",
+                        "ok" => true,
+                        "success" => true,
+                    ]) );
+
+                    $class::where([
+                        "user_id" => $user->id
+                    ])->update([
+                        "active" => 1
+                    ]);
+
+                    return response()->json([
+                        "message" => "Disabled Product " . $whmcsProduct->name . " for " . $user->email . " user.",
+                        "okay" => true,
+                        "success" => true,
+                    ]);
+
+                } else {
+                    AQLog::info( print_r([
+                        "message" => "User does not have product",
+                    ], true) );
+
+                    return response()->json([
+                        "message" => "User does not have product",
+                        "data" => request()->all(),
+                        "user" => $user,
+                        "success" => false,
+                    ]);
+
+                }
+            } else {
+                return response()->json([
+                    "message" => "Cannot find product",
+                    "data" => request()->all(),
+                    "user" => $user,
+                    "success" => false,
+                ]);
+            }
+
+        } else {
+
+            AQLog::info( json_encode([
+                "message" => "Invalid user",
+                "success" => false,
+            ]) );
+
+            return response()->json([
+                "message" => "Invalid user",
+                "data" => request()->all(),
+                "success" => false,
+            ]);
+
+        }
+
+/*        AQLog::info( json_encode([
+            "message" => "Error",
+            "mode" => "debug",
+            "success" => false
+        ]) );
+
+        return response()->json([
+            "message" => "Error",
+            "mode" => "debug",
+            "ip" => request()->ip(),
+            "data" => request()->all(),
+            "success" => false
+        ]);*/
+    }
 }
