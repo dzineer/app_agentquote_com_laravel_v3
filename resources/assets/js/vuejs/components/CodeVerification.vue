@@ -44,6 +44,7 @@
                     @paste.prevent
                     v-model="phone"
                     @keyup="onPhoneUpdate"
+                    @change="onPhoneChange"
                     :disabled="sending"
                     required>
 
@@ -188,6 +189,13 @@ export default {
             this.showPhoneField = false;
             this.verification.showEmailField = true;
             this.showPhoneField = false;
+        },
+        onPhoneChange() {
+            if(!this.isReady()) {
+                toastr.error('Invalid phone number.');
+                return;
+            }
+            this.$emit('phoneChange', { value: this.phone } );
         },
         onPhoneUpdate() {
             debugger;

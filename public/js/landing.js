@@ -2030,6 +2030,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['email', 'token', 'sendverificationby'],
@@ -2112,6 +2113,16 @@ __webpack_require__.r(__webpack_exports__);
       this.showPhoneField = false;
       this.verification.showEmailField = true;
       this.showPhoneField = false;
+    },
+    onPhoneChange: function onPhoneChange() {
+      if (!this.isReady()) {
+        toastr.error('Invalid phone number.');
+        return;
+      }
+
+      this.$emit('phoneChange', {
+        value: this.phone
+      });
     },
     onPhoneUpdate: function onPhoneUpdate() {
       debugger;
@@ -43028,6 +43039,7 @@ var render = function() {
                         $event.preventDefault()
                       },
                       keyup: _vm.onPhoneUpdate,
+                      change: _vm.onPhoneChange,
                       input: function($event) {
                         if ($event.target.composing) {
                           return
