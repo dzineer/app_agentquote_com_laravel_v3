@@ -13,7 +13,7 @@
                                         </a>
                                     </li>
                                     <li class="">
-                                        We provide a full spectrum of mobile quoters and web applications for insurance agents. Focusing on Life insurance, Health, Financial Advisors, and P&C. Our quoters and website applications cover all stages of the program development life cycle and keep you one step ahead of the competition.
+                                       As your insurance advisor, we help you make smart decisions—protecting you from the unexpected &amp; planning for the predictable by offering high quality insurance products &amp; services to meet your goals and budget. We&#39;ll help you understand every step in the process, so you realize your dreams while safeguarding your finances.
                                     </li>
                                 </ul>
                             </div>
