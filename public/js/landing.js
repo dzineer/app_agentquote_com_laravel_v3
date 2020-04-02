@@ -2603,7 +2603,7 @@ __webpack_require__.r(__webpack_exports__);
   filters: {
     formatPhone: function formatPhone() {
       var format = /(\d{0,3})(\d{0,3})(\d{0,4})/;
-      var phoneNumber = this.phone;
+      var phoneNumber = this.props.phone;
       var digits = phoneNumber.replace(/\D/g, '').match(format);
       return !digits[2] ? digits[1] : '(' + digits[1] + ') ' + digits[2] + (digits[3] ? '-' + digits[3] : '');
     }
