@@ -10,11 +10,11 @@
 							<h2 class="dz:section-header tw-my-8 tw-text-3xl sm:tw-text-4xl">You are almost there. Just one more step.</h2>
 							<p class="tw-text-md sm:tw-text-xl tw-tracking-widest">In the last twelve (12) months, have you used any substance or products containing tobacco or nicotine, or used e-cigerettes?</p>
 							<div class="tw-flex tw-justify-center tw-items-center tw-mx-auto tw-w-full tw-mt-6">
-											
+
 										<div class="tw-flex tw-items-center tw-mr-4 tw-mb-4">
 											<input id="radio1" type="radio" name="tobacco" class="dz-input tw-hidden" value="Y" :checked="defaultTobacco == 'Y'" @click="onTobaccoChange"  />
 											<label for="radio1" class="dz-label tw-flex tw-items-center tw-cursor-pointer tw-text-xl">
-												<span class="tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-grey tw-flex-no-shrink"></span>
+												<span class="tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-primary tw-flex-no-shrink"></span>
 												Yes
 											</label>
 										</div>
@@ -22,7 +22,7 @@
 										<div class="tw-flex tw-items-center tw-mr-4 tw-mb-4">
 											<input id="radio2" type="radio" name="tobacco" value="N" @click="onTobaccoChange" :checked="defaultTobacco == 'N'" class="dz-input tw-bg-gray-900 tw-hidden" />
 											<label for="radio2" class="dz-label tw-flex tw-items-center tw-cursor-pointer tw-text-xl">
-												<span class="tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-grey tw-flex-no-shrink"></span>
+												<span class="tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-primary tw-flex-no-shrink"></span>
 												No
 											</label>
 										</div>
@@ -35,7 +35,7 @@
 									<option v-for="term in terms" :value="term.value" v-bind:key="term.value" :selected="term.value == defaultTerm">
 										{{ term.text }}
 									</option>
-								</select>   
+								</select>
 
 								<p v-if="amountError" class="tw-text-red-600">Please enter a valid amount!</p>
 
@@ -46,15 +46,15 @@
 
 								<secure-confidential-banner></secure-confidential-banner>
 
-							</div>                     
+							</div>
 
 							<!-- <needs-analyzer-banner></needs-analyzer-banner>	 -->
 
 					</div>
 				</div>
 			</div>
-	</div>		
-</div>			
+	</div>
+</div>
 </template>
 
 <script>

@@ -42415,7 +42415,7 @@ var staticRenderFns = [
       [
         _c("span", {
           staticClass:
-            "tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-grey tw-flex-no-shrink"
+            "tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-primary tw-flex-no-shrink"
         }),
         _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tYes\n\t\t\t\t\t\t\t\t\t\t\t")
       ]
@@ -42435,7 +42435,7 @@ var staticRenderFns = [
       [
         _c("span", {
           staticClass:
-            "tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-grey tw-flex-no-shrink"
+            "tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-primary tw-flex-no-shrink"
         }),
         _vm._v("\n\t\t\t\t\t\t\t\t\t\t\t\tNo\n\t\t\t\t\t\t\t\t\t\t\t")
       ]
