@@ -2486,6 +2486,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['phone', 'offeredby']
 });
@@ -44135,10 +44137,12 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("div", {
-        staticClass: "tw-text-4xl sm:tw-text-5xl tw-mb-6",
-        domProps: { textContent: _vm._s(_vm.phone) }
-      }),
+      _c(
+        "div",
+        { staticClass: "tw-text-4xl sm:tw-text-5xl tw-mb-6" },
+        [_c("display-phone-number", { attrs: { phone: _vm.phone } })],
+        1
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "tw-text-2xl tw-mb-6" }, [
         _vm._v("\n        Offered by: "),
