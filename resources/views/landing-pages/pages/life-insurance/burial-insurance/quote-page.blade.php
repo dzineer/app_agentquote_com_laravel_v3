@@ -76,7 +76,7 @@
                 "description": "The benefits of term life insurance can provide the financial security you need to help protect your family’s future. We offer life insurance quotes for coverage that fits your needs. Get a personalized life insurance assessment, using our needs analyser in minutes. Calculate your life insurance coverage today!"
             }
         ]}
-    
+
     </script>
 
     <style>
@@ -168,12 +168,13 @@
                                     <li class="tw-mb-4 tw-text-md">You need money for mortgage payments if you become unemployed or disabled</li>
                                     <li class="tw-mb-4 tw-text-md">You want your family to live debt free</li>
                                     <li class="tw-mb-4 tw-text-md">Provide your loved ones with additional tax-free income to create an estate</li>
-                                </ul><a href="/products-services/life-insurance/mortgage-protection" aria-label="Get A Final Expense quote" class="tw-bg-primary tw-text-white tw-rounded tw-py-2 tw-px-4 tw-w-full tw-text-center">Get A Quote</a>
+                                </ul>
+                                <a href="/products-services/life-insurance/mortgage-protection" aria-label="Get A Final Expense quote" class="tw-bg-primary tw-text-white tw-rounded tw-py-2 tw-px-4 tw-w-full tw-text-center">Get A Quote</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>        
+            </div>
         </section-view>
 
         <section-view :view="true">
@@ -182,7 +183,7 @@
 
         <button id="scrollToTopButton" onclick="scrollToTop()" class="tw-fixed tw-text-2xl tw-mt-2 tw-outline-none" style="bottom: 100px;right: 40px;"><i class="tw-flex tw-justify-center tw-items-center fa-icon icon-default fa-angle-up fa-fw tw-text-white tw-rounded-full tw-border tw-border-primary tw-bg-blue-500 tw-border-0 hover:tw-bg-blue-400 tw-w-16 tw-h-16 tw-leading-tight tw-text-center" role="button" aria-label="Go back to the top of the page."></i></button>
 
-        @include('landing-pages.pages.footer')         
+        @include('landing-pages.pages.footer')
 
     </div>
 

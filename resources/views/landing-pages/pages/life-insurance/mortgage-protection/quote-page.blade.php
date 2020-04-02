@@ -76,7 +76,7 @@
                 "description": "The benefits of term life insurance can provide the financial security you need to help protect your family’s future. We offer life insurance quotes for coverage that fits your needs. Get a personalized life insurance assessment, using our needs analyser in minutes. Calculate your life insurance coverage today!"
             }
         ]}
-    
+
     </script>
 
     <style>
@@ -89,7 +89,7 @@
     <div id="app">
 
         @include('landing-pages.pages.topbar')
-        
+
         <section-view :view="true">
                 <div class="tw-w-full">
                     <div class="tw-w-11/12 tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-8/12 md:tw-w-11/12 lg:tw-w-8/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
@@ -111,14 +111,14 @@
         <signup :benefit-limits="benefitLimits" userid="47" :signing-up="showSignup" insurance-category="sit" ></signup>
         <quote :show="showQuote" :quote-details="quote" :items="quote.items" :can-requote="true" insurance-category="sit"></quote>
         <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}"></contact-banner>
-        
+
         <a href="#featured-tips"></a>
 
         <section-view :view="true">
-            @include('landing-pages.pages.life-insurance.mortgage-protection.featured-tips') 
-        </section-view>          
-              
-        <section-view :view="true">              
+            @include('landing-pages.pages.life-insurance.mortgage-protection.featured-tips')
+        </section-view>
+
+        <section-view :view="true">
             <div class="tw-w-full tw-py-16">
                 <div class="tw-w-full tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-11/12 md:tw-w-11/12 lg:tw-w-11/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                     <div class="tw-w-full py-4 md:tw-px-4 tw-flex tw-flex-col tw-justify-center tw-items-center tw-leading-normal">
@@ -126,12 +126,12 @@
                         <p class="tw-text-xl tw-my-3 tw-tracking-loose tw-w-full tw-font-light tw-text-left sm:tw-text-center">Mortgage protection insurance is an insurance policy that pays off or pays down your mortgage if you or another policy holder dies or becomes critically ill during the term of the mortgage. If you have a joint mortgage, both people can get mortgage protection insurance. It generally runs for the same length of time as your mortgage. So, if you take out a mortgage over 20 years, your mortgage protection insurance can also be in place for 20 years.</p>
                         <p class="tw-text-xl tw-tracking-loose tw-w-full tw-font-light tw-text-left sm:tw-text-center">Mortgage Protection Features you&rsquo;ll enjoy:</p>
                         <ul class="tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-list-disc">
-                            <li class="tw-mb-4 tw-text-md">Coverage up to $10,000,000.</li>
+                            <li class="tw-mb-4 tw-text-md">Coverage up to $400,000.</li>
                             <li class="tw-mb-4 tw-text-md">A guaranteed monthly or annual cost over the entire term of the policy, which is great when it comes to budgeting your money.</li>
                             <li class="tw-mb-4 tw-text-md">You can waive your premium if you become unemployed.</li>
                             <li class="tw-mb-4 tw-text-md">Your policy can be converted to a permanent policy with no additional underwriting guaranteed.</li>
-                            <li class="tw-mb-4 tw-text-md">No exam required on some policies up to $1,000,000.</li>
-                            <li class="tw-mb-4 tw-text-md">Return of premiums paid available on most every policy. Great for those people who want their money back if they never use the benefit.</li>
+                            <li class="tw-mb-4 tw-text-md">No exam required on some policies up to $400,000.</li>
+                            <li class="tw-mb-4 tw-text-md">Return of premiums paid available on some policies. Great for those people who want their money back if they never use the benefit.</li>
                         </ul>
                         <p class="tw-text-2xl tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-text-center">3 options to choose from:</p>
                         <div class="tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-w-full">
@@ -182,7 +182,7 @@
 
         <button id="scrollToTopButton" onclick="scrollToTop()" class="tw-fixed tw-text-2xl tw-mt-2 tw-outline-none" style="bottom: 100px;right: 40px;"><i class="tw-flex tw-justify-center tw-items-center fa-icon icon-default fa-angle-up fa-fw tw-text-white tw-rounded-full tw-border tw-border-primary tw-bg-blue-500 tw-border-0 hover:tw-bg-blue-400 tw-w-16 tw-h-16 tw-leading-tight tw-text-center" role="button" aria-label="Go back to the top of the page."></i></button>
 
-        @include('landing-pages.pages.footer')        
+        @include('landing-pages.pages.footer')
 
     </div>
 
