@@ -11,6 +11,15 @@ use App\Facades\AQLog;
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+/**
+ * @OA\Info(
+ *  description="Product User Api",
+ *  version="1.0.0",
+ *  title="AQ2E Product User Api",
+ * )
+ */
+
+
 class ProductUsersApiController extends Controller {
 
     /**
@@ -20,6 +29,60 @@ class ProductUsersApiController extends Controller {
         return true;
         return '140.82.47.226' === request()->ip();
     }
+
+    /**
+     * @OA\Post(
+     *  path="/api/user.assignUserProduct",
+     *  tags={"assignUserProduct"},
+     *  summary="Assign User a Product",
+     *  operationId="assignUserProduct",
+     *
+     *  @OA\Parameter(
+     *    name="token",
+     *    description="Authentication Token id",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Parameter(
+     *    name="username",
+     *    description="Authentication Token Password",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Parameter(
+     *    name="whmcs_email",
+     *    description="WHMCS User's email address",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Parameter(
+     *    name="whmcs_product_id",
+     *    description="WHMCS Product's id",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Response(
+     *    response=200,
+     *    description="Success",
+     *    @OA\MediaType(
+     *      mediaType="application/json"
+     *    )
+     *   )
+     *
+     * )
+     */
 
     /**
      * @param Request $request
@@ -62,6 +125,60 @@ class ProductUsersApiController extends Controller {
 
         return (new ProductUsersApiFacade())->assignUserProduct($request->all());
     }
+
+    /**
+     * @OA\Post(
+     *  path="/api/user.removeUserProduct",
+     *  tags={"removeUserProduct"},
+     *  summary="Remove User Product",
+     *  operationId="removeUserProduct",
+     *
+     *  @OA\Parameter(
+     *    name="token",
+     *    description="Authentication Token id",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Parameter(
+     *    name="username",
+     *    description="Authentication Token Password",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Parameter(
+     *    name="whmcs_email",
+     *    description="WHMCS User's email address",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Parameter(
+     *    name="whmcs_product_id",
+     *    description="WHMCS Product's id",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Response(
+     *    response=200,
+     *    description="Success",
+     *    @OA\MediaType(
+     *      mediaType="application/json"
+     *    )
+     *   )
+     *
+     * )
+     */
 
     /**
      * @param Request $request
@@ -111,6 +228,60 @@ class ProductUsersApiController extends Controller {
 
         return (new ProductUsersApiFacade())->removeUserProduct($request->all());
     }
+
+    /**
+     * @OA\Post(
+     *  path="/api/user.disableProduct",
+     *  tags={"disableUser"},
+     *  summary="Disable User Product",
+     *  operationId="disableUser",
+     *
+     *  @OA\Parameter(
+     *    name="token",
+     *    description="Authentication Token id",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Parameter(
+     *    name="username",
+     *    description="Authentication Token Password",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Parameter(
+     *    name="whmcs_email",
+     *    description="WHMCS User's email address",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Parameter(
+     *    name="whmcs_product_id",
+     *    description="WHMCS Product's id",
+     *    in="query",
+     *    required=true,
+     *    @OA\Schema(
+     *      type="string"
+     *    )
+     *  ),
+     *  @OA\Response(
+     *    response=200,
+     *    description="Success",
+     *    @OA\MediaType(
+     *      mediaType="application/json"
+     *    )
+     *   )
+     *
+     * )
+     */
 
     /**
      * @param Request $request

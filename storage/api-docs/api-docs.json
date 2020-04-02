@@ -1,0 +1,175 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "AQ2E Product User Api",
+        "description": "Product User Api",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/user.assignUserProduct": {
+            "post": {
+                "tags": [
+                    "assignUserProduct"
+                ],
+                "summary": "Assign User a Product",
+                "operationId": "assignUserProduct",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Authentication Token id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "Authentication Token Password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "whmcs_email",
+                        "in": "query",
+                        "description": "WHMCS User's email address",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "whmcs_product_id",
+                        "in": "query",
+                        "description": "WHMCS Product's id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user.removeUserProduct": {
+            "post": {
+                "tags": [
+                    "removeUserProduct"
+                ],
+                "summary": "Remove User Product",
+                "operationId": "removeUserProduct",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Authentication Token id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "Authentication Token Password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "whmcs_email",
+                        "in": "query",
+                        "description": "WHMCS User's email address",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "whmcs_product_id",
+                        "in": "query",
+                        "description": "WHMCS Product's id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user.disableProduct": {
+            "post": {
+                "tags": [
+                    "disableUser"
+                ],
+                "summary": "Disable User Product",
+                "operationId": "disableUser",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "description": "Authentication Token id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "Authentication Token Password",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "whmcs_email",
+                        "in": "query",
+                        "description": "WHMCS User's email address",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "whmcs_product_id",
+                        "in": "query",
+                        "description": "WHMCS Product's id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -12,6 +12,7 @@ use App\User;
  */
 class UserApiFacade
 {
+
     /**
      * @param $data
      * @return \Illuminate\Http\JsonResponse

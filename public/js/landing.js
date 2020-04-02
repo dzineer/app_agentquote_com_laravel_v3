@@ -41623,7 +41623,7 @@ var render = function() {
                             staticClass:
                               "dz:section-header tw-my-16 tw-mb-8 tw-text-3xl sm:tw-text-4xl"
                           },
-                          [_vm._v("What is your sex?")]
+                          [_vm._v("What is your gender?")]
                         ),
                         _vm._v(" "),
                         _c(
@@ -41773,7 +41773,7 @@ var staticRenderFns = [
       [
         _c("span", {
           staticClass:
-            "tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-grey tw-flex-no-shrink"
+            "tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-blue-800 tw-flex-no-shrink"
         }),
         _vm._v("\n\t\t\t\t\t\t\t\t\t\t\tMale\n\t\t\t\t\t\t\t\t\t\t")
       ]
@@ -41793,7 +41793,7 @@ var staticRenderFns = [
       [
         _c("span", {
           staticClass:
-            "tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-grey tw-flex-no-shrink"
+            "tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-blue-800 tw-flex-no-shrink"
         }),
         _vm._v("\n\t\t\t\t\t\t\t\t\t\t\tFemale\n\t\t\t\t\t\t\t\t\t\t")
       ]
