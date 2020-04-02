@@ -72,7 +72,7 @@
 									<div class="tw-flex tw-items-center tw-mr-4 tw-mb-4">
 										<input id="radio1" type="radio" name="gender" class="dz-input tw-hidden" value="M" @click="onGenderChange" :checked="defaultGender == 'M'" />
 										<label for="radio1" class="dz-label tw-flex tw-items-center tw-cursor-pointer tw-text-xl">
-											<span class="tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-blue-800 tw-flex-no-shrink"></span>
+											<span class="tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-primary tw-flex-no-shrink"></span>
 											Male
 										</label>
 									</div>
@@ -80,7 +80,7 @@
 									<div class="tw-flex tw-items-center tw-mr-4 tw-mb-4">
 										<input id="radio2" type="radio" name="gender" value="F" :checked="defaultGender == 'F'" @click="onGenderChange" class="dz-input tw-bg-gray-900 tw-hidden" />
 										<label for="radio2" class="dz-label tw-flex tw-items-center tw-cursor-pointer tw-text-xl">
-											<span class="tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-blue-800 tw-flex-no-shrink"></span>
+											<span class="tw-w-8 tw-h-8 tw-inline-block tw-mr-2 tw-rounded-full tw-border tw-border-primary tw-flex-no-shrink"></span>
 											Female
 										</label>
 									</div>
