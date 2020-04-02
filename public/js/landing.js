@@ -2583,6 +2583,35 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['phone'],
+  filters: {
+    formatPhone: function formatPhone() {
+      var format = /(\d{0,3})(\d{0,3})(\d{0,4})/;
+      var phoneNumber = this.props.phone;
+      var digits = phoneNumber.replace(/\D/g, '').match(format);
+      return !digits[2] ? digits[1] : '(' + digits[1] + ') ' + digits[2] + (digits[3] ? '-' + digits[3] : '');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/vuejs/components/Field.vue":
 /*!******************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/vuejs/components/Field.vue ***!
@@ -45636,6 +45665,32 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-7cfd4228\",\"hasScoped\":false,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue":
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-7cfd4228","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("p", [
+    _vm._v("\n    " + _vm._s(_vm._f("formatPhone")(this.phone)) + "\n")
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+if (false) {}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-836ae2e8\",\"hasScoped\":false,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/SignupMobileVerification.vue":
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-836ae2e8","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/SignupMobileVerification.vue ***!
@@ -62058,6 +62113,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_BrandBar__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/BrandBar */ "./resources/assets/js/vuejs/components/BrandBar.vue");
 /* harmony import */ var _components_Icon__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/Icon */ "./resources/assets/js/vuejs/components/Icon.vue");
 /* harmony import */ var _components_SectionView__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/SectionView */ "./resources/assets/js/vuejs/components/SectionView.vue");
+/* harmony import */ var _components_DisplayPhoneNumber__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/DisplayPhoneNumber */ "./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue");
 __webpack_require__(/*! ./bootstrap */ "./resources/assets/js/vuejs/bootstrap.js"); // import router from './routes';
 
 /* new Vue({
@@ -62325,6 +62381,8 @@ Vue.component('brand-bar', _components_BrandBar__WEBPACK_IMPORTED_MODULE_23__["d
 Vue.component('web-icon', _components_Icon__WEBPACK_IMPORTED_MODULE_24__["default"]);
 
 Vue.component('section-view', _components_SectionView__WEBPACK_IMPORTED_MODULE_25__["default"]);
+
+Vue.component('display-phone-number', _components_DisplayPhoneNumber__WEBPACK_IMPORTED_MODULE_26__["default"]);
 /* let socialMediaIcons = [
     {"name":"facebook", "label": "Visit our Facebook Page", "icon":"fa-facebook","link":"https://facebook.com/agentquoter2"},
     {"name":"twitter","label": "Visit our Twitter Page", "icon":"fa-twitter","link":"https://twitter.com/agentquoter2"},
@@ -63043,6 +63101,52 @@ var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer
   __vue_module_identifier__
 )
 Component.options.__file = "resources/assets/js/vuejs/components/Counter.vue"
+
+/* hot reload */
+if (false) {}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_DisplayPhoneNumber_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !babel-loader!../../../../../node_modules/vue-loader/lib/selector?type=script&index=0!./DisplayPhoneNumber.vue */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_7cfd4228_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DisplayPhoneNumber_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-7cfd4228","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!../../../../../node_modules/vue-loader/lib/selector?type=template&index=0!./DisplayPhoneNumber.vue */ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-7cfd4228\",\"hasScoped\":false,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/component-normalizer */ "./node_modules/vue-loader/lib/runtime/component-normalizer.js");
+var disposed = false
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+
+var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_DisplayPhoneNumber_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_7cfd4228_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DisplayPhoneNumber_vue__WEBPACK_IMPORTED_MODULE_1__["render"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_7cfd4228_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_DisplayPhoneNumber_vue__WEBPACK_IMPORTED_MODULE_1__["staticRenderFns"],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/vuejs/components/DisplayPhoneNumber.vue"
 
 /* hot reload */
 if (false) {}

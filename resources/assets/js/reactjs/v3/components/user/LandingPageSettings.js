@@ -739,7 +739,7 @@ class LandingPageSettings extends Component {
                                 <div className="col-md-4 p-y-4">
                                     <SelectInput
                                         name="product_category"
-                                        label="Display as default home page"
+                                        label="Market Focus choice"
                                         defaultValue={this.state.product.product_category}
                                         required
                                         options={this.pageCategoryOptions}

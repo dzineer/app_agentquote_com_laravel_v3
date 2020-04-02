@@ -165,6 +165,9 @@ Vue.component('web-icon', Icon);
 import SectionView from './components/SectionView';
 Vue.component('section-view', SectionView);
 
+import DisplayPhoneNumber from './components/DisplayPhoneNumber';
+Vue.component('display-phone-number', DisplayPhoneNumber);
+
 /* let socialMediaIcons = [
     {"name":"facebook", "label": "Visit our Facebook Page", "icon":"fa-facebook","link":"https://facebook.com/agentquoter2"},
     {"name":"twitter","label": "Visit our Twitter Page", "icon":"fa-twitter","link":"https://twitter.com/agentquoter2"},

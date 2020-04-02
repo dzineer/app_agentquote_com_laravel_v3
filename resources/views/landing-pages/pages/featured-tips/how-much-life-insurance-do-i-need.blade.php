@@ -21,7 +21,7 @@
     <div id="app">
 
         @include('landing-pages.pages.topbar')
-  
+
         <div class="tw-w-full tw-py-8 question-2">
             <div class="tw-w-full tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-11/12 md:tw-w-11/12 lg:tw-w-8/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                 <div class="tw-w-full py-4 md:tw-px-4 tw-flex tw-justify-center tw-items-center tw-flex-col sm:tw-flex-row tw-leading-normal">
@@ -50,17 +50,17 @@
 
                         <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
                             Life insurance can provide the valuable support your loved ones would need at a difficult time.
-                        </p>                        
+                        </p>
 
                         <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
                             A major life event such as getting married, having children or buying a home will significantly change your financial responsibilities.
-                        </p>                        
+                        </p>
 
                         <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
                             That’s why it is important to take each milestone in your life as an opportunity to review your life insurance and, if necessary, adjust your coverage.
-                        </p>                        
+                        </p>
                     </div>
-                    
+
                     <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-w-full tw-text-center tw-px-3 tw-self-start tw-flex-1">
                         <img src="/images/couple-using-ipad-love-62740068-square.jpg" class="tw-rounded-full tw-w-8/12" >
                         <p class="tw-w-full w-flex tw-justify-center tw-items-center tw-text-2xl md:tw-text-3xl tw-tracking-tight tw-w-full tw-font-light tw-my-4">Related articles</p>
@@ -74,15 +74,24 @@
                             <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
                                 <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">But I already have insurance...</a>
                             </li>
-                        </ul>                        
+                            <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
+                                <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">Your Family Trusts You</a>
+                            </li>
+                            <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
+                                <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">Consider Burial or Final Expense Insurance</a>
+                            </li>
+                            <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
+                                <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">What happens to my policy if I change my mortgage?</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
 
-        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}"></contact-banner>  
-        
-        @include('landing-pages.pages.footer')    
+        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}"></contact-banner>
+
+        @include('landing-pages.pages.footer')
 
 
     </div>
