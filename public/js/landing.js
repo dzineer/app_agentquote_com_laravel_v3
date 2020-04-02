@@ -7570,6 +7570,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DisplayPhoneNumber__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DisplayPhoneNumber */ "./resources/assets/js/vuejs/components/DisplayPhoneNumber.vue");
 //
 //
 //
@@ -7583,8 +7584,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['icons', 'phone'],
+  components: {
+    DisplayPhoneNumber: _DisplayPhoneNumber__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       aria: {
@@ -41974,9 +41981,12 @@ var render = function() {
             [
               _c("social-media-bar", { attrs: { icons: _vm.icons } }),
               _vm._v(" "),
-              _c("div", { attrs: { "aria-label": _vm.aria.phoneLabel } }, [
-                _vm._v(_vm._s(_vm.phone))
-              ])
+              _c(
+                "div",
+                { attrs: { "aria-label": _vm.aria.phoneLabel } },
+                [_c("display-phone-number", { attrs: { phone: "phone" } })],
+                1
+              )
             ],
             1
           )
