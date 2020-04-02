@@ -10,7 +10,7 @@
         filters: {
             formatPhone() {
                 let format = /(\d{0,3})(\d{0,3})(\d{0,4})/;
-                let phoneNumber = this.props.phone;
+                let phoneNumber = this.phone;
                 let digits = phoneNumber.replace(/\D/g, '').match(format);
                 return !digits[2] ? digits[1] : '(' + digits[1] + ') ' + digits[2] + (digits[3] ? '-' + digits[3] : '');
             }
