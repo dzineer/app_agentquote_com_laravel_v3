@@ -1,7 +1,7 @@
 <template>
-    <p>
+    <span>
         {{ phone | formatPhone }}
-    </p>
+    </span>
 </template>
 
 <script>
