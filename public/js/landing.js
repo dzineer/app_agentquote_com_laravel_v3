@@ -2601,9 +2601,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['phone'],
   filters: {
-    formatPhone: function formatPhone() {
+    formatPhone: function formatPhone(value) {
       var format = /(\d{0,3})(\d{0,3})(\d{0,4})/;
-      var phoneNumber = this.phone;
+      var phoneNumber = value;
       var digits = phoneNumber.replace(/\D/g, '').match(format);
       return !digits[2] ? digits[1] : '(' + digits[1] + ') ' + digits[2] + (digits[3] ? '-' + digits[3] : '');
     }
