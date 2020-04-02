@@ -28,7 +28,9 @@
 
                                 <ul class="tw-list-reset tw-leading-normal">
                                     <li class="hover:tw-text-blue tw-text-grey-darker">
-                                        <p class="tw-text-base tw-italic tw-mb-3 tw-self-start"><web-icon name="phone" classes="tw-inline-block fa-fw tw-mr-2 tw-text-lightGray"></web-icon>{{ $company['name'] }}</p>
+                                        <p class="tw-text-base tw-italic tw-mb-3 tw-self-start"><web-icon name="phone" classes="tw-inline-block fa-fw tw-mr-2 tw-text-lightGray"></web-icon>
+                                            <display-phone-number phone="{{ $company['phone'] }}"></display-phone-number>
+                                        </p>
                                     </li>
                                     <li class="hover:tw-text-blue tw-text-grey-darker">
                                         <p class="tw-text-base tw-italic tw-mb-3 tw-self-start"><web-icon name="envelope" classes="tw-inline-block fa-fw tw-mr-2 tw-text-lightGray"></web-icon>{{ $company['email'] }}</p>
