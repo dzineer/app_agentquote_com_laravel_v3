@@ -45691,7 +45691,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("p", [
-    _vm._v("\n    " + _vm._s(_vm._f("formatPhone")(this.phone)) + "\n")
+    _vm._v("\n    " + _vm._s(_vm._f("formatPhone")(_vm.phone)) + "\n")
   ])
 }
 var staticRenderFns = []

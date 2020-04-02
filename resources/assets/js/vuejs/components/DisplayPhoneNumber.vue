@@ -1,6 +1,6 @@
 <template>
     <p>
-        {{ this.phone | formatPhone }}
+        {{ phone | formatPhone }}
     </p>
 </template>
 
