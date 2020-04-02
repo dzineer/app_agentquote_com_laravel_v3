@@ -41984,7 +41984,7 @@ var render = function() {
               _c(
                 "div",
                 { attrs: { "aria-label": _vm.aria.phoneLabel } },
-                [_c("display-phone-number", { attrs: { phone: "phone" } })],
+                [_c("display-phone-number", { attrs: { phone: _vm.phone } })],
                 1
               )
             ],

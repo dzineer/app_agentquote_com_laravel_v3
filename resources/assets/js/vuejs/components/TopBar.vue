@@ -5,7 +5,7 @@
             <nav class="tw-flex tw-flex-row tw-items-center tw-justify-between tw-justify-center tw-w-full">
                 <social-media-bar :icons="icons"></social-media-bar>
                 <div class="" :aria-label="aria.phoneLabel" >
-                    <display-phone-number phone="phone"></display-phone-number>
+                    <display-phone-number :phone="phone"></display-phone-number>
                 </div>
             </nav>
         </div>
