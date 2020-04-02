@@ -101,7 +101,10 @@
                                 Feel confident knowing you have the coverage you need
                             </p>
                             <p class="tw-text-md tw-tracking-tight tw-my-6">
-                                Get a quote and apply online or you can speak to an available Advisor at <span class="tw-text-primary">{{ $user->profile->contact_phone }}</span>.
+                                Get a quote and apply online or you can speak to an available Advisor at
+                                <span class="tw-text-primary">
+                                    <display-phone-number phone="{{ $user->profile->contact_phone }}"></display-phone-number>
+                                </span>.
                             </p>
                         </div>
                     </div>

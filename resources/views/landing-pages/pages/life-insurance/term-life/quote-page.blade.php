@@ -76,7 +76,7 @@
                 "description": "The benefits of term life insurance can provide the financial security you need to help protect your family’s future. We offer life insurance quotes for coverage that fits your needs. Get a personalized life insurance assessment, using our needs analyser in minutes. Calculate your life insurance coverage today!"
             }
         ]}
-    
+
     </script>
 
     <style>
@@ -102,7 +102,10 @@
                                 Feel confident knowing you have the coverage you need
                             </p>
                             <p class="tw-text-md tw-tracking-tight tw-my-6">
-                                Get a quote and apply online or you can speak to an available Advisor at <span class="tw-text-primary">{{ $user->profile->contact_phone }}</span>.
+                                Get a quote and apply online or you can speak to an available Advisor at
+                                <span class="tw-text-primary">
+                                    <display-phone-number phone="{{ $user->profile->contact_phone }}"></display-phone-number>
+                                </span>.
                             </p>
                         </div>
                     </div>
@@ -112,11 +115,11 @@
         <signup :benefit-limits="benefitLimits" userid="47" :signing-up="showSignup" insurance-category="termlife" ></signup>
         <quote :show="showQuote" :quote-details="quote" :items="quote.items" :can-requote="true" insurance-category="termlife"></quote>
         <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}"></contact-banner>
-        
+
         <a href="#featured-tips"></a>
 
         <section-view :view="true">
-            @include('landing-pages.pages.life-insurance.term-life.featured-tips')       
+            @include('landing-pages.pages.life-insurance.term-life.featured-tips')
         </section-view>
 
         <section-view :view="true">
