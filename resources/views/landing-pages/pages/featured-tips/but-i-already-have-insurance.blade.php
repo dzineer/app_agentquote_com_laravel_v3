@@ -40,7 +40,7 @@
                         </p>
 
                         <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-my-4">
-                            Credit protection life insurance, such as mortgage or line of credit life insurance, is designed to pay off the full balance or a portion of the balance you owe in the event of your death. This is very valuable protection, paid directly to the financial institution you borrowed from. Your family may still need funds to cover expenses such as funeral costs, medical bills, property taxes, home improvements and maintenance and the ongoing expenses of daily living.                        
+                            Credit protection life insurance, such as mortgage or line of credit life insurance, is designed to pay off the full balance or a portion of the balance you owe in the event of your death. This is very valuable protection, paid directly to the financial institution you borrowed from. Your family may still need funds to cover expenses such as funeral costs, medical bills, property taxes, home improvements and maintenance and the ongoing expenses of daily living.
                         </p>
 
                         <p class="tw-text-2xl tw-tracking-tight tw-w-full tw-font-light tw-text-left">
@@ -48,12 +48,12 @@
                         </p>
 
                         <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-my-4">
-                            This can be an affordable way to get a modest amount of coverage – usually a small multiple of your annual salary. However, depending on your personal circumstances, it might not be enough. And, if you change employers, this insurance doesn’t automatically go with you.                        
-                        </p>                        
+                            This can be an affordable way to get a modest amount of coverage – usually a small multiple of your annual salary. However, depending on your personal circumstances, it might not be enough. And, if you change employers, this insurance doesn’t automatically go with you.
+                        </p>
 
                         <p class="tw-text-2xl tw-tracking-tight tw-w-full tw-font-light tw-text-left">
                             The advantages of having your own Life Insurance policy
-                        </p>                        
+                        </p>
 
                         <ul class="tw-my-6 tw-leading-normal tw-list-disc tw-ml-5">
                             <li class="tw-text-base tw-tracking-tight tw-w-full tw-my-4">
@@ -69,10 +69,10 @@
 
                         <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
                             Term life insurance can be an affordable way to get the additional protection you need.
-                        </p>                        
-                      
+                        </p>
+
                     </div>
-                    
+
                     <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-w-full tw-text-center tw-px-3 tw-self-start tw-flex-1">
                         <img src="/images/mixed-race-couple-looking-over-map-outside-together-happy-sites-33378252-square.jpg" class="tw-rounded-full tw-w-8/12" >
                         <p class="tw-w-full w-flex tw-justify-center tw-items-center tw-text-2xl md:tw-text-3xl tw-tracking-tight tw-w-full tw-font-light tw-my-4">Related articles</p>
@@ -86,15 +86,24 @@
                             <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
                                 <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance" target="_self">But I already have insurance...</a>
                             </li>
-                        </ul>                        
+                            <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
+                                <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">Your Family Trusts You</a>
+                            </li>
+                            <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
+                                <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">Consider Burial or Final Expense Insurance</a>
+                            </li>
+                            <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
+                                <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">What happens to my policy if I change my mortgage?</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}"></contact-banner>  
-        
-        @include('landing-pages.pages.footer')          
+        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}"></contact-banner>
+
+        @include('landing-pages.pages.footer')
 
     </div>
 

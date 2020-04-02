@@ -32,7 +32,7 @@
                         <h2 class="tw-text-2xl lg:tw-text-4xl tw-my-6 tw-font-light">Why term life insurance makes sense</h2>
 
                         <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-my-4">
-                            Developing a financial plan is a good step towards achieving your financial goals. Life insurance can strengthen your financial plan by helping to ensure that, in case you pass away unexpectedly, 
+                            Developing a financial plan is a good step towards achieving your financial goals. Life insurance can strengthen your financial plan by helping to ensure that, in case you pass away unexpectedly,
                             your loved ones will be able to maintain the lifestyle you’ve earned so they are free to pursue their dreams.
                         </p>
 
@@ -61,7 +61,7 @@
                             </li>
                         </ol>
                     </div>
-                    
+
                     <div class="tw-flex tw-justify-center tw-items-center tw-flex-col tw-w-full tw-text-center tw-px-3 tw-self-start tw-flex-1">
                         <img src="/images/portrait-young-woman-coffee-cup-against-black-wall-casual-style-clothes-112588260-square.jpg" class="tw-rounded-full tw-w-8/12" >
                         <p class="tw-w-full w-flex tw-justify-center tw-items-center tw-text-2xl md:tw-text-3xl tw-tracking-tight tw-w-full tw-font-light tw-my-4">Related articles</p>
@@ -75,15 +75,24 @@
                             <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
                                 <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">But I already have insurance...</a>
                             </li>
-                        </ul>                        
+                            <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
+                                <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">Your Family Trusts You</a>
+                            </li>
+                            <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
+                                <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">Consider Burial or Final Expense Insurance</a>
+                            </li>
+                            <li class="tw-text-sm tw-tracking-tight tw-w-full tw-font-light tw-my-1 tw-text-left">
+                                <a class="tw-text-primary tw-text-xl md:tw-text-md" href="/featured-tips/but-i-already-have-insurance#featured-tips" target="_self">What happens to my policy if I change my mortgage?</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
 
-        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}"></contact-banner>  
-        
-        @include('landing-pages.pages.footer')        
+        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}"></contact-banner>
+
+        @include('landing-pages.pages.footer')
 
 
     </div>
