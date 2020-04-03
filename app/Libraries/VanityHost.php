@@ -53,7 +53,7 @@ class VanityHost
 
         // dd($company);
 
-        // dd($data);
+        dd($template);
 
         // return view( 'landing-pages.v3.quote_modules.underwritten.index', $data );
         return view( $template, $data );
