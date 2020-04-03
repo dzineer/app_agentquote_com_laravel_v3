@@ -75,9 +75,8 @@
                         </p>
 
                         <ol class="tw-my-6 tw-leading-normal tw-list-disc tw-list-inside">
-                            <li><p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left">
-                                    If you have your own policy, then nothing really needs to be done. You and your family simply discuss the goals of your policy and the new lender. It is a good time to review your coverage to see if the policy is still meeting your goals.
-                                </p>
+                            <li class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left">
+                               If you have your own policy, then nothing really needs to be done. You and your family simply discuss the goals of your policy and the new lender. It is a good time to review your coverage to see if the policy is still meeting your goals.
                             </li>
                             <li><p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left">
                                     If you have a policy through your lender’s group arrangement, your lender will cancel the policy when you switch your mortgage lender.
