@@ -11,11 +11,11 @@
                         <a href="/featured-tips/your-family-trusts-you-consider-burial-or-final-expense-insurance#featured-tips" class="tw-cursor-pointer" aria-labelledby=="why-life-insurance-makes-sense"><div class="tw-relative tw-w-full tw-flex tw-justify-center tw-items-center tw-relative dz-product-box dz-product-box tw-my-2 md:tw-my-0">
                             <img src="/images/portrait-young-woman-coffee-cup-against-black-wall-casual-style-clothes-112588260.jpg">
                             <div class="tw-absolute tw-bg-blue-600 tw-inset-0 tw-opacity-0 product-cover tw-flex tw-flex-col tw-justify-center tw-justify-items">
-                                <p class="tw-flex tw-justify-center tw-items-center tw-text-white tw-text-xl tw-text-center tw-px-1" id="why-life-insurance-makes-sense">Your Family Trusts You, Consider Burial or Final Expense Insurance</p>
+                                <p class="tw-flex tw-justify-center tw-items-center tw-text-white tw-text-xl tw-text-center tw-px-1" id="why-life-insurance-makes-sense">Why burial insurance makes sense.</p>
                                 <p class="tw-flex tw-justify-center tw-items-center tw-text-white tw-mt-2 tw-px-6"><i class="tw-flex tw-justify-center tw-items-center fa-icon icon-default fa-angle-right fa-fw tw-text-white tw-rounded-full tw-border tw-w-12 tw-h-12 tw-leading-tight fa-2x tw-text-center"></i></p>
                             </div>
                             <div class="tw-absolute tw-inset-x-0 tw-bottom-0 tw-flex tw-justify-center tw-items-center tw-bg-white product-title">
-                                <p class="tw-p-4">Your Family Trusts You, Consider Burial or Final Expense Insurance</p>
+                                <p class="tw-p-4">Why burial insurance makes sense.</p>
                             </div>
                         </div></a>
 
