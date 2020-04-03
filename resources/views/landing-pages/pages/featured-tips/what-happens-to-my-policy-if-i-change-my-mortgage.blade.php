@@ -74,7 +74,7 @@
                             Your options depend on whether you have your own policy or a group policy through your lender.
                         </p>
 
-                        <ol class="tw-my-6 tw-leading-normal">
+                        <ol class="tw-my-6 tw-leading-normal tw-list-disc">
                             <li>
                                 <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
                                     If you have your own policy, then nothing really needs to be done. You and your family simply discuss the goals of your policy and the new lender. It is a good time to review your coverage to see if the policy is still meeting your goals.
@@ -114,7 +114,7 @@
                             Keeping the policy
                         </p>
 
-                        <ol class="tw-my-6 tw-leading-normal">
+                        <ol class="tw-my-6 tw-leading-normal tw-list-disc">
                             <li>
                                 <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
                                     If you decide to keep paying for the policy after paying off the mortgage, you will still be covered by the policy in full up until it expires.
