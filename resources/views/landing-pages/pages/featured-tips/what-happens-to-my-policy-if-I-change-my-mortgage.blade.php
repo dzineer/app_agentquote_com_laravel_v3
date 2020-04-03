@@ -166,7 +166,6 @@
 
         @include('landing-pages.pages.footer')
 
-
     </div>
 
     <script src="/js/landing.js"></script>
