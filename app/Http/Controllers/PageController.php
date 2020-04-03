@@ -91,6 +91,10 @@ class PageController extends Controller
             $user->profile
         ]); */
 
+        dd([
+            $requestedRoute
+        ]);
+
         $template = $requestedRoute['view'];
 
         $landingPageDetails = new LandingPageDetails();
