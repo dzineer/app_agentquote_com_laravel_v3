@@ -35,7 +35,7 @@
                             With the average cost of a funeral service in the United States exceeding $12,000, loved one’s are responsible to pay that or more if you don’t have a plan in place.
                         </p>
 
-                        <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left">
+                        <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
                             There may be no savings to cover this, or if there is, should you force your loved to use that money to pay for your burial? They could use that money for something else. It leaves your loved ones with a financial burden during such a difficult time.  It’s no wonder you’ve likely seen GoFundMe campaigns pop up all over social media.
                         </p>
 
@@ -43,7 +43,7 @@
                             Truth is, buying burial insurance is a cost-effective way to make sure your funeral service and any outstanding debts are taken care of and not passed on to you loved ones. However, not all burial insurance plans are created equal.
                         </p>
 
-                        <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left">
+                        <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
                             Here are the 5 examples to consider when looking into burial insurance coverage:
                         </p>
 
