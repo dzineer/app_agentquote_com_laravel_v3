@@ -12,9 +12,6 @@ use Illuminate\Support\Facades\Auth;
 class UsersController extends Controller
 {
     const PROGRAM_USER = 5;
-    use UserApi;
-
-
 
 
     /**
