@@ -41,6 +41,7 @@ class PageController extends Controller
             [ "path" => 'featured-tips/how-much-life-insurance-do-i-need', "view" => "/landing-pages/pages/featured-tips/how-much-life-insurance-do-i-need" ],
             [ "path" => 'featured-tips/but-i-already-have-insurance', "view" => "/landing-pages/pages/featured-tips/but-i-already-have-insurance" ],
             [ "path" => 'featured-tips/your-family-trusts-you-consider-burial-or-final-expense-insurance', "view" => "/landing-pages/pages/featured-tips/your-family-trusts-you-consider-burial-or-final-expense-insurance" ],
+            [ "path" => 'featured-tips/what-happens-to-my-policy-if-I-change-my-mortgage', "view" => "/landing-pages/pages/featured-tips/what-happens-to-my-policy-if-I-change-my-mortgage" ],
         ];
 
         $requestedRoute = array_filter($routes, function($route) use($requestedPath) {
