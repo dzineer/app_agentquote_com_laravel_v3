@@ -75,23 +75,19 @@
                         </p>
 
                         <ol class="tw-my-6 tw-leading-normal tw-list-disc tw-list-inside">
-                            <li>
-                                <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
+                            <li><p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left">
                                     If you have your own policy, then nothing really needs to be done. You and your family simply discuss the goals of your policy and the new lender. It is a good time to review your coverage to see if the policy is still meeting your goals.
                                 </p>
                             </li>
-                            <li>
-                                <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
+                            <li><p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left">
                                     If you have a policy through your lender’s group arrangement, your lender will cancel the policy when you switch your mortgage lender.
                                 </p>
                             </li>
-                            <li>
-                                <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
+                            <li><p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left">
                                     If you must get a new policy it may cost you more, as you will be older than when you first took out the policy. If you are not in good health, you will have to pay a higher premium, or you may not be able to get coverage at all to pay off your mortgage.
                                 </p>
                             </li>
-                            <li>
-                                <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
+                            <li><p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left">
                                     You may, however, be able to qualify for a policy to pay down your mortgage or protect your monthly payments for a given period of time. Protecting your mortgage payments will give your family time to figure out their next steps without the worry of how they’ll pay the monthly mortgage premium.
                                 </p>
                             </li>
