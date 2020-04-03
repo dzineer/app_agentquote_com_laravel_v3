@@ -91,9 +91,9 @@ class PageController extends Controller
             $user->profile
         ]); */
 
-        dd([
+/*        dd([
             $requestedRoute
-        ]);
+        ]);*/
 
         $template = $requestedRoute['view'];
 
