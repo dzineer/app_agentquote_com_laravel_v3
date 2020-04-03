@@ -65,6 +65,7 @@
                             </li>
                             <li class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-my-4 tw-font-semibold">No Exams Necessary
                                 <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">Unlike most other forms of life insurance, burial insurance does not require a physical to qualify for a competitively priced plan. Most of these policies are issued to people age 50 to 85 years old specifically designed to be simple for people to understand and easy to qualify.
+                                <p class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-my-4">
                                     Some burial insurance plans have only a few questions while others have no questions all to qualify. Regardless of which one you qualify for insist on a whole life burial plan and worries will be over protecting your family.</p>
                             </li>
                             <li class="tw-text-base tw-tracking-tight tw-w-full tw-font-light tw-my-4 tw-font-semibold">Work with a burial insurance broker
