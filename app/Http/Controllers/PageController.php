@@ -15,10 +15,10 @@ use App\Libraries\iLandingPageDetails;
 use App\Libraries\LandingPageDetails;
 
 class PageController extends Controller
-{   
+{
     // public function index( Request $request, $subomain, $customModule ) {
     public function index( Request $request ) {
-        // if is vanity subdomain or custom domain ? 
+        // if is vanity subdomain or custom domain ?
         // yes - has category ?
         // display category product service page
         // no - display default category product service page
@@ -32,7 +32,7 @@ class PageController extends Controller
         } else {
             return abort(404);
         }
-          
+
         $user = null;
         $domain = null;
 
@@ -40,6 +40,7 @@ class PageController extends Controller
             [ "path" => 'featured-tips/why-life-insurance-makes-sense', "view" => "/landing-pages/pages/featured-tips/why-life-insurance-makes-sense" ],
             [ "path" => 'featured-tips/how-much-life-insurance-do-i-need', "view" => "/landing-pages/pages/featured-tips/how-much-life-insurance-do-i-need" ],
             [ "path" => 'featured-tips/but-i-already-have-insurance', "view" => "/landing-pages/pages/featured-tips/but-i-already-have-insurance" ],
+            [ "path" => 'featured-tips/your-family-trusts-you-consider-burial-or-final-expense-insurance', "view" => "/landing-pages/pages/featured-tips/your-family-trusts-you-consider-burial-or-final-expense-insurance" ],
         ];
 
         $requestedRoute = array_filter($routes, function($route) use($requestedPath) {
@@ -80,8 +81,8 @@ class PageController extends Controller
 
         if ($gaCodeRecord) {
             $gaCode = $gaCodeRecord->data;
-        }         
- 
+        }
+
 /*          dd([
             $domain,
             $user,
