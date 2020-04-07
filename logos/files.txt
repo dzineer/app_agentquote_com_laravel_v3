@@ -1,0 +1,52 @@
+ Volume in drive C is C_DRIVE
+ Volume Serial Number is F667-3859
+
+ Directory of C:\Apache2.2\domains\banner.aq2e.com\htdocs\logos
+
+[.]
+[..]
+american-general-life-insurance.jpg
+american-national-insurance.jpg
+aq2e_mini_logo.png
+aqlogo.png
+aqlogo.psd
+axa-equitable-life-insurance.jpg
+banner-life-insurance.jpg
+cincinnati-life-insurance - Copy.jpg
+cincinnati-life-insurance.jpg
+cincinnati-life-insurance.png
+companion-life-insurance-of-ny.jpg
+files.txt
+first-metlife-investors-insurance.jpg
+genworth-life-and-annuity-insurance.jpg
+genworth-life-insurance-of-ny.jpg
+LGA_logo_colorRGB.jpg
+lincoln-benefit-life.jpg
+lincoln-life-annuity-of-new-york.jpg
+lincoln-national-life-insurance.jpg
+logo-2012-08-22.png
+metlife-investors-insurance.jpg
+metlife-investors-usa-insurance.jpg
+metropolitan-life-insurance.jpg
+north-american-for-life-and-health-insurance.jpg
+protective-life-insurance.jpg
+protective-life-insurance.png
+pruco-life-insurance-of-nj.jpg
+pruco-life-insurance.jpg
+reliastar-life-insurance-ing.jpg
+reliastar-life-insurance-of-new-york-ing.jpg
+savings-bank-life-insurance-of-ma.jpg
+security-mutual-life-insurance-of-new-york.jpg
+security-mutual-life-insurance.jpg
+symetra-life-insurance.png
+transamerica-life-insurance.jpg
+united-of-omaha-life-insurance.jpg
+united-states-life-insurance-city-of-new-york-0.jpg
+united-states-life-insurance-city-of-new-york.jpg
+united-states-life-insurance-in-the-city-of-new-york.jpg
+voya-financial.jpg
+west-coast-life-insurance.jpg
+william-penn-life-insurance-of-ny.jpg
+[_notes]
+              42 File(s)      1,378,007 bytes
+               3 Dir(s)  375,202,537,472 bytes free

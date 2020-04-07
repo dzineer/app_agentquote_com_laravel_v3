@@ -173,6 +173,8 @@ Route::get('/featured-tips/but-i-already-have-insurance', function () {
     return view('landing-page-featured-tip-3', []);
 }); */
 
+Route::get('/sms-testing', [\App\Http\Controllers\SMSTestingController::class, 'index']);
+
 Route::get('/landing-page-sections', function () {
     return view('landing-page-sections');
 });

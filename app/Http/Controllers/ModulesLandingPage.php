@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Libraries\SitQuoter;
-use App\Libraries\SiwlQuoter;
-use App\Libraries\TermlifeQuoter;
+use App\Quoters\SitQuoter;
+use App\Quoters\SiwlQuoter;
+use App\Quoters\TermlifeQuoter;
+
 use App\Models\Profile;
 use App\Models\QuoteUnverified;
 use App\User;
@@ -113,7 +114,7 @@ class ModulesLandingPage extends Controller
                 } )->values();
 
             }
-           
+
             // if we have more than one supported module then load Page Choice Module
             // else load the single custom insurance module page
 
@@ -291,7 +292,7 @@ class ModulesLandingPage extends Controller
         $toView = 'landing-page-sections';
 
         //dd($data);
-        
+
         return view( $toView, $data );
     }
 
@@ -304,7 +305,7 @@ class ModulesLandingPage extends Controller
      */
     protected function customModuleDomain( Request $request, $domain, $customModule )
     {
-        
+
         $data = [];
 
         if ( $domain ) {
@@ -576,7 +577,7 @@ class ModulesLandingPage extends Controller
         // get the user pages ... if none found then get the default pages
         if ( empty( $data['sections'] ) ) {
             $data['sections'] = CustomModules::moduleRender( 'pages_module', [ "page_id" => 2 ] );
-        }        
+        }
 
         if ($request->has('state')) {
             $data['selected_state'] = $request->has('state');
@@ -1267,11 +1268,11 @@ class ModulesLandingPage extends Controller
                 if ($fields['term'] != $term) {
                     $fields['term'] = $term;
                     $updateData = true;
-                }                
+                }
 
-                // make sure we need to update data    
+                // make sure we need to update data
                 if ($updateData) {
-                    $verifiedQuote['data'] = \serialize( $fields ); 
+                    $verifiedQuote['data'] = \serialize( $fields );
                     $verifiedQuote->save();
                 }
 
@@ -1287,66 +1288,30 @@ class ModulesLandingPage extends Controller
         $resp = $quoter->getQuote($user, $mappedFields);
 
         $data['quote_results'] = $resp;
-       
+
        // dd($data['quote_results']);
 
         if($request->has('format') && $request->input('format') === 'json') {
             /*
-        { 
+        {
             policy: "SBLI 20 Year Term Guaranteed",
             links: [ { text: 'Click Here to Match a rate to your Health Profile', 'href': '#'}, { text: 'View Policy Details', 'href': '#'} ],
-            logo: "/images/logos/banner-life-insurance.jpg", 
+            logo: "/images/logos/banner-life-insurance.jpg",
             rateClassificaions: [{ name: 'Preferred Plus', 'premium': '10.11' }, { name: 'Preferred Plus', 'premium': '10.11' }, { name: 'Preferred Plus', 'premium': '10.11' }, { name: 'Preferred Plus', 'premium': '10.11' }]
         }
             */
             $quoteResults = array_map(function($quote) use($data) {
 
                 if ($data['insure_module'] == 'underwritten') {
-                    
+
                     return [
                         "policy" => $quote['ProductName'],
                         "reference" => $quote['Reference'],
-                        "links" => [ 
+                        "links" => [
                             ['text' => 'Click Here to Match a rate to your Health Profile', 'href' => $quote['link1'], 'icon' => 'external-link' ],
                             ['text' => 'View Policy Details', 'href' => $quote['link2'], 'icon' => 'file-text-o' ],
                         ],
-                        'logo' => '/images/logos/' . $quote['BannerLogoImageURL'],
-                        'rateClassifications' => [
-                            [ 'name' => $quote['RateClassification1'], 'premium' => $quote['Rate1Adj'] ],
-                            [ 'name' => $quote['RateClassification2'], 'premium' => $quote['Rate2Adj'] ],
-                            [ 'name' => $quote['RateClassification3'], 'premium' => $quote['Rate3Adj'] ],
-                            [ 'name' => $quote['RateClassification4'], 'premium' => $quote['Rate4Adj'] ]
-                        ],
-                        "carrierDetails" => $quote['CarrierDetails']
-                    ];                    
-                    
-                } else if  ($data['insure_module'] == 'simplified_issue') {
-
-                    return [
-                        "policy" => $quote['ProductName'],
-                        "reference" => $quote['Reference'],
-                        "links" => [ 
-                            ['text' => 'Sit Link', 'href' => $quote['link1'], 'icon' => 'external-link' ],
-                        ],
-                        'logo' => '/images/logos/' . $quote['BannerLogoImageURL'],
-                        'rateClassifications' => [
-                            [ 'name' => $quote['RateClassification1'], 'premium' => $quote['Rate1Adj'] ],
-                            [ 'name' => $quote['RateClassification2'], 'premium' => $quote['Rate2Adj'] ],
-                            [ 'name' => $quote['RateClassification3'], 'premium' => $quote['Rate3Adj'] ],
-                            [ 'name' => $quote['RateClassification4'], 'premium' => $quote['Rate4Adj'] ]
-                        ],
-                        "carrierDetails" => $quote['CarrierDetails']
-                    ];                    
-
-                } else if  ($data['insure_module'] == 'final_expense') {
-
-                    return [
-                        "policy" => $quote['ProductName'],
-                        "reference" => $quote['Reference'],
-                        "links" => [ 
-                            ['text' => 'Fe Link', 'href' => $quote['link1'], 'icon' => 'external-link' ],
-                        ],
-                        'logo' => '/images/logos/' . $quote['BannerLogoImageURL'],
+                        'logo' => env('AWS_S3_CDN') . '/images/logos/' . $quote['BannerLogoImageURL'],
                         'rateClassifications' => [
                             [ 'name' => $quote['RateClassification1'], 'premium' => $quote['Rate1Adj'] ],
                             [ 'name' => $quote['RateClassification2'], 'premium' => $quote['Rate2Adj'] ],
@@ -1356,15 +1321,51 @@ class ModulesLandingPage extends Controller
                         "carrierDetails" => $quote['CarrierDetails']
                     ];
 
-                }                
-                
+                } else if  ($data['insure_module'] == 'simplified_issue') {
+
+                    return [
+                        "policy" => $quote['ProductName'],
+                        "reference" => $quote['Reference'],
+                        "links" => [
+                            ['text' => 'Sit Link', 'href' => $quote['link1'], 'icon' => 'external-link' ],
+                        ],
+                        'logo' => env('AWS_S3_CDN') . '/images/logos/' . $quote['BannerLogoImageURL'],
+                        'rateClassifications' => [
+                            [ 'name' => $quote['RateClassification1'], 'premium' => $quote['Rate1Adj'] ],
+                            [ 'name' => $quote['RateClassification2'], 'premium' => $quote['Rate2Adj'] ],
+                            [ 'name' => $quote['RateClassification3'], 'premium' => $quote['Rate3Adj'] ],
+                            [ 'name' => $quote['RateClassification4'], 'premium' => $quote['Rate4Adj'] ]
+                        ],
+                        "carrierDetails" => $quote['CarrierDetails']
+                    ];
+
+                } else if  ($data['insure_module'] == 'final_expense') {
+
+                    return [
+                        "policy" => $quote['ProductName'],
+                        "reference" => $quote['Reference'],
+                        "links" => [
+                            ['text' => 'Fe Link', 'href' => $quote['link1'], 'icon' => 'external-link' ],
+                        ],
+                        'logo' => env('AWS_S3_CDN') . '/images/logos/' . $quote['BannerLogoImageURL'],
+                        'rateClassifications' => [
+                            [ 'name' => $quote['RateClassification1'], 'premium' => $quote['Rate1Adj'] ],
+                            [ 'name' => $quote['RateClassification2'], 'premium' => $quote['Rate2Adj'] ],
+                            [ 'name' => $quote['RateClassification3'], 'premium' => $quote['Rate3Adj'] ],
+                            [ 'name' => $quote['RateClassification4'], 'premium' => $quote['Rate4Adj'] ]
+                        ],
+                        "carrierDetails" => $quote['CarrierDetails']
+                    ];
+
+                }
+
 
             }, $data['quote_results'] );
 
-            return response()->json([ 
-                "success" => true, 
-                "quote" => [ "items" =>$quoteResults ], 
-                "count" => count($quoteResults) 
+            return response()->json([
+                "success" => true,
+                "quote" => [ "items" =>$quoteResults ],
+                "count" => count($quoteResults)
             ]);
         }
 
@@ -1515,7 +1516,7 @@ class ModulesLandingPage extends Controller
         $data['rel_path'] = $rel_path;
 
         // return 'landing-pages.v4.quote_modules.' . $data['insure_module'] . '.quote.index-quote-results';
-        
+
         $toView = 'landing-page-sections';
         return view($toView, $data);
 

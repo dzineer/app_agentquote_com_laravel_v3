@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Actions\NewQuoteAction;
 use App\Blueprints\QuoteBluePrint;
 use App\Events\QuoteCreated;
-use App\Libraries\SitQuoter;
-use App\Libraries\SiwlQuoter;
-use App\Libraries\TermlifeQuoter;
+
+use App\Quoters\SitQuoter;
+use App\Quoters\SiwlQuoter;
+use App\Quoters\TermlifeQuoter;
+
 use App\Models\Affiliate;
 use App\Models\AffiliateAd;
 use App\Models\Microsite;
