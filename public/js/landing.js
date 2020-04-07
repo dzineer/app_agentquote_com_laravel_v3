@@ -42725,9 +42725,10 @@ var render = function() {
                             {
                               name: "show",
                               rawName: "v-show",
-                              value: _vm.carrierDetails.addressHeader !== null,
+                              value:
+                                _vm.carrierDetails.addressHeader !== "NULL",
                               expression:
-                                "carrierDetails.addressHeader !== null"
+                                "carrierDetails.addressHeader !== 'NULL'"
                             }
                           ],
                           staticClass: "tw-py-2"
