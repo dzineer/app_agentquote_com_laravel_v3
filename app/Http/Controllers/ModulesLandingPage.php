@@ -1311,7 +1311,7 @@ class ModulesLandingPage extends Controller
                             ['text' => 'Click Here to Match a rate to your Health Profile', 'href' => $quote['link1'], 'icon' => 'external-link' ],
                             ['text' => 'View Policy Details', 'href' => $quote['link2'], 'icon' => 'file-text-o' ],
                         ],
-                        'logo' => env('AWS_S3_CDN') . '/images/logos/' . $quote['BannerLogoImageURL'],
+                        'logo' => env('AWS_S3_CDN') . '/logos/' . $quote['BannerLogoImageURL'],
                         'rateClassifications' => [
                             [ 'name' => $quote['RateClassification1'], 'premium' => $quote['Rate1Adj'] ],
                             [ 'name' => $quote['RateClassification2'], 'premium' => $quote['Rate2Adj'] ],
@@ -1329,7 +1329,7 @@ class ModulesLandingPage extends Controller
                         "links" => [
                             ['text' => 'Sit Link', 'href' => $quote['link1'], 'icon' => 'external-link' ],
                         ],
-                        'logo' => env('AWS_S3_CDN') . '/images/logos/' . $quote['BannerLogoImageURL'],
+                        'logo' => env('AWS_S3_CDN') . '/logos/' . $quote['BannerLogoImageURL'],
                         'rateClassifications' => [
                             [ 'name' => $quote['RateClassification1'], 'premium' => $quote['Rate1Adj'] ],
                             [ 'name' => $quote['RateClassification2'], 'premium' => $quote['Rate2Adj'] ],
@@ -1347,7 +1347,7 @@ class ModulesLandingPage extends Controller
                         "links" => [
                             ['text' => 'Fe Link', 'href' => $quote['link1'], 'icon' => 'external-link' ],
                         ],
-                        'logo' => env('AWS_S3_CDN') . '/images/logos/' . $quote['BannerLogoImageURL'],
+                        'logo' => env('AWS_S3_CDN') . '/logos/' . $quote['BannerLogoImageURL'],
                         'rateClassifications' => [
                             [ 'name' => $quote['RateClassification1'], 'premium' => $quote['Rate1Adj'] ],
                             [ 'name' => $quote['RateClassification2'], 'premium' => $quote['Rate2Adj'] ],

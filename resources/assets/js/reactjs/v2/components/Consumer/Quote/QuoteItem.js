@@ -77,7 +77,7 @@ class QuoteItem extends Component {
     }
 
     render() {
-        const image_base_url = '/images/logos/';
+        const image_base_url = '/logos/';
         const styles = {
             left: {
 
