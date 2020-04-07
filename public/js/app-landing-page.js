@@ -78568,7 +78568,7 @@ var QuoteItem = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var image_base_url = '/images/logos/';
+      var image_base_url = 'https://aq-cdn.s3-us-west-1.amazonaws.com' + '/images/logos/';
       var styles = {
         left: {},
         right: {},

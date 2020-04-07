@@ -77,7 +77,7 @@ class QuoteItem extends Component {
     }
 
     render() {
-        const image_base_url = '/images/logos/';
+        const image_base_url = 'https://aq-cdn.s3-us-west-1.amazonaws.com' + '/images/logos/';
         const styles = {
             left: {
 
