@@ -7458,6 +7458,7 @@ __webpack_require__.r(__webpack_exports__);
         target: '_blank'
       };
     });
+    console.log(this.socialMediaIcons);
   }
 });
 
