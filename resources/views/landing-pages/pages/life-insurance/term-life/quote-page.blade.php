@@ -127,17 +127,17 @@
                     <div class="tw-w-full tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-11/12 md:tw-w-11/12 lg:tw-w-11/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                         <div class="tw-w-full py-4 md:tw-px-4 tw-flex tw-flex-col tw-justify-center tw-items-center tw-leading-normal">
                             <p class="tw-text-3xl xl:tw-text-3xl tw-my-6 tw-font-light tw-tracking-tight">
-                                The Term Life Insurance that's right for you
+                                The Term Life Insurance Plan that&#39;s right for you
                             </p>
                             <p class="tw-text-xl tw-tracking-loose tw-w-full tw-font-light tw-text-left sm:tw-text-center">
-                                Term Life Insurance provides affordable coverage for 10 years, 20 years or for life depending on your needs. For example, a 35 year-old non-smoking female can get $400,000 of coverage for as low as $20.00 per month1. Whichever Term Life Insurance plan you choose, enjoy features like:
+                                The fact is, Term Life insurance is basic, affordable coverage designed to cover various stages of life from 10, 20, 30 or 40 years depending on your needs. For example, a 35 year-old non-smoking male in excellent health can get $500,000 of coverage for 10 years, for less than $19.00 per month. Whichever Term Life Insurance plan you choose, enjoy features like:
                             </p>
                             <ul class="tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-list-disc">
                                 <li class="tw-mb-4 tw-text-md">Coverage up to $10 million.</li>
-                                <li class="tw-mb-4 tw-text-md">A guaranteed monthly or annual cost over the entire length of the term<sup>2</sup>, which is great when it comes to budgeting your money.                        </li>
-                                <li class="tw-mb-4 tw-text-md">Automatic renewal for 10 and 20 year plans at the end of the term without medical questions or exams until you turn 80, at which point your coverage ends<sup>3</sup>.</li>
-                                <li class="tw-mb-4 tw-text-md">The option to convert 10 or 20 year plans to permanent coverage any time before age 69.</li>
-                                <li class="tw-mb-4 tw-text-md">Preferred rates available for 10 and 20 year plans<sup>4</sup>.</li>
+                                <li class="tw-mb-4 tw-text-md">A guaranteed monthly or annual cost over the entire length of the term, which is great when it comes to budgeting your money.</li>
+                                <li class="tw-mb-4 tw-text-md">Several optional features available such as: Waiver of your monthly premium due to a disability.</li>
+                                <li class="tw-mb-4 tw-text-md">The option to convert some or all of your plan to permanent coverage any time before age 70.</li>
+                                <li class="tw-mb-4 tw-text-md">Critical Illnesses coverage: which provides an accelerated benefit for life threatening cancer, heart attack, stroke, and more.</li>
                             </ul>
                             <p class="tw-text-2xl tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-text-center">
                                 3 options to choose from:
