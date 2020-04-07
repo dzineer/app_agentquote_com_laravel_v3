@@ -18,13 +18,14 @@
        },
        mounted() {
            debugger;
+           console.log(this.icons);
            this.socialMediaIcons = this.icons.map( socialMedia => {
-               return { 
-                   className:  "icon " + socialMedia.icon + " icon-default", 
+               return {
+                   className:  "icon " + socialMedia.icon + " icon-default",
                    label: socialMedia.name,
                    href: socialMedia.link, target: '_blank'}
            });
-           
+
        }
    }
 </script>

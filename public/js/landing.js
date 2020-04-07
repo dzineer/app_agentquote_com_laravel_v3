@@ -7449,6 +7449,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     debugger;
+    console.log(this.icons);
     this.socialMediaIcons = this.icons.map(function (socialMedia) {
       return {
         className: "icon " + socialMedia.icon + " icon-default",
