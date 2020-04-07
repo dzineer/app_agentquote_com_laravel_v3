@@ -143,7 +143,7 @@ class VanityHost
         }
 
         if ( $profile->instagram_link && strlen( $profile->instagram_link ) ) {
-            $socialMedia[] = [ 'name' => 'instagram', 'icon' => 'fa-instagram_link', 'link' => $profile->instagram_link ];
+            $socialMedia[] = [ 'name' => 'instagram', 'icon' => 'fa-instagram', 'link' => $profile->instagram_link ];
         }
 
         return json_encode( $socialMedia );
