@@ -45,6 +45,7 @@
                             <p class="tw-py-2" v-html="carrierDetails.website"></p>
                             <p class="tw-py-2" v-html="carrierDetails.addressTrailer"></p>
                             <p class="tw-py-2">Policy Form #: {{ carrierDetails.reference }}</p>
+                            <p class="tw-py-2" v-show="carrierDetails.addressHeader !== null">{{ carrierDetails.addressHeader }}</p>
                             <button v-show="!forceShowPolicy" class="tw-my-4 tw-py-4 tw-px-6 tw-bg-primary tw-text-white tw-rounded" @click="togglePolicyDetails">Close to return to rate</button>
                         </div>
                     </div>

@@ -5016,6 +5016,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -42716,6 +42717,23 @@ var render = function() {
                             _vm._s(_vm.carrierDetails.reference)
                         )
                       ]),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.carrierDetails.addressHeader !== null,
+                              expression:
+                                "carrierDetails.addressHeader !== null"
+                            }
+                          ],
+                          staticClass: "tw-py-2"
+                        },
+                        [_vm._v(_vm._s(_vm.carrierDetails.addressHeader))]
+                      ),
                       _vm._v(" "),
                       _c(
                         "button",
