@@ -13,7 +13,7 @@
                                         </a>
                                     </li>
                                     <li class="">
-                                       As your insurance advisor, we help you make smart decisions—protecting you from the unexpected &amp; planning for the predictable by offering high quality insurance products &amp; services to meet your goals and budget. We&#39;ll help you understand every step in the process, so you realize your dreams while safeguarding your finances.
+                                        As your insurance advisor, we help you make smart decisions by protecting you from the unexpected. We offer high quality insurance products &amp; services to meet your goals and budget. We&#39;ll help you understand every step in the process, so you realize your dreams while safeguarding your finances.
                                     </li>
                                 </ul>
                             </div>
