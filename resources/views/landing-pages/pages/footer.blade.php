@@ -52,7 +52,7 @@
 
         <page-section frame-classes="tw-justify-around tw-borderr tw-roundedr tw-py-2 tw-px-2 tw-flex-wrapr" classes="tw-w-full tw-py-1" container="container-mark tw-py-1 tw-bg-black tw-text-lightGray tw-my-0" section-classes="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
             <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
-                <div class="tw-flex tw-flex-row tw-w-full tw-justify-center tw-items-center tw-px-20">
+                <div class="tw-flex tw-flex-row tw-w-full tw-justify-center tw-items-center tw-px-20 xs:tw-px-0">
                     <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
                         <p class="tw-text-base tw-my-1">
                             © <span class="copyright-year">2020</span> <a href="/" role="link" aria-label="Go to home page"><span class="tw-text-primary">Agent Quote Inc.</span></a> <a href="/privacy" aria-label="View our privacy & policy details">Privacy Policy</a>
