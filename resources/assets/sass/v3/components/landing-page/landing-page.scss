@@ -249,18 +249,22 @@ $main_blue: #3B92FF;
 }
 
 @media screen AND (max-width: 320px) {
-    .xs\:tw-mx-0 {
+    .max-xs\:tw-mx-0 {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
 
-    .xs\:tw-px-0 {
+    .max-xs\:tw-px-0 {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    .xs\:tw-w-full {
+    .max-xs\:tw-w-full {
         width: 100% !important;
+    }
+
+    .max-xs\:tw-flex-col {
+        flex-direction: column;
     }
 }
 
