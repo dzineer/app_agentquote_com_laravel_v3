@@ -12,7 +12,7 @@
             </div>
             <div slot="right">
                 @if($book_appointment->hasLink)
-                <div class="tw-flex tw-flex-col max-xs:tw-mt-6 max-xs:tw-mb-2">
+                <div class="tw-flex tw-flex-col">
                     {{--<p class="tw-text-primary tw-uppercase tw-tracking-widest tw-text-sm">by appointment/mon-sat</p>--}}
                     <a href="{{ $book_appointment->link }}" target="_blank" class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-py-3 tw-px-4 tw-rounded focus:tw-outline-none focus:tw-shadow-outline tw-capitalize tw-text-center">
                         book an appointment
