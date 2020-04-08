@@ -40368,7 +40368,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "tw-flex tw-w-full tw-justify-between tw-items-center"
+                "tw-flex xs:tw-flex-col tw-w-full tw-justify-between tw-items-center"
             },
             [_vm._t("left"), _vm._v(" "), _vm._t("right")],
             2
