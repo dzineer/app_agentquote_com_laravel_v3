@@ -22,12 +22,19 @@ export default {
 </script>
 
 <style scoped>
+
+    .brand-logo {
+        max-width: 80% !important;
+        /*
+                    margin-top: 1.8rem;
+        */
+    }
+
+/*
     @media screen AND (max-width: 320px) {
         .brand-logo {
             max-width: 80% !important;
-/*
-            margin-top: 1.8rem;
-*/
         }
     }
+*/
 </style>
