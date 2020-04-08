@@ -1,6 +1,6 @@
         <div class="tw-bg-darkGray tw-w-full tw-text-lightGray">
 
-                <div class="tw-w-9/12 tw-p-8 tw-mx-auto">
+                <div class="tw-w-9/12 tw-p-8 tw-mx-auto xs:tw-w-full">
                     <div class="sm:tw-flex tw-justify-between tw-mb-4">
 
                         <div class="sm:tw-w-1/2 tw-mr-0 sm:tw-mr-8 tw-h-auto">
