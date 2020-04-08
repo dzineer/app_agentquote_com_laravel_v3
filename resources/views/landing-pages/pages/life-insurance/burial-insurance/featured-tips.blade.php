@@ -2,7 +2,7 @@
             <div class="tw-w-full tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-11/12 md:tw-w-11/12 lg:tw-w-11/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                 <div class="tw-w-full py-4 md:tw-px-4 tw-flex tw-flex-col tw-justify-center tw-items-center tw-leading-normal">
 
-                    <p id="featured-tips" class="tw-text-2xl xl:tw-text-3xl tw-my-6 tw-font-light tw-tracking-tight tw-font-semibold"  aria-label="Three Features Below">
+                    <p id="featured-tips" class="tw-text-2xl xl:tw-text-3xl tw-my-6 tw-font-light tw-tracking-tight tw-font-semibold tw-bg-primary"  aria-label="Three Features Below">
                         Featured Tips
                     </p>
 

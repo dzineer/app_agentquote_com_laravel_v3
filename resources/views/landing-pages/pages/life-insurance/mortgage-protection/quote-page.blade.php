@@ -125,7 +125,7 @@
             <div class="tw-w-full tw-py-16 max-xs:tw-py-0">
                 <div class="tw-w-full tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-11/12 md:tw-w-11/12 lg:tw-w-11/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                     <div class="tw-w-full py-4 md:tw-px-4 tw-flex tw-flex-col tw-justify-center tw-items-center tw-leading-normal">
-                        <p class="tw-text-3xl xl:tw-text-3xl tw-my-6 tw-font-light tw-tracking-tight">The Mortgage Protection Plan that's right for you</p>
+                        <p class="tw-text-3xl xl:tw-text-3xl tw-my-6 tw-font-light tw-tracking-tight tw-bg-primary">The Mortgage Protection Plan that's right for you</p>
                         <p class="tw-text-xl tw-my-3 tw-tracking-loose tw-w-full tw-font-light tw-text-left sm:tw-text-center">Mortgage protection insurance is an insurance policy that pays off or pays down your mortgage if you or another policy holder dies or becomes critically ill during the term of the mortgage. If you have a joint mortgage, both people can get mortgage protection insurance. It generally runs for the same length of time as your mortgage. So, if you take out a mortgage over 20 years, your mortgage protection insurance can also be in place for 20 years.</p>
                         <p class="tw-text-xl tw-tracking-loose tw-w-full tw-font-light tw-text-left sm:tw-text-center">Mortgage Protection Features you&rsquo;ll enjoy:</p>
                         <ul class="tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-list-disc">
