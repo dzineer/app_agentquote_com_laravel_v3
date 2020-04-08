@@ -122,7 +122,7 @@
         </section-view>
 
         <section-view :view="true">
-            <div class="tw-w-full tw-py-16">
+            <div class="tw-w-full tw-py-16 xs:tw-py-0">
                 <div class="tw-w-full tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-11/12 md:tw-w-11/12 lg:tw-w-11/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                     <div class="tw-w-full py-4 md:tw-px-4 tw-flex tw-flex-col tw-justify-center tw-items-center tw-leading-normal">
                         <p class="tw-text-3xl xl:tw-text-3xl tw-my-6 tw-font-light tw-tracking-tight">The Mortgage Protection Plan that's right for you</p>
