@@ -180,10 +180,10 @@ $main_blue: #3B92FF;
         max-width: 200px;
     }
     @include padding-modifiers('dz', 500);
-    @include margin-modifiers('dz', 500);  
+    @include margin-modifiers('dz', 500);
 
     @include padding-modifiers-bem('dz', 500);
-    @include margin-modifiers-bem('dz', 500);      
+    @include margin-modifiers-bem('dz', 500);
 }
 
 @media screen and (min-width: 680px) {
@@ -194,10 +194,10 @@ $main_blue: #3B92FF;
         max-width: 200px;
     }
     @include padding-modifiers('dz', 500);
-    @include margin-modifiers('dz', 500);    
+    @include margin-modifiers('dz', 500);
 
     @include padding-modifiers-bem('dz', 500);
-    @include margin-modifiers-bem('dz', 500);    
+    @include margin-modifiers-bem('dz', 500);
 }
 
 @media screen and (min-width: 580px) {
@@ -209,10 +209,10 @@ $main_blue: #3B92FF;
         max-width: 200px;
     }
     @include padding-modifiers('dz', 500);
-    @include margin-modifiers('dz', 500);    
+    @include margin-modifiers('dz', 500);
 
     @include padding-modifiers-bem('dz', 500);
-    @include margin-modifiers-bem('dz', 500);    
+    @include margin-modifiers-bem('dz', 500);
 }
 
 @media screen and (min-width: 420px) {
@@ -223,10 +223,10 @@ $main_blue: #3B92FF;
         width: 100% !important;
     }
     @include padding-modifiers('dz', 500);
-    @include margin-modifiers('dz', 500);    
+    @include margin-modifiers('dz', 500);
 
     @include padding-modifiers-bem('dz', 500);
-    @include margin-modifiers-bem('dz', 500);    
+    @include margin-modifiers-bem('dz', 500);
 }
 @media screen and (min-width: 321px) {
     .brand-logo {
@@ -236,10 +236,10 @@ $main_blue: #3B92FF;
         max-width: 200px;
     }
     @include padding-modifiers('dz', 500);
-    @include margin-modifiers('dz', 500);    
+    @include margin-modifiers('dz', 500);
 
     @include padding-modifiers-bem('dz', 500);
-    @include margin-modifiers-bem('dz', 500);    
+    @include margin-modifiers-bem('dz', 500);
 }
 
 @media screen AND (max-width: 1024px) {
@@ -247,6 +247,23 @@ $main_blue: #3B92FF;
         font-size: 14px;
     }
 }
+
+@media screen AND (max-width: 320px) {
+    .xs\:tw-mx-0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .xs\:tw-px-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .xs\:tw-w-full {
+        width: 100% !important;
+    }
+}
+
 
 @media screen AND (max-width: 640px) {
     html, body {
@@ -262,7 +279,7 @@ $main_blue: #3B92FF;
         line-height: 1;
     }
 
-    
+
     .quote__field {
         line-height: 1;
     }
@@ -291,7 +308,7 @@ input[type='radio'].dz-input + label.dz-label span {
 input[type='radio'].dz-input + label.dz-label span:hover,
 input[type='radio'].dz-input + label.dz-label:hover span{
  // transform: scale(1.2);
-} 
+}
 
 input[type='radio']:checked + label.dz-label span {
   background-color: #3490DC; //bg-blue
