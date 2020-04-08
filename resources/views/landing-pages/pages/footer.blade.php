@@ -50,7 +50,7 @@
 
         </div>
 
-        <page-section frame-classes="tw-justify-around tw-borderr tw-roundedr tw-py-2 tw-px-2 tw-flex-wrapr" classes="tw-w-full tw-py-1" container="container-mark tw-py-1 tw-bg-black tw-text-lightGray tw-my-0" section-classes="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
+        <page-section frame-classes="tw-justify-around tw-borderr tw-roundedr tw-py-2 tw-px-2 tw-flex-wrapr" classes="tw-flex xs:tw-w-full tw-py-1" container="container-mark tw-py-1 tw-bg-black tw-text-lightGray tw-my-0" section-classes="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
             <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
                 <div class="tw-flex tw-flex-row tw-w-full tw-justify-center tw-items-center tw-px-20 xs:tw-px-0">
                     <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
