@@ -93,7 +93,7 @@
 
         <section-view :view="true">
                 <div class="tw-w-full">
-                    <div class="tw-w-11/12 tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-8/12 md:tw-w-11/12 lg:tw-w-8/12 xs:tw-w-full tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
+                    <div class="tw-w-11/12 tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-8/12 md:tw-w-11/12 lg:tw-w-8/12 max-xs:tw-w-full tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                         <div class="tw-w-full md:tw-w-1/2 tw-flex tw-flex-col tw-justify-center tw-items-center">
                             <img src="/images/134_1091_hro_3277-3.jpg" alt="Girl playing with her mother" class="tw-self-start">
                         </div>
