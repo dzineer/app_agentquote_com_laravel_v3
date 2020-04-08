@@ -1,7 +1,7 @@
         <div class="tw-w-full tw-py-16 tw-bg-gray-300">
             <div class="tw-w-full tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-11/12 md:tw-w-11/12 lg:tw-w-11/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                 <div class="tw-w-full py-4 md:tw-px-4 tw-flex tw-flex-col tw-justify-center tw-items-center">
-                    <p class="tw-text-2xl xl:tw-text-2xl tw-mb-8 tw-font-light tw-tracking-tight">
+                    <p class="tw-text-2xl xl:tw-text-2xl tw-mb-8 tw-font-light tw-tracking-tight tw-font-semibold">
                         Ready to get Term Life Insurance? We can help.
                     </p>
 
@@ -9,17 +9,17 @@
                         <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-w-full">
                             <img alt="" class="" src="/images/step3.png" style="height: 180px; width: 180px;">
                             <p class="tw-text-xl tw-my-8 tw-font-light tw-tracking-tight">Figure out how much coverage you need and get a quote</p>
-                            
+
                             <img alt="" class="" src="/images/step1.png" style="height: 180px; width: 180px;">
                             <p class="tw-text-xl tw-my-8 tw-font-light tw-tracking-tight">Get A Quote in two minutes or less</p>
-                            
+
                             <img alt="" class="" src="/images/step2.png" style="height: 180px; width: 180px;">
                             <p class="tw-text-xl tw-my-8 tw-font-light tw-tracking-tight">Choose the rate that matches you</p>
                         </div>
                     </div>
 
                     <div class="tw-hidden md:tw-flex tw-text-base tw-w-10/12">
-                       
+
                         <table class="tw-w-full">
                             <tbody>
                                 <tr>
