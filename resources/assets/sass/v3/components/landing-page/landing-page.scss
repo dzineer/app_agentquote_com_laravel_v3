@@ -279,9 +279,18 @@ $main_blue: #3B92FF;
         width: 100% !important;
     }
 
+    .max-xs\:tw-justify-between {
+        justify-content: space-between;
+    }
+
+    .max-xs\:tw-flex {
+        display: flex;
+    }
+
     .max-xs\:tw-flex-col {
         flex-direction: column;
     }
+
 }
 
 

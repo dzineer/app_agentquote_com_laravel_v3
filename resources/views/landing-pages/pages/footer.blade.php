@@ -1,6 +1,6 @@
         <div class="tw-bg-darkGray tw-w-full tw-text-lightGray">
 
-                <div class="tw-w-9/12 tw-p-8 tw-mx-auto xs:tw-w-full">
+                <div class="tw-w-9/12 tw-p-8 tw-mx-auto max-xs:tw-w-full">
                     <div class="sm:tw-flex tw-justify-between tw-mb-4">
 
                         <div class="sm:tw-w-1/2 tw-mr-0 sm:tw-mr-8 tw-h-auto">
@@ -50,11 +50,11 @@
 
         </div>
 
-        <page-section frame-classes="tw-justify-around tw-py-2 tw-px-2" classes="tw-flex xs:tw-w-full tw-py-1" container="container-mark tw-py-1 tw-bg-black tw-text-lightGray tw-my-0" section-classes="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
+        <page-section frame-classes="tw-justify-around tw-py-2 tw-px-2" classes="tw-flex max-xs:tw-w-full tw-py-1" container="container-mark tw-py-1 tw-bg-black tw-text-lightGray tw-my-0" section-classes="dz:section tw-flex tw-justify-center tw-items-center tw-w-full sm:tw-w-10/12 tw-mx-auto">
             <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
-                <div class="tw-flex tw-flex-row tw-w-full tw-justify-center tw-items-center tw-px-20 xs:tw-px-0">
+                <div class="tw-flex tw-flex-row tw-w-full tw-justify-center tw-items-center tw-px-20 max-xs:tw-px-0">
                     <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
-                        <p class="xs:tw-flex xs:tw-justify-between tw-text-base tw-my-1 xs:tw-w-full">
+                        <p class="max-xs:tw-flex max-xs:tw-justify-between tw-text-base tw-my-1 max-xs:tw-w-full">
                             <span>© <span class="copyright-year">2020</span> <a href="/" role="link" aria-label="Go to home page"><span class="tw-text-primary">Agent Quote Inc.</span></a></span>
                             <span><a href="/privacy" aria-label="View our privacy & policy details">Privacy Policy</a></span>
                         </p>

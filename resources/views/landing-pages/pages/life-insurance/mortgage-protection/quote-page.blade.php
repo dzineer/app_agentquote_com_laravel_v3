@@ -92,7 +92,7 @@
 
         <section-view :view="true">
                 <div class="tw-w-full">
-                    <div class="tw-w-11/12 tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-8/12 md:tw-w-11/12 lg:tw-w-8/12 xs:tw-w-full tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
+                    <div class="tw-w-11/12 tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-8/12 md:tw-w-11/12 lg:tw-w-8/12 max-xs:tw-w-full tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                         <div class="tw-w-full md:tw-w-1/2 tw-flex tw-flex-col tw-justify-center tw-items-center">
                             <img src="/images/134_1091_hro_3277-3.jpg" alt="Girl playing with her mother" class="tw-self-start">
                         </div>
@@ -122,7 +122,7 @@
         </section-view>
 
         <section-view :view="true">
-            <div class="tw-w-full tw-py-16 xs:tw-py-0">
+            <div class="tw-w-full tw-py-16 max-xs:tw-py-0">
                 <div class="tw-w-full tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-11/12 md:tw-w-11/12 lg:tw-w-11/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                     <div class="tw-w-full py-4 md:tw-px-4 tw-flex tw-flex-col tw-justify-center tw-items-center tw-leading-normal">
                         <p class="tw-text-3xl xl:tw-text-3xl tw-my-6 tw-font-light tw-tracking-tight">The Mortgage Protection Plan that's right for you</p>
@@ -136,9 +136,9 @@
                             <li class="tw-mb-4 tw-text-md">No exam required on some policies up to $400,000.</li>
                             <li class="tw-mb-4 tw-text-md">Return of premiums paid available on some policies. Great for those people who want their money back if they never use the benefit.</li>
                         </ul>
-                        <p class="tw-text-2xl tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-text-center xs:tw-my-0">3 options to choose from:</p>
+                        <p class="tw-text-2xl tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-text-center max-xs:tw-my-0">3 options to choose from:</p>
                         <div class="tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-w-full">
-                            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-px-10 xs:tw-px-0 tw-border-0 md:tw-border-r tw-py-5 tw-flex-1">
+                            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-px-10 max-xs:tw-px-0 tw-border-0 md:tw-border-r tw-py-5 tw-flex-1">
                                 <h3 class="tw-text-xl tw-my-2 tw-font-semibold tw-tracking-tight">Term Life</h3>
                                 <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left">Term insurance provides your family with financial security covering you for a term of one or more years and generally offers the largest insurance protection for your premium dollar.</p>
                                 <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-mt-4">Term Life could be right for you if:</p>
@@ -150,7 +150,7 @@
                                     <li class="tw-mb-4 tw-text-md">Make Life More Comfortable for Your Loved Ones</li>
                                 </ul><a href="/products-services/life-insurance/term-life" aria-label="Get A Term life quote" class="tw-bg-primary tw-text-white tw-rounded tw-py-2 tw-px-4 tw-w-full tw-text-center">Get A Quote</a>
                             </div>
-                            <div class="tw-flex tw-flex-col tw-justify-start tw-items-center tw-text-left tw-px-12 xs:tw-px-0 tw-border-0 md:tw-border-r tw-py-5 tw-flex-1">
+                            <div class="tw-flex tw-flex-col tw-justify-start tw-items-center tw-text-left tw-px-12 max-xs:tw-px-0 tw-border-0 md:tw-border-r tw-py-5 tw-flex-1">
                                 <h3 class="tw-text-xl tw-my-2 tw-font-semibold tw-tracking-tight">Burial Insurance</h3>
                                 <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left">This is Whole Life Insurance that can cover you for as long as you live. Final Expense or burial insurance ensures our families will not be burned with the cost of our funeral.</p>
                                 <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-mt-4">Burial Insurance could be right for you if:</p>
@@ -162,7 +162,7 @@
                                     <li class="tw-mb-4 tw-text-md">Allows your family to pay off your personal loans</li>
                                 </ul><a href="/products-services/life-insurance/burial-insurance" aria-label="Get A Term life quote" class="tw-bg-primary tw-text-white tw-rounded tw-py-2 tw-px-4 tw-w-full tw-text-center">Get A Quote</a>
                             </div>
-                            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-mx-10 xs:tw-mx-0 tw-py-5 tw-flex-1">
+                            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-mx-10 max-xs:tw-mx-0 tw-py-5 tw-flex-1">
                                 <h3 class="tw-text-xl tw-my-2 tw-font-semibold tw-tracking-tight">Mortgage Protection</h3>
                                 <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left">Protect one of your largest investments, your home. Mortgage protection helps protect you from life's unexpected events i.e. disability, unemployment, critical illness, and premature death.</p>
                                 <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-mt-4">Mortgage Protection could be right for you if:</p>
