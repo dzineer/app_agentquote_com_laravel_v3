@@ -6081,7 +6081,7 @@ __webpack_require__.r(__webpack_exports__);
         };
       } else if (this.category === 'fe') {
         return {
-          min: 10000,
+          min: 5000,
           max: 100000
         };
       } else if (this.category === 'sit') {
@@ -7740,7 +7740,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n@media screen AND (max-width: 320px) {\n.brand-logo[data-v-29db560f] {\n        width: 80%;\n        margin-top: 1.8rem;\n}\n}\n", ""]);
+exports.push([module.i, "\n@media screen AND (max-width: 320px) {\n.brand-logo[data-v-29db560f] {\n        max-width: 100%;\n        margin-top: 1.8rem;\n}\n}\n", ""]);
 
 // exports
 

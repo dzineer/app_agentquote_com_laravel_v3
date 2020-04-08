@@ -299,8 +299,9 @@ export default {
                 };
             } else if (this.category === 'fe') {
                 return {
-                    min: 10000, max: 100000
+                    min: 5000, max: 100000
                 };
+
             } else if(this.category === 'sit') {
                 return {
                     min: 25000, max: 400000
