@@ -24,7 +24,7 @@ export default {
 <style scoped>
     @media screen AND (max-width: 320px) {
         .brand-logo {
-            max-width: 100%;
+            max-width: 80%;
             margin-top: 1.8rem;
         }
     }
