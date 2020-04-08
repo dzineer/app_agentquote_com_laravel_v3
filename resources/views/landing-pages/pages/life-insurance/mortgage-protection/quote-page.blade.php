@@ -162,7 +162,7 @@
                                     <li class="tw-mb-4 tw-text-md">Allows your family to pay off your personal loans</li>
                                 </ul><a href="/products-services/life-insurance/burial-insurance" aria-label="Get A Term life quote" class="tw-bg-primary tw-text-white tw-rounded tw-py-2 tw-px-4 tw-w-full tw-text-center">Get A Quote</a>
                             </div>
-                            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-mx-10 tw-py-5 tw-flex-1">
+                            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-mx-10 xs:tw-mx-0 tw-py-5 tw-flex-1">
                                 <h3 class="tw-text-xl tw-my-2 tw-font-semibold tw-tracking-tight">Mortgage Protection</h3>
                                 <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left">Protect one of your largest investments, your home. Mortgage protection helps protect you from life's unexpected events i.e. disability, unemployment, critical illness, and premature death.</p>
                                 <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-mt-4">Mortgage Protection could be right for you if:</p>
