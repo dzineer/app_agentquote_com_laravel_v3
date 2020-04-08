@@ -44165,12 +44165,16 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "tw-text-2xl tw-mb-6" }, [
-        _vm._v("\n        Offered by: "),
-        _c("a", { attrs: { href: "tel:" + _vm.offeredby } }, [
-          _vm._v(_vm._s(_vm.offeredby))
-        ])
-      ])
+      _c(
+        "div",
+        { staticClass: "tw-mb-6", staticStyle: { "font-size": "1.2rem" } },
+        [
+          _vm._v("\n        Offered by: "),
+          _c("a", { attrs: { href: "tel:" + _vm.offeredby } }, [
+            _vm._v(_vm._s(_vm.offeredby))
+          ])
+        ]
+      )
     ]
   )
 }

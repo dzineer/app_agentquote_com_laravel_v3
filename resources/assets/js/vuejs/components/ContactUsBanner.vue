@@ -5,7 +5,7 @@
         <div class="tw-text-4xl sm:tw-text-5xl tw-mb-6">
             <display-phone-number :phone="phone"></display-phone-number>
         </div>
-        <div class="tw-text-2xl tw-mb-6">
+        <div class="tw-mb-6" style="font-size:1.2rem">
             Offered by: <a :href="'tel:'+offeredby">{{ offeredby }}</a>
         </div>
     </div>
