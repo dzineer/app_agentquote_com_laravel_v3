@@ -144,7 +144,7 @@
                             </p>
 
                             <div class="tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-w-full">
-                                <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-px-10 xs:tw-mx-0 tw-border-0 md:tw-border-r tw-py-5 tw-flex-1">
+                                <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-px-10 xs:tw-px-0 tw-border-0 md:tw-border-r tw-py-5 tw-flex-1">
                                     <h3 class="tw-text-xl tw-my-2 tw-font-semibold tw-tracking-tight">Term Life</h3>
                                     <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left">Term insurance provides your family with financial security covering you for a term of one or more years and generally offers the largest insurance protection for your premium dollar.</p>
                                     <p class="tw-text-md tw-tracking-tight tw-w-full tw-font-light tw-text-left tw-mt-4">Term Life could be right for you if:</p>
