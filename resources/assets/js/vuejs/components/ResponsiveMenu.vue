@@ -12,23 +12,23 @@
                 <div class="tw-bg-white tw-flex tw-flex-col tw-items-center tw-justify-center tw-leading-loose tw-mt-8 tw-p-5 tw-rounded-full tw-text-center tw-tracking-widest tw-w-1/2">
                     <h3 class="tw-font-bold tw-text-2xl">Contact Us</h3>
                     <h4 class="tw-text-lg">(888) 223-4773</h4>
-                </div>    
+                </div>
             </div>
-            
-        </div>                                       
+
+        </div>
 </template>
 
 <script>
     export default {
         props: ['menu']
-        
+
     }
 </script>
 
 <style scoped>
     .menu-responsive {
        position: absolute;
-       top: 76px;
+       top: 68px;
        right: 10px;
        z-index: 2;
     }
@@ -90,11 +90,11 @@
     }
 
     .menu-responsive .toggler:checked {
-        z-index: 5;        
+        z-index: 5;
     }
 
     .menu-responsive .toggler:checked + .hamburger {
-        z-index: 4;        
+        z-index: 4;
         background-color: rgba(121, 123, 125, 0.6);
     }
 
@@ -102,7 +102,7 @@
     .menu-responsive .toggler:checked + .hamburger > div:after {
         top: 0px;
         transform: rotate(90deg);
-         z-index: 4; 
+         z-index: 4;
     }
 
 /*     .menu-responsive .toggler:checked + .hamburger > div:before,
@@ -112,7 +112,7 @@
     } */
     .menu-responsive .toggler:checked:hover + .hamburger > div {
         transform: rotate(225deg);
-         z-index: 4; 
+         z-index: 4;
     }
 
     .menu-responsive  .menu-container {
