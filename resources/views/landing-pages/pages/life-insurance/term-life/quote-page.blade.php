@@ -139,7 +139,8 @@
                                 <li class="tw-mb-4 tw-text-md">The option to convert some or all of your plan to permanent coverage any time before age 70.</li>
                                 <li class="tw-mb-4 tw-text-md">Critical Illnesses coverage: which provides an accelerated benefit for life threatening cancer, heart attack, stroke, and more.</li>
                             </ul>
-                            <p class="tw-text-2xl tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-text-center">
+
+                            <p class="tw-text-2xl tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-text-center xs:tw-my-0">
                                 3 options to choose from:
                             </p>
 

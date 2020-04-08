@@ -136,7 +136,7 @@
                             <li class="tw-mb-4 tw-text-md">No exam required on some policies up to $400,000.</li>
                             <li class="tw-mb-4 tw-text-md">Return of premiums paid available on some policies. Great for those people who want their money back if they never use the benefit.</li>
                         </ul>
-                        <p class="tw-text-2xl tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-text-center">3 options to choose from:</p>
+                        <p class="tw-text-2xl tw-my-8 tw-w-10/12 sm:tw-w-10/12 md:tw-w-9/12 tw-mx-auto tw-text-center xs:tw-my-0">3 options to choose from:</p>
                         <div class="tw-flex tw-flex-col md:tw-flex-row tw-justify-between tw-w-full">
                             <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-px-10 xs:tw-px-0 tw-border-0 md:tw-border-r tw-py-5 tw-flex-1">
                                 <h3 class="tw-text-xl tw-my-2 tw-font-semibold tw-tracking-tight">Term Life</h3>
