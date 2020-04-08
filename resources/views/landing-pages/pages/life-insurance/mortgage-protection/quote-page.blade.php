@@ -148,7 +148,7 @@
                                     <li class="tw-mb-4 tw-text-md">Pay off credit cards and other debts</li>
                                     <li class="tw-mb-4 tw-text-md">Replace your income for several years</li>
                                     <li class="tw-mb-4 tw-text-md">Make Life More Comfortable for Your Loved Ones</li>
-                                </ul><a href="/products-services/life-insurance/term-life" aria-label="Get A Term life quote" class="tw-bg-primary tw-text-white tw-rounded tw-py-2 tw-px-4 tw-w-full tw-text-center">Get A Quote</a>
+                                </ul><a href="/products-services/life-insurance/term-life" aria-label="Get A Term life quote" class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline tw-capitalize tw-w-full tw-text-center">Get A Quote</a>
                             </div>
                             <div class="tw-flex tw-flex-col tw-justify-start tw-items-center tw-text-left tw-px-12 max-xs:tw-px-0 tw-border-0 md:tw-border-r tw-py-5 tw-flex-1">
                                 <h3 class="tw-text-xl tw-my-2 tw-font-semibold tw-tracking-tight">Burial Insurance</h3>
@@ -160,7 +160,7 @@
                                     <li class="tw-mb-4 tw-text-md">To serve as a gift for your loved ones</li>
                                     <li class="tw-mb-4 tw-text-md">To pay off estate taxes</li>
                                     <li class="tw-mb-4 tw-text-md">Allows your family to pay off your personal loans</li>
-                                </ul><a href="/products-services/life-insurance/burial-insurance" aria-label="Get A Term life quote" class="tw-bg-primary tw-text-white tw-rounded tw-py-2 tw-px-4 tw-w-full tw-text-center">Get A Quote</a>
+                                </ul><a href="/products-services/life-insurance/burial-insurance" aria-label="Get A Term life quote" class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline tw-capitalize tw-w-full tw-text-center">Get A Quote</a>
                             </div>
                             <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-left tw-mx-10 max-xs:tw-mx-0 tw-py-5 tw-flex-1">
                                 <h3 class="tw-text-xl tw-my-2 tw-font-semibold tw-tracking-tight">Mortgage Protection</h3>
@@ -171,7 +171,7 @@
                                     <li class="tw-mb-4 tw-text-md">You need money for mortgage payments if you become unemployed or disabled</li>
                                     <li class="tw-mb-4 tw-text-md">You want your family to live debt free</li>
                                     <li class="tw-mb-4 tw-text-md">Provide your loved ones with additional tax-free income to create an estate</li>
-                                </ul><a href="/products-services/life-insurance/mortgage-protection" aria-label="Get A Final Expense quote" class="tw-bg-primary tw-text-white tw-rounded tw-py-2 tw-px-4 tw-w-full tw-text-center">Get A Quote</a>
+                                </ul><a href="/products-services/life-insurance/mortgage-protection" aria-label="Get A Final Expense quote" class="tw-bg-primary hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline tw-capitalize tw-w-full tw-text-center">Get A Quote</a>
                             </div>
                         </div>
                     </div>
