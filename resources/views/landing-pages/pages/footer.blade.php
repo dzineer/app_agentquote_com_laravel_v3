@@ -54,8 +54,9 @@
             <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
                 <div class="tw-flex tw-flex-row tw-w-full tw-justify-center tw-items-center tw-px-20 xs:tw-px-0">
                     <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
-                        <p class="tw-text-base tw-my-1 xs:tw-w-full">
-                            © <span class="copyright-year">2020</span> <a href="/" role="link" aria-label="Go to home page"><span class="tw-text-primary">Agent Quote Inc.</span></a> <a href="/privacy" aria-label="View our privacy & policy details">Privacy Policy</a>
+                        <p class="tw-flex tw-text-base tw-my-1 xs:tw-w-full">
+                            <span>© <span class="copyright-year">2020</span> <a href="/" role="link" aria-label="Go to home page"><span class="tw-text-primary">Agent Quote Inc.</span></a></span>
+                            <span><a href="/privacy" aria-label="View our privacy & policy details">Privacy Policy</a></span>
                         </p>
                     </div>
                 </div>
