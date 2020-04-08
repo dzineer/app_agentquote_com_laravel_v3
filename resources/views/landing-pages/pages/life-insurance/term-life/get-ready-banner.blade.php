@@ -1,7 +1,7 @@
         <div class="tw-w-full tw-py-16 tw-bg-gray-300">
             <div class="tw-w-full tw-flex-col md:tw-flex-row tw-px-6 sm:tw-w-11/12 md:tw-w-11/12 lg:tw-w-11/12 tw-flex tw-justify-end tw-items-center tw-mx-auto tw-h-full">
                 <div class="tw-w-full py-4 md:tw-px-4 tw-flex tw-flex-col tw-justify-center tw-items-center">
-                    <p class="tw-text-2xl xl:tw-text-2xl tw-mb-8 tw-font-light tw-tracking-tight tw-font-semibold">
+                    <p class="tw-text-2xl xl:tw-text-2xl tw-mb-8 tw-font-light tw-tracking-tight tw-font-semibold tw-text-center">
                         Ready to get Term Life Insurance? We can help.
                     </p>
 
