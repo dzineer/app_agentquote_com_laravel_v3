@@ -46382,13 +46382,13 @@ var render = function() {
             [
               _c("icon", {
                 attrs: {
-                  name: _vm.links[1].icon,
+                  name: _vm.links[0].icon,
                   classes: "tw-inline-block fa-fw tw-mr-0"
                 }
               }),
               _vm._v(
                 "\n                " +
-                  _vm._s(_vm.links[1].text) +
+                  _vm._s(_vm.links[0].text) +
                   "\n            "
               )
             ],
