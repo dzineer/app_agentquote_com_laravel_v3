@@ -6,15 +6,15 @@
             <div class="dz:section tw-w-full md:tw-w-11/12 lg:tw-w-4/5 tw-flex tw-justify-center tw-items-center tw-mx-1 md:tw-no-margin">
                 <div class="tw-flex tw-flex-col md:tw-flex-row tw-w-100 sm:tw-11/12">
 
-                    <div class="tw-text-center tw-flex tw-flex-col tw-items-center tw-leading-loose"> 
+                    <div class="tw-text-center tw-flex tw-flex-col tw-items-center tw-leading-loose">
                         <h3 class="tw-text-lg tw-tracking-wider">Get a quote in less than a minute</h3>
                         <div class="tw-flex tw-flex-row tw-leading-none tw-w-full md:tw-leading-loose" style="position:relative;">
     <!--                       <input type="text" v-model="requestedValue" @keyup="updateKeyUpAmount" @click="showAmountList = ! showAmountList" :placeholder="placeholder" class="quote-field tw-shadow tw-appearance-none tw-border tw-rounded tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-shadow-outline tw-mr-2 sm:tw-mb-0 tw-w-1/2 tw-text-center"> -->
                         <input type="text" v-model="requestedValue" @keyup="updateKeyUpAmount" :placeholder="placeholder" class="quote-field tw-h-13 tw-shadow tw-appearance-none tw-border tw-rounded tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-shadow-outline tw-mr-2 sm:tw-mb-0 tw-w-1/2 tw-text-center">
-                           <select 
+                           <select
                                 v-if="false"
-                                v-model="requestedValue" 
-                                @change="onAmountChange" 
+                                v-model="requestedValue"
+                                @change="onAmountChange"
                                 class="quote-field tw-shadow tw-appearance-none tw-border tw-rounded tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-shadow-outline tw-mr-2 sm:tw-mb-0">
                                 <option disabled value="">Please select one</option>
                                 <option>1</option>
@@ -32,12 +32,12 @@
                         </div>
                         <p class="tw-text-md tw-tracking-widest">Find the coverage your need.</p>
                     </div>
-            
-                    <div class="tw-mx-8 tw-flex tw-justify-center tw-items-center tw-uppercase tw-text-xl md:tw-tracking-widest tw-my-4 md:m-my-0"> 
+
+                    <div class="tw-mx-8 tw-flex tw-justify-center tw-items-center tw-uppercase tw-text-xl md:tw-tracking-widest tw-my-4 md:m-my-0">
                         - or -
                     </div>
-            
-                    <div class="tw-text-center tw-flex tw-flex-col tw-items-center tw-leading-loose tw-flex-1"> 
+
+                    <div class="tw-text-center tw-flex tw-flex-col tw-items-center tw-leading-loose tw-flex-1">
                         <h3 class="tw-text-lg md:tw-text-lg sm:tw-m-0 tw-tracking-tight md:tw-tracking-loose">Unsure how much coverage you need?</h3>
                         <div class="tw-flex xs:tw-w-full">
                             <button type="button" class="start-btn tw-bg-white hover:tw-bg-blue-700 hover:tw-text-white tw-w-full tw-text-green-400 tw-font-normal tw-border tw-capitalize tw-border-green-500 hover:tw-border-blue-700 tw-py-2 tw-px-10 tw-rounded focus:tw-outline-none focus:tw-shadow-outline" @click="onShowCalculator" >Take our needs assessment</button>
@@ -50,7 +50,7 @@
             </div>
         </div>
     </div>
-</div>    
+</div>
 </template>
 
 <script>
@@ -107,11 +107,16 @@ export default {
                 return "$" + n;
             },
             updateKeyUpAmount(e) {
-                this.updateAmount(e.currentTarget.value);                   
+
+                if (e.keyCode === 13) /* enter key */ {
+                    return this.startQuote();
+                }
+
+                this.updateAmount(e.currentTarget.value);
             },
             onAmountChange(newValue) {
                 this.showAmountList = false;
-                this.updateAmount(newValue);   
+                this.updateAmount(newValue);
             },
             updateAmount(newValue) {
 

@@ -6360,6 +6360,12 @@ __webpack_require__.r(__webpack_exports__);
       return "$" + n;
     },
     updateKeyUpAmount: function updateKeyUpAmount(e) {
+      if (e.keyCode === 13)
+        /* enter key */
+        {
+          return this.startQuote();
+        }
+
       this.updateAmount(e.currentTarget.value);
     },
     onAmountChange: function onAmountChange(newValue) {
@@ -40875,7 +40881,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          " \n                        - or -\n                    "
+                          "\n                        - or -\n                    "
                         )
                       ]
                     ),
