@@ -40581,33 +40581,36 @@ var render = function() {
                                 },
                                 [
                                   _c("label", { staticClass: "tw-text-xl" }, [
-                                    _c("strong", [_vm._v("Name:")]),
-                                    _vm._v(
-                                      " " +
+                                    _vm._v("Name: "),
+                                    _c("strong", [
+                                      _vm._v(
                                         _vm._s(
                                           _vm.quote.fname +
                                             " " +
                                             _vm.quote.lname
                                         )
-                                    )
+                                      )
+                                    ])
                                   ]),
                                   _vm._v(" "),
                                   _c("label", { staticClass: "tw-text-xl" }, [
-                                    _c("strong", [_vm._v("Insurance:")]),
-                                    _vm._v(" " + _vm._s(_vm.insuranceName))
+                                    _vm._v("Insurance: "),
+                                    _c("strong", [
+                                      _vm._v(_vm._s(_vm.insuranceName))
+                                    ])
                                   ]),
                                   _vm._v(" "),
                                   _c("label", { staticClass: "tw-text-xl" }, [
-                                    _c("strong", [_vm._v("Term Length:")]),
-                                    _vm._v(
-                                      " " + _vm._s(_vm.quote.term) + " Years"
-                                    )
+                                    _vm._v("Term Length: "),
+                                    _c("strong", [
+                                      _vm._v(_vm._s(_vm.quote.term) + " Years")
+                                    ])
                                   ]),
                                   _vm._v(" "),
                                   _c("label", { staticClass: "tw-text-xl" }, [
-                                    _c("strong", [_vm._v("Birthdate:")]),
-                                    _vm._v(
-                                      " " +
+                                    _vm._v("Birthdate: "),
+                                    _c("strong", [
+                                      _vm._v(
                                         _vm._s(
                                           _vm.quote.birthdate.month +
                                             "/" +
@@ -40615,36 +40618,41 @@ var render = function() {
                                             "/" +
                                             _vm.quote.birthdate.year
                                         )
-                                    )
+                                      )
+                                    ])
                                   ]),
                                   _vm._v(" "),
                                   _c("label", { staticClass: "tw-text-xl" }, [
-                                    _c("strong", [_vm._v("Gender:")]),
-                                    _vm._v(
-                                      " " +
+                                    _vm._v("Gender: "),
+                                    _c("strong", [
+                                      _vm._v(
                                         _vm._s(
                                           _vm.quote.gender === "M"
                                             ? "Male"
                                             : "Female"
                                         )
-                                    )
+                                      )
+                                    ])
                                   ]),
                                   _vm._v(" "),
                                   _c("label", { staticClass: "tw-text-xl" }, [
-                                    _c("strong", [_vm._v("Tobacco:")]),
-                                    _vm._v(
-                                      " " +
+                                    _vm._v("Tobacco: "),
+                                    _c("strong", [
+                                      _vm._v(
                                         _vm._s(
                                           _vm.quote.tobacco === "Y"
                                             ? "Yes"
                                             : "No"
                                         )
-                                    )
+                                      )
+                                    ])
                                   ]),
                                   _vm._v(" "),
                                   _c("label", { staticClass: "tw-text-xl" }, [
-                                    _c("strong", [_vm._v("Benefit:")]),
-                                    _vm._v(" " + _vm._s(_vm.quote.quoteAmount))
+                                    _vm._v("Benefit: "),
+                                    _c("strong", [
+                                      _vm._v(_vm._s(_vm.quote.quoteAmount))
+                                    ])
                                   ])
                                 ]
                               )

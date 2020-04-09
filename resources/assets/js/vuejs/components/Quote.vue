@@ -35,13 +35,13 @@
                         <div class="tw-flex tw-flex-col sm:tw-flex-row tw-w-full tw-py-2">
                             <div class="tw-flex tw-w-full md:tw-w-full">
                                 <div class="tw-w-full tw-flex tw-flex-col tw-justify-center tw-leading-loose tw-items-center tw-rounded tw-border-0 tw-py-4 tw-px-4">
-                                    <label class="tw-text-xl"><strong>Name:</strong> {{ quote.fname +  " " + quote.lname }}</label>
-                                    <label class="tw-text-xl"><strong>Insurance:</strong> {{ insuranceName }}</label>
-                                    <label class="tw-text-xl"><strong>Term Length:</strong> {{ quote.term }} Years</label>
-                                    <label class="tw-text-xl"><strong>Birthdate:</strong> {{ quote.birthdate.month + '/' + quote.birthdate.day + '/' + quote.birthdate.year }}</label>
-                                    <label class="tw-text-xl"><strong>Gender:</strong> {{ quote.gender === 'M' ? 'Male' : 'Female' }}</label>
-                                    <label class="tw-text-xl"><strong>Tobacco:</strong> {{ quote.tobacco === 'Y' ? 'Yes' : 'No' }}</label>
-                                    <label class="tw-text-xl"><strong>Benefit:</strong> {{ quote.quoteAmount }}</label>
+                                    <label class="tw-text-xl">Name: <strong>{{ quote.fname +  " " + quote.lname }}</strong></label>
+                                    <label class="tw-text-xl">Insurance: <strong>{{ insuranceName }}</strong></label>
+                                    <label class="tw-text-xl">Term Length: <strong>{{ quote.term }} Years</strong></label>
+                                    <label class="tw-text-xl">Birthdate: <strong>{{ quote.birthdate.month + '/' + quote.birthdate.day + '/' + quote.birthdate.year }}</strong></label>
+                                    <label class="tw-text-xl">Gender: <strong>{{ quote.gender === 'M' ? 'Male' : 'Female' }}</strong></label>
+                                    <label class="tw-text-xl">Tobacco: <strong>{{ quote.tobacco === 'Y' ? 'Yes' : 'No' }}</strong></label>
+                                    <label class="tw-text-xl">Benefit: <strong>{{ quote.quoteAmount }}</strong></label>
                                 </div>
                             </div>
                         </div>
