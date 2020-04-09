@@ -1400,7 +1400,7 @@ class ModulesLandingPage extends Controller
         $data['user_id'] = $user->id;
         $data['page'] = ["title" => "Insurance Landing Page"];
 
-        dd($data);
+        // dd($data);
        // dd($data['sections']);
 
         $rel_path = 'landing-pages.v4.quote_modules.' . $data['insure_module'];
