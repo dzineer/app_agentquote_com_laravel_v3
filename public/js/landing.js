@@ -46366,35 +46366,9 @@ var render = function() {
                 }
               }),
               _vm._v(
-                "\n            " + _vm._s(_vm.links[0].text) + "\n        "
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass:
-                "hover:tw-underline tw-py-2 lg:tw-py-0 tw-px-2 tw-text-sm tw-cursor-pointer",
-              class: _vm.localStyles.links,
-              attrs: { target: "_blank" },
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  return _vm.toggle($event)
-                }
-              }
-            },
-            [
-              _c("icon", {
-                attrs: {
-                  name: _vm.links[1].icon,
-                  classes: "tw-inline-block fa-fw tw-mr-0"
-                }
-              }),
-              _vm._v(
-                "\n            " + _vm._s(_vm.links[1].text) + "\n        "
+                "\n                " +
+                  _vm._s(_vm.links[0].text) +
+                  "\n            "
               )
             ],
             1

@@ -5,13 +5,13 @@
             <a class="hover:tw-underline tw-py-2 lg:tw-py-0 tw-px-2 tw-text-sm tw-cursor-pointer" target="_blank" :class="localStyles.links">
                 <icon :name="links[0].icon" classes="tw-inline-block fa-fw tw-mr-0" />
                 {{ links[0].text }}
-            </a>        
-            <a class="hover:tw-underline tw-py-2 lg:tw-py-0 tw-px-2 tw-text-sm tw-cursor-pointer" target="_blank" :class="localStyles.links" @click.prevent="toggle">
+            </a>
+<!--            <a class="hover:tw-underline tw-py-2 lg:tw-py-0 tw-px-2 tw-text-sm tw-cursor-pointer" target="_blank" :class="localStyles.links" @click.prevent="toggle">
                 <icon :name="links[1].icon" classes="tw-inline-block fa-fw tw-mr-0" />
                 {{ links[1].text }}
-            </a> 
+            </a> -->
         </div>
-    </div>    
+    </div>
 </template>
 
 <script>
@@ -27,7 +27,7 @@
             return {
                 localStyles: { policy: '', links: '' }
             }
-        },        
+        },
         mounted() {
             this.localStyles = this.styles || this.localStyles;
         },
@@ -35,6 +35,6 @@
             toggle() {
                 this.$emit('togglePolicyDetails');
             }
-        }           
+        }
     }
 </script>
