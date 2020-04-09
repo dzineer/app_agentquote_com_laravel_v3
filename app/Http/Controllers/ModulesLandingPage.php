@@ -1215,7 +1215,7 @@ class ModulesLandingPage extends Controller
 
         $quoteRequest = \unserialize( $verifiedQuote['data'] );
 
-        dd($verifiedQuote);
+        // dd($verifiedQuote);
 
         $user = User::find($quoteRequest['user_id']);
 
@@ -1228,14 +1228,14 @@ class ModulesLandingPage extends Controller
         // echo print_r($results,true); exit;
         // return response()->json(  $resp );
 
-        $use_logo = ! isset($_GET['o']) || ! strlen($_GET['o']) ? false : $_GET['o'] === 'logo' ? true : false ;
+//        $use_logo = ! isset($_GET['o']) || ! strlen($_GET['o']) ? false : $_GET['o'] === 'logo' ? true : false ;
 
-        $use_form_only = ! isset($_GET['form']) || ! strlen($_GET['form']) ? false : $_GET['form'] === 'true' ? true : false ;
+//        $use_form_only = ! isset($_GET['form']) || ! strlen($_GET['form']) ? false : $_GET['form'] === 'true' ? true : false ;
 
-        $page = [
+/*        $page = [
             'name'=> 'quote',
             'title' => 'Quote'
-        ];
+        ];*/
 
         $data = config( 'landing_page.data' );
 
@@ -1289,7 +1289,7 @@ class ModulesLandingPage extends Controller
 
         $data['quote_results'] = $resp;
 
-       // dd($data['quote_results']);
+        dd($data['quote_results']);
 
         if($request->has('format') && $request->input('format') === 'json') {
             /*
