@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Libraries\TermlifeQuoter;
 use App\Models\Carrier;
 use App\Models\CarriersTermlife;
 use App\Models\CategoriesInsurance;
-use App\Quoters\TermlifeQuoter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 
 
 /**
- * Class TermlifeCarriersController
+ * Class UserLanguageSettingsController
  * @package App\Http\Controllers
  */
-class TermlifeCarriersController extends BackendController
+class UserLanguageSettingsController extends BackendController
 {
 
 	/**
