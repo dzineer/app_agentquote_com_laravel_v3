@@ -48,7 +48,6 @@
                     :disabled="sending"
                     required>
 
-
                 <button @click.prevent="onGenerateQuote"
                  v-if="showPhoneField"
                 class="tw-cursor-pointer tw-no-underline tw-rounded tw-py-4 tw-h-13 tw-px-4 sm:tw-px-8 tw-uppercase tw-font-semibold tw-bg-primaryBright tw-text-white tw-w-1/2 sm:tw-w-2/5"
@@ -197,12 +196,17 @@ export default {
             }
             this.$emit('phoneChange', { value: this.phone } );
         },
-        onPhoneUpdate() {
+        onPhoneUpdate(e) {
             debugger;
             if(!this.isReady()) {
                 // toastr.error('Invalid phone number.');
                 return;
             }
+
+            if (e.keyCode === 13) /* enter key */ {
+                return this.onGenerateQuote();
+            }
+
             this.$emit('phoneChange', { value: this.phone } );
         },
         onEmailUpdate() {

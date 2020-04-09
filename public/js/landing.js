@@ -2030,7 +2030,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['email', 'token', 'sendverificationby'],
@@ -2124,13 +2123,19 @@ __webpack_require__.r(__webpack_exports__);
         value: this.phone
       });
     },
-    onPhoneUpdate: function onPhoneUpdate() {
+    onPhoneUpdate: function onPhoneUpdate(e) {
       debugger;
 
       if (!this.isReady()) {
         // toastr.error('Invalid phone number.');
         return;
       }
+
+      if (e.keyCode === 13)
+        /* enter key */
+        {
+          return this.onGenerateQuote();
+        }
 
       this.$emit('phoneChange', {
         value: this.phone
