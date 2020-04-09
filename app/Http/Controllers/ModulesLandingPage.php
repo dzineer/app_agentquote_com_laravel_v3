@@ -1308,8 +1308,8 @@ class ModulesLandingPage extends Controller
                         "policy" => $quote['ProductName'],
                         "reference" => $quote['Reference'],
                         "links" => [
-                            ['text' => 'Click Here to Match a rate to your Health Profile', 'href' => $quote['link1'], 'icon' => 'external-link' ],
                             ['text' => 'Company Information', 'href' => $quote['link2'], 'icon' => 'file-text-o' ],
+                            ['text' => 'Click Here to Match a rate to your Health Profile', 'href' => $quote['link1'], 'icon' => 'external-link' ],
                         ],
                         'logo' => env('AWS_S3_CDN') . '/logos/' . $quote['BannerLogoImageURL'],
                         'rateClassifications' => [
