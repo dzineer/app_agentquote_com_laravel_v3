@@ -244,7 +244,7 @@ return [
                 [
                     'text' => 'Language Settings',
                     'url'  => 'profile/language/settings',
-                    'icon' => 'map-marker',
+                    'icon' => 'fa-language',
                 ],
 
                 'PRODUCTS',
