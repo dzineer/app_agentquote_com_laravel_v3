@@ -1215,7 +1215,7 @@ class ModulesLandingPage extends Controller
 
         $quoteRequest = \unserialize( $verifiedQuote['data'] );
 
-        // dd($verifiedQuote);
+        dd($verifiedQuote);
 
         $user = User::find($quoteRequest['user_id']);
 
