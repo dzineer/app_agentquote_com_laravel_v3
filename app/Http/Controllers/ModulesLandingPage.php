@@ -1345,7 +1345,7 @@ class ModulesLandingPage extends Controller
                         "policy" => $quote['ProductName'],
                         "reference" => $quote['Reference'],
                         "links" => [
-                            ['text' => 'Fe Link', 'href' => $quote['link1'], 'icon' => 'external-link' ],
+                            ['text' => 'Company Information', 'href' => $quote['link1'], 'icon' => 'external-link' ],
                         ],
                         'logo' => env('AWS_S3_CDN') . '/logos/' . $quote['BannerLogoImageURL'],
                         'rateClassifications' => [
