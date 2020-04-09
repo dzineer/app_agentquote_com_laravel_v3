@@ -241,6 +241,12 @@ return [
                     ]
                 ],
 
+                [
+                    'text' => 'Language Settings',
+                    'url'  => 'profile/language/settings',
+                    'icon' => 'map-marker',
+                ],
+
                 'PRODUCTS',
                 [
                     'text' => 'Quoter',

@@ -238,7 +238,12 @@ return [
                                     'icon' => 'no-icon',
                                 ]
 
-                            ]
+                            ],
+                            [
+                                'text' => 'Language Settings',
+                                'url'  => 'profile/language/settings',
+                                'icon' => 'no-icon',
+                            ],
                         ],
                     ],
                 ],
