@@ -197,23 +197,28 @@ export default {
             this.$emit('phoneChange', { value: this.phone } );
         },
         onPhoneUpdate(e) {
-            debugger;
+
             if(!this.isReady()) {
                 // toastr.error('Invalid phone number.');
                 return;
             }
 
+            this.$emit('phoneChange', { value: this.phone } );
+
             if (e.keyCode === 13) /* enter key */ {
-                return this.onGenerateQuote();
+                return this.onGenerateQuote(e);
             }
 
-            this.$emit('phoneChange', { value: this.phone } );
         },
         onEmailUpdate() {
             this.$emit('emailChange', { value: this.verification.email } );
             toastr.info('Updating email address...');
         },
-        onValidationCodeUpdate() {
+        onValidationCodeUpdate(e) {
+            if (e.keyCode === 13) /* enter key */ {
+                return this.onValidateCode(e);
+            }
+
             if(! this.isNumeric(this.verification.code) && this.verification.code.length === this.verification.requiredLength) {
                 this.verification.ready = false;
             }

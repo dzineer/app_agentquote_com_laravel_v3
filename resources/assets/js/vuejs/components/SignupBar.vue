@@ -109,7 +109,7 @@ export default {
             updateKeyUpAmount(e) {
 
                 if (e.keyCode === 13) /* enter key */ {
-                    return this.startQuote();
+                    return this.startQuote(e);
                 }
 
                 this.updateAmount(e.currentTarget.value);

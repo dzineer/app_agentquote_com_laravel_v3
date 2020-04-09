@@ -2124,22 +2124,20 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     onPhoneUpdate: function onPhoneUpdate(e) {
-      debugger;
-
       if (!this.isReady()) {
         // toastr.error('Invalid phone number.');
         return;
       }
 
-      if (e.keyCode === 13)
-        /* enter key */
-        {
-          return this.onGenerateQuote();
-        }
-
       this.$emit('phoneChange', {
         value: this.phone
       });
+
+      if (e.keyCode === 13)
+        /* enter key */
+        {
+          return this.onGenerateQuote(e);
+        }
     },
     onEmailUpdate: function onEmailUpdate() {
       this.$emit('emailChange', {
@@ -2147,7 +2145,13 @@ __webpack_require__.r(__webpack_exports__);
       });
       toastr.info('Updating email address...');
     },
-    onValidationCodeUpdate: function onValidationCodeUpdate() {
+    onValidationCodeUpdate: function onValidationCodeUpdate(e) {
+      if (e.keyCode === 13)
+        /* enter key */
+        {
+          return this.onValidateCode(e);
+        }
+
       if (!this.isNumeric(this.verification.code) && this.verification.code.length === this.verification.requiredLength) {
         this.verification.ready = false;
       }
@@ -6368,7 +6372,7 @@ __webpack_require__.r(__webpack_exports__);
       if (e.keyCode === 13)
         /* enter key */
         {
-          return this.startQuote();
+          return this.startQuote(e);
         }
 
       this.updateAmount(e.currentTarget.value);
