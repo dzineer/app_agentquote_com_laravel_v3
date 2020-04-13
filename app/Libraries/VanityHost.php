@@ -113,6 +113,8 @@ class VanityHost
         $branding['use_logo']      =  $useLogo;
         $branding['use_portrait']  =  $usePortrait;
 
+        dd($branding);
+
         return $branding;
     }
 
