@@ -97,7 +97,7 @@ class VanityHost
         $useLogo = ! empty($profile->logo);
         $usePortrait = ! empty($profile->portrait);
 
-        $imageUsed = $profile->portrait ? env('AGENT_LOGO_PATH') . '/' . $profile->portrait : env('AGENT_LOGO_PATH') . '/' . $profile->logo;
+        $imageUsed = $profile->portrait ? $profile->portrait : $profile->logo;
 
 /*        dd([
             $useLogo,
