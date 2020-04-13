@@ -82,9 +82,10 @@ class LandingPageController extends BackendController
             if ($ext == "txt") {
                 $md5Name = md5_file($request->file('logo')->getRealPath());
                 $ext = 'svg';
-                $profile->logo = '/storage/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+
+                $profile->logo = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
             } else {
-                $profile->logo = '/storage/' . $request->file('logo')->store('landing-pages/logos', 'public');
+                $profile->logo = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->store('landing-pages/logos', 'public');
             }
 
 
@@ -97,9 +98,9 @@ class LandingPageController extends BackendController
             if ($ext == "txt") {
                 $md5Name = md5_file($request->file('portrait')->getRealPath());
                 $ext = 'svg';
-                $profile->portrait = '/storage/' . $request->file('portrait')->storeAs('landing-pages/portraits', $md5Name.'.'.$ext  ,'public');
+                $profile->portrait = env('AGENT_LOGO_PATH') . '/' . $request->file('portrait')->storeAs('landing-pages/portraits', $md5Name.'.'.$ext  ,'public');
             } else {
-                $profile->portrait = '/storage/' . $request->file('portrait')->store('landing-pages/portraits', 'public');
+                $profile->portrait = env('AGENT_LOGO_PATH') . '/' . $request->file('portrait')->store('landing-pages/portraits', 'public');
             }
             $profileUpdated = true;
         }
@@ -272,19 +273,19 @@ class LandingPageController extends BackendController
             switch( $ext) {
                 case 'png':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
-                    $fieldsToUpdate["logo"] = '/storage/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                     $fieldsToUpdate["portrait"] = null;
                     $profileUpdated = true;
                     break;
                 case 'jpg':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
-                    $fieldsToUpdate["logo"] = '/storage/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                     $fieldsToUpdate["portrait"] = null;
                     $profileUpdated = true;
                     break;
                 case 'gif':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
-                    $fieldsToUpdate["logo"] = '/storage/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                     $fieldsToUpdate["portrait"] = null;
                     $profileUpdated = true;
                     break;
@@ -312,11 +313,11 @@ class LandingPageController extends BackendController
             if ($ext == "txt") {
                 $md5Name = md5_file($request->file('portrait')->getRealPath());
                 $ext = 'svg';
-                $fieldsToUpdate["portrait"] = '/storage/' . $request->file('portrait')->storeAs('landing-pages/portraits', $md5Name.'.'.$ext  ,'public');
+                $fieldsToUpdate["portrait"] = env('AGENT_LOGO_PATH') . '/' . $request->file('portrait')->storeAs('landing-pages/portraits', $md5Name.'.'.$ext  ,'public');
                 $fieldsToUpdate["logo"] = null;
                 $profileUpdated = true;
             } else {
-                $fieldsToUpdate["portrait"] = '/storage/' . $request->file('portrait')->store('landing-pages/portraits', 'public');
+                $fieldsToUpdate["portrait"] = env('AGENT_LOGO_PATH') . '/' . $request->file('portrait')->store('landing-pages/portraits', 'public');
                 $fieldsToUpdate["logo"] = null;
                 $profileUpdated = true;
             }
