@@ -86,7 +86,6 @@ class VanityHost
      *
      * @param $profile
      * @param $company
-     * @param $useLogo
      * @param $version
      *
      * @return array
@@ -98,7 +97,7 @@ class VanityHost
         $useLogo = ! empty($profile->logo);
         $usePortrait = ! empty($profile->portrait);
 
-        $imageUsed = $profile->portrait ? '/storage/' . $profile->portrait : '/storage/' . $profile->logo;
+        $imageUsed = $profile->portrait ? env('AGENT_LOGO_PATH') . '/' . $profile->portrait : env('AGENT_LOGO_PATH') . '/' . $profile->logo;
 
 /*        dd([
             $useLogo,
