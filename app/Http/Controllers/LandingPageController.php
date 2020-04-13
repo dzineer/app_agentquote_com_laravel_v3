@@ -74,7 +74,7 @@ class LandingPageController extends BackendController
 
         $profileUpdated = false;
 
-        // save logo to store/public/landing-pages/images/logos and filename to profile
+        // save logo to store/public/landing-pages/logos and filename to profile
         if ($request->hasFile('logo')) {
 
             $ext = $request->file('logo')->guessExtension();
@@ -83,9 +83,9 @@ class LandingPageController extends BackendController
                 $md5Name = md5_file($request->file('logo')->getRealPath());
                 $ext = 'svg';
 
-                $profile->logo = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/images/logos', $md5Name.'.'.$ext  ,'public');
+                $profile->logo = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
             } else {
-                $profile->logo = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->store('landing-pages/images/logos', 'public');
+                $profile->logo = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->store('landing-pages/logos', 'public');
             }
 
 
@@ -242,7 +242,7 @@ class LandingPageController extends BackendController
             "user_id" => $user->id
         ])->first();
 
-        // save logo to store/public/landing-pages/images/logos and filename to profile
+        // save logo to store/public/landing-pages/logos and filename to profile
 
         AQLog::info([
             "hasFile" => $request->hasFile('logo'),
@@ -273,19 +273,19 @@ class LandingPageController extends BackendController
             switch( $ext) {
                 case 'png':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
-                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/images/logos', $md5Name.'.'.$ext  ,'public');
+                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                     $fieldsToUpdate["portrait"] = null;
                     $profileUpdated = true;
                     break;
                 case 'jpg':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
-                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/images/logos', $md5Name.'.'.$ext  ,'public');
+                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                     $fieldsToUpdate["portrait"] = null;
                     $profileUpdated = true;
                     break;
                 case 'gif':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
-                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/images/logos', $md5Name.'.'.$ext  ,'public');
+                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                     $fieldsToUpdate["portrait"] = null;
                     $profileUpdated = true;
                     break;
