@@ -36,9 +36,9 @@ class UsersLanguageController extends BackendController
             "languages" => $languages,
         ];
 
-        dd($data);
+        // dd($data);
 
-		return view('landing-pages.profile.index', $data)->render();
+		return view('profile.languages.index', $data)->render();
 	}
 
 	private function filter($arr) {
