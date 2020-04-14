@@ -77,6 +77,9 @@ class UsersLanguageController extends BackendController
             }
         }
 
+        foreach ($request->all() as $v) {
+            VarDumper::dump($v);
+        }
 
         foreach ($inserts as $v) {
             VarDumper::dump($v);
