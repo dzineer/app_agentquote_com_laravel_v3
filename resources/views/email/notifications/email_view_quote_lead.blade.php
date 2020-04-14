@@ -26,7 +26,7 @@
                 <?php
                 $formatter = new \NumberFormatter('en_US',  \NumberFormatter::CURRENCY);
                 $symbol = $formatter->getSymbol(\NumberFormatter::INTL_CURRENCY_SYMBOL);
-                $benefit = $formatter->formatCurrency(intval($quote->benefit), $symbol)
+                $benefit = $formatter->formatCurrency(intval($quote["benefit"]), $symbol)
                 ?>
                 <p style="margin-bottom:12px">
                     You have just received the following quote lead::<br><br>
