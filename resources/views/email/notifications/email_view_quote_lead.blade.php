@@ -8,12 +8,6 @@
     <title>To view your quote request click below</title>
 </head>
 <body>
-<?php
-// $domain = config('agentquote.company.domain.urls.secure');
-$domain = 'https://' . $data['domain'];
-$path = '/quote/';
-// $path = '/beta/landing-page/quote/verify';
-?>
 <div style="padding:20px 0;margin:0 auto;max-width:600px">
 
     <table style="margin:0 auto;padding-bottom:20px;border-bottom:1px dashed #dadada">
