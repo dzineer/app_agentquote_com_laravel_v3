@@ -46,8 +46,8 @@
                                     <div class="form-check">
 
                                         <label class="form-check-label">
-                                            <input class="form-check-input carriers" type="checkbox" id="language_{{$language->language_id}}" name="language_{{$language->language_id}}" value="{{$language->language_id}}" {{ $language->selected == 1 ? 'checked="checked"' : '' }} data-languages="language_{{$language->language_id}}">
-                                            <input type="hidden" id="hidden_language__{{$language->language_id}}"  name="hidden_carrier__{{$language->language_id}}" value="{{ $language->selected == 1 ? $language->language_id : '' }}">
+                                            <input class="form-check-input languages" type="checkbox" id="language_{{$language->language_id}}" name="language_{{$language->language_id}}" value="{{$language->language_id}}" {{ $language->selected == 1 ? 'checked="checked"' : '' }} data-languages="language_{{$language->language_id}}">
+                                            <input type="hidden" id="hidden_language__{{$language->language_id}}"  name="hidden_language__{{$language->language_id}}" value="{{ $language->selected == 1 ? $language->language_id : '' }}">
                                             @if($language->subtag)
                                                 {{ $language->name . ' ' . '(' . strtoupper($language->subtag) . ')' }}
                                             @else
