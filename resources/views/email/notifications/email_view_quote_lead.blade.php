@@ -27,10 +27,12 @@
                 $formatter = new \NumberFormatter('en_US',  \NumberFormatter::CURRENCY);
                 $symbol = $formatter->getSymbol(\NumberFormatter::INTL_CURRENCY_SYMBOL);
                 $benefit = $formatter->formatCurrency(intval($quote["benefit"]) * 1000, $symbol);
+
                 $categories = [
-                  'Term Life',
-                  'Mortgage Insurance',
-                  'Burial Insurance',
+                  'Term Life', // 1
+                  'Mortgage Insurance', // 2
+                  'GUL', // 3
+                  'Burial Insurance', // 4
                 ];
 
                 $category = $categories[ intval($quote['category']) ];
