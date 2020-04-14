@@ -29,7 +29,7 @@ class UsersLanguageController extends BackendController
 
 	  //  dnd($this->loggedInUser);
 
-        $languages = UserLanguage::languages($this->loggedInUser);
+        $languages = UserLanguage::languages($this->loggedInUser->id);
 
         $data = [
             "user" => $this->loggedInUser,
