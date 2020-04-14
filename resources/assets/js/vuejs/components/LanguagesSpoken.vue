@@ -11,7 +11,7 @@
         ],
         filters: {
             format(language, index) {
-              if (index < this.props.languages.length) {
+              if (index < this.languages.length) {
                   return language + ", ";
               }
               else {

@@ -2920,7 +2920,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['languages'],
   filters: {
     format: function format(language, index) {
-      if (index < this.props.languages.length) {
+      if (index < this.languages.length) {
         return language + ", ";
       } else {
         return language;
