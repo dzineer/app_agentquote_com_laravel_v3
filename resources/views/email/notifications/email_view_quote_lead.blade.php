@@ -33,15 +33,15 @@
                     <table>
                         <tr>
                             <td>
-                                <label>Email</label>: {{ $quote["email"] }}<br/>
-                                <label>Name</label>: {{ $quote["name"] }}<br/>
-                                <label>Phone</label>: {{ $quote["phone"] }}<br/>
-                                <label>Category</label>: {{ $quote["category"] }}<br/>
-                                <label>Gender</label>: {{ $quote["gender"] }}<br/>
-                                <label>Tobacco</label>: {{ $quote["tobacco"] }}<br/>
-                                <label>Term</label>: {{ $quote["term"] }}<br/>
-                                <label>DOB</label>: {{ $quote["month"] }} / {{ $quote["day"] }} / {{ $quote["year"] }}<br/>
-                                <label>Benefit</label>: {{ $benefit }}<br/>
+                                <label>Email</label>: <strong>{{ $quote["email"] }}</strong><br/>
+                                <label>Name</label>: <strong>{{ $quote["name"] }}</strong><br/>
+                                <label>Phone</label>: <strong>{{ $quote["phone"] }}</strong><br/>
+                                <label>Category</label>: <strong>{{ $quote["category"] }}</strong><br/>
+                                <label>Gender</label>: <strong>{{ $quote["gender"] }}</strong><br/>
+                                <label>Tobacco</label>: <strong>{{ $quote["tobacco"] }}</strong><br/>
+                                <label>Term</label>: <strong>{{ $quote["term"] }}</strong><br/>
+                                <label>DOB</label>: <strong>{{ $quote["month"] }}/{{ $quote["day"] }}/{{ $quote["year"] }}</strong><br/>
+                                <label>Benefit</label>: <strong>{{ $benefit }}</strong><br/>
                                 <br/>
                             </td>
                         </tr>
