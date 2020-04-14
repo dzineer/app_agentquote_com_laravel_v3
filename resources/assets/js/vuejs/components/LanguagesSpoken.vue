@@ -1,6 +1,6 @@
 <template>
     <p>
-        <span v-for="(language, index) in languages" class="tw-mr-1">{{ language | formatLanguage(language, index) }}</span>
+        <span v-for="(language, index) in languages" class="tw-mr-1">{{ language | formatLanguage(language, index, languages) }}</span>
     </p>
 </template>
 
@@ -10,8 +10,8 @@
             'languages'
         ],
         filters: {
-            formatLanguage(language, index) {
-              if (index < this.languages.length) {
+            formatLanguage(language, index, languages) {
+              if (index < languages.length) {
                   return language + ", ";
               }
               else {
