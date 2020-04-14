@@ -2931,7 +2931,7 @@ __webpack_require__.r(__webpack_exports__);
         else if (index + 2 === this.languages.length && this.languages.length >= 3) {
             return language + ", and ";
           } // English, Thai,
-          else if (index <= this.languages.length) {
+          else if (index < this.languages.length) {
               return language + ", ";
             } else {
               return language;
