@@ -113,7 +113,7 @@
 
         <signup :benefit-limits="benefitLimits" userid="47" :signing-up="showSignup" insurance-category="fe" ></signup>
         <quote :show="showQuote" :quote-details="quote" :items="quote.items" :can-requote="true" insurance-category="fe"></quote>
-        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}" languages="{!! $languages_spoken !!}"></contact-banner>
+        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}" languages="{!! json_encode($languages_spoken) !!}"></contact-banner>
 
         <a href="#featured-tips"></a>
 
