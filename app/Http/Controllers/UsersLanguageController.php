@@ -31,6 +31,9 @@ class UsersLanguageController extends BackendController
      */
     public function settings()
 	{
+
+	    dd($this->loggedInUser);
+
         $languages = UserLanguage::languages($this->loggedInUser);
 
         $data = [
