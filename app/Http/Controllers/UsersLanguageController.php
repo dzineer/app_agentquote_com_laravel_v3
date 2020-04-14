@@ -57,11 +57,13 @@ class UsersLanguageController extends BackendController
             'user_id' => $user_id,
         ])->whereNotIn('language_id', $languages)->delete();
 
+
+        $inserts = array_map(function ($language_id) use ($user_id) {
+            return ["user_id" => $user_id, "language_id" => $language_id];
+        }, $languages);
+
         if (count($inserts)) {
-            $inserts = array_map(function ($language_id) use ($user_id) {
-                return ["user_id" => $user_id, "language_id" => $language_id];
-            }, $languages);
-            UserLanguage::insert( $inserts );
+            UserLanguage::insert($inserts);
         }
 
         VarDumper::dump($inserts);
