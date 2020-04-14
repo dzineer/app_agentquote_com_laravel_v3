@@ -2917,15 +2917,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['languages'],
-  data: function data() {
-    return {
-      items: []
-    };
-  },
-  mounted: function mounted() {
-    var items = JSON.parse(this.languages);
-  }
+  props: ['languages']
 });
 
 /***/ }),

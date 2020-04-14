@@ -9,13 +9,5 @@
         props: [
             'languages'
         ],
-        data() {
-            return {
-                items: []
-            }
-        },
-        mounted() {
-            let items = JSON.parse(this.languages);
-        }
     }
 </script>
