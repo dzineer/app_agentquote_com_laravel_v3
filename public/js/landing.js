@@ -2480,9 +2480,33 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/vuejs/components/ContactUsBanner.vue ***!
   \****************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/resources/assets/js/vuejs/components/ContactUsBanner.vue: Unexpected token (19:19)\n\n\u001b[0m \u001b[90m 17 | \u001b[39m\u001b[36mimport\u001b[39m \u001b[33mLanguagesSpoken\u001b[39m from \u001b[32m\"./LanguagesSpoken\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 | \u001b[39m\u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 | \u001b[39m    props\u001b[33m:\u001b[39m {\u001b[32m'phone'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'offeredby'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'languages'\u001b[39m}\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 | \u001b[39m    components\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 21 | \u001b[39m        \u001b[33mLanguagesSpoken\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 | \u001b[39m    }\u001b[0m\n    at Object._raise (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:742:17)\n    at Object.raiseWithData (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:735:17)\n    at Object.raise (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:729:17)\n    at Object.unexpected (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:8757:16)\n    at Object.parseObjPropValue (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10538:21)\n    at Object.parseObjectMember (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10461:10)\n    at Object.parseObj (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10374:25)\n    at Object.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9995:28)\n    at Object.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:4614:20)\n    at Object.parseExprSubscripts (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9602:23)\n    at Object.parseMaybeUnary (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9582:21)\n    at Object.parseExprOps (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9452:23)\n    at Object.parseMaybeConditional (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9425:23)\n    at Object.parseMaybeAssign (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9380:21)\n    at Object.parseObjectProperty (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10512:101)\n    at Object.parseObjPropValue (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10537:101)\n    at Object.parseObjectMember (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10461:10)\n    at Object.parseObj (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:10374:25)\n    at Object.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9995:28)\n    at Object.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:4614:20)\n    at Object.parseExprSubscripts (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9602:23)\n    at Object.parseMaybeUnary (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9582:21)\n    at Object.parseExprOps (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9452:23)\n    at Object.parseMaybeConditional (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9425:23)\n    at Object.parseMaybeAssign (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:9380:21)\n    at Object.parseExportDefaultExpression (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:12274:24)\n    at Object.parseExport (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:12176:31)\n    at Object.parseStatementContent (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:11185:27)\n    at Object.parseStatement (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:11081:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:11655:25)\n    at Object.parseBlockBody (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:11642:10)\n    at Object.parseTopLevel (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:11012:10)\n    at Object.parse (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:12628:10)\n    at parse (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/node_modules/@babel/parser/lib/index.js:12679:38)\n    at parser (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _LanguagesSpoken__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LanguagesSpoken */ "./resources/assets/js/vuejs/components/LanguagesSpoken.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['phone', 'offeredby', 'languages'],
+  components: {
+    LanguagesSpoken: _LanguagesSpoken__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
 
 /***/ }),
 
@@ -2872,6 +2896,35 @@ __webpack_require__.r(__webpack_exports__);
     genIcon: function genIcon() {
       return "fa-icon icon-default fa-" + this.name + ' ' + this.classes;
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/vuejs/components/LanguagesSpoken.vue":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/vuejs/components/LanguagesSpoken.vue ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['languages'],
+  data: function data() {
+    return {
+      items: []
+    };
+  },
+  mounted: function mounted() {
+    var items = JSON.parse(this.props.languages);
   }
 });
 
@@ -46217,6 +46270,39 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-d3695594\",\"hasScoped\":false,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/LanguagesSpoken.vue":
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-d3695594","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/LanguagesSpoken.vue ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "p",
+    _vm._l(_vm.languages, function(language) {
+      return _c("span", {
+        staticClass: "tw-mr-1",
+        domProps: { textContent: _vm._s(language) }
+      })
+    }),
+    0
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+if (false) {}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-d7761f2c\",\"hasScoped\":true,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/ResponsiveMenu.vue":
 /*!*********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-d7761f2c","hasScoped":true,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/ResponsiveMenu.vue ***!
@@ -63512,6 +63598,52 @@ var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer
   __vue_module_identifier__
 )
 Component.options.__file = "resources/assets/js/vuejs/components/Icon.vue"
+
+/* hot reload */
+if (false) {}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/vuejs/components/LanguagesSpoken.vue":
+/*!******************************************************************!*\
+  !*** ./resources/assets/js/vuejs/components/LanguagesSpoken.vue ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_LanguagesSpoken_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !babel-loader!../../../../../node_modules/vue-loader/lib/selector?type=script&index=0!./LanguagesSpoken.vue */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/vuejs/components/LanguagesSpoken.vue");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_template_compiler_index_id_data_v_d3695594_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_LanguagesSpoken_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/template-compiler/index?{"id":"data-v-d3695594","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!../../../../../node_modules/vue-loader/lib/selector?type=template&index=0!./LanguagesSpoken.vue */ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-d3695594\",\"hasScoped\":false,\"optionsId\":\"0\",\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/LanguagesSpoken.vue");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/component-normalizer */ "./node_modules/vue-loader/lib/runtime/component-normalizer.js");
+var disposed = false
+/* script */
+
+
+/* template */
+
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+
+var Component = Object(_node_modules_vue_loader_lib_runtime_component_normalizer__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_LanguagesSpoken_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_d3695594_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_LanguagesSpoken_vue__WEBPACK_IMPORTED_MODULE_1__["render"],
+  _node_modules_vue_loader_lib_template_compiler_index_id_data_v_d3695594_hasScoped_false_optionsId_0_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_LanguagesSpoken_vue__WEBPACK_IMPORTED_MODULE_1__["staticRenderFns"],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/vuejs/components/LanguagesSpoken.vue"
 
 /* hot reload */
 if (false) {}
