@@ -16,11 +16,7 @@
 <script>
     import LanguagesSpoken from "./LanguagesSpoken";
     export default {
-        props: {'phone': {},'offeredby': {},
-            'languages': {
-                type: Array,
-                default: []
-        }},
+        props: {'phone','offeredby', 'languages'},
         components: {
             LanguagesSpoken
         }

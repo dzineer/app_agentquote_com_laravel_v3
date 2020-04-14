@@ -6,11 +6,16 @@
 
 <script>
     export default {
-        props: {
-            'languages': {
-                type: Array,
-                default: []
+        props: [
+            'languages'
+        ],
+        data() {
+            return {
+                items: []
             }
+        },
+        mounted() {
+            let items = JSON.parse(this.props.languages);
         }
     }
 </script>
