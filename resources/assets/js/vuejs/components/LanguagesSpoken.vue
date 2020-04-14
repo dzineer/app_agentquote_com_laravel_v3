@@ -21,11 +21,11 @@
               else if (this.languages.length === 2 && index === 1) {
                   return language;
               }
-              // English, Thai, and Korean
-              else if (index <= this.languages.length && index+1 === this.languages.length) {
+              // English, Thai, and
+              else if (index+1 === this.languages.length) {
                   return language + ", and ";
               }
-              // English, Thai, and Korean
+              // English, Thai,
               else if (index <= this.languages.length) {
                   return language + ", ";
               }
