@@ -25,6 +25,10 @@
               else if (index <= this.languages.length && index+1 === this.languages.length) {
                   return language + ", and ";
               }
+              // English, Thai, and Korean
+              else if (index <= this.languages.length) {
+                  return language + ", ";
+              }
               else {
                   return language;
               }

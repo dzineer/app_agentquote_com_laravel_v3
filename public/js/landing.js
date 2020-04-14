@@ -2930,9 +2930,12 @@ __webpack_require__.r(__webpack_exports__);
         } // English, Thai, and Korean
         else if (index <= this.languages.length && index + 1 === this.languages.length) {
             return language + ", and ";
-          } else {
-            return language;
-          }
+          } // English, Thai, and Korean
+          else if (index <= this.languages.length) {
+              return language + ", ";
+            } else {
+              return language;
+            }
     }
   }
 });
