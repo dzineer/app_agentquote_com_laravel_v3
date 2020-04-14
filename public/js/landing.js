@@ -2502,7 +2502,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['phone', 'offeredby', 'languages'],
+  props: {
+    'phone': {},
+    'offeredby': {},
+    'languages': {
+      type: Array,
+      "default": []
+    }
+  },
   components: {
     LanguagesSpoken: _LanguagesSpoken__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
