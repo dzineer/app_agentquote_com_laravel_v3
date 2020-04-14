@@ -295,7 +295,7 @@ class PhoneValidationModule extends CustomModule {
 
                 Log::info( "\nPhoneValidation::onAction - verification_code (error) : " . json_encode($error) );
 
-                $this->sendNewQuoteNotification( $verifiedQuote, $config['token'] );
+                // $this->sendNewQuoteNotification( $verifiedQuote, $config['token'] );
 
                 return response()->json([
                     "success" => true,
