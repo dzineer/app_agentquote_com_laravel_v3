@@ -38,7 +38,7 @@ class UserLanguage extends Eloquent
 						LEFT JOIN user_languages ul ON(l.id = ul.language_id AND ul.user_id = {$userId})
 							ORDER BY l.name ASC";
 
-        echo "<pre>" . $query . "</pre>";
+        // echo "<pre>" . $query . "</pre>";
 
         return DB::select($query);
     }

@@ -15,11 +15,6 @@ use Illuminate\Support\Facades\DB;
  */
 class UsersLanguageController extends BackendController
 {
-    const LOGO_MAX_HEIGHT = 100;
-    const LOGO_MAX_WIDTH = 300;
-    const PORTRAIT_MAX_WIDTH = 100;
-    const PORTRAIT_MAX_HEIGHT = 100;
-
     /**
      * @return array|string
      * @throws \Throwable
