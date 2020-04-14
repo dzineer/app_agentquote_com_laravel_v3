@@ -55,7 +55,7 @@
                                             @endif
                                         </label>
 
-                                        <div class="collapse language" id="language_{{$language->language_id}}" data-carrier="language_{{$language->language_id}}">
+                                        <div class="collapse language" id="language_{{$language->language_id}}" data-language="language_{{$language->language_id}}">
 
                                         </div>
                                     </div> <!-- ./form-check -->
