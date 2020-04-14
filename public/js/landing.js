@@ -2920,13 +2920,19 @@ __webpack_require__.r(__webpack_exports__);
   props: ['languages'],
   methods: {
     formatLanguage: function formatLanguage(language, index) {
-      debugger;
+      debugger; // English and
 
-      if (index < this.languages.length) {
-        return language + ", ";
-      } else {
-        return language;
-      }
+      if (this.languages.length === 2 && index === 0) {
+        return language + " and ";
+      } // English and Thai
+      else if (this.languages.length === 2 && index === 1) {
+          return language;
+        } // English, Thai, and Korean
+        else if (index <= this.languages.length && index + 1 === this.languages.length) {
+            return language + ", and ";
+          } else {
+            return language;
+          }
     }
   }
 });

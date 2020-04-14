@@ -12,8 +12,18 @@
         methods: {
             formatLanguage(language, index) {
               debugger;
-              if (index < this.languages.length) {
-                  return language + ", ";
+
+              // English and
+              if (this.languages.length === 2 && index === 0) {
+                  return language + " and ";
+              }
+              // English and Thai
+              else if (this.languages.length === 2 && index === 1) {
+                  return language;
+              }
+              // English, Thai, and Korean
+              else if (index <= this.languages.length && index+1 === this.languages.length) {
+                  return language + ", and ";
               }
               else {
                   return language;
