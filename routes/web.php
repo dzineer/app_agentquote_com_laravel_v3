@@ -325,7 +325,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('landing-page/user/{user}/profile', [\App\Http\Controllers\LandingPageController::class, 'update'])->name('user.landing-page.profile.update');
     Route::post('landing-page/user/{id}/profile', [\App\Http\Controllers\LandingPageController::class, 'store'])->name('user.landing-page.profile.store');
 
-    Route::get('profile/languages/settings', [\App\Http\Controllers\UsersLanguageController::class, 'settings'])->name('microsite.languages.settings');
+    Route::get('profile/language/settings', [\App\Http\Controllers\UsersLanguageController::class, 'settings'])->name('microsite.languages.settings');
     Route::put('landing-page/user/{user}/profile/languages', [\App\Http\Controllers\UsersLanguageController::class, 'update'])->name('user.landing-page.profile.languages.update');
     Route::post('landing-page/user/{id}/profile/languages', [\App\Http\Controllers\UsersLanguageController::class, 'store'])->name('user.landing-page.profile.languages.store');
 
