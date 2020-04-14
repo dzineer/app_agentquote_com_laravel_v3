@@ -44210,7 +44210,7 @@ var render = function() {
           _vm._v(
             "Call us with questions or to apply by phone. You can also call with questions or to apply by phone in\n        "
           ),
-          _c("languages-spoken", { attrs: { language: _vm.languages } }),
+          _c("languages-spoken", { attrs: { languages: _vm.languages } }),
           _vm._v("\n    .")
         ],
         1
