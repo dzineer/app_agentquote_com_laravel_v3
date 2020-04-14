@@ -44,15 +44,15 @@
                             <th>Benefit</th>
                         </tr>
                         <tr>
-                            <td>{{ $quote->email }}</td>
-                            <td>{{ $quote->name }}</td>
-                            <td>{{ $quote->phone }}</td>
-                            <td>{{ $quote->category }}</td>
-                            <td>{{ $quote->period }}</td>
-                            <td>{{ $quote->gender }}</td>
-                            <td>{{ $quote->tobacco }}</td>
-                            <td>{{ $quote->term }}</td>
-                            <td>{{ $quote->month }} / {{ $quote->day }} / {{ $quote->year }}</td>
+                            <td>{{ $quote["email"] }}</td>
+                            <td>{{ $quote["name"] }}</td>
+                            <td>{{ $quote["phone"] }}</td>
+                            <td>{{ $quote["category"] }}</td>
+                            <td>{{ $quote["period"] }}</td>
+                            <td>{{ $quote["gender"] }}</td>
+                            <td>{{ $quote["tobacco"] }}</td>
+                            <td>{{ $quote["term"] }}</td>
+                            <td>{{ $quote["month"] }} / {{ $quote["day"] }} / {{ $quote["year"] }}</td>
                             <td>{{ $benefit }}</td>
                         </tr>
                     </table>
