@@ -37,14 +37,14 @@
 
                 ?>
                 <p style="margin-bottom:12px">
-                    You have just received the following quote lead:<br><br>
+                    You have just received the following {{ $category }} quote lead:<br><br>
                     <table>
                         <tr>
                             <td>
+                                <label>Category</label>: <strong>{{ $category }}</strong><br/>
                                 <label>Email</label>: <strong>{{ $quote["email"] }}</strong><br/>
                                 <label>Name</label>: <strong>{{ $quote["name"] }}</strong><br/>
                                 <label>Phone</label>: <strong>{{ $quote["phone"] }}</strong><br/>
-                                <label>Category</label>: <strong>{{ $category }}</strong><br/>
                                 <label>Gender</label>: <strong>{{ $quote["gender"] }}</strong><br/>
                                 <label>Tobacco</label>: <strong>{{ $quote["tobacco"] }}</strong><br/>
                                 <label>Term</label>: <strong>{{ $quote["term"] }} Years</strong><br/>
