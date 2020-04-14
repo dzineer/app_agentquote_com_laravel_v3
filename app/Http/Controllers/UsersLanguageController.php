@@ -50,29 +50,21 @@ class UsersLanguageController extends BackendController
         $languages = $request->input('languages');
 
         $inserts = [];
-        $deletes = [];
 
         VarDumper::dump($languages);
 
-        die(1);
+        UserLanguage::where([
+            'user_id' => $user_id,
+        ])->whereNotIn('language_id', $languages)->delete();
 
-        foreach( $settings['languages'] as $language ) {
-            if( $language['hidden'] == 0 ) { // not set before
-                if ( isset( $language['value'] ) ) { // should we set this?
-                    CategoriesInsurance::addCarrier($user_id, $language["value"], 1);
-                }
-
-            }
-            else if ( isset( $language['hidden'] ) && $language['hidden'] != 0 ) { // we already have this carrier
-                if ( ! isset( $language['value'] ) ) { // do we still have this carrier
-                    CategoriesInsurance::removeCarrier($user_id, $language["hidden"], 1);
-                }
-            }
+        if (count($inserts)) {
+            $inserts = array_map(function ($language_id) use ($user_id) {
+                return ["user_id" => $user_id, "language_id" => $language_id];
+            }, $languages);
+            UserLanguage::insert( $inserts );
         }
 
-        $message = 'Carriers updated';
-
-        return view('termlife-carriers', ['carriers' => $carriers_termLife, 'message' => $message ] );
+        return redirect('profile/language/settings');
 
     }
 
