@@ -58,7 +58,6 @@ class UsersLanguageController extends BackendController
                 $arr = explode('__', $field_name );
                 $id = $arr[1];
                 $key = 'language_' . $id;
-                // echo "<br>arr: <br>" . print_r( $arr, true );
                 $settings['languages'][ $key ]['hidden'] = $field_value;
 
                 $deletes[] = [
@@ -77,21 +76,13 @@ class UsersLanguageController extends BackendController
             }
         }
 
-        foreach ($request->all() as $v) {
-            VarDumper::dump($v);
-        }
+        VarDumper::dump($form);
 
-        foreach ($inserts as $v) {
-            VarDumper::dump($v);
-        }
+        VarDumper::dump($inserts);
 
-        foreach ($deletes as $v) {
-            VarDumper::dump($v);
-        }
+        VarDumper::dump($deletes);
 
-        foreach ($settings as $v) {
-            VarDumper::dump($v);
-        }
+        VarDumper::dump($settings);
 
         die(1);
 
