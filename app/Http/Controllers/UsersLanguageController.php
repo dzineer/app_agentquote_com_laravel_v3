@@ -86,6 +86,10 @@ class UsersLanguageController extends BackendController
             VarDumper::dump($v);
         }
 
+        foreach ($settings as $v) {
+            VarDumper::dump($v);
+        }
+
         die(1);
 
         foreach( $settings['languages'] as $language ) {
