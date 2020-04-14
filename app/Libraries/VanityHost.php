@@ -79,7 +79,7 @@ class VanityHost
             }
         }
 
-        return json_encode($spoken);
+        return $spoken;
     }
 
     /**
