@@ -33,16 +33,16 @@
                     <table>
                         <tr>
                             <td>
-                                <label>Email</label>: {{ $quote["email"] }}
-                                <label>Name</label>: {{ $quote["name"] }}
-                                <label>Phone</label>: {{ $quote["phone"] }}
-                                <label>Category</label>: {{ $quote["category"] }}
-                                <label>Gender</label>: {{ $quote["gender"] }}
-                                <label>Tobacco</label>: {{ $quote["tobacco"] }}
-                                <label>Term</label>: {{ $quote["term"] }}
-                                <label>DOB</label>: {{ $quote["month"] }} / {{ $quote["day"] }} / {{ $quote["year"] }}
-                                <label>Benefit</label>: {{ $benefit }}
-
+                                <label>Email</label>: {{ $quote["email"] }}<br/>
+                                <label>Name</label>: {{ $quote["name"] }}<br/>
+                                <label>Phone</label>: {{ $quote["phone"] }}<br/>
+                                <label>Category</label>: {{ $quote["category"] }}<br/>
+                                <label>Gender</label>: {{ $quote["gender"] }}<br/>
+                                <label>Tobacco</label>: {{ $quote["tobacco"] }}<br/>
+                                <label>Term</label>: {{ $quote["term"] }}<br/>
+                                <label>DOB</label>: {{ $quote["month"] }} / {{ $quote["day"] }} / {{ $quote["year"] }}<br/>
+                                <label>Benefit</label>: {{ $benefit }}<br/>
+                                <br/>
                             </td>
                         </tr>
                     </table>
