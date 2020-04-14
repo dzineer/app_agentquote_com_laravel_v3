@@ -2921,10 +2921,10 @@ __webpack_require__.r(__webpack_exports__);
     formatLanguage: function formatLanguage(language, index) {
       debugger; // English and
 
-      if (this.languages.length === 2 && index === 0) {
+      if (this.languages.length === 2 && index === 1) {
         return language + " and ";
       } // English and Thai
-      else if (this.languages.length === 2 && index === 1) {
+      else if (this.languages.length === 2 && index === 2) {
           return language + ".";
         } // English, Thai, and
         else if (index + 1 === this.languages.length && this.languages.length >= 3) {
