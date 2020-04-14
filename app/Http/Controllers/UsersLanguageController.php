@@ -35,7 +35,7 @@ class UsersLanguageController extends BackendController
             "languages" => $languages,
         ];
 
-        // dd($data);
+        dd($data);
 
 		return view('profile.languages.index', $data);
 	}
