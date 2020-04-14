@@ -65,7 +65,7 @@ class VanityHost
 
     /**
      * @param $user
-     * @return array
+     * @return false|string
      */
     protected function getSpokenLanguages($user ) {
         $languages = UserLanguage::languagesSpoken( $user->id );
@@ -79,7 +79,7 @@ class VanityHost
             }
         }
 
-        return $spoken;
+        return json_encode($spoken);
     }
 
     /**
