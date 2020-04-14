@@ -2497,8 +2497,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['phone', 'offeredby']
+  props: ['phone', 'offeredby', 'languages']
 });
 
 /***/ }),
@@ -44175,11 +44177,23 @@ var render = function() {
         _vm._v("Need to talk to us directly?")
       ]),
       _vm._v(" "),
-      _c("p", { staticClass: "tw-text-xl sm:tw-text-2xl tw-mb-6" }, [
-        _vm._v(
-          "Call us with questions or to apply by phone. You can also call with questions or to apply by phone in English."
-        )
-      ]),
+      _c(
+        "p",
+        { staticClass: "tw-text-xl sm:tw-text-2xl tw-mb-6" },
+        [
+          _vm._v(
+            "Call us with questions or to apply by phone. You can also call with questions or to apply by phone in\n        "
+          ),
+          _vm._l(_vm.languages, function(language) {
+            return _c("span", {
+              staticClass: "tw-mr-1",
+              domProps: { textContent: _vm._s(language) }
+            })
+          }),
+          _vm._v("\n    .")
+        ],
+        2
+      ),
       _vm._v(" "),
       _c(
         "div",

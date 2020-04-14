@@ -49,8 +49,6 @@ class UsersLanguageController extends BackendController
 
         $languages = $request->input('languages');
 
-        $inserts = [];
-
         VarDumper::dump($languages);
 
         UserLanguage::where([

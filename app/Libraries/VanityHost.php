@@ -2,6 +2,7 @@
 
 namespace App\Libraries;
 use App\Models\Profile;
+use App\Models\UserLanguage;
 use Illuminate\Support\Facades\View;
 use App\CustomModules\UserCustomPagesModule;
 use Dzineer\CustomModules\Facades\CustomModules;
@@ -50,6 +51,7 @@ class VanityHost
         $data['company'] = $company;
         $data['options'] = $options;
         $data['branding'] = $this->genBranding( $user, $profile, $company, $data['version'] );
+        $data['languages_spoken'] = $this->getSpokenLanguages( $user );
 
         // dd($company);
 
@@ -57,6 +59,25 @@ class VanityHost
 
         // return view( 'landing-pages.v3.quote_modules.underwritten.index', $data );
         return view( $template, $data );
+    }
+
+    /**
+     * @param $user
+     * @return array
+     */
+    protected function getSpokenLanguages($user ) {
+        $languages = UserLanguage::languagesSpoken( $user->id );
+        $spoken = [];
+        foreach($languages as $language) {
+
+            if($language->subtag) {
+                $spoken[] = $language->name . ' ' . '(' . strtoupper($language->subtag) . ')';
+            } else {
+                $spoken[] = $language->name;
+            }
+        }
+
+        return $spoken;
     }
 
     /**

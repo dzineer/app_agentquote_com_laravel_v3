@@ -43,6 +43,19 @@ class UserLanguage extends Eloquent
         return DB::select($query);
     }
 
+    static function languagesSpoken( $userId ) {
+
+        $query = "SELECT l.name, l.prefix, l.subtag
+					FROM user_languages ul
+						LEFT JOIN languages l ON(l.id = ul.language_id)
+							WHERE ul.user_id = {$userId}
+							   ORDER BY l.name ASC";
+
+        // echo "<pre>" . $query . "</pre>";
+
+        return DB::select($query);
+    }
+
     static function removeLanguage( $userId, $languageId) {
         return UserLanguage::where([
             ["user_id", "=", $userId],
