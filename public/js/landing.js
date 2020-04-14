@@ -2928,10 +2928,10 @@ __webpack_require__.r(__webpack_exports__);
       else if (this.languages.length === 2 && index === 1) {
           return language;
         } // English, Thai, and
-        else if (index + 2 === this.languages.length && this.languages.length >= 3) {
+        else if (index + 1 === this.languages.length && this.languages.length >= 3) {
             return language + ", and ";
           } // English, Thai,
-          else if (index + 1 < this.languages.length) {
+          else if (index < this.languages.length) {
               return language + ", ";
             } else {
               return language;
@@ -46301,7 +46301,7 @@ var render = function() {
     "p",
     _vm._l(_vm.languages, function(language, index) {
       return _c("span", { key: language, staticClass: "tw-mr-1" }, [
-        _vm._v(_vm._s(_vm.formatLanguage(language, index)))
+        _vm._v(_vm._s(_vm.formatLanguage(language, index + 1)))
       ])
     }),
     0

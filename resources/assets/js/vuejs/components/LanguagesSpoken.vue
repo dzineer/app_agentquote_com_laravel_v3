@@ -1,6 +1,6 @@
 <template>
     <p>
-        <span v-for="(language, index) in languages" :key="language" class="tw-mr-1">{{ formatLanguage(language, index) }}</span>
+        <span v-for="(language, index) in languages" :key="language" class="tw-mr-1">{{ formatLanguage(language, index+1) }}</span>
     </p>
 </template>
 
@@ -22,11 +22,11 @@
                   return language;
               }
               // English, Thai, and
-              else if (index+2 === this.languages.length && this.languages.length >= 3) {
+              else if (index+1 === this.languages.length && this.languages.length >= 3) {
                   return language + ", and ";
               }
               // English, Thai,
-              else if (index+1 < this.languages.length) {
+              else if (index < this.languages.length) {
                   return language + ", ";
               }
               else {
