@@ -41,7 +41,6 @@
                     <table>
                         <tr>
                             <td>
-                                <label>Category</label>: <strong>{{ $category }}</strong><br/>
                                 <label>Email</label>: <strong>{{ $quote["email"] }}</strong><br/>
                                 <label>Name</label>: <strong>{{ $quote["name"] }}</strong><br/>
                                 <label>Phone</label>: <strong>{{ $quote["phone"] }}</strong><br/>
