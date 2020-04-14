@@ -1,5 +1,5 @@
 <template>
-    <p>
+    <p class="tw-inline">
         <span v-for="(language, index) in languages" :key="language" class="tw-mr-1">{{ formatLanguage(language, index+1) }}</span>
     </p>
 </template>

@@ -46297,6 +46297,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "p",
+    { staticClass: "tw-inline" },
     _vm._l(_vm.languages, function(language, index) {
       return _c("span", { key: language, staticClass: "tw-mr-1" }, [
         _vm._v(_vm._s(_vm.formatLanguage(language, index + 1)))
