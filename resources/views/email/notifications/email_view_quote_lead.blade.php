@@ -35,7 +35,7 @@
                   'Burial Insurance', // 4
                 ];
 
-                $category = $categories[ intval($quote['category']) ];
+                $category = $categories[ intval($quote['category'])-1 ];
 
                 $phone = preg_replace('~.*(\d{3})[^\d]{0,7}(\d{3})[^\d]{0,7}(\d{4}).*~', '($1) $2-$3', $quote["phone"]);
 
