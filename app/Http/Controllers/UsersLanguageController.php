@@ -2,13 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Profile;
-use App\Models\LandingPageCategory;
-use App\Models\LandingPageUser;
-use App\Models\UserGoogleAnalytic;
 use App\Models\UserLanguage;
 use App\User;
-use Dzineer\LandingPages\Models\UserDomain;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Facades\AQLog;
