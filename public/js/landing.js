@@ -2918,13 +2918,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['languages'],
-  filters: {
-    ffaa: function ffaa(language, index) {
+  methods: {
+    formatLanguage: function formatLanguage(language, index) {
       debugger;
-      return language;
-    },
-    formatLanguage: function formatLanguage(language, index, languages) {
-      if (index < languages.length) {
+
+      if (index < this.languages.length) {
         return language + ", ";
       } else {
         return language;
@@ -46293,8 +46291,8 @@ var render = function() {
   return _c(
     "p",
     _vm._l(_vm.languages, function(language, index) {
-      return _c("span", { staticClass: "tw-mr-1" }, [
-        _vm._v(_vm._s(_vm._f("ffaa")(language, language, index)))
+      return _c("span", { key: language, staticClass: "tw-mr-1" }, [
+        _vm._v(_vm._s(_vm.formatLanguage(language, index)))
       ])
     }),
     0
