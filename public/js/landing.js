@@ -2499,7 +2499,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['phone', 'offeredby', 'languages'],
@@ -44231,7 +44230,7 @@ var render = function() {
             "Call us with questions or to apply by phone. You can also call with questions or to apply by phone in\n        "
           ),
           _c("languages-spoken", { attrs: { languages: _vm.languages } }),
-          _vm._v("\n    .")
+          _vm._v(".")
         ],
         1
       ),
