@@ -37,7 +37,7 @@
 
                 ?>
                 <p style="margin-bottom:12px">
-                    You have just received the following {{ $category }} quote lead:<br><br>
+                    You have just received the following <strong>{{ $category }}</strong> quote lead:<br><br>
                     <table>
                         <tr>
                             <td>
