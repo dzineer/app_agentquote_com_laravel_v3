@@ -26,7 +26,15 @@
                 <?php
                 $formatter = new \NumberFormatter('en_US',  \NumberFormatter::CURRENCY);
                 $symbol = $formatter->getSymbol(\NumberFormatter::INTL_CURRENCY_SYMBOL);
-                $benefit = $formatter->formatCurrency(intval($quote["benefit"]) * 1000, $symbol)
+                $benefit = $formatter->formatCurrency(intval($quote["benefit"]) * 1000, $symbol);
+                $categories = [
+                  'Term Life',
+                  'Mortgage Insurance',
+                  'Burial Insurance',
+                ];
+
+                $category = $categories[ $quote['category'] ];
+
                 ?>
                 <p style="margin-bottom:12px">
                     You have just received the following quote lead:<br><br>
@@ -36,10 +44,10 @@
                                 <label>Email</label>: <strong>{{ $quote["email"] }}</strong><br/>
                                 <label>Name</label>: <strong>{{ $quote["name"] }}</strong><br/>
                                 <label>Phone</label>: <strong>{{ $quote["phone"] }}</strong><br/>
-                                <label>Category</label>: <strong>{{ $quote["category"] }}</strong><br/>
+                                <label>Category</label>: <strong>{{ $category }}</strong><br/>
                                 <label>Gender</label>: <strong>{{ $quote["gender"] }}</strong><br/>
                                 <label>Tobacco</label>: <strong>{{ $quote["tobacco"] }}</strong><br/>
-                                <label>Term</label>: <strong>{{ $quote["term"] }}</strong><br/>
+                                <label>Term</label>: <strong>{{ $quote["term"] }} Years</strong><br/>
                                 <label>DOB</label>: <strong>{{ $quote["month"] }}/{{ $quote["day"] }}/{{ $quote["year"] }}</strong><br/>
                                 <label>Benefit</label>: <strong>{{ $benefit }}</strong><br/>
                                 <br/>
