@@ -1,6 +1,6 @@
 <template>
     <p>
-        <span v-for="(language, index) in languages" v-text="this.format(language, index)" class="tw-mr-1"></span>
+        <span v-for="(language, index) in languages" class="tw-mr-1">{{ language | format(language, index) }}</span>
     </p>
 </template>
 
@@ -9,7 +9,7 @@
         props: [
             'languages'
         ],
-        methods: {
+        filters: {
             format(language, index) {
               if (index < this.props.languages.length) {
                   return language + ", ";

@@ -2918,7 +2918,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['languages'],
-  methods: {
+  filters: {
     format: function format(language, index) {
       if (index < this.props.languages.length) {
         return language + ", ";
@@ -46289,10 +46289,9 @@ var render = function() {
   return _c(
     "p",
     _vm._l(_vm.languages, function(language, index) {
-      return _c("span", {
-        staticClass: "tw-mr-1",
-        domProps: { textContent: _vm._s(this.format(language, index)) }
-      })
+      return _c("span", { staticClass: "tw-mr-1" }, [
+        _vm._v(_vm._s(_vm._f("format")(language, language, index)))
+      ])
     }),
     0
   )
