@@ -1,6 +1,6 @@
 <template>
     <p>
-        <span v-for="(language, index) in languages" class="tw-mr-1">{{ language | formatLanguage(language, index, languages) }}</span>
+        <span v-for="(language, index) in languages" class="tw-mr-1">{{ language | ffaa(language, index) }}</span>
     </p>
 </template>
 
@@ -10,6 +10,10 @@
             'languages'
         ],
         filters: {
+            ffaa(language, index) {
+                debugger;
+                return language;
+            },
             formatLanguage(language, index, languages) {
               if (index < languages.length) {
                   return language + ", ";
