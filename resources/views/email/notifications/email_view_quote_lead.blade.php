@@ -32,28 +32,18 @@
                     You have just received the following quote lead::<br><br>
                     <table>
                         <tr>
-                            <th>Email</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Category</th>
-                            <th>Period</th>
-                            <th>Gender</th>
-                            <th>Tobacco</th>
-                            <th>Term</th>
-                            <th>DOB</th>
-                            <th>Benefit</th>
-                        </tr>
-                        <tr>
-                            <td>{{ $quote["email"] }}</td>
-                            <td>{{ $quote["name"] }}</td>
-                            <td>{{ $quote["phone"] }}</td>
-                            <td>{{ $quote["category"] }}</td>
-                            <td>{{ $quote["period"] }}</td>
-                            <td>{{ $quote["gender"] }}</td>
-                            <td>{{ $quote["tobacco"] }}</td>
-                            <td>{{ $quote["term"] }}</td>
-                            <td>{{ $quote["month"] }} / {{ $quote["day"] }} / {{ $quote["year"] }}</td>
-                            <td>{{ $benefit }}</td>
+                            <td>
+                                <label>Email</label>: {{ $quote["email"] }}
+                                <label>Name</label>: {{ $quote["name"] }}
+                                <label>Phone</label>: {{ $quote["phone"] }}
+                                <label>Category</label>: {{ $quote["category"] }}
+                                <label>Gender</label>: {{ $quote["gender"] }}
+                                <label>Tobacco</label>: {{ $quote["tobacco"] }}
+                                <label>Term</label>: {{ $quote["term"] }}
+                                <label>DOB</label>: {{ $quote["month"] }} / {{ $quote["day"] }} / {{ $quote["year"] }}
+                                <label>Benefit</label>: {{ $benefit }}
+
+                            </td>
                         </tr>
                     </table>
                 </p>
