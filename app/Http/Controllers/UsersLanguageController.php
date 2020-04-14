@@ -64,6 +64,9 @@ class UsersLanguageController extends BackendController
             UserLanguage::insert( $inserts );
         }
 
+        VarDumper::dump($inserts);
+        die(1);
+
         return redirect('profile/language/settings');
 
     }
