@@ -21,19 +21,20 @@
 
                             <input type="hidden" name="_method" value="PUT" />
                             {{ csrf_field() }}
-                            <div class="col-md-12">
+{{--                            <div class="col-md-12">
 
                                 <div class="form-check">
 
                                     <label class="form-check-label">
                                         <input class="form-check-input checkall-carriers" type="checkbox" id="carrier-check-all">
-                                        {{--
+
                                                                                 <span id="select-all-label">Deselect All Carriers</span>
-                                        --}}
+
                                     </label>
                                 </div> <!-- ./form-check -->
 
                             </div> <!-- ./col-md-12 -->
+--}}
 
                             <div class="col-md-12">
                                 <input type="submit" class="btn btn-primary btn-lg btn-block btn-huge control update-btn mt-3 mb-3" value=" Save ">
