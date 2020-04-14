@@ -60,18 +60,24 @@ class UsersLanguageController extends BackendController
                 $key = 'language_' . $id;
                 $settings['languages'][ $key ]['hidden'] = $field_value;
 
-                $deletes[] = [
-                    "language_id" => $field_value,
-                    "user_id" => $this->loggedInUser->id
-                ];
+                if ($field_value) {
+
+                    $deletes[] = [
+                        "language_id" => $field_value,
+                        "user_id" => $this->loggedInUser->id
+                    ];
+
+                }
             }
             else if ( strstr($field_name, "language_" ) != false ) {
                 $settings['languages'][ $field_name ]['value'] = $field_value;
 
-                $inserts[] = [
-                    "language_id" => $field_value,
-                    "user_id" => $this->loggedInUser->id
-                ];
+                if ($field_value) {
+                    $inserts[] = [
+                        "language_id" => $field_value,
+                        "user_id" => $this->loggedInUser->id
+                    ];
+                }
 
             }
         }
