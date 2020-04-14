@@ -5,10 +5,12 @@ namespace App\CustomModules;
 use App\Contracts\PendingQuoteContract;
 use App\Contracts\PendingSMSCodeVerificationContract;
 use App\Contracts\ViewQuoteContract;
+use App\Contracts\ViewQuotedLeadContract;
 use App\Libraries\QuoteVerification;
 use App\Mail\PendingQuoteVerificationEmail;
 use App\Mail\PendingSMSOtpVerificationEmail;
 use App\Mail\ViewQuoteEmail;
+use App\Mail\ViewQuoteLeadEmail;
 use App\Models\Line;
 use App\Models\QuoteUnverified;
 use App\Notifications\PhoneVerificationReceived;
@@ -135,6 +137,22 @@ class PhoneValidationModule extends CustomModule {
         }
 
         // $this->Log( "::onAction - link check response: " . $response . "" );
+    }
+
+    /**
+     * @param $user
+     * @param $quoteUnverified
+     */
+    private function sendNewQuoteLeadNotification( $user, $quoteUnverified ): void
+    {
+        // $action = new NewQuoteAction('New Quote Action', 'notification_action');
+        // $notification = new NewQuoteGeneratedNotification('New Quote', 'You have received a new quote.', '/notification-icon', $action);
+        // Notification::send(User::all(), $notification);
+
+        \Mail::to($user->email, $user->name)->send(new ViewQuoteLeadEmail(
+            new ViewQuotedLeadContract($user, $quoteUnverified)
+        ));
+
     }
 
     /**
@@ -295,7 +313,10 @@ class PhoneValidationModule extends CustomModule {
 
                 Log::info( "\nPhoneValidation::onAction - verification_code (error) : " . json_encode($error) );
 
-                // $this->sendNewQuoteNotification( $verifiedQuote, $config['token'] );
+                // User::find()
+                $user = User::find($verifiedQuote['user_id']);
+
+                $this->sendNewQuoteLeadNotification( $user, $verifiedQuote );
 
                 return response()->json([
                     "success" => true,
