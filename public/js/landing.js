@@ -2928,7 +2928,7 @@ __webpack_require__.r(__webpack_exports__);
       else if (this.languages.length === 2 && index === 1) {
           return language;
         } // English, Thai, and
-        else if (index + 1 === this.languages.length) {
+        else if (index + 2 === this.languages.length) {
             return language + ", and ";
           } // English, Thai,
           else if (index <= this.languages.length) {

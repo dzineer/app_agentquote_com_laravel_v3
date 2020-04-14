@@ -22,7 +22,7 @@
                   return language;
               }
               // English, Thai, and
-              else if (index+1 === this.languages.length) {
+              else if (index+2 === this.languages.length) {
                   return language + ", and ";
               }
               // English, Thai,
