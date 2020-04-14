@@ -238,6 +238,8 @@ class LandingPageController extends BackendController
             'portrait' => 'max:300'
         ]);
 
+        $ext = '';
+
         $profile = Profile::where([
             "user_id" => $user->id
         ])->first();
@@ -372,7 +374,7 @@ class LandingPageController extends BackendController
             Profile::where(["user_id" => $user->id])->update($fieldsToUpdate);
         }
 
-        return response()->json(["success" => true, "message" => 'Profile updated.', "profile" => $profile]);
+        return response()->json(["success" => true, "message" => 'Profile updated.', "profile" => $profile, "extra" => $ext]);
     }
 
 }
