@@ -46,7 +46,7 @@
                                     <div class="form-check">
 
                                         <label class="form-check-label">
-                                            <input class="form-check-input languages" type="checkbox" id="language_{{$language->language_id}}" name="language[]" value="{{$language->language_id}}" {{ $language->selected == 1 ? 'checked="checked"' : '' }} >
+                                            <input class="form-check-input languages" type="checkbox" id="language_{{$language->language_id}}" name="languages[]" value="{{$language->language_id}}" {{ $language->selected == 1 ? 'checked="checked"' : '' }} >
                                             @if($language->subtag)
                                                 {{ $language->name . ' ' . '(' . strtoupper($language->subtag) . ')' }}
                                             @else
