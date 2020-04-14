@@ -47,48 +47,12 @@ class UsersLanguageController extends BackendController
         $settings = array();
         $settings['languages'] = array();
 
-        $form = $request->all();
+        $languages = $request->input('languages');
 
         $inserts = [];
         $deletes = [];
 
-        foreach( $form as $field_name => $field_value ) {
-
-            if ( strstr($field_name, "hidden_language__" ) != false ) {
-                $arr = explode('__', $field_name );
-                $id = $arr[1];
-                $key = 'language_' . $id;
-                $settings['languages'][ $key ]['hidden'] = $field_value;
-
-                if ($field_value) {
-
-                    $deletes[] = [
-                        "language_id" => $field_value,
-                        "user_id" => $this->loggedInUser->id
-                    ];
-
-                }
-            }
-            else if ( strstr($field_name, "language_" ) != false ) {
-                $settings['languages'][ $field_name ]['value'] = $field_value;
-
-                if ($field_value) {
-                    $inserts[] = [
-                        "language_id" => $field_value,
-                        "user_id" => $this->loggedInUser->id
-                    ];
-                }
-
-            }
-        }
-
-        VarDumper::dump($form);
-
-        VarDumper::dump($inserts);
-
-        VarDumper::dump($deletes);
-
-        VarDumper::dump($settings);
+        VarDumper::dump($languages);
 
         die(1);
 
@@ -105,8 +69,6 @@ class UsersLanguageController extends BackendController
                 }
             }
         }
-
-        $carriers_termLife = CategoriesInsurance::getCarriers($user_id,1);
 
         $message = 'Carriers updated';
 
