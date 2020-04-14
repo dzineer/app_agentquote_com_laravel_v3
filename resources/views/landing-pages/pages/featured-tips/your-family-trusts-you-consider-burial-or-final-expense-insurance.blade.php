@@ -102,7 +102,7 @@
             </div>
         </div>
 
-        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}"></contact-banner>
+        <contact-banner phone="{{ $user->profile->contact_phone }}" offeredby="{{ $company['name'] }}" :languages="{{ $languages_spoken }}"></contact-banner>
 
         @include('landing-pages.pages.footer')
 
