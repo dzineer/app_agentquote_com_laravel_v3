@@ -2917,7 +2917,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['languages']
+  props: ['languages'],
+  methods: {
+    format: function format(language, index) {
+      if (index < this.props.languages.length) {
+        return language + ", ";
+      } else {
+        return language;
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -46279,10 +46288,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "p",
-    _vm._l(_vm.languages, function(language) {
+    _vm._l(_vm.languages, function(language, index) {
       return _c("span", {
         staticClass: "tw-mr-1",
-        domProps: { textContent: _vm._s(language) }
+        domProps: { textContent: _vm._s(this.format(language, index)) }
       })
     }),
     0
