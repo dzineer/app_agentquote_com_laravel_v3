@@ -316,7 +316,9 @@ class PhoneValidationModule extends CustomModule {
                 // User::find()
                 $user = User::find($verifiedQuote['user_id']);
 
-                $this->sendNewQuoteLeadNotification( $user, $verifiedQuote );
+                $quote = unserialize($verifiedQuote["data"]);
+
+                $this->sendNewQuoteLeadNotification( $user, $quote );
 
                 return response()->json([
                     "success" => true,
