@@ -78,15 +78,12 @@ class UsersLanguageController extends BackendController
         }
 
 
-        dd($inserts);
-        dd($deletes);
-
         foreach ($inserts as $v) {
             VarDumper::dump($v);
         }
 
-        foreach ($inserts as $v) {
-            VarDumper::dump($deletes);
+        foreach ($deletes as $v) {
+            VarDumper::dump($v);
         }
 
         die(1);
