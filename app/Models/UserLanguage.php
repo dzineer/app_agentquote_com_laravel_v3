@@ -9,7 +9,7 @@ namespace App\Models;
 
 use Reliese\Database\Eloquent\Model as Eloquent;
 use Illuminate\Support\Facades\DB;
-use App\Models\CarriersCategoryUser;
+
 /**
  * Class UserLanguage
  *
