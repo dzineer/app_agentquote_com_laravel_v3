@@ -2925,7 +2925,7 @@ __webpack_require__.r(__webpack_exports__);
         return language + " and ";
       } // English and Thai
       else if (this.languages.length === 2 && index === 1) {
-          return language;
+          return language + ".";
         } // English, Thai, and
         else if (index + 1 === this.languages.length && this.languages.length >= 3) {
             return language + ", and ";
@@ -2933,7 +2933,7 @@ __webpack_require__.r(__webpack_exports__);
           else if (index < this.languages.length) {
               return language + ", ";
             } else {
-              return language;
+              return language + ".";
             }
     }
   }
@@ -44229,8 +44229,7 @@ var render = function() {
           _vm._v(
             "Call us with questions or to apply by phone. You can also call with questions or to apply by phone in\n        "
           ),
-          _c("languages-spoken", { attrs: { languages: _vm.languages } }),
-          _vm._v(".")
+          _c("languages-spoken", { attrs: { languages: _vm.languages } })
         ],
         1
       ),
