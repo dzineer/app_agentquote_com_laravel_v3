@@ -2924,7 +2924,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    var items = JSON.parse(this.props.languages);
+    var items = JSON.parse(this.languages);
   }
 });
 

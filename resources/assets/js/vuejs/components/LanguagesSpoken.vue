@@ -15,7 +15,7 @@
             }
         },
         mounted() {
-            let items = JSON.parse(this.props.languages);
+            let items = JSON.parse(this.languages);
         }
     }
 </script>
