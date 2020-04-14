@@ -15,6 +15,12 @@ use Illuminate\Support\Facades\View;
 class BackendController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    /**
+     * @var \Illuminate\Contracts\Auth\Authenticatable|null
+     */
+    protected $loggedInUser;
+
     public function __construct() {
 
         $this->middleware('auth');
@@ -25,6 +31,8 @@ class BackendController extends BaseController
 		    $view->with('user', $user);
 		    $view->with('profile', $profile);
 	    });
+
+        $this->loggedInUser = Auth::user();
 
     }
 

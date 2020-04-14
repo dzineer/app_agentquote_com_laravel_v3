@@ -325,6 +325,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('landing-page/user/{user}/profile', [\App\Http\Controllers\LandingPageController::class, 'update'])->name('user.landing-page.profile.update');
     Route::post('landing-page/user/{id}/profile', [\App\Http\Controllers\LandingPageController::class, 'store'])->name('user.landing-page.profile.store');
 
+    Route::get('landing-page/user/{user}/profile/languages/settings', [\App\Http\Controllers\UsersLanguageController::class, 'settings'])->name('microsite.languages.settings');
+    Route::put('landing-page/user/{user}/profile/languages', [\App\Http\Controllers\UsersLanguageController::class, 'update'])->name('user.landing-page.profile.languages.update');
+    Route::post('landing-page/user/{id}/profile/languages', [\App\Http\Controllers\UsersLanguageController::class, 'store'])->name('user.landing-page.profile.languages.store');
+
 	Route::get('user/quotes', [\App\Http\Controllers\UserQuotesController::class, 'index'])->name('user.quotes.show');
 	Route::get('user/quote', [\App\Http\Controllers\UserBackendQuoteController::class, 'quote'])->name('user.quote.show');
 	Route::post('user/quote', [\App\Http\Controllers\UserBackendQuoteController::class, 'gen_quote'])->name('user.quote.generate');
