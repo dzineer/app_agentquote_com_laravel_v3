@@ -35,6 +35,8 @@
 
                 $category = $categories[ $quote['category'] ];
 
+                $phone = preg_replace('~.*(\d{3})[^\d]{0,7}(\d{3})[^\d]{0,7}(\d{4}).*~', '($1) $2-$3', $quote["phone"]);
+
                 ?>
                 <p style="margin-bottom:12px">
                     You have just received the following <strong>{{ $category }}</strong> quote lead:<br><br>
@@ -43,7 +45,7 @@
                             <td>
                                 <label>Email</label>: <strong>{{ $quote["email"] }}</strong><br/>
                                 <label>Name</label>: <strong>{{ $quote["name"] }}</strong><br/>
-                                <label>Phone</label>: <strong>{{ $quote["phone"] }}</strong><br/>
+                                <label>Phone</label>: <strong>{{ $phone }}</strong><br/>
                                 <label>Gender</label>: <strong>{{ $quote["gender"] }}</strong><br/>
                                 <label>Tobacco</label>: <strong>{{ $quote["tobacco"] }}</strong><br/>
                                 <label>Term</label>: <strong>{{ $quote["term"] }} Years</strong><br/>
