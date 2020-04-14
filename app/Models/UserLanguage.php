@@ -32,10 +32,11 @@ class UserLanguage extends Eloquent
 	];
 
     static function languages( $userId ) {
-        $query = "SELECT l.name, ul.language_id, l.prefix, l.subtag, 1 as selected
+
+        $query = "SELECT l.name, l.id as language_id, l.prefix, l.subtag, (CASE WHEN ul.user_id IS NOT NULL THEN 1 ELSE 0 END) as selected
 					FROM languages l
-						RIGHT JOIN user_languages ul ON(l.id = ul.language_id)
-							WHERE ul.user_id = {$userId} ORDER BY l.name ASC";
+						LEFT JOIN user_languages ul ON(l.id = ul.language_id AND ul.user_id = {$userId})
+							ORDER BY l.name ASC";
 
         echo "<pre>" . $query . "</pre>";
 
