@@ -55,8 +55,7 @@ class UsersLanguageController extends BackendController
 
         UserLanguage::where([
             'user_id' => $user_id,
-        ])->whereNotIn('language_id', $languages)->delete();
-
+        ])->delete();
 
         $inserts = array_map(function ($language_id) use ($user_id) {
             return ["user_id" => $user_id, "language_id" => $language_id];
