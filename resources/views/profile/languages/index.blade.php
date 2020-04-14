@@ -17,7 +17,7 @@
                     <h4 class="heading-info mb-4">Choose Your Languages</h4>
                     <div class="row">
 
-                        <form role="form" class="display-block" action="/carriers/termlife/settings" method="POST">
+                        <form role="form" class="display-block" action="/profile/language/usettings" method="POST">
 
                             <input type="hidden" name="_method" value="PUT" />
                             {{ csrf_field() }}
@@ -55,7 +55,7 @@
                                             @endif
                                         </label>
 
-                                        <div class="collapse carrier-products" id="language_{{$language->language_id}}" data-carrier="language_{{$language->language_id}}">
+                                        <div class="collapse language" id="language_{{$language->language_id}}" data-carrier="language_{{$language->language_id}}">
 
                                         </div>
                                     </div> <!-- ./form-check -->
