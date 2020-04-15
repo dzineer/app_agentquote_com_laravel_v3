@@ -93,7 +93,7 @@ class TxtRecord
             'auth-userid' => 784909,
             'api-key' => 'GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2',
             'domain-name'       => (string) $request->domain(),
-            'type'              => 'txt',
+            'type'              => 'TXT',
             'no-of-records'     => 1,
             'page-no'           => 0,
             'host'              => (string) $request->record(), // The host part of the domain-name for which you need to modify a TXT record
@@ -110,7 +110,42 @@ class TxtRecord
             $data
         );
 
-        VarDumper::dump($response);
+        $options = array(
+            CURLOPT_RETURNTRANSFER => true,     // return web page
+            CURLOPT_HEADER         => false,    // don't return headers
+            CURLOPT_FOLLOWLOCATION => true,     // follow redirects
+            CURLOPT_ENCODING       => "",       // handle all encodings
+            CURLOPT_USERAGENT      => "spider", // who am i
+            CURLOPT_AUTOREFERER    => true,     // set referer on redirect
+            CURLOPT_CONNECTTIMEOUT => 120,      // timeout on connect
+            CURLOPT_TIMEOUT        => 120,      // timeout on response
+            CURLOPT_MAXREDIRS      => 10,       // stop after 10 redirects
+            CURLOPT_SSL_VERIFYPEER => false     // Disabled SSL Cert checks
+        );
+
+        // httpapi.com/api/dns/manage/search-records.json?auth-userid=0&api-key=key&domain-name=domain.asia&type=A&no-of-records=10&page-no=1
+        $url = 'https://httpapi.com/api/dns/manage/search-records.json?' .
+            'auth-userid=784909' .
+            '&api-key=GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2' .
+            '&domain-name=' . $request->domain() .
+            '&type=' . 'TXT '.
+            '&no-of-records=1' .
+            '&page-no=1' .
+            '&host=' . $request->record() ;
+
+        $ch      = curl_init( $url );
+        curl_setopt_array( $ch, $options );
+        $content = curl_exec( $ch );
+        $err     = curl_errno( $ch );
+        $errmsg  = curl_error( $ch );
+        $header  = curl_getinfo( $ch );
+        curl_close( $ch );
+
+        $header['errno']   = $err;
+        $header['errmsg']  = $errmsg;
+        $header['content'] = $content;
+
+        VarDumper::dump($header);
 
         return SearchResponse::fromApiResponse($response);
     }
