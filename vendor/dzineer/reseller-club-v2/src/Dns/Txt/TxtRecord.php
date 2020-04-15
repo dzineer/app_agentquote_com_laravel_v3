@@ -128,7 +128,7 @@ class TxtRecord
             'auth-userid=784909' .
             '&api-key=GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2' .
             '&domain-name=' . $request->domain() .
-            '&type=' . 'TXT '.
+            '&type=' . 'TXT'.
             '&no-of-records=1' .
             '&page-no=1' .
             '&host=' . $request->record() ;
