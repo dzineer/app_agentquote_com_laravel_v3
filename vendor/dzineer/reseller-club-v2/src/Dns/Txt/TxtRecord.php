@@ -11,6 +11,7 @@ use DZResellerClub\Dns\Txt\Requests\SearchRequest;
 use DZResellerClub\Dns\Txt\Responses\AddResponse;
 use DZResellerClub\Dns\Txt\Responses\SearchResponse;
 use DZResellerClub\Dns\Txt\Responses\UpdateResponse;
+use Symfony\Component\VarDumper\VarDumper;
 
 class TxtRecord
 {
@@ -108,6 +109,8 @@ class TxtRecord
             'dns/manage/search-records.json',
             $data
         );
+
+        VarDumper::dump($response);
 
         return SearchResponse::fromApiResponse($response);
     }
