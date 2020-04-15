@@ -101,7 +101,7 @@ class TxtRecord
             ]);
         }
 
-        $response = $this->api->post(
+        $response = $this->api->get(
             'dns/manage/search-records.json',
             $data
         );
