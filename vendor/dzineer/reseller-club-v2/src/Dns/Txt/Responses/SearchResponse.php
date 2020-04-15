@@ -5,6 +5,10 @@ namespace DZResellerClub\Dns\Txt\Responses;
 use DZResellerClub\Message;
 use DZResellerClub\Response;
 
+/**
+ * Class SearchResponse
+ * @package DZResellerClub\Dns\Txt\Responses
+ */
 class SearchResponse extends Response
 {
     /**

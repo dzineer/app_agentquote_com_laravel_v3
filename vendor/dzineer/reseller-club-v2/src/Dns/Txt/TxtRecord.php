@@ -9,6 +9,7 @@ use DZResellerClub\Dns\Txt\Requests\UpdateRequest;
 use DZResellerClub\Dns\Txt\Requests\SearchRequest;
 
 use DZResellerClub\Dns\Txt\Responses\AddResponse;
+use DZResellerClub\Dns\Txt\Responses\SearchResponse;
 use DZResellerClub\Dns\Txt\Responses\UpdateResponse;
 
 class TxtRecord
