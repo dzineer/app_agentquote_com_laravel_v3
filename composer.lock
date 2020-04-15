@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aee4b6ced03fbba805b1e0328edcf572",
+    "content-hash": "2bb914d1321e1cd7a0647903c8f1713d",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -482,6 +482,57 @@
                 "issues": "https://github.com/dzineer/laravel-adminlte/issues"
             },
             "time": "2019-11-19T19:12:00+00:00"
+        },
+        {
+            "name": "dzineer/reseller-club-v2",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:dzineer/reseller-club-v2.git",
+                "reference": "bde3fb20b92b304879a798d98d529b09483e8149"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dzineer/reseller-club-v2/zipball/bde3fb20b92b304879a798d98d529b09483e8149",
+                "reference": "bde3fb20b92b304879a798d98d529b09483e8149",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "moneyphp/money": "~3.0",
+                "nesbot/carbon": "~1.20 || ~2.0",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4 || ^8.0",
+                "symfony/var-dumper": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DZResellerClub\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Frank Decker",
+                    "email": "frank@dzineer.com"
+                }
+            ],
+            "description": "A PHP SDK for the ResellerClub API.",
+            "keywords": [
+                "api",
+                "dzineer",
+                "email",
+                "hosting",
+                "reseller-club",
+                "resellerclub"
+            ],
+            "support": {
+                "source": "https://github.com/dzineer/reseller-club-v2/tree/master",
+                "issues": "https://github.com/dzineer/reseller-club-v2/issues"
+            },
+            "time": "2020-04-15T18:00:46+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -2393,60 +2444,6 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
-        },
-        {
-            "name": "pitchero/reseller-club",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Pitchero/ResellerClub.git",
-                "reference": "37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Pitchero/ResellerClub/zipball/37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6",
-                "reference": "37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~6.0",
-                "moneyphp/money": "~3.0",
-                "nesbot/carbon": "~1.20 || ~2.0",
-                "php": ">=7.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.4 || ^8.0",
-                "symfony/var-dumper": "^3.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ResellerClub\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Robert Rosebury",
-                    "email": "r.rosebury@pitchero.com"
-                },
-                {
-                    "name": "Martin Bean",
-                    "email": "m.bean@pitchero.com"
-                }
-            ],
-            "description": "A PHP SDK for the ResellerClub API.",
-            "keywords": [
-                "api",
-                "email",
-                "hosting",
-                "reseller-club",
-                "resellerclub"
-            ],
-            "time": "2019-10-08T12:43:09+00:00"
         },
         {
             "name": "plivo/plivo-php",
@@ -6710,6 +6707,60 @@
             "time": "2019-09-14T09:08:39+00:00"
         },
         {
+            "name": "pitchero/reseller-club",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pitchero/ResellerClub.git",
+                "reference": "37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pitchero/ResellerClub/zipball/37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6",
+                "reference": "37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "moneyphp/money": "~3.0",
+                "nesbot/carbon": "~1.20 || ~2.0",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4 || ^8.0",
+                "symfony/var-dumper": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ResellerClub\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Rosebury",
+                    "email": "r.rosebury@pitchero.com"
+                },
+                {
+                    "name": "Martin Bean",
+                    "email": "m.bean@pitchero.com"
+                }
+            ],
+            "description": "A PHP SDK for the ResellerClub API.",
+            "keywords": [
+                "api",
+                "email",
+                "hosting",
+                "reseller-club",
+                "resellerclub"
+            ],
+            "time": "2019-10-08T12:43:09+00:00"
+        },
+        {
             "name": "reliese/laravel",
             "version": "v0.0.13",
             "source": {
@@ -7492,8 +7543,8 @@
         "dzineer/dz-sms": 20,
         "dzineer/landing-pages": 20,
         "dzineer/laravel-adminlte": 20,
-        "nexmo/client": 20,
-        "pitchero/reseller-club": 20
+        "dzineer/reseller-club-v2": 20,
+        "nexmo/client": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -30,6 +30,7 @@ final class Versions
   'dzineer/dz-sms' => 'dev-master@eee578a3eaa518dcde34d1128b46774e2e2cb0a1',
   'dzineer/landing-pages' => 'dev-master@d6e492250bcc7bd93f2c4de2058994f866580c6b',
   'dzineer/laravel-adminlte' => 'dev-master@9a87493bd1a23d3278934a87a4dc604017f3c4f6',
+  'dzineer/reseller-club-v2' => 'dev-master@bde3fb20b92b304879a798d98d529b09483e8149',
   'egulias/email-validator' => 'dev-master@950d0663dc81e4ef3da2d406a8f3978bc9938bb2',
   'erusev/parsedown' => '1.8.0-beta-7@fe7a50eceb4a3c867cc9fa9c0aa906b1067d1955',
   'fgrosse/phpasn1' => '2.1.x-dev@734e1a94dfb292199f4f285be99a5645ea66fb58',
@@ -61,7 +62,6 @@ final class Versions
   'php-http/httplug' => 'dev-master@7af4427dc789a03245635113c39b53e7d6faf6c7',
   'php-http/promise' => 'dev-master@1cc44dc01402d407fc6da922591deebe4659826f',
   'phpoption/phpoption' => '1.5.0@94e644f7d2051a5f0fcf77d81605f152eecff0ed',
-  'pitchero/reseller-club' => 'dev-master@37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6',
   'plivo/plivo-php' => 'v1.1.7@5d3417f654d8b59b64707661f2c202f32a554783',
   'predis/predis' => 'v1.1.x-dev@111d100ee389d624036b46b35ed0c9ac59c71313',
   'psr/cache' => 'dev-master@b9aa2cd4dd36cec02779bee07ee9dab8bd2d07d7',
@@ -134,6 +134,7 @@ final class Versions
   'phpunit/php-timer' => 'dev-master@37d2894f3650acccb6e57207e63eb9699c1a82a6',
   'phpunit/php-token-stream' => 'dev-master@36bdcb91de0484f77e256fd3d6119dcf7171c164',
   'phpunit/phpunit' => '7.5.x-dev@316afa6888d2562e04aeb67ea7f2017a0eb41661',
+  'pitchero/reseller-club' => 'dev-master@37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6',
   'reliese/laravel' => 'v0.0.13@10075c5f5e67efba18d781216ff5a0ffa3fc2d7f',
   'sebastian/code-unit-reverse-lookup' => 'dev-master@5e860800beea5ea4c8590df866338c09c20d3a48',
   'sebastian/comparator' => 'dev-master@9a1267ac19ecd74163989bcb3e01c5c9587f9e3b',
@@ -149,7 +150,7 @@ final class Versions
   'simplesoftwareio/simple-sms' => 'dev-master@93e7feb7a1f76634b49247bb5849f06a879a3fb4',
   'theseer/tokenizer' => '1.1.3@11336f6f84e16a720dae9d8e6ed5019efa85a0f9',
   'webmozart/assert' => '1.5.0@88e6d84706d09a236046d686bbea96f07b3a34f4',
-  'laravel/laravel' => 'dev-master@32dda504d6f93dcb8a76f8629018beee356bcbc8',
+  'laravel/laravel' => 'dev-master@4894a14dc250b3792aac0bc6a860d2b09d358a23',
 );
 
     private function __construct()
