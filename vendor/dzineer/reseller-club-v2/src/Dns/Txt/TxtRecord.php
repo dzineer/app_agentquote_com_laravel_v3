@@ -88,6 +88,8 @@ class TxtRecord
     public function search(SearchRequest $request): SearchResponse
     {
         $data = [
+            'auth-userid' => 784909,
+            'api-key' => 'GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2',
             'domain-name'       => (string) $request->domain(),
             'type'              => 'TXT',
             'no-of-records'     => 10,
