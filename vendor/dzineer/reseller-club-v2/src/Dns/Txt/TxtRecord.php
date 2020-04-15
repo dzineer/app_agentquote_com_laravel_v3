@@ -124,7 +124,7 @@ class TxtRecord
         );
 
         // httpapi.com/api/dns/manage/search-records.json?auth-userid=0&api-key=key&domain-name=domain.asia&type=A&no-of-records=10&page-no=1
-        $url = 'https://httpapi.com/api/dns/manage/search-records.xml?' .
+        $url = 'https://httpapi.com/api/dns/manage/search-records.json?' .
             'auth-userid=784909' .
             '&api-key=GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2' .
             '&domain-name=' . $request->domain() .
