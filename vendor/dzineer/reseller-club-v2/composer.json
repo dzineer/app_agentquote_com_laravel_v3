@@ -1,0 +1,28 @@
+{
+    "name": "dzineer/reseller-club-v2",
+    "description": "A PHP SDK for the ResellerClub API.",
+    "keywords": ["resellerclub", "reseller-club", "email", "hosting", "api", "dzineer"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Frank Decker",
+            "email": "frank@dzineer.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "guzzlehttp/guzzle": "~6.0",
+        "nesbot/carbon": "~1.20 || ~2.0",
+        "moneyphp/money": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.4 || ^8.0",
+        "symfony/var-dumper": "^3.3"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "DZResellerClub\\": "src/"
+        }
+    }
+}
