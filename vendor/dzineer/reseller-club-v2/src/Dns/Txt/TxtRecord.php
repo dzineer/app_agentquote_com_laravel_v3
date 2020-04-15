@@ -94,7 +94,7 @@ class TxtRecord
             'api-key' => 'GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2',
             'domain-name'       => (string) $request->domain(),
             'type'              => 'txt',
-            'no-of-records'     => 10,
+            'no-of-records'     => 1,
             'page-no'           => 1,
             'host'              => (string) $request->record(), // The host part of the domain-name for which you need to modify a TXT record
         ];
