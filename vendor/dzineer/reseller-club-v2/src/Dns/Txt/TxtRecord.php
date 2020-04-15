@@ -95,7 +95,7 @@ class TxtRecord
             'domain-name'       => (string) $request->domain(),
             'type'              => 'txt',
             'no-of-records'     => 1,
-            'page-no'           => 1,
+            'page-no'           => 0,
             'host'              => (string) $request->record(), // The host part of the domain-name for which you need to modify a TXT record
         ];
 
