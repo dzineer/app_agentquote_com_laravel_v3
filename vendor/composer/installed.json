@@ -1,5 +1,55 @@
 [
     {
+        "name": "afosto/yaac",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/afosto/yaac.git",
+            "reference": "fb33b4ba6f3f514d90c162aa4e157fad91a904ba"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/afosto/yaac/zipball/fb33b4ba6f3f514d90c162aa4e157fad91a904ba",
+            "reference": "fb33b4ba6f3f514d90c162aa4e157fad91a904ba",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "ext-openssl": "*",
+            "guzzlehttp/guzzle": "^6.3",
+            "league/flysystem": "^1.0"
+        },
+        "time": "2020-03-20T09:42:34+00:00",
+        "type": "package",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Afosto\\Acme\\": "./src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Afosto Team",
+                "homepage": "https://afosto.com"
+            }
+        ],
+        "description": "Yet Another ACME client",
+        "homepage": "https://afosto.com",
+        "keywords": [
+            "ACME",
+            "acmev2",
+            "afosto",
+            "encrypt",
+            "lets",
+            "v2"
+        ]
+    },
+    {
         "name": "ajthinking/tinx",
         "version": "v2.6.0",
         "version_normalized": "2.6.0.0",
@@ -1678,7 +1728,8 @@
                 "name": "Jakub Onderka",
                 "email": "jakub.onderka@gmail.com"
             }
-        ]
+        ],
+        "abandoned": "php-parallel-lint/php-console-color"
     },
     {
         "name": "jakub-onderka/php-console-highlighter",
@@ -1726,7 +1777,8 @@
                 "homepage": "http://www.acci.cz/"
             }
         ],
-        "description": "Highlight PHP code in terminal"
+        "description": "Highlight PHP code in terminal",
+        "abandoned": "php-parallel-lint/php-console-highlighter"
     },
     {
         "name": "laravel-notification-channels/webpush",
@@ -2400,6 +2452,90 @@
             "test",
             "test double",
             "testing"
+        ]
+    },
+    {
+        "name": "moneyphp/money",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/moneyphp/money.git",
+            "reference": "1961f445ef0273a651ece4b9177d8885d37deda4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/moneyphp/money/zipball/1961f445ef0273a651ece4b9177d8885d37deda4",
+            "reference": "1961f445ef0273a651ece4b9177d8885d37deda4",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "cache/taggable-cache": "^0.4.0",
+            "doctrine/instantiator": "^1.0.5",
+            "ext-bcmath": "*",
+            "ext-gmp": "*",
+            "ext-intl": "*",
+            "florianv/exchanger": "^1.0",
+            "florianv/swap": "^3.0",
+            "friends-of-phpspec/phpspec-code-coverage": "^3.1.1 || ^4.3",
+            "moneyphp/iso-currencies": "^3.2.1",
+            "php-http/message": "^1.4",
+            "php-http/mock-client": "^1.0.0",
+            "phpspec/phpspec": "^3.4.3",
+            "phpunit/phpunit": "^5.7.27 || ^6.5.14 || ^7.5.18 || ^8.5",
+            "psr/cache": "^1.0",
+            "symfony/phpunit-bridge": "^4"
+        },
+        "suggest": {
+            "ext-bcmath": "Calculate without integer limits",
+            "ext-gmp": "Calculate without integer limits",
+            "ext-intl": "Format Money objects with intl",
+            "florianv/exchanger": "Exchange rates library for PHP",
+            "florianv/swap": "Exchange rates library for PHP",
+            "psr/cache-implementation": "Used for Currency caching"
+        },
+        "time": "2020-03-18T17:54:55+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Money\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Mathias Verraes",
+                "email": "mathias@verraes.net",
+                "homepage": "http://verraes.net"
+            },
+            {
+                "name": "Márk Sági-Kazár",
+                "email": "mark.sagikazar@gmail.com"
+            },
+            {
+                "name": "Frederik Bosch",
+                "email": "f.bosch@genkgo.nl"
+            }
+        ],
+        "description": "PHP implementation of Fowler's Money pattern",
+        "homepage": "http://moneyphp.org",
+        "keywords": [
+            "Value Object",
+            "money",
+            "vo"
         ]
     },
     {
@@ -3901,6 +4037,62 @@
             "phpunit",
             "testing",
             "xunit"
+        ]
+    },
+    {
+        "name": "pitchero/reseller-club",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Pitchero/ResellerClub.git",
+            "reference": "37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Pitchero/ResellerClub/zipball/37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6",
+            "reference": "37c2f57640975d4c72c5bf81a8dde0fb1c8d68b6",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "~6.0",
+            "moneyphp/money": "~3.0",
+            "nesbot/carbon": "~1.20 || ~2.0",
+            "php": ">=7.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^6.4 || ^8.0",
+            "symfony/var-dumper": "^3.3"
+        },
+        "time": "2019-10-08T12:43:09+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "ResellerClub\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Robert Rosebury",
+                "email": "r.rosebury@pitchero.com"
+            },
+            {
+                "name": "Martin Bean",
+                "email": "m.bean@pitchero.com"
+            }
+        ],
+        "description": "A PHP SDK for the ResellerClub API.",
+        "keywords": [
+            "api",
+            "email",
+            "hosting",
+            "reseller-club",
+            "resellerclub"
         ]
     },
     {

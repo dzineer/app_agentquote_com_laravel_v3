@@ -39,6 +39,7 @@ return array(
     'Symfony\\Component\\CssSelector\\' => array($vendorDir . '/symfony/css-selector'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'SimpleSoftwareIO\\SMS\\' => array($vendorDir . '/simplesoftwareio/simple-sms/src'),
+    'ResellerClub\\' => array($vendorDir . '/pitchero/reseller-club/src'),
     'Reliese\\' => array($vendorDir . '/reliese/laravel/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),
     'Psy\\' => array($vendorDir . '/psy/psysh/src'),
@@ -57,6 +58,7 @@ return array(
     'NotificationChannels\\WebPush\\' => array($vendorDir . '/laravel-notification-channels/webpush/src'),
     'Nexmo\\' => array($vendorDir . '/nexmo/client-core/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Money\\' => array($vendorDir . '/moneyphp/money/src'),
     'Minishlink\\WebPush\\' => array($vendorDir . '/minishlink/web-push/src'),
     'Mdanter\\Ecc\\' => array($vendorDir . '/mdanter/ecc/src'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
@@ -97,6 +99,7 @@ return array(
     'Assert\\' => array($vendorDir . '/beberlei/assert/lib/Assert'),
     'App\\' => array($baseDir . '/app'),
     'Ajthinking\\Tinx\\' => array($vendorDir . '/ajthinking/tinx/src'),
+    'Afosto\\Acme\\' => array($vendorDir . '/afosto/yaac/src'),
     'AESKW\\' => array($vendorDir . '/spomky-labs/aes-key-wrap/src'),
     'AESGCM\\' => array($vendorDir . '/spomky-labs/php-aes-gcm/src'),
 );

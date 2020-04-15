@@ -196,6 +196,7 @@ return [
         App\Providers\CustomModulesServiceProvider::class,
         App\Providers\CustomPagesServiceProvider::class,
         App\Providers\ProductPagesServiceProvider::class,
+      //  'Gufy\ResellerClub\ResellerClubServiceProvider', // add this line only
     ],
 
     /*

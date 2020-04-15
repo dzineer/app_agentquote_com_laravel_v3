@@ -334,7 +334,6 @@ class ProductUsersApiFacade
                 $productId = $whmcsProduct->local_product_id;
                 $userSubscription = Subscription::where(["user_id" => $user->id, "product_id" => $whmcsProduct->local_product_id])->first();
 
-
                 if ($userSubscription) {
 
                     AQLog::info(print_r([
@@ -435,7 +434,6 @@ class ProductUsersApiFacade
                             }
                         }
                     }
-
 
 
                     DB::commit();
