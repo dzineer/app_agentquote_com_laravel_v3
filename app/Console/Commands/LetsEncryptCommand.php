@@ -147,7 +147,7 @@ class LetsEncryptCommand extends Command{
                 try {
 
                     $api = new \DZResellerClub\Api(
-                        new \DZResellerClub\Config(784909, 'GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2', true),
+                        new \DZResellerClub\Config(784909, 'GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2', false),
                         new \GuzzleHttp\Client()
                     );
 
