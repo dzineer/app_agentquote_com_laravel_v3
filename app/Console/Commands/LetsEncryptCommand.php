@@ -146,14 +146,14 @@ class LetsEncryptCommand extends Command{
 
                 try {
 
-                    $api = new \ResellerClub\Api(
-                        new \ResellerClub\Config(784909, 'GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2', true),
+                    $api = new \DZResellerClub\Api(
+                        new \DZResellerClub\Config(784909, 'GPFOx3p9Y7byCpiZwaP3vtV9QiMbV1c2', true),
                         new \GuzzleHttp\Client()
                     );
 
-                    // $ttl = new \ResellerClub\TimeToLive(86400);
-                    $ttl = new \ResellerClub\TimeToLive(7200);
-                    $request = new \ResellerClub\Dns\Txt\Requests\SearchRequest(
+                    // $ttl = new \DZResellerClub\TimeToLive(86400);
+                    $ttl = new \DZResellerClub\TimeToLive(7200);
+                    $request = new \DZResellerClub\Dns\Txt\Requests\SearchRequest(
                         $this->domain,
                         $data['name'],
                         '',// $data['value']
@@ -168,7 +168,7 @@ class LetsEncryptCommand extends Command{
 
                     // @todo - Handle the successful response within your codebase.
 
-                } catch(\ResellerClub\Exceptions\ApiException $e) {
+                } catch(\DZResellerClub\Exceptions\ApiException $e) {
                     // @todo - Handle the exception within your codebase.
                     $this->error($e->getMessage());
                     die(1);

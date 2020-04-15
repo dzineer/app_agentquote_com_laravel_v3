@@ -149,7 +149,7 @@ final class Versions
   'simplesoftwareio/simple-sms' => 'dev-master@93e7feb7a1f76634b49247bb5849f06a879a3fb4',
   'theseer/tokenizer' => '1.1.3@11336f6f84e16a720dae9d8e6ed5019efa85a0f9',
   'webmozart/assert' => '1.5.0@88e6d84706d09a236046d686bbea96f07b3a34f4',
-  'laravel/laravel' => 'dev-master@df00f47c5ae60d02495c0b43ff9bc9989186a820',
+  'laravel/laravel' => 'dev-master@32dda504d6f93dcb8a76f8629018beee356bcbc8',
 );
 
     private function __construct()
