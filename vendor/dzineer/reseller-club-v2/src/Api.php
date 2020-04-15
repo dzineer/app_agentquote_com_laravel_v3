@@ -56,7 +56,7 @@ class Api
      */
     public function get(string $uri, array $request)
     {
-        echo print_r(["uri" => uri, "request" => $request ], true);
+        echo print_r(["uri" => $uri, "request" => $request ], true);
         return $this->makeApiCall('GET', $uri, $request);
     }
 
