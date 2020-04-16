@@ -41,11 +41,11 @@ export default {
     components: {
         Icon, Fields, AmountField, YearField, PercentageField, CollegeField, Field
     },
+    mounted() {
+        const elmnt = document.getElementById(this.props.name);
+        elmnt.scrollIntoView();
+    },
     methods: {
-        mounted() {
-            const elmnt = document.getElementById(this.props.name);
-            elmnt.scrollIntoView();
-        },
         onFieldChange( field ) {
             this.$emit('fieldChange', field);
         },

@@ -3286,11 +3286,11 @@ __webpack_require__.r(__webpack_exports__);
     CollegeField: _CollegeField__WEBPACK_IMPORTED_MODULE_4__["default"],
     Field: _Field__WEBPACK_IMPORTED_MODULE_5__["default"]
   },
+  mounted: function mounted() {
+    var elmnt = document.getElementById(this.props.name);
+    elmnt.scrollIntoView();
+  },
   methods: {
-    mounted: function mounted() {
-      var elmnt = document.getElementById(this.props.name);
-      elmnt.scrollIntoView();
-    },
     onFieldChange: function onFieldChange(field) {
       this.$emit('fieldChange', field);
     },
