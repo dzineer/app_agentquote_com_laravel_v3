@@ -3287,9 +3287,12 @@ __webpack_require__.r(__webpack_exports__);
     Field: _Field__WEBPACK_IMPORTED_MODULE_5__["default"]
   },
   mounted: function mounted() {
-    debugger;
-    var elmnt = document.getElementById(this.name);
-    elmnt.scrollIntoView(true);
+    // wait until this component is rendered and loaded
+    this.$nextTick(function () {
+      debugger;
+      var elmnt = document.getElementById(this.name);
+      elmnt.scrollIntoView(true);
+    });
   },
   methods: {
     onFieldChange: function onFieldChange(field) {

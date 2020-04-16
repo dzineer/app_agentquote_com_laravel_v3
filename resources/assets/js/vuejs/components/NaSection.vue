@@ -42,9 +42,12 @@ export default {
         Icon, Fields, AmountField, YearField, PercentageField, CollegeField, Field
     },
     mounted() {
-        debugger;
-        const elmnt = document.getElementById(this.name);
-        elmnt.scrollIntoView(true);
+        // wait until this component is rendered and loaded
+        this.$nextTick(function() {
+            debugger;
+            const elmnt = document.getElementById(this.name);
+            elmnt.scrollIntoView(true);
+        });
     },
     methods: {
         onFieldChange( field ) {
