@@ -7514,6 +7514,7 @@ __webpack_require__.r(__webpack_exports__);
       // document.querySelector( that.scrollToOnLoad ).scrollIntoView( { behavior: 'smooth' } );
       // now account for fixed header
       window.scroll(0, 0);
+      this.requestedValue = this.formatMoney(this.requestedValue);
     });
   },
   filters: {
