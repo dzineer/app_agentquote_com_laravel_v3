@@ -7,7 +7,7 @@
             <div class="tw-flex tw--mr-px">
                 <span class="on-left-symbol">$</span>
             </div>
-            <input type="text" class="field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-w-px tw-border tw-px-3" :placeholder="placer" :name="name" :value="value | formatAmount" @keyup="onFieldChange" :disabled="readonly">
+            <input type="text" class="field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-w-px tw-border tw-px-3" :placeholder="placeholder" :name="name" :value="value | formatAmount" @keyup="onFieldChange" :disabled="readonly">
             <div class="tw-flex tw--mr-px">
                 <span class="on-right-symbol">.00</span>
             </div>
@@ -23,7 +23,7 @@ export default {
         'classes',
         'name',
         'value',
-        'placer',
+        'placeholder',
         'readonly'
     ],
     methods: {

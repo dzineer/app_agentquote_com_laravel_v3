@@ -25,7 +25,7 @@
             <na-section name="OTHER_EXPENSES" icon="balance-scale" title="other expenses" :show="sectionStates.OTHER_EXPENSES" @fieldChange="onFieldChange" @toggle="toggleState('OTHER_EXPENSES')" @toggleNextState="toggleState('TOTAL')" :fields="currentSection()" ></na-section>
 
             <div v-show="show" class="fields tw-pb-3 tw-px-2 tw-bla">
-                <div v-for="(field, index) in fields" :key="index" @fieldChange="onFieldChange" :header="field.text" :name="field.name" :value="field.value" :placer="field.placeholder" :class="field.classes" :readonly="field.readonly" :is="field.component"></div>
+                <div v-for="(field, index) in fields" :key="index" @fieldChange="onFieldChange" :header="field.text" :name="field.name" :value="field.value" :placeholder="field.placeholder" :class="field.classes" :readonly="field.readonly" :is="field.component"></div>
 <!--
                 <button class="tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-10 tw-rounded focus:tw-outline-none focus:tw-shadow-outline" @click="toggleNextState">Continue</button>
 -->
