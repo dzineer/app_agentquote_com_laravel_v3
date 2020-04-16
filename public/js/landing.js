@@ -45350,7 +45350,7 @@ var render = function() {
           _c("amount-field", {
             attrs: {
               header: "Total Additional Expenses (Part II)",
-              value: _vm._f("formatAmount")(_vm.part2),
+              value: _vm._f("formatMoney")(_vm.part2),
               readonly: true
             }
           }),
@@ -45358,7 +45358,7 @@ var render = function() {
           _c("amount-field", {
             attrs: {
               header: "Insurance Needed",
-              value: _vm._f("formatAmount")(_vm.total),
+              value: _vm._f("formatMoney")(_vm.total),
               readonly: true
             }
           }),
