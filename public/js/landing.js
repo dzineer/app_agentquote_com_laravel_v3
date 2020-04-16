@@ -3961,10 +3961,10 @@ var collegeTuition = {
       return 0.00;
     },
     calc: function calc() {
-      var totalNeeded = 0.00;
-      var total = 0.00;
-      var family_income = 0.00;
-      var other_income = 0.00;
+      var totalNeeded = 0;
+      var total = 0;
+      var family_income = 0;
+      var other_income = 0;
       debugger;
       Object.values(this.calculators.family_income).map(function (calculator) {
         calculator();

@@ -297,10 +297,10 @@ export default {
             return 0.00;
         },
         calc() {
-            let totalNeeded = 0.00;
-            let total = 0.00;
-            let family_income = 0.00;
-            let other_income = 0.00;
+            let totalNeeded = 0;
+            let total = 0;
+            let family_income = 0;
+            let other_income = 0;
             debugger;
             Object.values(this.calculators.family_income).map( calculator => {
                 calculator();
