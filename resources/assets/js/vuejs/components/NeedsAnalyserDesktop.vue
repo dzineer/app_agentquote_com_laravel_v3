@@ -129,6 +129,7 @@ export default {
             n = n.replace(/\$/g, "");
             n = n.replace(/,/g, "");
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            debugger;
             return "$" + n;
         }
     },

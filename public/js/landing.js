@@ -3958,7 +3958,7 @@ var collegeTuition = {
       }).value);
       collegeFunding = parseFloat(collegeFunding); // console.log("collegeFunding", collegeFunding);
 
-      this.total_part_1 = parseFloat(totalNeeded) - parseFloat(investibleFamilyAssets);
+      this.total_part_1 = totalNeeded - parseFloat(investibleFamilyAssets);
       this.total_part_2 = parseFloat(debtRepayment) +
       /*college*/
       collegeFunding + parseFloat(otherExpenses);
@@ -3988,11 +3988,7 @@ var collegeTuition = {
 
         totals += total;
       });
-      this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseFloat(this.toReplace.percentIncome) / 100), false);
-
-      var total = lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections[section], {
-        name: 'total'
-      }).value;
+      this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseFloat(this.toReplace.percentIncome) / 100), false); // let total = _.find(this.sections [ section ], { name: 'total' }).value;
 
       return totals;
     },
@@ -4230,6 +4226,7 @@ __webpack_require__.r(__webpack_exports__);
       n = n.replace(/\$/g, "");
       n = n.replace(/,/g, "");
       n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      debugger;
       return "$" + n;
     }
   },

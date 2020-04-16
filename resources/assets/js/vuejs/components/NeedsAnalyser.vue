@@ -332,7 +332,7 @@ export default {
             collegeFunding = parseFloat(collegeFunding);
             // console.log("collegeFunding", collegeFunding);
 
-            this.total_part_1 = parseFloat(totalNeeded) - parseFloat(investibleFamilyAssets);
+            this.total_part_1 = totalNeeded - parseFloat(investibleFamilyAssets);
             this.total_part_2 = parseFloat(debtRepayment) + /*college*/ collegeFunding + parseFloat(otherExpenses);
             this.total_needed = this.total_part_1 + this.total_part_2;
         },
@@ -356,7 +356,7 @@ export default {
             });
 
             this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseFloat(this.toReplace.percentIncome) / 100), false);
-            let total = _.find(this.sections [ section ], { name: 'total' }).value;
+           // let total = _.find(this.sections [ section ], { name: 'total' }).value;
 
             return totals;
         },
