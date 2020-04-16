@@ -7515,6 +7515,10 @@ __webpack_require__.r(__webpack_exports__);
       // now account for fixed header
       window.scroll(0, 0);
       this.requestedValue = this.defaultAmount;
+      var n = this.requestedValue + "";
+      n = n.replace(/\$/g, "");
+      n = n.replace(/,/g, "");
+      this.requestedValue = n;
       console.log("this.requestedValue: ", this.requestedValue);
     });
   },
