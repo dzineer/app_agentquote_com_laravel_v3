@@ -4061,6 +4061,7 @@ var collegeTuition = {
       var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
       var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
       var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
+      var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
 
       try {
         decimalCount = Math.abs(decimalCount);
@@ -4068,7 +4069,7 @@ var collegeTuition = {
         var negativeSign = amount < 0 ? "-" : "";
         var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
         var j = i.length > 3 ? i.length % 3 : 0;
-        return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+        return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
       } catch (e) {
         console.log(e);
       }
@@ -4265,6 +4266,7 @@ __webpack_require__.r(__webpack_exports__);
       var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
       var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
       var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
+      var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
 
       try {
         decimalCount = Math.abs(decimalCount);
@@ -4272,7 +4274,7 @@ __webpack_require__.r(__webpack_exports__);
         var negativeSign = amount < 0 ? "-" : "";
         var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
         var j = i.length > 3 ? i.length % 3 : 0;
-        return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+        return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
       } catch (e) {
         console.log(e);
       }
@@ -4420,6 +4422,23 @@ __webpack_require__.r(__webpack_exports__);
       n = n.replace(/,/g, "");
       n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       return "$" + n;
+    },
+    formatMoney: function formatMoney(amount) {
+      var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+      var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
+      var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
+      var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
+
+      try {
+        decimalCount = Math.abs(decimalCount);
+        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+        var negativeSign = amount < 0 ? "-" : "";
+        var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+        var j = i.length > 3 ? i.length % 3 : 0;
+        return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+      } catch (e) {
+        console.log(e);
+      }
     }
   },
   methods: {
@@ -44607,7 +44626,7 @@ var render = function() {
               _c("na-header", [
                 _vm._v(
                   "Total Insurance Needed: " +
-                    _vm._s(_vm._f("formatAmount")(_vm.totalNeeded))
+                    _vm._s(_vm._f("formatMoney")(_vm.totalNeeded))
                 )
               ]),
               _vm._v(" "),
@@ -44783,7 +44802,7 @@ var render = function() {
                   show: true,
                   part1: _vm.totalPart1,
                   part2: _vm.totalPart2,
-                  total: _vm._f("formatAmount")(_vm.totalNeeded)
+                  total: _vm._f("formatMoney")(_vm.totalNeeded)
                 },
                 on: { quoteFromCalculator: _vm.onQuoteAmount }
               })

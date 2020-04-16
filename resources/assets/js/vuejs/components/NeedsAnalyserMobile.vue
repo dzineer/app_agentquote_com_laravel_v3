@@ -6,7 +6,7 @@
                 <button role="button" class="close-btn tw-flex tw-justify-center tw-items-center tw-rounded tw-bg-red-600 tw-text-white tw-leading-tight tw-text-center tw-text-xl tw-pt-1">Close</button>
            </div>
 
-            <na-header>Total Insurance Needed: {{ totalNeeded | formatAmount }}</na-header>
+            <na-header>Total Insurance Needed: {{ totalNeeded | formatMoney }}</na-header>
 
             <na-part>
                 part i: family income replacement
@@ -18,19 +18,19 @@
 
             <na-part>
                 part ii: debt, college, & other needed
-            </na-part>        
+            </na-part>
 
             <na-section id="debit-repayment" icon="minus-circle" title="debt repayment" :show="sectionStates.DEBIT_REPAYMENT" @fieldChange="onFieldChange" @toggle="toggleState('DEBIT_REPAYMENT')" @toggleNextState="toggleState('COLLEGE_FUNDING')" :fields="currentSection()" ></na-section>
             <na-college-section id="college" icon="graduation-cap" title="college funding" :show="sectionStates.COLLEGE_FUNDING" @fieldChange="onFieldChange"  @toggleNextState="toggleState('OTHER_EXPENSES')" @toggle="toggleState('COLLEGE_FUNDING')" :value="this.sections.college_funding" ></na-college-section>
-            <na-section icon="balance-scale" title="other expenses" :show="sectionStates.OTHER_EXPENSES" @fieldChange="onFieldChange" @toggle="toggleState('OTHER_EXPENSES')" @toggleNextState="toggleState('TOTAL')" :fields="currentSection()" ></na-section>                
-            
-            <div v-show="show" class="fields tw-py-4 tw-px-2">   
+            <na-section icon="balance-scale" title="other expenses" :show="sectionStates.OTHER_EXPENSES" @fieldChange="onFieldChange" @toggle="toggleState('OTHER_EXPENSES')" @toggleNextState="toggleState('TOTAL')" :fields="currentSection()" ></na-section>
+
+            <div v-show="show" class="fields tw-py-4 tw-px-2">
                 <div v-for="(field, index) in fields" :key="index" @fieldChange="onFieldChange" :header="field.text" :name="field.name" :value="field.value" :class="field.classes" :readonly="field.readonly" :is="field.component"></div>
                 <button class="tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-10 tw-rounded focus:tw-outline-none focus:tw-shadow-outline" @click="toggleNextState">Continue</button>
             </div>
 
-            <na-total icon="umbrella" title="insurance needed" :show="true" :part1="totalPart1" :part2="totalPart2" :total="totalNeeded | formatAmount" @quoteFromCalculator="onQuoteAmount" ></na-total>         
-            
+            <na-total icon="umbrella" title="insurance needed" :show="true" :part1="totalPart1" :part2="totalPart2" :total="totalNeeded | formatMoney" @quoteFromCalculator="onQuoteAmount" ></na-total>
+
         </div>
     </div>
 </template>
@@ -50,7 +50,7 @@ export default {
     ],
     components: {
         NaPart, NaHeader, NaSection, NaCollegeSection, NaTotal, Fields, Field
-    },    
+    },
     mounted() {
         this.visible = true;
     },
@@ -61,8 +61,23 @@ export default {
             n = n.replace(/,/g, "");
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return "$" + n;
+        },
+        formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",", symbol = "$") {
+            try {
+                decimalCount = Math.abs(decimalCount);
+                decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+                const negativeSign = amount < 0 ? "-" : "";
+
+                let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+                let j = (i.length > 3) ? i.length % 3 : 0;
+
+                return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+            } catch (e) {
+                console.log(e)
+            }
         }
-    },    
+    },
     methods: {
         onFieldChange(field) {
             this.$emit('fieldChange', field);
@@ -70,13 +85,13 @@ export default {
         toggleState( newState ) {
             debugger;
             this.$emit('toggle', { value: newState } );
-        },        
+        },
         toggleNextState( newState ) {
             debugger;
             this.$emit('toggle', { value: newState } );
-        },  
+        },
         currentSection() {
-            return this.sections[ this.applicationStates[ this.currentState ] ];  
+            return this.sections[ this.applicationStates[ this.currentState ] ];
         },
         closeNeedsAnalyser() {
             window.vueEvents.$emit('restartQuote');
@@ -86,7 +101,7 @@ export default {
             if (this.totalPart1 + this.totalPart2 > 0.00) {
                 this.$emit('quoteFromCalculator', { value: this.totalPart1 + this.totalPart2 } );
             }
-        }        
+        }
     }
 }
 </script>

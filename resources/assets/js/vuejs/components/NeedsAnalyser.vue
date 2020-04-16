@@ -420,7 +420,7 @@ export default {
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return "$" + n;
         },
-        formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
+        formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",", symbol = "$") {
             try {
                 decimalCount = Math.abs(decimalCount);
                 decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
@@ -430,7 +430,7 @@ export default {
                 let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
                 let j = (i.length > 3) ? i.length % 3 : 0;
 
-                return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+                return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
             } catch (e) {
                 console.log(e)
             }
