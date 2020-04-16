@@ -41148,7 +41148,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "tw-flex tw-flex-wrap tw-items-stretch tw-w-full tw-mb-4 tw-relative"
+          "tw-flex tw-flex-wrap tw-items-stretch tw-w-full tw-mb-2 tw-relative"
       },
       [
         _vm._m(0),
