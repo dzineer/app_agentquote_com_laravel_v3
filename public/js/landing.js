@@ -1834,7 +1834,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['header', 'classes', 'name', 'value', 'placeholder', 'readonly'],
+  props: ['header', 'classes', 'name', 'value', 'placer', 'readonly'],
   methods: {
     onFieldChange: function onFieldChange(e) {
       var field = {
@@ -41130,7 +41130,7 @@ var render = function() {
             "field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-w-px tw-border tw-px-3",
           attrs: {
             type: "text",
-            placeholder: _vm.placeholder,
+            placeholder: _vm.placer,
             name: _vm.name,
             disabled: _vm.readonly
           },
@@ -44833,7 +44833,7 @@ var render = function() {
                       header: field.text,
                       name: field.name,
                       value: field.value,
-                      placeholder: field.placeholder,
+                      placer: field.placeholder,
                       readonly: field.readonly
                     },
                     on: { fieldChange: _vm.onFieldChange }
