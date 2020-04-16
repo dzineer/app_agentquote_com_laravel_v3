@@ -3907,7 +3907,7 @@ var collegeTuition = {
     investibleFamilyAssetsCalculator: function investibleFamilyAssetsCalculator() {
       var _this2 = this;
 
-      var subtotal = 0.00;
+      var subtotal = 0;
       this.sections['investible_family_assets'].forEach(function (field) {
         var a = _this2.cleanValuedAmount(field.value);
 
@@ -45444,7 +45444,7 @@ var render = function() {
           _c("amount-field", {
             attrs: {
               header: "Insurance Needed",
-              value: _vm._f("formatMoney")(_vm.total),
+              value: _vm._f("formatAmount")(_vm.total),
               readonly: true
             }
           }),

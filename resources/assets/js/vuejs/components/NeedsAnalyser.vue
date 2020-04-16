@@ -258,7 +258,7 @@ export default {
             return needed;
         },
         investibleFamilyAssetsCalculator() {
-            let subtotal = 0.00;
+            let subtotal = 0;
             this.sections[ 'investible_family_assets' ].forEach( field => {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
