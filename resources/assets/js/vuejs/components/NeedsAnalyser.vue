@@ -231,7 +231,7 @@ export default {
             this.sections[ 'family_income' ].forEach( field => {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
-                   a = parseFloat(a);
+                   a = parseInt(a);
                    subtotal += a;
                 }
             });
@@ -243,7 +243,7 @@ export default {
 
             let totalFamilyIncome = _.find(this.sections[ 'family_income' ], { name: 'total' }).value;
             let percentIncome = _.find(this.sections[ 'replacement_income' ], { name: 'percent_income' }).value;
-            let replacementIncome = parseFloat(totalFamilyIncome) * (parseFloat(percentIncome) / 100);
+            let replacementIncome = parseInt(totalFamilyIncome) * (parseInt(percentIncome) / 100);
             _.find(this.sections[ 'replacement_income' ], { name: 'total_replacement_income' }).value = replacementIncome;
 
             let yearsIncomeNeeded = _.find(this.sections[ 'replacement_income' ], { name: 'years_income_needed' }).value;
@@ -262,7 +262,7 @@ export default {
             this.sections[ 'investible_family_assets' ].forEach( field => {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
-                   a = parseFloat(a);
+                   a = parseInt(a);
                    subtotal += a;
                 }
             });
@@ -274,7 +274,7 @@ export default {
             this.sections[ 'debt_repayment' ].forEach( field => {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
-                   a = parseFloat(a);
+                   a = parseInt(a);
                    subtotal += a;
                 }
             });
@@ -290,7 +290,7 @@ export default {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
                    debugger;
-                   a = parseFloat(a);
+                   a = parseInt(a);
                    subtotal += a;
                 }
             });
@@ -330,7 +330,7 @@ export default {
             // other expenses
             let otherExpenses = _.find(this.sections[ 'other_expenses' ], { name: 'total' }).value;
 
-            let baseNeeded = parseFloat(familyGrossIncome) * (parseFloat(percentIncome) / 100);
+            let baseNeeded = parseInt(familyGrossIncome) * (parseInt(percentIncome) / 100);
             // (rateOfReturn, inflationRate, yearsIncomeNeeded)
 
             // // debugger;
@@ -344,11 +344,11 @@ export default {
             }
 
             let collegeFunding = this.cleanValuedAmount(_.find(this.sections[ 'college_funding' ], { name: 'total' }).value);
-            collegeFunding = parseFloat(collegeFunding);
+            collegeFunding = parseInt(collegeFunding);
             // console.log("collegeFunding", collegeFunding);
 
-            this.total_part_1 = totalNeeded - parseFloat(investibleFamilyAssets);
-            this.total_part_2 = parseFloat(debtRepayment) + /*college*/ collegeFunding + parseFloat(otherExpenses);
+            this.total_part_1 = totalNeeded - parseInt(investibleFamilyAssets);
+            this.total_part_2 = parseInt(debtRepayment) + /*college*/ collegeFunding + parseInt(otherExpenses);
             this.total_needed = this.total_part_1 + this.total_part_2;
         },
 
@@ -370,7 +370,7 @@ export default {
                 totals += parseFloat(total);
             });
 
-            this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseFloat(this.toReplace.percentIncome) / 100), false);
+            this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseInt(this.toReplace.percentIncome) / 100), false);
            // let total = _.find(this.sections [ section ], { name: 'total' }).value;
 
             return totals;

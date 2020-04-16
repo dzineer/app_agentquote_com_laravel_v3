@@ -3430,11 +3430,6 @@ __webpack_require__.r(__webpack_exports__);
       n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       return "$" + n;
     },
-    currencyFormat: function currencyFormat(num) {
-      return "$" + num.toFixed(2) // always two decimal digits
-      .replace('.', ',') // replace decimal point character with ,
-      .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'); // use . as a separator
-    },
     formatMoney: function formatMoney(amount) {
       var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
       var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
@@ -45428,7 +45423,7 @@ var render = function() {
           _c("amount-field", {
             attrs: {
               header: "Income Replacement Insurance Needed (Part I)",
-              value: _vm._f("currencyFormat")(_vm.part1),
+              value: _vm._f("formatAmount")(_vm.part1),
               readonly: true
             }
           }),
@@ -45436,7 +45431,7 @@ var render = function() {
           _c("amount-field", {
             attrs: {
               header: "Total Additional Expenses (Part II)",
-              value: _vm._f("currencyFormat")(_vm.part2),
+              value: _vm._f("formatAmount")(_vm.part2),
               readonly: true
             }
           }),
@@ -45444,7 +45439,7 @@ var render = function() {
           _c("amount-field", {
             attrs: {
               header: "Insurance Needed",
-              value: _vm._f("currencyFormat")(_vm.total),
+              value: _vm._f("formatAmount")(_vm.total),
               readonly: true
             }
           }),
