@@ -44511,7 +44511,7 @@ var render = function() {
               staticClass:
                 "tw-w-16 tw-h-16 tw-flex tw-justify-center tw-items-center"
             },
-            [_c("icon", { attrs: { name: _vm.icon, classes: "tw-text-2xl" } })],
+            [_c("icon", { attrs: { name: _vm.icon, classes: "tw-text-xl" } })],
             1
           ),
           _vm._v(" "),
@@ -45663,7 +45663,7 @@ var render = function() {
         "h2",
         {
           staticClass:
-            "tw-text-xl tw-text-white tw-font-semibold tw-uppercase tw-py-2"
+            "tw-text-lg tw-text-white tw-font-semibold tw-uppercase tw-py-2"
         },
         [_vm._t("default")],
         2
