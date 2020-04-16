@@ -26,7 +26,9 @@
 
             <div v-show="show" class="fields tw-py-4 tw-px-2">
                 <div v-for="(field, index) in fields" :key="index" @fieldChange="onFieldChange" :header="field.text" :name="field.name" :value="field.value" :class="field.classes" :readonly="field.readonly" :is="field.component"></div>
+<!--
                 <button class="tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-10 tw-rounded focus:tw-outline-none focus:tw-shadow-outline" @click="toggleNextState">Continue</button>
+-->
             </div>
 
             <na-total icon="umbrella" title="insurance needed" :show="true" :part1="totalPart1" :part2="totalPart2" :total="totalNeeded | formatMoney" @quoteFromCalculator="onQuoteAmount" ></na-total>

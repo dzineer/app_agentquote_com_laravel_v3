@@ -4418,6 +4418,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -44682,7 +44684,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-part", [
                 _vm._v(
-                  "\n            part i: family income replacement\n        "
+                  "\n                part i: family income replacement\n            "
                 )
               ]),
               _vm._v(" "),
@@ -44743,7 +44745,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-part", [
                 _vm._v(
-                  "\n            part ii: debt, college, & other needed\n        "
+                  "\n                part ii: debt, college, & other needed\n            "
                 )
               ]),
               _vm._v(" "),
@@ -44816,33 +44818,21 @@ var render = function() {
                   ],
                   staticClass: "fields tw-py-4 tw-px-2"
                 },
-                [
-                  _vm._l(_vm.fields, function(field, index) {
-                    return _c(field.component, {
-                      key: index,
-                      tag: "div",
-                      class: field.classes,
-                      attrs: {
-                        header: field.text,
-                        name: field.name,
-                        value: field.value,
-                        readonly: field.readonly
-                      },
-                      on: { fieldChange: _vm.onFieldChange }
-                    })
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-10 tw-rounded focus:tw-outline-none focus:tw-shadow-outline",
-                      on: { click: _vm.toggleNextState }
+                _vm._l(_vm.fields, function(field, index) {
+                  return _c(field.component, {
+                    key: index,
+                    tag: "div",
+                    class: field.classes,
+                    attrs: {
+                      header: field.text,
+                      name: field.name,
+                      value: field.value,
+                      readonly: field.readonly
                     },
-                    [_vm._v("Continue")]
-                  )
-                ],
-                2
+                    on: { fieldChange: _vm.onFieldChange }
+                  })
+                }),
+                1
               ),
               _vm._v(" "),
               _c("na-total", {
