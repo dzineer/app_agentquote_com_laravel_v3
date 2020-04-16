@@ -50,7 +50,7 @@
                     <!-- <na-header>(Desktop) Total Insurance Needed: {{ totalNeeded | formatAmount }}</na-header> -->
 
                     <div class="tw-w-3/4 tw-bg-black tw-rounded-b-xl tw-flex tw-absolute tw-justify-center tw-top-0" style="background-color:#2285C4;">
-                        <h1 class="tw-py-4 tw-text-2xl tw-font-bold tw-leading-loose tw-tracking-normal tw-uppercase tw-text-white">
+                        <h1 class="tw-py-4 tw-px-3 tw-text-xl tw-leading-loose tw-tracking-normal tw-uppercase tw-text-white">
                             Total Insurance Needed: {{ totalNeeded | formatMoney }}
                         </h1>
                     </div>

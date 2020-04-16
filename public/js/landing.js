@@ -43679,7 +43679,7 @@ var render = function() {
                           "h1",
                           {
                             staticClass:
-                              "tw-py-4 tw-text-2xl tw-font-bold tw-leading-loose tw-tracking-normal tw-uppercase tw-text-white"
+                              "tw-py-4 tw-px-3 tw-text-xl tw-leading-loose tw-tracking-normal tw-uppercase tw-text-white"
                           },
                           [
                             _vm._v(
@@ -44192,7 +44192,7 @@ var render = function() {
         "h1",
         {
           staticClass:
-            "tw-py-6 tw-px-2 tw-text-2xl tw-font-bold tw-leading-loose tw-tracking-normal tw-uppercase tw-text-center"
+            "tw-py-6 tw-px-3 tw-text-xl tw-leading-loose tw-tracking-normal tw-uppercase tw-text-center"
         },
         [_vm._t("default")],
         2
