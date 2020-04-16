@@ -1834,7 +1834,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['header', 'classes', 'name', 'value', 'readonly'],
+  props: ['header', 'classes', 'name', 'value', 'placeholder', 'readonly'],
   methods: {
     onFieldChange: function onFieldChange(e) {
       var field = {
@@ -3546,12 +3546,14 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'gross_income',
           value: 0,
+          placeholder: '0',
           text: 'your gross income',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'spouse_gross_income',
+          placeholder: '0',
           value: 0,
           text: 'Spouse\'s Gross Income (Only include if this income would stop if you were to die) ?',
           classes: 'tw-text-gray-800 tw-text-lg',
@@ -3559,6 +3561,7 @@ var collegeTuition = {
         }, {
           component: 'amount-field',
           name: 'other_gross_income',
+          placeholder: '0',
           value: 0,
           text: 'Other Gross Income (Only include if this income would stop if you were to die) ?',
           classes: 'tw-text-gray-800 tw-text-lg',
@@ -3567,6 +3570,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'total',
           value: 0,
+          placeholder: '0',
           text: 'total gross income to be replaced',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3575,12 +3579,14 @@ var collegeTuition = {
           component: 'percentage-field',
           name: 'percent_income',
           value: 80,
+          placeholder: '0',
           text: 'Desired annual income needs (typically 70-80% of current combined income) ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total_replacement_income',
+          placeholder: '0',
           value: 0,
           text: 'TOTAL REPLACEMENT INCOME NEEDED',
           classes: 'tw-text-gray-800 tw-text-lg',
@@ -3596,6 +3602,7 @@ var collegeTuition = {
           component: 'percentage-field',
           name: 'rate_return',
           value: 0,
+          placeholder: '5',
           text: 'Rate of Return ?',
           classes: 'tw-text-gray-800',
           readonly: false
@@ -3603,6 +3610,7 @@ var collegeTuition = {
           component: 'percentage-field',
           name: 'rate_inflation',
           value: 0,
+          placeholder: '3',
           text: 'Rate of Inflation ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3610,6 +3618,7 @@ var collegeTuition = {
           component: 'percentage-field',
           name: 'net_rate_return',
           value: 0,
+          placeholder: '1',
           text: 'Net Rate of Return',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3617,6 +3626,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'total',
           value: 0,
+          placeholder: '0',
           text: 'INITIAL LIFE INSURANCE NEEDED TO REPLACE INCOME(BEFORE OTHER CALCULATIONS)',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3625,6 +3635,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'savings',
           value: 0,
+          placeholder: '0',
           text: 'Savings ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3632,6 +3643,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'investment_portfolio',
           value: 0,
+          placeholder: '0',
           text: 'Investment Portfolio ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3639,6 +3651,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'current_life_insurance',
           value: 0,
+          placeholder: '0',
           text: 'Current Life Insurance ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3646,6 +3659,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'other_assets',
           value: 0,
+          placeholder: '0',
           text: 'Other Assets ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3653,6 +3667,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'total',
           value: 0,
+          placeholder: '0',
           text: 'TOTAL AVAILABLE ASSETS ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3661,6 +3676,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'mortgage',
           value: 0,
+          placeholder: '0',
           text: 'Mortgage ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3668,6 +3684,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'auto_loan',
           value: 0,
+          placeholder: '0',
           text: 'Auto Loan ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3675,6 +3692,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'consumer_debt',
           value: 0,
+          placeholder: '0',
           text: 'Consumer Debt ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3682,6 +3700,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'other_debt',
           value: 0,
+          placeholder: '0',
           text: 'Other Debt',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3689,6 +3708,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'total',
           value: 0,
+          placeholder: '0',
           text: 'TOTAL DEBT',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3697,17 +3717,20 @@ var collegeTuition = {
           name: 'children',
           text: 'Number of children',
           value: 0,
+          placeholder: '0',
           classes: ''
         }, {
           name: 'total',
           text: 'Number of children',
           value: 0,
+          placeholder: '0',
           classes: ''
         }],
         other_expenses: [{
           component: 'amount-field',
           name: 'funeral',
           value: 0,
+          placeholder: '0',
           text: 'Funeral (typical cost of a funeral is approx. $5,000 ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3715,6 +3738,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'special_bequests',
           value: 0,
+          placeholder: '0',
           text: 'Special Bequests ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3722,6 +3746,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'other_expenses',
           value: 0,
+          placeholder: '0',
           text: 'Consumer Debt ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
@@ -3729,6 +3754,7 @@ var collegeTuition = {
           component: 'amount-field',
           name: 'total',
           value: 0,
+          placeholder: '0',
           text: 'TOTAL EXPENSES',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -41102,7 +41128,12 @@ var render = function() {
         _c("input", {
           staticClass:
             "field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-w-px tw-border tw-px-3",
-          attrs: { type: "text", name: _vm.name, disabled: _vm.readonly },
+          attrs: {
+            type: "text",
+            placeholder: _vm.placeholder,
+            name: _vm.name,
+            disabled: _vm.readonly
+          },
           domProps: { value: _vm._f("formatAmount")(_vm.value) },
           on: { keyup: _vm.onFieldChange }
         }),
