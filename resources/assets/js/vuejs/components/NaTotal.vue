@@ -8,9 +8,9 @@
             </div>
 
             <div class="fields tw-py-4 tw-px-2">
-                <amount-field header="Income Replacement Insurance Needed (Part I)" :value="part1 | formatAmount" :readonly="true"></amount-field>
-                <amount-field header="Total Additional Expenses (Part II)" :value="part2 | formatAmount" :readonly="true"></amount-field>
-                <amount-field header="Insurance Needed" :value="total | formatAmount" :readonly="true"></amount-field>
+                <amount-field header="Income Replacement Insurance Needed (Part I)" :value="part1 | currencyFormat" :readonly="true"></amount-field>
+                <amount-field header="Total Additional Expenses (Part II)" :value="part2 | currencyFormat" :readonly="true"></amount-field>
+                <amount-field header="Insurance Needed" :value="total | currencyFormat" :readonly="true"></amount-field>
                 <button class="tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline" @click="onQuoteAmount">Quote Amount</button>
             </div>
 
@@ -41,6 +41,14 @@ export default {
             n = n.replace(/,/g, "");
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return "$" + n;
+        },
+        currencyFormat(num) {
+            return (
+                "$" + num
+                    .toFixed(2) // always two decimal digits
+                    .replace('.', ',') // replace decimal point character with ,
+                    .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+            ) // use . as a separator
         },
         formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",", symbol = "$") {
             try {
