@@ -81,7 +81,7 @@ export default {
             previousState: '',
             currentState: '',
             nextState: '',
-            collegeCosts: 0.00,
+            collegeCosts: 0,
             collegeTuition: collegeTuition,
             calculators: {
                 family_income: null,
@@ -118,9 +118,9 @@ export default {
                 TOTALS: false
             },
             currentHeader: '',
-            total_part_1: 0.00,
-            total_part_2: 0.00,
-            total_needed: 0.00,
+            total_part_1: 0,
+            total_part_2: 0,
+            total_needed: 0,
             sections: {
                 family_income: [
                     { component: 'amount-field', name: 'gross_income', value: 0.00, text: 'your gross income', classes: 'tw-text-gray-800 tw-text-lg', readonly: false },
@@ -279,7 +279,7 @@ export default {
                 }
             });
             _.find(this.sections[ 'debt_repayment' ], { name: 'total' }).value = subtotal;
-            return 0.00;
+            return 0;
         },
         collegeFundingCalculator() {
             return _.find(this.sections[ 'college_funding' ], { name: 'total' }).value;
@@ -294,7 +294,7 @@ export default {
                 }
             });
             _.find(this.sections[ 'other_expenses' ], { name: 'total' }).value = subtotal;
-            return 0.00;
+            return 0;
         },
         calc() {
             let totalNeeded = 0;
