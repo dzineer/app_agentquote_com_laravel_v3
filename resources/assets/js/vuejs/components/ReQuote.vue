@@ -74,11 +74,11 @@
             this.category = this.insuranceCategory;
             this.terms = this.getTermYears();
             this.localQuote = this.quote;
-            debugger;
+            // debugger;
             this.requestedValue = this.localQuote.quoteAmount;
             this.term = parseInt(this.localQuote.term);
             this.benefits = this.getBenefits();
-            debugger;
+            // debugger;
             this.$root.$on('quoteComplete', this.onQuoteComplete);
             window.vueEvents.$on('finishedRequote', this.finishedRequote);
         },
@@ -170,7 +170,7 @@
                 }
             },
             getBenefits() {
-                debugger
+                // debugger
                 if (this.category === 'termlife') {
                     return this.genTermlifeBenefits();
                 } else if (this.category === 'fe') {
@@ -193,7 +193,7 @@
 
                     for (let i = point.start; i <= point.end; i = i + point.inc) {
                         let txt = this.formatCurrency(i);
-                        debugger;
+                        // debugger;
                         arr.push({ "text": txt, "value": i/1000 });
                     }
 
@@ -217,7 +217,7 @@
 
                     for (let i = point.start; i < point.end; i = i + point.inc) {
                         let txt = this.formatCurrency(i);
-                        debugger;
+                        // debugger;
                         arr.push({ "text": txt, "value": i/1000 });
                     }
 
@@ -240,11 +240,11 @@
                         let v = this.formatCurrency(i*1000);
                         arr.push({ "text": v, "value": i });
                     }
-                    debugger;
+                    // debugger;
                     return arr;
                 });
 
-                debugger;
+                // debugger;
                 return arr;
             },
             formatCurrency(s, n, x) {

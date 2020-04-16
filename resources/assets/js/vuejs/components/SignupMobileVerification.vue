@@ -6,10 +6,10 @@
 				<div class="tw-w-full tw-flex tw-justify-center tw-items-center md:tw-no-margin">
 					<div class="tw-flex tw-flex-col tw-text-center tw-w-full">
 
-							<code-verification 
-								@phoneChange="onPhoneChange" 
-								@emailChange="onEmailChange" 
-								@generateQuote="onGenerateQuote" 
+							<code-verification
+								@phoneChange="onPhoneChange"
+								@emailChange="onEmailChange"
+								@generateQuote="onGenerateQuote"
 								@showFakeQuote="onShowFakeQuote"
 								:email="email"
 								:token="token"
@@ -20,8 +20,8 @@
 					</div>
 				</div>
 			</div>
-	</div>		
-</div>			
+	</div>
+</div>
 </template>
 
 
@@ -51,15 +51,15 @@ export default {
 			this.phone = phone.value;
 			this.isReady();
 			this.$emit('phoneChange', phone );
-		},		
+		},
 		onEmailChange(phone) {
 			this.$emit('emailChange', phone );
-		},		
+		},
 		onGenerateQuote() {
 			this.$emit('generateQuote');
 		},
 		onShowFakeQuote(data) {
-			debugger;
+			// debugger;
 			this.$emit('showFakeQuote', data);
 		},
 		prevStep() {

@@ -17,7 +17,7 @@
            }
        },
        mounted() {
-           debugger;
+           // debugger;
 
            console.log(this.icons);
 

@@ -289,6 +289,7 @@ export default {
             this.sections[ 'other_expenses' ].forEach( field => {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
+                   debugger;
                    a = parseFloat(a);
                    subtotal += a;
                 }
@@ -301,7 +302,7 @@ export default {
             let total = 0;
             let family_income = 0;
             let other_income = 0;
-            debugger;
+            // // debugger;
             Object.values(this.calculators.family_income).map( calculator => {
                 calculator();
             });
@@ -332,7 +333,7 @@ export default {
             let baseNeeded = parseFloat(familyGrossIncome) * (parseFloat(percentIncome) / 100);
             // (rateOfReturn, inflationRate, yearsIncomeNeeded)
 
-            debugger;
+            // // debugger;
             let npv = this.netPVR(rateOfReturn, inflationRate, yearsIncomeNeeded);
 
             if (npv == 1) {
@@ -366,7 +367,7 @@ export default {
             let totals = 0;
             Object.values(this.applicationStates).forEach( section => {
                 let total = _.find(this.sections [ section ], { name: 'total' }).value;
-                totals += total;
+                totals += parseFloat(total);
             });
 
             this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseFloat(this.toReplace.percentIncome) / 100), false);
@@ -383,7 +384,7 @@ export default {
             this.nextState = this.getNextState( this.currentState );
         },
         getNextState() {
-            debugger;
+            // // debugger;
             let keys = Object.keys( this.sectionStates );
             let idIndex = keys.indexOf( this.currentState );
             let nextIndex = idIndex += 1;
@@ -399,7 +400,7 @@ export default {
             let keys = Object.keys( this.sectionStates );
             let idIndex = keys.indexOf( this.currentState );
             let nextIndex = idIndex -= 1;
-            debugger;
+            // // debugger;
             // if we go less than our array states, return current state
             if (nextIndex === -1) {
                 return this.currentState;

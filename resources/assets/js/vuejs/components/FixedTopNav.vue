@@ -39,7 +39,7 @@ export default {
 
 
 /*            if (window.scrollY >= originalOffsetTop) {
-               debugger;
+               // debugger;
 
                el.classList.add(
                    'tw-fixed',

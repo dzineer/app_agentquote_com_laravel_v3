@@ -52,15 +52,15 @@ export default {
     },
     mounted() {
         // fire off ajax request
-        debugger;
-        StatusRequest.all( 
+        // debugger;
+        StatusRequest.all(
             data => {
-                debugger;
+                // debugger;
                 console.log(data);
                 this.items = data;
             },
             errors => {
-                debugger;
+                // debugger;
                 console.log(errors);
             }
         );

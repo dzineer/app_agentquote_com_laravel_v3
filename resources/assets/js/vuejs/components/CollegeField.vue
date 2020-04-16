@@ -1,25 +1,25 @@
 <template>
-    <div class="field">  
+    <div class="field">
     <h3 class="field-heading" :class="classes" v-text="header"></h3>
 
     <div class="tw-flex tw-flex-wrap tw-items-stretch tw-w-full tw-mb-4 tw-relative">
         <select @change="buildChildren" class="field-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-w-px tw-flex-1 tw-border tw-border-grey-light tw-px-3 tw-rtw-elative">
-          <option :value="0">0</option> 
-          <option :value="1">1</option> 
-          <option :value="2">2</option> 
-          <option :value="3">3</option> 
-          <option :value="4">4</option> 
+          <option :value="0">0</option>
+          <option :value="1">1</option>
+          <option :value="2">2</option>
+          <option :value="3">3</option>
+          <option :value="4">4</option>
         </select>
     </div>
 
     <div :v-show="build" v-for="(child, index) in children" :key="child.key" class="tw-flex tw-flex-wrap tw-items-stretch tw-w-full tw-mb-8 tw-relative">
         <future-college-tuition @ageChange="onAgeChange" @tuitionChange="onTuitionChange" :child="index+1"></future-college-tuition>
-    </div>    
+    </div>
 
     <div class="tw-flex tw-flex-wrap tw-items-stretch tw-w-full tw-mb-4 tw-relative">
         <amount-field header="Total Tuition" name="total" :value="totalTuition | formatAmount" :readonly="true"></amount-field>
     </div>
-    
+
     </div>
 </template>
 
@@ -72,7 +72,7 @@ export default {
             n = n.replace(/,/g, "");
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return n;
-        },        
+        },
         onFieldChange(e) {
             let field = { name: e.currentTarget.name, value: e.currentTarget.value };
             this.$emit('fieldChange', field);
@@ -82,7 +82,7 @@ export default {
 			n = n.replace(/\$/g, "");
 			n = n.replace(/,/g, "");
 			return n;
-		},      
+		},
         buildChildren(e) {
             if (e.currentTarget.value > 0) {
                 this.build = false;
@@ -114,7 +114,7 @@ export default {
         calc() {
             this.totalTuition = 0.00;
 
-            debugger;
+            // debugger;
             this.children.forEach(child => {
                 let yearsTilCollege = 0;
                 let cost = 0.00;
@@ -124,7 +124,7 @@ export default {
                     }
                    cost = this.calculateCollegeCost(child.tuition, this.inflationRate, yearsTilCollege);
                    _.find(this.children, { name: child.name }).value = parseFloat(cost);
-                   this.totalTuition += parseFloat(cost); 
+                   this.totalTuition += parseFloat(cost);
                 }
             });
             this.totalTuition = this.formatAmount( Math.round(this.totalTuition) );
@@ -137,7 +137,7 @@ export default {
         onTuitionChange(tuition) {
             let tuitionType = tuition.value;
             let collegeCost = 0.00;
-            debugger;
+            // debugger;
             if (tuitionType === 'pub') {
                 collegeCost = this.collegeTuition.getPublic();
             } else if (tuitionType === 'priv') {
@@ -145,7 +145,7 @@ export default {
             }
             this.children[tuition.child].tuition = collegeCost;
             this.calc();
-        }          
+        }
     }
 }
 </script>

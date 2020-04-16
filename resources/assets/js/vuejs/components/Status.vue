@@ -26,7 +26,7 @@ export default {
     filters: {
         ago(date) {
             return moment(date).fromNow();
-        }, 
+        },
         shout(str) {
             return str + ' yo!';
         }
@@ -36,7 +36,7 @@ export default {
     },
     methods: {
         getName() {
-            debugger;
+            // debugger;
         }
     }
 }

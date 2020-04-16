@@ -97,14 +97,14 @@
             }
         },
         mounted() {
-            debugger;
+            // debugger;
 
             window.vueEvents.$on('generateQuote', this.onGenerateQuote);
             window.vueEvents.$on('reGenerateQuote', this.onReGenerateQuote);
             this.$root.$on('quoteUpdated', this.onQuoteUpdated);
 
             this.quoteItems = this.items;
-            debugger;
+            // debugger;
             this.category = this.insuranceCategory;
             this.category = this.getCategoryFromHash();
             this.category = this.insuranceCategory === '' ? 'termlife' : this.insuranceCategory;
@@ -153,7 +153,7 @@
                     'X-CSRF-TOKEN': token
                 };
 
-                debugger;
+                // debugger;
                 let benefit = data.benefit;
                 let term = data.term;
 
@@ -171,7 +171,7 @@
                     if (res.statusText === "OK") {
 
                         if (res.data.success === true) {
-                            debugger;
+                            // debugger;
                             this.quoteItems = res.data.quote.items;
                             window.vueEvents.$emit('showQuote');
                             this.$root.$emit('quoteComplete', {});
@@ -194,7 +194,7 @@
                     'X-CSRF-TOKEN': token
                 };
 
-                debugger;
+                // debugger;
                 let url = '/quote/verified/?token=' + data.token + '&format=json';
 
                 this.token = data.token;
@@ -206,7 +206,7 @@
                     if (res.statusText === "OK") {
 
                         if (res.data.success === true) {
-                            debugger;
+                            // debugger;
                             this.quoteItems = res.data.quote.items;
                             window.vueEvents.$emit('showQuote');
                             // location.href = res.data.redirect;

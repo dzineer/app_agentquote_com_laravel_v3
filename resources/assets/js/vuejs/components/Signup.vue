@@ -289,7 +289,7 @@ export default {
             this.quoteRequest.email = email.value;
         },
         onShowFakeQuote() {
-            debugger;
+            // debugger;
             this.$emit('generateFakeQuote');
         },
         getBenefitLimits() {
@@ -314,7 +314,7 @@ export default {
         },
         setBenefitPlaceHolderValues() {
             const limits = this.getBenefitLimits();
-            debugger;
+            // debugger;
             this.benefitsPlaceholder = this.commaFormatAmount(limits.min) + ' - ' + this.commaFormatAmount(limits.max)
         },
         getTermYears() {
@@ -333,7 +333,7 @@ export default {
             }
         },
         getCategoryId() {
-            debugger;
+            // debugger;
             if (this.insuranceCategory === 'termlife') {
                 return '1';
             } else if (this.insuranceCategory === 'fe') {
@@ -357,7 +357,7 @@ export default {
         },
         onGenerateQuote() {
 
-            debugger;
+            // debugger;
 
             const token = jQuery('meta[name="csrf-token"]').attr('content');
 
@@ -365,7 +365,7 @@ export default {
                 'X-Requested-With': 'XMLHttpRequest',
                 'X-CSRF-TOKEN': token
             };
-            debugger;
+            // debugger;
             let url = '/api/app_module?module='+'phone_validation_module';//  + '?module='+'phone_validation_module';
             url = '/api/user/quote/generate';
             let fd = new FormData();

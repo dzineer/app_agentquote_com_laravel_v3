@@ -2189,8 +2189,8 @@ __webpack_require__.r(__webpack_exports__);
         axios.defaults.headers.common = {
           'X-Requested-With': 'XMLHttpRequest',
           'X-CSRF-TOKEN': token
-        };
-        debugger;
+        }; // debugger;
+
         var url = '/api/app_module?module=' + 'phone_validation_module'; //  + '?module='+'phone_validation_module';
 
         var fd = new FormData();
@@ -2213,7 +2213,7 @@ __webpack_require__.r(__webpack_exports__);
 
           if (res.statusText === "OK") {
             if (res.data.success === true) {
-              debugger;
+              // debugger;
               window.vueEvents.$emit('generateQuote', {
                 data: res.data,
                 token: _this.token
@@ -2228,7 +2228,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     onGenerateQuote: function onGenerateQuote() {
-      debugger;
+      // debugger;
       this.sending = true;
       this.$emit('generateQuote');
     },
@@ -2404,8 +2404,8 @@ var collegeTuition = {
     calc: function calc() {
       var _this = this;
 
-      this.totalTuition = 0.00;
-      debugger;
+      this.totalTuition = 0.00; // debugger;
+
       this.children.forEach(function (child) {
         var yearsTilCollege = 0;
         var cost = 0.00;
@@ -2434,8 +2434,7 @@ var collegeTuition = {
     },
     onTuitionChange: function onTuitionChange(tuition) {
       var tuitionType = tuition.value;
-      var collegeCost = 0.00;
-      debugger;
+      var collegeCost = 0.00; // debugger;
 
       if (tuitionType === 'pub') {
         collegeCost = this.collegeTuition.getPublic();
@@ -2747,7 +2746,7 @@ __webpack_require__.r(__webpack_exports__);
         el.classList[window.scrollY >= originalOffsetTop ? 'add' : 'remove']('tw-fixed', 'tw-w-full', 'tw-top-0', 'tw-z-20');
       }
       /*            if (window.scrollY >= originalOffsetTop) {
-                     debugger;
+                     // debugger;
       
                      el.classList.add(
                          'tw-fixed',
@@ -2937,8 +2936,8 @@ __webpack_require__.r(__webpack_exports__);
   props: ['languages'],
   methods: {
     formatLanguage: function formatLanguage(language, index) {
-      debugger; // English and
-
+      // debugger;
+      // English and
       if (this.languages.length === 2 && index === 1) {
         return language + " and ";
       } // English and Thai
@@ -3377,7 +3376,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('toggle');
     },
     getClasses: function getClasses() {
-      debugger;
+      // debugger;
       return this.selected ? this.classes + ' na-selected' : this.classes;
     }
   }
@@ -3450,7 +3449,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     onQuoteAmount: function onQuoteAmount() {
-      debugger;
+      // debugger;
       this.$emit('quoteFromCalculator');
     }
   }
@@ -3951,6 +3950,7 @@ var collegeTuition = {
         var a = _this4.cleanValuedAmount(field.value);
 
         if (field.name !== 'total' && a.length > 0) {
+          debugger;
           a = parseFloat(a);
           subtotal += a;
         }
@@ -3964,8 +3964,8 @@ var collegeTuition = {
       var totalNeeded = 0;
       var total = 0;
       var family_income = 0;
-      var other_income = 0;
-      debugger;
+      var other_income = 0; // // debugger;
+
       Object.values(this.calculators.family_income).map(function (calculator) {
         calculator();
       });
@@ -4014,8 +4014,8 @@ var collegeTuition = {
       }).value;
 
       var baseNeeded = parseFloat(familyGrossIncome) * (parseFloat(percentIncome) / 100); // (rateOfReturn, inflationRate, yearsIncomeNeeded)
+      // // debugger;
 
-      debugger;
       var npv = this.netPVR(rateOfReturn, inflationRate, yearsIncomeNeeded);
 
       if (npv == 1) {
@@ -4057,7 +4057,7 @@ var collegeTuition = {
           name: 'total'
         }).value;
 
-        totals += total;
+        totals += parseFloat(total);
       });
       this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseFloat(this.toReplace.percentIncome) / 100), false); // let total = _.find(this.sections [ section ], { name: 'total' }).value;
 
@@ -4072,7 +4072,7 @@ var collegeTuition = {
       this.nextState = this.getNextState(this.currentState);
     },
     getNextState: function getNextState() {
-      debugger;
+      // // debugger;
       var keys = Object.keys(this.sectionStates);
       var idIndex = keys.indexOf(this.currentState);
       var nextIndex = idIndex += 1; // if we go beyond our states, return current state
@@ -4087,8 +4087,8 @@ var collegeTuition = {
     getPreviousState: function getPreviousState() {
       var keys = Object.keys(this.sectionStates);
       var idIndex = keys.indexOf(this.currentState);
-      var nextIndex = idIndex -= 1;
-      debugger; // if we go less than our array states, return current state
+      var nextIndex = idIndex -= 1; // // debugger;
+      // if we go less than our array states, return current state
 
       if (nextIndex === -1) {
         return this.currentState;
@@ -4313,8 +4313,8 @@ __webpack_require__.r(__webpack_exports__);
       var n = a + "";
       n = n.replace(/\$/g, "");
       n = n.replace(/,/g, "");
-      n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      debugger;
+      n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // debugger;
+
       return "$" + n;
     },
     formatMoney: function formatMoney(amount) {
@@ -4340,8 +4340,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('fieldChange', field);
     },
     toggleState: function toggleState(newState) {
-      debugger;
-
+      // debugger;
       if (newState === 'COLLEGE_FUNDING') {
         this.showGeneralFields = false;
         this.showTotal = false;
@@ -4374,8 +4373,7 @@ __webpack_require__.r(__webpack_exports__);
       return this.sections[this.applicationStates[this.currentState]];
     },
     onQuoteAmount: function onQuoteAmount() {
-      debugger;
-
+      // debugger;
       if (this.totalPart1 + this.totalPart2 > 0.00) {
         this.$emit('quoteFromCalculator', {
           value: this.totalPart1 + this.totalPart2
@@ -4514,13 +4512,13 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('fieldChange', field);
     },
     toggleState: function toggleState(newState) {
-      debugger;
+      // debugger;
       this.$emit('toggle', {
         value: newState
       });
     },
     toggleNextState: function toggleNextState(newState) {
-      debugger;
+      // debugger;
       this.$emit('toggle', {
         value: newState
       });
@@ -4532,8 +4530,7 @@ __webpack_require__.r(__webpack_exports__);
       window.vueEvents.$emit('restartQuote');
     },
     onQuoteAmount: function onQuoteAmount() {
-      debugger;
-
+      // debugger;
       if (this.totalPart1 + this.totalPart2 > 0.00) {
         this.$emit('quoteFromCalculator', {
           value: this.totalPart1 + this.totalPart2
@@ -4890,12 +4887,12 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    debugger;
+    // debugger;
     window.vueEvents.$on('generateQuote', this.onGenerateQuote);
     window.vueEvents.$on('reGenerateQuote', this.onReGenerateQuote);
     this.$root.$on('quoteUpdated', this.onQuoteUpdated);
-    this.quoteItems = this.items;
-    debugger;
+    this.quoteItems = this.items; // debugger;
+
     this.category = this.insuranceCategory;
     this.category = this.getCategoryFromHash();
     this.category = this.insuranceCategory === '' ? 'termlife' : this.insuranceCategory;
@@ -4942,8 +4939,8 @@ __webpack_require__.r(__webpack_exports__);
       axios.defaults.headers.common = {
         'X-Requested-With': 'XMLHttpRequest',
         'X-CSRF-TOKEN': token
-      };
-      debugger;
+      }; // debugger;
+
       var benefit = data.benefit;
       var term = data.term;
 
@@ -4959,7 +4956,7 @@ __webpack_require__.r(__webpack_exports__);
 
         if (res.statusText === "OK") {
           if (res.data.success === true) {
-            debugger;
+            // debugger;
             _this.quoteItems = res.data.quote.items;
             window.vueEvents.$emit('showQuote');
 
@@ -4979,8 +4976,8 @@ __webpack_require__.r(__webpack_exports__);
       axios.defaults.headers.common = {
         'X-Requested-With': 'XMLHttpRequest',
         'X-CSRF-TOKEN': token
-      };
-      debugger;
+      }; // debugger;
+
       var url = '/quote/verified/?token=' + data.token + '&format=json';
       this.token = data.token;
       this.verifying = true;
@@ -4989,7 +4986,7 @@ __webpack_require__.r(__webpack_exports__);
 
         if (res.statusText === "OK") {
           if (res.data.success === true) {
-            debugger;
+            // debugger;
             _this2.quoteItems = res.data.quote.items;
             window.vueEvents.$emit('showQuote'); // location.href = res.data.redirect;
           } else {}
@@ -5608,12 +5605,12 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.category = this.insuranceCategory;
     this.terms = this.getTermYears();
-    this.localQuote = this.quote;
-    debugger;
+    this.localQuote = this.quote; // debugger;
+
     this.requestedValue = this.localQuote.quoteAmount;
     this.term = parseInt(this.localQuote.term);
-    this.benefits = this.getBenefits();
-    debugger;
+    this.benefits = this.getBenefits(); // debugger;
+
     this.$root.$on('quoteComplete', this.onQuoteComplete);
     window.vueEvents.$on('finishedRequote', this.finishedRequote);
   },
@@ -5721,8 +5718,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     getBenefits: function getBenefits() {
-      debugger;
-
+      // debugger
       if (this.category === 'termlife') {
         return this.genTermlifeBenefits();
       } else if (this.category === 'fe') {
@@ -5744,9 +5740,9 @@ __webpack_require__.r(__webpack_exports__);
       var arr = [];
       stops.forEach(function (point) {
         for (var i = point.start; i <= point.end; i = i + point.inc) {
-          var txt = _this.formatCurrency(i);
+          var txt = _this.formatCurrency(i); // debugger;
 
-          debugger;
+
           arr.push({
             "text": txt,
             "value": i / 1000
@@ -5778,9 +5774,9 @@ __webpack_require__.r(__webpack_exports__);
       var arr = [];
       stops.forEach(function (point) {
         for (var i = point.start; i < point.end; i = i + point.inc) {
-          var txt = _this2.formatCurrency(i);
+          var txt = _this2.formatCurrency(i); // debugger;
 
-          debugger;
+
           arr.push({
             "text": txt,
             "value": i / 1000
@@ -5818,12 +5814,12 @@ __webpack_require__.r(__webpack_exports__);
             "text": v,
             "value": i
           });
-        }
+        } // debugger;
 
-        debugger;
+
         return arr;
-      });
-      debugger;
+      }); // debugger;
+
       return arr;
     },
     formatCurrency: function formatCurrency(s, n, x) {
@@ -5903,7 +5899,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    debugger;
+    // debugger;
     this.displayContent = this.view;
     window.vueEvents.$on('hide-section-views', this.hideContent);
     window.vueEvents.$on('show-section-views', this.showContent);
@@ -6258,7 +6254,7 @@ __webpack_require__.r(__webpack_exports__);
       this.quoteRequest.email = email.value;
     },
     onShowFakeQuote: function onShowFakeQuote() {
-      debugger;
+      // debugger;
       this.$emit('generateFakeQuote');
     },
     getBenefitLimits: function getBenefitLimits() {
@@ -6285,8 +6281,8 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     setBenefitPlaceHolderValues: function setBenefitPlaceHolderValues() {
-      var limits = this.getBenefitLimits();
-      debugger;
+      var limits = this.getBenefitLimits(); // debugger;
+
       this.benefitsPlaceholder = this.commaFormatAmount(limits.min) + ' - ' + this.commaFormatAmount(limits.max);
     },
     getTermYears: function getTermYears() {
@@ -6323,8 +6319,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     getCategoryId: function getCategoryId() {
-      debugger;
-
+      // debugger;
       if (this.insuranceCategory === 'termlife') {
         return '1';
       } else if (this.insuranceCategory === 'fe') {
@@ -6349,13 +6344,13 @@ __webpack_require__.r(__webpack_exports__);
     onGenerateQuote: function onGenerateQuote() {
       var _this = this;
 
-      debugger;
+      // debugger;
       var token = jQuery('meta[name="csrf-token"]').attr('content');
       axios.defaults.headers.common = {
         'X-Requested-With': 'XMLHttpRequest',
         'X-CSRF-TOKEN': token
-      };
-      debugger;
+      }; // debugger;
+
       var url = '/api/app_module?module=' + 'phone_validation_module'; //  + '?module='+'phone_validation_module';
 
       url = '/api/user/quote/generate';
@@ -6958,7 +6953,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return !isNaN(parseFloat(n)) && isFinite(n);
     },
     onGenderChange: function onGenderChange(e) {
-      debugger;
+      // debugger;
       this.gender = e.currentTarget.value;
       this.$emit('genderChange', {
         value: this.gender
@@ -6968,7 +6963,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.$emit('prev');
     },
     isDOBReady: function isDOBReady() {
-      debugger;
+      // debugger;
       return !!this.birthdate.type.length && parseInt(this.birthdate.month) != -1 && parseInt(this.birthdate.day) != -1 && parseInt(this.birthdate.year) != -1;
     },
     isNameReady: function isNameReady() {
@@ -7059,7 +7054,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('generateQuote');
     },
     onShowFakeQuote: function onShowFakeQuote(data) {
-      debugger;
+      // debugger;
       this.$emit('showFakeQuote', data);
     },
     prevStep: function prevStep() {
@@ -7217,8 +7212,7 @@ __webpack_require__.r(__webpack_exports__);
       this.ready = !!this.tobacco.length > 0;
     },
     nextStep: function nextStep() {
-      this.isReady();
-      debugger;
+      this.isReady(); // debugger;
 
       if (this.ready) {
         this.$emit('next');
@@ -7681,7 +7675,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    debugger;
+    // debugger;
     console.log(this.icons);
     this.socialMediaIcons = this.icons.map(function (socialMedia) {
       return {
@@ -7837,7 +7831,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    debugger;
+    // debugger;
     this.aria.phoneLabel = 'You can contact us by calling us at ' + this.phone; // console.dir(this.icons);
   }
 });

@@ -11,7 +11,7 @@
         ],
         methods: {
             formatLanguage(language, index) {
-              debugger;
+              // debugger;
 
               // English and
               if (this.languages.length === 2 && index === 1) {

@@ -129,7 +129,7 @@ export default {
             n = n.replace(/\$/g, "");
             n = n.replace(/,/g, "");
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            debugger;
+            // debugger;
             return "$" + n;
         },
         formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",", symbol = "$") {
@@ -153,7 +153,7 @@ export default {
             this.$emit('fieldChange', field);
         },
         toggleState( newState ) {
-            debugger;
+            // debugger;
             if (newState === 'COLLEGE_FUNDING') {
                 this.showGeneralFields = false;
                 this.showTotal = false;
@@ -188,7 +188,7 @@ export default {
             return this.sections[ this.applicationStates[ this.currentState ] ];
         },
         onQuoteAmount() {
-            debugger;
+            // debugger;
             if (this.totalPart1 + this.totalPart2 > 0.00) {
                 this.$emit('quoteFromCalculator', { value: this.totalPart1 + this.totalPart2 } );
             }

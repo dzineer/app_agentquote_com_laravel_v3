@@ -109,7 +109,7 @@ export default {
 		},
 		nextStep() {
 			this.isReady();
-			debugger;
+			// debugger;
 			if (this.ready) {
 				this.$emit('next');
 			}

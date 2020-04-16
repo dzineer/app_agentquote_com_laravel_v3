@@ -253,7 +253,7 @@ export default {
 			return !isNaN(parseFloat(n)) && isFinite(n);
 		},
 		onGenderChange(e) {
-			debugger;
+			// debugger;
 			this.gender = e.currentTarget.value;
 			this.$emit('genderChange', { value: this.gender });
 		},
@@ -261,7 +261,7 @@ export default {
 			this.$emit('prev');
 		},
 		isDOBReady() {
-		   debugger;
+		   // debugger;
            return !! this.birthdate.type.length &&
 				   (parseInt(this.birthdate.month) != -1 && parseInt(this.birthdate.day) != -1 && parseInt(this.birthdate.year) != -1);
 		},

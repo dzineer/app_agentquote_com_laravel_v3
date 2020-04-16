@@ -29,7 +29,7 @@
           }
       },
       mounted() {
-          debugger;
+          // debugger;
           this.aria.phoneLabel = 'You can contact us by calling us at ' + this.phone;
           // console.dir(this.icons);
       }

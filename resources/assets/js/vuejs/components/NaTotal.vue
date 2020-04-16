@@ -59,7 +59,7 @@ export default {
     },
     methods: {
         onQuoteAmount() {
-            debugger;
+            // debugger;
             this.$emit('quoteFromCalculator');
         }
     }

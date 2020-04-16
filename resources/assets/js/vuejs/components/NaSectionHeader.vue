@@ -10,10 +10,10 @@
                 <h2 class="tw-text-lg tw-text-white tw-font-semibold tw-uppercase tw-ml-4 tw-py-2" v-text="title"></h2>
             </div>
 <!--
-            <div v-show="show" class="fields tw-py-4 tw-px-2">   
+            <div v-show="show" class="fields tw-py-4 tw-px-2">
                 <div v-for="(field, index) in fields" :key="index" @fieldChange="onFieldChange" :header="field.text" :name="field.name" :value="field.value" :class="field.classes" :readonly="field.readonly" :is="field.component"></div>
             </div>
--->            
+-->
         </div>
 
     </div>
@@ -49,7 +49,7 @@ export default {
             this.$emit('toggle');
         },
         getClasses() {
-            debugger;
+            // debugger;
             return this.selected ? this.classes + ' na-selected' : this.classes;
         }
     }

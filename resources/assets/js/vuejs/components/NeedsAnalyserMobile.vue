@@ -94,11 +94,11 @@ export default {
             this.$emit('fieldChange', field);
         },
         toggleState( newState ) {
-            debugger;
+            // debugger;
             this.$emit('toggle', { value: newState } );
         },
         toggleNextState( newState ) {
-            debugger;
+            // debugger;
             this.$emit('toggle', { value: newState } );
         },
         currentSection() {
@@ -108,7 +108,7 @@ export default {
             window.vueEvents.$emit('restartQuote');
         },
         onQuoteAmount() {
-            debugger;
+            // debugger;
             if (this.totalPart1 + this.totalPart2 > 0.00) {
                 this.$emit('quoteFromCalculator', { value: this.totalPart1 + this.totalPart2 } );
             }

@@ -40,7 +40,7 @@ export default {
             // submit ajax request to the server
             this.form.post('/statuses')
                 .then(response => {
-                    debugger;
+                    // debugger;
                     toastr.success("Saved.");
                     this.form.reset();
                     this.$emit('completed', response);

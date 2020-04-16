@@ -1,7 +1,7 @@
 <template>
     <div v-if="displayContent" class="tw-w-full">
         <slot></slot>
-    </div> 
+    </div>
 </template>
 
 <script>
@@ -13,7 +13,7 @@
             }
         },
         mounted() {
-            debugger;
+            // debugger;
             this.displayContent = this.view;
             window.vueEvents.$on('hide-section-views', this.hideContent);
             window.vueEvents.$on('show-section-views', this.showContent);
@@ -28,7 +28,7 @@
             },
             showContent() {
                 this.displayContent = true;
-            }            
+            }
         }
     }
 </script>

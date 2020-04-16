@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a href="#" 
+        <a href="#"
             class="tw-text-transparent-50 tw-text-gray-500 hover:tw-text-white"
             @click.prevent="$modal.show('contact-support-modal')">Support</a>
 
@@ -13,15 +13,15 @@
         >
             <div class="tw-py-6 tw-container tw-mx-auto">
                 <h1 class="tw-text-center tw-text-2xl">Have a question</h1>
-                <form 
-                    action="" 
+                <form
+                    action=""
                     class="tw-p-8 lg:tw-w-1/2 md:tw-mx-auto"
                     autocomplete="off"
                     @keydown="submitted = false"
                     @submit.prevent="contactSupport"
                 >
                     <div class="control">
-                        <input 
+                        <input
                             type="text"
                             name="name"
                             id="name"
@@ -36,11 +36,11 @@
                         v-text="errors.name"
                         v-if="errors.name"
                     >
-                        
+
                     </span>
 
                     <div class="control">
-                        <input 
+                        <input
                             type="email"
                             name="email"
                             id="email"
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="control">
-                        <textarea 
+                        <textarea
                             name="question"
                             id="body"
                             data-autosize
@@ -65,7 +65,7 @@
                     </div>
 
                     <div class="control">
-                        <input 
+                        <input
                             name="verification"
                             id="verification"
                             class="input is-minimal"
@@ -73,20 +73,20 @@
                             v-model="message.verification"
                             @keydown="delete errors.verification"
                             required />
-                            
+
                     </div>
 
                     <div class="tw-flex tw-justify-end tw-mt-4">
-                        <a class="tw-bg-transparent hover:tw-bg-blue-500 tw-text-blue-700 tw-font-semibold hover:tw-text-white tw-py-1 tw-px-8 tw-border tw-border-gray-500 hover:tw-border-transparent tw-rounded-full tw-mr-4 tw-uppercase" 
+                        <a class="tw-bg-transparent hover:tw-bg-blue-500 tw-text-blue-700 tw-font-semibold hover:tw-text-white tw-py-1 tw-px-8 tw-border tw-border-gray-500 hover:tw-border-transparent tw-rounded-full tw-mr-4 tw-uppercase"
                            @click.prevent="cancel">Cancel</a>
 
 
                         <button class="tw-bg-blue-500 hover:tw-bg-blue-700 tw-text-white tw-font-bold tw-py-1 tw-px-8 tw-rounded-full tw-uppercase" type="submit" :disabled="submitted">Send</button>
-                    </div> 
+                    </div>
 
                 </form>
             </div>
-        </modal>    
+        </modal>
     </div>
 </template>
 
@@ -129,7 +129,7 @@ export default {
 
         },
         resetForm() {
-            debugger;
+            // debugger;
             this.message = {};
             this.submitted = false;
         }
@@ -138,5 +138,5 @@ export default {
 </script>
 
 <style>
-    
+
 </style>

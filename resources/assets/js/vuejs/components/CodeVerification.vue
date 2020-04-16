@@ -241,7 +241,7 @@ export default {
                     'X-CSRF-TOKEN': token
                 };
 
-                debugger;
+                // debugger;
                 let url = '/api/app_module?module='+'phone_validation_module';//  + '?module='+'phone_validation_module';
                 let fd = new FormData();
 
@@ -268,7 +268,7 @@ export default {
                     if (res.statusText === "OK") {
 
                         if (res.data.success === true) {
-                            debugger;
+                            // debugger;
                             window.vueEvents.$emit('generateQuote', { data: res.data, token: this.token } );
                             // location.href = res.data.redirect;
                         } else {
@@ -285,7 +285,7 @@ export default {
 			}
         },
         onGenerateQuote() {
-            debugger;
+            // debugger;
             this.sending = true;
             this.$emit('generateQuote');
         },
