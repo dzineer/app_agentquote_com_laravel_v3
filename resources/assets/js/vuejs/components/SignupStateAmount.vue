@@ -321,7 +321,7 @@ export default {
 			// document.querySelector( that.scrollToOnLoad ).scrollIntoView( { behavior: 'smooth' } );
 			// now account for fixed header
 			window.scroll(0, 0);
-			this.requestedValue = this.formatMoney(this.defaultAmount);
+			this.requestedValue = this.defaultAmount;
 			console.log("this.requestedValue: ", this.requestedValue);
 		});
     },
