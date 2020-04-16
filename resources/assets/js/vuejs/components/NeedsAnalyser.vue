@@ -227,7 +227,7 @@ export default {
             return (1 - (1 / Math.pow((1 + rr), yy))) / rr;
         },
         familyIncomeCalculator() {
-            let subtotal = 0.00;
+            let subtotal = 0;
             this.sections[ 'family_income' ].forEach( field => {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
@@ -236,10 +236,10 @@ export default {
                 }
             });
             _.find(this.sections[ 'family_income' ], { name: 'total' }).value = subtotal;
-            return 0.00;
+            return 0;
         },
         replacementIncomeCalculator() {
-            let needed = 0.00;
+            let needed = 0;
 
             let totalFamilyIncome = _.find(this.sections[ 'family_income' ], { name: 'total' }).value;
             let percentIncome = _.find(this.sections[ 'replacement_income' ], { name: 'percent_income' }).value;
@@ -267,10 +267,10 @@ export default {
                 }
             });
             _.find(this.sections[ 'investible_family_assets' ], { name: 'total' }).value = subtotal;
-            return 0.00;
+            return 0;
         },
         debtRepaymentAssetsCalculator() {
-            let subtotal = 0.00;
+            let subtotal = 0;
             this.sections[ 'debt_repayment' ].forEach( field => {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
@@ -285,7 +285,7 @@ export default {
             return _.find(this.sections[ 'college_funding' ], { name: 'total' }).value;
         },
         otherExpensesCalculator() {
-            let subtotal = 0.00;
+            let subtotal = 0;
             this.sections[ 'other_expenses' ].forEach( field => {
                 let a = this.cleanValuedAmount( field.value );
                 if (field.name !== 'total' && a.length > 0) {
@@ -329,15 +329,14 @@ export default {
             // other expenses
             let otherExpenses = _.find(this.sections[ 'other_expenses' ], { name: 'total' }).value;
 
-            let baseNeeded = familyGrossIncome * (parseFloat(percentIncome) / 100);
+            let baseNeeded = parseFloat(familyGrossIncome) * (parseFloat(percentIncome) / 100);
             // (rateOfReturn, inflationRate, yearsIncomeNeeded)
-
 
             debugger;
             let npv = this.netPVR(rateOfReturn, inflationRate, yearsIncomeNeeded);
 
             if (npv == 1) {
-                totalNeeded = baseNeeded * yearsIncomeNeeded;
+                totalNeeded = baseNeeded * parseInt(yearsIncomeNeeded);
             }
             else {
                 totalNeeded = npv * baseNeeded;

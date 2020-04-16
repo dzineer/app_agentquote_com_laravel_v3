@@ -3852,7 +3852,7 @@ var collegeTuition = {
     familyIncomeCalculator: function familyIncomeCalculator() {
       var _this = this;
 
-      var subtotal = 0.00;
+      var subtotal = 0;
       this.sections['family_income'].forEach(function (field) {
         var a = _this.cleanValuedAmount(field.value);
 
@@ -3864,10 +3864,10 @@ var collegeTuition = {
       lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['family_income'], {
         name: 'total'
       }).value = subtotal;
-      return 0.00;
+      return 0;
     },
     replacementIncomeCalculator: function replacementIncomeCalculator() {
-      var needed = 0.00;
+      var needed = 0;
 
       var totalFamilyIncome = lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['family_income'], {
         name: 'total'
@@ -3919,12 +3919,12 @@ var collegeTuition = {
       lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['investible_family_assets'], {
         name: 'total'
       }).value = subtotal;
-      return 0.00;
+      return 0;
     },
     debtRepaymentAssetsCalculator: function debtRepaymentAssetsCalculator() {
       var _this3 = this;
 
-      var subtotal = 0.00;
+      var subtotal = 0;
       this.sections['debt_repayment'].forEach(function (field) {
         var a = _this3.cleanValuedAmount(field.value);
 
@@ -3946,7 +3946,7 @@ var collegeTuition = {
     otherExpensesCalculator: function otherExpensesCalculator() {
       var _this4 = this;
 
-      var subtotal = 0.00;
+      var subtotal = 0;
       this.sections['other_expenses'].forEach(function (field) {
         var a = _this4.cleanValuedAmount(field.value);
 
@@ -4013,13 +4013,13 @@ var collegeTuition = {
         name: 'total'
       }).value;
 
-      var baseNeeded = familyGrossIncome * (parseFloat(percentIncome) / 100); // (rateOfReturn, inflationRate, yearsIncomeNeeded)
+      var baseNeeded = parseFloat(familyGrossIncome) * (parseFloat(percentIncome) / 100); // (rateOfReturn, inflationRate, yearsIncomeNeeded)
 
       debugger;
       var npv = this.netPVR(rateOfReturn, inflationRate, yearsIncomeNeeded);
 
       if (npv == 1) {
-        totalNeeded = baseNeeded * yearsIncomeNeeded;
+        totalNeeded = baseNeeded * parseInt(yearsIncomeNeeded);
       } else {
         totalNeeded = npv * baseNeeded;
       }
