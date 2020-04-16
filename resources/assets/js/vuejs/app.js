@@ -103,9 +103,15 @@ Vue.filter('formatAmount', function (a, symbol='') {
     let n = "";
 
     if (typeof a === "string") {
+        if (n === "0")
+            return n;
+
         n = a.indexOf(".") === -1 ? n + "" : parseInt(a);
     } else {
         n = a + "";
+        if (n === "0")
+            return n;
+
         n = a.indexOf(".") === -1 ? n + "" : parseInt(a);
     }
 

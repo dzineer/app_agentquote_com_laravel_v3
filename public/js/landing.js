@@ -62577,9 +62577,11 @@ Vue.filter('formatAmount', function (a) {
   var n = "";
 
   if (typeof a === "string") {
+    if (n === "0") return n;
     n = a.indexOf(".") === -1 ? n + "" : parseInt(a);
   } else {
     n = a + "";
+    if (n === "0") return n;
     n = a.indexOf(".") === -1 ? n + "" : parseInt(a);
   }
 
