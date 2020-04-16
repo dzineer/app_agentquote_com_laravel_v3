@@ -55,6 +55,15 @@ export default {
     },
     mounted() {
         this.visible = true;
+        // wait until this component is rendered and loaded
+        this.$nextTick(function() {
+            const id = this.name;
+            const yOffset = -2;
+            const element = document.getElementById(id);
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({top: y, behavior: 'smooth'});
+        });
     },
     filters: {
         formatAmount(a) {

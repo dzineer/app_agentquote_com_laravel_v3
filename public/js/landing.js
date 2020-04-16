@@ -4470,7 +4470,18 @@ __webpack_require__.r(__webpack_exports__);
     Field: _Field__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
   mounted: function mounted() {
-    this.visible = true;
+    this.visible = true; // wait until this component is rendered and loaded
+
+    this.$nextTick(function () {
+      var id = this.name;
+      var yOffset = -2;
+      var element = document.getElementById(id);
+      var y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+    });
   },
   filters: {
     formatAmount: function formatAmount(a) {

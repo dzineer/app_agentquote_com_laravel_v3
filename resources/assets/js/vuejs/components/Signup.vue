@@ -247,11 +247,11 @@ export default {
         nextStep() {
             if (this.hasNext()) {
 
-                    this.updateProgressStatus( this.currentStep, 'completed');
-                    this.stepsState[ this.steps[this.currentStep] ] = false;
-                    this.next();
-                    this.updateProgressStatus( this.currentStep, 'in-progress');
-                    this.stepsState[ this.steps[this.currentStep] ] = true;
+                this.updateProgressStatus( this.currentStep, 'completed');
+                this.stepsState[ this.steps[this.currentStep] ] = false;
+                this.next();
+                this.updateProgressStatus( this.currentStep, 'in-progress');
+                this.stepsState[ this.steps[this.currentStep] ] = true;
 
             }
         },
