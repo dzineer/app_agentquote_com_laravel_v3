@@ -3598,28 +3598,28 @@ var collegeTuition = {
         family_income: [{
           component: 'amount-field',
           name: 'gross_income',
-          value: 0.00,
+          value: 0,
           text: 'your gross income',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'spouse_gross_income',
-          value: 0.00,
+          value: 0,
           text: 'Spouse\'s Gross Income (Only include if this income would stop if you were to die) ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'other_gross_income',
-          value: 0.00,
+          value: 0,
           text: 'Other Gross Income (Only include if this income would stop if you were to die) ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total',
-          value: 0.00,
+          value: 0,
           text: 'total gross income to be replaced',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3634,7 +3634,7 @@ var collegeTuition = {
         }, {
           component: 'amount-field',
           name: 'total_replacement_income',
-          value: 0.00,
+          value: 0,
           text: 'TOTAL REPLACEMENT INCOME NEEDED',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3648,28 +3648,28 @@ var collegeTuition = {
         }, {
           component: 'percentage-field',
           name: 'rate_return',
-          value: 0.00,
+          value: 0,
           text: 'Rate of Return ?',
           classes: 'tw-text-gray-800',
           readonly: false
         }, {
           component: 'percentage-field',
           name: 'rate_inflation',
-          value: 0.00,
+          value: 0,
           text: 'Rate of Inflation ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'percentage-field',
           name: 'net_rate_return',
-          value: 0.00,
+          value: 0,
           text: 'Net Rate of Return',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
         }, {
           component: 'amount-field',
           name: 'total',
-          value: 0.00,
+          value: 0,
           text: 'INITIAL LIFE INSURANCE NEEDED TO REPLACE INCOME(BEFORE OTHER CALCULATIONS)',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3677,35 +3677,35 @@ var collegeTuition = {
         investible_family_assets: [{
           component: 'amount-field',
           name: 'savings',
-          value: 0.00,
+          value: 0,
           text: 'Savings ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'investment_portfolio',
-          value: 0.00,
+          value: 0,
           text: 'Investment Portfolio ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'current_life_insurance',
-          value: 0.00,
+          value: 0,
           text: 'Current Life Insurance ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'other_assets',
-          value: 0.00,
+          value: 0,
           text: 'Other Assets ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total',
-          value: 0.00,
+          value: 0,
           text: 'TOTAL AVAILABLE ASSETS ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3713,35 +3713,35 @@ var collegeTuition = {
         debt_repayment: [{
           component: 'amount-field',
           name: 'mortgage',
-          value: 0.00,
+          value: 0,
           text: 'Mortgage ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'auto_loan',
-          value: 0.00,
+          value: 0,
           text: 'Auto Loan ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'consumer_debt',
-          value: 0.00,
+          value: 0,
           text: 'Consumer Debt ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'other_debt',
-          value: 0.00,
+          value: 0,
           text: 'Other Debt',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total',
-          value: 0.00,
+          value: 0,
           text: 'TOTAL DEBT',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
@@ -3749,39 +3749,39 @@ var collegeTuition = {
         college_funding: [{
           name: 'children',
           text: 'Number of children',
-          value: 0.00,
+          value: 0,
           classes: ''
         }, {
           name: 'total',
           text: 'Number of children',
-          value: 0.00,
+          value: 0,
           classes: ''
         }],
         other_expenses: [{
           component: 'amount-field',
           name: 'funeral',
-          value: 0.00,
+          value: 0,
           text: 'Funeral (typical cost of a funeral is approx. $5,000 ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'special_bequests',
-          value: 0.00,
+          value: 0,
           text: 'Special Bequests ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'other_expenses',
-          value: 0.00,
+          value: 0,
           text: 'Consumer Debt ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total',
-          value: 0.00,
+          value: 0,
           text: 'TOTAL EXPENSES',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
