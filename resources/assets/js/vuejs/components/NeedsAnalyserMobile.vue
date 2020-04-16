@@ -55,8 +55,6 @@ export default {
     },
     mounted() {
         this.visible = true;
-        const elmnt = document.getElementById("FAMILY_INCOME");
-        elmnt.scrollIntoView(true);
     },
     filters: {
         formatAmount(a) {

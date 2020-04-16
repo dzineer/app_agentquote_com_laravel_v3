@@ -45,7 +45,7 @@ export default {
         // wait until this component is rendered and loaded
         this.$nextTick(function() {
             const id = this.name;
-            const yOffset = -10;
+            const yOffset = -2;
             const element = document.getElementById(id);
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 

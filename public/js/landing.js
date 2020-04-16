@@ -3290,7 +3290,7 @@ __webpack_require__.r(__webpack_exports__);
     // wait until this component is rendered and loaded
     this.$nextTick(function () {
       var id = this.name;
-      var yOffset = -10;
+      var yOffset = -2;
       var element = document.getElementById(id);
       var y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({
@@ -4471,8 +4471,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.visible = true;
-    var elmnt = document.getElementById("FAMILY_INCOME");
-    elmnt.scrollIntoView(true);
   },
   filters: {
     formatAmount: function formatAmount(a) {
