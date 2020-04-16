@@ -44,9 +44,12 @@ export default {
     mounted() {
         // wait until this component is rendered and loaded
         this.$nextTick(function() {
-            debugger;
-            const elmnt = document.getElementById(this.name);
-            elmnt.scrollIntoView(true);
+            const id = this.name;
+            const yOffset = -10;
+            const element = document.getElementById(id);
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({top: y, behavior: 'smooth'});
         });
     },
     methods: {

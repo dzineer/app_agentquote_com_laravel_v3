@@ -3289,9 +3289,14 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     // wait until this component is rendered and loaded
     this.$nextTick(function () {
-      debugger;
-      var elmnt = document.getElementById(this.name);
-      elmnt.scrollIntoView(true);
+      var id = this.name;
+      var yOffset = -10;
+      var element = document.getElementById(id);
+      var y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
     });
   },
   methods: {
