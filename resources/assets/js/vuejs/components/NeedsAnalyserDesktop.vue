@@ -51,7 +51,7 @@
 
                     <div class="tw-w-3/4 tw-bg-black tw-rounded-b-xl tw-flex tw-absolute tw-justify-center tw-top-0" style="background-color:#2285C4;">
                         <h1 class="tw-py-4 tw-text-2xl tw-font-bold tw-leading-loose tw-tracking-normal tw-uppercase tw-text-white">
-                            Total Insurance Needed: {{ totalNeeded | formatAmount }}
+                            Total Insurance Needed: {{ totalNeeded | formatMoney }}
                         </h1>
                     </div>
 
@@ -131,6 +131,21 @@ export default {
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             debugger;
             return "$" + n;
+        },
+        formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
+            try {
+                decimalCount = Math.abs(decimalCount);
+                decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+                const negativeSign = amount < 0 ? "-" : "";
+
+                let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+                let j = (i.length > 3) ? i.length % 3 : 0;
+
+                return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+            } catch (e) {
+                console.log(e)
+            }
         }
     },
     methods: {
