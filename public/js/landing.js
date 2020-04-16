@@ -41157,7 +41157,7 @@ var render = function() {
           staticClass:
             "field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-border tw-px-3",
           attrs: { type: "text", name: _vm.name, disabled: _vm.readonly },
-          domProps: { value: _vm._f("formatMoney")(_vm.value) },
+          domProps: { value: _vm._f("formatAmount")(_vm.value) },
           on: { keyup: _vm.onFieldChange }
         }),
         _vm._v(" "),
