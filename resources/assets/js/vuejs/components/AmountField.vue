@@ -2,7 +2,7 @@
     <div class="field">
     <h3 class="field-heading" :class="classes" v-text="header"></h3>
 
-    <div class="tw-flex tw-flex-wrap tw-items-stretch tw-w-full tw-mb-2 tw-relative">
+    <div class="tw-flex tw-flex-wrap tw-items-stretch tw-w-full tw-mb-1 tw-relative">
         <div class="tw-flex tw--mr-px">
             <span class="on-left-symbol">$</span>
         </div>
