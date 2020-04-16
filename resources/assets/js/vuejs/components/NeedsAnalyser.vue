@@ -243,17 +243,17 @@ export default {
 
             let totalFamilyIncome = _.find(this.sections[ 'family_income' ], { name: 'total' }).value;
             let percentIncome = _.find(this.sections[ 'replacement_income' ], { name: 'percent_income' }).value;
-            let replacementIncome = totalFamilyIncome * (percentIncome / 100);
+            let replacementIncome = parseFloat(totalFamilyIncome) * (parseFloat(percentIncome) / 100);
             _.find(this.sections[ 'replacement_income' ], { name: 'total_replacement_income' }).value = replacementIncome;
 
             let yearsIncomeNeeded = _.find(this.sections[ 'replacement_income' ], { name: 'years_income_needed' }).value;
             let rateReturnExpected = _.find(this.sections[ 'replacement_income' ], { name: 'rate_return' }).value;
             let rateInflationExpected = _.find(this.sections[ 'replacement_income' ], { name: 'rate_inflation' }).value;
 
-            let netRateReturnExpected = ( rateReturnExpected - rateInflationExpected );
+            let netRateReturnExpected = ( parseInt(rateReturnExpected) - parseInt(rateInflationExpected) );
             _.find(this.sections[ 'replacement_income' ], { name: 'net_rate_return' }).value = netRateReturnExpected;
 
-            needed =  (replacementIncome * yearsIncomeNeeded) - [(replacementIncome * yearsIncomeNeeded) * (netRateReturnExpected / 100)];
+            needed =  (replacementIncome * parseInt(yearsIncomeNeeded)) - [(replacementIncome * parseInt(yearsIncomeNeeded)) * (netRateReturnExpected / 100)];
             _.find(this.sections[ 'replacement_income' ], { name: 'total' }).value = needed;
             return needed;
         },

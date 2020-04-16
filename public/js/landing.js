@@ -3877,7 +3877,7 @@ var collegeTuition = {
         name: 'percent_income'
       }).value;
 
-      var replacementIncome = totalFamilyIncome * (percentIncome / 100);
+      var replacementIncome = parseFloat(totalFamilyIncome) * (parseFloat(percentIncome) / 100);
       lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['replacement_income'], {
         name: 'total_replacement_income'
       }).value = replacementIncome;
@@ -3894,11 +3894,11 @@ var collegeTuition = {
         name: 'rate_inflation'
       }).value;
 
-      var netRateReturnExpected = rateReturnExpected - rateInflationExpected;
+      var netRateReturnExpected = parseInt(rateReturnExpected) - parseInt(rateInflationExpected);
       lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['replacement_income'], {
         name: 'net_rate_return'
       }).value = netRateReturnExpected;
-      needed = replacementIncome * yearsIncomeNeeded - [replacementIncome * yearsIncomeNeeded * (netRateReturnExpected / 100)];
+      needed = replacementIncome * parseInt(yearsIncomeNeeded) - [replacementIncome * parseInt(yearsIncomeNeeded) * (netRateReturnExpected / 100)];
       lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['replacement_income'], {
         name: 'total'
       }).value = needed;
