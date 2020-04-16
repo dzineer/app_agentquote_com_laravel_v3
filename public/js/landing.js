@@ -44525,7 +44525,6 @@ var render = function() {
         {
           staticClass:
             "tw-cursor-pointer section-heading tw-w-full tw-flex tw-items-center",
-          attrs: { id: _vm.name },
           on: { click: _vm.toggle }
         },
         [
@@ -44558,7 +44557,8 @@ var render = function() {
               expression: "show"
             }
           ],
-          staticClass: "fields tw-py-3 tw-px-2"
+          staticClass: "fields tw-py-3 tw-px-2",
+          attrs: { id: _vm.name }
         },
         [
           _vm._l(_vm.fields, function(field, index) {
