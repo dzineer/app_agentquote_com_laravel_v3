@@ -57,7 +57,7 @@ export default {
         this.visible = true;
         // wait until this component is rendered and loaded
         this.$nextTick(function() {
-            const id = this.name;
+            const id = 'FAMILY_INCOME';
             const yOffset = -2;
             const element = document.getElementById(id);
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;

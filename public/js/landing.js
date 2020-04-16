@@ -4473,7 +4473,7 @@ __webpack_require__.r(__webpack_exports__);
     this.visible = true; // wait until this component is rendered and loaded
 
     this.$nextTick(function () {
-      var id = this.name;
+      var id = 'FAMILY_INCOME';
       var yOffset = -2;
       var element = document.getElementById(id);
       var y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
