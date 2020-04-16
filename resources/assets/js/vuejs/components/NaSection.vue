@@ -44,7 +44,7 @@ export default {
     mounted() {
         debugger;
         const elmnt = document.getElementById(this.name);
-        elmnt.scrollIntoView();
+        elmnt.scrollIntoView(true);
     },
     methods: {
         onFieldChange( field ) {

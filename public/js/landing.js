@@ -3289,7 +3289,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     debugger;
     var elmnt = document.getElementById(this.name);
-    elmnt.scrollIntoView();
+    elmnt.scrollIntoView(true);
   },
   methods: {
     onFieldChange: function onFieldChange(field) {
@@ -4464,7 +4464,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.visible = true;
     var elmnt = document.getElementById("FAMILY_INCOME");
-    elmnt.scrollIntoView();
+    elmnt.scrollIntoView(true);
   },
   filters: {
     formatAmount: function formatAmount(a) {
