@@ -41156,7 +41156,7 @@ var render = function() {
         _vm._v(" "),
         _c("input", {
           staticClass:
-            "field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-border tw-px-3",
+            "field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-w-px tw-border tw-px-3",
           attrs: { type: "text", name: _vm.name, disabled: _vm.readonly },
           domProps: { value: _vm._f("formatAmount")(_vm.value) },
           on: { keyup: _vm.onFieldChange }
@@ -45353,7 +45353,7 @@ var render = function() {
           _c("amount-field", {
             attrs: {
               header: "Income Replacement Insurance Needed (Part I)",
-              value: _vm._f("formatMoney")(_vm.part1),
+              value: _vm._f("formatAmount")(_vm.part1),
               readonly: true
             }
           }),
@@ -45361,7 +45361,7 @@ var render = function() {
           _c("amount-field", {
             attrs: {
               header: "Total Additional Expenses (Part II)",
-              value: _vm._f("formatMoney")(_vm.part2),
+              value: _vm._f("formatAmount")(_vm.part2),
               readonly: true
             }
           }),
