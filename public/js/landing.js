@@ -1841,6 +1841,23 @@ __webpack_require__.r(__webpack_exports__);
       n = n.replace(/,/g, "");
       n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
       return n;
+    },
+    formatMoney: function formatMoney(amount) {
+      var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+      var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
+      var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
+      var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
+
+      try {
+        decimalCount = Math.abs(decimalCount);
+        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+        var negativeSign = amount < 0 ? "-" : "";
+        var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+        var j = i.length > 3 ? i.length % 3 : 0;
+        return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+      } catch (e) {
+        console.log(e);
+      }
     }
   },
   methods: {
@@ -3569,28 +3586,28 @@ var collegeTuition = {
           name: 'gross_income',
           value: 0.00,
           text: 'your gross income',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'spouse_gross_income',
           value: 0.00,
           text: 'Spouse\'s Gross Income (Only include if this income would stop if you were to die) ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'other_gross_income',
           value: 0.00,
           text: 'Other Gross Income (Only include if this income would stop if you were to die) ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total',
           value: 0.00,
           text: 'total gross income to be replaced',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
         }],
         replacement_income: [{
@@ -3598,21 +3615,21 @@ var collegeTuition = {
           name: 'percent_income',
           value: 80,
           text: 'Desired annual income needs (typically 70-80% of current combined income) ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total_replacement_income',
           value: 0.00,
           text: 'TOTAL REPLACEMENT INCOME NEEDED',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
         }, {
           component: 'year-field',
           name: 'years_income_needed',
           value: 5,
           text: 'Years Income Needed ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'percentage-field',
@@ -3626,21 +3643,21 @@ var collegeTuition = {
           name: 'rate_inflation',
           value: 0.00,
           text: 'Rate of Inflation ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'percentage-field',
           name: 'net_rate_return',
           value: 0.00,
           text: 'Net Rate of Return',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
         }, {
           component: 'amount-field',
           name: 'total',
           value: 0.00,
           text: 'INITIAL LIFE INSURANCE NEEDED TO REPLACE INCOME(BEFORE OTHER CALCULATIONS)',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
         }],
         investible_family_assets: [{
@@ -3648,35 +3665,35 @@ var collegeTuition = {
           name: 'savings',
           value: 0.00,
           text: 'Savings ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'investment_portfolio',
           value: 0.00,
           text: 'Investment Portfolio ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'current_life_insurance',
           value: 0.00,
           text: 'Current Life Insurance ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'other_assets',
           value: 0.00,
           text: 'Other Assets ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total',
           value: 0.00,
           text: 'TOTAL AVAILABLE ASSETS ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
         }],
         debt_repayment: [{
@@ -3684,35 +3701,35 @@ var collegeTuition = {
           name: 'mortgage',
           value: 0.00,
           text: 'Mortgage ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'auto_loan',
           value: 0.00,
           text: 'Auto Loan ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'consumer_debt',
           value: 0.00,
           text: 'Consumer Debt ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'other_debt',
           value: 0.00,
           text: 'Other Debt',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total',
           value: 0.00,
           text: 'TOTAL DEBT',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
         }],
         college_funding: [{
@@ -3731,28 +3748,28 @@ var collegeTuition = {
           name: 'funeral',
           value: 0.00,
           text: 'Funeral (typical cost of a funeral is approx. $5,000 ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'special_bequests',
           value: 0.00,
           text: 'Special Bequests ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'other_expenses',
           value: 0.00,
           text: 'Consumer Debt ?',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
           component: 'amount-field',
           name: 'total',
           value: 0.00,
           text: 'TOTAL EXPENSES',
-          classes: 'tw-text-gray-800',
+          classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
         }]
       }
@@ -41138,9 +41155,9 @@ var render = function() {
         _vm._v(" "),
         _c("input", {
           staticClass:
-            "field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-w-px tw-flex-1 tw-border tw-px-3 tw-rtw-elative",
+            "field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-border tw-px-3",
           attrs: { type: "text", name: _vm.name, disabled: _vm.readonly },
-          domProps: { value: _vm._f("formatAmount")(_vm.value) },
+          domProps: { value: _vm._f("formatMoney")(_vm.value) },
           on: { keyup: _vm.onFieldChange }
         }),
         _vm._v(" "),
