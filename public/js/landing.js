@@ -3811,7 +3811,7 @@ var collegeTuition = {
   },
   filters: {
     formatAmount: function formatAmount(a) {
-      var n = a + "";
+      var n = parseInt(a) + "";
       n = n.replace(/\$/g, "");
       n = n.replace(/,/g, "");
       n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -3857,7 +3857,7 @@ var collegeTuition = {
         var a = _this.cleanValuedAmount(field.value);
 
         if (field.name !== 'total' && a.length > 0) {
-          a = parseFloat(a);
+          a = parseInt(a);
           subtotal += a;
         }
       });
@@ -3877,7 +3877,7 @@ var collegeTuition = {
         name: 'percent_income'
       }).value;
 
-      var replacementIncome = parseFloat(totalFamilyIncome) * (parseFloat(percentIncome) / 100);
+      var replacementIncome = parseInt(totalFamilyIncome) * (parseInt(percentIncome) / 100);
       lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['replacement_income'], {
         name: 'total_replacement_income'
       }).value = replacementIncome;
@@ -3912,7 +3912,7 @@ var collegeTuition = {
         var a = _this2.cleanValuedAmount(field.value);
 
         if (field.name !== 'total' && a.length > 0) {
-          a = parseFloat(a);
+          a = parseInt(a);
           subtotal += a;
         }
       });
@@ -3929,7 +3929,7 @@ var collegeTuition = {
         var a = _this3.cleanValuedAmount(field.value);
 
         if (field.name !== 'total' && a.length > 0) {
-          a = parseFloat(a);
+          a = parseInt(a);
           subtotal += a;
         }
       });
@@ -3952,7 +3952,7 @@ var collegeTuition = {
 
         if (field.name !== 'total' && a.length > 0) {
           debugger;
-          a = parseFloat(a);
+          a = parseInt(a);
           subtotal += a;
         }
       });
@@ -4014,7 +4014,7 @@ var collegeTuition = {
         name: 'total'
       }).value;
 
-      var baseNeeded = parseFloat(familyGrossIncome) * (parseFloat(percentIncome) / 100); // (rateOfReturn, inflationRate, yearsIncomeNeeded)
+      var baseNeeded = parseInt(familyGrossIncome) * (parseInt(percentIncome) / 100); // (rateOfReturn, inflationRate, yearsIncomeNeeded)
       // // debugger;
 
       var npv = this.netPVR(rateOfReturn, inflationRate, yearsIncomeNeeded);
@@ -4028,12 +4028,12 @@ var collegeTuition = {
       var collegeFunding = this.cleanValuedAmount(lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['college_funding'], {
         name: 'total'
       }).value);
-      collegeFunding = parseFloat(collegeFunding); // console.log("collegeFunding", collegeFunding);
+      collegeFunding = parseInt(collegeFunding); // console.log("collegeFunding", collegeFunding);
 
-      this.total_part_1 = totalNeeded - parseFloat(investibleFamilyAssets);
-      this.total_part_2 = parseFloat(debtRepayment) +
+      this.total_part_1 = totalNeeded - parseInt(investibleFamilyAssets);
+      this.total_part_2 = parseInt(debtRepayment) +
       /*college*/
-      collegeFunding + parseFloat(otherExpenses);
+      collegeFunding + parseInt(otherExpenses);
       this.total_needed = this.total_part_1 + this.total_part_2;
     },
     onFieldChange: function onFieldChange(field) {
@@ -4060,7 +4060,7 @@ var collegeTuition = {
 
         totals += parseFloat(total);
       });
-      this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseFloat(this.toReplace.percentIncome) / 100), false); // let total = _.find(this.sections [ section ], { name: 'total' }).value;
+      this.toReplace.totalReplace = NA.fn.formatCurrency(this.family.totalGross * (parseInt(this.toReplace.percentIncome) / 100), false); // let total = _.find(this.sections [ section ], { name: 'total' }).value;
 
       return totals;
     },

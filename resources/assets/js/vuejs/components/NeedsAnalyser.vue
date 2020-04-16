@@ -186,7 +186,7 @@ export default {
     },
     filters: {
         formatAmount(a) {
-            let n = a + "";
+            let n = parseInt(a) + "";
             n = n.replace(/\$/g, "");
             n = n.replace(/,/g, "");
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
