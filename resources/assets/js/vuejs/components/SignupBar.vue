@@ -79,15 +79,6 @@ export default {
             this.itemsProperties[index] = false;
       });
     },
-    filters: {
-        formatAmount(a) {
-            let n = a + "";
-            n = n.replace(/\$/g, "");
-            n = n.replace(/,/g, "");
-            n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            return "$" + n;
-        }
-    },
     methods: {
             setSelectedItem(index) {
                  this.selectedItem = index

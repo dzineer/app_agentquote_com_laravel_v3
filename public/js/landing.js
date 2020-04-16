@@ -1835,32 +1835,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['header', 'classes', 'name', 'value', 'readonly'],
-  filters: {
-    formatAmount: function formatAmount(a) {
-      var n = parseInt(a) + "";
-      n = n.replace(/\$/g, "");
-      n = n.replace(/,/g, "");
-      n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      return n;
-    },
-    formatMoney: function formatMoney(amount) {
-      var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-      var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
-      var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
-      var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
-
-      try {
-        decimalCount = Math.abs(decimalCount);
-        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
-        var negativeSign = amount < 0 ? "-" : "";
-        var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
-        var j = i.length > 3 ? i.length % 3 : 0;
-        return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
-      } catch (e) {
-        console.log(e);
-      }
-    }
-  },
   methods: {
     onFieldChange: function onFieldChange(e) {
       var field = {
@@ -3421,33 +3395,6 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     AmountField: _AmountField__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  filters: {
-    formatAmount: function formatAmount(a) {
-      debugger;
-      var n = parseInt(a) + "";
-      n = n.replace(/\$/g, "");
-      n = n.replace(/,/g, "");
-      n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      return "$" + n;
-    },
-    formatMoney: function formatMoney(amount) {
-      var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-      var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
-      var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
-      var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
-
-      try {
-        decimalCount = Math.abs(decimalCount);
-        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
-        var negativeSign = amount < 0 ? "-" : "";
-        var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
-        var j = i.length > 3 ? i.length % 3 : 0;
-        return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
-      } catch (e) {
-        console.log(e);
-      }
-    }
-  },
   methods: {
     onQuoteAmount: function onQuoteAmount() {
       // debugger;
@@ -3809,40 +3756,15 @@ var collegeTuition = {
       }
     };
   },
-  filters: {
-    formatAmount: function formatAmount(a) {
-      var n = parseInt(a) + "";
-      n = n.replace(/\$/g, "");
-      n = n.replace(/,/g, "");
-      n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      return "$" + n;
-    },
-    formatMoney: function formatMoney(amount) {
-      var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-      var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
-      var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
-
-      try {
-        decimalCount = Math.abs(decimalCount);
-        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
-        var negativeSign = amount < 0 ? "-" : "";
-        var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
-        var j = i.length > 3 ? i.length % 3 : 0;
-        return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
-      } catch (e) {
-        console.log(e);
-      }
-    }
-  },
   methods: {
     netPVR: function netPVR(r, ir, yy) {
       var rr;
 
-      if (ir == r) {
+      if (ir === r) {
         return 1;
       } else if (r <= 0) {
         return 1;
-      } else if (r == rr) {
+      } else if (r === rr) {
         return 1;
       }
 
@@ -4481,32 +4403,6 @@ __webpack_require__.r(__webpack_exports__);
         behavior: 'smooth'
       });
     });
-  },
-  filters: {
-    formatAmount: function formatAmount(a) {
-      var n = a + "";
-      n = n.replace(/\$/g, "");
-      n = n.replace(/,/g, "");
-      n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      return "$" + n;
-    },
-    formatMoney: function formatMoney(amount) {
-      var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-      var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
-      var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
-      var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
-
-      try {
-        decimalCount = Math.abs(decimalCount);
-        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
-        var negativeSign = amount < 0 ? "-" : "";
-        var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
-        var j = i.length > 3 ? i.length % 3 : 0;
-        return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
-      } catch (e) {
-        console.log(e);
-      }
-    }
   },
   methods: {
     onFieldChange: function onFieldChange(field) {
@@ -6515,15 +6411,6 @@ __webpack_require__.r(__webpack_exports__);
     this.items.forEach(function (item, index) {
       _this.itemsProperties[index] = false;
     });
-  },
-  filters: {
-    formatAmount: function formatAmount(a) {
-      var n = a + "";
-      n = n.replace(/\$/g, "");
-      n = n.replace(/,/g, "");
-      n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      return "$" + n;
-    }
   },
   methods: {
     setSelectedItem: function setSelectedItem(index) {
@@ -62652,6 +62539,30 @@ Vue.directive('tooltip', {
       placement: bindings.arg || 'top',
       title: bindings.value
     });
+  }
+});
+Vue.filter('formatAmount', function (a) {
+  var n = a + "";
+  n = n.replace(/\$/g, "");
+  n = n.replace(/,/g, "");
+  n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return "$" + n;
+});
+Vue.filter('formatMoney', function (amount) {
+  var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
+  var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
+  var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
+
+  try {
+    decimalCount = Math.abs(decimalCount);
+    decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+    var negativeSign = amount < 0 ? "-" : "";
+    var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+    var j = i.length > 3 ? i.length % 3 : 0;
+    return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+  } catch (e) {
+    console.log(e);
   }
 });
 

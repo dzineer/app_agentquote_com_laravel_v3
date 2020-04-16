@@ -97,7 +97,31 @@ Vue.directive('tooltip', {
             title: bindings.value
         });
     }
-})
+});
+
+Vue.filter('formatAmount', function (a) {
+    let n = a + "";
+    n = n.replace(/\$/g, "");
+    n = n.replace(/,/g, "");
+    n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return "$" + n;
+});
+
+Vue.filter('formatMoney', function (amount, decimalCount = 2, decimal = ".", thousands = ",", symbol = "$") {
+    try {
+        decimalCount = Math.abs(decimalCount);
+        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+        const negativeSign = amount < 0 ? "-" : "";
+
+        let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+        let j = (i.length > 3) ? i.length % 3 : 0;
+
+        return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+    } catch (e) {
+        console.log(e)
+    }
+});
 
 import TopBar from './components/TopBar.vue';
 Vue.component('top-bar', TopBar);
