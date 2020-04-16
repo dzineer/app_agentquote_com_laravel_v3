@@ -33,7 +33,7 @@ class ViewQuoteLeadEmail extends Mailable
     public function build()
     {
         $data = $this->data;
-        dd($data);
+        // dd($data);
         $this->subject('Your Quote Lead');
         return $this->view('email.notifications.email_view_quote_lead', $data);
     }
