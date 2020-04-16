@@ -1,16 +1,17 @@
 <template>
     <div class="field">
-    <h3 class="field-heading" :class="classes" v-text="header"></h3>
 
-    <div class="tw-flex tw-flex-wrap tw-items-stretch tw-w-full tw-mb-1 tw-relative">
-        <div class="tw-flex tw--mr-px">
-            <span class="on-left-symbol">$</span>
+        <h3 class="field-heading" :class="classes" v-text="header"></h3>
+
+        <div class="tw-flex tw-flex-wrap tw-items-stretch tw-w-full tw-mb-1 tw-relative">
+            <div class="tw-flex tw--mr-px">
+                <span class="on-left-symbol">$</span>
+            </div>
+            <input type="text" class="field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-border tw-px-3" :name="name" :value="value | formatAmount" @keyup="onFieldChange" :disabled="readonly">
+            <div class="tw-flex tw--mr-px">
+                <span class="on-right-symbol">.00</span>
+            </div>
         </div>
-        <input type="text" class="field-between-input tw-flex-shrink tw-flex-grow tw-flex-auto tw-leading-normal tw-flex-1 tw-border tw-px-3" :name="name" :value="value | formatAmount" @keyup="onFieldChange" :disabled="readonly">
-        <div class="tw-flex tw--mr-px">
-            <span class="on-right-symbol">.00</span>
-        </div>
-    </div>
 
     </div>
 </template>
