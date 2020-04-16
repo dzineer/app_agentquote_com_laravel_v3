@@ -43683,7 +43683,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                            Total Insurance Needed: " +
+                              "\n                            Insurance Needed: " +
                                 _vm._s(_vm._f("formatMoney")(_vm.totalNeeded)) +
                                 "\n                        "
                             )
@@ -44625,7 +44625,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-header", [
                 _vm._v(
-                  "Total Insurance Needed: " +
+                  "Insurance Needed: " +
                     _vm._s(_vm._f("formatMoney")(_vm.totalNeeded))
                 )
               ]),
