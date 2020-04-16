@@ -44833,7 +44833,7 @@ var render = function() {
                       expression: "show"
                     }
                   ],
-                  staticClass: "fields tw-py-3 tw-px-2"
+                  staticClass: "fields tw-pb-3 tw-px-2"
                 },
                 _vm._l(_vm.fields, function(field, index) {
                   return _c(field.component, {
