@@ -99,12 +99,12 @@ Vue.directive('tooltip', {
     }
 });
 
-Vue.filter('formatAmount', function (a) {
+Vue.filter('formatAmount', function (a, symbol='') {
     let n = a + "";
     n = n.replace(/\$/g, "");
     n = n.replace(/,/g, "");
     n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return "$" + n;
+    return symbol + n;
 });
 
 Vue.filter('formatMoney', function (amount, decimalCount = 2, decimal = ".", thousands = ",", symbol = "$") {

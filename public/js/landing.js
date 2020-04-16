@@ -62542,11 +62542,12 @@ Vue.directive('tooltip', {
   }
 });
 Vue.filter('formatAmount', function (a) {
+  var symbol = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
   var n = a + "";
   n = n.replace(/\$/g, "");
   n = n.replace(/,/g, "");
   n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  return "$" + n;
+  return symbol + n;
 });
 Vue.filter('formatMoney', function (amount) {
   var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
