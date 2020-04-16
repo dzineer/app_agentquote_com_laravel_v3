@@ -44833,6 +44833,7 @@ var render = function() {
                       header: field.text,
                       name: field.name,
                       value: field.value,
+                      placeholder: field.placeholder,
                       readonly: field.readonly
                     },
                     on: { fieldChange: _vm.onFieldChange }
