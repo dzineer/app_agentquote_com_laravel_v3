@@ -42,6 +42,7 @@ export default {
         Icon, Fields, AmountField, YearField, PercentageField, CollegeField, Field
     },
     mounted() {
+        debugger;
         const elmnt = document.getElementById(this.name);
         elmnt.scrollIntoView();
     },
