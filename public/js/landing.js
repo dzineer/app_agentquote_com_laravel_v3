@@ -4463,6 +4463,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.visible = true;
+    var elmnt = document.getElementById("FAMILY_INCOME");
+    elmnt.scrollIntoView();
   },
   filters: {
     formatAmount: function formatAmount(a) {
