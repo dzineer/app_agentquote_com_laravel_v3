@@ -39,14 +39,14 @@
         background-color: #17567F;
         color: white;
         padding: 1.0rem;
-    }    
+    }
 
     .fields {
         padding: 1rem;
         font-size: 1.2rem;
 
         .field {
-            @apply tw-w-full tw-py-3;
+            @apply tw-w-full tw-py-2;
 
             .on-left-symbol {
                @apply tw-flex tw-items-center tw-leading-normal tw-rounded tw-rounded-r-none tw-border tw-border-r-0 tw-px-4 tw-whitespace-no-wrap;
@@ -95,12 +95,12 @@
 
             .field-heading {
                 @apply  tw-pt-3 tw-capitalize tw-font-bold;
-                font-size: 1.05rem;
+                font-size: 0.9rem;
                 margin-bottom: 0.2rem;
             }
             .field-body {
                 color: #222222;
-                padding: 1.2rem;      
+                padding: 1.2rem;
             }
             .field-input {
                 @apply tw-rounded;
@@ -164,7 +164,7 @@
 
     }
 
-          
+
 }
 
 .field {
@@ -223,7 +223,7 @@
             }
             &__body {
                 color: #222222;
-                padding: 1.2rem;      
+                padding: 1.2rem;
             }
             &__input {
                 @apply tw-rounded;
@@ -243,4 +243,4 @@
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
-        }  
+        }
