@@ -62574,8 +62574,7 @@ Vue.directive('tooltip', {
 });
 Vue.filter('formatAmount', function (a) {
   var symbol = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-  var n = parseInt(a).toString();
-  if (n === "0") return n;
+  var n = a.indexOf(".") === -1 ? n + "" : parseInt(a);
   n = n.replace(/\$/g, "");
   n = n.replace(/,/g, "");
   n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
