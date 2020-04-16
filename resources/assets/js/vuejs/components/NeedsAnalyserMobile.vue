@@ -31,7 +31,7 @@
 -->
             </div>
 
-            <na-total icon="umbrella" title="insurance needed" :show="true" :part1="totalPart1" :part2="totalPart2" :total="totalNeeded | formatMoney" @quoteFromCalculator="onQuoteAmount" ></na-total>
+            <na-total icon="umbrella" title="insurance needed" :show="true" :part1="totalPart1" :part2="totalPart2" :total="totalNeeded | formatAmount" @quoteFromCalculator="onQuoteAmount" ></na-total>
 
         </div>
     </div>
