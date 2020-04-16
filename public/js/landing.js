@@ -2973,6 +2973,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2987,6 +2991,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     toggle: function toggle() {
       this.$emit('toggle');
+    },
+    toggleNextState: function toggleNextState() {
+      this.$emit('toggleNextState');
     }
   }
 });
@@ -43008,6 +43015,32 @@ var render = function() {
           })
         ],
         1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.show,
+              expression: "show"
+            }
+          ],
+          staticClass: "fields tw-py-4 tw-px-2"
+        },
+        [
+          _c(
+            "button",
+            {
+              staticClass:
+                "tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-10 tw-rounded focus:tw-outline-none focus:tw-shadow-outline",
+              on: { click: _vm.toggleNextState }
+            },
+            [_vm._v("Continue")]
+          )
+        ]
       )
     ])
   ])
