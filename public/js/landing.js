@@ -1837,7 +1837,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['header', 'classes', 'name', 'value', 'readonly'],
   filters: {
     formatAmount: function formatAmount(a) {
-      var n = a + "";
+      var n = parseInt(a) + "";
       n = n.replace(/\$/g, "");
       n = n.replace(/,/g, "");
       n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
