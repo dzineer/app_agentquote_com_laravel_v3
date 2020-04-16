@@ -44518,78 +44518,83 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "na-section-block tw-w-full" }, [
-    _c("div", { staticClass: "section-fields tw-w-full" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "tw-cursor-pointer section-heading tw-w-full tw-flex tw-items-center",
-          on: { click: _vm.toggle }
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass:
-                "tw-w-16 tw-h-16 tw-flex tw-justify-center tw-items-center"
-            },
-            [_c("icon", { attrs: { name: _vm.icon, classes: "tw-text-xl" } })],
-            1
-          ),
-          _vm._v(" "),
-          _c("h2", {
+  return _c(
+    "div",
+    { staticClass: "na-section-block tw-w-full", attrs: { id: _vm.name } },
+    [
+      _c("div", { staticClass: "section-fields tw-w-full" }, [
+        _c(
+          "div",
+          {
             staticClass:
-              "tw-text-lg tw-text-white tw-font-semibold tw-uppercase tw-ml-4 tw-py-2",
-            domProps: { textContent: _vm._s(_vm.title) }
-          })
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.show,
-              expression: "show"
-            }
-          ],
-          staticClass: "fields tw-py-3 tw-px-2",
-          attrs: { id: _vm.name }
-        },
-        [
-          _vm._l(_vm.fields, function(field, index) {
-            return _c(field.component, {
-              key: index,
-              tag: "div",
-              class: field.classes,
-              attrs: {
-                header: field.text,
-                name: field.name,
-                value: field.value,
-                readonly: field.readonly
+              "tw-cursor-pointer section-heading tw-w-full tw-flex tw-items-center",
+            on: { click: _vm.toggle }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "tw-w-16 tw-h-16 tw-flex tw-justify-center tw-items-center"
               },
-              on: { fieldChange: _vm.onFieldChange }
-            })
-          }),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
+              [
+                _c("icon", { attrs: { name: _vm.icon, classes: "tw-text-xl" } })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("h2", {
               staticClass:
-                "tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-10 tw-rounded focus:tw-outline-none focus:tw-shadow-outline",
-              on: { click: _vm.toggleNextState }
-            },
-            [_vm._v("Continue")]
-          )
-        ],
-        2
-      )
-    ])
-  ])
+                "tw-text-lg tw-text-white tw-font-semibold tw-uppercase tw-ml-4 tw-py-2",
+              domProps: { textContent: _vm._s(_vm.title) }
+            })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.show,
+                expression: "show"
+              }
+            ],
+            staticClass: "fields tw-py-3 tw-px-2"
+          },
+          [
+            _vm._l(_vm.fields, function(field, index) {
+              return _c(field.component, {
+                key: index,
+                tag: "div",
+                class: field.classes,
+                attrs: {
+                  header: field.text,
+                  name: field.name,
+                  value: field.value,
+                  readonly: field.readonly
+                },
+                on: { fieldChange: _vm.onFieldChange }
+              })
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-10 tw-rounded focus:tw-outline-none focus:tw-shadow-outline",
+                on: { click: _vm.toggleNextState }
+              },
+              [_vm._v("Continue")]
+            )
+          ],
+          2
+        )
+      ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
