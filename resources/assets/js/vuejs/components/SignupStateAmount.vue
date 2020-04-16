@@ -313,7 +313,6 @@ export default {
         }
     },
     mounted() {
-		this.requestedValue = this.defaultAmount;
 		this.ready = this.defaultState.length === 2;
 		this.$nextTick(function () {
 			// Code that will run only after the

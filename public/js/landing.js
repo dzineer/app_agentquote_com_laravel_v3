@@ -7506,7 +7506,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    this.requestedValue = this.defaultAmount;
     this.ready = this.defaultState.length === 2;
     this.$nextTick(function () {
       // Code that will run only after the
