@@ -9,7 +9,7 @@
 						<div class="tw-pb-16 tw-border-b">
 							<h2 class="dz:section-header tw-my-8 tw-text-3xl sm:tw-text-4xl">Instant Life Insurance Quote in less than 60 seconds</h2>
 							<p class="tw-text-md sm:tw-text-lg tw-tracking-widest">Simply answer a few questions below to get a quote. Quote only applies in respective USA states.</p>
-						</div>    
+						</div>
 
 						<div class="tw-pb-8 tw-border-b">
 
@@ -19,11 +19,11 @@
 								<div class="tw-flex tw-justify-center tw-items-center">
 									<div @click="decreaseAmount" class="tw-cursor-pointer tw-flex tw-justify-center tw-items-center tw-border-3 tw-border-primary tw-w-10 tw-h-10 tw-rounded-full tw-text-3xl tw-text-primary">-</div>
 									<div class="tw-text-3xl tw-px-16" @click="updatingRequestedValue = !updatingRequestedValue" v-if="!updatingRequestedValue">
-										{{ requestedValue | formatAmount }}
+										{{ requestedValue | formatMoney }}
 									</div>
 									<input type="text" :value="requestedValue" ref="amountField" v-if="updatingRequestedValue" class="tw-border-b-3 tw-border-primary tw-rounded-none tw-shadow tw-appearance-none tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-shadow-outline tw-text-center tw-text-3xl" @blur="updatingRequestedValue = !updatingRequestedValue" @keyup="e => updateAmount(e.currentTarget.value)">
 									<div @click="increaseAmount" class="tw-cursor-pointer tw-flex tw-justify-center tw-items-center tw-border-3 tw-border-primary tw-w-10 tw-h-10 tw-rounded-full tw-text-3xl tw-text-primary tw-my-3">+</div>
-									
+
 								</div>
 
 							<h2 class="dz:section-header tw-my-8 tw-text-3xl sm:tw-text-4xl">What state do you live in ?</h2>
@@ -32,26 +32,26 @@
 									<option v-for="state in stateNames" :value="state.abbreviation" v-bind:key="state.abbreviation" :selected="state.abbreviation === defaultState">
 										{{ state.name }}
 									</option>
-								</select>   						
+								</select>
 
 								<p v-if="amountError" class="tw-text-red-600">Please enter a valid amount!</p>
 
 								<div class="dz:section tw-my-6 tw-flex tw-flex-col sm:tw-flex-row tw-justify-center tw-items-center tw-px-8 tw-w-1/2 tw-mx-auto">
 		<!-- 						<a @click.prevent="prevStep" class="tw-bg-gray-600 hover:tw-bg-gray-700 sm:tw-mr-2 tw-text-white tw-py-2 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline">Back</a>
 		-->						<a @click.prevent="nextStep" class="dz:btn dz:btn-blue tw-text-lg" :disabled="!ready">Next</a>
-								</div>    
+								</div>
 
 								<secure-confidential-banner></secure-confidential-banner>
 
-							</div>             
+							</div>
 
-							<needs-analyzer-banner></needs-analyzer-banner>	
+							<needs-analyzer-banner></needs-analyzer-banner>
 
 					</div>
 				</div>
 			</div>
-	</div>		
-</div>			
+	</div>
+</div>
 </template>
 
 <script>
@@ -72,7 +72,7 @@ export default {
 				{
 					"name": "Select State",
 					"abbreviation": "-1"
-				},				
+				},
 				{
 					"name": "Alabama",
 					"abbreviation": "AL"
@@ -330,10 +330,25 @@ export default {
             n = n.replace(/,/g, "");
             n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             return "$" + n;
+        },
+        formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",", symbol = "$") {
+            try {
+                decimalCount = Math.abs(decimalCount);
+                decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+                const negativeSign = amount < 0 ? "-" : "";
+
+                let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+                let j = (i.length > 3) ? i.length % 3 : 0;
+
+                return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+            } catch (e) {
+                console.log(e)
+            }
         }
     },
     methods: {
-		setSelectedItem(index) {											
+		setSelectedItem(index) {
 				this.selectedItem = index
 		},
 		isAmount(value) {
@@ -350,16 +365,16 @@ export default {
 			return n;
 		},
 		formatValuedAmount(a) {
-			let n = this.cleanValuedAmount( a ); 
+			let n = this.cleanValuedAmount( a );
 			n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 			return "$" + n;
 		},
 		updateKeyUpAmount(e) {
-			this.updateAmount(e.currentTarget.value);                   
+			this.updateAmount(e.currentTarget.value);
 		},
 		onAmountChange(newValue) {
 			this.showAmountList = false;
-			this.updateAmount(newValue);   
+			this.updateAmount(newValue);
 		},
 		updateAmount(newValue) {
 
@@ -375,8 +390,8 @@ export default {
 			this.$emit('change', { amount: this.requestedValue });
 		},
 		decreaseAmount() {
-			
-			let amount =  parseInt( this.cleanValuedAmount( this.requestedValue ) ); 
+
+			let amount =  parseInt( this.cleanValuedAmount( this.requestedValue ) );
 			amount = amount - parseInt(this.increment);
 
 			if (amount < 0) {
@@ -386,10 +401,10 @@ export default {
 			this.updateAmount( amount+"" );
 		},
 		increaseAmount() {
-		
-			let amount =  parseInt( this.cleanValuedAmount( this.requestedValue ) ); 
+
+			let amount =  parseInt( this.cleanValuedAmount( this.requestedValue ) );
 			amount = amount + parseInt(this.increment);
-							
+
 			if (amount >= 10000000) {
 				return;
 			}
