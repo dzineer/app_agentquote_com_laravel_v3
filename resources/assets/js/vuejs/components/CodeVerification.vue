@@ -3,7 +3,7 @@
     <div class="tw-pb-8 tw-px-8 tw-no-border">
 
         <h2 class="dz:section-header tw-mt-0 tw-mb-6 sm:tw-mb-8 tw-text-3xl sm:tw-text-4xl">We need to confirm your identity</h2>
-        <p class="tw-w-full tw-text-justify sm:tw-text-center tw-text-md sm:tw-text-lg tw-tracking-widest">Due to the amount of fradulent requests, we require a quick verification to confirm your phone number you provided us earlier. You should receive a 5-digit number notification shortly. <strong>Once confirmed you will be redirected to your instant quote.</strong> You will also receive an email containing a link to view your quote results.</p>
+        <p class="tw-w-full tw-text-justify sm:tw-text-center tw-text-md sm:tw-text-lg tw-tracking-widest">Due to the amount of fraudulent requests, we require a quick verification to confirm your phone number you provided us earlier. You should receive a 5-digit verification code shortly. If you don't receive a code with-in 15 seconds check your email. <strong>Once confirmed you will be redirected to your instant quote.</strong> </p>
 
         <p class="tw-my-8 tw-text-2xl sm:tw-text-3xl tw-text-gray-800 tw-uppercase" v-if="showPhoneField">Enter Mobile Number For Your Instant Quote</p>
         <p class="tw-my-8 tw-text-2xl sm:tw-text-3xl tw-text-gray-800 tw-uppercase" v-if="verification.showEmailField">Enter Email For Your Instant Quote</p>
@@ -317,9 +317,9 @@ export default {
         },
         sendverificationby(value) {
             if(this.sendverificationby === 'email') {
-                this.phoneVerificationFailed = true;
-                this.status = 'Enter the 5-digit code sent to your email address:';
-                this.showVerifcationField();
+               // this.phoneVerificationFailed = true;
+               // this.status = 'Enter the 5-digit code sent to your email address:';
+               this.showVerifcationField();
             }
         }
     }

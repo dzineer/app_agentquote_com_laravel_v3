@@ -2234,8 +2234,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     sendverificationby: function sendverificationby(value) {
       if (this.sendverificationby === 'email') {
-        this.phoneVerificationFailed = true;
-        this.status = 'Enter the 5-digit code sent to your email address:';
+        // this.phoneVerificationFailed = true;
+        // this.status = 'Enter the 5-digit code sent to your email address:';
         this.showVerifcationField();
       }
     }
@@ -43471,14 +43471,11 @@ var staticRenderFns = [
       },
       [
         _vm._v(
-          "Due to the amount of fradulent requests, we require a quick verification to confirm your phone number you provided us earlier. You should receive a 5-digit number notification shortly. "
+          "Due to the amount of fraudulent requests, we require a quick verification to confirm your phone number you provided us earlier. You should receive a 5-digit verification code shortly. If you don't receive a code with-in 15 seconds check your email. "
         ),
         _c("strong", [
           _vm._v("Once confirmed you will be redirected to your instant quote.")
-        ]),
-        _vm._v(
-          " You will also receive an email containing a link to view your quote results."
-        )
+        ])
       ]
     )
   }
