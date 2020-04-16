@@ -35,6 +35,7 @@ export default {
     },
     filters: {
         formatAmount(a) {
+            debugger;
             let n = a + "";
             n = n.replace(/\$/g, "");
             n = n.replace(/,/g, "");

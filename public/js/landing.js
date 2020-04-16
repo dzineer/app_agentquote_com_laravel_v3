@@ -3423,6 +3423,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   filters: {
     formatAmount: function formatAmount(a) {
+      debugger;
       var n = a + "";
       n = n.replace(/\$/g, "");
       n = n.replace(/,/g, "");
