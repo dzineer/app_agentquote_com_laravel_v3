@@ -45342,7 +45342,7 @@ var render = function() {
           _c("amount-field", {
             attrs: {
               header: "Income Replacement Insurance Needed (Part I)",
-              value: _vm._f("formatAmount")(_vm.part1),
+              value: _vm._f("formatMoney")(_vm.part1),
               readonly: true
             }
           }),

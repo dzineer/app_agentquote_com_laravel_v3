@@ -8,7 +8,7 @@
             </div>
 
             <div class="fields tw-py-4 tw-px-2">
-                <amount-field header="Income Replacement Insurance Needed (Part I)" :value="part1 | formatAmount" :readonly="true"></amount-field>
+                <amount-field header="Income Replacement Insurance Needed (Part I)" :value="part1 | formatMoney" :readonly="true"></amount-field>
                 <amount-field header="Total Additional Expenses (Part II)" :value="part2 | formatAmount" :readonly="true"></amount-field>
                 <amount-field header="Insurance Needed" :value="total | formatAmount" :readonly="true"></amount-field>
                 <button class="tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline" @click="onQuoteAmount">Quote Amount</button>
