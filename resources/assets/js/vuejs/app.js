@@ -104,13 +104,13 @@ Vue.filter('formatAmount', function (a, symbol='') {
 
     if (typeof a === "string") {
         if (n === "0")
-            return n;
+            return symbol + n;
 
         n = a.indexOf(".") === -1 ? n + "" : parseInt(a);
     } else {
         n = a + "";
         if (n === "0")
-            return n;
+            return symbol + n;
 
         n = a.indexOf(".") === -1 ? n + "" : parseInt(a);
     }
