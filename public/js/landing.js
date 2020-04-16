@@ -3276,7 +3276,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['title', 'show', 'icon', 'fields'],
+  props: ['name', 'title', 'show', 'icon', 'fields'],
   components: {
     Icon: _Icon__WEBPACK_IMPORTED_MODULE_6__["default"],
     Fields: _Fields__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -44520,6 +44520,7 @@ var render = function() {
         {
           staticClass:
             "tw-cursor-pointer section-heading tw-w-full tw-flex tw-items-center",
+          attrs: { id: _vm.name },
           on: { click: _vm.toggle }
         },
         [
@@ -44708,6 +44709,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
+                  name: "sectionStates.FAMILY_INCOME",
                   icon: "users",
                   title: "family income",
                   show: _vm.sectionStates.FAMILY_INCOME,
@@ -44726,6 +44728,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
+                  name: "sectionStates.REPLACEMENT_INCOME",
                   icon: "refresh",
                   title: "income to be replaced",
                   show: _vm.sectionStates.REPLACEMENT_INCOME,
@@ -44744,6 +44747,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
+                  name: "sectionStates.INVESTIBLE_FAMILY_ASSETS",
                   id: "",
                   icon: "university",
                   title: "investible family assets",
@@ -44769,6 +44773,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
+                  name: "sectionStates.DEBIT_REPAYMENT",
                   id: "debit-repayment",
                   icon: "minus-circle",
                   title: "debt repayment",
@@ -44788,6 +44793,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-college-section", {
                 attrs: {
+                  name: "sectionStates.COLLEGE_FUNDING",
                   id: "college",
                   icon: "graduation-cap",
                   title: "college funding",
@@ -44807,6 +44813,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
+                  name: "sectionStates.OTHER_EXPENSES",
                   icon: "balance-scale",
                   title: "other expenses",
                   show: _vm.sectionStates.OTHER_EXPENSES,

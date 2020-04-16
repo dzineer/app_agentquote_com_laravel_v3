@@ -3,7 +3,7 @@
 
         <div class="section-fields tw-w-full">
 
-            <div @click="toggle" class="tw-cursor-pointer section-heading tw-w-full tw-flex tw-items-center">
+            <div @click="toggle" class="tw-cursor-pointer section-heading tw-w-full tw-flex tw-items-center" :id="name">
                 <div class="tw-w-16 tw-h-16 tw-flex tw-justify-center tw-items-center">
                     <icon :name="icon" classes="tw-text-xl"></icon>
                 </div>
@@ -32,6 +32,7 @@ import Icon from './Icon';
 
 export default {
     props: [
+        'name',
         'title',
         'show',
         'icon',
