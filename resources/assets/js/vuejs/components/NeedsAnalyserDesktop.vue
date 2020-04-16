@@ -75,9 +75,9 @@
 
                     <div v-if="showTotal" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto">
                         <h2 class="tw-flex tw-justify-center tw-text-center tw-text-2xl">Total Insurance Needed</h2>
-                        <amount-field header="Income Replacement Insurance Needed (Part I)" :value="totalPart1 | formatAmount" :readonly="true"></amount-field>
-                        <amount-field header="Total Additional Expenses (Part II)" :value="totalPart2 | formatAmount" :readonly="true"></amount-field>
-                        <amount-field header="Total Insurance Needed" :value="totalNeeded | formatAmount" :readonly="true"></amount-field>
+                        <amount-field header="Income Replacement Insurance Needed (Part I)" :value="totalPart1 | formatMoney" :readonly="true"></amount-field>
+                        <amount-field header="Total Additional Expenses (Part II)" :value="totalPart2 | formatMoney" :readonly="true"></amount-field>
+                        <amount-field header="Total Insurance Needed" :value="totalNeeded | formatMoney" :readonly="true"></amount-field>
                         <button class="tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline"  @click="onQuoteAmount">Quote Amount</button>
                     </div>
 
