@@ -101,24 +101,9 @@ Vue.directive('tooltip', {
 
 Vue.filter('formatAmount', function (a, symbol='') {
     let n = a + "";
-
-/*    if (typeof a === "string") {
-        if (n === "0")
-            return symbol + n;
-
-        n = a.indexOf(".") === -1 ? n + "" : parseInt(a);
-    } else {
-        n = a + "";
-        if (n === "0")
-            return symbol + n;
-
-        n = a.indexOf(".") === -1 ? n + "" : parseInt(a);
-    }*/
-
     n = n.replace(/\$/g, "");
     n = n.replace(/,/g, "");
     n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
     return symbol + n;
 });
 
