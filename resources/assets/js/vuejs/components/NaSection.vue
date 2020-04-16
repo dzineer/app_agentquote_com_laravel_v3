@@ -42,6 +42,10 @@ export default {
         Icon, Fields, AmountField, YearField, PercentageField, CollegeField, Field
     },
     methods: {
+        mounted() {
+            const elmnt = document.getElementById(this.props.name);
+            elmnt.scrollIntoView();
+        },
         onFieldChange( field ) {
             this.$emit('fieldChange', field);
         },

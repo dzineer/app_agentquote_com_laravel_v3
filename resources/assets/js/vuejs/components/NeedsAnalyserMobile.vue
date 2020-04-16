@@ -12,17 +12,17 @@
                 part i: family income replacement
             </na-part>
 
-            <na-section name="sectionStates.FAMILY_INCOME" icon="users" title="family income" :show="sectionStates.FAMILY_INCOME" @fieldChange="onFieldChange" @toggle="toggleState('FAMILY_INCOME')" @toggleNextState="toggleState('REPLACEMENT_INCOME')" :fields="currentSection()"></na-section>
-            <na-section name="sectionStates.REPLACEMENT_INCOME" icon="refresh" title="income to be replaced" :show="sectionStates.REPLACEMENT_INCOME" @fieldChange="onFieldChange" @toggle="toggleState('REPLACEMENT_INCOME')" @toggleNextState="toggleState('INVESTIBLE_FAMILY_ASSETS')" :fields="currentSection()" ></na-section>
-            <na-section name="sectionStates.INVESTIBLE_FAMILY_ASSETS" id="" icon="university" title="investible family assets" :show="sectionStates.INVESTIBLE_FAMILY_ASSETS" @fieldChange="onFieldChange" @toggle="toggleState('INVESTIBLE_FAMILY_ASSETS')" @toggleNextState="toggleState('DEBIT_REPAYMENT')" :fields="currentSection()" ></na-section>
+            <na-section name="FAMILY_INCOME" icon="users" title="family income" :show="sectionStates.FAMILY_INCOME" @fieldChange="onFieldChange" @toggle="toggleState('FAMILY_INCOME')" @toggleNextState="toggleState('REPLACEMENT_INCOME')" :fields="currentSection()"></na-section>
+            <na-section name="REPLACEMENT_INCOME" icon="refresh" title="income to be replaced" :show="sectionStates.REPLACEMENT_INCOME" @fieldChange="onFieldChange" @toggle="toggleState('REPLACEMENT_INCOME')" @toggleNextState="toggleState('INVESTIBLE_FAMILY_ASSETS')" :fields="currentSection()" ></na-section>
+            <na-section name="INVESTIBLE_FAMILY_ASSETS" id="" icon="university" title="investible family assets" :show="sectionStates.INVESTIBLE_FAMILY_ASSETS" @fieldChange="onFieldChange" @toggle="toggleState('INVESTIBLE_FAMILY_ASSETS')" @toggleNextState="toggleState('DEBIT_REPAYMENT')" :fields="currentSection()" ></na-section>
 
             <na-part>
                 part ii: debt, college, & other needed
             </na-part>
 
-            <na-section name="sectionStates.DEBIT_REPAYMENT" id="debit-repayment" icon="minus-circle" title="debt repayment" :show="sectionStates.DEBIT_REPAYMENT" @fieldChange="onFieldChange" @toggle="toggleState('DEBIT_REPAYMENT')" @toggleNextState="toggleState('COLLEGE_FUNDING')" :fields="currentSection()" ></na-section>
-            <na-college-section name="sectionStates.COLLEGE_FUNDING" id="college" icon="graduation-cap" title="college funding" :show="sectionStates.COLLEGE_FUNDING" @fieldChange="onFieldChange"  @toggleNextState="toggleState('OTHER_EXPENSES')" @toggle="toggleState('COLLEGE_FUNDING')" :value="this.sections.college_funding" ></na-college-section>
-            <na-section name="sectionStates.OTHER_EXPENSES" icon="balance-scale" title="other expenses" :show="sectionStates.OTHER_EXPENSES" @fieldChange="onFieldChange" @toggle="toggleState('OTHER_EXPENSES')" @toggleNextState="toggleState('TOTAL')" :fields="currentSection()" ></na-section>
+            <na-section name="DEBIT_REPAYMENT" id="debit-repayment" icon="minus-circle" title="debt repayment" :show="sectionStates.DEBIT_REPAYMENT" @fieldChange="onFieldChange" @toggle="toggleState('DEBIT_REPAYMENT')" @toggleNextState="toggleState('COLLEGE_FUNDING')" :fields="currentSection()" ></na-section>
+            <na-college-section name="COLLEGE_FUNDING" id="college" icon="graduation-cap" title="college funding" :show="sectionStates.COLLEGE_FUNDING" @fieldChange="onFieldChange"  @toggleNextState="toggleState('OTHER_EXPENSES')" @toggle="toggleState('COLLEGE_FUNDING')" :value="this.sections.college_funding" ></na-college-section>
+            <na-section name="OTHER_EXPENSES" icon="balance-scale" title="other expenses" :show="sectionStates.OTHER_EXPENSES" @fieldChange="onFieldChange" @toggle="toggleState('OTHER_EXPENSES')" @toggleNextState="toggleState('TOTAL')" :fields="currentSection()" ></na-section>
 
             <div v-show="show" class="fields tw-pb-3 tw-px-2 tw-bla">
                 <div v-for="(field, index) in fields" :key="index" @fieldChange="onFieldChange" :header="field.text" :name="field.name" :value="field.value" :class="field.classes" :readonly="field.readonly" :is="field.component"></div>

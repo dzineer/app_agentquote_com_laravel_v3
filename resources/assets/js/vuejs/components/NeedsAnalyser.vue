@@ -393,6 +393,7 @@ export default {
                 return this.currentState;
             }
             let nextKey = keys[ nextIndex ];
+
             return nextKey;
         },
         getPreviousState() {

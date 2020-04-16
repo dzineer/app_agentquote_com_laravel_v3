@@ -3287,6 +3287,10 @@ __webpack_require__.r(__webpack_exports__);
     Field: _Field__WEBPACK_IMPORTED_MODULE_5__["default"]
   },
   methods: {
+    mounted: function mounted() {
+      var elmnt = document.getElementById(this.props.name);
+      elmnt.scrollIntoView();
+    },
     onFieldChange: function onFieldChange(field) {
       this.$emit('fieldChange', field);
     },
@@ -44709,7 +44713,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
-                  name: "sectionStates.FAMILY_INCOME",
+                  name: "FAMILY_INCOME",
                   icon: "users",
                   title: "family income",
                   show: _vm.sectionStates.FAMILY_INCOME,
@@ -44728,7 +44732,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
-                  name: "sectionStates.REPLACEMENT_INCOME",
+                  name: "REPLACEMENT_INCOME",
                   icon: "refresh",
                   title: "income to be replaced",
                   show: _vm.sectionStates.REPLACEMENT_INCOME,
@@ -44747,7 +44751,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
-                  name: "sectionStates.INVESTIBLE_FAMILY_ASSETS",
+                  name: "INVESTIBLE_FAMILY_ASSETS",
                   id: "",
                   icon: "university",
                   title: "investible family assets",
@@ -44773,7 +44777,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
-                  name: "sectionStates.DEBIT_REPAYMENT",
+                  name: "DEBIT_REPAYMENT",
                   id: "debit-repayment",
                   icon: "minus-circle",
                   title: "debt repayment",
@@ -44793,7 +44797,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-college-section", {
                 attrs: {
-                  name: "sectionStates.COLLEGE_FUNDING",
+                  name: "COLLEGE_FUNDING",
                   id: "college",
                   icon: "graduation-cap",
                   title: "college funding",
@@ -44813,7 +44817,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-section", {
                 attrs: {
-                  name: "sectionStates.OTHER_EXPENSES",
+                  name: "OTHER_EXPENSES",
                   icon: "balance-scale",
                   title: "other expenses",
                   show: _vm.sectionStates.OTHER_EXPENSES,
