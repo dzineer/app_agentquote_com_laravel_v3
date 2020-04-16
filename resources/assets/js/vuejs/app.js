@@ -107,7 +107,7 @@ Vue.filter('formatAmount', function (a, symbol='') {
     return symbol + n;
 });
 
-Vue.filter('formatMoney', function (amount, decimalCount = 2, decimal = ".", thousands = ",", symbol = "$") {
+Vue.filter('formatMoney', function (amount, decimalCount = 0, decimal = ".", thousands = ",", symbol = "$") {
     try {
         decimalCount = Math.abs(decimalCount);
         decimalCount = isNaN(decimalCount) ? 2 : decimalCount;

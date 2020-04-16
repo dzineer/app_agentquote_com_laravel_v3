@@ -62581,7 +62581,7 @@ Vue.filter('formatAmount', function (a) {
   return symbol + n;
 });
 Vue.filter('formatMoney', function (amount) {
-  var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
   var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
   var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
   var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
