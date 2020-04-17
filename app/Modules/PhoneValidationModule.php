@@ -98,7 +98,7 @@ class PhoneValidationModule extends CustomModule {
         // $this->sendOTPSMS( "Hey Patrick Pegram", $quoteUnverified );
         $responseArray = $this->sendOTPSMS( $code, $quoteUnverified );
 
-        \Illuminate\Support\Facades\Log::info( self::class . "::generateQuoteVerificationRequest - sendOTPSMS - responseArray : " . json_encode([ "responseArray: " => $responseArray]);
+        \Illuminate\Support\Facades\Log::info( self::class . "::generateQuoteVerificationRequest - sendOTPSMS - responseArray : " . json_encode([ "responseArray: " => $responseArray]));
 
         // if our OTP SMS message failed
         if ( isset( $responseArray['errors'] ) ) {
