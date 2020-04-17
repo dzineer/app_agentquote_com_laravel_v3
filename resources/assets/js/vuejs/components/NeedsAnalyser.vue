@@ -142,7 +142,7 @@ export default {
                     { component: 'amount-field', name: 'investment_portfolio', value: 0, placeholder: '0', text: 'Investment Portfolio ?', classes: 'tw-text-gray-800 tw-text-lg', readonly: false },
                     { component: 'amount-field', name: 'current_life_insurance', value: 0, placeholder: '0', text: 'Current Life Insurance ?', classes: 'tw-text-gray-800 tw-text-lg', readonly: false },
                     { component: 'amount-field', name: 'other_assets', value: 0, placeholder: '0', text: 'Other Assets ?', classes: 'tw-text-gray-800 tw-text-lg', readonly: false },
-                    { component: 'amount-field', name: 'total', value: 0, placeholder: '0', text: 'TOTAL AVAILABLE ASSETS ?', classes: 'tw-text-gray-800 tw-text-lg', readonly: true }
+                    { component: 'amount-field', name: 'total', value: 0, placeholder: '0', text: 'TOTAL AVAILABLE ASSETS', classes: 'tw-text-gray-800 tw-text-lg', readonly: true }
                 ],
                 debt_repayment: [
                     { component: 'amount-field', name: 'mortgage',  value: 0, placeholder: '0', text: 'Mortgage ?', classes: 'tw-text-gray-800 tw-text-lg', readonly: false },
@@ -158,7 +158,7 @@ export default {
                 other_expenses: [
                     { component: 'amount-field', name: 'funeral',  value: 0, placeholder: '0', text: 'Funeral (typical cost of a funeral is approx. $5,000 ?', classes: 'tw-text-gray-800 tw-text-lg', readonly: false },
                     { component: 'amount-field', name: 'special_bequests',  value: 0, placeholder: '0', text: 'Special Bequests ?', classes: 'tw-text-gray-800 tw-text-lg', readonly: false },
-                    { component: 'amount-field', name: 'other_expenses',  value: 0, placeholder: '0', text: 'Consumer Debt ?', classes: 'tw-text-gray-800 tw-text-lg', readonly: false },
+                    { component: 'amount-field', name: 'other_expenses',  value: 0, placeholder: '0', text: 'Other Expenses ?', classes: 'tw-text-gray-800 tw-text-lg', readonly: false },
                     { component: 'amount-field', name: 'total',  value: 0, placeholder: '0', text: 'TOTAL EXPENSES', classes: 'tw-text-gray-800 tw-text-lg', readonly: true },
                 ]
             }
@@ -185,24 +185,33 @@ export default {
         }
     },
     methods: {
-        netPVR(r, ir, yy) {
+        // (rateOfReturn, inflationRate, yearsIncomeNeeded)
+        // Profit Volume Ratio
+        // Fixed expenses $80,000, Sale per unit $20 Variable cost per unit $15.
+        // Formula To Calculate Profit Volume Ratio
+        // PVR = (C x 100) / S
+        // C = Sales – Variable Cost
+        // C = 20 – 15 = 5
+        // PVR = (5 / 20) x 100 = 25%
+        netPVR(rateOfReturn, inflationRate, yearsIncomeNeeded) {
             let rr;
 
-            if (ir === r) {
+            if (inflationRate === rateOfReturn) {
                 return 1;
             }
-            else if (r <= 0) {
+            else if (rateOfReturn <= 0) {
                 return 1;
             }
-            else if (r === rr) {
+            else if (rateOfReturn === rr) {
                 return 1;
             }
 
-            rr = (r - ir) / 100;
+            // divide by 100 to convert to a percentage
+            rr = (rateOfReturn - inflationRate) / 100;
 
-            return 1;
+            // return 1;
 
-            return (1 - (1 / Math.pow((1 + rr), yy))) / rr;
+            return (1 - (1 / Math.pow((1 + rr), yearsIncomeNeeded))) / rr;
         },
         familyIncomeCalculator() {
             let subtotal = 0;

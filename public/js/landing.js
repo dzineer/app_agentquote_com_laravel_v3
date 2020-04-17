@@ -3668,7 +3668,7 @@ var collegeTuition = {
           name: 'total',
           value: 0,
           placeholder: '0',
-          text: 'TOTAL AVAILABLE ASSETS ?',
+          text: 'TOTAL AVAILABLE ASSETS',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: true
         }],
@@ -3747,7 +3747,7 @@ var collegeTuition = {
           name: 'other_expenses',
           value: 0,
           placeholder: '0',
-          text: 'Consumer Debt ?',
+          text: 'Other Expenses ?',
           classes: 'tw-text-gray-800 tw-text-lg',
           readonly: false
         }, {
@@ -3783,20 +3783,29 @@ var collegeTuition = {
     };
   },
   methods: {
-    netPVR: function netPVR(r, ir, yy) {
+    // (rateOfReturn, inflationRate, yearsIncomeNeeded)
+    // Profit Volume Ratio
+    // Fixed expenses $80,000, Sale per unit $20 Variable cost per unit $15.
+    // Formula To Calculate Profit Volume Ratio
+    // PVR = (C x 100) / S
+    // C = Sales – Variable Cost
+    // C = 20 – 15 = 5
+    // PVR = (5 / 20) x 100 = 25%
+    netPVR: function netPVR(rateOfReturn, inflationRate, yearsIncomeNeeded) {
       var rr;
 
-      if (ir === r) {
+      if (inflationRate === rateOfReturn) {
         return 1;
-      } else if (r <= 0) {
+      } else if (rateOfReturn <= 0) {
         return 1;
-      } else if (r === rr) {
+      } else if (rateOfReturn === rr) {
         return 1;
-      }
+      } // divide by 100 to convert to a percentage
 
-      rr = (r - ir) / 100;
-      return 1;
-      return (1 - 1 / Math.pow(1 + rr, yy)) / rr;
+
+      rr = (rateOfReturn - inflationRate) / 100; // return 1;
+
+      return (1 - 1 / Math.pow(1 + rr, yearsIncomeNeeded)) / rr;
     },
     familyIncomeCalculator: function familyIncomeCalculator() {
       var _this = this;

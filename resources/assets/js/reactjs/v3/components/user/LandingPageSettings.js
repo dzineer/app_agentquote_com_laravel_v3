@@ -481,9 +481,9 @@ class LandingPageSettings extends Component {
             fd.append('contact_addr1', this.state.profile.contact_addr1);
         }
 
-        // if (this.state.profile.contact_addr2 && this.state.profile.contact_addr2.length) {
-        fd.append('contact_addr2', this.state.profile.contact_addr2);
-        // }
+        if (this.state.profile.contact_addr2 && this.state.profile.contact_addr2.length) {
+            fd.append('contact_addr2', this.state.profile.contact_addr2);
+        }
 
         if (this.state.profile.contact_city && this.state.profile.contact_city.length) {
             fd.append('contact_city', this.state.profile.contact_city);
