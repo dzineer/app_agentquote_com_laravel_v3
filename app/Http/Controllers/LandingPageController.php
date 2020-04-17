@@ -347,6 +347,9 @@ class LandingPageController extends BackendController
         foreach($profile->getFields() as $field) {
             if ($request->has($field)) {
                 $fieldsToUpdate[ $field ] = $request->input($field);
+                if (strlen($fieldsToUpdate[$field]) === 0) {
+                    $fieldsToUpdate[ $field ] = NULL;
+                }
             }
         }
 
