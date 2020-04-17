@@ -39,7 +39,7 @@ export default {
         'fields'
     ],
     components: {
-        Icon, Fields, AmountField, YearField, PercentageField, CollegeField, Field
+        Icon, AmountField, YearField, PercentageField, CollegeField, Field
     },
     mounted() {
         // wait until this component is rendered and loaded

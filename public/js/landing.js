@@ -3252,7 +3252,6 @@ __webpack_require__.r(__webpack_exports__);
   props: ['name', 'title', 'show', 'icon', 'fields'],
   components: {
     Icon: _Icon__WEBPACK_IMPORTED_MODULE_6__["default"],
-    Fields: _Fields__WEBPACK_IMPORTED_MODULE_0__["default"],
     AmountField: _AmountField__WEBPACK_IMPORTED_MODULE_1__["default"],
     YearField: _YearField__WEBPACK_IMPORTED_MODULE_3__["default"],
     PercentageField: _PercentageField__WEBPACK_IMPORTED_MODULE_2__["default"],
