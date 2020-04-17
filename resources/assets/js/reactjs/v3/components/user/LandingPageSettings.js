@@ -31,13 +31,13 @@ class LandingPageSettings extends Component {
             profile: {
                 logo: null,
                 portrait: null,
-                company: null,
+                company: '',
                 vanity_domain: '',
-                position_title: null,
+                position_title: '',
                 contact_email: '',
                 contact_phone: '',
                 contact_addr1: '',
-                contact_addr2: null,
+                contact_addr2: '',
                 contact_city: '',
                 contact_state: '',
                 contact_zipcode: '',
@@ -481,9 +481,9 @@ class LandingPageSettings extends Component {
             fd.append('contact_addr1', this.state.profile.contact_addr1);
         }
 
-        //if (this.state.profile.contact_addr2 && this.state.profile.contact_addr2.length) {
-            fd.append('contact_addr2', this.state.profile.contact_addr2);
-       // }
+        // if (this.state.profile.contact_addr2 && this.state.profile.contact_addr2.length) {
+        fd.append('contact_addr2', this.state.profile.contact_addr2);
+        // }
 
         if (this.state.profile.contact_city && this.state.profile.contact_city.length) {
             fd.append('contact_city', this.state.profile.contact_city);
@@ -496,6 +496,8 @@ class LandingPageSettings extends Component {
         if (this.state.profile.contact_zipcode && this.state.profile.contact_zipcode.length) {
             fd.append('contact_zipcode', this.state.profile.contact_zipcode);
         }
+
+        debugger;
 
         fd.append('facebook_link', this.state.profile.facebook_link);
         fd.append('twitter_link', this.state.profile.twitter_link);
@@ -604,8 +606,8 @@ class LandingPageSettings extends Component {
 
         debugger;
 
-        this.displayLogo = typeof this.state.profile.logo != 'undefined' && this.state.profile.logo != null ? this.state.profile.logo : '/storage/landing-pages/defaults/no-logo.png';
-        this.displayPortrait = typeof this.state.profile.portrait != 'undefined' && this.state.profile.portrait != null ? this.state.profile.portrait : '/storage/landing-pages/defaults/no-portrait.png';
+        this.displayLogo = typeof this.state.profile.logo !== 'undefined' && this.state.profile.logo !== null ? this.state.profile.logo : '/storage/landing-pages/defaults/no-logo.png';
+        this.displayPortrait = typeof this.state.profile.portrait !== 'undefined' && this.state.profile.portrait !== null ? this.state.profile.portrait : '/storage/landing-pages/defaults/no-portrait.png';
 
         return (
 
