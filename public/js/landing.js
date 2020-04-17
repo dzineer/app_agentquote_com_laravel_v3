@@ -44658,7 +44658,7 @@ var render = function() {
               _c("na-header", [
                 _vm._v(
                   "Insurance Needed: " +
-                    _vm._s(_vm._f("formatAmount")(_vm.totalNeeded))
+                    _vm._s(_vm._f("formatCurrency")(_vm.totalNeeded))
                 )
               ]),
               _vm._v(" "),
@@ -62565,6 +62565,23 @@ Vue.filter('formatAmount', function (a) {
   n = n.replace(/,/g, "");
   n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   return symbol + n;
+});
+Vue.filter('formatCurrency', function (num, useDollar) {
+  var symbol = '';
+  var localNum = num;
+  if (isNaN(num)) num = "0";
+  if (useDollar) symbol = '$';
+  var sign = localNum === (localNum = Math.abs(localNum));
+  localNum = Math.floor(localNum * 100 + 0.50000000001);
+  var cents = localNum % 100;
+  localNum = Math.floor(localNum / 100).toString();
+  if (cents < 10) cents = "0" + cents;
+
+  for (var i = 0; i < Math.floor((localNum.length - (1 + i)) / 3); i++) {
+    localNum = localNum.substring(0, localNum.length - (4 * i + 3)) + ',' + num.substring(localNum.length - (4 * i + 3));
+  }
+
+  return (sign ? '' : '-') + symbol + localNum + '.' + cents;
 });
 Vue.filter('formatMoney', function (amount) {
   var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;

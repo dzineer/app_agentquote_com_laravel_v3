@@ -110,6 +110,29 @@ Vue.filter('formatAmount', function (a, symbol='') {
     return symbol + n;
 });
 
+Vue.filter('formatCurrency', function(num, useDollar) {
+    let symbol = '';
+    let localNum = num;
+
+    if (isNaN(num))
+        num = "0";
+
+    if (useDollar)
+        symbol = '$';
+
+    let sign = (localNum === (localNum = Math.abs(localNum)));
+    localNum = Math.floor(localNum * 100 + 0.50000000001);
+    let cents = localNum % 100;
+    localNum = Math.floor(localNum / 100).toString();
+    if (cents < 10)
+        cents = "0" + cents;
+    for (let i = 0; i < Math.floor((localNum.length - (1 + i)) / 3); i++) {
+        localNum = localNum.substring(0, localNum.length - (4 * i + 3)) + ',' + num.substring(localNum.length - (4 * i + 3));
+    }
+
+    return ( ((sign) ? '' : '-') + symbol + localNum + '.' + cents) ;
+});
+
 Vue.filter('formatMoney', function (amount, decimalCount = 0, decimal = ".", thousands = ",", symbol = "$") {
     try {
         decimalCount = Math.abs(decimalCount);
