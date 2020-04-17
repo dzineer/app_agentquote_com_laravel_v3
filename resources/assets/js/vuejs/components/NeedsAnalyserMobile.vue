@@ -6,7 +6,7 @@
                 <button role="button" class="close-btn tw-flex tw-justify-center tw-items-center tw-rounded tw-bg-red-600 tw-text-white tw-leading-tight tw-text-center tw-text-xl tw-pt-1">Close</button>
            </div>
 
-            <na-header>Insurance Needed: {{ totalNeeded | formatMoney }}</na-header>
+            <na-header>Insurance Needed: {{ totalNeeded | formatAmount }}</na-header>
 
             <na-part>
                 part i: family income replacement
