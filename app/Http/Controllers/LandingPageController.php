@@ -301,7 +301,7 @@ class LandingPageController extends BackendController
 
             if (in_array($ext, ['png', 'jpg', 'gif'])) {
                 $md5Name = md5_file($request->file('portrait')->getRealPath());
-                $fieldsToUpdate["portrait"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+                $fieldsToUpdate["portrait"] = env('AGENT_LOGO_PATH') . '/' . $request->file('portrait')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                 $fieldsToUpdate["logo"] = null;
                 $profileUpdated = true;
             }
