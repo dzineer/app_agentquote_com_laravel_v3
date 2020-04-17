@@ -44827,9 +44827,9 @@ var render = function() {
                   icon: "umbrella",
                   title: "insurance needed",
                   show: true,
-                  part1: _vm.totalPart1,
-                  part2: _vm.totalPart2,
-                  total: _vm._f("formatCurrency")(_vm.totalNeeded)
+                  part1: _vm._f("formatCurrency")(_vm.totalPart1, true),
+                  part2: _vm._f("formatCurrency")(_vm.totalPart2, true),
+                  total: _vm._f("formatCurrency")(_vm.totalNeeded, true)
                 },
                 on: { quoteFromCalculator: _vm.onQuoteAmount }
               })
