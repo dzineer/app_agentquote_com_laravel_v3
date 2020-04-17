@@ -127,7 +127,7 @@ Vue.filter('formatCurrency', function(num, useDollar) {
     if (cents < 10)
         cents = "0" + cents;
     for (let i = 0; i < Math.floor((localNum.length - (1 + i)) / 3); i++) {
-        localNum = localNum.substring(0, localNum.length - (4 * i + 3)) + ',' + num.substring(localNum.length - (4 * i + 3));
+        localNum = localNum.substring(0, localNum.length - (4 * i + 3)) + ',' + localNum.substring(localNum.length - (4 * i + 3));
     }
 
     return ( ((sign) ? '' : '-') + symbol + localNum + '.' + cents) ;
