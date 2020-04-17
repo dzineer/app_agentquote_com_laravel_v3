@@ -297,7 +297,6 @@ class LandingPageController extends BackendController
 
         }
 
-
         if (! $request->hasFile('portrait') && $request->has('portrait') && $request->input('portrait')  === 'null') {
             $fieldsToUpdate["portrait"] = null;
             $profileUpdated = true;
@@ -343,30 +342,11 @@ class LandingPageController extends BackendController
             }
         }
 
-        $fields = [
-          [ 'name' => 'company', 'key' => 'company'],
-          [ 'name' => 'position_title', 'key' => 'position_title'],
-          [ 'name' => 'contact_email', 'key' => 'contact_email'],
-          [ 'name' => 'contact_phone', 'key' => 'contact_phone'],
-          [ 'name' => 'contact_addr1', 'key' => 'contact_addr1'],
-          [ 'name' => 'contact_addr2', 'key' => 'contact_addr2'],
-          [ 'name' => 'contact_city', 'key' => 'contact_city'],
-          [ 'name' => 'contact_state', 'key' => 'contact_state'],
-          [ 'name' => 'contact_zipcode', 'key' => 'contact_zip'],
-          [ 'name' => 'facebook_link', 'key' => 'facebook_link'],
-          [ 'name' => 'twitter_link', 'key' => 'twitter_link'],
-          [ 'name' => 'youtube_link', 'key' => 'youtube_link'],
-          [ 'name' => 'linkedin_link', 'key' => 'linkedin_link'],
-          [ 'name' => 'instagram_link', 'key' => 'instagram_link'],
-          [ 'name' => 'calendly_link', 'key' => 'calendly_link'],
-        ];
+        $profile = new Profile();
 
-        foreach( $fields as $field ) {
-            if ($request->has( $field['name'] )) {
-                $n = $field['key'];
-                $profile->$n = $request->input( $field['name'] );
-                $fieldsToUpdate[ $n ] = $request->input( $field['name'] );
-                $profileUpdated = true;
+        foreach($profile->getFields() as $field) {
+            if ($request->has($field)) {
+                $fieldsToUpdate[ $field ] = $request->input($field);
             }
         }
 
