@@ -5540,6 +5540,7 @@ __webpack_require__.r(__webpack_exports__);
     this.terms = this.getTermYears();
     this.localQuote = this.quote; // debugger;
 
+    this.requestedValue = this.localQuote.quoteAmount;
     this.requestedValue = this.formatValue(this.localQuote.quoteAmount, "$");
     this.term = parseInt(this.localQuote.term);
     this.benefits = this.getBenefits(); // debugger;
@@ -44933,9 +44934,270 @@ if (false) {}
   !*** ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4e8ee8e2","hasScoped":false,"optionsId":"0","buble":{"transforms":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/vuejs/components/ReQuote.vue ***!
   \***************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/vue-loader/lib/template-compiler/index.js):\nSyntaxError: Assigning to rvalue (1:2519)\n    at Parser.pp$4.raise (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2757:13)\n    at Parser.pp$2.toAssignable (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1624:12)\n    at Parser.pp$3.parseMaybeAssign (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1930:47)\n    at Parser.pp$3.parseExpression (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1896:19)\n    at Parser.pp$1.parseStatement (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:815:45)\n    at Parser.parseStatement (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:6116:31)\n    at Parser.pp$1.parseBlock (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1112:23)\n    at Parser.pp$3.parseFunctionBody (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2600:22)\n    at Parser.pp$1.parseFunction (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1219:8)\n    at Parser.pp$3.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2184:17)\n    at Parser.<anonymous> (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:6003:24)\n    at Parser.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:6129:31)\n    at Parser.pp$3.parseExprSubscripts (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2047:19)\n    at Parser.pp$3.parseMaybeUnary (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2024:17)\n    at Parser.pp$3.parseExprOps (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1966:19)\n    at Parser.pp$3.parseMaybeConditional (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1949:19)\n    at Parser.pp$3.parseMaybeAssign (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1925:19)\n    at Parser.pp$3.parsePropertyValue (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2443:87)\n    at Parser.pp$3.parseProperty (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2434:8)\n    at Parser.pp$3.parseObj (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2380:23)\n    at Parser.pp$3.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2179:17)\n    at Parser.<anonymous> (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:6003:24)\n    at Parser.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:6129:31)\n    at Parser.pp$3.parseExprSubscripts (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2047:19)\n    at Parser.pp$3.parseMaybeUnary (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2024:17)\n    at Parser.pp$3.parseExprOps (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1966:19)\n    at Parser.pp$3.parseMaybeConditional (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1949:19)\n    at Parser.pp$3.parseMaybeAssign (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:1925:19)\n    at Parser.pp$3.parsePropertyValue (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2443:87)\n    at Parser.pp$3.parseProperty (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2434:8)\n    at Parser.pp$3.parseObj (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2380:23)\n    at Parser.pp$3.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2179:17)\n    at Parser.<anonymous> (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:6003:24)\n    at Parser.parseExprAtom (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:6129:31)\n    at Parser.pp$3.parseExprSubscripts (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2047:19)\n    at Parser.pp$3.parseMaybeUnary (/Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote/node_modules/vue-template-es2015-compiler/buble.js:2024:17)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass:
+        "tw-w-full tw-flex tw-justify-center tw-items-center tw-my-16"
+    },
+    [
+      _c("div", { staticClass: "tw-w-full" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "dz:section tw-flex tw-flex-col tw-justify-center tw-items-center tw-w-full sm:tw-w-full md:tw-w-11/12 lg:tw-w-10/12 xl:tw-w-10/12 tw-mx-auto"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "tw-flex tw-justify-start tw-items-center tw-w-full"
+              },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "tw-w-full sm:tw-w-1/4 tw-font-semibold tw-bg-gray-700 tw-text-white tw-py-4 tw-px-2 tw-rounded tw-capitalize",
+                    on: { click: _vm.onNewQuote }
+                  },
+                  [_vm._v("get a new quote")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "tw-flex tw-justify-center tw-items-center tw-w-full tw-flex-wrap"
+              },
+              [
+                _vm.insuranceCategory !== "fe"
+                  ? _c(
+                      "div",
+                      {
+                        staticClass:
+                          "tw-flex tw-flex-col tw-justify-center tw-items-center tw-w-1/3 sm:tw-w-1/4 tw-py-4 tw-px-2 tw-self-end",
+                        class:
+                          _vm.insuranceCategory !== "fe"
+                            ? "tw-w-1/3 sm:tw-w-1/4"
+                            : ""
+                      },
+                      [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "tw-text-left tw-w-full tw-text-primary tw-font-semibold tw-text-md sm:tw-text-lg",
+                            attrs: { for: "" }
+                          },
+                          [_vm._v("Term")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            staticClass:
+                              "tw-text-md sm:tw-text-lg tw-border-b-3 tw-border-primary tw-rounded-none tw-shadow tw-appearance-none tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-shadow-outline tw-mr-2 sm:tw-mb-0 tw-w-full sm:tw-w-full",
+                            attrs: { name: "", id: "" },
+                            on: { change: _vm.onTermChange }
+                          },
+                          _vm._l(_vm.terms, function(item, index) {
+                            return _c(
+                              "option",
+                              {
+                                key: index,
+                                domProps: {
+                                  value: item.value,
+                                  selected: item.value === _vm.term
+                                }
+                              },
+                              [_vm._v(_vm._s(item.text))]
+                            )
+                          }),
+                          0
+                        )
+                      ]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "tw-flex tw-flex-col tw-justify-center tw-items-center tw-py-4 tw-px-2 tw-self-end",
+                    class:
+                      _vm.insuranceCategory !== "fe"
+                        ? "tw-w-1/3 sm:tw-w-1/4"
+                        : "tw-w-1/3 sm:tw-w-1/3"
+                  },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "tw-text-left tw-w-full tw-text-primary tw-font-semibold tw-text-md sm:tw-text-lg",
+                        attrs: { for: "" }
+                      },
+                      [_vm._v("Enter Face Amount")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.requestedValue,
+                          expression: "requestedValue"
+                        }
+                      ],
+                      staticClass:
+                        "tw-text-md sm:tw-text-lg tw-w-full focus:tw-outline-none focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-2 tw-px-3 tw-py-2 tw-rounded-none tw-shadow tw-text-gray-700 tw-w-2/5",
+                      attrs: {
+                        type: "text",
+                        name: "fname",
+                        placeholder: "Face Amount",
+                        required: "required"
+                      },
+                      domProps: { value: _vm.requestedValue },
+                      on: {
+                        keyup: _vm.updateKeyUpAmount,
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.requestedValue = $event.target.value
+                        }
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "tw-flex tw-flex-col tw-justify-center tw-items-center tw-py-4 tw-px-2 tw-self-end",
+                    class:
+                      _vm.insuranceCategory !== "fe"
+                        ? "tw-w-1/3 sm:tw-w-1/4"
+                        : "tw-w-1/3 sm:tw-w-1/3"
+                  },
+                  [
+                    _c(
+                      "label",
+                      {
+                        staticClass:
+                          "tw-text-left tw-w-full tw-text-primary tw-font-semibold tw-text-md sm:tw-text-lg",
+                        attrs: { for: "" }
+                      },
+                      [_vm._v("Choose Face Amount")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        ref: "benefitSelect",
+                        staticClass:
+                          "tw-text-md sm:tw-text-lg tw-border-b-3 tw-border-primary tw-rounded-none tw-shadow tw-appearance-none tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-shadow-outline tw-mr-2 sm:tw-mb-0 tw-w-full sm:tw-w-full",
+                        attrs: { name: "", id: "" },
+                        on: { change: _vm.onChooseFaceAmountChange }
+                      },
+                      [
+                        _c("option", { attrs: { value: "-1" } }, [
+                          _vm._v("Face Amount")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.benefits, function(benefit, index) {
+                          return _c(
+                            "option",
+                            {
+                              key: index,
+                              domProps: {
+                                value: benefit.value,
+                                selected: benefit.value === _vm.faceAmount
+                              }
+                            },
+                            [_vm._v(_vm._s(benefit.text))]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "tw-flex tw-justify-center tw-items-center tw-w-full tw-py-4 tw-px-2",
+                    class:
+                      _vm.insuranceCategory !== "fe"
+                        ? "tw-w-1/3 sm:tw-w-1/4"
+                        : "tw-w-1/3 sm:tw-w-1/3"
+                  },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "tw-w-full tw-font-semibold tw-bg-green-600 tw-text-white tw-py-4 tw-px-2 tw-rounded tw-capitalize",
+                        attrs: { disabled: _vm.quoting },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            return _vm.onQuote($event)
+                          }
+                        }
+                      },
+                      [
+                        _vm.quoting
+                          ? _c("icon", {
+                              attrs: {
+                                name: "refresh",
+                                classes:
+                                  "tw-inline-block fa fa-spin fa-fw tw-mr-2"
+                              }
+                            })
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "tw-sr-only" }, [
+                          _vm._v("Loading...")
+                        ]),
+                        _vm._v(
+                          "\n                    Re-Quote\n                    "
+                        )
+                      ],
+                      1
+                    )
+                  ]
+                )
+              ]
+            )
+          ]
+        )
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+if (false) {}
 
 /***/ }),
 
