@@ -481,9 +481,9 @@ class LandingPageSettings extends Component {
             fd.append('contact_addr1', this.state.profile.contact_addr1);
         }
 
-        if (this.state.profile.contact_addr2 && this.state.profile.contact_addr2.length) {
+        //if (this.state.profile.contact_addr2 && this.state.profile.contact_addr2.length) {
             fd.append('contact_addr2', this.state.profile.contact_addr2);
-        }
+       // }
 
         if (this.state.profile.contact_city && this.state.profile.contact_city.length) {
             fd.append('contact_city', this.state.profile.contact_city);
@@ -496,8 +496,6 @@ class LandingPageSettings extends Component {
         if (this.state.profile.contact_zipcode && this.state.profile.contact_zipcode.length) {
             fd.append('contact_zipcode', this.state.profile.contact_zipcode);
         }
-
-        debugger;
 
         fd.append('facebook_link', this.state.profile.facebook_link);
         fd.append('twitter_link', this.state.profile.twitter_link);
