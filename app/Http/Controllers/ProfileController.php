@@ -235,7 +235,7 @@ class ProfileController extends BackendController
 	    foreach($profile->getFields() as $field) {
 	        if ($request->has($field)) {
 	            $fields[ $field ] = $request->input($field);
-                if (strlen($fields[$field]) === 0) {
+                if (empty($fields[$field])) {
                     $fields[ $field ] = NULL;
                 }
                 $updated = true;
