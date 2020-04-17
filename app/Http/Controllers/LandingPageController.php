@@ -190,11 +190,11 @@ class LandingPageController extends BackendController
         $resp = new \stdClass();
 
         $resp->contact_email = $profile->contact_email;
-        $resp->company = $profile->company;
-        $resp->position_title = $profile->position_title;
+        $resp->company = $profile->company ?: '';
+        $resp->position_title = $profile->position_title ?: '';
         $resp->contact_phone = $profile->contact_phone;
         $resp->contact_addr1 = $profile->contact_addr1;
-        $resp->contact_addr2 = $profile->contact_addr2;
+        $resp->contact_addr2 = $profile->contact_addr2 ?: '';
         $resp->contact_city = $profile->contact_city;
         $resp->contact_state = $profile->contact_state;
         $resp->contact_zipcode = $profile->contact_zip;
