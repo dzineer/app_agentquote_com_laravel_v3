@@ -19,7 +19,7 @@
 
                         <div :class="insuranceCategory !== 'fe' ? 'tw-w-1/3 sm:tw-w-1/4' : 'tw-w-1/3 sm:tw-w-1/3'" class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-py-4 tw-px-2 tw-self-end">
                             <label for="" class="tw-text-left tw-w-full tw-text-primary tw-font-semibold tw-text-md sm:tw-text-lg">Enter Face Amount</label>
-                            <input type="text" name="fname" placeholder="Face Amount" required="required" v-model="requestedValue" @keyup="updateKeyUpAmount" class="tw-text-md sm:tw-text-lg tw-w-full focus:tw-outline-none focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-2 tw-px-3 tw-py-2 tw-rounded-none tw-shadow tw-text-gray-700 tw-w-2/5" >
+                            <input type="text" name="fname" placeholder="Face Amount" required="required" v-model="requestedValue | formatAmount" @keyup="updateKeyUpAmount" class="tw-text-md sm:tw-text-lg tw-w-full focus:tw-outline-none focus:tw-shadow-outline sm:tw-mb-0 tw-appearance-none tw-border-b-3 tw-border-primary tw-leading-tight tw-mr-2 tw-px-3 tw-py-2 tw-rounded-none tw-shadow tw-text-gray-700 tw-w-2/5" >
                         </div>
 
                         <div :class="insuranceCategory !== 'fe' ? 'tw-w-1/3 sm:tw-w-1/4' : 'tw-w-1/3 sm:tw-w-1/3'" class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-py-4 tw-px-2 tw-self-end">
@@ -75,7 +75,8 @@
             this.terms = this.getTermYears();
             this.localQuote = this.quote;
             // debugger;
-            this.requestedValue = this.localQuote.quoteAmount;
+            this.requestedValue = this.formatValue(this.localQuote.quoteAmount, "$");
+
             this.term = parseInt(this.localQuote.term);
             this.benefits = this.getBenefits();
             // debugger;
@@ -83,6 +84,16 @@
             window.vueEvents.$on('finishedRequote', this.finishedRequote);
         },
         methods: {
+            formatValue(a, symbol='') {
+                let n = a + "";
+                if (typeof n === "string" && n !== "0" && n.indexOf(".") !== -1) {
+                    n = parseInt(a) + "";
+                }
+                n = n.replace(/\$/g, "");
+                n = n.replace(/,/g, "");
+                n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                return symbol + n;
+            },
             finishedRequote() {
                 this.quoting = false;
             },
