@@ -5,6 +5,7 @@ namespace App\Libraries;
 use App\Http\Controllers\Api\UserQuoteController;
 use App\Libraries\Utilities\AQLogger as LocalAQLogger;
 use Dzineer\SMS\Facades\SMS;
+use App\Facades\AQLog;
 
 trait QuoteVerification {
 
@@ -44,6 +45,10 @@ trait QuoteVerification {
         ) {
             $sms->to( $quoteUnverified->phone );
         } );
+
+        AQLog::info([
+            "QuoteVerification::sendOTPSMS - response" => $response,
+        ]);
 
         // $this->Log( "::gen_verify - verification response: " . $response . "" );
 
