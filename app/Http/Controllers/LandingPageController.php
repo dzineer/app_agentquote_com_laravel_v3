@@ -275,27 +275,11 @@ class LandingPageController extends BackendController
                 return response()->json(["success" => false, "message" => 'Incorrect logo dimensions.']);
             }
 
-            switch( $ext) {
-                case 'png':
-                    $md5Name = md5_file($request->file('logo')->getRealPath());
-                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
-                    $fieldsToUpdate["portrait"] = null;
-                    $profileUpdated = true;
-                    break;
-                case 'jpg':
-                    $md5Name = md5_file($request->file('logo')->getRealPath());
-                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
-                    $fieldsToUpdate["portrait"] = null;
-                    $profileUpdated = true;
-                    break;
-                case 'gif':
-                    $md5Name = md5_file($request->file('logo')->getRealPath());
-                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
-                    $fieldsToUpdate["portrait"] = null;
-                    $profileUpdated = true;
-                    break;
-
-                default:
+            if (in_array($ext, ['png', 'jpg', 'git'])) {
+                $md5Name = md5_file($request->file('logo')->getRealPath());
+                $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+                $fieldsToUpdate["portrait"] = null;
+                $profileUpdated = true;
             }
 
         }
@@ -314,17 +298,14 @@ class LandingPageController extends BackendController
             }
 
             $ext = $request->file('portrait')->guessExtension();
-            if ($ext == "txt") {
-                $md5Name = md5_file($request->file('portrait')->getRealPath());
-                $ext = 'svg';
-                $fieldsToUpdate["portrait"] = env('AGENT_LOGO_PATH') . '/' . $request->file('portrait')->storeAs('landing-pages/portraits', $md5Name.'.'.$ext  ,'public');
-                $fieldsToUpdate["logo"] = null;
-                $profileUpdated = true;
-            } else {
-                $fieldsToUpdate["portrait"] = env('AGENT_LOGO_PATH') . '/' . $request->file('portrait')->store('landing-pages/portraits', 'public');
+
+            if (in_array($ext, ['png', 'jpg', 'git'])) {
+                $md5Name = md5_file($request->file('logo')->getRealPath());
+                $fieldsToUpdate["portrait"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                 $fieldsToUpdate["logo"] = null;
                 $profileUpdated = true;
             }
+
         }
 
         if ($request->has('product_category')) {
