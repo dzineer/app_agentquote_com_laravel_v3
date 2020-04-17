@@ -275,7 +275,7 @@ class LandingPageController extends BackendController
                 return response()->json(["success" => false, "message" => 'Incorrect logo dimensions.']);
             }
 
-            if (in_array($ext, ['png', 'jpg', 'git'])) {
+            if (in_array($ext, ['png', 'jpg', 'gif'])) {
                 $md5Name = md5_file($request->file('logo')->getRealPath());
                 $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                 $fieldsToUpdate["portrait"] = null;
@@ -299,7 +299,7 @@ class LandingPageController extends BackendController
 
             $ext = $request->file('portrait')->guessExtension();
 
-            if (in_array($ext, ['png', 'jpg', 'git'])) {
+            if (in_array($ext, ['png', 'jpg', 'gif'])) {
                 $md5Name = md5_file($request->file('logo')->getRealPath());
                 $fieldsToUpdate["portrait"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                 $fieldsToUpdate["logo"] = null;
