@@ -13,7 +13,7 @@
                         <div v-if="insuranceCategory !== 'fe'" :class="insuranceCategory !== 'fe' ? 'tw-w-1/3 sm:tw-w-1/4' : ''" class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-w-1/3 sm:tw-w-1/4 tw-py-4 tw-px-2 tw-self-end">
                             <label for="" class="tw-text-left tw-w-full tw-text-primary tw-font-semibold tw-text-md sm:tw-text-lg">Term</label>
                             <select class="tw-text-md sm:tw-text-lg tw-border-b-3 tw-border-primary tw-rounded-none tw-shadow tw-appearance-none tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-shadow-outline tw-mr-2 sm:tw-mb-0 tw-w-full sm:tw-w-full" name="" id="" @change="onTermChange">
-                                <option v-for="(item, index) in terms" :key="index" :value="item.value" :selected="item.value == term">{{ item.text }}</option>
+                                <option v-for="(item, index) in terms" :key="index" :value="item.value" :selected="item.value === term">{{ item.text }}</option>
                             </select>
                         </div>
 
@@ -26,7 +26,7 @@
                             <label for="" class="tw-text-left tw-w-full tw-text-primary tw-font-semibold tw-text-md sm:tw-text-lg">Choose Face Amount</label>
                             <select class="tw-text-md sm:tw-text-lg tw-border-b-3 tw-border-primary tw-rounded-none tw-shadow tw-appearance-none tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-shadow-outline tw-mr-2 sm:tw-mb-0 tw-w-full sm:tw-w-full" name="" id="" @change="onChooseFaceAmountChange" ref="benefitSelect">
                                 <option value="-1">Face Amount</option>
-                                <option v-for="(benefit, index) in benefits" :key="index" :value="benefit.value" :selected="benefit.value == faceAmount">{{ benefit.text }}</option>
+                                <option v-for="(benefit, index) in benefits" :key="index" :value="benefit.value" :selected="benefit.value === faceAmount">{{ benefit.text }}</option>
                             </select>
                         </div>
 

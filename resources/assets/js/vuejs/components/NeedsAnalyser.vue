@@ -200,6 +200,8 @@ export default {
 
             rr = (r - ir) / 100;
 
+            return 1;
+
             return (1 - (1 / Math.pow((1 + rr), yy))) / rr;
         },
         familyIncomeCalculator() {

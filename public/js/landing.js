@@ -3795,6 +3795,7 @@ var collegeTuition = {
       }
 
       rr = (r - ir) / 100;
+      return 1;
       return (1 - 1 / Math.pow(1 + rr, yy)) / rr;
     },
     familyIncomeCalculator: function familyIncomeCalculator() {
@@ -45028,7 +45029,7 @@ var render = function() {
                                 key: index,
                                 domProps: {
                                   value: item.value,
-                                  selected: item.value == _vm.term
+                                  selected: item.value === _vm.term
                                 }
                               },
                               [_vm._v(_vm._s(item.text))]
@@ -45134,7 +45135,7 @@ var render = function() {
                               key: index,
                               domProps: {
                                 value: benefit.value,
-                                selected: benefit.value == _vm.faceAmount
+                                selected: benefit.value === _vm.faceAmount
                               }
                             },
                             [_vm._v(_vm._s(benefit.text))]
