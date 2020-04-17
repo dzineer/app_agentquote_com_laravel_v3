@@ -25,11 +25,17 @@ use Illuminate\Support\Facades\Log;
 use Dzineer\SMS\Facades\SMS;
 use App\Facades\AQLog;
 use App\Libraries\SMSErrorDispatch;
+use Symfony\Component\VarDumper\VarDumper;
 
 class PhoneValidationModule extends CustomModule {
 
+    const MAX_CHECKED_TIMES = 3;
     private $liveMode = true;
     protected $debug = true;
+    /**
+     * @var int
+     */
+    private $timesChecked;
     use QuoteVerification;
 
     public function install( $module, $data ) {
@@ -92,6 +98,8 @@ class PhoneValidationModule extends CustomModule {
         // $this->sendOTPSMS( "Hey Patrick Pegram", $quoteUnverified );
         $responseArray = $this->sendOTPSMS( $code, $quoteUnverified );
 
+        \Illuminate\Support\Facades\Log::info( self::class . "::generateQuoteVerificationRequest - sendOTPSMS - responseArray : " . json_encode([ "responseArray: " => $responseArray]);
+
         // if our OTP SMS message failed
         if ( isset( $responseArray['errors'] ) ) {
             // since they could not receive OTP via SMS send via email.
@@ -100,43 +108,74 @@ class PhoneValidationModule extends CustomModule {
             return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_DELIVERY_FAILURE, $quoteUnverified, $hash_token );
         }
 
-        $responseData = $responseArray["data"];
         $username = config( 'services.flowroute.access_key' );
         $password = config( 'services.flowroute.secret_key' );
 
-        $responseArr = $this->getSentSMSResponse( $responseData );
-
-        \Illuminate\Support\Facades\Log::info( self::class . "::gen_verify -  link : " . $responseData['links']['self'] );
-
-        // if our SMS failed to arrive to phone for any reason
-        if ( isset( $responseArr['errors'] ) ) {
+        if (isset($responseArray['data'])) {
+            $responseData = $responseArray['data'];
+        } else if(isset($responseArray['errors'])) {
             $this->notifyOTPViaEmailNotification( $quoteUnverified );
             return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_GENERAL_ERROR, $quoteUnverified, $hash_token );
         }
 
-        // $receipts = $responseArr['data']['attributes']['status'];
-        $attributes = $responseArr['data']['attributes'];
-        $this->Log( ":: - attributes: " . json_encode( $attributes ) . "" );
-        $receipts = $attributes['delivery_receipts'];
-
         // Was our SMS Message accepts by carrier?
-        if ( ! count( $receipts ) || $receipts[0]['status_code_description'] !== "Message accepted by Carrier" ) {
-            $this->Log( ":: - status_code or status failure: " . json_encode( $responseData ) . "" );
-            $this->notifyOTPViaEmailNotification( $quoteUnverified );
-            return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_REJECTED_BY_CARRIER, $quoteUnverified, $hash_token );
-        } else {
-            $resp = [
-                "success" => true,
-                "token"   => $hash_token,
-                "message" => $subject,
-                //    "results" => $results
-            ];
-            $this->AQLog( ":: - status successful: " . json_encode( $resp ) . "" );
 
-            return response()->json( $resp );
+        $done = false;
+        $this->timesChecked = 0;
+
+        do {
+            // did we get a good response ?
+
+            $smsResponseArr = $this->getSentSMSResponse( $responseData );
+
+            if (isset($smsResponseArr['data'])) {
+                $smsResponseData = $smsResponseArr['data'];
+            }
+            else {
+                $this->notifyOTPViaEmailNotification( $quoteUnverified );
+                return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_GENERAL_ERROR, $quoteUnverified, $hash_token );
+            }
+
+            \Illuminate\Support\Facades\Log::info( self::class . "::generateQuoteVerificationRequest - responseArray : " . json_encode([
+                "responseArray" => $smsResponseArr,
+            ]));
+
+            if (isset($smsResponseData['attributes'])) {
+                if (isset($smsResponseData['attributes']['delivery_receipts'])) {
+                    foreach($smsResponseData['attributes']['delivery_receipts'] as $receipt) {
+
+                        \Illuminate\Support\Facades\Log::info( self::class . "::generateQuoteVerificationRequest - responseArray : " . json_encode([
+                            "status_code" => $receipt['status_code'],
+                        ]));
+
+                        if($receipt['status_code'] === 1003) {
+
+                            $resp = [
+                                "success" => true,
+                                "token"   => $hash_token,
+                                "message" => $subject,
+                                //    "results" => $results
+                            ];
+
+                            return response()->json( $resp );
+                        }
+                    }
+                }
+            }
+
+            // failed, check again until we have reached max number of attempts
+            if ($this->timesChecked < self::MAX_CHECKED_TIMES) {
+                $this->timesChecked++;
+                sleep(10);
+            } else {
+                $done = true;
+            }
         }
+        while(!$done);
 
-        // $this->Log( "::onAction - link check response: " . $response . "" );
+        $this->notifyOTPViaEmailNotification( $quoteUnverified );
+        return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_GENERAL_ERROR, $quoteUnverified, $hash_token );
+
     }
 
     /**
