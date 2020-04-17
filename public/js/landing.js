@@ -3958,8 +3958,9 @@ var collegeTuition = {
 
       var investibleFamilyAssets = lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['investible_family_assets'], {
         name: 'total'
-      }).value; // debt repayment
+      }).value;
 
+      debugger; // debt repayment
 
       var debtRepayment = lodash__WEBPACK_IMPORTED_MODULE_2___default.a.find(this.sections['debt_repayment'], {
         name: 'total'

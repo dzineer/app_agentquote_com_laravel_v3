@@ -310,6 +310,7 @@ export default {
 
             // investible family assets
             let investibleFamilyAssets = _.find(this.sections[ 'investible_family_assets' ], { name: 'total' }).value;
+            debugger;
 
             // debt repayment
             let debtRepayment =  _.find(this.sections[ 'debt_repayment' ], { name: 'total' }).value;
