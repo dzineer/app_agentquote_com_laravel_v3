@@ -4428,6 +4428,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.visible = true; // wait until this component is rendered and loaded
 
+    return;
     this.$nextTick(function () {
       var id = 'FAMILY_INCOME';
       var yOffset = -2;

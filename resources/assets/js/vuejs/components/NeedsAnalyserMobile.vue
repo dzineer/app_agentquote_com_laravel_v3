@@ -56,6 +56,7 @@ export default {
     mounted() {
         this.visible = true;
         // wait until this component is rendered and loaded
+        return;
         this.$nextTick(function() {
             const id = 'FAMILY_INCOME';
             const yOffset = -2;
