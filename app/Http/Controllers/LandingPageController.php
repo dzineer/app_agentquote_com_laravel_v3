@@ -84,10 +84,8 @@ class LandingPageController extends BackendController
                 $ext = 'svg';
 
                 $profile->logo = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
-                $profile->portrait = NULL;
             } else {
                 $profile->logo = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->store('landing-pages/logos', 'public');
-                $profile->portrait = NULL;
             }
 
 
@@ -101,10 +99,8 @@ class LandingPageController extends BackendController
                 $md5Name = md5_file($request->file('portrait')->getRealPath());
                 $ext = 'svg';
                 $profile->portrait = env('AGENT_LOGO_PATH') . '/' . $request->file('portrait')->storeAs('landing-pages/portraits', $md5Name.'.'.$ext  ,'public');
-                $profile->logo = NULL;
             } else {
                 $profile->portrait = env('AGENT_LOGO_PATH') . '/' . $request->file('portrait')->store('landing-pages/portraits', 'public');
-                $profile->logo = NULL;
             }
             $profileUpdated = true;
         }
@@ -301,6 +297,7 @@ class LandingPageController extends BackendController
 
         }
 
+
         if (! $request->hasFile('portrait') && $request->has('portrait') && $request->input('portrait')  === 'null') {
             $fieldsToUpdate["portrait"] = null;
             $profileUpdated = true;
@@ -346,14 +343,30 @@ class LandingPageController extends BackendController
             }
         }
 
-        $profile = new Profile();
+        $fields = [
+          [ 'name' => 'company', 'key' => 'company'],
+          [ 'name' => 'position_title', 'key' => 'position_title'],
+          [ 'name' => 'contact_email', 'key' => 'contact_email'],
+          [ 'name' => 'contact_phone', 'key' => 'contact_phone'],
+          [ 'name' => 'contact_addr1', 'key' => 'contact_addr1'],
+          [ 'name' => 'contact_addr2', 'key' => 'contact_addr2'],
+          [ 'name' => 'contact_city', 'key' => 'contact_city'],
+          [ 'name' => 'contact_state', 'key' => 'contact_state'],
+          [ 'name' => 'contact_zipcode', 'key' => 'contact_zip'],
+          [ 'name' => 'facebook_link', 'key' => 'facebook_link'],
+          [ 'name' => 'twitter_link', 'key' => 'twitter_link'],
+          [ 'name' => 'youtube_link', 'key' => 'youtube_link'],
+          [ 'name' => 'linkedin_link', 'key' => 'linkedin_link'],
+          [ 'name' => 'instagram_link', 'key' => 'instagram_link'],
+          [ 'name' => 'calendly_link', 'key' => 'calendly_link'],
+        ];
 
-        foreach($profile->getFields() as $field) {
-            if ($request->has($field)) {
-                $fieldsToUpdate[ $field ] = $request->input($field);
-                if (strlen($fieldsToUpdate[$field]) === 0) {
-                    $fieldsToUpdate[ $field ] = NULL;
-                }
+        foreach( $fields as $field ) {
+            if ($request->has( $field['name'] )) {
+                $n = $field['key'];
+                $profile->$n = $request->input( $field['name'] );
+                $fieldsToUpdate[ $n ] = $request->input( $field['name'] );
+                $profileUpdated = true;
             }
         }
 
