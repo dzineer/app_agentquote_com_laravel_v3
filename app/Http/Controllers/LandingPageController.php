@@ -47,7 +47,10 @@ class LandingPageController extends BackendController
             "currentPageCategory" => json_encode($currentPageCategory)
         ];
 
-        // dd($data);
+        if ($_SERVER['REMOTE_ADDR'] === '171.4.220.71') {
+            dd($data);
+        }
+
 
 		return view('landing-pages.profile.index', $data)->render();
 	}
