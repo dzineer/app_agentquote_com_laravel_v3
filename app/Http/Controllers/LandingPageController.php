@@ -193,7 +193,7 @@ class LandingPageController extends BackendController
         $resp = new \stdClass();
 
         $resp->contact_email = $profile->contact_email;
-        $resp->company = $profile->company;
+        $resp->company = $profile->company ?: '';
         $resp->position_title = $profile->position_title ?: '';
         $resp->contact_phone = $profile->contact_phone;
         $resp->contact_addr1 = $profile->contact_addr1;
