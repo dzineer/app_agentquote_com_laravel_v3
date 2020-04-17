@@ -44657,8 +44657,8 @@ var render = function() {
               _vm._v(" "),
               _c("na-header", [
                 _vm._v(
-                  "Insurance Needed: $" +
-                    _vm._s(_vm._f("formatCurrency")(_vm.totalNeeded))
+                  "Insurance Needed: " +
+                    _vm._s(_vm._f("formatCurrency")(_vm.totalNeeded, true))
                 )
               ]),
               _vm._v(" "),
@@ -44829,7 +44829,7 @@ var render = function() {
                   show: true,
                   part1: _vm.totalPart1,
                   part2: _vm.totalPart2,
-                  total: _vm._f("formatAmount")(_vm.totalNeeded)
+                  total: _vm._f("formatCurrency")(_vm.totalNeeded)
                 },
                 on: { quoteFromCalculator: _vm.onQuoteAmount }
               })

@@ -6,7 +6,7 @@
                 <button role="button" class="close-btn tw-flex tw-justify-center tw-items-center tw-rounded tw-bg-red-600 tw-text-white tw-leading-tight tw-text-center tw-text-xl tw-pt-1">Close</button>
            </div>
 
-            <na-header>Insurance Needed: ${{ totalNeeded | formatCurrency }}</na-header>
+            <na-header>Insurance Needed: {{ totalNeeded | formatCurrency(true) }}</na-header>
 
             <na-part>
                 part i: family income replacement
@@ -31,7 +31,7 @@
 -->
             </div>
 
-            <na-total icon="umbrella" title="insurance needed" :show="true" :part1="totalPart1" :part2="totalPart2" :total="totalNeeded | formatAmount" @quoteFromCalculator="onQuoteAmount" ></na-total>
+            <na-total icon="umbrella" title="insurance needed" :show="true" :part1="totalPart1" :part2="totalPart2" :total="totalNeeded | formatCurrency" @quoteFromCalculator="onQuoteAmount" ></na-total>
 
         </div>
     </div>
