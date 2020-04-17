@@ -44657,7 +44657,7 @@ var render = function() {
               _vm._v(" "),
               _c("na-header", [
                 _vm._v(
-                  "Insurance Needed: $" +
+                  "Insurance Needed: " +
                     _vm._s(_vm._f("formatCurrency")(_vm.totalNeeded))
                 )
               ]),
