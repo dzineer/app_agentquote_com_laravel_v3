@@ -51,7 +51,7 @@
 
                     <div class="tw-w-3/4 tw-bg-black tw-rounded-b-xl tw-flex tw-absolute tw-justify-center tw-top-0" style="background-color:#2285C4;">
                         <h1 class="tw-py-4 tw-px-3 tw-text-xl tw-leading-loose tw-tracking-normal tw-uppercase tw-text-white">
-                            Insurance Needed: {{ totalNeeded | formatMoney }}
+                            Insurance Needed: {{ totalNeeded | formatAmount }}
                         </h1>
                     </div>
 
@@ -75,9 +75,9 @@
 
                     <div v-if="showTotal" class="fields tw-w-full tw-py-2 tw-px-1 tw-overflow-auto">
                         <h2 class="tw-flex tw-justify-center tw-text-center tw-text-2xl">Total Insurance Needed</h2>
-                        <amount-field header="Income Replacement Insurance Needed (Part I)" :value="totalPart1 | formatMoney" :readonly="true"></amount-field>
-                        <amount-field header="Total Additional Expenses (Part II)" :value="totalPart2 | formatMoney" :readonly="true"></amount-field>
-                        <amount-field header="Total Insurance Needed" :value="totalNeeded | formatMoney" :readonly="true"></amount-field>
+                        <amount-field header="Income Replacement Insurance Needed (Part I)" :value="totalPart1 | formatAmount" :readonly="true"></amount-field>
+                        <amount-field header="Total Additional Expenses (Part II)" :value="totalPart2 | formatAmount" :readonly="true"></amount-field>
+                        <amount-field header="Total Insurance Needed" :value="totalNeeded | formatAmount" :readonly="true"></amount-field>
                         <button class="tw-bg-primary tw-w-full hover:tw-bg-blue-700 tw-text-white tw-py-5 tw-px-8 tw-rounded focus:tw-outline-none focus:tw-shadow-outline"  @click="onQuoteAmount">Quote Amount</button>
                     </div>
 
@@ -121,31 +121,6 @@ export default {
             showTotal: false,
             generalHeader: 'Family Income',
             quoteReady: false
-        }
-    },
-    filters: {
-        formatAmount(a) {
-            let n = a + "";
-            n = n.replace(/\$/g, "");
-            n = n.replace(/,/g, "");
-            n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            // debugger;
-            return "$" + n;
-        },
-        formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",", symbol = "$") {
-            try {
-                decimalCount = Math.abs(decimalCount);
-                decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
-
-                const negativeSign = amount < 0 ? "-" : "";
-
-                let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
-                let j = (i.length > 3) ? i.length % 3 : 0;
-
-                return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
-            } catch (e) {
-                console.log(e)
-            }
         }
     },
     methods: {

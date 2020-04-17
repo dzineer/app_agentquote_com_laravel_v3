@@ -4265,33 +4265,6 @@ __webpack_require__.r(__webpack_exports__);
       quoteReady: false
     };
   },
-  filters: {
-    formatAmount: function formatAmount(a) {
-      var n = a + "";
-      n = n.replace(/\$/g, "");
-      n = n.replace(/,/g, "");
-      n = n.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // debugger;
-
-      return "$" + n;
-    },
-    formatMoney: function formatMoney(amount) {
-      var decimalCount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-      var decimal = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".";
-      var thousands = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : ",";
-      var symbol = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "$";
-
-      try {
-        decimalCount = Math.abs(decimalCount);
-        decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
-        var negativeSign = amount < 0 ? "-" : "";
-        var i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
-        var j = i.length > 3 ? i.length % 3 : 0;
-        return symbol + negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
-      } catch (e) {
-        console.log(e);
-      }
-    }
-  },
   methods: {
     onFieldChange: function onFieldChange(field) {
       this.$emit('fieldChange', field);
@@ -43726,7 +43699,9 @@ var render = function() {
                           [
                             _vm._v(
                               "\n                            Insurance Needed: " +
-                                _vm._s(_vm._f("formatMoney")(_vm.totalNeeded)) +
+                                _vm._s(
+                                  _vm._f("formatAmount")(_vm.totalNeeded)
+                                ) +
                                 "\n                        "
                             )
                           ]
@@ -43909,7 +43884,7 @@ var render = function() {
                               attrs: {
                                 header:
                                   "Income Replacement Insurance Needed (Part I)",
-                                value: _vm._f("formatMoney")(_vm.totalPart1),
+                                value: _vm._f("formatAmount")(_vm.totalPart1),
                                 readonly: true
                               }
                             }),
@@ -43917,7 +43892,7 @@ var render = function() {
                             _c("amount-field", {
                               attrs: {
                                 header: "Total Additional Expenses (Part II)",
-                                value: _vm._f("formatMoney")(_vm.totalPart2),
+                                value: _vm._f("formatAmount")(_vm.totalPart2),
                                 readonly: true
                               }
                             }),
@@ -43925,7 +43900,7 @@ var render = function() {
                             _c("amount-field", {
                               attrs: {
                                 header: "Total Insurance Needed",
-                                value: _vm._f("formatMoney")(_vm.totalNeeded),
+                                value: _vm._f("formatAmount")(_vm.totalNeeded),
                                 readonly: true
                               }
                             }),
