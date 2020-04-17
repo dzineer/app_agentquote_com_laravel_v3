@@ -3258,6 +3258,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     // wait until this component is rendered and loaded
+    return;
     this.$nextTick(function () {
       var id = this.name;
       var yOffset = -2;

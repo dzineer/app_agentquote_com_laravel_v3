@@ -42,6 +42,7 @@ export default {
     },
     mounted() {
         // wait until this component is rendered and loaded
+        return;
         this.$nextTick(function() {
             const id = this.name;
             const yOffset = -2;
