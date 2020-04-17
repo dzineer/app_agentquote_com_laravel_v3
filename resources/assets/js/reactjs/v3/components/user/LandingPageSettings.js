@@ -604,8 +604,8 @@ class LandingPageSettings extends Component {
 
         debugger;
 
-        this.displayLogo = typeof this.state.profile.logo !== 'undefined' && this.state.profile.logo !== null ? this.state.profile.logo : '/storage/landing-pages/defaults/no-logo.png';
-        this.displayPortrait = typeof this.state.profile.portrait !== 'undefined' && this.state.profile.portrait !== null ? this.state.profile.portrait : '/storage/landing-pages/defaults/no-portrait.png';
+        this.displayLogo = typeof this.state.profile.logo != 'undefined' && this.state.profile.logo != null ? this.state.profile.logo : '/storage/landing-pages/defaults/no-logo.png';
+        this.displayPortrait = typeof this.state.profile.portrait != 'undefined' && this.state.profile.portrait != null ? this.state.profile.portrait : '/storage/landing-pages/defaults/no-portrait.png';
 
         return (
 
