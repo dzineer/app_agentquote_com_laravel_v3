@@ -198,9 +198,11 @@ class ProfileController extends BackendController
 		    'portrait' => 'max:300'
 	    ]);
 
+	    $updated = false;
+
 	    $user = Auth::user();
 
-	    $profile = Profile::where("user_id", "=", $user->id);
+	    $profile = [];
 
 	 //   echo print_r($profile, true);
 	 //   exit;
@@ -215,9 +217,9 @@ class ProfileController extends BackendController
 		    if ($ext == "txt") {
 			    $md5Name = md5_file($request->file('logo')->getRealPath());
 			    $ext = 'svg';
-			    $profile->logo = $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+                $profile['logo'] = $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
 		    } else {
-			    $profile->logo = $request->file('logo')->store('landing-pages/logos', 'public');
+                $profile['logo'] = $request->file('logo')->store('landing-pages/logos', 'public');
 		    }
 	    }
 
@@ -227,50 +229,69 @@ class ProfileController extends BackendController
 		    if ($ext == "txt") {
 			    $md5Name = md5_file($request->file('portrait')->getRealPath());
 			    $ext = 'svg';
-			    $profile->portrait = $request->file('portrait')->storeAs('landing-pages/portraits', $md5Name.'.'.$ext  ,'public');
+                $profile['portrait'] = $request->file('portrait')->storeAs('landing-pages/portraits', $md5Name.'.'.$ext  ,'public');
 		    } else {
-			    $profile->portrait = $request->file('portrait')->store('landing-pages/portraits', 'public');
+                $profile['portrait'] = $request->file('portrait')->store('landing-pages/portraits', 'public');
 		    }
 	    }
 
-	    if ($request->has('company')) {
-	    	$profile->company = $request->input('company');
+	    $profile = new Profile();
+
+	    $fields = [];
+
+	    foreach($profile->getFields() as $field) {
+	        if ($request->has($field)) {
+	            $fields[ $field ] = $request->input($field);
+                $updated = true;
+            }
+        }
+
+	    /*if ($request->has('company')) {
+            $profile['company'] = $request->input('company');
 	    }
 
 	    if ($request->has('position_title')) {
 	    	$profile->position_title = $request->input('position_title');
+            $updated = true;
 	    }
 
 	    if ($request->has('contact_email')) {
 	    	$profile->contact_email = $request->input('contact_email');
+            $updated = true;
 	    }
 
 	    if ($request->has('contact_phone')) {
 	    	$profile->contact_phone = $request->input('contact_phone');
+            $updated = true;
 	    }
 
 	    if ($request->has('contact_addr1')) {
 	    	$profile->contact_addr1 = $request->input('contact_addr1');
+            $updated = true;
 	    }
 
 	    if ($request->has('contact_addr2')) {
 	    	$profile->contact_addr2 = $request->input('contact_addr2');
+            $updated = true;
 	    }
 
 	    if ($request->has('contact_city')) {
 	    	$profile->contact_city = $request->input('contact_city');
+            $updated = true;
 	    }
 
 	    if ($request->has('contact_state')) {
 	    	$profile->contact_state = $request->input('contact_state');
+            $updated = true;
 	    }
 
 	    if ($request->has('contact_zipcode')) {
 	    	$profile->contact_zip = $request->input('contact_zipcode');
-	    }
+            $updated = true;
+	    }*/
 
-	    if($profile->isDirty()) {
-		    $profile->save();
+	    if ($updated) {
+            Profile::where("user_id", "=", $user->id)->update($fields);
 	    }
 
 	    return response()->json(["success" => true, "message" => 'Profile updated.', "profile" => $profile]);

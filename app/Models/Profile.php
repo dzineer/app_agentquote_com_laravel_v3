@@ -56,4 +56,8 @@ class Profile extends Eloquent
 		'instagram_link',
 		'calendly_link'
 	];
+
+	public function getFields() {
+	    return $this->fillable;
+    }
 }
