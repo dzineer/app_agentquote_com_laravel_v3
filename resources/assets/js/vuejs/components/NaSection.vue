@@ -22,7 +22,6 @@
 
 <script>
 
-import Fields from './Fields';
 import AmountField from './AmountField';
 import PercentageField from './PercentageField';
 import YearField from './YearField';

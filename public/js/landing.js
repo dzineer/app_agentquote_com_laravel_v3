@@ -3212,13 +3212,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Fields__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Fields */ "./resources/assets/js/vuejs/components/Fields.vue");
-/* harmony import */ var _AmountField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AmountField */ "./resources/assets/js/vuejs/components/AmountField.vue");
-/* harmony import */ var _PercentageField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PercentageField */ "./resources/assets/js/vuejs/components/PercentageField.vue");
-/* harmony import */ var _YearField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./YearField */ "./resources/assets/js/vuejs/components/YearField.vue");
-/* harmony import */ var _CollegeField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CollegeField */ "./resources/assets/js/vuejs/components/CollegeField.vue");
-/* harmony import */ var _Field__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Field */ "./resources/assets/js/vuejs/components/Field.vue");
-/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Icon */ "./resources/assets/js/vuejs/components/Icon.vue");
+/* harmony import */ var _AmountField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AmountField */ "./resources/assets/js/vuejs/components/AmountField.vue");
+/* harmony import */ var _PercentageField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PercentageField */ "./resources/assets/js/vuejs/components/PercentageField.vue");
+/* harmony import */ var _YearField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./YearField */ "./resources/assets/js/vuejs/components/YearField.vue");
+/* harmony import */ var _CollegeField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CollegeField */ "./resources/assets/js/vuejs/components/CollegeField.vue");
+/* harmony import */ var _Field__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Field */ "./resources/assets/js/vuejs/components/Field.vue");
+/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Icon */ "./resources/assets/js/vuejs/components/Icon.vue");
 //
 //
 //
@@ -3241,7 +3240,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
 
 
 
@@ -3251,12 +3249,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['name', 'title', 'show', 'icon', 'fields'],
   components: {
-    Icon: _Icon__WEBPACK_IMPORTED_MODULE_6__["default"],
-    AmountField: _AmountField__WEBPACK_IMPORTED_MODULE_1__["default"],
-    YearField: _YearField__WEBPACK_IMPORTED_MODULE_3__["default"],
-    PercentageField: _PercentageField__WEBPACK_IMPORTED_MODULE_2__["default"],
-    CollegeField: _CollegeField__WEBPACK_IMPORTED_MODULE_4__["default"],
-    Field: _Field__WEBPACK_IMPORTED_MODULE_5__["default"]
+    Icon: _Icon__WEBPACK_IMPORTED_MODULE_5__["default"],
+    AmountField: _AmountField__WEBPACK_IMPORTED_MODULE_0__["default"],
+    YearField: _YearField__WEBPACK_IMPORTED_MODULE_2__["default"],
+    PercentageField: _PercentageField__WEBPACK_IMPORTED_MODULE_1__["default"],
+    CollegeField: _CollegeField__WEBPACK_IMPORTED_MODULE_3__["default"],
+    Field: _Field__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   mounted: function mounted() {
     // wait until this component is rendered and loaded
@@ -4367,6 +4365,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NaTotal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NaTotal */ "./resources/assets/js/vuejs/components/NaTotal.vue");
 /* harmony import */ var _Fields__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Fields */ "./resources/assets/js/vuejs/components/Fields.vue");
 /* harmony import */ var _Field__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Field */ "./resources/assets/js/vuejs/components/Field.vue");
+//
+//
 //
 //
 //
@@ -44790,37 +44790,6 @@ var render = function() {
                   }
                 }
               }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.show,
-                      expression: "show"
-                    }
-                  ],
-                  staticClass: "fields tw-pb-3 tw-px-2 tw-bla"
-                },
-                _vm._l(_vm.fields, function(field, index) {
-                  return _c(field.component, {
-                    key: index,
-                    tag: "div",
-                    class: field.classes,
-                    attrs: {
-                      header: field.text,
-                      name: field.name,
-                      value: field.value,
-                      placeholder: field.placeholder,
-                      readonly: field.readonly
-                    },
-                    on: { fieldChange: _vm.onFieldChange }
-                  })
-                }),
-                1
-              ),
               _vm._v(" "),
               _c("na-total", {
                 attrs: {
