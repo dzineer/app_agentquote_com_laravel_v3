@@ -48,7 +48,7 @@ class LandingPageController extends BackendController
         ];
 
         if ($_SERVER['REMOTE_ADDR'] === '171.4.220.71') {
-            dd($data);
+        //    dd($data);
         }
 
 
