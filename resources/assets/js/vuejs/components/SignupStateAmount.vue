@@ -19,7 +19,7 @@
 								<div class="tw-flex tw-justify-center tw-items-center">
 									<div @click="decreaseAmount" class="tw-cursor-pointer tw-flex tw-justify-center tw-items-center tw-border-3 tw-border-primary tw-w-10 tw-h-10 tw-rounded-full tw-text-3xl tw-text-primary">-</div>
 									<div class="tw-text-3xl tw-px-16" @click="updatingRequestedValue = !updatingRequestedValue" v-if="!updatingRequestedValue">
-										{{ requestedValue | formatMoney }}
+										${{ requestedValue | formatAmount }}
 									</div>
 									<input type="text" :value="requestedValue" ref="amountField" v-if="updatingRequestedValue" class="tw-border-b-3 tw-border-primary tw-rounded-none tw-shadow tw-appearance-none tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-shadow-outline tw-text-center tw-text-3xl" @blur="updatingRequestedValue = !updatingRequestedValue" @keyup="e => updateAmount(e.currentTarget.value)">
 									<div @click="increaseAmount" class="tw-cursor-pointer tw-flex tw-justify-center tw-items-center tw-border-3 tw-border-primary tw-w-10 tw-h-10 tw-rounded-full tw-text-3xl tw-text-primary tw-my-3">+</div>

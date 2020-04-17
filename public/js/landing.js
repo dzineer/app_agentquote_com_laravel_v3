@@ -41265,9 +41265,9 @@ var render = function() {
                                       },
                                       [
                                         _vm._v(
-                                          "\n\t\t\t\t\t\t\t\t\t\t" +
+                                          "\n\t\t\t\t\t\t\t\t\t\t$" +
                                             _vm._s(
-                                              _vm._f("formatMoney")(
+                                              _vm._f("formatAmount")(
                                                 _vm.requestedValue
                                               )
                                             ) +
