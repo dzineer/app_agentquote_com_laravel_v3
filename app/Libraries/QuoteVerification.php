@@ -109,7 +109,7 @@ trait QuoteVerification {
 
         AQLog::networkResponse("::getResponse - message id: " . $id . "\n");
         $res = SMS::getMessage( $id );
-        $this->AQLog( "::getResponse - response: " . $res . "" );
+        AQLog::networkResponse( "::getResponse - response: " . $res . "" );
         return $res;
     }
 }
