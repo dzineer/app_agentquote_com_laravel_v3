@@ -16,7 +16,6 @@ class CleanReportsCommand extends Command
      */
     protected $signature = 'reports:generate {name} {--force= : Force the report true | false }';
 
-
     /**
      * The console command description.
      *
