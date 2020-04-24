@@ -107,9 +107,9 @@ trait QuoteVerification {
 
     protected function getResponse( $id ) {
 
-        AQLog::networkResponse("::getResponse - message id: " . $id . "\n");
+        AQLog::networkResponse("QuoteVerification::getResponse - message id: " . $id . "\n");
         $res = SMS::getMessage( $id );
-        AQLog::networkResponse( "::getResponse - response: " . json_encode($res) . "" );
+        AQLog::networkResponse( "QuoteVerification::getResponse - response: " . json_encode($res) . "" );
         return $res;
     }
 }
