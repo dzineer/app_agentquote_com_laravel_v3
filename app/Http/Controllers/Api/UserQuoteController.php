@@ -928,7 +928,7 @@ class UserQuoteController extends Controller
         $username = config( 'services.flowroute.access_key' );
         $password = config( 'services.flowroute.secret_key' );
 
-        $responseArr = $this->getSentSMSResponse( $responseData );
+        $responseArr = $this->getResponse( $responseData['id'] );
 
         AQLog::networkResponse("\nResponse Array: " . json_encode($responseArr) . "\n");
 
