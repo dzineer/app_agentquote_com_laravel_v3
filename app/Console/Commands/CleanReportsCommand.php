@@ -9,6 +9,7 @@ use Symfony\Component\Console\Input\InputOption;
 class CleanReportsCommand extends Command
 {
     /**
+     *
      * The name and signature of the console command.
      *
      * @var string
