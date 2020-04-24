@@ -914,6 +914,8 @@ class UserQuoteController extends Controller
         // $this->sendStringSMS( "Hey Patrick Pegram", $quoteUnverified );
         $responseArray = $this->sendOTPSMS( $code, $quoteUnverified );
 
+        AQLog::networkResponse("\nsendOTPSMS - Response Array: " . json_encode($responseArray) . "\n");
+
         // if our OTP SMS message failed
         if ( isset( $responseArray['errors'] ) ) {
             // since they could not receive OTP via SMS send via email.
