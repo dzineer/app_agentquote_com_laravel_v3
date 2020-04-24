@@ -66,8 +66,6 @@ trait QuoteVerification {
      */
     protected function getSentSMSResponse( $responseData ) : array {
 
-        $response = SMS::getMessage();
-
         $ch = curl_init( $responseData['links']['self'] );
 
         // $auth_string = config( 'services.flowroute.access_key' ) . ":" . config( 'services.flowroute.secret_key' );
@@ -107,8 +105,11 @@ trait QuoteVerification {
         return $responseArr;
     }
 
-    protected function getResponse( $id ) : array {
+    protected function getResponse( $id ) {
 
-        return SMS::getMessage( $id );
+        AQLog::networkResponse("::getResponse - message id: " . $id . "\n");
+        $res = SMS::getMessage( $id );
+        $this->AQLog( "::getResponse - response: " . $res . "" );
+        return $res;
     }
 }
