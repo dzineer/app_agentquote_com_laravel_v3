@@ -928,7 +928,12 @@ class UserQuoteController extends Controller
         $username = config( 'services.flowroute.access_key' );
         $password = config( 'services.flowroute.secret_key' );
 
-        $responseArr = $this->getResponse( $responseArray['data']['id'] );
+        if (isset($responseArray['data']['id'])) {
+            $responseArr = $this->getResponse($responseArray['data']['id']);
+        } else { // something went wrong
+            $this->notifyOTPViaEmailNotification( $quoteUnverified );
+            return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_GENERAL_ERROR, $quoteUnverified, $hash_token );
+        }
 
         AQLog::networkResponse("\nResponse Array: " . json_encode($responseArr) . "\n");
 
