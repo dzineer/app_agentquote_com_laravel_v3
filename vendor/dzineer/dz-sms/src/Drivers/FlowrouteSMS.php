@@ -185,7 +185,18 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
         //execute the POST request
         $response = curl_exec($ch);
 
-        AQLog::info(self::class . "::postRequest -  response : " . json_encode($response) );
+        AQLog::info(self::class . "::postRequest -  response : " .
+            json_encode([
+                "url" => $this->buildUrl(),
+                "payload" => $payload,
+                "auth" => implode(":", $this->getAuth()),
+                "header" => array(
+                    'Content-Type: application/vnd.api+json',
+                    'Accept: application/vnd.api+json'
+                ),
+                "response" => $response,
+            ])
+        );
 
 
 /*        $response = $this->client->post($this->buildUrl(), [
