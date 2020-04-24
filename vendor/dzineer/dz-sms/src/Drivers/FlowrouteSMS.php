@@ -160,7 +160,9 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
 
         $payload = json_encode($body);
 
-        \Illuminate\Support\Facades\Log::info( self::class . "::postRequest -  body : " . json_encode($body) );
+        AQLog::info(self::class . "::postRequest -  body : " . json_encode($body) );
+
+        // \Illuminate\Support\Facades\Log::info( self::class . "::postRequest -  body : " . json_encode($body) );
 
         $ch = curl_init(
             $this->buildUrl()
@@ -183,6 +185,8 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
         //execute the POST request
         $response = curl_exec($ch);
 
+        AQLog::info(self::class . "::postRequest -  response : " . json_encode($response) );
+
 
 /*        $response = $this->client->post($this->buildUrl(), [
             'Content-Type' => 'application/vnd.api+json',
@@ -191,7 +195,7 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
             'json' => $payload,
         ]);*/
 
-        AQLog::info( self::class . "::postRequest -  response : " . print_r($response,true) );
+        // AQLog::info( self::class . "::postRequest -  response : " . print_r($response,true) );
 
         $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
