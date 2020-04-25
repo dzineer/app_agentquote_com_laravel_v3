@@ -915,6 +915,9 @@ class UserQuoteController extends Controller
         try {
             // $this->sendStringSMS( "Hey Patrick Pegram", $quoteUnverified );
             // send code
+
+            $responseArr = [];
+
             $responseArray = $this->sendOTPSMS( $code, $quoteUnverified );
 
             AQLog::networkResponse("\nsendOTPSMS - Response Array: " . json_encode($responseArray) . "\n");
@@ -1034,6 +1037,7 @@ class UserQuoteController extends Controller
                 throw new FlowrouteErrorException(json_encode([
                     'status' => 'Throwing FlowrouteErrorException',
                     "Exception" => 'No data was returned from flowroute',
+                    "details" => print_r($responseArr, true)
                 ]));
 
             }
