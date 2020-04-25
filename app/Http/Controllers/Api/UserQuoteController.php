@@ -921,7 +921,7 @@ class UserQuoteController extends Controller
 
             // log results
 
-            QLog::info(print_r([
+            AQLog::info(print_r([
                 "response" => $responseArray,
             ], true));
 
