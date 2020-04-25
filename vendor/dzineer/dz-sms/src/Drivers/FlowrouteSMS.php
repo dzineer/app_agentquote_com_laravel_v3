@@ -12,6 +12,8 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
 {
     use MakesRequests;
 
+    const SUCCESSFUL = 202;
+
     /**
      * The Guzzle HTTP Client.
      *
@@ -218,8 +220,9 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
         //close cURL resource
         curl_close($ch);
 
-        if ($statusCode != 202 && $statusCode != 201 && $statusCode != 200) {
-           return $response;
+        if ($statusCode != self::SUCCESSFUL && $statusCode != 201 && $statusCode != 200) {
+            $this->SMSNotSentException('Unable to request from API.');
+           // return $response;
         }
 
         /*

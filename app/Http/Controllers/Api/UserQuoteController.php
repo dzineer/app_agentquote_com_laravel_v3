@@ -37,7 +37,8 @@ use App\Models\QuoteUnverified;
 use Illuminate\Support\Facades\Log;
 use Dzineer\SMS\Facades\SMS;
 use App\Libraries\SMSErrorDispatch;
-use \App\Libraries\Utilities\AQLogger;
+use App\Libraries\Utilities\AQLogger;
+use App\Exceptions\FlowrouteErrorException;
 
 class UserQuoteController extends Controller
 {
@@ -911,65 +912,145 @@ class UserQuoteController extends Controller
         string $hash_token
     ): \Illuminate\Http\JsonResponse {
 
-        // $this->sendStringSMS( "Hey Patrick Pegram", $quoteUnverified );
-        $responseArray = $this->sendOTPSMS( $code, $quoteUnverified );
+        try {
+            // $this->sendStringSMS( "Hey Patrick Pegram", $quoteUnverified );
+            // send code
+            $responseArray = $this->sendOTPSMS( $code, $quoteUnverified );
 
-        AQLog::networkResponse("\nsendOTPSMS - Response Array: " . json_encode($responseArray) . "\n");
+            AQLog::networkResponse("\nsendOTPSMS - Response Array: " . json_encode($responseArray) . "\n");
 
-        // if our OTP SMS message failed
-        if ( isset( $responseArray['errors'] ) ) {
+            // log results
+
+            print_r([
+                "response" => $responseArray,
+            ], true);
+
+            // did we get data and an id ?
+
+            if (isset($responseArr['data']) && isset($responseArr['data']['id'])) {
+
+                try {
+
+                    //
+                    $id = $responseArr['data']['id'];
+
+                    $responseArray = $this->getResponse( $id );
+
+                    print_r([
+                        "status" => "after getResponse call",
+                        "response" => $responseArray,
+                    ], true);
+
+                    // if our OTP SMS message failed
+                    if ( isset( $responseArray['errors'] ) ) {
+
+                        throw new FlowrouteErrorException(json_encode([
+                            'status' => 'Throwing FlowrouteErrorException',
+                            'errors' => $responseArray['errors']
+                        ]));
+
+                    }
+
+                    $responseData = $responseArray["data"];
+                    $username = config( 'services.flowroute.access_key' );
+                    $password = config( 'services.flowroute.secret_key' );
+
+                    if (isset($responseArray['data']['id'])) {
+                        $responseArr = $this->getResponse($responseArray['data']['id']);
+                    } else { // something went wrong
+
+                        throw new FlowrouteErrorException(json_encode([
+                            'status' => 'Throwing FlowrouteErrorException',
+                            'errors' => 'no id returned form flowroute'
+                        ]));
+
+                    }
+
+                    AQLog::networkResponse("\nResponse Array: " . json_encode($responseArr) . "\n");
+
+                    \Illuminate\Support\Facades\Log::info( self::class . "::gen_verify -  link : " . $responseData['links']['self'] );
+
+                    // if our SMS failed to arrive to phone for any reason
+                    if ( isset( $responseArr['errors'] ) ) {
+
+                        throw new FlowrouteErrorException(json_encode([
+                            'status' => 'Throwing FlowrouteErrorException',
+                            'errors' => $responseArray['errors']
+                        ]));
+
+                    }
+
+                    // $receipts = $responseArr['data']['attributes']['status'];
+                    $attributes = $responseArr['data']['attributes'];
+                    $this->AQLog( ":: - attributes: " . json_encode( $attributes ) . "" );
+                    $receipts = $attributes['delivery_receipts'];
+
+                    AQLog::networkResponse("\nReceipts: " . json_encode($receipts) . "\n");
+
+                    $this->AQLog( ":: - receipts: " . json_encode( $receipts ) . "" );
+
+                    // Was our SMS Message accepts by carrier?
+                    if ( !count($receipts) || $receipts[0]['status_code_description'] !== "Message accepted by Carrier" ) {
+                        $this->AQLog( ":: - status_code or status failure: " . json_encode( $responseData ) . "" );
+
+                        throw new FlowrouteErrorException(json_encode([
+                            'status' => 'Throwing FlowrouteErrorException',
+                            'errors' => 'Message not accepted by carrier'
+                        ]));
+
+
+                    } else {
+
+                        $resp = [
+                            "success" => true,
+                            "token"   => $hash_token,
+                            "message" => "",
+                            //    "results" => $results
+                        ];
+                        $this->AQLog( ":: - status successful: " . json_encode( $resp ) . "" );
+
+                        return response()->json( $resp );
+                    }
+
+                }
+                catch (\GuzzleHttp\Exception\ClientException $e) {
+
+                    print_r([
+                        "status" => "\GuzzleHttp\Exception\ClientException",
+                        "Exception" => $e->getMessage(),
+                    ], true);
+
+                    throw new FlowrouteErrorException(json_encode([
+                        'status' => 'Throwing FlowrouteErrorException',
+                        "Exception" => $e->getMessage(),
+                    ]));
+
+                }
+
+            } else {
+
+                throw new FlowrouteErrorException(json_encode([
+                    'status' => 'Throwing FlowrouteErrorException',
+                    "Exception" => 'No data was returned from flowroute',
+                ]));
+
+            }
+
+        }
+        catch (FlowrouteErrorException $fre) {
+
+            print_r([
+                "status" => "\App\Exception\FlowrouteErrorException",
+                "Exception" => $fre->getMessage(),
+            ], true);
+
             // since they could not receive OTP via SMS send via email.
             $this->notifyOTPViaEmailNotification( $quoteUnverified );
             // handle our error response
             return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_DELIVERY_FAILURE, $quoteUnverified, $hash_token );
+
         }
 
-        $responseData = $responseArray["data"];
-        $username = config( 'services.flowroute.access_key' );
-        $password = config( 'services.flowroute.secret_key' );
-
-        if (isset($responseArray['data']['id'])) {
-            $responseArr = $this->getResponse($responseArray['data']['id']);
-        } else { // something went wrong
-            $this->notifyOTPViaEmailNotification( $quoteUnverified );
-            return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_GENERAL_ERROR, $quoteUnverified, $hash_token );
-        }
-
-        AQLog::networkResponse("\nResponse Array: " . json_encode($responseArr) . "\n");
-
-        \Illuminate\Support\Facades\Log::info( self::class . "::gen_verify -  link : " . $responseData['links']['self'] );
-
-        // if our SMS failed to arrive to phone for any reason
-        if ( isset( $responseArr['errors'] ) ) {
-            $this->notifyOTPViaEmailNotification( $quoteUnverified );
-            return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_GENERAL_ERROR, $quoteUnverified, $hash_token );
-        }
-
-        // $receipts = $responseArr['data']['attributes']['status'];
-        $attributes = $responseArr['data']['attributes'];
-        $this->AQLog( ":: - attributes: " . json_encode( $attributes ) . "" );
-        $receipts = $attributes['delivery_receipts'];
-
-        AQLog::networkResponse("\nReceipts: " . json_encode($receipts) . "\n");
-
-        $this->AQLog( ":: - receipts: " . json_encode( $receipts ) . "" );
-
-        // Was our SMS Message accepts by carrier?
-        if ( !count($receipts) || $receipts[0]['status_code_description'] !== "Message accepted by Carrier" ) {
-            $this->AQLog( ":: - status_code or status failure: " . json_encode( $responseData ) . "" );
-            $this->notifyOTPViaEmailNotification( $quoteUnverified );
-            return SMSErrorDispatch::dispatch(SMSErrorDispatch::SMS_REJECTED_BY_CARRIER, $quoteUnverified, $hash_token );
-        } else {
-            $resp = [
-                "success" => true,
-                "token"   => $hash_token,
-                "message" => "",
-                //    "results" => $results
-            ];
-            $this->AQLog( ":: - status successful: " . json_encode( $resp ) . "" );
-
-            return response()->json( $resp );
-        }
 
         // $this->Log( "::onAction - link check response: " . $response . "" );
     }

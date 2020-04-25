@@ -28,9 +28,7 @@ trait QuoteVerification {
 
         // var_dump((array)$response);
 
-        $responseArray = json_decode( $response, true );
-
-        return $responseArray;
+        return json_decode( $response, true );
     }
 
     /**
@@ -54,9 +52,7 @@ trait QuoteVerification {
 
         // var_dump((array)$response);
 
-        $responseArray = json_decode( $response, true );
-
-        return $responseArray;
+        return json_decode( $response, true );
     }
 
     /**
