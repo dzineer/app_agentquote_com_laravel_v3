@@ -1009,16 +1009,18 @@ class UserQuoteController extends Controller
                         ];
                         $this->AQLog( ":: - status successful: " . json_encode( $resp ) . "" );
 
+                        AQLog::info(print_r($resp, true));
+
                         return response()->json( $resp );
                     }
 
                 }
                 catch (\GuzzleHttp\Exception\ClientException $e) {
 
-                    print_r([
+                    AQLog::info(print_r([
                         "status" => "\GuzzleHttp\Exception\ClientException",
                         "Exception" => $e->getMessage(),
-                    ], true);
+                    ], true));
 
                     throw new FlowrouteErrorException(json_encode([
                         'status' => 'Throwing FlowrouteErrorException',
