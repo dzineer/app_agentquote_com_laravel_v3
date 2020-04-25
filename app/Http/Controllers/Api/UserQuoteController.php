@@ -921,9 +921,9 @@ class UserQuoteController extends Controller
 
             // log results
 
-            print_r([
+            QLog::info(print_r([
                 "response" => $responseArray,
-            ], true);
+            ], true));
 
             // did we get data and an id ?
 
@@ -936,10 +936,10 @@ class UserQuoteController extends Controller
 
                     $responseArray = $this->getResponse( $id );
 
-                    print_r([
+                    AQLog::info(print_r([
                         "status" => "after getResponse call",
                         "response" => $responseArray,
-                    ], true);
+                    ], true));
 
                     // if our OTP SMS message failed
                     if ( isset( $responseArray['errors'] ) ) {
@@ -1039,10 +1039,10 @@ class UserQuoteController extends Controller
         }
         catch (FlowrouteErrorException $fre) {
 
-            print_r([
+            AQLog::info(print_r([
                 "status" => "\App\Exception\FlowrouteErrorException",
                 "Exception" => $fre->getMessage(),
-            ], true);
+            ], true));
 
             // since they could not receive OTP via SMS send via email.
             $this->notifyOTPViaEmailNotification( $quoteUnverified );
