@@ -5997,7 +5997,7 @@ __webpack_require__.r(__webpack_exports__);
         lname: '',
         email: '',
         gender: '',
-        tobacco: 'N',
+        tobacco: '',
         term: '10',
         premium: 1,
         birthdate: {
