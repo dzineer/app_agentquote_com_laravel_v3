@@ -110,6 +110,13 @@
             this.category = this.insuranceCategory === '' ? 'termlife' : this.insuranceCategory;
             this.quoteResultsTitle = this.getQuoteResultsTitle();
             this.printMode.show = false;
+            // script to scroll up
+
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
 
         },
         methods: {
