@@ -151,7 +151,7 @@ export default {
         isNumeric(n) {
             return !isNaN(parseFloat(n)) && isFinite(n);
         },
-        showVerifcationField() {
+        showVerificationField() {
             this.showPhoneField = false;
             this.verification.showVerificationByPhone = false;
             this.verification.showVerificationByEmail = false;
@@ -313,13 +313,13 @@ export default {
             // when we get a token value change that means that we have a quote request token now.
             // display verification code form
             this.status = 'Enter the 5-digit code.';
-            this.showVerifcationField();
+            this.showVerificationField();
         },
         sendverificationby(value) {
             if(this.sendverificationby === 'email') {
                // this.phoneVerificationFailed = true;
                // this.status = 'Enter the 5-digit code sent to your email address:';
-               this.showVerifcationField();
+               this.showVerificationField();
             }
         }
     }

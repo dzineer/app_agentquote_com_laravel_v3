@@ -934,7 +934,6 @@ class UserQuoteController extends Controller
 
                 try {
 
-                    //
                     $id = $responseArr['data']['id'];
 
                     $responseArray = $this->getResponse( $id );

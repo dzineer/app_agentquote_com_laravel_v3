@@ -106,8 +106,8 @@ export default {
                 lname: '',
                 email: '',
                 gender: '',
-                tobacco: '',
-                term: '',
+                tobacco: 'N',
+                term: '10',
                 premium: 1,
                 birthdate: {
                     type: '',
