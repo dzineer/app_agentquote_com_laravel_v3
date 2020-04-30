@@ -361,9 +361,17 @@ class PhoneValidationModule extends CustomModule {
                 Log::info( "\nPhoneValidation::onAction - verification_code (error) : " . json_encode($error) );
 
                 // User::find()
-                $user = User::find($verifiedQuote['user_id']);
+
 
                 $quote = unserialize($verifiedQuote["data"]);
+
+                $user = User::find($quote['user_id']);
+
+                AQLog::info(print_r([
+                    "Method" => "PhoneValidationModule::onAction",
+                    "\$user" => $user,
+                    "\$quote['user_id']" => $quote['user_id'],
+                ],true));
 
                 $this->sendNewQuoteLeadNotification( $user, $quote );
 
