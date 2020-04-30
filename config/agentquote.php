@@ -223,6 +223,11 @@ return [
                             'url'  => 'profile/settings',
                             'icon' => 'map-marker',
                         ],
+                        [
+                            'text' => 'Language Settings',
+                            'url'  => 'profile/language/settings',
+                            'icon' => 'language',
+                        ],
 
                     ]
                 ],
@@ -252,11 +257,6 @@ return [
                     ]
                 ],
 
-                [
-                    'text' => 'Language Settings',
-                    'url'  => 'profile/language/settings',
-                    'icon' => 'language',
-                ],
 
                 'PRODUCTS',
                 [
