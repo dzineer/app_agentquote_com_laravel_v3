@@ -185,6 +185,11 @@ return [
                     'icon' => 'dashboard'
                 ],
                 [
+                    'text' => 'Support',
+                    'url' => '/support',
+                    'icon' => 'life-ring'
+                ],
+                [
                     'text' => 'Messages',
                     'url' => 'messages',
                     'icon' => 'envelope'

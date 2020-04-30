@@ -187,8 +187,6 @@ class FlowrouteSMS extends AbstractSMS implements DriverInterface
         //execute the POST request
         $response = curl_exec($ch);
 
-
-
 /*        $response = $this->client->post($this->buildUrl(), [
             'Content-Type' => 'application/vnd.api+json',
             'Accept' => 'application/vnd.api+json',
