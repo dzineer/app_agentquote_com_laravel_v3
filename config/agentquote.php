@@ -210,17 +210,23 @@ return [
                     'text' => 'General',
                     'url'  => 'account/settings',
                     'icon' => 'cog',
+
+                    'submenu' => [
+
+                        [
+                            'text' => 'Password',
+                            'url'  => 'account/security',
+                            'icon' => 'key',
+                        ],
+                        [
+                            'text' => 'Default State',
+                            'url'  => 'profile/settings',
+                            'icon' => 'map-marker',
+                        ],
+
+                    ]
                 ],
-                [
-                    'text' => 'Password',
-                    'url'  => 'account/security',
-                    'icon' => 'key',
-                ],
-                [
-                    'text' => 'Default State',
-                    'url'  => 'profile/settings',
-                    'icon' => 'map-marker',
-                ],
+
 
                 [
                     'text' => 'Companies',
