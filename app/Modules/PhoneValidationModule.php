@@ -182,11 +182,19 @@ class PhoneValidationModule extends CustomModule {
      * @param $user
      * @param $quoteUnverified
      */
-    private function sendNewQuoteLeadNotification( $user, $quoteUnverified ): void
+        private function sendNewQuoteLeadNotification( $user, $quoteUnverified ): void
     {
         // $action = new NewQuoteAction('New Quote Action', 'notification_action');
         // $notification = new NewQuoteGeneratedNotification('New Quote', 'You have received a new quote.', '/notification-icon', $action);
         // Notification::send(User::all(), $notification);
+
+        AQLog::info(print_r([
+            "Method" => "PhoneValidationModule::sendNewQuoteLeadNotification",
+            "\$user->email" => $user->email,
+            "\$user->name" => $user->name,
+            "\$user" => $user,
+            "\$quoteUnverified" => $quoteUnverified,
+        ],true));
 
         \Mail::to($user->email, $user->name)->send(new ViewQuoteLeadEmail(
             new ViewQuotedLeadContract($user, $quoteUnverified)
