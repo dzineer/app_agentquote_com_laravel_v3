@@ -240,6 +240,10 @@ class LandingPageController extends BackendController
 
         $ext = '';
 
+        AQLog::images([
+            "request" => $request->all()
+        ]);
+
         $profile = Profile::where([
             "user_id" => $user->id
         ])->first();
