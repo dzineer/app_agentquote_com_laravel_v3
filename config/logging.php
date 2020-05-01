@@ -83,6 +83,12 @@ return [
             'level' => 'info',
         ],
 
+        'agentquoteImagesLog' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/agentquote-images.log'),
+            'level' => 'info',
+        ],
+
         'agentquoteNetworkLog' => [
             'driver' => 'single',
             'path' => storage_path('logs/agentquote-network.log'),

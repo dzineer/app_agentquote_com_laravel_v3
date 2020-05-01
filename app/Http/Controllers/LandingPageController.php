@@ -246,7 +246,7 @@ class LandingPageController extends BackendController
 
         // save logo to store/public/landing-pages/logos and filename to profile
 
-        AQLog::info([
+        AQLog::images([
             "hasFile" => $request->hasFile('logo'),
             "logo" => $request->input('logo')
         ]);
@@ -254,7 +254,7 @@ class LandingPageController extends BackendController
         if (! $request->hasFile('logo') && $request->has('logo') && $request->input('logo') === 'null') {
             $fieldsToUpdate["logo"] = null;
             $profileUpdated = true;
-            AQLog::info([
+            AQLog::images([
                 "description" => "Logo to be erased",
                 "hasFile" => $request->hasFile('logo'),
                 "logo" => $request->has('logo'),
@@ -265,6 +265,11 @@ class LandingPageController extends BackendController
         else if ($request->hasFile('logo')) {
 
             $ext = $request->file('logo')->guessExtension();
+
+            AQLog::images([
+                "hasFile" => $request->hasFile('portrait'),
+                "portrait" => $request->input('portrait')
+            ]);
 
             list ($imageWidth, $imageHeight) = getimagesize($_FILES['logo']['tmp_name']);
 
@@ -297,7 +302,7 @@ class LandingPageController extends BackendController
 
         }
 
-        AQLog::info([
+        AQLog::images([
             "hasFile" => $request->hasFile('portrait'),
             "portrait" => $request->input('portrait')
         ]);

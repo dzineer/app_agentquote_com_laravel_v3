@@ -18,6 +18,10 @@ class AQLogger {
         Log::channel('agentquoteNetworkLog')->info($s);
     }
 
+    public function images($s) {
+        Log::channel('agentquoteImagesLog')->info($s);
+    }
+
     public function networkResponse($s) {
         Log::channel('agentquoteNetworkResponseLog')->info("\nNETWORK RESPONSE\n$s\n");
     }
