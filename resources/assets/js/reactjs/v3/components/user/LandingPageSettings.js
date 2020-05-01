@@ -303,14 +303,14 @@ class LandingPageSettings extends Component {
             portrait: {
                 for: {
                     image: {
-                        width: "168px", maxWidth: '100%'
+                        width: "100px", maxWidth: '100px'
                     }
                 }
             },
             logo: {
                 for: {
                     image: {
-                        width: "168px", maxWidth: '100%'
+                        width: "100px", maxWidth: '300px'
                     }
                 }
             }
@@ -785,13 +785,13 @@ class LandingPageSettings extends Component {
 
                                 <div className="col-md-4 p-y-4">
 
-                                    <LogoFieldWithImage name="logo" error="" label="Logo" dimensions={{height: '100px', width: '200px'}} onChange={this.onFileAddedHandler} style={this.style} path={ this.displayLogo } onRemoveImage={ this.onRemoveLogo } using={ this.state.profile.logo !== null } note="Image should be no more than 100 pixels high and 200 pixels wide." />
+                                    <LogoFieldWithImage name="logo" error="" label="Logo" dimensions={{height: '100px', width: '300px'}} onChange={this.onFileAddedHandler} style={this.style} path={ this.displayLogo } onRemoveImage={ this.onRemoveLogo } using={ this.state.profile.logo !== null } note="Image should be no more than 100 pixels high and 300 pixels wide." />
 
                                 </div>
 
                                 <div className="col-md-4 p-y-4">
 
-                                    <LogoFieldWithImage name="portrait" error="" label="Portrait" dimensions={{height: '100px', width: '100px'}} onChange={this.onFileAddedHandler} style={this.style} path={ this.displayPortrait } onRemoveImage={ this.onRemovePortrait } using={ this.state.profile.portrait !== null } note="Image should be no more than 100 pixels high and 200 pixels wide." />
+                                    <LogoFieldWithImage name="portrait" error="" label="Portrait" dimensions={{height: '100px', width: '100px'}} onChange={this.onFileAddedHandler} style={this.style} path={ this.displayPortrait } onRemoveImage={ this.onRemovePortrait } using={ this.state.profile.portrait !== null } note="Image should be no more than 100 pixels high and 100 pixels wide." />
 
                                 </div>
 
