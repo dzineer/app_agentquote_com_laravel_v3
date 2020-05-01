@@ -252,7 +252,7 @@ class LandingPageController extends BackendController
 
         AQLog::images([
             "hasFile" => $request->hasFile('logo'),
-            "logo" => $request->input('logo')
+            "logo" => $request->file('logo')
         ]);
 
         if (! $request->hasFile('logo') && $request->has('logo') && $request->input('logo') === 'null') {
