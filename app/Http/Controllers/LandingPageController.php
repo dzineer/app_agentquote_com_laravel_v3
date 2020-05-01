@@ -286,9 +286,17 @@ class LandingPageController extends BackendController
 
             $md5Name = md5_file($request->file('logo')->getRealPath());
 
-            $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
-            $fieldsToUpdate["portrait"] = null;
-            $profileUpdated = true;
+            if ($ext == "txt") {
+                $md5Name = md5_file($request->file('logo')->getRealPath());
+                $ext = 'svg';
+                $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+                $fieldsToUpdate["portrait"] = null;
+                $profileUpdated = true;
+            } else {
+                $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+                $fieldsToUpdate["portrait"] = null;
+                $profileUpdated = true;
+            }
 
             AQLog::images($fieldsToUpdate);
 
