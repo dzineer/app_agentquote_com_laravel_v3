@@ -297,6 +297,10 @@ class LandingPageController extends BackendController
 
         }
 
+        AQLog::info([
+            "hasFile" => $request->hasFile('portrait'),
+            "logo" => $request->input('portrait')
+        ]);
 
         if (! $request->hasFile('portrait') && $request->has('portrait') && $request->input('portrait')  === 'null') {
             $fieldsToUpdate["portrait"] = null;
