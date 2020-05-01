@@ -270,18 +270,29 @@ class LandingPageController extends BackendController
 
             $ext = $request->file('logo')->guessExtension();
 
-            AQLog::images([
-                "hasFile" => $request->hasFile('portrait'),
-                "portrait" => $request->input('portrait')
-            ]);
-
             list ($imageWidth, $imageHeight) = getimagesize($_FILES['logo']['tmp_name']);
 
             if ($imageWidth > self::LOGO_MAX_WIDTH || $imageHeight > self::LOGO_MAX_HEIGHT) {
+
+                AQLog::images(["success" => false, "message" => 'Incorrect logo dimensions.']);
+
                 return response()->json(["success" => false, "message" => 'Incorrect logo dimensions.']);
             }
 
-            switch( $ext) {
+            AQLog::images([
+                "hasFile" => $request->hasFile('portrait'),
+                "portrait" => $request->file('portrait')
+            ]);
+
+            $md5Name = md5_file($request->file('logo')->getRealPath());
+
+            $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+            $fieldsToUpdate["portrait"] = null;
+            $profileUpdated = true;
+
+            AQLog::images($fieldsToUpdate);
+
+            /*switch( $ext) {
                 case 'png':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
                     $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
@@ -289,6 +300,12 @@ class LandingPageController extends BackendController
                     $profileUpdated = true;
                     break;
                 case 'jpg':
+                    $md5Name = md5_file($request->file('logo')->getRealPath());
+                    $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
+                    $fieldsToUpdate["portrait"] = null;
+                    $profileUpdated = true;
+                    break;
+                case 'jpeg':
                     $md5Name = md5_file($request->file('logo')->getRealPath());
                     $fieldsToUpdate["logo"] = env('AGENT_LOGO_PATH') . '/' . $request->file('logo')->storeAs('landing-pages/logos', $md5Name.'.'.$ext  ,'public');
                     $fieldsToUpdate["portrait"] = null;
@@ -302,7 +319,7 @@ class LandingPageController extends BackendController
                     break;
 
                 default:
-            }
+            }*/
 
         }
 
