@@ -27,9 +27,14 @@ class AgentQuoteMenuProvider extends ServiceProvider
 
                 $events->listen(BuildingMenu::class, function (BuildingMenu $event) {
 
-                    if (auth()->check()) {
+                    $ok = false;
 
+                    if (auth()->check()) {
                         $user_type = strtolower(request()->user()->type->name);
+                        $ok = true;
+                    }
+
+                    if ($ok) {
 
                         $user = auth()->user();
 
@@ -79,13 +84,16 @@ class AgentQuoteMenuProvider extends ServiceProvider
                         // loop though all items and see if one of the menu items belongs to a product. If so, only show the menu product item if the user is subscribed to it.
                         foreach ($menu_items as $item) {
 
+                            if($user_type !== 'user') {
+                                $event->menu->add($item);
+                            }
 
 /*                            AQLog::info(print_r([
                                 'message' => "AgentQuoteMenuProvider::boot - Menu Item",
                                 'user' => $item
                             ], true));*/
 
-                            if (is_array($item) && array_key_exists('url', $item) ) {
+                            else if (is_array($item) && array_key_exists('url', $item) ) {
 
 /*                                AQLog::info(print_r([
                                     'message' => "AgentQuoteMenuProvider::boot - Line 80",
