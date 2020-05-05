@@ -87,16 +87,6 @@ return [
                 'url'  => 'dashboard',
                 'icon' => 'dashboard'
             ],
-/*            [
-                'text' => 'Groups',
-                'url'  => 'groups',
-                'icon' => 'object-group'
-            ],*/
-/*            [
-                'text' => 'Compose',
-                'url' => 'messages/new',
-                'icon' => 'envelope'
-            ],*/
             [
                 'text' => 'Users',
                 'icon' => 'users',
@@ -123,19 +113,6 @@ return [
                 'text' => 'Modules',
                 'url'  => '/modules',
                 'icon' => 'puzzle-piece',
-/*                'submenu' => [
-                    [
-                        'text' => 'Modules',
-                        'url'  => 'modules/',
-                        'icon' => 'blank'
-                    ],
-                    [
-                        'text' => 'Install',
-                        'url'  => 'modules/add',
-                        'icon' => 'blank'
-                    ],
-
-                ],*/
             ],
             [
                 'text' => 'WHMCS',
@@ -325,11 +302,6 @@ return [
                 'text' => 'Settings',
                 'icon' => 'cog',
                 'submenu' => [
-/*                    [
-                        'text' => 'Profile',
-                        'url'  => 'account/settings',
-                        'icon' => 'blank'
-                    ],*/
                     [
                         'text' => 'Password',
                         'url'  => 'account/security',
@@ -362,11 +334,6 @@ return [
                 'text' => 'Reports',
                 'icon' => 'pie-chart',
                 'submenu' => [
-/*                    [
-                        'text' => 'Top Carriers',
-                        'url'  => 'reports/carriers/top',
-                        'icon' => 'blank'
-                    ],*/
                     [
                         'text' => 'Recent Quotes',
                         'url'  => 'reports/recent_quotes',
@@ -461,11 +428,6 @@ return [
                 'text' => 'Settings',
                 'icon' => 'cog',
                 'submenu' => [
-/*                    [
-                        'text' => 'Profile',
-                        'url'  => 'account/settings',
-                        'icon' => 'blank'
-                    ],*/
                     [
                         'text' => 'Password',
                         'url'  => 'account/security',
