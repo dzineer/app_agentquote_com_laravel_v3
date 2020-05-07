@@ -200,6 +200,7 @@ class PhoneValidationModule extends CustomModule {
         ],true));
 
         AQLog::email(print_r([
+            "subject" => "New Quote Lead Notification",
             "to" => [
                 "name" => $user->name,
                 "email" => $profile->email,
