@@ -89,6 +89,12 @@ return [
             'level' => 'info',
         ],
 
+        'agentquoteEmailLog' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/agentquote-emails.log'),
+            'level' => 'info',
+        ],
+
         'agentquoteNetworkLog' => [
             'driver' => 'single',
             'path' => storage_path('logs/agentquote-network.log'),

@@ -196,6 +196,14 @@ class PhoneValidationModule extends CustomModule {
             "\$quoteUnverified" => $quoteUnverified,
         ],true));
 
+        AQLog::email(print_r([
+            "to" => [
+                "name" => $user->name,
+                "email" => $user->email,
+                "quote" => $quoteUnverified
+            ]
+        ], true));
+
         \Mail::to($user->email, $user->name)->send(new ViewQuoteLeadEmail(
             new ViewQuotedLeadContract($user, $quoteUnverified)
         ));
@@ -212,6 +220,13 @@ class PhoneValidationModule extends CustomModule {
         // $notification = new NewQuoteGeneratedNotification('New Quote', 'You have received a new quote.', '/notification-icon', $action);
         // Notification::send(User::all(), $notification);
 
+        AQLog::email(print_r([
+            "to" => [
+                "name" => $quoteUnverified->name,
+                "email" => $quoteUnverified->email
+            ]
+        ], true));
+
         \Mail::to($quoteUnverified->email, $quoteUnverified->name)->send(new ViewQuoteEmail(
             new ViewQuoteContract($quoteUnverified->name, $quoteUnverified->email, $quoteUnverified->domain, $confirmation_token)
         ));
@@ -226,6 +241,13 @@ class PhoneValidationModule extends CustomModule {
         // $action = new NewQuoteAction('New Quote Action', 'notification_action');
         // $notification = new NewQuoteGeneratedNotification('New Quote', 'You have received a new quote.', '/notification-icon', $action);
         // Notification::send(User::all(), $notification);
+
+        AQLog::email(print_r([
+            "to" => [
+                "name" => $quoteUnverified->name,
+                "email" => $quoteUnverified->email
+            ]
+        ], true));
 
         \Mail::to($quoteUnverified->email, $quoteUnverified->name)->send(new PendingSMSOtpVerificationEmail(
             new PendingSMSCodeVerificationContract($quoteUnverified->name, $quoteUnverified->email, $quoteUnverified->domain, $quoteUnverified->code)
