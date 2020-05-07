@@ -212,7 +212,6 @@ class AffiliatesController extends Controller
      */
     public function storeAffiliate(Request $request)
     {
-
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',

@@ -50,6 +50,17 @@ class AffiliatesApiController extends Controller
         return (new AffiliatesApiFacade())->getAffiliate($data);
     }
 
+    public function addAffiliate(Request $request) {
+        $data = $this->validate($request, [
+            'name' => 'required',
+            'fname' => 'required',
+            'lname' => 'required',
+            'email' => 'required'
+        ]);
+
+        return (new AffiliatesApiFacade())->storeAffiliate($data);
+    }
+
     public function disableAffiliate(Request $request)
     {
         if (!$this->isAllowed()) {

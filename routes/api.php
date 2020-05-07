@@ -85,11 +85,8 @@ Route::post('/user.password.update',  [\App\Http\Controllers\Api\UsersApiControl
 Route::post('/user.disable',  [\App\Http\Controllers\Api\UsersApiController::class, 'disableUser'])->name('api-request.user.disable');
 Route::post('/user.enable',  [\App\Http\Controllers\Api\UsersApiController::class, 'enableUser'])->name('api-request.user.enable');
 
-// Affiliates Api
-Route::post('/affiliate.get',  [\App\Http\Controllers\Api\AffiliatesApiController::class, 'getAffiliate'])->name('api-request.affiliate.get');
-Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesApiController::class, 'storeAffiliate'])->name('api-request.affiliate.add');
-Route::post('/affiliate.disable',  [\App\Http\Controllers\Api\AffiliatesApiController::class, 'disableAffiliate'])->name('api-request.affiliate.disable');
-Route::post('/affiliate.enable',  [\App\Http\Controllers\Api\AffiliatesApiController::class, 'enableAffiliate'])->name('api-request.affiliate.enable');
+// Affiliates Api -> testing
+Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesController::class, 'storeAffiliate'])->name('api-request.a.affiliate.add');
 
 // Landing Page Users Api
 Route::post('/user.landingPage.get',  [\App\Http\Controllers\Api\LandingPageUsersApiController::class, 'getLandingPageUser'])->name('api-request.user.landing-page.get');
@@ -100,3 +97,7 @@ Route::post('/user.landingPage.enable',  [\App\Http\Controllers\Api\LandingPageU
 Route::post('/user.quoter.get',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'getQuoterUser'])->name('api-request.user.quoter.get');
 Route::post('/user.quoter.disable',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'disableQuoterUser'])->name('api-request.user.quoter.disable');
 Route::post('/user.quoter.enable',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'enableQuoterUser'])->name('api-request.user.quoter.enable');
+
+Route::post('/user.quoter.getter',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'getQuoterUser'])->name('api-request.user.quoter.get');
+
+// This should be added too
