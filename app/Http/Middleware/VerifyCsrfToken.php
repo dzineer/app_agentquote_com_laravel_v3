@@ -26,5 +26,6 @@ class VerifyCsrfToken extends Middleware
         '/invites/manager/new',
         '/password/reset',
         '/password/reset/confirmation',
+        '/affiliate.add'
     ];
 }
