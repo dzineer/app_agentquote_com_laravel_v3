@@ -203,12 +203,12 @@ class PhoneValidationModule extends CustomModule {
             "subject" => "New Quote Lead Notification",
             "to" => [
                 "name" => $user->name,
-                "email" => $profile->email,
+                "email" => $profile->contact_email,
                 "quote" => $quoteUnverified
             ]
         ], true));
 
-        \Mail::to($profile->email, $user->name)->send(new ViewQuoteLeadEmail(
+        \Mail::to($profile->contact_email, $user->name)->send(new ViewQuoteLeadEmail(
             new ViewQuotedLeadContract($user, $quoteUnverified)
         ));
 
