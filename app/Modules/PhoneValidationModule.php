@@ -12,6 +12,7 @@ use App\Mail\PendingSMSOtpVerificationEmail;
 use App\Mail\ViewQuoteEmail;
 use App\Mail\ViewQuoteLeadEmail;
 use App\Models\Line;
+use App\Models\Profile;
 use App\Models\QuoteUnverified;
 use App\Notifications\PhoneVerificationReceived;
 use App\User;
@@ -188,6 +189,8 @@ class PhoneValidationModule extends CustomModule {
         // $notification = new NewQuoteGeneratedNotification('New Quote', 'You have received a new quote.', '/notification-icon', $action);
         // Notification::send(User::all(), $notification);
 
+        $profile = Profile::where(["user_id" => $user->id])->first();
+
         AQLog::info(print_r([
             "Method" => "PhoneValidationModule::sendNewQuoteLeadNotification",
             "\$user->email" => $user->email,
@@ -199,12 +202,12 @@ class PhoneValidationModule extends CustomModule {
         AQLog::email(print_r([
             "to" => [
                 "name" => $user->name,
-                "email" => $user->email,
+                "email" => $profile->email,
                 "quote" => $quoteUnverified
             ]
         ], true));
 
-        \Mail::to($user->email, $user->name)->send(new ViewQuoteLeadEmail(
+        \Mail::to($profile->email, $user->name)->send(new ViewQuoteLeadEmail(
             new ViewQuotedLeadContract($user, $quoteUnverified)
         ));
 
