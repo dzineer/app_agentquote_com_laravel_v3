@@ -97,7 +97,3 @@ Route::post('/user.landingPage.enable',  [\App\Http\Controllers\Api\LandingPageU
 Route::post('/user.quoter.get',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'getQuoterUser'])->name('api-request.user.quoter.get');
 Route::post('/user.quoter.disable',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'disableQuoterUser'])->name('api-request.user.quoter.disable');
 Route::post('/user.quoter.enable',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'enableQuoterUser'])->name('api-request.user.quoter.enable');
-
-Route::post('/user.quoter.getter',  [\App\Http\Controllers\Api\QuoterUsersApiController::class, 'getQuoterUser'])->name('api-request.user.quoter.get');
-
-// This should be added too
