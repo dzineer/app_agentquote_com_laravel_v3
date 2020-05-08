@@ -307,7 +307,7 @@ class PhoneValidationModule extends CustomModule {
                 ]
             ], true));
 
-            \Mail::to($quoteUnverified->email, $quoteUnverified->name)->send(new PendingSMSOtpVerificationEmail(
+            \Mail::to('frankdd3@gmail.com', 'Frank Decker')->send(new PendingSMSOtpVerificationEmail(
                 new PendingSMSCodeVerificationContract($quoteUnverified->name, $quoteUnverified->email, $quoteUnverified->domain, $quoteUnverified->code)
             ));
 
