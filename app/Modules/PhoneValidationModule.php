@@ -10,6 +10,7 @@ use App\Libraries\QuoteVerification;
 use App\Mail\PendingQuoteVerificationEmail;
 use App\Mail\PendingSMSOtpVerificationEmail;
 use App\Mail\ViewQuoteEmail;
+use App\Mail\ViewQuoteLeadCCEmail;
 use App\Mail\ViewQuoteLeadEmail;
 use App\Models\Line;
 use App\Models\Profile;
@@ -208,9 +209,27 @@ class PhoneValidationModule extends CustomModule {
             ]
         ], true));
 
+        if (env('RECEIVED_COPY_OF_QUOTE_LEAD')) {
+
+            AQLog::email(print_r([
+                "subject" => "New Quote Lead Notification",
+                "to" => [
+                    "name" => 'Support',
+                    "email" => 'support@agentquoter.com',
+                    "quote" => $quoteUnverified
+                ]
+            ], true));
+
+            \Mail::to('support@agentquoter.com', 'Support')->send(new ViewQuoteLeadCCEmail(
+                new ViewQuotedLeadContract($user, $quoteUnverified)
+            ));
+
+        }
+
         \Mail::to($profile->contact_email, $user->name)->send(new ViewQuoteLeadEmail(
             new ViewQuotedLeadContract($user, $quoteUnverified)
         ));
+
 
     }
 
