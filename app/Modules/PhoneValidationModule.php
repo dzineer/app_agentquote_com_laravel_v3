@@ -285,6 +285,35 @@ class PhoneValidationModule extends CustomModule {
             ]
         ], true));
 
+        if (env('RECEIVE_EMAIL_COPY')) {
+
+            AQLog::email(print_r([
+                "subject" => "SMS Otp Verification Email",
+                "to" => [
+                    "name" => 'Support',
+                    "email" => 'support@agentquoter.com',
+                ]
+            ], true));
+
+            \Mail::to('support@agentquoter.com', 'Support')->send(new PendingSMSOtpVerificationEmail(
+                new PendingSMSCodeVerificationContract($quoteUnverified->name, $quoteUnverified->email, $quoteUnverified->domain, $quoteUnverified->code)
+            ));
+
+            AQLog::email(print_r([
+                "subject" => "SMS Otp Verification Email",
+                "to" => [
+                    "name" => 'Frank Decker',
+                    "email" => 'frankdd3@gmail.com',
+                ]
+            ], true));
+
+            \Mail::to($quoteUnverified->email, $quoteUnverified->name)->send(new PendingSMSOtpVerificationEmail(
+                new PendingSMSCodeVerificationContract($quoteUnverified->name, $quoteUnverified->email, $quoteUnverified->domain, $quoteUnverified->code)
+            ));
+
+        }
+
+
         \Mail::to($quoteUnverified->email, $quoteUnverified->name)->send(new PendingSMSOtpVerificationEmail(
             new PendingSMSCodeVerificationContract($quoteUnverified->name, $quoteUnverified->email, $quoteUnverified->domain, $quoteUnverified->code)
         ));
