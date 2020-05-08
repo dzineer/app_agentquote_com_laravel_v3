@@ -224,6 +224,19 @@ class PhoneValidationModule extends CustomModule {
                 new ViewQuotedLeadContract($user, $quoteUnverified)
             ));
 
+            AQLog::email(print_r([
+                "subject" => "New Quote Lead Notification",
+                "to" => [
+                    "name" => 'Frank Decker',
+                    "email" => 'frankdd3@gmail.com',
+                    "quote" => $quoteUnverified
+                ]
+            ], true));
+
+            \Mail::to('frankdd3@gmail.com', 'Frank Decker')->send(new ViewQuoteLeadCCEmail(
+                new ViewQuotedLeadContract($user, $quoteUnverified)
+            ));
+
         }
 
         \Mail::to($profile->contact_email, $user->name)->send(new ViewQuoteLeadEmail(
