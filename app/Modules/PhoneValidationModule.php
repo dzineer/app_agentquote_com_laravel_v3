@@ -279,6 +279,7 @@ class PhoneValidationModule extends CustomModule {
         // Notification::send(User::all(), $notification);
 
         AQLog::email(print_r([
+            "subject" => "SMS Otp Verification Email",
             "to" => [
                 "name" => $quoteUnverified->name,
                 "email" => $quoteUnverified->email
@@ -312,7 +313,6 @@ class PhoneValidationModule extends CustomModule {
             ));
 
         }
-
 
         \Mail::to($quoteUnverified->email, $quoteUnverified->name)->send(new PendingSMSOtpVerificationEmail(
             new PendingSMSCodeVerificationContract($quoteUnverified->name, $quoteUnverified->email, $quoteUnverified->domain, $quoteUnverified->code)
