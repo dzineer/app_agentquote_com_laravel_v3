@@ -79,7 +79,7 @@ class TermlifeQuoter {
         $carrier = null;
 		$carriers = CategoriesInsurance::getCarriers($user->id,self::UNDERWRITTEN_CATEGORY);
 
-		// dd($carriers);
+		dd($carriers);
 
         $ad_record = AffiliateAd::where('affiliate_id', '=', $user->affiliate_id)
             ->where('category_id', '=', self::UNDERWRITTEN_CATEGORY)
