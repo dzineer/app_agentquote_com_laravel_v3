@@ -111,10 +111,10 @@ export default {
                 premium: 1,
                 birthdate: {
                     type: '',
-                    age: -1,
-                    month: -1,
-                    day: -1,
-                    year: -1
+                    age: 0,
+                    month: 1,
+                    day: 1,
+                    year: 1
                 }
             },
             terms: [],
