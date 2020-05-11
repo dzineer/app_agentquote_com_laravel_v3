@@ -226,11 +226,11 @@ class TermlifeQuoter {
             echo '<pre><br>mappedFields: <br>' . print_r( $mappedFields, true );
         }
 
-        echo "<br>mappedFields: " . print_r($mappedFields,true);
+        // echo "<br>mappedFields: " . print_r($mappedFields,true);
 
         $quote = $gw->getQuote( $mappedFields );
 
-		echo "<br>quote: " . print_r($quote,true);
+		// echo "<br>quote: " . print_r($quote,true);
 
         if ( !empty($_GET['debug']) && $_GET['debug'] == 'on' ) {
             echo '<br>quote: <br>' . print_r( json_decode($quote, true), true ) . '<br></pre>';
