@@ -51,7 +51,7 @@
                 <button @click.prevent="onGenerateQuote"
                  v-if="showPhoneField"
                 class="tw-cursor-pointer tw-no-underline tw-rounded tw-py-4 tw-h-13 tw-px-4 sm:tw-px-8 tw-uppercase tw-font-semibold tw-bg-primaryBright tw-text-white tw-w-1/2 sm:tw-w-2/5"
-                :disabled="!ready || sending" >
+                :disabled="sending" >
                 <icon v-if="sending" name="refresh" classes="tw-inline-block fa-spin fa-fw tw-mr-2" />
                 <span class="tw-sr-only">Loading...</span>
                 Send Code
@@ -270,6 +270,7 @@ export default {
                         if (res.data.success === true) {
                             // debugger;
                             window.vueEvents.$emit('generateQuote', { data: res.data, token: this.token } );
+                            this.verifying = false;
                             // location.href = res.data.redirect;
                         } else {
                             this.captions.verifyButton = 'Verifying...';
