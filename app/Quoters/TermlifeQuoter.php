@@ -79,7 +79,7 @@ class TermlifeQuoter {
         $carrier = null;
 		$carriers = CategoriesInsurance::getCarriers($user->id,self::UNDERWRITTEN_CATEGORY);
 
-		dd($carriers);
+		// dd($carriers);
 
         $ad_record = AffiliateAd::where('affiliate_id', '=', $user->affiliate_id)
             ->where('category_id', '=', self::UNDERWRITTEN_CATEGORY)
@@ -115,7 +115,7 @@ class TermlifeQuoter {
         $carrierIds = array();
 		$carriersLookup = array();
 
-		echo '<div><pre><br>results: <br>' . print_r( $results, true ) . '<br></pre></div>';
+		// echo '<div><pre><br>results: <br>' . print_r( $results, true ) . '<br></pre></div>';
 		// echo '<div><pre><br>results: <br>' . print_r( $carriers, true ) . '<br></pre></div>'; exit;
 
         // echo json_encode($carriers); exit;
@@ -209,7 +209,7 @@ class TermlifeQuoter {
 
         $response = $gw->getAccessToken( $acct );
 
-        // dd($response);
+        dd($response);
 
         $gw->setAccessToken( $response['access_token'] );
 
