@@ -115,7 +115,7 @@ class TermlifeQuoter {
         $carrierIds = array();
 		$carriersLookup = array();
 
-		// echo '<div><pre><br>results: <br>' . print_r( $results, true ) . '<br></pre></div>';
+		echo '<div><pre><br>results: <br>' . print_r( $results, true ) . '<br></pre></div>';
 		// echo '<div><pre><br>results: <br>' . print_r( $carriers, true ) . '<br></pre></div>'; exit;
 
         // echo json_encode($carriers); exit;
