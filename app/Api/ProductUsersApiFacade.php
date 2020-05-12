@@ -81,6 +81,17 @@ class ProductUsersApiFacade
                 "data" => $data
             ], true));
 
+            if ($user && $user->affiliate->active === 0) {
+                AQLog::info(print_r([
+                    "message" => "Affiliate is not active.",
+                ], true));
+
+                return response()->json([
+                    "message" => "Affiliate is not active.",
+                    "success" => false,
+                ]);
+            }
+
                 // make sure we don't add any product for a disabled user
             if ($user && $user->active === 0) {
                 AQLog::info(print_r([
@@ -502,10 +513,22 @@ class ProductUsersApiFacade
 
         if ($user) {
 
+
             AQLog::info( json_encode([
                 "message" => "Got User",
                 "data" => $user
             ]) );
+
+            if ($user && $user->affiliate->active === 0) {
+                AQLog::info(print_r([
+                    "message" => "Affiliate is not active.",
+                ], true));
+
+                return response()->json([
+                    "message" => "Affiliate is not active.",
+                    "success" => false,
+                ]);
+            }
 
             $whmcs_product_id = $data['whmcs_product_id'];
 
@@ -644,6 +667,17 @@ class ProductUsersApiFacade
                 "data" => $user
             ]) );
 
+            if ($user && $user->affiliate->active === 0) {
+                AQLog::info(print_r([
+                    "message" => "Affiliate is not active.",
+                ], true));
+
+                return response()->json([
+                    "message" => "Affiliate is not active.",
+                    "success" => false,
+                ]);
+            }
+
             $whmcs_product_id = $data['whmcs_product_id'];
 
             $whmcsProduct = WhmcsProduct::where(["pid" => $whmcs_product_id])->first();
@@ -772,6 +806,17 @@ class ProductUsersApiFacade
                 "message" => "Got User",
                 "data" => $user
             ]) );
+
+            if ($user && $user->affiliate->active === 0) {
+                AQLog::info(print_r([
+                    "message" => "Affiliate is not active.",
+                ], true));
+
+                return response()->json([
+                    "message" => "Affiliate is not active.",
+                    "success" => false,
+                ]);
+            }
 
             $whmcs_product_id = $data['whmcs_product_id'];
 
