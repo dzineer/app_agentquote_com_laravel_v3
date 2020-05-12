@@ -87,6 +87,8 @@ Route::post('/user.enable',  [\App\Http\Controllers\Api\UsersApiController::clas
 
 // Affiliates Api -> testing
 Route::post('/affiliate.add',  [\App\Http\Controllers\Api\AffiliatesController::class, 'storeAffiliate'])->name('api-request.a.affiliate.add');
+Route::post('/affiliate.disable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'disableAffiliate'])->name('api-request.a.affiliate.disable');
+Route::post('/affiliate.enable',  [\App\Http\Controllers\Api\AffiliatesController::class, 'enableAffiliate'])->name('api-request.a.affiliate.enable');
 
 // Landing Page Users Api
 Route::post('/user.landingPage.get',  [\App\Http\Controllers\Api\LandingPageUsersApiController::class, 'getLandingPageUser'])->name('api-request.user.landing-page.get');

@@ -93,7 +93,7 @@ class AffiliatesController extends Controller
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
-            'email' => 'required'
+            'name' => 'required'
         ]);
 
         // Agent Quote's WHMCS Security
@@ -108,37 +108,14 @@ class AffiliatesController extends Controller
             ]);
         }
 
-        $user = User::where([
-            "email" => $data['email']
-        ])->first();
-
-        if( !$user ) {
-            return response()->json([
-                "message" => "Affiliate does not exists.",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        if ( !$user->is_affiliate() ) {
-            return response()->json([
-                "message" => "User is not an affiliate.",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        $user->affiliate->update([
-            'active' => 0
-        ]);
-
-        $user->update([
+        $affiliate = Affiliate::where([
+            'name' => $data['name']
+        ])->update([
             'active' => 0
         ]);
 
         return response()->json([
             "message" => "Affiliate disabled.",
-            "data" => request()->all(),
             "success" => true,
         ]);
 
@@ -155,7 +132,7 @@ class AffiliatesController extends Controller
         $data = $this->validate($request, [
             'token' => 'required|max:32',
             'username' => 'required:max:32',
-            'email' => 'required'
+            'name' => 'required'
         ]);
 
         // Agent Quote's WHMCS Security
@@ -170,39 +147,17 @@ class AffiliatesController extends Controller
             ]);
         }
 
-        $user = User::where([
-            "email" => $data['email']
-        ])->first();
-
-        if( !$user ) {
-            return response()->json([
-                "message" => "Affiliate does not exists.",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        if ( !$user->is_affiliate() ) {
-            return response()->json([
-                "message" => "User is not an affiliate.",
-                "data" => request()->all(),
-                "success" => false,
-            ]);
-        }
-
-        $user->affiliate->update([
-            'active' => 1
-        ]);
-
-        $user->update([
+        $affiliate = Affiliate::where([
+            'name' => $data['name']
+        ])->update([
             'active' => 1
         ]);
 
         return response()->json([
-            "message" => "Affiliate disabled.",
-            "data" => request()->all(),
+            "message" => "Affiliate enabled.",
             "success" => true,
         ]);
+
     }
 
     /**
