@@ -2,8 +2,6 @@
 
 namespace App\Quoters;
 
-use App\Exceptions\InvalidQuoteResultsException;
-use App\Facades\AQLog;
 use App\Models\AccountQuote;
 use App\Models\AffiliateAd;
 use App\Models\Carrier;
@@ -15,8 +13,8 @@ class TermlifeQuoter {
     const UNDERWRITTEN_CATEGORY = 1;
 
     public function getAccount( $userId ) {
-	    $acct = AccountQuote::find( $userId );
-	    // dd($acct);
+        $acct = AccountQuote::find( $userId );
+        // dd($acct);
         return $acct;
     }
 
@@ -24,21 +22,21 @@ class TermlifeQuoter {
 
 
 
-    	/*
-    	    [id] => 3
-		    [state] => CA
-		    [month] => 1
-		    [day] => 1
-		    [year] => 1990
-		    [gender] => M
-		    [term] => 15
-		    [tobacco] => N
-		    [benefit] => 900
-		    [period] => 0
-		    [age] => 0
-		    [age_or_date] => date
-		    [category] => 1
-    	 */
+        /*
+            [id] => 3
+            [state] => CA
+            [month] => 1
+            [day] => 1
+            [year] => 1990
+            [gender] => M
+            [term] => 15
+            [tobacco] => N
+            [benefit] => 900
+            [period] => 0
+            [age] => 0
+            [age_or_date] => date
+            [category] => 1
+         */
 
         $map 	= 	array(
             'id'           =>   $fields['id'],
@@ -55,31 +53,31 @@ class TermlifeQuoter {
             'period'       => 	$fields['period'],
             'category'     => 	$fields['category'] );
 
-	    // echo "<pre>Map: <br/>" . print_r($map,true); exit;
+        // echo "<pre>Map: <br/>" . print_r($map,true); exit;
 
         return $map;
     }
 
-	protected function genAgentGuideLink($company, $productName) {
-		return '/guides/'.sha1($company." ".$productName).'.pdf';
-	}
+    protected function genAgentGuideLink($company, $productName) {
+        return '/guides/'.sha1($company." ".$productName).'.pdf';
+    }
 
-	protected function genUnderwritingGuidelinesLink($company) {
-		return '/uwgl/'.sha1($company).'.pdf';
-	}
+    protected function genUnderwritingGuidelinesLink($company) {
+        return '/uwgl/'.sha1($company).'.pdf';
+    }
 
-	protected function genPolicyDetailsLink($company) {
-		return '/pd/'.sha1($company).'.pdf';
-	}
+    protected function genPolicyDetailsLink($company) {
+        return '/pd/'.sha1($company).'.pdf';
+    }
 
-	public function filterResults( $user, $results ) {
+    public function filterResults( $user, $results ) {
 
-		/* return filtered data */
-		$filteredPolicies = array();
+        /* return filtered data */
+        $filteredPolicies = array();
         $carrier = null;
-		$carriers = CategoriesInsurance::getCarriers($user->id,self::UNDERWRITTEN_CATEGORY);
+        $carriers = CategoriesInsurance::getCarriers($user->id,self::UNDERWRITTEN_CATEGORY);
 
-		// dd($carriers);
+        // dd($carriers);
 
         $ad_record = AffiliateAd::where('affiliate_id', '=', $user->affiliate_id)
             ->where('category_id', '=', self::UNDERWRITTEN_CATEGORY)
@@ -101,7 +99,7 @@ class TermlifeQuoter {
 
             if (! $found) {
                 $carrier = Carrier::find($ad_record->company_id);
-                // dd($carrier);
+                dd($carrier);
 
                 $carriers[] = $carrier;
             }
@@ -113,29 +111,27 @@ class TermlifeQuoter {
         // echo json_encode($carriers); exit;
 
         $carrierIds = array();
-		$carriersLookup = array();
+        $carriersLookup = array();
 
-		// echo '<div><pre><br>results: <br>' . print_r( $results, true ) . '<br></pre></div>';
-		// echo '<div><pre><br>results: <br>' . print_r( $carriers, true ) . '<br></pre></div>'; exit;
+        // echo '<div><pre><br>results: <br>' . print_r( $results, true ) . '<br></pre></div>';
+        // echo '<div><pre><br>results: <br>' . print_r( $carriers, true ) . '<br></pre></div>'; exit;
 
         // echo json_encode($carriers); exit;
 
-		foreach( $carriers as $carrier ) {
-			// echo '<div><pre><br>results: <br>' . print_r( $carrier, true ) . '<br></pre></div>'; exit;
-			if ( $carrier->selected != 0 || ($ad_record && $ad_record->company_id === $carrier->company_id )) {
-				$carrierIds[] = $carrier->company_id;
-			}
-			$carriersLookup[ $carrier->company_id ] = $carrier;
+        foreach( $carriers as $carrier ) {
+            // echo '<div><pre><br>results: <br>' . print_r( $carrier, true ) . '<br></pre></div>'; exit;
+            if ( $carrier->selected != 0 || ($ad_record && $ad_record->company_id === $carrier->company_id )) {
+                $carrierIds[] = $carrier->company_id;
+            }
+            $carriersLookup[ $carrier->company_id ] = $carrier;
 
-		}
+        }
 
-		// echo '<div><pre><br>results: <br>' . print_r( $carriersLookup, true ) . '<br></pre></div>'; exit;
-		// echo '<div><pre><br>results sss: <br>' . print_r( $results, true ) . '<br></pre></div>'; exit;
-		// exit;
+        // echo '<div><pre><br>results: <br>' . print_r( $carriersLookup, true ) . '<br></pre></div>'; exit;
+        // echo '<div><pre><br>results sss: <br>' . print_r( $results, true ) . '<br></pre></div>'; exit;
+        // exit;
 
         // dd($results);
-
-        // AQLog::quote('TermlifeQuoter results: ' .  print_r($results, true));
 
         foreach( $results as $key => $result )  {
             if ( $key !== 'inputs' )
@@ -183,28 +179,24 @@ class TermlifeQuoter {
             }
         }
 
+        // echo '<div><pre><br>carriersLookup: <br>' . print_r( $carriersLookup, true ) . '<br></pre></div>';
+        // echo '<div><pre><br>filteredPolicies: <br>' . print_r( $filteredPolicies, true ) . '<br></pre></div>'; exit;
 
+        return $filteredPolicies;
+        // echo '<div><pre><br>result: <br>' . print_r( $result, true ) . '<br></pre></div>';
 
-		// echo '<div><pre><br>carriersLookup: <br>' . print_r( $carriersLookup, true ) . '<br></pre></div>';
-		// echo '<div><pre><br>filteredPolicies: <br>' . print_r( $filteredPolicies, true ) . '<br></pre></div>'; exit;
-
-		// return $filteredPolicies;
-		echo '<div><pre><br>result: <br>' . print_r( $filteredPolicies, true ) . '<br></pre></div>';
-        exit;
-
-	}
+    }
 
     public function getQuote($user, $fields) {
         $acct = $this->getAccount( 1 );
-		$curlconnection	=	$acct->hostname; //fetch term connection url
-		$endpoint	    =	$acct->endpoint; //fetch endpoint
+        $curlconnection	=	$acct->hostname; //fetch term connection url
+        $endpoint	    =	$acct->endpoint; //fetch endpoint
 
         $gw = new AquoterGateway();
         $gw->setHostname( $curlconnection );
         $gw->setEndpoint( $endpoint );
 
         // echo "<br>host: " . $curlconnection;
-        // exit;
         // echo "<br>endpoint: " . $endpoint;
 
         $response = $gw->getAccessToken( $acct );
@@ -226,11 +218,9 @@ class TermlifeQuoter {
             echo '<pre><br>mappedFields: <br>' . print_r( $mappedFields, true );
         }
 
-        // echo "<br>mappedFields: " . print_r($mappedFields,true);
-
         $quote = $gw->getQuote( $mappedFields );
 
-		// echo "<br>quote: " . print_r($quote,true);
+        // echo "<br>quote: " . print_r($quote,true);
 
         if ( !empty($_GET['debug']) && $_GET['debug'] == 'on' ) {
             echo '<br>quote: <br>' . print_r( json_decode($quote, true), true ) . '<br></pre>';
@@ -240,9 +230,9 @@ class TermlifeQuoter {
 
         // echo '<pre><br>quote: <br>' . print_r( $decodedQuote["response"]["Quote"], true ) . '<br></pre>';
 
-	    $quote = $this->filterResults($user, $decodedQuote["response"]["Quote"]);
+        $quote = $this->filterResults($user, $decodedQuote["response"]["Quote"]);
 
-		// dd($quote);
+        // dd($quote);
 
         return $quote;
 
