@@ -238,7 +238,7 @@ class TermlifeQuoter {
 
         $decodedQuote = json_decode($quote, true);
 
-        echo '<pre><br>quote: <br>' . print_r( $decodedQuote["response"]["Quote"], true ) . '<br></pre>';
+        // echo '<pre><br>quote: <br>' . print_r( $decodedQuote["response"]["Quote"], true ) . '<br></pre>';
 
 	    $quote = $this->filterResults($user, $decodedQuote["response"]["Quote"]);
 
