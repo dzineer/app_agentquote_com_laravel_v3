@@ -572,7 +572,7 @@ class UserBackendQuoteController extends BackendController
     public function gen_quote(Request $request) {
     	//echo print_r($request->all(),true); exit;
 
-        return response()->json(["here" => true]);
+        // return response()->json(["here" => true]);
 
         $user = Auth::user();
 	    $quote = null;
@@ -590,6 +590,8 @@ class UserBackendQuoteController extends BackendController
 	    //echo print_r($fields,true); exit;
 
 	    $mappedFields = $quoter->mapFields($fields);
+
+        return response()->json(["here" => true]);
 
         $results = $quoter->getQuote($user, $mappedFields);
 
