@@ -571,8 +571,10 @@ class UserBackendQuoteController extends BackendController
 
     public function gen_quote(Request $request) {
     	//echo print_r($request->all(),true); exit;
-	    $resp = [];
-	    $user = Auth::user();
+
+        return response()->json(["here" => true]);
+
+        $user = Auth::user();
 	    $quote = null;
 
 	    if ($request->input('category') == '1') {
