@@ -538,7 +538,7 @@ class TermlifeForm extends Component {
         fd.append("category" , '1');
 
         axios.post(url, fd).then( res => {
-            console.log(res);
+            // console.log(res);
             if (res.statusText === "OK") {
 
                 let quote_results = res.data;
