@@ -591,7 +591,7 @@ class UserBackendQuoteController extends BackendController
 
 	    $mappedFields = $quoter->mapFields($fields);
 
-        return response()->json(["here" => true]);
+       // return response()->json(["here" => true]);
 
         $results = $quoter->getQuote($user, $mappedFields);
 

@@ -204,7 +204,8 @@ class TermlifeQuoter {
         $gw->setHostname( $curlconnection );
         $gw->setEndpoint( $endpoint );
 
-        // echo "<br>host: " . $curlconnection;
+        echo "<br>host: " . $curlconnection;
+        exit;
         // echo "<br>endpoint: " . $endpoint;
 
         $response = $gw->getAccessToken( $acct );
