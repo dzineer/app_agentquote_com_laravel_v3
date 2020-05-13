@@ -204,13 +204,13 @@ class TermlifeQuoter {
         $gw->setHostname( $curlconnection );
         $gw->setEndpoint( $endpoint );
 
-        echo "<br>host: " . $curlconnection;
-        exit;
+        // echo "<br>host: " . $curlconnection;
+        // exit;
         // echo "<br>endpoint: " . $endpoint;
 
         $response = $gw->getAccessToken( $acct );
 
-        // dd($response);
+        dd($response);
 
         $gw->setAccessToken( $response['access_token'] );
 
