@@ -135,7 +135,7 @@ class TermlifeQuoter {
 
         // dd($results);
 
-        AQLog::quote('TermlifeQuoter results: ' .  print_r($results, true));
+        // AQLog::quote('TermlifeQuoter results: ' .  print_r($results, true));
 
             if (is_array($results) && count($results)) {
                 foreach( $results as $key => $result )  {
