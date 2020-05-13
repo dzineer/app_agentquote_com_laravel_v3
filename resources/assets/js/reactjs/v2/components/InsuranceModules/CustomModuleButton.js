@@ -53,7 +53,7 @@ class CustomModuleButton extends Component {
 
             console.log(res);
 
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
                 debugger;
                 console.log(res.data);
                 debugger;

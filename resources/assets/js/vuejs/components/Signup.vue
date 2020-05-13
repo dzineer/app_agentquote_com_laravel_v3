@@ -416,7 +416,7 @@ export default {
 
             axios.post(url, fd).then( res => {
                 console.log(res);
-                if (res.statusText === "OK") {
+                if (res.status === 200) {
 
                     if (res.data.success === true) {
                     //    location.href = res.data.redirect;

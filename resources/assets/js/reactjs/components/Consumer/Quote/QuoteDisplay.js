@@ -30,7 +30,7 @@ class QuoteDisplay extends Component {
 
             console.log(res);
 
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
 
                 let customModules = res.data.customModules;
 

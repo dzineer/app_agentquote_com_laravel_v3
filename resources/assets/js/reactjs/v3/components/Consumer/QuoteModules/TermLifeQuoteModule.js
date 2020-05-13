@@ -625,7 +625,7 @@ class TermLifeQuoteModule extends Component {
 
         axios.post(url, fd).then( res => {
             console.log(res);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
 
                 let quote_request_response = res.data.message;
 

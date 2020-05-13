@@ -413,7 +413,7 @@ class SitForm extends Component {
 
         axios.post(url, fd).then( res => {
             console.log(res);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
 
                 let quote_results = res.data;
 

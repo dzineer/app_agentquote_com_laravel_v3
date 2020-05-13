@@ -70129,7 +70129,7 @@ var NewChoiceContainer = /*#__PURE__*/function (_Component) {
       axios.post(url, fd).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           var customModules = res.data.customModules;
           _this.button_modules = {};
           var button_modules_rendered = Object.keys(customModules).map(function (i) {
@@ -70662,7 +70662,7 @@ var FinalExpenseQuoteDisplay = /*#__PURE__*/function (_Component) {
       axios.get(url).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           var customModules = res.data.customModules;
           var modules_rendered = customModules.map(function (customModule) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserModule_CustomUserModule__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -71948,7 +71948,7 @@ var SiQuoteDisplay = /*#__PURE__*/function (_Component) {
       axios.get(url).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           var customModules = res.data.customModules;
           var modules_rendered = customModules.map(function (customModule) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserModule_CustomUserModule__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -72265,7 +72265,7 @@ var TermlifeQuoteDisplay = /*#__PURE__*/function (_Component) {
       axios.get(url).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           var customModules = res.data.customModules;
           var modules_rendered = customModules.map(function (customModule) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_UserModule_CustomUserModule__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -73347,7 +73347,7 @@ var FinalExpenseQuoteModule = /*#__PURE__*/function (_Component) {
       axios.post(url, fd).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           debugger;
           var quote_request_response = res.data.message;
 
@@ -74344,7 +74344,7 @@ var TermLifeQuoteModule = /*#__PURE__*/function (_Component) {
       axios.post(url, fd).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           var quote_request_response = res.data.message;
           var quote_results_style = {
             textAlign: 'center'
@@ -75005,7 +75005,7 @@ var FinalExpenseReQuoteModule = /*#__PURE__*/function (_Component) {
       axios.post(url, fd).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           debugger;
           var quote_results = JSON.parse(res.data.quote_results);
           debugger;
@@ -75551,7 +75551,7 @@ var TermLifeReQuoteModule = /*#__PURE__*/function (_Component) {
       axios.post(url, fd).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           debugger;
           var quote_results = JSON.parse(res.data.quote_results);
           debugger;
@@ -76004,7 +76004,7 @@ var VerificationCode = /*#__PURE__*/function (_Component) {
       axios.post(url, fd).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           if (res.data.success === true) {
             /*                    this.setState({
                                     has_error: false,
@@ -76174,7 +76174,7 @@ var VerificationCode = /*#__PURE__*/function (_Component) {
       axios.post(url, fd).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           if (res.data.success === true) {
             _this.setState({
               has_error: false,
@@ -76233,7 +76233,7 @@ var VerificationCode = /*#__PURE__*/function (_Component) {
       axios.post(url, fd).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           if (res.data.success === true) {
             // ReactDOM.unmountComponentAtNode( "timer-component" );
             _this.setState({
@@ -76779,7 +76779,7 @@ var CustomModuleButton = /*#__PURE__*/function (_Component) {
       axios.get(url).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           debugger;
           console.log(res.data);
           debugger;
@@ -79939,7 +79939,7 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
       fd.append("category", '1');
       axios.post(url, fd).then(function (res) {
         // console.log(res);
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           var quote_results = res.data;
           var quote_items = quote_results.map(function (item) {
             var counter = 1;
@@ -81732,7 +81732,7 @@ var CustomUserModule = /*#__PURE__*/function (_Component) {
       axios.get(url).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           debugger;
           console.log(res.data);
 

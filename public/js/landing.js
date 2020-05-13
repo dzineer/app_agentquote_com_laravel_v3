@@ -2185,7 +2185,7 @@ __webpack_require__.r(__webpack_exports__);
         axios.post(url, fd).then(function (res) {
           console.log(res);
 
-          if (res.statusText === "OK") {
+          if (res.status === 200) {
             if (res.data.success === true) {
               // debugger;
               window.vueEvents.$emit('generateQuote', {
@@ -4868,7 +4868,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.get(url).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           if (res.data.success === true) {
             // debugger;
             _this.quoteItems = res.data.quote.items;
@@ -4898,7 +4898,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.get(url).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           if (res.data.success === true) {
             // debugger;
             _this2.quoteItems = res.data.quote.items;
@@ -6324,7 +6324,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.post(url, fd).then(function (res) {
         console.log(res);
 
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
           if (res.data.success === true) {
             //    location.href = res.data.redirect;
             _this.token = res.data.token;

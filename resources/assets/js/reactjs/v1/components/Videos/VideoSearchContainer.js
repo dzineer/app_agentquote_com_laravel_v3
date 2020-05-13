@@ -85,7 +85,7 @@ class VideoSearchContainer extends Component {
         let that = this;
         axios.get(url).then( res => {
             console.log(res);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
 
                 console.log(res.data);
                 let newState  = Object.assign({}, this.state);

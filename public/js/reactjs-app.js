@@ -14426,7 +14426,7 @@ var TermlifeForm = function (_Component) {
 
             axios.post(url, fd).then(function (res) {
                 console.log(res);
-                if (res.statusText === "OK") {
+                if (res.status === 200) {
 
                     var quote_results = res.data;
                     var quote_items = quote_results.map(function (item) {
@@ -87469,7 +87469,7 @@ var SitForm = function (_Component) {
 
             axios.post(url, fd).then(function (res) {
                 console.log(res);
-                if (res.statusText === "OK") {
+                if (res.status === 200) {
 
                     var quote_results = res.data;
 
@@ -88043,7 +88043,7 @@ var SiwlForm = function (_Component) {
 
             axios.post(url, fd).then(function (res) {
                 console.log(res);
-                if (res.statusText === "OK") {
+                if (res.status === 200) {
 
                     var quote_results = res.data;
 
@@ -93687,7 +93687,7 @@ var VideoSearchContainer = function (_Component) {
             var that = this;
             axios.get(url).then(function (res) {
                 console.log(res);
-                if (res.statusText === "OK") {
+                if (res.status === 200) {
 
                     console.log(res.data);
                     var newState = Object.assign({}, _this2.state);
@@ -93888,7 +93888,7 @@ var GuideSearchContainer = function (_Component) {
             var that = this;
             axios.get(url).then(function (res) {
                 console.log(res);
-                if (res.statusText === "OK") {
+                if (res.status === 200) {
 
                     console.log(res.data);
                     var newState = Object.assign({}, _this2.state);

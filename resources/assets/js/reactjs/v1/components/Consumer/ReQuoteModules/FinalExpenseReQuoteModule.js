@@ -276,7 +276,7 @@ class FinalExpenseReQuoteModule extends Component {
 
         axios.post(url, fd).then( res => {
             // console.log(res);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
 
                 debugger;
                 let quote_results = JSON.parse(res.data.quote_results);

@@ -151,7 +151,7 @@ class VerificationCode extends Component {
 
         axios.post(url, fd).then( res => {
             console.log(res);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
 
                 if (res.data.success === true) {
 /*                    this.setState({
@@ -295,7 +295,7 @@ class VerificationCode extends Component {
 
         axios.post(url, fd).then( res => {
             console.log(res);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
 
                 if (res.data.success === true) {
 
@@ -358,7 +358,7 @@ class VerificationCode extends Component {
 
         axios.post(url, fd).then( res => {
             console.log(res);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
 
                 if (res.data.success === true) {
 
