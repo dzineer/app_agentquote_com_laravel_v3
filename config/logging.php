@@ -123,6 +123,18 @@ return [
             'driver' => 'single',
             'path' => storage_path('logs/agentquote-quote.log'),
             'level' => 'info',
+        ],
+
+        'agentquoteApi_v1_Log' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/agentquote-api-v1.log'),
+            'level' => 'info',
+        ],
+
+        'agentquoteApi_v2_Log' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/agentquote-api-v2.log'),
+            'level' => 'info',
         ]
     ],
 

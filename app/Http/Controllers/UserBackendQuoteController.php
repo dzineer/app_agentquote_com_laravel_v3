@@ -593,7 +593,7 @@ class UserBackendQuoteController extends BackendController
 
         $this->logQuoteEvent($user, $fields, $results);
 
-	    // echo print_r($results,true); exit;
+	    echo print_r($results,true); exit;
 	    return response()->json($results);
     }
 

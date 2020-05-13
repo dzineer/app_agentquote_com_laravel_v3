@@ -26,6 +26,14 @@ class AQLogger {
         Log::channel('agentquoteEmailLog')->info($s);
     }
 
+    public function api($ver, $s) {
+        if ($ver === 1) {
+            Log::channel('agentquoteApi_v1_Log')->info($s);
+        } else if ($ver === 2) {
+            Log::channel('agentquoteApi_v2_Log')->info($s);
+        }
+    }
+
     public function networkResponse($s) {
         Log::channel('agentquoteNetworkResponseLog')->info("\nNETWORK RESPONSE\n$s\n");
     }
