@@ -101,7 +101,7 @@ class TermlifeQuoter {
 
             if (! $found) {
                 $carrier = Carrier::find($ad_record->company_id);
-                dd($carrier);
+                // dd($carrier);
 
                 $carriers[] = $carrier;
             }
@@ -242,7 +242,7 @@ class TermlifeQuoter {
 
 	    $quote = $this->filterResults($user, $decodedQuote["response"]["Quote"]);
 
-		dd($quote);
+		// dd($quote);
 
         return $quote;
 
