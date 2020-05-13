@@ -242,7 +242,7 @@ class TermlifeQuoter {
 
 	    $quote = $this->filterResults($user, $decodedQuote["response"]["Quote"]);
 
-		// dd($quote);
+		dd($quote);
 
         return $quote;
 
