@@ -129,8 +129,8 @@ class TermlifeQuoter {
 
 		}
 
-		echo '<div><pre><br>results: <br>' . print_r( $carriersLookup, true ) . '<br></pre></div>'; exit;
-		// echo '<div><pre><br>results sss: <br>' . print_r( $results, true ) . '<br></pre></div>'; exit;
+		// echo '<div><pre><br>results: <br>' . print_r( $carriersLookup, true ) . '<br></pre></div>'; exit;
+		echo '<div><pre><br>results sss: <br>' . print_r( $results, true ) . '<br></pre></div>'; exit;
 		// exit;
 
         // dd($results);
