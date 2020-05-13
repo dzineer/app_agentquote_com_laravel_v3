@@ -130,60 +130,58 @@ class TermlifeQuoter {
 		}
 
 		// echo '<div><pre><br>results: <br>' . print_r( $carriersLookup, true ) . '<br></pre></div>'; exit;
-		echo '<div><pre><br>results sss: <br>' . print_r( $results, true ) . '<br></pre></div>'; exit;
+		// echo '<div><pre><br>results sss: <br>' . print_r( $results, true ) . '<br></pre></div>'; exit;
 		// exit;
 
         // dd($results);
 
         // AQLog::quote('TermlifeQuoter results: ' .  print_r($results, true));
 
-            if (is_array($results) && count($results)) {
-                foreach( $results as $key => $result )  {
-                    if ( $key !== 'inputs' )
-                    {
-                        //echo '<div><pre><br>key: <br>' . print_r( $key, true ) . '<br></pre></div>';
-                        // echo '<div><pre><br>result: <br>' . print_r( $result, true ) . '<br></pre></div>'; exit;
-                        // $carrier_fk = $result['CompanyFK'];
-                        // echo '<div><pre><br>result: <br>' . print_r($result, true) . '<br></pre></div>';
-                        if (in_array(intval($result['CompanyFK']), $carrierIds))
-                        {
-                            $carrierDetails = [];
+        foreach( $results as $key => $result )  {
+            if ( $key !== 'inputs' )
+            {
+                //echo '<div><pre><br>key: <br>' . print_r( $key, true ) . '<br></pre></div>';
+                // echo '<div><pre><br>result: <br>' . print_r( $result, true ) . '<br></pre></div>'; exit;
+                // $carrier_fk = $result['CompanyFK'];
+                // echo '<div><pre><br>result: <br>' . print_r($result, true) . '<br></pre></div>';
+                if (in_array(intval($result['CompanyFK']), $carrierIds))
+                {
+                    $carrierDetails = [];
 
-                            // echo "in array"; exit;
-                            $carrier = $carriersLookup[intval($result['CompanyFK'])];
-                            // echo '<div><pre><br>carrier: <br>' . print_r($carrier, true) . '<br></pre></div>';
-                            $result['underwriting_guidelines_link'] = $this->genUnderwritingGuidelinesLink($result['CompanyName']);
-                            $result['policy_details_link']          = $this->genPolicyDetailsLink($result['CompanyName']);
-                            $result['link1']                        = $result['underwriting_guidelines_link'];
-                            $result['link2']                        = $result['policy_details_link'];
+                    // echo "in array"; exit;
+                    $carrier = $carriersLookup[intval($result['CompanyFK'])];
+                    // echo '<div><pre><br>carrier: <br>' . print_r($carrier, true) . '<br></pre></div>';
+                    $result['underwriting_guidelines_link'] = $this->genUnderwritingGuidelinesLink($result['CompanyName']);
+                    $result['policy_details_link']          = $this->genPolicyDetailsLink($result['CompanyName']);
+                    $result['link1']                        = $result['underwriting_guidelines_link'];
+                    $result['link2']                        = $result['policy_details_link'];
 
-                            $carrierDetails['name']                 = $result['CompanyName'];
-                            $carrierDetails['address1']             = $result['Address1'];
-                            $carrierDetails['address2']             = $result['Address2'];
-                            $carrierDetails['addressHeader']        = $result['AddressHeader'];
-                            $carrierDetails['addressTrailer']       = $result['AddressTrailer'];
-                            $carrierDetails['assets']               = $result['Assets'];
-                            $carrierDetails['city']        			= $result['City'];
-                            $carrierDetails['disclaimer']        	= $result['Disclaimer'];
-                            $carrierDetails['insuranceInForce']     = $result['InsuranceInForce'];
-                            $carrierDetails['lastChangedOn']        = $result['LastChangedOn'];
-                            $carrierDetails['liabilities']        	= $result['Liabilities'];
-                            $carrierDetails['nwYorkCompany']        = $result['NewYorkCompany'];
-                            $carrierDetails['phone']        		= $result['PhoneNumber'];
-                            $carrierDetails['reviewedOn']       	= $result['ReviewedOn'];
-                            $carrierDetails['stateAbbreviation']    = $result['StateAbbreviation'];
-                            $carrierDetails['website']        		= $result['Website'];
-                            $carrierDetails['zipCode']       	    = $result['ZipCode'];
-                            $carrierDetails['reference']            = $result['Reference'];
+                    $carrierDetails['name']                 = $result['CompanyName'];
+                    $carrierDetails['address1']             = $result['Address1'];
+                    $carrierDetails['address2']             = $result['Address2'];
+                    $carrierDetails['addressHeader']        = $result['AddressHeader'];
+                    $carrierDetails['addressTrailer']       = $result['AddressTrailer'];
+                    $carrierDetails['assets']               = $result['Assets'];
+                    $carrierDetails['city']        			= $result['City'];
+                    $carrierDetails['disclaimer']        	= $result['Disclaimer'];
+                    $carrierDetails['insuranceInForce']     = $result['InsuranceInForce'];
+                    $carrierDetails['lastChangedOn']        = $result['LastChangedOn'];
+                    $carrierDetails['liabilities']        	= $result['Liabilities'];
+                    $carrierDetails['nwYorkCompany']        = $result['NewYorkCompany'];
+                    $carrierDetails['phone']        		= $result['PhoneNumber'];
+                    $carrierDetails['reviewedOn']       	= $result['ReviewedOn'];
+                    $carrierDetails['stateAbbreviation']    = $result['StateAbbreviation'];
+                    $carrierDetails['website']        		= $result['Website'];
+                    $carrierDetails['zipCode']       	    = $result['ZipCode'];
+                    $carrierDetails['reference']            = $result['Reference'];
 
-                            $result['CarrierDetails']               = $carrierDetails;
+                    $result['CarrierDetails']               = $carrierDetails;
 
-                            $filteredPolicies[]                     = $result;
+                    $filteredPolicies[]                     = $result;
 
-                        }
-                    }
                 }
             }
+        }
 
 
 
