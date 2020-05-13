@@ -189,7 +189,7 @@ class TermlifeQuoter {
 		// echo '<div><pre><br>filteredPolicies: <br>' . print_r( $filteredPolicies, true ) . '<br></pre></div>'; exit;
 
 		// return $filteredPolicies;
-		echo '<div><pre><br>result: <br>' . print_r( $result, true ) . '<br></pre></div>';
+		echo '<div><pre><br>result: <br>' . print_r( $filteredPolicies, true ) . '<br></pre></div>';
 
 	}
 
