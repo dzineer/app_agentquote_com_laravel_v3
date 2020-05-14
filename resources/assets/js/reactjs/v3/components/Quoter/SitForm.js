@@ -27,17 +27,17 @@ class SitForm extends Component {
             defaultState: '',
             quoteInfo: {
                 accountId: 3,
-                amount_to_quote: 50,
-                age: 50,
+                amount_to_quote: 0,
+                age: -1,
                 age_or_date: 'age',
-                term: 10,
-                birth_month: 1,
-                birth_day: 1,
-                birth_year: 1968,
+                term: -1,
+                birth_month: -1,
+                birth_day: -1,
+                birth_year: -1,
                 state: user_default_state,
                 premium: 0,
-                gender: 'M',
-                tobacco: 'N',
+                gender: -1,
+                tobacco: -1,
                 other: 0
             }
         };
