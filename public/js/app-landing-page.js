@@ -79866,14 +79866,39 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "isReady", function () {
-      return _this.state.quoteInfo.amount_to_quote !== 0;
+      if (_this.state.quoteInfo.state === -1) {
+        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose a State');
+        return false;
+      } else if (_this.state.quoteInfo.term === -1) {
+        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose a Term');
+        return false;
+      } else if (_this.state.quoteInfo.tobacco === -1) {
+        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose a Tobacco option');
+        return false;
+      } else if (_this.state.quoteInfo.gender === -1) {
+        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose a Gender');
+        return false;
+      } else if (_this.state.quoteInfo.age === -1) {
+        if (_this.state.quoteInfo.birth_month === -1) {
+          toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose an Age or a Month');
+          return false;
+        } else if (_this.state.quoteInfo.birth_day === -1) {
+          toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose an Age or a Day');
+          return false;
+        } else if (_this.state.quoteInfo.birth_year === -1) {
+          toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose an Age or a Year');
+          return false;
+        }
+      } else if (_this.state.quoteInfo.amount_to_quote !== 0) {
+        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must provide a Face Amount');
+        return false;
+      }
     });
 
     _defineProperty(_assertThisInitialized(_this), "onGetQuote", function (event) {
       event.preventDefault();
 
       if (!_this.isReady()) {
-        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must provide a Face Amount');
         return;
       } //this.axios_instance = axios.create();
       //delete this.axios_instance.defaults.headers.common['X-CSRF-TOKEN'];
@@ -79936,32 +79961,6 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
       });
       var json = JSON.stringify(object);
       var url = '/user/quote';
-
-      if (_this.state.quoteInfo.state === -1) {
-        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose a State');
-        return false;
-      } else if (_this.state.quoteInfo.term === -1) {
-        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose a Term');
-        return false;
-      } else if (_this.state.quoteInfo.tobacco === -1) {
-        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose a Tobacco option');
-        return false;
-      } else if (_this.state.quoteInfo.gender === -1) {
-        toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose a Gender');
-        return false;
-      } else if (_this.state.quoteInfo.age === -1) {
-        if (_this.state.quoteInfo.birth_month === -1) {
-          toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose an Age or a Month');
-          return false;
-        } else if (_this.state.quoteInfo.birth_day === -1) {
-          toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose an Age or a Day');
-          return false;
-        } else if (_this.state.quoteInfo.birth_year === -1) {
-          toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose an Age or a Year');
-          return false;
-        }
-      }
-
       fd.append("id", '3');
       fd.append("state", _this.state.quoteInfo.state);
       fd.append("month", _this.state.quoteInfo.birth_month);
