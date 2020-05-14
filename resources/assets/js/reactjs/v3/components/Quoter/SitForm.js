@@ -95,7 +95,7 @@ class SitForm extends Component {
 
         this.TermBlock = (
             <div className="col-md-6 mt-3 mb-2">
-                <select name="term" id="term" className="form-control form-control-lg" onChange={this.onBannerChange}>
+                <select name="term" id="term" className="form-control form-control-lg" onChange={this.onBannerChange} defaultValue={this.state.quoteInfo.term}>
                     <option value="-1">Choose Term</option>
                     { this.getTermYears() }
                 </select>
