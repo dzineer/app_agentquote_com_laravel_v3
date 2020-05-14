@@ -118,13 +118,14 @@ class TermlifeForm extends Component {
     TermBlock = () => {
         return <div className="col-md-6 mt-3 mb-2">
             <select name="term" id="term" className="form-control form-control-lg" onChange={this.onBannerChange}>
+                <option value="-1">Choose Term</option>
                 { this.getTermYears() }
             </select>
         </div>
     };
 
     tobaccos = () => {
-        return [{text: "Choose Tobacco", value: -1 }, {text: "Non-Tobacco", value: "N" }, {text: "Tobacco", value: "Y" }].map(item => {
+        return [{text: "Non-Tobacco", value: "N" }, {text: "Tobacco", value: "Y" }].map(item => {
             return <option key={item.value+item.text} value={item.value}>{item.text}</option>
         });
     };
@@ -133,13 +134,14 @@ class TermlifeForm extends Component {
         return <div className="col-md-6 mt-3 mb-2">
             <select name="tobacco" id="tobacco" className="form-control form-control-lg"
                     onChange={this.onBannerChange}>
+                <option value="-1">Choose Tobacco</option>
                 { this.tobaccos() }
             </select>
         </div>
     };
 
     genders = () => {
-        return [{text: "Choose Gender", value: -1 }, {text: "Male", value: "M" }, {text: "Female", value: "F" }].map(item => {
+        return [{text: "Male", value: "M" }, {text: "Female", value: "F" }].map(item => {
             return <option key={item.value+item.text} value={item.value}>{item.text}</option>
         });
     };
@@ -148,6 +150,7 @@ class TermlifeForm extends Component {
         return <div className="col-md-6 mt-3 mb-2">
             <select name="gender" id="gender" className="form-control form-control-lg"
                     onChange={this.onBannerChange}>
+                <option value="-1">Choose Gender</option>
                 { this.genders() }
             </select>
         </div>
@@ -750,7 +753,7 @@ class TermlifeForm extends Component {
     };
 
     getTermYears = () => {
-        return [-1, 10,15,20,25,30,35,40].map( n => {
+        return [10,15,20,25,30,35,40].map( n => {
             return <option key={n} value={n}>{n + " Years"}</option>
         })
     };

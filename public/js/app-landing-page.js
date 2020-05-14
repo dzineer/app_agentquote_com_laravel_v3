@@ -79521,14 +79521,13 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         id: "term",
         className: "form-control form-control-lg",
         onChange: _this.onBannerChange
-      }, _this.getTermYears()));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "-1"
+      }, "Choose Term"), _this.getTermYears()));
     });
 
     _defineProperty(_assertThisInitialized(_this), "tobaccos", function () {
       return [{
-        text: "Choose Tobacco",
-        value: -1
-      }, {
         text: "Non-Tobacco",
         value: "N"
       }, {
@@ -79550,14 +79549,13 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         id: "tobacco",
         className: "form-control form-control-lg",
         onChange: _this.onBannerChange
-      }, _this.tobaccos()));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "-1"
+      }, "Choose Tobacco"), _this.tobaccos()));
     });
 
     _defineProperty(_assertThisInitialized(_this), "genders", function () {
       return [{
-        text: "Choose Gender",
-        value: -1
-      }, {
         text: "Male",
         value: "M"
       }, {
@@ -79579,7 +79577,9 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         id: "gender",
         className: "form-control form-control-lg",
         onChange: _this.onBannerChange
-      }, _this.genders()));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "-1"
+      }, "Choose Gender"), _this.genders()));
     });
 
     _defineProperty(_assertThisInitialized(_this), "ages", function () {
@@ -80152,7 +80152,7 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "getTermYears", function () {
-      return [-1, 10, 15, 20, 25, 30, 35, 40].map(function (n) {
+      return [10, 15, 20, 25, 30, 35, 40].map(function (n) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
           key: n,
           value: n
