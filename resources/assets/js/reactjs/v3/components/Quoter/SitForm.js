@@ -375,14 +375,45 @@ class SitForm extends Component {
     };
 
     isReady = () => {
-        return this.state.quoteInfo.amount_to_quote !== 0;
+
+        if (this.state.quoteInfo.state === -1) {
+            toastr.error('You must choose a State');
+            return false;
+        }  else if (this.state.quoteInfo.term === -1) {
+            toastr.error('You must choose a Term');
+            return false;
+        } else if (this.state.quoteInfo.tobacco === -1) {
+            toastr.error('You must choose a Tobacco option');
+            return false;
+        } else if (this.state.quoteInfo.gender === -1) {
+            toastr.error('You must choose a Gender');
+            return false;
+        } else if (this.state.quoteInfo.age === -1) {
+            if (this.state.quoteInfo.birth_month === -1) {
+                toastr.error('You must choose an Age or a Month');
+                return false;
+            } else if (this.state.quoteInfo.birth_day === -1) {
+                toastr.error('You must choose an Age or a Day');
+                return false;
+            } else if (this.state.quoteInfo.birth_year === -1) {
+                toastr.error('You must choose an Age or a Year');
+                return false;
+            }
+        }
+
+        if(this.state.quoteInfo.amount_to_quote === 0) {
+            toastr.error('You must provide a Face Amount');
+            return false;
+        }
+
+        return true;
+
     };
 
     onGetQuote = event => {
         event.preventDefault();
 
         if (!this.isReady()) {
-            toastr.error('You must provide a Face Amount');
             return;
         }
 
