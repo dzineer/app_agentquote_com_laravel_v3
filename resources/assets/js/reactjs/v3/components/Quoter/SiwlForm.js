@@ -800,7 +800,8 @@ class SiwlForm extends Component {
     };
 
     getTermYears = () => {
-        return [{name: '10 Pay', value: 10},{name: '20 Pay', value: 10},{name: 'Life Pay', value: 121}].map( n => {
+        // {name: '10 Pay', value: 10},{name: '20 Pay', value: 10},{name: 'Life Pay', value: 121}
+        return [{name: 'Life Pay', value: 121}].map( n => {
             return <option key={n.value} value={n.value}>{n.name}</option>
         })
     };
