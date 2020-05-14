@@ -27,17 +27,17 @@ class SiwlForm extends Component {
             defaultState: '',
             quoteInfo: {
                 accountId: 3,
-                amount_to_quote: 50,
-                age: 50,
+                amount_to_quote: 0,
+                age: -1,
                 age_or_date: 'age',
-                term: 121,
-                birth_month: 1,
-                birth_day: 1,
-                birth_year: 1968,
+                term: -1,
+                birth_month: -1,
+                birth_day: -1,
+                birth_year: -1,
                 state: user_default_state,
                 premium: 0,
-                gender: 'M',
-                tobacco: 'N',
+                gender: -1,
+                tobacco: -1,
                 other: 0
             },
             capturedState: null
@@ -128,6 +128,7 @@ class SiwlForm extends Component {
         this.TermBlock = (
             <div className="col-md-6 mt-3 mb-2">
                 <select name="term" id="term" className="form-control form-control-lg" defaultValue={121} onChange={this.onBannerChange}>
+                    <option value="-1">Choose Term</option>
                     { this.getTermYears() }
                 </select>
             </div>
@@ -140,6 +141,7 @@ class SiwlForm extends Component {
         this.tobaccoBlock = (
             <div className="col-md-6 mt-3 mb-2">
                 <select name="tobacco" id="tobacco" className="form-control form-control-lg" onChange={this.onBannerChange}>
+                    <option value="-1">Choose Tobacco</option>
                     { this.tobaccos }
                 </select>
             </div>
@@ -152,6 +154,7 @@ class SiwlForm extends Component {
         this.genderBlock = (
             <div className="col-md-6 mt-3 mb-2">
                 <select name="gender" id="gender" className="form-control form-control-lg" onChange={this.onBannerChange}>
+                    <option value="-1">Choose Gender</option>
                     { this.genders }
                 </select>
             </div>
@@ -162,7 +165,8 @@ class SiwlForm extends Component {
         });
 
         this.ageBlock = (
-            <select name="age" id="age" className="form-control form-control-lg"  defaultValue="50" onChange={this.onAgeChange}>
+            <select name="age" id="age" className="form-control form-control-lg"  defaultValue="-1" onChange={this.onAgeChange}>
+                <option value="-1">Choose Age</option>
                 { this.ages }
             </select>
         );
@@ -400,7 +404,39 @@ class SiwlForm extends Component {
     };
 
     isReady = () => {
-        return this.state.quoteInfo.amount_to_quote !== 0;
+
+        if (this.state.quoteInfo.state === -1) {
+            toastr.error('You must choose a State');
+            return false;
+        }  else if (this.state.quoteInfo.term === -1) {
+            toastr.error('You must choose a Term');
+            return false;
+        } else if (this.state.quoteInfo.tobacco === -1) {
+            toastr.error('You must choose a Tobacco option');
+            return false;
+        } else if (this.state.quoteInfo.gender === -1) {
+            toastr.error('You must choose a Gender');
+            return false;
+        } else if (this.state.quoteInfo.age === -1) {
+            if (this.state.quoteInfo.birth_month === -1) {
+                toastr.error('You must choose an Age or a Month');
+                return false;
+            } else if (this.state.quoteInfo.birth_day === -1) {
+                toastr.error('You must choose an Age or a Day');
+                return false;
+            } else if (this.state.quoteInfo.birth_year === -1) {
+                toastr.error('You must choose an Age or a Year');
+                return false;
+            }
+        }
+
+        if(this.state.quoteInfo.amount_to_quote === 0) {
+            toastr.error('You must provide a Face Amount');
+            return false;
+        }
+
+        return true;
+
     };
 
     onGetQuote = event => {
@@ -408,7 +444,6 @@ class SiwlForm extends Component {
         event.preventDefault();
 
         if (!this.isReady()) {
-            toastr.error('You must provide a Face Amount');
             return;
         }
 
