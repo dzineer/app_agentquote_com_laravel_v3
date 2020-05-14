@@ -141,6 +141,7 @@ class SitForm extends Component {
 
         this.premiums = [{value: 0, text: 'Annual Premium'},{value: 1, text: 'Monthly Premiums'},{value: 2, text: 'Quarterly Premiums'},{value: 3, text: 'Semiannual Premiums'}].map( p => {
             return <option key={p.value+p.text} value={p.value}>{p.text}</option>
+
         });
 
         this.premiumBlock = (
