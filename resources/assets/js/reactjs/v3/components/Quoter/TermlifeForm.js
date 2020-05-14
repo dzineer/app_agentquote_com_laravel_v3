@@ -23,7 +23,7 @@ class TermlifeForm extends Component {
             adContainer: '',
             quoteInfo: {
                 accountId: 3,
-                amount_to_quote: 50,
+                amount_to_quote: 0,
                 age: -1,
                 age_or_date: 'age',
                 term: -1,
@@ -528,6 +528,31 @@ class TermlifeForm extends Component {
         });
         let json = JSON.stringify(object);
         let url = '/user/quote';
+
+        if (this.state.quoteInfo.state === -1) {
+            toastr.error('You must choose a State');
+            return false;
+        }  else if (this.state.quoteInfo.term === -1) {
+            toastr.error('You must choose a Term');
+            return false;
+        } else if (this.state.quoteInfo.tobacco === -1) {
+            toastr.error('You must choose a Tobacco option');
+            return false;
+        } else if (this.state.quoteInfo.gender === -1) {
+            toastr.error('You must choose a Gender');
+            return false;
+        } else if (this.state.quoteInfo.age === -1) {
+            if (this.state.quoteInfo.birth_month === -1) {
+                toastr.error('You must choose an Age or a Month');
+                return false;
+            } else if (this.state.quoteInfo.birth_day === -1) {
+                toastr.error('You must choose an Age or a Day');
+                return false;
+            } else if (this.state.quoteInfo.birth_year === -1) {
+                toastr.error('You must choose an Age or a Year');
+                return false;
+            }
+        }
 
         fd.append("id" , '3');
         fd.append("state" , this.state.quoteInfo.state);
