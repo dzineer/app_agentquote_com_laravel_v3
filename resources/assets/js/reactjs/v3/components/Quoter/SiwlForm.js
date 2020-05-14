@@ -80,11 +80,11 @@ class SiwlForm extends Component {
                     <div className="row">
                         <div id="amount_container" className="col-md-5 mt-2 mb-2">
                                 <input type="text" name="amount" id="amount" className="form-control form-control-lg"
-                                       placeholder="Amount" onKeyUp={this.onAmountChange}/>
+                                       placeholder="Amount" onKeyUp={this.onAmountChange} defaultValue={this.state.quoteInfo.amount_to_quote !== 0 ? this.state.quoteInfo.amount_to_quote : ''} />
                         </div>
 
                         <div id="benefit_container" className="col-md-7 mt-2 mb-2">
-                            <select name="benefit" id="benefit" className="form-control form-control-lg" onChange={this.onAmountChange}>
+                            <select name="benefit" id="benefit" className="form-control form-control-lg" onChange={this.onAmountChange} >
                                 <option value="-1">Choose Face Amount</option>
                                 { this.generateBenefitOptions() }
                             </select>
@@ -127,7 +127,7 @@ class SiwlForm extends Component {
 
         this.TermBlock = (
             <div className="col-md-6 mt-3 mb-2">
-                <select name="term" id="term" className="form-control form-control-lg" defaultValue={121} onChange={this.onBannerChange}>
+                <select name="term" id="term" className="form-control form-control-lg" defaultValue={this.state.quoteInfo.term} onChange={this.onBannerChange}>
                     <option value="-1">Choose Term</option>
                     { this.getTermYears() }
                 </select>
@@ -140,7 +140,7 @@ class SiwlForm extends Component {
 
         this.tobaccoBlock = (
             <div className="col-md-6 mt-3 mb-2">
-                <select name="tobacco" id="tobacco" className="form-control form-control-lg" onChange={this.onBannerChange}>
+                <select name="tobacco" id="tobacco" className="form-control form-control-lg" onChange={this.onBannerChange} defaultValue={this.state.quoteInfo.tobacco}>
                     <option value="-1">Choose Tobacco</option>
                     { this.tobaccos }
                 </select>
@@ -153,7 +153,7 @@ class SiwlForm extends Component {
 
         this.genderBlock = (
             <div className="col-md-6 mt-3 mb-2">
-                <select name="gender" id="gender" className="form-control form-control-lg" onChange={this.onBannerChange}>
+                <select name="gender" id="gender" className="form-control form-control-lg" onChange={this.onBannerChange} defaultValue={this.state.quoteInfo.gender}>
                     <option value="-1">Choose Gender</option>
                     { this.genders }
                 </select>
@@ -165,7 +165,7 @@ class SiwlForm extends Component {
         });
 
         this.ageBlock = (
-            <select name="age" id="age" className="form-control form-control-lg"  defaultValue="-1" onChange={this.onAgeChange}>
+            <select name="age" id="age" className="form-control form-control-lg"  defaultValue={this.state.quoteInfo.age} onChange={this.onAgeChange}>
                 <option value="-1">Choose Age</option>
                 { this.ages }
             </select>

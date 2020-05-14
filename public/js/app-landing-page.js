@@ -78146,8 +78146,7 @@ var AffiliateAd = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
 
     _defineProperty(_assertThisInitialized(_this), "getBody", function () {
-      debugger;
-
+      // debugger;
       if (_this.props.ad.message === 'null') {
         return '';
       }
@@ -79499,7 +79498,8 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         id: "amount",
         className: "form-control form-control-lg",
         placeholder: "Amount",
-        onKeyUp: _this.onAmountChange
+        onKeyUp: _this.onAmountChange,
+        defaultValue: _this.state.quoteInfo.amount_to_quote !== 0 ? _this.state.quoteInfo.amount_to_quote : ''
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-7 mt-2 mb-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
@@ -79520,7 +79520,8 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         name: "term",
         id: "term",
         className: "form-control form-control-lg",
-        onChange: _this.onBannerChange
+        onChange: _this.onBannerChange,
+        defaultValue: _this.state.quoteInfo.term
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "-1"
       }, "Choose Term"), _this.getTermYears()));
@@ -79548,7 +79549,8 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         name: "tobacco",
         id: "tobacco",
         className: "form-control form-control-lg",
-        onChange: _this.onBannerChange
+        onChange: _this.onBannerChange,
+        defaultValue: _this.state.quoteInfo.tobacco
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "-1"
       }, "Choose Tobacco"), _this.tobaccos()));
@@ -79576,7 +79578,8 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         name: "gender",
         id: "gender",
         className: "form-control form-control-lg",
-        onChange: _this.onBannerChange
+        onChange: _this.onBannerChange,
+        defaultValue: _this.state.quoteInfo.gender
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "-1"
       }, "Choose Gender"), _this.genders()));
@@ -79596,7 +79599,7 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         name: "age",
         id: "age",
         className: "form-control form-control-lg",
-        defaultValue: "-1",
+        defaultValue: _this.state.quoteInfo.age,
         onChange: _this.onAgeChange
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "-1"

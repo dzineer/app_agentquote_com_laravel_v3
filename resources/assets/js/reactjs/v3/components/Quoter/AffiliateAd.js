@@ -24,7 +24,7 @@ class AffiliateAd extends Component {
 
     getBody = () => {
 
-        debugger;
+        // debugger;
 
         if (this.props.ad.message === 'null') {
             return '';
