@@ -124,7 +124,7 @@ class TermlifeForm extends Component {
     };
 
     tobaccos = () => {
-        return [{text: "Non-Tobacco", value: "N" }, {text: "Tobacco", value: "Y" }].map(item => {
+        return [{text: "Choose Tobacco", value: -1 }, {text: "Non-Tobacco", value: "N" }, {text: "Tobacco", value: "Y" }].map(item => {
             return <option key={item.value+item.text} value={item.value}>{item.text}</option>
         });
     };
@@ -139,7 +139,7 @@ class TermlifeForm extends Component {
     };
 
     genders = () => {
-        return [{text: "Male", value: "M" }, {text: "Female", value: "F" }].map(item => {
+        return [{text: "Choose Gender", value: -1 }, {text: "Male", value: "M" }, {text: "Female", value: "F" }].map(item => {
             return <option key={item.value+item.text} value={item.value}>{item.text}</option>
         });
     };
@@ -750,7 +750,7 @@ class TermlifeForm extends Component {
     };
 
     getTermYears = () => {
-        return [10,15,20,25,30,35,40].map( n => {
+        return [-1, 10,15,20,25,30,35,40].map( n => {
             return <option key={n} value={n}>{n + " Years"}</option>
         })
     };

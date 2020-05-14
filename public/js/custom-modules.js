@@ -36268,7 +36268,7 @@ __webpack_require__(/*! ./bootstrap-custom-modules */ "./resources/assets/js/rea
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote-same-product-support/resources/assets/js/reactjs/v3/custom-modules.js */"./resources/assets/js/reactjs/v3/custom-modules.js");
+module.exports = __webpack_require__(/*! /Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote-same-product-support-v3/resources/assets/js/reactjs/v3/custom-modules.js */"./resources/assets/js/reactjs/v3/custom-modules.js");
 
 
 /***/ })

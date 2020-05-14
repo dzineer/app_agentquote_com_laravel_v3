@@ -79526,6 +79526,9 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "tobaccos", function () {
       return [{
+        text: "Choose Tobacco",
+        value: -1
+      }, {
         text: "Non-Tobacco",
         value: "N"
       }, {
@@ -79552,6 +79555,9 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
 
     _defineProperty(_assertThisInitialized(_this), "genders", function () {
       return [{
+        text: "Choose Gender",
+        value: -1
+      }, {
         text: "Male",
         value: "M"
       }, {
@@ -80146,7 +80152,7 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "getTermYears", function () {
-      return [10, 15, 20, 25, 30, 35, 40].map(function (n) {
+      return [-1, 10, 15, 20, 25, 30, 35, 40].map(function (n) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
           key: n,
           value: n
@@ -86593,7 +86599,7 @@ var UnderwrittenGuideline = function UnderwrittenGuideline(_ref) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote-same-product-support/resources/assets/js/reactjs/v3/app-landing-page.js */"./resources/assets/js/reactjs/v3/app-landing-page.js");
+module.exports = __webpack_require__(/*! /Users/niran/Code/AgentQuote/Projects/AQ2E/app-agentquote-same-product-support-v3/resources/assets/js/reactjs/v3/app-landing-page.js */"./resources/assets/js/reactjs/v3/app-landing-page.js");
 
 
 /***/ })
