@@ -30,7 +30,7 @@ class SiwlForm extends Component {
                 amount_to_quote: 0,
                 age: -1,
                 age_or_date: 'age',
-                term: -1,
+                term: 121,
                 birth_month: -1,
                 birth_day: -1,
                 birth_year: -1,
