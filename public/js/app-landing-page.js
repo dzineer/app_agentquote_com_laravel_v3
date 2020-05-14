@@ -79889,7 +79889,9 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
           toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must choose an Age or a Year');
           return false;
         }
-      } else if (_this.state.quoteInfo.amount_to_quote === 0) {
+      }
+
+      if (_this.state.quoteInfo.amount_to_quote === 0) {
         toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must provide a Face Amount');
         return false;
       }

@@ -477,7 +477,9 @@ class TermlifeForm extends Component {
                 toastr.error('You must choose an Age or a Year');
                 return false;
             }
-        } else if(this.state.quoteInfo.amount_to_quote === 0) {
+        }
+
+        if(this.state.quoteInfo.amount_to_quote === 0) {
             toastr.error('You must provide a Face Amount');
             return false;
         }
