@@ -108,6 +108,7 @@ class SitForm extends Component {
         this.tobaccoBlock = (
             <div className="col-md-6 mt-3 mb-2">
                 <select name="tobacco" id="tobacco" className="form-control form-control-lg" onChange={this.onBannerChange}>
+                    <option value="-1">Choose Tobacco</option>
                     { this.tobaccos }
                 </select>
             </div>
@@ -120,6 +121,7 @@ class SitForm extends Component {
         this.genderBlock = (
             <div className="col-md-6 mt-3 mb-2">
                 <select name="gender" id="gender" className="form-control form-control-lg" onChange={this.onBannerChange}>
+                    <option value="-1">Choose Gender</option>
                     { this.genders }
                 </select>
             </div>
@@ -130,7 +132,8 @@ class SitForm extends Component {
         });
 
         this.ageBlock = (
-            <select name="age" id="age" className="form-control form-control-lg"  defaultValue="50" onChange={this.onAgeChange}>
+            <select name="age" id="age" className="form-control form-control-lg"  defaultValue="-1" onChange={this.onAgeChange}>
+                <option value="-1">Choose Age</option>
                 { this.ages }
             </select>
         );
@@ -166,6 +169,7 @@ class SitForm extends Component {
                                     className="form-control form-control-lg fill-parent aq2e-month select-box-lg zero-margins select-non-lg"
                                     onChange={this.onBannerChange}
                                     defaultValue={parseInt(this.state.quoteInfo.birth_month)}>
+                                <option value="-1">Month</option>
                                 {this.generateCalendarOptions('month')}
                             </select>
                         </div>
@@ -175,6 +179,7 @@ class SitForm extends Component {
                                     className="form-control form-control-lg fill-parent aq2e-day select-box-lg zero-margins select-non-lg"
                                     onChange={this.onBannerChange}
                                     defaultValue={parseInt(this.state.quoteInfo.birth_day)}>
+                                <option value="-1">Day</option>
                                 {this.generateCalendarOptions('day')}
                             </select>
                         </div>
@@ -184,6 +189,7 @@ class SitForm extends Component {
                                     className="form-control form-control-lg fill-parent aq2e-year select-box-lg zero-margins select-non-lg"
                                     onChange={this.onBannerChange}
                                     defaultValue={parseInt(this.state.quoteInfo.birth_year) || 1968}>
+                                <option value="-1">Year</option>
                                 {this.generateCalendarOptions('year')}
                             </select>
                         </div>

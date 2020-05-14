@@ -202,6 +202,7 @@ class SiwlForm extends Component {
                                     className="form-control form-control-lg fill-parent aq2e-month select-box-lg zero-margins select-non-lg"
                                     onChange={this.onBannerChange}
                                     defaultValue={parseInt(this.state.quoteInfo.birth_month)}>
+                                <option value="-1">Month</option>
                                 {this.generateCalendarOptions('month')}
                             </select>
                         </div>
@@ -211,6 +212,7 @@ class SiwlForm extends Component {
                                     className="form-control form-control-lg fill-parent aq2e-day select-box-lg zero-margins select-non-lg"
                                     onChange={this.onBannerChange}
                                     defaultValue={parseInt(this.state.quoteInfo.birth_day)}>
+                                <option value="-1">Day</option>
                                 {this.generateCalendarOptions('day')}
                             </select>
                         </div>
@@ -220,6 +222,7 @@ class SiwlForm extends Component {
                                     className="form-control form-control-lg fill-parent aq2e-year select-box-lg zero-margins select-non-lg"
                                     onChange={this.onBannerChange}
                                     defaultValue={parseInt(this.state.quoteInfo.birth_year) || 1968}>
+                                <option value="-1">Year</option>
                                 {this.generateCalendarOptions('year')}
                             </select>
                         </div>
