@@ -79895,6 +79895,8 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         toastr__WEBPACK_IMPORTED_MODULE_4___default.a.error('You must provide a Face Amount');
         return false;
       }
+
+      return true;
     });
 
     _defineProperty(_assertThisInitialized(_this), "onGetQuote", function (event) {

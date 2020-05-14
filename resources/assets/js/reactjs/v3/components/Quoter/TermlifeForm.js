@@ -484,6 +484,8 @@ class TermlifeForm extends Component {
             return false;
         }
 
+        return true;
+
     };
 
     onGetQuote = event => {
