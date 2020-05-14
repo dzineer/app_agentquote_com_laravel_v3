@@ -29,7 +29,7 @@ class TermlifeForm extends Component {
                 term: -1,
                 birth_month: -1,
                 birth_day: -1,
-                birth_year: 1968,
+                birth_year: -1,
                 state: user_default_state,
                 premium: 0,
                 gender: -1,
