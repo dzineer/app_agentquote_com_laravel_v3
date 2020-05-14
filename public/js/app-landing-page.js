@@ -79470,7 +79470,7 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "stateBlock", function () {
-      debugger;
+      // debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-6 mt-3 mb-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
@@ -80065,8 +80065,7 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
             });
             quote_items = quote_items.filter(function (quote_item) {
               return quote_item.props.item.CompanyFK !== ads.underwritten.company_id;
-            });
-            debugger;
+            }); // debugger;
           }
 
           var styleAd = {
@@ -80273,8 +80272,7 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
   _createClass(TermlifeForm, [{
     key: "componentWillMount",
     value: function componentWillMount() {
-      debugger;
-
+      // debugger;
       if (this.props.capturedState !== null) {
         var data = this.props.capturedState;
         this.setState({

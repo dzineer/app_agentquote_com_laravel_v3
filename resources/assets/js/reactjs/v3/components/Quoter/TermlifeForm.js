@@ -61,7 +61,7 @@ class TermlifeForm extends Component {
     }
 
     componentWillMount() {
-        debugger;
+        // debugger;
 
         if (this.props.capturedState !== null) {
             let data = this.props.capturedState;
@@ -83,7 +83,7 @@ class TermlifeForm extends Component {
     };
 
     stateBlock  = () => {
-        debugger;
+        // debugger;
         return <div className="col-md-6 mt-3 mb-2">
             <select className="form-control form-control-lg" name="state" id="state" onChange={this.onStateChange}
                     defaultValue={ this.state.quoteInfo.state || user_default_state}>
@@ -669,7 +669,7 @@ class TermlifeForm extends Component {
                         return quote_item.props.item.CompanyFK !== ads.underwritten.company_id;
                     });
 
-                    debugger;
+                    // debugger;
 
                 }
 
