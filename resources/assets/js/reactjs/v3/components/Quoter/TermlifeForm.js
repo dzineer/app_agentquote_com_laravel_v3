@@ -163,7 +163,7 @@ class TermlifeForm extends Component {
     };
 
     ageBlock = () => {
-        return <select name="age" id="age" className="form-control form-control-lg"  defaultValue="50" onChange={this.onAgeChange}>
+        return <select name="age" id="age" className="form-control form-control-lg"  defaultValue="-1" onChange={this.onAgeChange}>
             <option value="-1">Choose Age</option>
             { this.ages() }
         </select>

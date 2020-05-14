@@ -79596,7 +79596,7 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         name: "age",
         id: "age",
         className: "form-control form-control-lg",
-        defaultValue: "50",
+        defaultValue: "-1",
         onChange: _this.onAgeChange
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         value: "-1"
