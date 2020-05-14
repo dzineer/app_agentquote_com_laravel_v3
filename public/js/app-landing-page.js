@@ -79655,7 +79655,9 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         className: "form-control form-control-lg fill-parent aq2e-month select-box-lg zero-margins select-non-lg",
         onChange: _this.onBannerChange,
         defaultValue: parseInt(_this.state.quoteInfo.birth_month)
-      }, _this.generateCalendarOptions('month'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "-1"
+      }, "Month"), _this.generateCalendarOptions('month'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-xs-12 col-sm-12 col-md-2 col-lg-2 mt-3 mb-2 m-l-0"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         id: "birth_day",
@@ -79666,7 +79668,9 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         className: "form-control form-control-lg fill-parent aq2e-day select-box-lg zero-margins select-non-lg",
         onChange: _this.onBannerChange,
         defaultValue: parseInt(_this.state.quoteInfo.birth_day)
-      }, _this.generateCalendarOptions('day'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "-1"
+      }, "Day"), _this.generateCalendarOptions('day'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-3 mb-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         id: "birth_year",
@@ -79674,7 +79678,9 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
         className: "form-control form-control-lg fill-parent aq2e-year select-box-lg zero-margins select-non-lg",
         onChange: _this.onBannerChange,
         defaultValue: parseInt(_this.state.quoteInfo.birth_year) || 1968
-      }, _this.generateCalendarOptions('year'))))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "-1"
+      }, "Year"), _this.generateCalendarOptions('year'))))));
     });
 
     _defineProperty(_assertThisInitialized(_this), "generateQuoteBlock", function () {
@@ -80200,16 +80206,16 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
       quoteInfo: {
         accountId: 3,
         amount_to_quote: 50,
-        age: 50,
+        age: -1,
         age_or_date: 'age',
-        term: 10,
-        birth_month: 1,
-        birth_day: 1,
+        term: -1,
+        birth_month: -1,
+        birth_day: -1,
         birth_year: 1968,
         state: user_default_state,
         premium: 0,
-        gender: 'M',
-        tobacco: 'N',
+        gender: -1,
+        tobacco: -1,
         other: 0
       }
     };

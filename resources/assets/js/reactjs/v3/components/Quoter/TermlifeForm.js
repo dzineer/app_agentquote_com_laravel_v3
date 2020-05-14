@@ -24,16 +24,16 @@ class TermlifeForm extends Component {
             quoteInfo: {
                 accountId: 3,
                 amount_to_quote: 50,
-                age: 50,
+                age: -1,
                 age_or_date: 'age',
-                term: 10,
-                birth_month: 1,
-                birth_day: 1,
+                term: -1,
+                birth_month: -1,
+                birth_day: -1,
                 birth_year: 1968,
                 state: user_default_state,
                 premium: 0,
-                gender: 'M',
-                tobacco: 'N',
+                gender: -1,
+                tobacco: -1,
                 other: 0
             }
         };
@@ -250,6 +250,7 @@ class TermlifeForm extends Component {
                                 className="form-control form-control-lg fill-parent aq2e-month select-box-lg zero-margins select-non-lg"
                                 onChange={this.onBannerChange}
                                 defaultValue={parseInt(this.state.quoteInfo.birth_month)}>
+                            <option value="-1">Month</option>
                             {this.generateCalendarOptions('month')}
                         </select>
                     </div>
@@ -259,6 +260,7 @@ class TermlifeForm extends Component {
                                 className="form-control form-control-lg fill-parent aq2e-day select-box-lg zero-margins select-non-lg"
                                 onChange={this.onBannerChange}
                                 defaultValue={parseInt(this.state.quoteInfo.birth_day)}>
+                            <option value="-1">Day</option>
                             {this.generateCalendarOptions('day')}
                         </select>
                     </div>
@@ -268,6 +270,7 @@ class TermlifeForm extends Component {
                                 className="form-control form-control-lg fill-parent aq2e-year select-box-lg zero-margins select-non-lg"
                                 onChange={this.onBannerChange}
                                 defaultValue={parseInt(this.state.quoteInfo.birth_year) || 1968}>
+                            <option value="-1">Year</option>
                             {this.generateCalendarOptions('year')}
                         </select>
                     </div>
