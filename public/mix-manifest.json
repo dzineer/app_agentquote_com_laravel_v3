@@ -1,13 +1,13 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/templates/landing-pages/v1/css/style.css": "/templates/landing-pages/v1/css/style.css",
-    "/templates/landing-pages/v1/css/app.css": "/templates/landing-pages/v1/css/app.css",
-    "/templates/landing-pages/v2/css/dz-fa-5.css": "/templates/landing-pages/v2/css/dz-fa-5.css",
-    "/css/landing.css": "/css/landing.css",
-    "/css/tw-bo.css": "/css/tw-bo.css",
-    "/js/app-landing-page.js": "/js/app-landing-page.js",
-    "/js/app-support.js": "/js/app-support.js",
-    "/js/custom-modules.js": "/js/custom-modules.js",
-    "/js/landing.js": "/js/landing.js"
+    "/js/app.js": "/js/app.js?id=e7698dce8f0137d38d1c",
+    "/css/app.css": "/css/app.css?id=4ecccf6129e86416b0a7",
+    "/templates/landing-pages/v1/css/style.css": "/templates/landing-pages/v1/css/style.css?id=96820dc012533028a8f0",
+    "/templates/landing-pages/v1/css/app.css": "/templates/landing-pages/v1/css/app.css?id=6f3d56b6d4bdb4b4342c",
+    "/templates/landing-pages/v2/css/dz-fa-5.css": "/templates/landing-pages/v2/css/dz-fa-5.css?id=25d589d210cbe59436c8",
+    "/css/landing.css": "/css/landing.css?id=c296574f106cd2fa84af",
+    "/css/tw-bo.css": "/css/tw-bo.css?id=9cda1d411d8d6ac55de9",
+    "/js/app-landing-page.js": "/js/app-landing-page.js?id=ae18958de9aa052c2ffc",
+    "/js/app-support.js": "/js/app-support.js?id=42c009ba134347d7703c",
+    "/js/custom-modules.js": "/js/custom-modules.js?id=48fc6653df3b603be757",
+    "/js/landing.js": "/js/landing.js?id=588d1092cbf7b03e871f"
 }
