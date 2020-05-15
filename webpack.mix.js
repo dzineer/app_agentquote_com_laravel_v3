@@ -18,6 +18,9 @@ mix.options({
  |
  */
 
+const date = new Date();
+const timestamp = date.getTime();
+
 const version = "v3"
 mix
     .react('resources/assets/js/reactjs/' + version + '/app.js', 'public/js')
