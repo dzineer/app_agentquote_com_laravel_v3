@@ -1,8 +1,8 @@
 <?php
 
 return [
-  'global' => 3,
-  'css' => 3,
-  'js' => 3,
-  'app' => 3
+  'global' => 4,
+  'css' => 4,
+  'js' => 4,
+  'app' => 4
 ];
