@@ -30,3 +30,21 @@ if (! function_exists('asset_w_version')) {
         return $path;
     }
 }
+
+if (! function_exists('asset_w_version2')) {
+    /**
+     * Generate an asset path for the application.
+     *
+     * @param $type
+     * @param string $path
+     * @return string
+     */
+    function asset_w_version2($type, $path)
+    {
+        $date = new DateTime();
+        $timestamp = $date->getTimestamp();
+
+        $path = asset($path) . '?v=' . $timestamp;
+        return $path;
+    }
+}

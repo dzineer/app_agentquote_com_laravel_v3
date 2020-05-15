@@ -105,12 +105,17 @@
 
 @yield('adminlte_js')
 
+<script>
+    var date = new Date();
+    var timestamp = date.getTime();
+</script>
+
 <script type="text/javascript" src="{{ asset('/js/popper.min.js') }}"></script>
 <script src="{{ asset('vendor/adminlte/vendor/bootstrap/dist/4.1.3/js/bootstrap.js') }}"></script>
 <script src="{{ asset('/vendor/toastr/dist/js/toastr.js') }}"></script>
-<script type="text/javascript" src="{{ asset_w_version('app', '/js/app.js') }}" defer></script>
+<script type="text/javascript" src="{{ asset_w_version2('app', '/js/app.js' ) }}" defer></script>
 
-<script type="text/javascript" src="{{ asset_w_version('app', '/js/app-support.js') }}" defer></script>
+<script type="text/javascript" src="{{ asset_w_version2('app', '/js/app-support.js') }}" defer></script>
 
 <div id="basic-support-popup"></div>
 
