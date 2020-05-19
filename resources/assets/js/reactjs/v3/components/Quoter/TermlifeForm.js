@@ -689,7 +689,7 @@ class TermlifeForm extends Component {
                     }
                 };
 
-                let sponsoredImage = preferredQuoteResult.length > 0 ?
+                let sponsoredImage =  preferredQuoteResult && preferredQuoteResult.length > 0 ?
                     <div className="row">
                         <div className="col-md-2" style={ styleAd.sponsored.container } >
                             <img id="sponsored" src="/images/sponsored.svg" alt="sponsored image" />

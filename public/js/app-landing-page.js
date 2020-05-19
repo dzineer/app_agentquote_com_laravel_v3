@@ -80085,7 +80085,7 @@ var TermlifeForm = /*#__PURE__*/function (_Component) {
               }
             }
           };
-          var sponsoredImage = preferredQuoteResult.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          var sponsoredImage = preferredQuoteResult && preferredQuoteResult.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "row"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "col-md-2",
