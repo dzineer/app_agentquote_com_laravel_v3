@@ -114,6 +114,8 @@ class AquoterGateway {
 
         $result = curl_exec($curl_connection);// perform our request
 
+        echo "curl_exec: " . print_r($result, true);
+
         curl_close($curl_connection);// close the connection
 
         return $result;

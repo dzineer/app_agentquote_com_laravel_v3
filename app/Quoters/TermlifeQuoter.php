@@ -220,7 +220,7 @@ class TermlifeQuoter {
 
         $quote = $gw->getQuote( $mappedFields );
 
-        echo "<br>quote: " . print_r($quote,true);
+        // echo "<br>quote: " . print_r($quote,true);
 
         if ( !empty($_GET['debug']) && $_GET['debug'] == 'on' ) {
             echo '<br>quote: <br>' . print_r( json_decode($quote, true), true ) . '<br></pre>';
