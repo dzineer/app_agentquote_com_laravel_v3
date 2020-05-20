@@ -56,7 +56,7 @@
                     <div class="tw-flex tw-w-full tw-justify-start tw-items-center">
                         <p class="max-xs:tw-flex max-xs:tw-justify-between tw-text-base tw-my-1 max-xs:tw-w-full">
                             <span class="tw-pr-16">© <span class="copyright-year">2020</span> <a href="/" role="link" aria-label="Go to home page"><span class="tw-text-primary">Agent Quote Inc.</span></a></span>
-                            <span><a href="/privacy" aria-label="View our privacy & policy details">Privacy Policy</a></span>
+                            <span><a href="https://quotedirect.org/index.php/privacy-policy" target="_blank" aria-label="View our privacy & policy details">Privacy Policy</a></span>
                         </p>
                     </div>
                 </div>
