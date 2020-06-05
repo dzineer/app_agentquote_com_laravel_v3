@@ -24,7 +24,7 @@ export default {
 <style scoped>
 
     .brand-logo {
-        max-width: 80% !important;
+        max-width: 100% !important;
         /*
                     margin-top: 1.8rem;
         */
