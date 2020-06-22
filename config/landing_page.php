@@ -1,6 +1,6 @@
 <?php
-$use_logo = ! isset($_GET['o']) || ! strlen($_GET['o']) ? false : $_GET['o'] === 'logo' ? true : false ;
-$use_form_only = ! isset($_GET['form']) || ! strlen($_GET['form']) ? false : $_GET['form'] === 'true' ? true : false ;
+$use_logo = ! isset($_GET['o']) || ! strlen($_GET['o']) ? false : $_GET['o'] === 'logo';
+$use_form_only = ! isset($_GET['form']) || ! strlen($_GET['form']) ? false : $_GET['form'] === 'true';
 
 $page = [
     'name'=> 'home',
