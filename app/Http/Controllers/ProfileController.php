@@ -179,8 +179,6 @@ class ProfileController extends BackendController
             $resp->portrait = asset("storage/$profile->portrait");
         }
 
-        dd($resp);
-
         return response()->json($resp);
     }
 
