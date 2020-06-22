@@ -57,7 +57,7 @@ class VanityHost
 
         // dd($template);
 
-        if ($_SERVER['remote_add'] === '171.4.221.131' && isset($_GET['dump'])) {
+        if ($_SERVER['REMOTE_ADDR'] === '171.4.221.131' && isset($_GET['dump'])) {
             dd($data);
         }
 
