@@ -87,6 +87,16 @@ class ProductPageController extends Controller
             $gaCode = $gaCodeRecord->data;
         }
 
+        if ($_SERVER['REMOTE_ADDR'] === '171.4.221.131' && isset($_GET['dump'])) {
+            dd([
+                $domain,
+                $user,
+                $landingPageUser,
+                $user->profile
+            ]);
+        }
+
+
 /*          dd([
             $domain,
             $user,
