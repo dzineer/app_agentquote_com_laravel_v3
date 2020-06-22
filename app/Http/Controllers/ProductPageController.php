@@ -81,7 +81,7 @@ class ProductPageController extends Controller
         $landingPageUser = $landingPageUserRecord;
 
         $gaCode = '';
-        $gaCodeRecord = UserGoogleAnalytic::where(['user_id' => $user->id])->first();
+        $gaCodeRecord = UserGoogleAnalytic::where(['user_id' => $user->id])->get();
 
         if ($gaCodeRecord) {
             $gaCode = $gaCodeRecord->data;
