@@ -72,15 +72,13 @@ class ProductPageController extends Controller
             return abort( 405, 'Page Not Found!' );
         }
 
-        $landingPageUserRecord = LandingPageUser::where(['user_id' => $user->id, 'active' => 1])->first();
+        $landingPageUser = LandingPageUser::where(['user_id' => $user->id, 'active' => 1])->first();
 
-        dd([$user, $landingPageUserRecord]);
+        // dd([$user, $landingPageUserRecord]);
 
-        if ( ! $landingPageUserRecord ) {
+        if ( ! $landingPageUser ) {
             return abort( 405, 'Page Not Found!' );
         }
-
-        $landingPageUser = $landingPageUserRecord;
 
         $gaCode = '';
         $gaCodeRecord = UserGoogleAnalytic::where(['user_id' => $user->id])->first();
