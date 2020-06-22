@@ -74,7 +74,7 @@ class ProductPageController extends Controller
 
         $landingPageUserRecord = LandingPageUser::where(['user_id' => $user->id, 'active' => 1])->first();
 
-        dd($user);
+        dd([$user, $landingPageUserRecord]);
 
         if ( ! $landingPageUserRecord ) {
             return abort( 405, 'Page Not Found!' );
