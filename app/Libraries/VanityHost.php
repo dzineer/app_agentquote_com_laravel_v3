@@ -58,7 +58,7 @@ class VanityHost
         // dd($template);
 
         if ($_SERVER['REMOTE_ADDR'] === '171.4.221.131' && isset($_GET['dump'])) {
-            dd($data);
+            dd([$data, $template]);
         }
 
         // return view( 'landing-pages.v3.quote_modules.underwritten.index', $data );
