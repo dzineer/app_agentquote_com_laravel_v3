@@ -189,6 +189,14 @@ class LandingPageController extends BackendController
 
         $resp = new \stdClass();
 
+        $landingPageUser = LandingPageUser::where(['user_id' => $user->id, 'active' => 1])->first();
+
+        if ($landingPageUser) {
+            $resp->product_category = $landingPageUser->category_id;
+        } else {
+            $resp->product_category = 1;
+        }
+
         $resp->contact_email = $profile->contact_email;
         $resp->company = $profile->company ?: '';
         $resp->position_title = $profile->position_title ?: '';
