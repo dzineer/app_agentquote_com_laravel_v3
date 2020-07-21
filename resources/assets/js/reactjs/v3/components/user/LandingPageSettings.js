@@ -351,11 +351,11 @@ class LandingPageSettings extends Component {
     };
 
     onSelectedDefaultProductHandler = event => {
-        debugger;
+        // debugger;
         console.log(event.target.value);
-        let newState = Object.assign({}, this.state.product);
-        newState.product_category = event.target.value;
-        this.setState(newState);
+        /*         let newState = Object.assign({}, this.state.product);
+                newState[event.target.name] = event.target.value; */
+        this.setState({ product: { product_category: event.target.value } });
     };
 
     onRemoveLogo = event => {
