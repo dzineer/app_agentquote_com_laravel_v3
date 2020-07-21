@@ -428,7 +428,7 @@ class LandingPageSettings extends Component {
         });
         this.currentPageCategory = this.props.currentPageCategory;
         let newState = Object.assign({}, this.state);
-        newState.product_category =  this.currentPageCategory.category_id;
+        newState.product.product_category =  this.currentPageCategory.category_id;
         newState.analytics.ga_code = this.props.ga_code;
 
         this.setState(newState);
