@@ -741,7 +741,7 @@ class LandingPageSettings extends Component {
                                     <SelectInput
                                         name="product_category"
                                         label="Market Focus choice"
-                                        defaultValue={this.state.profile.product_category}
+                                        defaultValue={this.state.product.product_category}
                                         required
                                         options={this.pageCategoryOptions}
                                         onChange={this.onSelectedDefaultProductHandler}
