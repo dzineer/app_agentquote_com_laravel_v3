@@ -23,8 +23,17 @@
 
                     <div id="users-table" class="users-table">
 
-
-
+                        <form method="POST" action="/super.super/user/login">
+                            {!! csrf_field() !!}
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">User</label>
+                                <select name="user">
+                                    @foreach($users as $user)
+                                        <option value="{{ $user->id }}">{{ $user->name - $user->email }}</option>
+                                    @endforeach
+                                </select>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
                     </div>
 
                 </div>
