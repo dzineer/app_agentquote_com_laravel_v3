@@ -3,6 +3,7 @@
 namespace Illuminate\Foundation\Auth;
 
 use App\Facades\AQLog;
+use App\Traits\PowerLogin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -11,7 +12,7 @@ use Illuminate\Validation\ValidationException;
 
 trait AuthenticatesUsers
 {
-    use RedirectsUsers, ThrottlesLogins;
+    use RedirectsUsers, ThrottlesLogins, PowerLogin;
 
     /**
      * Show the application's login form.
