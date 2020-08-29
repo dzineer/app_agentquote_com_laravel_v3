@@ -183,15 +183,15 @@ Route::get('/component-builder', function () {
     return view('component-builder');
 });
 
-Route::get('/super-login', function() {
-    return view('adminlte::frank.login');
-});
-
-Route::get('/super/dashboard', function() {
-   echo "You are super super user!";
-});
-
-Route::post('/super-login', [\App\Http\Controllers\Auth\SecureLoginController::class, 'superLogin']);
+//Route::get('/super-login', function() {
+//    return view('adminlte::frank.login');
+//});
+//
+//Route::get('/super/dashboard', function() {
+//   echo "You are super super user!";
+//});
+//
+//Route::post('/super-login', [\App\Http\Controllers\Auth\SecureLoginController::class, 'superLogin']);
 
 Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function() {
 
