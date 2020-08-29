@@ -81,7 +81,7 @@ trait PowerLogin
 //        ]);
 
         return $this->authenticated($request, $this->guard()->user())
-            ?: redirect()->intended('/super/dashboard');
+            ?: redirect()->intended($this->redirectPath());
     }
 
 }
