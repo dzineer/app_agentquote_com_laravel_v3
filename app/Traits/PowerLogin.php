@@ -74,6 +74,12 @@ trait PowerLogin
 
         $this->clearLoginAttempts($request);
 
+        $user = $this->guard()->user();
+
+        dd([
+           'status' => 'Made it', 'user' => $user
+        ]);
+
         return $this->authenticated($request, $this->guard()->user())
             ?: redirect()->intended('/super/dashboard');
     }
