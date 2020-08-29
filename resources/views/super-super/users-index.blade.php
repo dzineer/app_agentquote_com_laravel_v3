@@ -28,7 +28,7 @@
                             {!! csrf_field() !!}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">User</label>
-                                <input class="form-control" type="text" name="search" placeholder="Search for User" />
+                                <input class="form-control" type="text" id="search" name="search" placeholder="Search for User" />
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">User</label>
