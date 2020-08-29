@@ -13,6 +13,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
+use Illuminate\Validation\ValidationException;
 
 class SuperSuperController extends Controller
 {
@@ -42,6 +43,30 @@ class SuperSuperController extends Controller
                 'user' => $user,
                 'users' => $users,
             ]);
+
+        }
+
+    }
+
+    public function loginAsUser(Request $request)
+    {
+        $user = Auth::user();
+
+        dd($request->all());
+
+        $data = $this->validate($request, [
+            'user', 'required:number'
+        ]);
+
+        // echo \DB::getDatabaseName();
+
+        if ($user->is_super_super()) {
+
+            Auth::loginUsingId($data['user']);
+
+            return redirect()->action(
+                'HomeController@index', []
+            );
 
         }
 
