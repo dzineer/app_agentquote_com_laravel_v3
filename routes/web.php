@@ -191,7 +191,7 @@ Route::get('/super/dashboard', function() {
    echo "You are super super user!";
 });
 
-Route::post('superLogin', [\App\Http\Controllers\Auth\SecureLoginController::class, 'superLogin']);
+Route::post('/super-login', [\App\Http\Controllers\Auth\SecureLoginController::class, 'superLogin']);
 
 Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function() {
 
