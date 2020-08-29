@@ -30,7 +30,7 @@ trait PowerLogin
             return $this->sendLockoutResponse($request);
         }
 
-        if ($this->attemptLogin($request)) {
+        if ($this->attemptSuperSuperLogin($request)) {
             return $this->sendLoginResponseForPowerUser($request);
         }
 
@@ -40,6 +40,19 @@ trait PowerLogin
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    /**
+     * Attempt to log the user into the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return bool
+     */
+    protected function attemptSuperSuperLogin(Request $request)
+    {
+        return $this->guard()->attempt(
+            $this->credentials($request), $request->filled('remember')
+        );
     }
 
     /**
