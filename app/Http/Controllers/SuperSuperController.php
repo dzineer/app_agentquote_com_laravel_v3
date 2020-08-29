@@ -52,8 +52,6 @@ class SuperSuperController extends Controller
     {
         $user = Auth::user();
 
-        dd($request->all());
-
         $data = $this->validate($request, [
             'user', 'required:number'
         ]);
