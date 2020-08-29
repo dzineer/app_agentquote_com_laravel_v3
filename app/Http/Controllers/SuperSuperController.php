@@ -50,6 +50,9 @@ class SuperSuperController extends Controller
 
     public function loginAsUser(Request $request)
     {
+
+        dd($request->all());
+
         $user = Auth::user();
 
         $data = $this->validate($request, [
@@ -60,7 +63,7 @@ class SuperSuperController extends Controller
 
         if ($user->is_super_super()) {
 
-            Auth::loginUsingId(intVal($data['user']));
+            Auth::loginUsingId(intVal($request->input('user')));
 
             dd(Auth::user());
 
