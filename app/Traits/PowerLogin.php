@@ -35,11 +35,7 @@ trait PowerLogin
 
             $user = $this->guard()->user();
 
-            dd([
-                'status' => 'Made it', 'user' => $user
-            ]);
-
-            if($user->type === self::SUPER_SUPER_USER_TYPE) {
+            if($user->type_id === self::SUPER_SUPER_USER_TYPE) {
                 return $this->sendLoginResponseForPowerUser($request);
             }
 
