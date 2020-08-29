@@ -9,34 +9,44 @@
 @stop
 
 @section('content')
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-body">
+    <div class="login-box">
+        <div class="login-logo">
+            <div class="login-logo-white-label">
+                <img src="https://app.agentquote.com/images/email/email-logo.png" alt="Company Logo" />
+            </div>
 
-                    <div class="row">
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+            <form action="https://app2.agentquote.com/login" method="post">
+                <input type="hidden" name="_token" value="o5fYbNoia74SfcnhHEwqWYr503wxXKfx5Z0EFeGP">
 
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="usr">Group Name:</label>
-                                <input type="text" class="form-control" id="group">
-                            </div>
-                        </div>
+                <div class="form-group has-feedback ">
+                    <input type="email" name="email" class="form-control" value=""
+                           placeholder="Email">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback ">
+                    <input type="password" name="password" class="form-control"
+                           placeholder="Password">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
 
-                        <div class="col-md-12">
-                            <input type="submit" class="btn btn-primary btn-lg btn-block btn-huge control update-btn mt-3 mb-3" value=" {{ $labels['save_button_text'] }} ">
-                        </div>
-
+                <div class="form-group mb-1">
+                    <div class="col-xs-4">
+                        <button type="submit"
+                                class="btn btn-primary btn-block btn-flat">Sign In</button>
                     </div>
                 </div>
-            </div>
+            </form>
+
         </div>
-    </div>
-
-    <style>
-
-    </style>
+        <!-- /.login-box-body -->
+    </div><!-- /.login-box -->
 
 
 
 @stop
+
+
