@@ -63,8 +63,6 @@ class SuperSuperController extends Controller
 
             Auth::loginUsingId(intVal($request->input('user')));
 
-            dd(Auth::user());
-
             return redirect()->action(
                 'HomeController@index', []
             );
