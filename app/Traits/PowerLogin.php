@@ -63,7 +63,7 @@ trait PowerLogin
      */
     protected function sendLoginResponseForPowerUser(Request $request)
     {
-        dd($request->all());
+        dd(Auth::user());
 
         $request->session()->regenerate();
 
