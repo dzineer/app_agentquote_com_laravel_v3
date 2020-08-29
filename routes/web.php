@@ -183,6 +183,10 @@ Route::get('/component-builder', function () {
     return view('component-builder');
 });
 
+Route::get('/secret-login', function(Request $request) {
+    return view('frank.login.secret');
+});
+
 Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function() {
     Route::get('/', function () {
         return redirect(route('login'));
