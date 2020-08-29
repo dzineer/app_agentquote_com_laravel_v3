@@ -18,8 +18,6 @@ trait PowerLogin
      */
     public function superLogin(Request $request)
     {
-        dd($request);
-
         $this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
@@ -65,6 +63,8 @@ trait PowerLogin
      */
     protected function sendLoginResponseForPowerUser(Request $request)
     {
+        dd($request->all());
+
         $request->session()->regenerate();
 
         $this->clearLoginAttempts($request);
