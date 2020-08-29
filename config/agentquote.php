@@ -80,7 +80,14 @@ return [
       ]
     ],
     "menus" => [
+        "super super user" => [
+            [
+                'text' => 'Dashboard',
+                'url'  => 'dashboard',
+                'icon' => 'dashboard'
+            ],
 
+        ],
         "super user" => [
             [
                 'text' => 'Dashboard',
