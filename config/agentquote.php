@@ -86,6 +86,11 @@ return [
                 'url'  => 'dashboard',
                 'icon' => 'dashboard'
             ],
+            [
+                'text' => 'Users',
+                'url' => 'super/users',
+                'icon' => 'users',
+            ],
 
         ],
         "super user" => [
