@@ -24,6 +24,7 @@
                     <div id="users-table" class="users-table">
 
                         <form method="POST" action="/super.super/user/login">
+
                             {!! csrf_field() !!}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">User</label>
@@ -34,6 +35,8 @@
                                 </select>
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
+                            <button type="submit" class="btn btn-primary">Login As User</button>
+
                     </div>
 
                 </div>
