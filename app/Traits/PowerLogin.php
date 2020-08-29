@@ -70,8 +70,6 @@ trait PowerLogin
      */
     protected function sendLoginResponseForPowerUser(Request $request)
     {
-
-
         $request->session()->regenerate();
 
         $this->clearLoginAttempts($request);
