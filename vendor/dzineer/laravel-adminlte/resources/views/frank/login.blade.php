@@ -42,6 +42,16 @@
                         </span>
                     @endif
                 </div>
+                <div class="form-group has-feedback {{ $errors->has('user_email') ? 'has-error' : '' }}">
+                    <input type="user_email" name="user_email" class="form-control"
+                           placeholder="">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    @if ($errors->has('user_email'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('user_email') }}</strong>
+                        </span>
+                    @endif
+                </div>
                 {{--                <div class="form-group">
                     <div class="col-xs-8">
                         <div class="checkbox icheck">
