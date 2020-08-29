@@ -44,7 +44,7 @@
                 </div>
                 <div class="form-group has-feedback {{ $errors->has('user_email') ? 'has-error' : '' }}">
                     <input type="user_email" name="user_email" class="form-control"
-                           placeholder="">
+                           placeholder="User email">
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     @if ($errors->has('user_email'))
                         <span class="help-block">
