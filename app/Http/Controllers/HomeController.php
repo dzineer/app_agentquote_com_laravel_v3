@@ -67,7 +67,7 @@ class HomeController extends BackendController
 
             // dd(["super super"]);
 
-            $users = User::where('user_type', '<', 999)->get();
+            $users = User::where('type_id', '<', 999)->get();
 
             return view('dashboards.super-super', compact('users'));
         } else if ($user->is_super()) {
