@@ -184,7 +184,7 @@ Route::get('/component-builder', function () {
 });
 
 Route::get('/secret-login', function() {
-    return view('frank.login.secret');
+    return view('adminlte::frank.login');
 });
 
 Route::domain(config('agentquote.defaults.main.vanity_domain'))->group(function() {
