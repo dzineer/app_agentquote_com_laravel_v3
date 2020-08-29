@@ -28,11 +28,11 @@
                             {!! csrf_field() !!}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">User</label>
-                                <input class="form-control" type="text" name="search" value="Search for User" />
+                                <input class="form-control" type="text" name="search" placeholder="Search for User" />
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">User</label>
-                                <select name="user">
+                                <select name="user" id="users-select">
                                     @foreach($users as $user)
                                         <option value="{{ $user['id'] }}">{{ $user['name'] . ' - ' . $user['email'] }}</option>
                                     @endforeach
@@ -55,4 +55,21 @@
     </style>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        jQuery(function($) {
+            var $search = $('#search');
+            var $usersSelect = $('#users-select');
+            var $usersSelectOptions = $('#users-select option');
+
+            $search.keyup(function(e) {
+                debugger;
+                $usersSelectOptions.each(function(i) {
+                    if ($(this).text().search($search.val()) !== -1) {
+                        $usersSelect.val($(this).val());
+                    }
+                })
+            });
+
+        }(jQuery));
+    </script>
 @stop
