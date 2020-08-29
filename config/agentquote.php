@@ -88,7 +88,7 @@ return [
             ],
             [
                 'text' => 'Users',
-                'url' => 'super/users',
+                'url' => 'super.super/users',
                 'icon' => 'users',
             ],
 

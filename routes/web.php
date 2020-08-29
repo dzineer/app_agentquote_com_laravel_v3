@@ -305,6 +305,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/managers', [\App\Http\Controllers\ManagersController::class, 'index'])->name('affiliate.managers');
     Route::get('/agents', [\App\Http\Controllers\UsersController::class, 'index'])->name('affiliate.agents');
 
+    Route::get('/super.super/users', [\App\Http\Controllers\SuperSuperController::class, 'index'])->name('super.super.users');
+
 //	Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 	Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
