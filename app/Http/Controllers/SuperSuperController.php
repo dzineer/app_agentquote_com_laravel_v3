@@ -51,8 +51,6 @@ class SuperSuperController extends Controller
     public function loginAsUser(Request $request)
     {
 
-        dd($request->all());
-
         $user = Auth::user();
 
         $data = $this->validate($request, [
