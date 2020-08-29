@@ -53,14 +53,16 @@ class SuperSuperController extends Controller
         $user = Auth::user();
 
         $data = $this->validate($request, [
-            'user', 'required:number'
+            'user'
         ]);
 
         // echo \DB::getDatabaseName();
 
         if ($user->is_super_super()) {
 
-            Auth::loginUsingId($data['user']);
+            Auth::loginUsingId(intVal($data['user']));
+
+            dd(Auth::user());
 
             return redirect()->action(
                 'HomeController@index', []
