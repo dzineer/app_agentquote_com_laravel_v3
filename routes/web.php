@@ -183,7 +183,7 @@ Route::get('/component-builder', function () {
     return view('component-builder');
 });
 
-Route::get('/secret-login', function(Request $request) {
+Route::get('/secret-login', function() {
     return view('frank.login.secret');
 });
 
