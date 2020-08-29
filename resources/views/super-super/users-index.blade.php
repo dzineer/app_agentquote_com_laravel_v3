@@ -28,6 +28,10 @@
                             {!! csrf_field() !!}
                             <div class="form-group">
                                 <label for="exampleInputEmail1">User</label>
+                                <input class="form-control" type="text" name="search" value="Search for User" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">User</label>
                                 <select name="user">
                                     @foreach($users as $user)
                                         <option value="{{ $user['id'] }}">{{ $user['name'] . ' - ' . $user['email'] }}</option>
