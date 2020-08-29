@@ -311,6 +311,9 @@ Route::group(['middleware' => ['auth']], function () {
 //	Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']);
 
 	Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+	Route::get('/home/index2', [\App\Http\Controllers\HomeController::class, 'index2'])->name('home.index2');
+
+
 	Route::get('/support', [\App\Http\Controllers\SupportController::class, 'index'])->name('support');
     //Route::get('/videos', [\App\Http\Controllers\VideosController::class, 'index'])->name('knowledge-base');
 	Route::get('/knowledge-base', [\App\Http\Controllers\KnowledgeBaseController::class, 'index'])->name('knowledge-base');

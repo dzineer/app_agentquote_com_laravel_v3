@@ -65,7 +65,7 @@ class SuperSuperController extends Controller
             dd(Auth::user());
 
             return redirect()->action(
-                'HomeController@index', []
+                'HomeController@index2', []
             );
 
         }

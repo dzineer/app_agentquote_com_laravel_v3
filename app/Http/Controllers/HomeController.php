@@ -61,6 +61,31 @@ class HomeController extends BackendController
         return $this->getDashboard($user);
     }
 
+    public function index2()
+    {
+        //Role::create(['name' => 'writer']);
+        // $permission = Permission::findById(2);
+        // $role = Role::findById(1);
+        // $role->givePermissionTo($permission);
+        // adding permission to user
+        // auth()->user()->givePermissionTo('write post');
+        // auth()->user()->givePermissionTo('edit post');
+        // assign role
+        // auth()->user()->assignRole('writer');
+        // return auth()->user()->getPermissionsViaRoles();
+        //return auth()->user()->getAllPermissions();
+        // return auth()->user()->getRoleNames();
+        // return auth()->user()->permissions;
+        // return User::role('writer')->get();
+        // return User::permission('write post')->get();
+        // return auth()->user()->revokePermissionTo('edit post');
+
+        $user = User::findOrFail(auth()->id());
+        // dd($user);
+        // dd(env('DB_DATABASE'));
+        return $this->getDashboard($user);
+    }
+
     private function getDashboard($user)
     {
         if ($user->is_super_super()) {
