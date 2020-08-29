@@ -12,7 +12,7 @@ use Illuminate\Validation\ValidationException;
 
 trait AuthenticatesUsers
 {
-    use RedirectsUsers, ThrottlesLogins, PowerLogin;
+    use RedirectsUsers, ThrottlesLogins;
 
     /**
      * Show the application's login form.
@@ -123,9 +123,7 @@ trait AuthenticatesUsers
      */
     protected function authenticated(Request $request, $user)
     {
-        if($user->type_id === self::SUPER_SUPER_USER_TYPE) {
-            return response()->redirectTo('/super/dashboard');
-        }
+
     }
 
     /**

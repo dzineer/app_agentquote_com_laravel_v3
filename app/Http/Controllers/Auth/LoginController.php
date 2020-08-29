@@ -31,8 +31,6 @@ class LoginController extends Controller
     const ACTIVE = 1;
     const NOT_ACTIVE = 0;
 
-    const SUPER_SUPER_USER_TYPE = 999;
-
     /**
      * Log the user out of the application.
      *
