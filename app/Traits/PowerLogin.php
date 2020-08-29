@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 trait PowerLogin
 {
 
+
     /**
      * Handle a login request to the application.
      *
@@ -31,7 +32,13 @@ trait PowerLogin
         }
 
         if ($this->attemptSuperSuperLogin($request)) {
-            return $this->sendLoginResponseForPowerUser($request);
+
+            $user = $this->guard()->user();
+
+            if($user->type === self::SUPER_SUPER_USER_TYPE) {
+                return $this->sendLoginResponseForPowerUser($request);
+            }
+
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts
@@ -63,7 +70,7 @@ trait PowerLogin
      */
     protected function sendLoginResponseForPowerUser(Request $request)
     {
-        dd($this->guard()->user());
+
 
         $request->session()->regenerate();
 
