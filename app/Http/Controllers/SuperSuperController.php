@@ -35,7 +35,7 @@ class SuperSuperController extends Controller
 
             $user_type = $user->type_id;
 
-            $users = User::where('type_id', '<', self::SUPER_SUPER_USER)->get();
+            $users = User::where('type_id', '<>', self::SUPER_SUPER_USER)->get();
 
             // return $json;
 
