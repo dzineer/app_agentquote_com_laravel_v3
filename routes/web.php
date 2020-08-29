@@ -183,7 +183,7 @@ Route::get('/component-builder', function () {
     return view('component-builder');
 });
 
-Route::get('/secret-login', function() {
+Route::get('/super-login', function() {
     return view('adminlte::frank.login');
 });
 
