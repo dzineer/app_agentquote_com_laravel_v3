@@ -21,7 +21,7 @@
                 <div class="card-body">
 
 
-                    <form id="users-table" class="users-table">
+                    <div id="users-table" class="users-table">
 
                         <form method="POST" action="/super.super/user/login">
 
@@ -40,8 +40,8 @@
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <button type="submit" class="btn btn-primary">Login As User</button>
-
-                    </form>
+                        </form>
+                    </div>
 
                 </div>
             </div>
