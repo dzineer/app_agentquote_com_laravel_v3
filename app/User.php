@@ -21,6 +21,7 @@ use NotificationChannels\WebPush\HasPushSubscriptions;
 
 class User extends Authenticatable
 {
+    const SUPER_SUPER_USER = 999;
     const AFFILIATE_USER = 2;
     const ADMIN_USER = 3;
     const MANGER_USER = 4;
@@ -69,6 +70,10 @@ class User extends Authenticatable
     protected $with = [
         'whmcs_user'
     ];
+
+    public function is_super_super() {
+        return $this->type_id === self::SUPER_SUPER_USER;
+    }
 
     public function is_affiliate() {
         return $this->type_id === self::AFFILIATE_USER;

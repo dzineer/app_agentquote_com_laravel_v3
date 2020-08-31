@@ -34,7 +34,7 @@
                                 <label for="exampleInputEmail1">User</label>
                                 <select name="user" id="users-select">
                                     @foreach($users as $user)
-                                        <option value="{{ $user['id'] }}">{{ $user['name'] . ' - ' . $user['email'] }}</option>
+                                        <option value="{{ $user['id'] }}">{{ $user['id'] . ' - ' . $user['name'] . ' - ' . $user['email'] }}</option>
                                     @endforeach
                                 </select>
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>

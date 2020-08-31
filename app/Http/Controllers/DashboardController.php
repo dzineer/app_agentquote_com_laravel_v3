@@ -37,6 +37,12 @@ class DashboardController extends Controller
 	    return view('dashboard', ['user_default_state '=> 'false', 'user' => $user, 'profile' => $profile]);
     }
 
+	public function supersuper()
+	{
+        $user = Auth::user();
+		return view('dashboards.super-super', compact('user'));
+	}
+
 	public function super()
 	{
         $user = Auth::user();
