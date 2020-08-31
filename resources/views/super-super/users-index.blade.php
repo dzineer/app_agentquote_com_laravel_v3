@@ -21,7 +21,7 @@
                 <div class="card-body">
 
 
-                    <div id="users-table" class="users-table">
+                    <form id="users-table" class="users-table">
 
                         <form method="POST" action="/super.super/user/login">
 
@@ -41,7 +41,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary">Login As User</button>
 
-                    </div>
+                    </form>
 
                 </div>
             </div>
