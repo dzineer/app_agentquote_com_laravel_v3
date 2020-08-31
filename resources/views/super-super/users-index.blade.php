@@ -37,7 +37,6 @@
                                         <option value="{{ $user['id'] }}">{{ $user['id'] . ' - ' . $user['name'] . ' - ' . $user['email'] }}</option>
                                     @endforeach
                                 </select>
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <button type="submit" class="btn btn-primary">Login As User</button>
                         </form>
